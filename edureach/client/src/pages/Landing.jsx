@@ -8,12 +8,12 @@ const wrap = {
 };
 
 const features = [
-  { icon: BookOpen, title: "Learning Hub", desc: "AI-powered courses in your language for every grade from Class 1–12.", bg: "#EFF6FF", color: "#2563EB" },
-  { icon: GraduationCap, title: "Scholarships", desc: "Auto-matched scholarships based on your state, grade, and income.", bg: "#ECFDF5", color: "#059669" },
-  { icon: Users, title: "Mentoring", desc: "Connect with mentors who understand your journey.", bg: "#F5F3FF", color: "#7C3AED" },
-  { icon: Mic, title: "Speech Therapy", desc: "AI-assisted therapy sessions to improve communication.", bg: "#FFFBEB", color: "#D97706" },
-  { icon: Heart, title: "Mental Health", desc: "Daily mood tracking and wellness support tools.", bg: "#FFF1F2", color: "#E11D48" },
-  { icon: Calendar, title: "Study Plan", desc: "AI-generated study plans tailored to your exams and goals.", bg: "#F0FDFA", color: "#0D9488" },
+  { icon: BookOpen, title: "Learning Hub", desc: "AI-powered courses in your language for every grade from Class 1–12.", bg: "#EFF6FF", color: "#2563EB", link: "/learning" },
+  { icon: GraduationCap, title: "Scholarships", desc: "Auto-matched scholarships based on your state, grade, and income.", bg: "#ECFDF5", color: "#059669", link: "/scholarships" },
+  { icon: Users, title: "Mentoring", desc: "Connect with mentors who understand your journey.", bg: "#F5F3FF", color: "#7C3AED", link: "/mentoring" },
+  { icon: Mic, title: "Speech Therapy", desc: "AI-assisted therapy sessions to improve communication.", bg: "#FFFBEB", color: "#D97706", link: "/speech-therapy" },
+  { icon: Heart, title: "Mental Health", desc: "Daily mood tracking and wellness support tools.", bg: "#FFF1F2", color: "#E11D48", link: "/mental-health" },
+  { icon: Calendar, title: "Study Plan", desc: "AI-generated study plans tailored to your exams and goals.", bg: "#F0FDFA", color: "#0D9488", link: "/study-plan" },
 ];
 
 const stats = [
@@ -60,7 +60,7 @@ export default function Landing() {
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                 <div style={{ display: "flex" }}>
-                  {["A","B","C","D"].map((l,i) => (
+                  {["A", "B", "C", "D"].map((l, i) => (
                     <div key={i} style={{ width: "36px", height: "36px", borderRadius: "50%", background: "#2563EB", border: "2px solid white", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: "12px", fontWeight: 700, marginLeft: i > 0 ? "-8px" : 0 }}>{l}</div>
                   ))}
                 </div>
@@ -115,15 +115,17 @@ export default function Landing() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "28px" }}>
             {features.map((f, i) => (
-              <div key={i} style={{ background: "#fff", border: "1.5px solid #F1F5F9", borderRadius: "16px", padding: "32px", cursor: "pointer", transition: "all 0.2s" }}
-                onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 10px 40px rgba(0,0,0,0.08)"; e.currentTarget.style.borderColor = "#DBEAFE"; }}
-                onMouseLeave={e => { e.currentTarget.style.boxShadow = "none"; e.currentTarget.style.borderColor = "#F1F5F9"; }}>
-                <div style={{ width: "52px", height: "52px", borderRadius: "14px", background: f.bg, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "20px" }}>
-                  <f.icon size={24} color={f.color} />
+              <Link key={i} to={f.link || "#"} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div style={{ background: "#fff", border: "1.5px solid #F1F5F9", borderRadius: "16px", padding: "32px", cursor: "pointer", transition: "all 0.2s", height: "100%", display: "flex", flexDirection: "column" }}
+                  onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 10px 40px rgba(0,0,0,0.08)"; e.currentTarget.style.borderColor = "#DBEAFE"; }}
+                  onMouseLeave={e => { e.currentTarget.style.boxShadow = "none"; e.currentTarget.style.borderColor = "#F1F5F9"; }}>
+                  <div style={{ width: "52px", height: "52px", borderRadius: "14px", background: f.bg, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "20px" }}>
+                    <f.icon size={24} color={f.color} />
+                  </div>
+                  <h3 style={{ fontSize: "17px", fontWeight: 700, color: "#0F172A", marginBottom: "10px" }}>{f.title}</h3>
+                  <p style={{ fontSize: "14px", color: "#64748B", lineHeight: 1.7, margin: 0 }}>{f.desc}</p>
                 </div>
-                <h3 style={{ fontSize: "17px", fontWeight: 700, color: "#0F172A", marginBottom: "10px" }}>{f.title}</h3>
-                <p style={{ fontSize: "14px", color: "#64748B", lineHeight: 1.7 }}>{f.desc}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -9,6 +9,10 @@ import Login from './pages/Auth/Login';
 import Register from './pages/Auth/Register';
 import Dashboard from './pages/Dashboard';
 import Learning from './pages/Learning';
+import ClassSelection from './pages/learning/ClassSelection';
+import SubjectPage from './pages/learning/SubjectPage';
+import ChapterPage from './pages/learning/ChapterPage';
+import LessonPage from './pages/learning/LessonPage';
 import Scholarships from './pages/Scholarships';
 import Mentoring from './pages/Mentoring';
 import SpeechTherapy from './pages/SpeechTherapy';
@@ -41,7 +45,39 @@ const AppLayout = () => {
             path="/learning"
             element={
               <ProtectedRoute>
+                <ClassSelection />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/learning/browse"
+            element={
+              <ProtectedRoute>
                 <Learning />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/learning/class/:classId"
+            element={
+              <ProtectedRoute>
+                <SubjectPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/learning/class/:classId/subject/:subjectId"
+            element={
+              <ProtectedRoute>
+                <ChapterPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/learning/class/:classId/subject/:subjectId/chapter/:chapterId"
+            element={
+              <ProtectedRoute>
+                <LessonPage />
               </ProtectedRoute>
             }
           />
