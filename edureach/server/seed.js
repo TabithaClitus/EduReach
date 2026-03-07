@@ -1,22 +1,21 @@
-require("dotenv").config();
+﻿require("dotenv").config();
 const mongoose = require("mongoose");
 const dns = require("dns");
 dns.setDefaultResultOrder("ipv4first");
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
 const Course = require("./models/Course");
-const Scholarship = require("./models/Scholarship");
 const User = require("./models/User");
 const Mentor = require("./models/Mentor");
 
 const MONGO_URI = process.env.MONGO_URI;
 
 // ==========================
-// COURSES — Real NCERT / Diksha content
+// COURSES â€” Real NCERT / Diksha content
 // ==========================
 const courses = [
   {
-    title: "Class 1-2 Maths — Numbers & Counting",
+    title: "Class 1-2 Maths â€” Numbers & Counting",
     description:
       "Learn counting, number recognition, addition and subtraction basics designed for young learners following the NCERT curriculum.",
     subject: "Mathematics",
@@ -28,9 +27,9 @@ const courses = [
     isFree: true,
   },
   {
-    title: "வகுப்பு 3-5 கணிதம் — பின்னங்கள் மற்றும் தசமங்கள்",
+    title: "à®µà®•à¯à®ªà¯à®ªà¯ 3-5 à®•à®£à®¿à®¤à®®à¯ â€” à®ªà®¿à®©à¯à®©à®™à¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®¤à®šà®®à®™à¯à®•à®³à¯",
     description:
-      "தமிழ் வழியில் பின்னங்கள், தசமங்கள் மற்றும் அளவீடு பற்றிய NCERT பாடத்திட்டம்.",
+      "à®¤à®®à®¿à®´à¯ à®µà®´à®¿à®¯à®¿à®²à¯ à®ªà®¿à®©à¯à®©à®™à¯à®•à®³à¯, à®¤à®šà®®à®™à¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®…à®³à®µà¯€à®Ÿà¯ à®ªà®±à¯à®±à®¿à®¯ NCERT à®ªà®¾à®Ÿà®¤à¯à®¤à®¿à®Ÿà¯à®Ÿà®®à¯.",
     subject: "Mathematics",
     language: ["ta"],
     videoUrl: "https://www.youtube.com/embed/5iUh_CSjaSw",
@@ -40,9 +39,9 @@ const courses = [
     isFree: true,
   },
   {
-    title: "कक्षा 6-8 विज्ञान — बल और गति",
+    title: "à¤•à¤•à¥à¤·à¤¾ 6-8 à¤µà¤¿à¤œà¥à¤žà¤¾à¤¨ â€” à¤¬à¤² à¤”à¤° à¤—à¤¤à¤¿",
     description:
-      "हिन्दी में NCERT विज्ञान — बल, गति, घर्षण और गुरुत्वाकर्षण की बुनियादी अवधारणाएँ।",
+      "à¤¹à¤¿à¤¨à¥à¤¦à¥€ à¤®à¥‡à¤‚ NCERT à¤µà¤¿à¤œà¥à¤žà¤¾à¤¨ â€” à¤¬à¤², à¤—à¤¤à¤¿, à¤˜à¤°à¥à¤·à¤£ à¤”à¤° à¤—à¥à¤°à¥à¤¤à¥à¤µà¤¾à¤•à¤°à¥à¤·à¤£ à¤•à¥€ à¤¬à¥à¤¨à¤¿à¤¯à¤¾à¤¦à¥€ à¤…à¤µà¤§à¤¾à¤°à¤£à¤¾à¤à¤à¥¤",
     subject: "Science",
     language: ["hi"],
     videoUrl: "https://www.youtube.com/embed/oKqCf_F2yVg",
@@ -52,7 +51,7 @@ const courses = [
     isFree: true,
   },
   {
-    title: "Class 9-10 Maths — Algebra & Polynomials",
+    title: "Class 9-10 Maths â€” Algebra & Polynomials",
     description:
       "Master algebraic expressions, polynomials, linear equations and coordinate geometry as per NCERT Class 9-10 syllabus.",
     subject: "Mathematics",
@@ -64,7 +63,7 @@ const courses = [
     isFree: true,
   },
   {
-    title: "Class 9-10 Science — Chemical Reactions & Equations",
+    title: "Class 9-10 Science â€” Chemical Reactions & Equations",
     description:
       "NCERT Science covering chemical reactions, balancing equations, types of reactions, acids, bases and salts.",
     subject: "Science",
@@ -76,7 +75,7 @@ const courses = [
     isFree: true,
   },
   {
-    title: "Class 11-12 Physics — Laws of Motion",
+    title: "Class 11-12 Physics â€” Laws of Motion",
     description:
       "Newton's laws of motion, friction, circular motion and applications. Comprehensive NCERT Class 11 Physics.",
     subject: "Physics",
@@ -88,7 +87,7 @@ const courses = [
     isFree: true,
   },
   {
-    title: "Class 11-12 Chemistry — Atomic Structure",
+    title: "Class 11-12 Chemistry â€” Atomic Structure",
     description:
       "Bohr model, quantum numbers, electronic configuration, and periodic properties. NCERT Class 11 Chemistry.",
     subject: "Chemistry",
@@ -100,7 +99,7 @@ const courses = [
     isFree: true,
   },
   {
-    title: "Class 11-12 Maths — Calculus — Limits & Derivatives",
+    title: "Class 11-12 Maths â€” Calculus â€” Limits & Derivatives",
     description:
       "Introduction to limits, derivatives, differentiation rules and applications. NCERT Class 11 Mathematics.",
     subject: "Mathematics",
@@ -112,9 +111,9 @@ const courses = [
     isFree: true,
   },
   {
-    title: "வகுப்பு 6-8 சமூக அறிவியல் — இந்திய வரலாறு",
+    title: "à®µà®•à¯à®ªà¯à®ªà¯ 6-8 à®šà®®à¯‚à®• à®…à®±à®¿à®µà®¿à®¯à®²à¯ â€” à®‡à®¨à¯à®¤à®¿à®¯ à®µà®°à®²à®¾à®±à¯",
     description:
-      "தமிழ் வழியில் பண்டைய இந்திய நாகரிகங்கள், முகலாயர்கள் மற்றும் சுதந்திரப் போராட்டம்.",
+      "à®¤à®®à®¿à®´à¯ à®µà®´à®¿à®¯à®¿à®²à¯ à®ªà®£à¯à®Ÿà¯ˆà®¯ à®‡à®¨à¯à®¤à®¿à®¯ à®¨à®¾à®•à®°à®¿à®•à®™à¯à®•à®³à¯, à®®à¯à®•à®²à®¾à®¯à®°à¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®šà¯à®¤à®¨à¯à®¤à®¿à®°à®ªà¯ à®ªà¯‹à®°à®¾à®Ÿà¯à®Ÿà®®à¯.",
     subject: "Social Science",
     language: ["ta"],
     videoUrl: "https://www.youtube.com/embed/rNHqL-4qMRs",
@@ -124,9 +123,9 @@ const courses = [
     isFree: true,
   },
   {
-    title: "Class 9-10 English Literature — Prose & Poetry",
+    title: "Class 9-10 English Literature â€” Prose & Poetry",
     description:
-      "NCERT English — Beehive & Moments textbook chapters, poetry analysis, comprehension and writing skills.",
+      "NCERT English â€” Beehive & Moments textbook chapters, poetry analysis, comprehension and writing skills.",
     subject: "English",
     language: ["en"],
     videoUrl: "https://www.youtube.com/embed/AH2BjXlMNkk",
@@ -136,7 +135,7 @@ const courses = [
     isFree: true,
   },
   {
-    title: "Class 11-12 Biology — Cell Structure & Function",
+    title: "Class 11-12 Biology â€” Cell Structure & Function",
     description:
       "Cell theory, organelles, cell division (mitosis & meiosis), biomolecules. NCERT Class 11 Biology.",
     subject: "Biology",
@@ -148,9 +147,9 @@ const courses = [
     isFree: true,
   },
   {
-    title: "Class 11-12 Computer Science — Python Programming",
+    title: "Class 11-12 Computer Science â€” Python Programming",
     description:
-      "Introduction to Python — variables, data types, loops, functions, file handling as per CBSE CS syllabus.",
+      "Introduction to Python â€” variables, data types, loops, functions, file handling as per CBSE CS syllabus.",
     subject: "Computer Science",
     language: ["en"],
     videoUrl: "https://www.youtube.com/embed/kqtD5dpn9C8",
@@ -160,9 +159,9 @@ const courses = [
     isFree: true,
   },
   {
-    title: "తరగతి 6-8 గణితం — జ్యామితి ప్రాథమికాలు",
+    title: "à°¤à°°à°—à°¤à°¿ 6-8 à°—à°£à°¿à°¤à°‚ â€” à°œà±à°¯à°¾à°®à°¿à°¤à°¿ à°ªà±à°°à°¾à°¥à°®à°¿à°•à°¾à°²à±",
     description:
-      "తెలుగులో NCERT గణితం — రేఖలు, కోణాలు, త్రిభుజాలు మరియు చతుర్భుజాల ప్రాథమికాలు.",
+      "à°¤à±†à°²à±à°—à±à°²à±‹ NCERT à°—à°£à°¿à°¤à°‚ â€” à°°à±‡à°–à°²à±, à°•à±‹à°£à°¾à°²à±, à°¤à±à°°à°¿à°­à±à°œà°¾à°²à± à°®à°°à°¿à°¯à± à°šà°¤à±à°°à±à°­à±à°œà°¾à°² à°ªà±à°°à°¾à°¥à°®à°¿à°•à°¾à°²à±.",
     subject: "Mathematics",
     language: ["te"],
     videoUrl: "https://www.youtube.com/embed/dBjHd_nqn7c",
@@ -172,9 +171,9 @@ const courses = [
     isFree: true,
   },
   {
-    title: "ತರಗತಿ 3-5 ಇಂಗ್ಲಿಷ್ — Reading & Vocabulary",
+    title: "à²¤à²°à²—à²¤à²¿ 3-5 à²‡à²‚à²—à³à²²à²¿à²·à³ â€” Reading & Vocabulary",
     description:
-      "ಕನ್ನಡ ಮಾಧ್ಯಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಇಂಗ್ಲಿಷ್ ಓದುವಿಕೆ, ಪದಜಾಲ ಮತ್ತು ವ್ಯಾಕರಣ.",
+      "à²•à²¨à³à²¨à²¡ à²®à²¾à²§à³à²¯à²® à²µà²¿à²¦à³à²¯à²¾à²°à³à²¥à²¿à²—à²³à²¿à²—à³† à²‡à²‚à²—à³à²²à²¿à²·à³ à²“à²¦à³à²µà²¿à²•à³†, à²ªà²¦à²œà²¾à²² à²®à²¤à³à²¤à³ à²µà³à²¯à²¾à²•à²°à²£.",
     subject: "English",
     language: ["kn"],
     videoUrl: "https://www.youtube.com/embed/kT6WLqiHbJc",
@@ -184,9 +183,9 @@ const courses = [
     isFree: true,
   },
   {
-    title: "कक्षा 9-10 इतिहास — भारत का स्वतंत्रता संग्राम",
+    title: "à¤•à¤•à¥à¤·à¤¾ 9-10 à¤‡à¤¤à¤¿à¤¹à¤¾à¤¸ â€” à¤­à¤¾à¤°à¤¤ à¤•à¤¾ à¤¸à¥à¤µà¤¤à¤‚à¤¤à¥à¤°à¤¤à¤¾ à¤¸à¤‚à¤—à¥à¤°à¤¾à¤®",
     description:
-      "हिन्दी में NCERT इतिहास — 1857 का विद्रोह से लेकर 1947 तक भारतीय स्वतंत्रता आंदोलन।",
+      "à¤¹à¤¿à¤¨à¥à¤¦à¥€ à¤®à¥‡à¤‚ NCERT à¤‡à¤¤à¤¿à¤¹à¤¾à¤¸ â€” 1857 à¤•à¤¾ à¤µà¤¿à¤¦à¥à¤°à¥‹à¤¹ à¤¸à¥‡ à¤²à¥‡à¤•à¤° 1947 à¤¤à¤• à¤­à¤¾à¤°à¤¤à¥€à¤¯ à¤¸à¥à¤µà¤¤à¤‚à¤¤à¥à¤°à¤¤à¤¾ à¤†à¤‚à¤¦à¥‹à¤²à¤¨à¥¤",
     subject: "History",
     language: ["hi"],
     videoUrl: "https://www.youtube.com/embed/jb0MtNqg7-0",
@@ -194,182 +193,6 @@ const courses = [
     tags: ["ncert", "history", "hindi", "independence"],
     gradeLevel: "Class 9-10",
     isFree: true,
-  },
-];
-
-// ==========================
-// SCHOLARSHIPS — Real Indian scholarships
-// ==========================
-const scholarships = [
-  {
-    title: "NSP Pre-Matric Scholarship for SC Students",
-    provider: "Ministry of Social Justice & Empowerment",
-    amount: "₹3,500 per year",
-    deadline: new Date("2026-11-30"),
-    description:
-      "Pre-matric scholarship for SC students studying in Class 9-10. Covers maintenance allowance and book grant for families with annual income below ₹2.5 lakh.",
-    eligibility: {
-      state: "All",
-      caste: "SC",
-      income: "Below 2.5 Lakh",
-      gender: "All",
-      grade: "Class 9-10",
-      course: "",
-    },
-    applicationUrl: "https://scholarships.gov.in/",
-  },
-  {
-    title: "NSP Post-Matric Scholarship for SC Students",
-    provider: "Ministry of Social Justice & Empowerment",
-    amount: "₹7,000 – ₹13,000 per year",
-    deadline: new Date("2026-11-30"),
-    description:
-      "Post-matric scholarship for SC students in Class 11 and above. Covers tuition fees, maintenance allowance and study tour charges.",
-    eligibility: {
-      state: "All",
-      caste: "SC",
-      income: "Below 2.5 Lakh",
-      gender: "All",
-      grade: "Class 11-12",
-      course: "",
-    },
-    applicationUrl: "https://scholarships.gov.in/",
-  },
-  {
-    title: "Prime Minister's Scholarship Scheme (PMSS)",
-    provider: "Ministry of Defence, Govt. of India",
-    amount: "₹30,000 per year (Boys) / ₹36,000 per year (Girls)",
-    deadline: new Date("2026-10-15"),
-    description:
-      "For wards and widows of ex-servicemen / ex-Coast Guard personnel pursuing professional degree courses. Available for 1st year to last year of the course.",
-    eligibility: {
-      state: "All",
-      caste: "All",
-      income: "All",
-      gender: "All",
-      grade: "Class 11-12",
-      course: "Professional Degree",
-    },
-    applicationUrl: "https://scholarships.gov.in/",
-  },
-  {
-    title: "Begum Hazrat Mahal National Scholarship",
-    provider: "Maulana Azad Education Foundation",
-    amount: "₹5,000 – ₹6,000 per year",
-    deadline: new Date("2026-09-30"),
-    description:
-      "For meritorious girls belonging to minority communities studying in Class 9-12. Minimum 50% marks required in previous class.",
-    eligibility: {
-      state: "All",
-      caste: "Minority",
-      income: "Below 2 Lakh",
-      gender: "Female",
-      grade: "Class 9-10",
-      course: "",
-    },
-    applicationUrl: "https://scholarships.gov.in/",
-  },
-  {
-    title: "Central Sector Scheme of Scholarship",
-    provider: "Ministry of Education, Govt. of India",
-    amount: "₹10,000 – ₹20,000 per year",
-    deadline: new Date("2026-12-31"),
-    description:
-      "For students who scored above 80th percentile in Class 12 board exams and are from families with income below ₹8 lakh. Supports UG and PG studies.",
-    eligibility: {
-      state: "All",
-      caste: "All",
-      income: "Below 8 Lakh",
-      gender: "All",
-      grade: "Class 11-12",
-      course: "UG/PG",
-    },
-    applicationUrl: "https://scholarships.gov.in/",
-  },
-  {
-    title: "INSPIRE Scholarship (SHE) — DST",
-    provider: "Department of Science & Technology",
-    amount: "₹80,000 per year",
-    deadline: new Date("2026-10-31"),
-    description:
-      "Innovation in Science Pursuit for Inspired Research (INSPIRE). For top 1% students in Class 12 board pursuing BSc / BS / Integrated MSc in natural and basic sciences.",
-    eligibility: {
-      state: "All",
-      caste: "All",
-      income: "All",
-      gender: "All",
-      grade: "Class 11-12",
-      course: "BSc / Integrated MSc",
-    },
-    applicationUrl: "https://online-inspire.gov.in/",
-  },
-  {
-    title: "Pragati Scholarship for Girls — AICTE",
-    provider: "AICTE (All India Council for Technical Education)",
-    amount: "₹50,000 per year",
-    deadline: new Date("2026-12-15"),
-    description:
-      "For girl students admitted to AICTE-approved technical diploma/degree programmes. One girl per family; family income must be below ₹8 lakh.",
-    eligibility: {
-      state: "All",
-      caste: "All",
-      income: "Below 8 Lakh",
-      gender: "Female",
-      grade: "Class 11-12",
-      course: "Technical Diploma/Degree",
-    },
-    applicationUrl: "https://www.aicte-india.org/schemes/students-development-schemes/Pragati",
-  },
-  {
-    title: "Tamil Nadu Chief Minister's Scholarship",
-    provider: "Government of Tamil Nadu",
-    amount: "₹12,000 per year",
-    deadline: new Date("2026-08-31"),
-    description:
-      "Merit-cum-means scholarship for students from Tamil Nadu studying in government or aided schools. Family income must be below ₹2 lakh per annum.",
-    eligibility: {
-      state: "Tamil Nadu",
-      caste: "All",
-      income: "Below 2 Lakh",
-      gender: "All",
-      grade: "Class 9-10",
-      course: "",
-    },
-    applicationUrl: "https://www.scholarships.tn.gov.in/",
-  },
-  {
-    title: "Karnataka Vidyasiri Scholarship for Minorities",
-    provider: "Karnataka Minorities Development Corporation",
-    amount: "₹5,000 – ₹15,000 per year",
-    deadline: new Date("2026-09-15"),
-    description:
-      "For minority community students (Muslim, Christian, Jain, Sikh, Buddhist, Parsi) studying in Karnataka from Class 1 to PG. Income limit ₹2.5 lakh.",
-    eligibility: {
-      state: "Karnataka",
-      caste: "Minority",
-      income: "Below 2.5 Lakh",
-      gender: "All",
-      grade: "All",
-      course: "",
-    },
-    applicationUrl: "https://karepass.cgg.gov.in/",
-  },
-  {
-    title: "Uttar Pradesh Post-Matric Scholarship for OBC",
-    provider: "Government of Uttar Pradesh",
-    amount: "₹1,500 – ₹7,000 per year",
-    deadline: new Date("2026-12-31"),
-    description:
-      "For OBC students of Uttar Pradesh studying in Class 11 and above. Family income must be below ₹2 lakh per annum. Covers tuition and maintenance.",
-    eligibility: {
-      state: "Uttar Pradesh",
-      caste: "OBC",
-      income: "Below 2 Lakh",
-      gender: "All",
-      grade: "Class 11-12",
-      course: "",
-    },
-    applicationUrl: "https://scholarship.up.gov.in/",
   },
 ];
 
@@ -397,17 +220,12 @@ async function seed() {
 
     // Clear existing seed data
     await Course.deleteMany({});
-    await Scholarship.deleteMany({});
-    console.log("Cleared existing courses and scholarships.");
+    console.log("Cleared existing courses.");
 
     // Insert courses with admin as creator
     const courseDocs = courses.map((c) => ({ ...c, createdBy: admin._id }));
     const insertedCourses = await Course.insertMany(courseDocs);
     console.log(`Seeded ${insertedCourses.length} courses.`);
-
-    // Insert scholarships
-    const insertedScholarships = await Scholarship.insertMany(scholarships);
-    console.log(`Seeded ${insertedScholarships.length} scholarships.`);
 
     // ── Mentor seed data ──────────────────────────────────────
     const mentorData = [
