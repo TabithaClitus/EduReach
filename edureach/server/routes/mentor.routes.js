@@ -11,5 +11,8 @@ router.patch("/request/:matchId", verifyToken, ctrl.respondToRequest);
 router.get("/active-matches", verifyToken, ctrl.getActiveMatches);
 router.get("/messages/:matchId", verifyToken, ctrl.getMessages);
 router.post("/rate/:matchId", verifyToken, ctrl.rateMentor);
+router.get("/my-mentor", verifyToken, ctrl.getMyMentor);
+router.get("/pending", verifyToken, ctrl.getPendingRequests);
+router.post("/end/:matchId", verifyToken, ctrl.endMentorship);
 
 module.exports = router;

@@ -174,3 +174,55 @@ exports.rateMentor = async (req, res) => {
     res.status(500).json({ success: false, message: err.message });
   }
 };
+
+// GET /api/mentors/my-mentor — student's active mentor match with full profile
+exports.getMyMentor = async (req, res) => {
+  try {
+    const match = await MentorMatch.findOne({
+      student: req.user._id,
+      status: "active",
+    })
+      .populate("mentor", "name email profilePic")
+      .lean();
+
+    if (!match) return res.json({ success: true, data: null });
+
+    // Attach mentor profile (subjects, bio, rating, etc.)
+    const mentorProfile = await Mentor.findOne({ user: match.mentor._id }).lean();
+    match.mentorProfile = mentorProfile || {};
+
+    res.json({ success: true, data: match });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+};
+
+// GET /api/mentors/pending — student's pending requests
+exports.getPendingRequests = async (req, res) => {
+  try {
+    const matches = await MentorMatch.find({
+      student: req.user._id,
+      status: "pending",
+    })
+      .populate("mentor", "name email")
+      .lean();
+    res.json({ success: true, data: matches });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+};
+
+// POST /api/mentors/end/:matchId — student ends active mentorship
+exports.endMentorship = async (req, res) => {
+  try {
+    const match = await MentorMatch.findById(req.params.matchId);
+    if (!match) return res.status(404).json({ success: false, message: "Match not found." });
+    if (match.student.toString() !== req.user._id.toString())
+      return res.status(403).json({ success: false, message: "Not authorized." });
+    match.status = "closed";
+    await match.save();
+    res.json({ success: true, message: "Mentorship ended." });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+};
