@@ -15,6 +15,7 @@ import ChapterPage from './pages/learning/ChapterPage';
 import LessonPage from './pages/learning/LessonPage';
 import Scholarships from './pages/Scholarships';
 import Mentoring from './pages/Mentoring';
+import MentoringChat from './pages/MentoringChat';
 import SpeechTherapy from './pages/SpeechTherapy';
 import MentalHealth from './pages/MentalHealth';
 import StudyPlan from './pages/StudyPlan';
@@ -23,7 +24,7 @@ import CourseDetail from './pages/CourseDetail';
 const AppLayout = () => {
   const location = useLocation();
   const hideFooterPaths = ['/login', '/register'];
-  const showFooter = !hideFooterPaths.includes(location.pathname);
+  const showFooter = location.pathname === '/';
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -102,6 +103,14 @@ const AppLayout = () => {
             element={
               <ProtectedRoute>
                 <Mentoring />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/mentoring/chat/:chatId"
+            element={
+              <ProtectedRoute>
+                <MentoringChat />
               </ProtectedRoute>
             }
           />
