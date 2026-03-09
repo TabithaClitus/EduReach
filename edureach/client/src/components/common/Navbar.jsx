@@ -4,14 +4,27 @@ import { GraduationCap, Menu, X, ChevronDown, LogOut, User } from "lucide-react"
 import useAuthStore from "../../store/authStore";
 import useLanguageStore from "../../store/languageStore";
 
-const navLinks = [
+const studentLinks = [
   { label: "Home", path: "/" },
   { label: "Learning", path: "/learning" },
   { label: "Scholarships", path: "/scholarships" },
   { label: "Mentoring", path: "/mentoring" },
-  { label: "Speech Therapy", path: "/speech-therapy" },
-  { label: "Mental Health", path: "/mental-health" },
+  { label: "Quiz", path: "/quiz" },
   { label: "Study Plan", path: "/study-plan" },
+];
+
+const mentorLinks = [
+  { label: "Dashboard", path: "/mentor-dashboard" },
+  { label: "My Students", path: "/mentor-dashboard?tab=students" },
+  { label: "Requests", path: "/mentor-dashboard?tab=requests" },
+  { label: "Chats", path: "/mentor-dashboard?tab=chats" },
+];
+
+const adminLinks = [
+  { label: "Overview", path: "/admin" },
+  { label: "Users", path: "/admin?tab=users" },
+  { label: "Mentors", path: "/admin?tab=mentors" },
+  { label: "Reports", path: "/admin?tab=reports" },
 ];
 
 const languages = [
@@ -29,6 +42,19 @@ export default function Navbar() {
   const { isAuthenticated, user, logout } = useAuthStore();
   const { language, setLanguage } = useLanguageStore();
   const navigate = useNavigate();
+  const role = user?.role || 'student';
+
+  const pendingRequests = 3;
+  const unreadChats = 2;
+
+  const baseLinks = role === 'mentor' ? mentorLinks : role === 'admin' ? adminLinks : studentLinks;
+  const navLinks = role === 'mentor'
+    ? baseLinks.map(link => {
+        if (link.label === 'Requests') return { ...link, badge: pendingRequests };
+        if (link.label === 'Chats') return { ...link, badge: unreadChats };
+        return link;
+      })
+    : baseLinks;
 
   const handleLogout = () => {
     logout();
@@ -59,10 +85,15 @@ export default function Navbar() {
         {/* Nav Links — center */}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "28px" }}>
           {navLinks.map(link => (
-            <Link key={link.path} to={link.path} style={{ fontSize: "14px", fontWeight: 500, color: "#64748B", textDecoration: "none", whiteSpace: "nowrap" }}
-              onMouseEnter={e => e.target.style.color = "#2563EB"}
-              onMouseLeave={e => e.target.style.color = "#64748B"}>
+            <Link key={link.path} to={link.path} style={{ fontSize: "14px", fontWeight: 500, color: "#64748B", textDecoration: "none", whiteSpace: "nowrap", display: "flex", alignItems: "center" }}
+              onMouseEnter={e => e.currentTarget.style.color = "#2563EB"}
+              onMouseLeave={e => e.currentTarget.style.color = "#64748B"}>
               {link.label}
+              {link.badge > 0 && (
+                <span style={{ background: "#ef4444", color: "#fff", borderRadius: "99px", fontSize: "11px", fontWeight: "700", padding: "1px 7px", marginLeft: "5px" }}>
+                  {link.badge}
+                </span>
+              )}
             </Link>
           ))}
         </div>

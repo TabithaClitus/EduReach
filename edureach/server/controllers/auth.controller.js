@@ -1,62 +1,32 @@
-const crypto = require("crypto");
-const User = require("../models/User");
-const generateToken = require("../utils/generateToken");
-const nodemailer = require("nodemailer");
-
-const sendEmail = async (options) => {
-  const transporter = nodemailer.createTransport({
-    host: process.env.EMAIL_HOST,
-    port: process.env.EMAIL_PORT,
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
-  await transporter.sendMail({
-    from: process.env.EMAIL_USER,
-    to: options.to,
-    subject: options.subject,
-    text: options.text,
-    html: options.html,
-  });
-};
+const User = require('../models/User');
+const generateToken = require('../utils/generateToken');
 
 exports.register = async (req, res) => {
   try {
     const { name, email, password, role, language, state, district, school, grade, isRural } = req.body;
 
     if (!name || !email || !password) {
-      return res.status(400).json({
-        success: false,
-        message: "Please provide name, email and password.",
-      });
+      return res.status(400).json({ success: false, message: 'Please fill all fields' });
     }
-
     if (password.length < 6) {
-      return res.status(400).json({
-        success: false,
-        message: "Password must be at least 6 characters.",
-      });
+      return res.status(400).json({ success: false, message: 'Password must be at least 6 characters' });
     }
 
-    const existingUser = await User.findOne({ email });
-    if (existingUser) {
-      return res.status(400).json({
-        success: false,
-        message: "User already exists with this email.",
-      });
+    const existing = await User.findOne({ email });
+    if (existing) {
+      return res.status(400).json({ success: false, message: 'Email already registered. Please login.' });
     }
 
     const user = await User.create({
       name,
       email,
       password,
-      role: role || "student",
-      language: language || "en",
-      state: state || "",
-      district: district || "",
-      school: school || "",
-      grade: grade || "",
+      role: role || 'student',
+      language: language || 'en',
+      state: state || '',
+      district: district || '',
+      school: school || '',
+      grade: grade || '',
       isRural: isRural || false,
     });
 
@@ -65,26 +35,10 @@ exports.register = async (req, res) => {
     res.status(201).json({
       success: true,
       token,
-      user: {
-        id: user._id,
-        name: user.name,
-        email: user.email,
-        role: user.role,
-        language: user.language,
-        state: user.state,
-        district: user.district,
-        school: user.school,
-        grade: user.grade,
-        profilePic: user.profilePic,
-        isRural: user.isRural,
-        createdAt: user.createdAt,
-      },
+      user: { id: user._id, name: user.name, email: user.email, role: user.role },
     });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: error.message || "Registration failed.",
-    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
   }
 };
 
@@ -93,186 +47,38 @@ exports.login = async (req, res) => {
     const { email, password } = req.body;
 
     if (!email || !password) {
-      return res.status(400).json({
-        success: false,
-        message: "Please provide email and password.",
-      });
+      return res.status(400).json({ success: false, message: 'Please enter email and password' });
     }
 
-    const user = await User.findOne({ email }).select("+password");
+    const user = await User.findOne({ email }).select('+password');
     if (!user) {
-      return res.status(401).json({
-        success: false,
-        message: "Invalid email or password.",
-      });
+      return res.status(401).json({ success: false, message: 'No account found with this email. Please register first.' });
     }
 
     const isMatch = await user.matchPassword(password);
     if (!isMatch) {
-      return res.status(401).json({
-        success: false,
-        message: "Invalid email or password.",
-      });
+      return res.status(401).json({ success: false, message: 'Incorrect password. Please try again.' });
     }
 
     const token = generateToken(user._id, user.role);
 
-    res.status(200).json({
+    res.json({
       success: true,
       token,
-      user: {
-        id: user._id,
-        name: user.name,
-        email: user.email,
-        role: user.role,
-        language: user.language,
-        state: user.state,
-        district: user.district,
-        school: user.school,
-        grade: user.grade,
-        profilePic: user.profilePic,
-        isRural: user.isRural,
-        createdAt: user.createdAt,
-      },
+      user: { id: user._id, name: user.name, email: user.email, role: user.role },
     });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: error.message || "Login failed.",
-    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
   }
 };
 
 exports.getMe = async (req, res) => {
   try {
-    const user = await User.findById(req.user.id);
-    if (!user) {
-      return res.status(404).json({ success: false, message: "User not found." });
-    }
-    res.status(200).json({
-      success: true,
-      user: {
-        id: user._id,
-        name: user.name,
-        email: user.email,
-        role: user.role,
-        language: user.language,
-        state: user.state,
-        district: user.district,
-        school: user.school,
-        grade: user.grade,
-        profilePic: user.profilePic,
-        isRural: user.isRural,
-        createdAt: user.createdAt,
-      },
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: error.message || "Failed to get profile.",
-    });
+    const user = await User.findById(req.user.id).select('-password');
+    if (!user) return res.status(404).json({ success: false, message: 'User not found.' });
+    res.json({ success: true, user });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
   }
 };
 
-exports.forgotPassword = async (req, res) => {
-  try {
-    const { email } = req.body;
-    if (!email) {
-      return res.status(400).json({
-        success: false,
-        message: "Please provide email.",
-      });
-    }
-
-    const user = await User.findOne({ email }).select("+resetPasswordToken +resetPasswordExpire");
-    if (!user) {
-      return res.status(404).json({
-        success: false,
-        message: "No user found with this email.",
-      });
-    }
-
-    const resetToken = crypto.randomBytes(32).toString("hex");
-    user.resetPasswordToken = crypto.createHash("sha256").update(resetToken).digest("hex");
-    user.resetPasswordExpire = Date.now() + 10 * 60 * 1000; // 10 min
-    await user.save({ validateBeforeSave: false });
-
-    const resetUrl = `${process.env.CLIENT_URL || "http://localhost:5173"}/reset-password?token=${resetToken}`;
-
-    try {
-      await sendEmail({
-        to: user.email,
-        subject: "EduReach – Password Reset",
-        text: `You requested a password reset. Click: ${resetUrl}. This link expires in 10 minutes.`,
-        html: `<p>You requested a password reset.</p><p><a href="${resetUrl}">Reset password</a></p><p>This link expires in 10 minutes.</p>`,
-      });
-    } catch (err) {
-      user.resetPasswordToken = undefined;
-      user.resetPasswordExpire = undefined;
-      await user.save({ validateBeforeSave: false });
-      return res.status(500).json({
-        success: false,
-        message: "Email could not be sent.",
-      });
-    }
-
-    res.status(200).json({
-      success: true,
-      message: "Password reset email sent.",
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: error.message || "Forgot password failed.",
-    });
-  }
-};
-
-exports.resetPassword = async (req, res) => {
-  try {
-    const { token, password } = req.body;
-    if (!token || !password) {
-      return res.status(400).json({
-        success: false,
-        message: "Please provide reset token and new password.",
-      });
-    }
-    if (password.length < 6) {
-      return res.status(400).json({
-        success: false,
-        message: "Password must be at least 6 characters.",
-      });
-    }
-
-    const hashedToken = crypto.createHash("sha256").update(token).digest("hex");
-    const user = await User.findOne({
-      resetPasswordToken: hashedToken,
-      resetPasswordExpire: { $gt: Date.now() },
-    }).select("+password +resetPasswordToken +resetPasswordExpire");
-
-    if (!user) {
-      return res.status(400).json({
-        success: false,
-        message: "Invalid or expired reset token.",
-      });
-    }
-
-    user.password = password;
-    user.resetPasswordToken = undefined;
-    user.resetPasswordExpire = undefined;
-    await user.save();
-
-    const jwtToken = generateToken(user._id, user.role);
-
-    res.status(200).json({
-      success: true,
-      token: jwtToken,
-      message: "Password reset successful.",
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: error.message || "Reset password failed.",
-    });
-  }
-};

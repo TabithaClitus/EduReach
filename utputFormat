@@ -1,0 +1,11 @@
+HTTP/1.1 500 Internal Server Error
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 82
+ETag: W/"52-LMBUDgqIYEppLsZdkfk2KFrs9i0"
+Date: Mon, 09 Mar 2026 03:56:12 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"error":"Cannot destructure property 'prompt' of 'req.body' as it is undefined."}

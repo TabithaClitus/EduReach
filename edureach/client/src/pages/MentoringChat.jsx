@@ -1,33 +1,56 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { io } from 'socket.io-client';
+import { useAuth } from '../context/AuthContext';
 
-const sampleMessages = [
-  { id: 1, sender: 'mentor', text: 'Hello! Welcome. What topic shall we cover today?', time: '2:00 PM' },
-  { id: 2, sender: 'student', text: 'Hi sir! I need help with quadratic equations.', time: '2:01 PM' },
-  { id: 3, sender: 'mentor', text: "Perfect! Let's start with the basics. Do you know the standard form?", time: '2:02 PM' },
-  { id: 4, sender: 'student', text: 'Yes, ax² + bx + c = 0', time: '2:03 PM' },
-  { id: 5, sender: 'mentor', text: "Excellent! Now let's solve this: x² - 5x + 6 = 0. Try it!", time: '2:05 PM' },
-  { id: 6, sender: 'student', text: 'I think x = 2 and x = 3?', time: '2:08 PM' },
-  { id: 7, sender: 'mentor', text: 'That\'s correct! Great job 🎉', time: '2:09 PM' },
-];
+const socket = io('http://localhost:5000');
+
+const MENTOR_ID = 'mentor1'; // hardcoded until real mentor IDs are wired
+
+function formatTime(ts) {
+  if (!ts) return '';
+  return new Date(ts).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+}
 
 export default function MentoringChat() {
   const navigate = useNavigate();
   const { chatId } = useParams();
-  const [messages, setMessages] = useState(sampleMessages);
+  const { user } = useAuth();
+  const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const messagesEndRef = useRef(null);
+
+  const roomId = 'chat_test_room_1'; // hardcoded for testing
+
+  useEffect(() => {
+    socket.emit('joinRoom', roomId);
+
+    fetch(`http://localhost:5000/api/chat/${roomId}`)
+      .then(r => r.json())
+      .then(data => setMessages(Array.isArray(data) ? data : []))
+      .catch(() => setMessages([]));
+
+    const onMessage = (msg) => setMessages(prev => [...prev, msg]);
+    socket.on('receiveMessage', onMessage);
+
+    return () => {
+      socket.off('receiveMessage', onMessage);
+    };
+  }, [roomId]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
   function handleSend() {
-    const text = input.trim();
-    if (!text) return;
-    const now = new Date();
-    const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    setMessages(prev => [...prev, { id: Date.now(), sender: 'student', text, time }]);
+    if (!input.trim() || !user) return;
+    socket.emit('sendMessage', {
+      roomId,
+      sender: user._id,
+      senderRole: user.role,
+      senderName: user.name,
+      text: input.trim(),
+    });
     setInput('');
   }
 
@@ -52,7 +75,6 @@ export default function MentoringChat() {
           gap: '14px',
           flexShrink: 0,
         }}>
-          {/* Back button */}
           <button
             onClick={() => navigate('/mentoring', { state: { tab: 'chat' } })}
             style={{
@@ -67,7 +89,6 @@ export default function MentoringChat() {
             ←
           </button>
 
-          {/* Initials avatar */}
           <div style={{
             width: '48px', height: '48px', borderRadius: '50%',
             background: '#DBEAFE', color: '#2563EB',
@@ -77,7 +98,6 @@ export default function MentoringChat() {
             AS
           </div>
 
-          {/* Name + status */}
           <div style={{ flex: 1 }}>
             <p style={{ fontWeight: 700, fontSize: '16px', color: '#0F172A', marginBottom: '3px' }}>
               Arjun Sharma
@@ -88,7 +108,6 @@ export default function MentoringChat() {
             </div>
           </div>
 
-          {/* Sessions badge */}
           <div style={{
             padding: '6px 14px', background: '#EFF6FF',
             borderRadius: '20px', border: '1px solid #BFDBFE',
@@ -108,24 +127,35 @@ export default function MentoringChat() {
           flexDirection: 'column',
           gap: '12px',
         }}>
+          {messages.length === 0 && (
+            <div style={{ textAlign: 'center', color: '#94A3B8', marginTop: 60 }}>
+              <p style={{ fontSize: 36, marginBottom: 8 }}>💬</p>
+              <p style={{ fontSize: 14 }}>No messages yet. Start the conversation!</p>
+            </div>
+          )}
           {messages.map((msg) => {
-            const isStudent = msg.sender === 'student';
+            const isMine = msg.sender === user?._id;
             return (
               <div
-                key={msg.id}
+                key={msg._id || msg.createdAt}
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
-                  alignItems: isStudent ? 'flex-end' : 'flex-start',
+                  alignItems: isMine ? 'flex-end' : 'flex-start',
                 }}
               >
+                {!isMine && msg.senderName && (
+                  <span style={{ fontSize: '11px', color: '#94A3B8', marginBottom: '2px', paddingLeft: '4px' }}>
+                    {msg.senderName}
+                  </span>
+                )}
                 <div style={{
                   maxWidth: '65%',
                   padding: '12px 16px',
-                  borderRadius: isStudent ? '18px 18px 4px 18px' : '18px 18px 18px 4px',
-                  background: isStudent ? '#2563EB' : '#fff',
-                  color: isStudent ? '#fff' : '#0F172A',
-                  border: isStudent ? 'none' : '1px solid #E2E8F0',
+                  borderRadius: isMine ? '18px 18px 4px 18px' : '18px 18px 18px 4px',
+                  background: isMine ? '#2563EB' : '#fff',
+                  color: isMine ? '#fff' : '#0F172A',
+                  border: isMine ? 'none' : '1px solid #E2E8F0',
                   fontSize: '14px',
                   lineHeight: '1.5',
                   boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
@@ -133,7 +163,7 @@ export default function MentoringChat() {
                   {msg.text}
                 </div>
                 <span style={{ fontSize: '11px', color: '#94A3B8', marginTop: '4px', paddingLeft: '4px', paddingRight: '4px' }}>
-                  {msg.time}
+                  {formatTime(msg.createdAt)}
                 </span>
               </div>
             );

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { BookOpen, GraduationCap, Users, Mic, Heart, Calendar, ArrowRight, CheckCircle, Globe } from "lucide-react";
+import { BookOpen, GraduationCap, Users, Mic, ClipboardList, Calendar, ArrowRight, CheckCircle, Globe } from "lucide-react";
 
 const wrap = {
   maxWidth: "1200px",
@@ -12,7 +12,7 @@ const features = [
   { icon: GraduationCap, title: "Scholarships", desc: "Auto-matched scholarships based on your state, grade, and income.", bg: "#ECFDF5", color: "#059669", link: "/scholarships" },
   { icon: Users, title: "Mentoring", desc: "Connect with mentors who understand your journey.", bg: "#F5F3FF", color: "#7C3AED", link: "/mentoring" },
   { icon: Mic, title: "Speech Therapy", desc: "AI-assisted therapy sessions to improve communication.", bg: "#FFFBEB", color: "#D97706", link: "/speech-therapy" },
-  { icon: Heart, title: "Mental Health", desc: "Daily mood tracking and wellness support tools.", bg: "#FFF1F2", color: "#E11D48", link: "/mental-health" },
+  { icon: ClipboardList, title: "Quiz", desc: "Test your knowledge with subject-wise quizzes and instant results.", bg: "#FFF1F2", color: "#E11D48", link: "/quiz" },
   { icon: Calendar, title: "Study Plan", desc: "AI-generated study plans tailored to your exams and goals.", bg: "#F0FDFA", color: "#0D9488", link: "/study-plan" },
 ];
 

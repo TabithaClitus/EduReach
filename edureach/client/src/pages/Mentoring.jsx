@@ -121,12 +121,6 @@ function MentorCard({ mentor, onRequest, requesting, isStudent, onRequestMentor 
             : 'Request Mentor'}
         </button>
       )}
-      <button
-        onClick={() => onRequestMentor(mentor._id, (mentor.user || mentor).name)}
-        style={{ marginTop: '16px', width: '100%', padding: '10px', background: '#2563EB', color: '#fff', border: 'none', borderRadius: '8px', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}
-      >
-        Request Mentor
-      </button>
     </div>
   );
 }

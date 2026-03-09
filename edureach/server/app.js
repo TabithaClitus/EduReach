@@ -8,6 +8,7 @@ const authRoutes = require("./routes/auth.routes");
 const courseRoutes = require("./routes/course.routes");
 const scholarshipRoutes = require("./routes/scholarship.routes");
 const mentorRoutes = require("./routes/mentor.routes");
+const { generateStudyPlan } = require("./controllers/studyplan.controller");
 const Message = require("./models/Message");
 
 connectDB();
@@ -23,26 +24,30 @@ app.use(express.json());
 
 // ── Socket.io real-time chat ──────────────────────────────
 io.on("connection", (socket) => {
-  socket.on("join-room", (matchId) => {
-    socket.join(matchId);
+  console.log("User connected:", socket.id);
+
+  socket.on("joinRoom", (roomId) => {
+    socket.join(roomId);
+    console.log(`Socket ${socket.id} joined room ${roomId}`);
   });
 
-  socket.on("send-message", async ({ matchId, senderId, content }) => {
+  socket.on("sendMessage", async (data) => {
     try {
-      const message = await Message.create({ matchId, sender: senderId, content });
-      const populated = await message.populate("sender", "name profilePic");
-      io.to(matchId).emit("new-message", populated);
+      const msg = await Message.create({
+        roomId: data.roomId,
+        sender: data.sender,
+        senderRole: data.senderRole,
+        senderName: data.senderName,
+        text: data.text,
+      });
+      io.to(data.roomId).emit("receiveMessage", msg);
     } catch (err) {
-      console.error("Socket message error:", err.message);
+      console.error("Message save error:", err);
     }
   });
 
-  socket.on("typing", ({ matchId, userName }) => {
-    socket.to(matchId).emit("typing", userName);
-  });
-
-  socket.on("stop-typing", (matchId) => {
-    socket.to(matchId).emit("stop-typing");
+  socket.on("disconnect", () => {
+    console.log("User disconnected:", socket.id);
   });
 });
 // ─────────────────────────────────────────────────────────
@@ -55,6 +60,11 @@ app.use("/api/auth", authRoutes);
 app.use("/api/courses", courseRoutes);
 app.use("/api/scholarships", scholarshipRoutes);
 app.use("/api/mentors", mentorRoutes);
+app.use("/api/chat", require("./routes/chat.routes"));
+
+// ── Study Plan AI (Groq) ────────────────────────────────
+app.post("/api/study-plan/generate", generateStudyPlan);
+// ────────────────────────────────────────────────────────
 
 app.use((req, res) => {
   res.status(404).json({ success: false, message: "Route not found" });
