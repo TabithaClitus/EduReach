@@ -19,12 +19,27 @@ const io = new Server(server, {
   cors: { origin: "*", methods: ["GET", "POST"] },
 });
 
+// Track online users: userId (string) -> Set<socketId>
+const userSockets = new Map();
+app.set('io', io);
+app.set('userSockets', userSockets);
+
 app.use(cors());
 app.use(express.json());
 
 // ── Socket.io real-time chat ──────────────────────────────
 io.on("connection", (socket) => {
   console.log("User connected:", socket.id);
+
+  // Each client registers their userId immediately after connecting
+  socket.on("register-user", (userId) => {
+    if (!userId) return;
+    const uid = userId.toString();
+    if (!userSockets.has(uid)) userSockets.set(uid, new Set());
+    userSockets.get(uid).add(socket.id);
+    socket.userId = uid;
+    console.log(`Registered user ${uid} on socket ${socket.id}`);
+  });
 
   socket.on("joinRoom", (roomId) => {
     socket.join(roomId);
@@ -47,6 +62,13 @@ io.on("connection", (socket) => {
   });
 
   socket.on("disconnect", () => {
+    if (socket.userId) {
+      const sockets = userSockets.get(socket.userId);
+      if (sockets) {
+        sockets.delete(socket.id);
+        if (sockets.size === 0) userSockets.delete(socket.userId);
+      }
+    }
     console.log("User disconnected:", socket.id);
   });
 });

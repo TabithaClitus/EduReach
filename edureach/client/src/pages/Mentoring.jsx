@@ -46,7 +46,7 @@ function AvatarCircle({ name = 'U', size = 40 }) {
   );
 }
 
-function MentorCard({ mentor, onRequest, requesting, isStudent, onRequestMentor }) {
+function MentorCard({ mentor, onRequest, requesting, requested, isStudent, onRequestMentor }) {
   const u = mentor.user || {};
   return (
     <div style={{
@@ -65,7 +65,7 @@ function MentorCard({ mentor, onRequest, requesting, isStudent, onRequestMentor 
             {u.name ? u.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0,2) : '?'}
           </div>
           <div>
-            <p style={{ fontWeight: 600, color: '#0F172A', fontSize: '15px', marginBottom: '4px' }}>{u.name}</p>
+            <p style={{ fontWeight: 600, color: '#0F172A', fontSize: '15px', marginBottom: '2px' }}>{u.name}</p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
               <Stars value={mentor.rating || 0} />
               <span style={{ fontSize: '12px', color: '#94A3B8' }}>
@@ -104,19 +104,22 @@ function MentorCard({ mentor, onRequest, requesting, isStudent, onRequestMentor 
       {/* Request button */}
       {isStudent && (
         <button
-          onClick={() => onRequest(mentor)}
-          disabled={requesting}
+          onClick={() => !requested && onRequest(mentor)}
+          disabled={requesting || requested}
           style={{
-            width: '100%', padding: '10px', background: requesting ? '#93C5FD' : '#2563EB',
-            color: '#fff', fontSize: '14px', fontWeight: 600, borderRadius: '8px',
-            border: 'none', cursor: requesting ? 'not-allowed' : 'pointer',
+            width: '100%', padding: '10px',
+            background: requested ? '#E2E8F0' : requesting ? '#93C5FD' : '#2563EB',
+            color: requested ? '#64748B' : '#fff', fontSize: '14px', fontWeight: 600, borderRadius: '8px',
+            border: 'none', cursor: (requesting || requested) ? 'not-allowed' : 'pointer',
             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
             transition: 'background 0.15s',
           }}
-          onMouseEnter={e => { if (!requesting) e.currentTarget.style.background = '#1D4ED8'; }}
-          onMouseLeave={e => { if (!requesting) e.currentTarget.style.background = '#2563EB'; }}
+          onMouseEnter={e => { if (!requesting && !requested) e.currentTarget.style.background = '#1D4ED8'; }}
+          onMouseLeave={e => { if (!requesting && !requested) e.currentTarget.style.background = '#2563EB'; }}
         >
-          {requesting
+          {requested
+            ? '✓ Requested'
+            : requesting
             ? <span style={{ width: '16px', height: '16px', border: '2px solid #fff', borderTopColor: 'transparent', borderRadius: '50%', display: 'inline-block', animation: 'spin 0.8s linear infinite' }} />
             : 'Request Mentor'}
         </button>
@@ -135,8 +138,6 @@ export default function Mentoring() {
   const isMentor = user?.role === 'mentor';
 
   const [tab, setTab] = useState('discover');
-  const [hasMentor, setHasMentor] = useState(true);
-  const [hasChats, setHasChats] = useState(true);
   const [selectedChat, setSelectedChat] = useState(null);
 
   useEffect(() => {
@@ -150,21 +151,13 @@ export default function Mentoring() {
     { id: 2, mentorName: 'Priya Nair', lastMessage: 'Great work on that problem set!', time: 'Yesterday', unread: 0, initials: 'PN' },
   ];
 
-  const sampleActiveMentor = {
-    name: 'Arjun Sharma',
-    subjects: ['Mathematics', 'Physics'],
-    languages: ['Hindi', 'English'],
-    rating: 4.8,
-    sessionsCompleted: 12,
-    bio: 'IIT Bombay graduate with 5 years teaching experience in Maths and Physics.',
-  };
-
   // Discover
   const [mentors, setMentors] = useState([]);
   const [subjectFilter, setSubjectFilter] = useState('');
   const [langFilter, setLangFilter] = useState('');
   const [loadingMentors, setLoadingMentors] = useState(false);
   const [requestingId, setRequestingId] = useState(null);
+  const [requestedIds, setRequestedIds] = useState(new Set());
 
   // Requests
   const [outgoing, setOutgoing] = useState([]);
@@ -187,21 +180,46 @@ export default function Mentoring() {
   const [feedback, setFeedback] = useState('');
   const [submittingRating, setSubmittingRating] = useState(false);
 
-  // Socket init
+  // Socket init — also listens for mentorship notifications (student gets live status update)
   useEffect(() => {
-    socketRef.current = io('http://localhost:5000', { autoConnect: true });
-    return () => socketRef.current?.disconnect();
-  }, []);
+    const socket = io('http://localhost:5000', { autoConnect: true });
+    socketRef.current = socket;
+
+    const userId = user?.id || user?._id;
+    if (userId) {
+      socket.on('connect', () => socket.emit('register-user', userId));
+    }
+
+    // If mentor responds → refresh outgoing list so status badge updates instantly
+    socket.on('mentorship-notification', (notif) => {
+      if (notif.type === 'request-response') {
+        fetchOutgoing();
+      }
+    });
+
+    return () => socket.disconnect();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user?.id, user?._id]);
 
   // Fetch on tab change
   useEffect(() => {
-    if (tab === 'discover') fetchMentors();
+    if (tab === 'discover') {
+      fetchMentors();
+      if (isStudent) fetchOutgoing();
+    }
     if (tab === 'requests') {
       if (isStudent) fetchOutgoing();
       if (isMentor) fetchIncoming();
     }
     if (tab === 'chat') fetchActiveMatches();
   }, [tab, subjectFilter, langFilter]);
+
+  // Poll every 10s while on the My Requests tab (student) so status updates live
+  useEffect(() => {
+    if (tab !== 'requests' || !isStudent) return;
+    const interval = setInterval(fetchOutgoing, 10000);
+    return () => clearInterval(interval);
+  }, [tab, isStudent]);
 
   // Socket room + listeners for selected match
   useEffect(() => {
@@ -232,17 +250,32 @@ export default function Mentoring() {
       const params = {};
       if (subjectFilter) params.subject = subjectFilter;
       if (langFilter) params.language = langFilter;
-      const { data } = await api.get('/mentors', { params });
+      const { data } = await api.get('/mentors/list', { params });
+      console.log('[Mentoring] fetchMentors returned', data.data?.length, 'mentors:', data.data?.map(m => ({ id: m._id, userId: m.user?._id, name: m.user?.name })));
       setMentors(data.data || []);
-    } catch (e) { console.error(e); }
+    } catch (e) { console.error('[Mentoring] fetchMentors error:', e); }
     finally { setLoadingMentors(false); }
   }
 
   async function fetchOutgoing() {
     setLoadingRequests(true);
     try {
-      const { data } = await api.get('/mentors/my-requests');
-      setOutgoing(data.data || []);
+      // Get the student's current status from the User model
+      const { data } = await api.get('/mentors/my-request');
+      const status = data.mentorshipStatus || 'none';
+      const requestedMentorId = data.requestedMentorId?._id || data.requestedMentorId || null;
+
+      if (status === 'pending' && requestedMentorId) {
+        // Mark only that mentor's card as "✓ Requested"
+        setRequestedIds(new Set([requestedMentorId.toString()]));
+      } else {
+        // none / declined → all buttons active so student can request again
+        setRequestedIds(new Set());
+      }
+
+      // Also fetch the MentorMatch list for the My Requests tab display
+      const listResp = await api.get('/mentors/my-requests');
+      setOutgoing(listResp.data.data || []);
     } catch (e) { console.error(e); }
     finally { setLoadingRequests(false); }
   }
@@ -251,6 +284,7 @@ export default function Mentoring() {
     setLoadingRequests(true);
     try {
       const { data } = await api.get('/mentors/incoming');
+      // Backend now returns User-embedded requests array (pending only)
       setIncoming(data.data || []);
     } catch (e) { console.error(e); }
     finally { setLoadingRequests(false); }
@@ -275,13 +309,18 @@ export default function Mentoring() {
   };
 
   async function handleRequest(mentor) {
+    if (!user) {
+      navigate('/login');
+      return;
+    }
     setRequestingId(mentor._id);
     try {
       await api.post('/mentors/request', {
         mentorUserId: mentor.user._id,
         subject: mentor.subjects?.[0] || '',
       });
-      alert('Request sent! The mentor will be notified.');
+      // Mark ONLY this mentor's card as requested
+      setRequestedIds(new Set([mentor.user._id.toString()]));
     } catch (e) {
       alert(e.response?.data?.message || 'Failed to send request.');
     } finally { setRequestingId(null); }
@@ -291,9 +330,12 @@ export default function Mentoring() {
     setRespondingId(matchId);
     try {
       await api.patch(`/mentors/request/${matchId}`, { status });
-      fetchIncoming();
-    } catch (e) { console.error(e); }
-    finally { setRespondingId(null); }
+      // Remove from incoming list immediately
+      setIncoming(prev => prev.filter(m => m._id !== matchId));
+    } catch (e) {
+      console.error(e);
+      alert(e.response?.data?.message || 'Failed to respond.');
+    } finally { setRespondingId(null); }
   }
 
   function handleSelectMatch(match) {
@@ -338,9 +380,9 @@ export default function Mentoring() {
     user?._id === match.student?._id ? match.mentor : match.student;
 
   const tabs = [
-    { id: 'discover', label: 'Discover Mentors' },
-    { id: 'requests', label: isStudent ? 'My Requests' : 'My Mentor' },
-    { id: 'chat', label: 'Active Chats' },
+    { id: 'discover', label: '\uD83D\uDD0D Discover Mentors' },
+    { id: 'requests', label: isStudent ? '\uD83D\uDCCB My Requests' : '\uD83D\uDCE9 Incoming Requests' },
+    { id: 'chat', label: '\uD83D\uDCAC Active Chats' },
   ];
 
   return (
@@ -430,6 +472,7 @@ export default function Mentoring() {
                     mentor={m}
                     onRequest={handleRequest}
                     requesting={requestingId === m._id}
+                    requested={isStudent && requestedIds.has(m.user?._id)}
                     isStudent={isStudent}
                     onRequestMentor={handleRequestMentor}
                   />
@@ -439,165 +482,158 @@ export default function Mentoring() {
           </>
         )}
 
-        {/* ── MY MENTOR ── */}
+        {/* ── MY REQUESTS (student) / INCOMING (mentor) ── */}
         {tab === 'requests' && (
           <div>
-            {!hasMentor ? (
-              /* STATE 1 — No active mentor */
-              <div style={{ textAlign: 'center', padding: '80px 40px' }}>
-                <div style={{ fontSize: '64px', marginBottom: '20px', lineHeight: 1 }}>🎓</div>
-                <h2 style={{ fontSize: '20px', fontWeight: 700, color: '#0F172A', marginBottom: '8px' }}>
-                  You don't have a mentor yet
-                </h2>
-                <p style={{ fontSize: '14px', color: '#64748B', marginBottom: '28px' }}>
-                  Browse mentors and send a request to get started
-                </p>
-                <button
-                  onClick={() => setTab('discover')}
-                  style={{ padding: '10px 24px', background: '#2563EB', color: '#fff', border: 'none', borderRadius: '8px', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}
-                >
-                  Find a Mentor
-                </button>
-              </div>
-            ) : (
-              /* STATE 2 — Has active mentor */
-              <div style={{ maxWidth: '560px' }}>
-                <div style={{ background: '#fff', borderRadius: '16px', border: '1px solid #E2E8F0', padding: '32px', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
-
-                  {/* Avatar + Name + Rating */}
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '20px' }}>
-                    <div style={{ width: '72px', height: '72px', borderRadius: '50%', background: '#DBEAFE', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '24px', fontWeight: 700, color: '#2563EB', flexShrink: 0 }}>
-                      {sampleActiveMentor.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)}
-                    </div>
-                    <div style={{ flex: 1 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '4px' }}>
-                        <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#0F172A', margin: 0 }}>
-                          {sampleActiveMentor.name}
-                        </h3>
-                        <span style={{ padding: '2px 10px', background: '#D1FAE5', color: '#065F46', fontSize: '11px', fontWeight: 600, borderRadius: '20px' }}>Active</span>
-                      </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                        <Stars value={Math.round(sampleActiveMentor.rating)} />
-                        <span style={{ fontSize: '13px', color: '#64748B' }}>{sampleActiveMentor.rating} rating</span>
-                      </div>
-                    </div>
+            {isStudent && (
+              <>
+                {loadingRequests ? (
+                  <div style={{ display: 'flex', justifyContent: 'center', padding: '80px 0' }}>
+                    <div style={{ width: '32px', height: '32px', border: '2px solid #2563EB', borderTopColor: 'transparent', borderRadius: '50%', animation: 'spin 0.8s linear infinite' }} />
                   </div>
-
-                  {/* Bio */}
-                  <p style={{ fontSize: '14px', color: '#475569', lineHeight: '1.6', marginBottom: '20px' }}>
-                    {sampleActiveMentor.bio}
-                  </p>
-
-                  {/* Sessions stat */}
-                  <div style={{ background: '#F8FAFC', borderRadius: '10px', padding: '14px 18px', marginBottom: '20px', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-                    <span style={{ fontSize: '22px', fontWeight: 700, color: '#2563EB' }}>{sampleActiveMentor.sessionsCompleted}</span>
-                    <span style={{ fontSize: '13px', color: '#64748B' }}>Sessions with you</span>
-                  </div>
-
-                  {/* Subjects */}
-                  <div style={{ marginBottom: '12px' }}>
-                    <p style={{ fontSize: '12px', fontWeight: 600, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px' }}>Subjects</p>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                      {sampleActiveMentor.subjects.map(s => (
-                        <span key={s} style={{ padding: '4px 12px', background: '#EFF6FF', color: '#2563EB', fontSize: '12px', fontWeight: 500, borderRadius: '20px' }}>{s}</span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Languages */}
-                  <div style={{ marginBottom: '28px' }}>
-                    <p style={{ fontSize: '12px', fontWeight: 600, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px' }}>Languages</p>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                      {sampleActiveMentor.languages.map(l => (
-                        <span key={l} style={{ padding: '4px 12px', background: '#F1F5F9', color: '#475569', fontSize: '12px', fontWeight: 500, borderRadius: '20px' }}>{l}</span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Action buttons */}
-                  <div style={{ display: 'flex', gap: '12px' }}>
-                    <button
-                      onClick={() => navigate('/mentoring/chat/1')}
-                      style={{ flex: 1, padding: '11px', background: '#059669', color: '#fff', border: 'none', borderRadius: '8px', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}
-                    >
-                      💬 Open Chat
-                    </button>
-                    <button
-                      onClick={() => {
-                        if (window.confirm('Are you sure you want to end your mentorship with ' + sampleActiveMentor.name + '?')) {
-                          alert('Mentorship ended');
-                          setHasMentor(false);
-                        }
-                      }}
-                      style={{ flex: 1, padding: '11px', background: '#FEF2F2', color: '#DC2626', border: '1px solid #FECACA', borderRadius: '8px', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}
-                    >
-                      End Mentorship
+                ) : outgoing.length === 0 ? (
+                  <div style={{ textAlign: 'center', padding: '80px 40px' }}>
+                    <div style={{ fontSize: '64px', marginBottom: '20px', lineHeight: 1 }}>🎓</div>
+                    <h2 style={{ fontSize: '20px', fontWeight: 700, color: '#0F172A', marginBottom: '8px' }}>You haven't sent any requests yet</h2>
+                    <p style={{ fontSize: '14px', color: '#64748B', marginBottom: '28px' }}>Browse mentors and send a request to get started</p>
+                    <button onClick={() => setTab('discover')} style={{ padding: '10px 24px', background: '#2563EB', color: '#fff', border: 'none', borderRadius: '8px', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}>
+                      Find a Mentor
                     </button>
                   </div>
-
+                ) : (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '640px' }}>
+                    {outgoing.map((match) => {
+                      const mentor = match.mentor || {};
+                      const mentorName = mentor.name || 'Your mentor';
+                      const initials = mentorName.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+                      const statusConfig = {
+                        pending: {
+                          label: `⏳ Request sent to ${mentorName} — waiting for response`,
+                          bg: '#FFFBEB', color: '#92400E', border: '#FCD34D',
+                        },
+                        active: {
+                          label: `✅ ${mentorName} accepted your request! Go to Active Chats to message them.`,
+                          bg: '#D1FAE5', color: '#065F46', border: '#6EE7B7',
+                        },
+                        closed: {
+                          label: '❌ Your request was declined. You can request another mentor.',
+                          bg: '#FEF2F2', color: '#991B1B', border: '#FECACA',
+                        },
+                      };
+                      const s = statusConfig[match.status] || statusConfig.pending;
+                      return (
+                        <div key={match._id} style={{ background: '#fff', borderRadius: '12px', border: '1px solid #E2E8F0', padding: '20px 24px', boxShadow: '0 1px 3px rgba(0,0,0,0.06)', display: 'flex', alignItems: 'center', gap: '16px' }}>
+                          <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: '#DBEAFE', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '16px', color: '#2563EB', flexShrink: 0 }}>
+                            {initials}
+                          </div>
+                          <div style={{ flex: 1 }}>
+                            <p style={{ fontWeight: 700, fontSize: '15px', color: '#0F172A', margin: '0 0 4px' }}>{mentorName}</p>
+                            <p style={{ fontSize: '13px', color: '#64748B', margin: '0 0 8px' }}>{match.subject || '—'}</p>
+                            <span style={{ display: 'inline-block', padding: '3px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 600, background: s.bg, color: s.color, border: `1px solid ${s.border}` }}>
+                              {s.label}
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </>
+            )}
+            {isMentor && (
+              loadingRequests ? (
+                <div style={{ display: 'flex', justifyContent: 'center', padding: '80px 0' }}>
+                  <div style={{ width: '32px', height: '32px', border: '2px solid #2563EB', borderTopColor: 'transparent', borderRadius: '50%', animation: 'spin 0.8s linear infinite' }} />
                 </div>
-              </div>
+              ) : (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '640px' }}>
+                  {incoming.length === 0 ? (
+                    <div style={{ textAlign: 'center', padding: '80px 0', color: '#64748B' }}>
+                      <p style={{ fontSize: '48px' }}>🎉</p>
+                      <p>No pending requests.</p>
+                    </div>
+                  ) : incoming.map((req) => {
+                    const name = req.studentName || 'Student';
+                    const initials = name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+                    const matchId = req.matchId || req._id;
+                    return (
+                      <div key={req._id} style={{ background: '#fff', borderRadius: '12px', border: '1px solid #E2E8F0', padding: '20px 24px', boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '16px' }}>
+                          <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: '#EFF6FF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '16px', color: '#2563EB', flexShrink: 0 }}>{initials}</div>
+                          <div>
+                            <p style={{ fontWeight: 700, fontSize: '15px', color: '#0F172A', margin: '0 0 4px' }}>{name}</p>
+                            <p style={{ fontSize: '13px', color: '#64748B', margin: 0 }}>{req.grade || ''}{req.grade && req.subject ? ' · ' : ''}{req.subject || '—'}</p>
+                          </div>
+                        </div>
+                        <div style={{ display: 'flex', gap: '10px' }}>
+                          <button
+                            disabled={respondingId === matchId}
+                            onClick={() => handleRespond(matchId, 'active')}
+                            style={{ flex: 1, padding: '10px', background: '#10B981', color: '#fff', border: 'none', borderRadius: '8px', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}
+                          >✓ Accept</button>
+                          <button
+                            disabled={respondingId === matchId}
+                            onClick={() => handleRespond(matchId, 'closed')}
+                            style={{ flex: 1, padding: '10px', background: '#EF4444', color: '#fff', border: 'none', borderRadius: '8px', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}
+                          >✕ Decline</button>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )
             )}
           </div>
         )}
-
         {/* ── CHAT ── */}
         {tab === 'chat' && (
           <div style={{ display: 'flex', height: '600px', background: '#fff', borderRadius: '16px', boxShadow: '0 4px 24px rgba(0,0,0,0.08)', border: '1px solid #F1F5F9', overflow: 'hidden', margin: '0 0 32px 0' }}>
 
             {/* ── LEFT PANEL ── */}
             <div style={{ width: '360px', flexShrink: 0, borderRight: '1px solid #F1F5F9', display: 'flex', flexDirection: 'column' }}>
-              {/* Header + search */}
               <div style={{ padding: '20px', borderBottom: '1px solid #F1F5F9' }}>
-                <p style={{ fontSize: '20px', fontWeight: 700, color: '#0F172A', margin: '0 0 12px 0' }}>Messages</p>
-                <input
-                  type="text"
-                  placeholder="Search conversations..."
-                  style={{ width: '100%', padding: '10px 16px', background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: '10px', fontSize: '14px', outline: 'none', boxSizing: 'border-box', color: '#374151' }}
-                />
+                <p style={{ fontSize: '20px', fontWeight: 700, color: '#0F172A', margin: 0 }}>Messages</p>
               </div>
-              {/* Chat rows */}
               <div style={{ overflowY: 'auto', flex: 1 }}>
-                {sampleChats.map((chat) => (
-                  <div
-                    key={chat.id}
-                    onClick={() => setSelectedChat(chat)}
-                    onMouseEnter={e => { if (selectedChat?.id !== chat.id) e.currentTarget.style.background = '#F8FAFC'; }}
-                    onMouseLeave={e => { if (selectedChat?.id !== chat.id) e.currentTarget.style.background = '#fff'; }}
-                    style={{
-                      display: 'flex', alignItems: 'center', gap: '12px',
-                      padding: '14px 20px', cursor: 'pointer',
-                      background: selectedChat?.id === chat.id ? '#EFF6FF' : '#fff',
-                      borderLeft: selectedChat?.id === chat.id ? '3px solid #2563EB' : '3px solid transparent',
-                      transition: 'all 0.15s',
-                    }}
-                  >
-                    <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: '#DBEAFE', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '16px', fontWeight: 700, color: '#2563EB', flexShrink: 0 }}>
-                      {chat.initials}
-                    </div>
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '3px' }}>
-                        <span style={{ fontWeight: 600, fontSize: '14px', color: '#0F172A' }}>{chat.mentorName}</span>
-                        <span style={{ fontSize: '12px', color: '#94A3B8', flexShrink: 0, marginLeft: '8px' }}>{chat.time}</span>
-                      </div>
-                      <p style={{ fontSize: '13px', color: '#64748B', margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                        {chat.lastMessage}
-                      </p>
-                    </div>
-                    {chat.unread > 0 && (
-                      <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: '#EF4444', color: '#fff', fontSize: '11px', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                        {chat.unread}
-                      </div>
-                    )}
+                {activeMatches.length === 0 ? (
+                  <div style={{ padding: '48px 24px', textAlign: 'center', color: '#94A3B8' }}>
+                    <div style={{ fontSize: '40px', marginBottom: '12px' }}>💬</div>
+                    <p style={{ fontSize: '14px', fontWeight: 500, color: '#64748B' }}>No active chats yet</p>
+                    <p style={{ fontSize: '13px', marginTop: '4px' }}>Get a mentor request accepted first</p>
                   </div>
-                ))}
+                ) : activeMatches.map((match) => {
+                  const mentor = match.mentor || {};
+                  const mName = mentor.name || 'Mentor';
+                  const initials = mName.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+                  const isSelected = selectedChat?._id === match._id;
+                  return (
+                    <div
+                      key={match._id}
+                      onClick={() => setSelectedChat(match)}
+                      style={{
+                        display: 'flex', alignItems: 'center', gap: '12px',
+                        padding: '14px 20px', cursor: 'pointer',
+                        background: isSelected ? '#EFF6FF' : '#fff',
+                        borderLeft: isSelected ? '3px solid #2563EB' : '3px solid transparent',
+                        transition: 'all 0.15s',
+                      }}
+                    >
+                      <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: '#DBEAFE', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '16px', fontWeight: 700, color: '#2563EB', flexShrink: 0 }}>
+                        {initials}
+                      </div>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <p style={{ fontWeight: 600, fontSize: '14px', color: '#0F172A', margin: '0 0 3px 0' }}>{mName}</p>
+                        <p style={{ fontSize: '13px', color: '#64748B', margin: 0 }}>{match.subject || 'Active mentor'}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
             {/* ── RIGHT PANEL ── */}
             <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
               {!selectedChat ? (
-                /* Empty state */
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '16px' }}>
                   <div style={{ fontSize: '64px', lineHeight: 1 }}>💬</div>
                   <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#0F172A', margin: 0 }}>Select a conversation</h3>
@@ -609,18 +645,18 @@ export default function Mentoring() {
                   <div style={{ padding: '20px 24px', borderBottom: '1px solid #F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                       <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: '#DBEAFE', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '15px', fontWeight: 700, color: '#2563EB', flexShrink: 0 }}>
-                        {selectedChat.initials}
+                        {(selectedChat.mentor?.name || 'M').split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)}
                       </div>
                       <div>
-                        <p style={{ fontWeight: 700, fontSize: '16px', color: '#0F172A', margin: '0 0 3px 0' }}>{selectedChat.mentorName}</p>
+                        <p style={{ fontWeight: 700, fontSize: '16px', color: '#0F172A', margin: '0 0 3px 0' }}>{selectedChat.mentor?.name || 'Mentor'}</p>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                           <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#10B981', display: 'inline-block' }} />
-                          <span style={{ fontSize: '12px', color: '#10B981', fontWeight: 500 }}>Active now</span>
+                          <span style={{ fontSize: '12px', color: '#10B981', fontWeight: 500 }}>Active</span>
                         </div>
                       </div>
                     </div>
                     <button
-                      onClick={() => navigate('/mentoring/chat/' + selectedChat.id)}
+                      onClick={() => navigate('/mentoring/chat/active')}
                       onMouseEnter={e => e.currentTarget.style.background = '#1D4ED8'}
                       onMouseLeave={e => e.currentTarget.style.background = '#2563EB'}
                       style={{ background: '#2563EB', color: '#fff', padding: '10px 20px', borderRadius: '8px', border: 'none', fontWeight: 600, cursor: 'pointer', fontSize: '14px' }}
@@ -629,45 +665,16 @@ export default function Mentoring() {
                     </button>
                   </div>
 
-                  {/* Messages preview */}
-                  <div style={{ flex: 1, padding: '24px', overflowY: 'auto', background: '#F8FAFC', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                    {[
-                      { sender: 'mentor', text: 'See you tomorrow at 5pm!', time: '2:30 PM' },
-                      { sender: 'student', text: 'Sure sir! Will prepare the problems.', time: '2:28 PM' },
-                      { sender: 'mentor', text: 'Great! Focus on Chapter 4.', time: '2:25 PM' },
-                    ].map((msg, i) => {
-                      const isStudent = msg.sender === 'student';
-                      return (
-                        <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: isStudent ? 'flex-end' : 'flex-start' }}>
-                          <div style={{
-                            maxWidth: '65%', padding: '10px 14px',
-                            borderRadius: isStudent ? '18px 18px 4px 18px' : '18px 18px 18px 4px',
-                            background: isStudent ? '#2563EB' : '#fff',
-                            color: isStudent ? '#fff' : '#0F172A',
-                            border: isStudent ? 'none' : '1px solid #E2E8F0',
-                            fontSize: '14px', lineHeight: '1.5',
-                            boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
-                          }}>
-                            {msg.text}
-                          </div>
-                          <span style={{ fontSize: '11px', color: '#94A3B8', marginTop: '4px', padding: '0 4px' }}>{msg.time}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  {/* Quick reply bar */}
-                  <div style={{ padding: '16px 24px', borderTop: '1px solid #F1F5F9', background: '#fff', display: 'flex', gap: '12px', alignItems: 'center' }}>
-                    <input
-                      type="text"
-                      placeholder="Quick reply..."
-                      style={{ flex: 1, padding: '12px 16px', border: '1px solid #E2E8F0', borderRadius: '10px', fontSize: '14px', outline: 'none', color: '#374151' }}
-                    />
+                  {/* CTA panel */}
+                  <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '16px', background: '#F8FAFC' }}>
+                    <div style={{ fontSize: '48px' }}>💬</div>
+                    <p style={{ fontSize: '16px', fontWeight: 600, color: '#0F172A', margin: 0 }}>
+                      Chat with {selectedChat.mentor?.name || 'your mentor'}
+                    </p>
+                    <p style={{ fontSize: '13px', color: '#64748B', margin: 0 }}>Click "Open Chat" to start a real-time conversation</p>
                     <button
-                      onClick={() => navigate('/mentoring/chat/' + selectedChat.id)}
-                      onMouseEnter={e => e.currentTarget.style.background = '#1D4ED8'}
-                      onMouseLeave={e => e.currentTarget.style.background = '#2563EB'}
-                      style={{ background: '#2563EB', color: '#fff', border: 'none', borderRadius: '10px', padding: '12px 20px', fontWeight: 600, cursor: 'pointer', fontSize: '14px', whiteSpace: 'nowrap' }}
+                      onClick={() => navigate('/mentoring/chat/active')}
+                      style={{ background: '#2563EB', color: '#fff', padding: '12px 28px', borderRadius: '10px', border: 'none', fontWeight: 600, cursor: 'pointer', fontSize: '15px' }}
                     >
                       Open Chat →
                     </button>

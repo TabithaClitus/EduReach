@@ -31,6 +31,7 @@ import QuizTake from './pages/QuizTake';
 import QuizResults from './pages/QuizResults';
 import MentorDashboard from './pages/MentorDashboard';
 import StudentDetail from './pages/StudentDetail';
+import Admin from './pages/Admin';
 
 const AppLayout = () => {
   const location = useLocation();
@@ -187,6 +188,14 @@ const AppLayout = () => {
             element={
               <ProtectedRoute>
                 <StudentDetail />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute>
+                <Admin />
               </ProtectedRoute>
             }
           />

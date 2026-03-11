@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const MessageSchema = new mongoose.Schema({
-  roomId:     { type: String, required: true },
+  roomId:     { type: String, required: true, index: true },
   sender:     { type: String, required: true },
   senderRole: { type: String, enum: ["mentor", "student"] },
   senderName: { type: String },

@@ -1,7 +1,8 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { io } from 'socket.io-client';
 import { useAuth } from '../context/AuthContext';
+import api from '../services/api';
 
 function formatMsgTime(ts) {
   if (!ts) return '';
@@ -203,24 +204,59 @@ function OverviewTab({ requests, handleTabClick }) {
   );
 }
 
+// ─── Transform API request → UI row ──────────────────────────────────────────
+// Handles both User-embedded format { studentName, grade, subject, matchId, createdAt }
+// and old MentorMatch-populate format { student: { name }, subject, createdAt }
+
+function transformMatch(item) {
+  const name = item.studentName || item.student?.name || 'Student';
+  const initials = name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+  const colors = ['#2563EB', '#059669', '#7C3AED', '#D97706', '#DC2626'];
+  const bgs   = ['#EFF6FF', '#ECFDF5', '#F5F3FF', '#FFFBEB', '#FEF2F2'];
+  const idx = name.charCodeAt(0) % colors.length;
+  const elapsed = item.createdAt
+    ? (() => {
+        const d = (Date.now() - new Date(item.createdAt)) / 1000 / 60;
+        return d < 60 ? `${Math.round(d)}m ago` : d < 1440 ? `${Math.round(d / 60)}h ago` : 'Yesterday';
+      })()
+    : '';
+  // id used for accept/decline = matchId (MentorMatch _id) if available, else subdoc _id
+  const id = item.matchId || item._id;
+  return {
+    id, _id: id, name,
+    grade: item.grade || item.student?.grade || 'Class ?',
+    subject: item.subject || '—',
+    time: elapsed,
+    message: item.message || 'Requesting mentorship',
+    avatar: initials,
+    color: colors[idx], bg: bgs[idx],
+  };
+}
+
 // ─── Time Slots ─────────────────────────────────────────────────────────────
 
 const TIME_SLOTS = ['Mon 4–6 PM', 'Wed 5–7 PM', 'Sat 10–12 PM'];
 
 // ─── Tab: Requests ────────────────────────────────────────────────────────────
 
-function RequestsTab({ requests, setRequests }) {
+function RequestsTab({ requests, setRequests, onAccept, onDecline }) {
   const [openSchedule, setOpenSchedule] = useState(null);
   const [selectedSlot, setSelectedSlot] = useState(null);
 
-  const handleAccept = (id) => setRequests(prev => prev.filter(r => r.id !== id));
-  const handleDecline = (id) => setRequests(prev => prev.filter(r => r.id !== id));
+  const handleAccept = (id) => {
+    if (onAccept) onAccept(id);
+    else setRequests(prev => prev.filter(r => r.id !== id));
+  };
+  const handleDecline = (id) => {
+    if (onDecline) onDecline(id);
+    else setRequests(prev => prev.filter(r => r.id !== id));
+  };
   const toggleSchedule = (id) => {
     setOpenSchedule(prev => prev === id ? null : id);
     setSelectedSlot(null);
   };
   const handleConfirm = (id) => {
-    setRequests(prev => prev.filter(r => r.id !== id));
+    handleAccept(id);
     setOpenSchedule(null);
     setSelectedSlot(null);
   };
@@ -389,14 +425,22 @@ function StudentsTab({ handleTabClick }) {
 
 function ChatsTab() {
   const { user } = useAuth();
-  const [chats, setChats] = useState(CHATS_INIT);
+  const [chats, setChats] = useState([]);
   const [activeId, setActiveId] = useState(null);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(true);
   const endRef = useRef(null);
   const socketRef = useRef(null);
 
   const activeChat = chats.find(c => c.id === activeId);
+  const mentorId = user?.id || user?._id;
+
+  // Build roomId for a given studentId
+  const buildRoomId = (studentId) => {
+    if (!mentorId || !studentId) return null;
+    return `chat_${[mentorId.toString(), studentId.toString()].sort().join('_')}`;
+  };
 
   // Create socket once
   useEffect(() => {
@@ -404,28 +448,62 @@ function ChatsTab() {
     return () => { socketRef.current?.disconnect(); };
   }, []);
 
+  // Fetch real accepted students
+  useEffect(() => {
+    if (!user) return;
+    setLoading(true);
+    api.get('/mentors/my-students')
+      .then(({ data }) => {
+        const students = data.data || [];
+        const mapped = students.map(s => ({
+          id: s.studentId?.toString() || s._id?.toString(),
+          studentId: s.studentId?.toString() || s._id?.toString(),
+          name: s.studentName || 'Student',
+          avatar: (s.studentName || 'S').split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2),
+          bg: '#EFF6FF', color: '#2563EB',
+          grade: s.grade || '',
+          subject: s.subject || '',
+          lastMsg: '', time: '', unread: 0, online: false,
+        }));
+        setChats(mapped);
+      })
+      .catch(() => setChats([]))
+      .finally(() => setLoading(false));
+  }, [user]);
+
   // Join room + load messages when active chat changes
   useEffect(() => {
     if (!activeId || !user) return;
-    const roomId = 'chat_test_room_1'; // hardcoded for testing
+    const activeChat = chats.find(c => c.id === activeId);
+    if (!activeChat) return;
+    const roomId = buildRoomId(activeChat.studentId);
+    if (!roomId) return;
 
     socketRef.current?.emit('joinRoom', roomId);
 
     fetch(`http://localhost:5000/api/chat/${roomId}`)
       .then(r => r.json())
-      .then(data => setMessages(Array.isArray(data) ? data : []))
-      .catch(() => setMessages([]));
+      .then(data => {
+        if (!Array.isArray(data)) return;
+        // Merge: keep any real-time messages that arrived during the fetch
+        setMessages(prev => {
+          const historyIds = new Set(data.map(m => m._id?.toString()).filter(Boolean));
+          const realtimeOnly = prev.filter(m => m._id && !historyIds.has(m._id.toString()));
+          return [...data, ...realtimeOnly];
+        });
+      })
+      .catch(() => {});
 
     const onMessage = (msg) => {
       setMessages(prev => [...prev, msg]);
       setChats(prev => prev.map(c =>
-        c.id === activeId ? { ...c, lastMsg: msg.text, time: formatMsgTime(msg.createdAt) } : c
+        c.id === activeId ? { ...c, lastMsg: msg.text, time: formatMsgTime(msg.createdAt), unread: 0 } : c
       ));
     };
     socketRef.current?.on('receiveMessage', onMessage);
 
     return () => { socketRef.current?.off('receiveMessage', onMessage); };
-  }, [activeId, user]);
+  }, [activeId, user, chats.length]);
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -440,10 +518,13 @@ function ChatsTab() {
   const handleSend = () => {
     const text = input.trim();
     if (!text || !activeId || !user) return;
-    const roomId = 'chat_test_room_1'; // hardcoded for testing
+    const activeChat = chats.find(c => c.id === activeId);
+    if (!activeChat) return;
+    const roomId = buildRoomId(activeChat.studentId);
+    if (!roomId) return;
     socketRef.current?.emit('sendMessage', {
       roomId,
-      sender: user._id,
+      sender: mentorId,
       senderRole: user.role,
       senderName: user.name,
       text,
@@ -460,7 +541,14 @@ function ChatsTab() {
           <p style={{ margin: 0, fontWeight: 700, fontSize: 16, color: '#0F172A' }}>Messages</p>
         </div>
         <div style={{ overflowY: 'auto', flex: 1 }}>
-          {chats.map(c => (
+          {loading ? (
+            <div style={{ padding: 24, textAlign: 'center', color: '#94A3B8', fontSize: 13 }}>Loading...</div>
+          ) : chats.length === 0 ? (
+            <div style={{ padding: 24, textAlign: 'center', color: '#94A3B8', fontSize: 13 }}>
+              <p style={{ fontSize: 32, marginBottom: 8 }}>💬</p>
+              <p>No accepted students yet</p>
+            </div>
+          ) : chats.map(c => (
             <div key={c.id} onClick={() => handleSelect(c)}
               style={{ padding: '14px 16px', cursor: 'pointer', background: activeId === c.id ? '#EFF6FF' : 'white', borderBottom: '1px solid #F8FAFC', display: 'flex', alignItems: 'center', gap: 12, transition: 'background 0.15s' }}>
               <div style={{ position: 'relative', flexShrink: 0 }}>
@@ -514,7 +602,7 @@ function ChatsTab() {
                 </div>
               )}
               {messages.map(m => {
-                const isMine = m.sender === user?._id;
+                const isMine = m.sender === (user?.id || user?._id);
                 return (
                   <div key={m._id || m.createdAt} style={{ display: 'flex', justifyContent: isMine ? 'flex-end' : 'flex-start' }}>
                     <div style={{
@@ -567,7 +655,54 @@ export default function MentorDashboard() {
   const { user } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
-  const [requests, setRequests] = useState(REQUESTS);
+  const [requests, setRequests] = useState([]);
+  const socketRef = useRef(null);
+
+  const fetchRequests = useCallback(async () => {
+    try {
+      const { data } = await api.get('/mentors/incoming');
+      const list = data.data || [];
+      setRequests(list.map(transformMatch));
+    } catch (e) { console.error('fetchRequests:', e); }
+  }, []);
+
+  // Initial fetch + poll every 10s
+  useEffect(() => {
+    fetchRequests();
+    const interval = setInterval(fetchRequests, 10000);
+    return () => clearInterval(interval);
+  }, [fetchRequests]);
+
+  // Socket — register user + live-refresh when a student sends a request
+  useEffect(() => {
+    const socket = io('http://localhost:5000', { autoConnect: true });
+    socketRef.current = socket;
+    const userId = user?.id || user?._id;
+    if (userId) {
+      socket.on('connect', () => socket.emit('register-user', userId));
+    }
+    socket.on('mentorship-notification', (notif) => {
+      if (notif.type === 'new-request') {
+        fetchRequests(); // auto-refresh the list
+      }
+    });
+    return () => socket.disconnect();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user?.id, user?._id]);
+
+  const handleAcceptRequest = async (matchId) => {
+    try {
+      await api.patch(`/mentors/request/${matchId}`, { status: 'active' });
+      setRequests(prev => prev.filter(r => r.id !== matchId));
+    } catch (e) { console.error(e); }
+  };
+
+  const handleDeclineRequest = async (matchId) => {
+    try {
+      await api.patch(`/mentors/request/${matchId}`, { status: 'closed' });
+      setRequests(prev => prev.filter(r => r.id !== matchId));
+    } catch (e) { console.error(e); }
+  };
 
   const getTabFromURL = () => {
     const param = new URLSearchParams(location.search).get('tab');
@@ -594,9 +729,10 @@ export default function MentorDashboard() {
         <div style={{ background: 'linear-gradient(135deg, #059669, #0D9488)', borderRadius: 20, padding: '36px 40px', marginBottom: 28, color: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
             <p style={{ fontSize: 14, opacity: 0.85, margin: '0 0 4px' }}>👋 Welcome back,</p>
-            <p style={{ fontSize: 32, fontWeight: 800, margin: '0 0 6px', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+            <p style={{ fontSize: 32, fontWeight: 800, margin: '0 0 4px', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
               {user?.name || 'Mentor'}
             </p>
+            <p style={{ fontSize: 12, opacity: 0.65, margin: '0 0 6px', fontStyle: 'italic' }}>{user?.email}</p>
             <p style={{ fontSize: 14, opacity: 0.8, margin: 0 }}>You have {requests.length} pending request{requests.length !== 1 ? 's' : ''} waiting for your response.</p>
           </div>
           <div style={{ background: 'rgba(255,255,255,0.15)', borderRadius: 16, padding: '20px 28px', textAlign: 'center' }}>
@@ -607,7 +743,7 @@ export default function MentorDashboard() {
 
         {/* Tab content */}
         {activeTab === 'Overview' && <OverviewTab requests={requests} handleTabClick={handleTabClick} />}
-        {activeTab === 'Requests' && <RequestsTab requests={requests} setRequests={setRequests} />}
+        {activeTab === 'Requests' && <RequestsTab requests={requests} setRequests={setRequests} onAccept={handleAcceptRequest} onDecline={handleDeclineRequest} />}
         {activeTab === 'My Students' && <StudentsTab handleTabClick={handleTabClick} />}
         {activeTab === 'Chats' && <ChatsTab />}
 

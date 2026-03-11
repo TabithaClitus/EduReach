@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { GraduationCap, Menu, X, ChevronDown, LogOut, User } from "lucide-react";
+import { GraduationCap, Menu, X, ChevronDown, LogOut, User, Bell } from "lucide-react";
+import { io } from "socket.io-client";
 import useAuthStore from "../../store/authStore";
 import useLanguageStore from "../../store/languageStore";
+import api from "../../services/api";
 
 const studentLinks = [
   { label: "Home", path: "/" },
@@ -44,8 +46,55 @@ export default function Navbar() {
   const navigate = useNavigate();
   const role = user?.role || 'student';
 
-  const pendingRequests = 3;
+  const [pendingRequests, setPendingRequests] = useState(0);
   const unreadChats = 2;
+
+  // ── Notification toasts ─────────────────────────────────────────────────────────
+  const [toasts, setToasts] = useState([]);
+  const socketRef = useRef(null);
+
+  const addToast = (msg, type = 'info') => {
+    const id = Date.now();
+    setToasts(prev => [...prev, { id, msg, type }]);
+    setTimeout(() => setToasts(prev => prev.filter(t => t.id !== id)), 5000);
+  };
+
+  // ── Socket: register user + listen for mentorship notifications ───────────
+  useEffect(() => {
+    if (!isAuthenticated || !user) return;
+    const userId = user.id || user._id;
+    if (!userId) return;
+
+    const socket = io('http://localhost:5000', { transports: ['websocket', 'polling'] });
+    socketRef.current = socket;
+
+    socket.on('connect', () => {
+      socket.emit('register-user', userId);
+    });
+
+    socket.on('mentorship-notification', (notif) => {
+      addToast(notif.message, notif.type === 'new-request' ? 'request' : 'response');
+      // Update mentor badge count in real-time
+      if (role === 'mentor' && notif.type === 'new-request') {
+        setPendingRequests(prev => prev + 1);
+      }
+    });
+
+    return () => socket.disconnect();
+  }, [isAuthenticated, user?.id || user?._id]);
+
+  // ── Initial + polling fetch of pending count for mentor (every 15s) ────────
+  useEffect(() => {
+    if (role !== 'mentor') return;
+    const fetchCount = () => {
+      api.get('/mentors/incoming')
+        .then(({ data }) => setPendingRequests((data.data || []).length))
+        .catch(() => {});
+    };
+    fetchCount();
+    const interval = setInterval(fetchCount, 15000);
+    return () => clearInterval(interval);
+  }, [role]);
 
   const baseLinks = role === 'mentor' ? mentorLinks : role === 'admin' ? adminLinks : studentLinks;
   const navLinks = role === 'mentor'
@@ -62,14 +111,35 @@ export default function Navbar() {
   };
 
   return (
-    <nav style={{
-      position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
-      background: "rgba(255,255,255,0.95)",
-      backdropFilter: "blur(12px)",
-      borderBottom: "1px solid #F1F5F9",
-      height: "68px",
-      display: "flex", alignItems: "center",
-    }}>
+    <>
+      {/* ── Toast Notifications ── */}
+      <div style={{ position: 'fixed', top: '80px', right: '24px', zIndex: 9999, display: 'flex', flexDirection: 'column', gap: '10px', pointerEvents: 'none' }}>
+        {toasts.map(t => (
+          <div key={t.id} style={{
+            background: t.type === 'request' ? '#EFF6FF' : t.type === 'response' ? '#ECFDF5' : '#F8FAFC',
+            border: `1px solid ${t.type === 'request' ? '#BFDBFE' : t.type === 'response' ? '#A7F3D0' : '#E2E8F0'}`,
+            borderLeft: `4px solid ${t.type === 'request' ? '#2563EB' : t.type === 'response' ? '#10B981' : '#64748B'}`,
+            borderRadius: '10px',
+            padding: '12px 16px',
+            minWidth: '280px',
+            maxWidth: '360px',
+            boxShadow: '0 4px 20px rgba(0,0,0,0.12)',
+            animation: 'slideInRight 0.3s ease',
+            pointerEvents: 'auto',
+          }}>
+            <p style={{ margin: 0, fontSize: '13px', fontWeight: 600, color: '#0F172A' }}>{t.msg}</p>
+          </div>
+        ))}
+      </div>
+
+      <nav style={{
+        position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
+        background: "rgba(255,255,255,0.95)",
+        backdropFilter: "blur(12px)",
+        borderBottom: "1px solid #F1F5F9",
+        height: "68px",
+        display: "flex", alignItems: "center",
+      }}>
       <div style={{ width: "100%", padding: "0 24px", display: "grid", gridTemplateColumns: "auto 1fr auto", alignItems: "center", gap: "0" }}>
 
         {/* Logo — left */}
@@ -141,5 +211,6 @@ export default function Navbar() {
 
       </div>
     </nav>
+    </>
   );
 }

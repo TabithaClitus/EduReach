@@ -41,6 +41,23 @@ const userSchema = new mongoose.Schema(
     income: { type: String, default: "" },
     isRural: { type: Boolean, default: false },
     appliedScholarships: [{ type: mongoose.Schema.Types.ObjectId, ref: "Scholarship" }],
+
+    // ── Mentorship status (student side) ─────────────────────────────────────
+    mentorshipStatus: { type: String, enum: ['none', 'pending', 'accepted', 'declined'], default: 'none' },
+    myMentor: { type: mongoose.Schema.Types.ObjectId, ref: 'User', default: null },
+    requestedMentorId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', default: null },
+
+    // ── Pending requests (mentor side) ────────────────────────────────────────
+    mentorshipRequests: [{
+      studentId:   { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+      studentName: String,
+      grade:       String,
+      subject:     String,
+      message:     { type: String, default: '' },
+      status:      { type: String, enum: ['pending', 'accepted', 'declined'], default: 'pending' },
+      createdAt:   { type: Date, default: Date.now },
+    }],
+
     resetPasswordToken: { type: String, select: false },
     resetPasswordExpire: { type: Date, select: false },
     createdAt: {
