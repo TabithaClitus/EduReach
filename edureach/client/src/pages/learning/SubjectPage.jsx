@@ -13,7 +13,8 @@ const cardVariants = {
     visible: { y: 0, opacity: 1, transition: { duration: 0.4, ease: 'easeOut' } }
 };
 
-const subjects = [
+// Base subjects for Class 1 and 2
+const baseSubjects = [
     {
         id: 'maths',
         name: 'Maths',
@@ -49,9 +50,124 @@ const subjects = [
     },
 ];
 
+// Class 3 subjects (includes Science instead of EVS, plus GK)
+const class3Subjects = [
+    {
+        id: 'maths',
+        name: 'Maths',
+        description: 'Master multiplication, division, fractions, and geometry with engaging problem-solving activities.',
+        icon: '➕✖️',
+        emoji: '🔢',
+        bgColor: '#FFF3E0',
+        iconBg: '#FFE0B2',
+        accentColor: '#FF9800',
+        buttonGradient: 'linear-gradient(135deg, #FF9800 0%, #F57C00 100%)',
+    },
+    {
+        id: 'english',
+        name: 'English',
+        description: 'Build reading comprehension, grammar skills, and creative writing through stories and exercises.',
+        icon: '📖',
+        emoji: '📚',
+        bgColor: '#E3F2FD',
+        iconBg: '#BBDEFB',
+        accentColor: '#2196F3',
+        buttonGradient: 'linear-gradient(135deg, #42A5F5 0%, #1E88E5 100%)',
+    },
+    {
+        id: 'evs',
+        name: 'EVS / Science',
+        description: 'Discover plants, animals, the human body, and our environment through interactive experiments.',
+        icon: '🔬',
+        emoji: '🔬',
+        bgColor: '#E8F5E9',
+        iconBg: '#C8E6C9',
+        accentColor: '#4CAF50',
+        buttonGradient: 'linear-gradient(135deg, #66BB6A 0%, #43A047 100%)',
+    },
+    {
+        id: 'gk',
+        name: 'General Knowledge',
+        description: 'Explore the world with facts about countries, famous people, inventions, and current affairs.',
+        icon: '🌍',
+        emoji: '🌍',
+        bgColor: '#F3E5F5',
+        iconBg: '#E1BEE7',
+        accentColor: '#9C27B0',
+        buttonGradient: 'linear-gradient(135deg, #AB47BC 0%, #8E24AA 100%)',
+    },
+];
+
+// Class 4 subjects (includes Mathematics, English, EVS/Science, Social Studies, and GK)
+const class4Subjects = [
+    {
+        id: 'maths',
+        name: 'Mathematics',
+        description: 'Explore advanced arithmetic, fractions, decimals, geometry, and data handling with real-world applications.',
+        icon: '➕✖️',
+        emoji: '🔢',
+        bgColor: '#FFF3E0',
+        iconBg: '#FFE0B2',
+        accentColor: '#FF9800',
+        buttonGradient: 'linear-gradient(135deg, #FF9800 0%, #F57C00 100%)',
+    },
+    {
+        id: 'english',
+        name: 'English',
+        description: 'Develop grammar mastery, reading comprehension, vocabulary, and creative writing through engaging activities.',
+        icon: '📖',
+        emoji: '📚',
+        bgColor: '#E3F2FD',
+        iconBg: '#BBDEFB',
+        accentColor: '#2196F3',
+        buttonGradient: 'linear-gradient(135deg, #42A5F5 0%, #1E88E5 100%)',
+    },
+    {
+        id: 'evs',
+        name: 'EVS / Science',
+        description: 'Understand ecosystems, human body systems, matter, energy, and environmental conservation.',
+        icon: '🔬',
+        emoji: '🔬',
+        bgColor: '#E8F5E9',
+        iconBg: '#C8E6C9',
+        accentColor: '#4CAF50',
+        buttonGradient: 'linear-gradient(135deg, #66BB6A 0%, #43A047 100%)',
+    },
+    {
+        id: 'social',
+        name: 'Social Studies',
+        description: 'Learn about history, geography, civics, and cultures of India and the world.',
+        icon: '🗺️',
+        emoji: '🌍',
+        bgColor: '#FFF8E1',
+        iconBg: '#FFECB3',
+        accentColor: '#FFA000',
+        buttonGradient: 'linear-gradient(135deg, #FFB300 0%, #FF8F00 100%)',
+    },
+    {
+        id: 'gk',
+        name: 'General Knowledge',
+        description: 'Discover facts about science, technology, sports, famous personalities, and current events.',
+        icon: '💡',
+        emoji: '💡',
+        bgColor: '#F3E5F5',
+        iconBg: '#E1BEE7',
+        accentColor: '#9C27B0',
+        buttonGradient: 'linear-gradient(135deg, #AB47BC 0%, #8E24AA 100%)',
+    },
+];
+
+// Function to get subjects based on class
+const getSubjectsForClass = (classId) => {
+    if (classId === '3') return class3Subjects;
+    if (classId === '4') return class4Subjects;
+    return baseSubjects;
+};
+
 const SubjectPage = () => {
     const { classId } = useParams();
     const navigate = useNavigate();
+    const subjects = getSubjectsForClass(classId);
 
     return (
         <div style={{
