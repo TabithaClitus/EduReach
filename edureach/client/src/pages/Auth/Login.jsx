@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, Navigate } from "react-router-dom";
 import { Mail, Lock, Eye, EyeOff, GraduationCap } from "lucide-react";
 import useAuthStore from "../../store/authStore";
 import api from "../../services/api";
@@ -9,8 +9,14 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const { login } = useAuthStore();
+  const { login, user, isAuthenticated } = useAuthStore();
   const navigate = useNavigate();
+
+  if (isAuthenticated && user) {
+    if (user.role === 'admin') return <Navigate to="/admin" replace />;
+    if (user.role === 'mentor') return <Navigate to="/mentor-dashboard" replace />;
+    return <Navigate to="/dashboard" replace />;
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();

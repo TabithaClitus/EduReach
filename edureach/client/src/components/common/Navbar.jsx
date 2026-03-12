@@ -7,12 +7,13 @@ import useLanguageStore from "../../store/languageStore";
 import api from "../../services/api";
 
 const studentLinks = [
-  { label: "Home", path: "/" },
+  { label: "Dashboard", path: "/dashboard" },
   { label: "Learning", path: "/learning" },
   { label: "Scholarships", path: "/scholarships" },
   { label: "Mentoring", path: "/mentoring" },
   { label: "Quiz", path: "/quiz" },
   { label: "Study Plan", path: "/study-plan" },
+  { label: "Speech Therapy", path: "/speech-therapy" },
 ];
 
 const mentorLinks = [
@@ -45,6 +46,10 @@ export default function Navbar() {
   const { language, setLanguage } = useLanguageStore();
   const navigate = useNavigate();
   const role = user?.role || 'student';
+
+  const logoPath = !isAuthenticated ? '/' :
+    role === 'mentor' ? '/mentor-dashboard' :
+    role === 'admin' ? '/admin' : '/dashboard';
 
   const [pendingRequests, setPendingRequests] = useState(0);
   const unreadChats = 2;
@@ -96,7 +101,7 @@ export default function Navbar() {
     return () => clearInterval(interval);
   }, [role]);
 
-  const baseLinks = role === 'mentor' ? mentorLinks : role === 'admin' ? adminLinks : studentLinks;
+  const baseLinks = !isAuthenticated ? [] : role === 'mentor' ? mentorLinks : role === 'admin' ? adminLinks : studentLinks;
   const navLinks = role === 'mentor'
     ? baseLinks.map(link => {
         if (link.label === 'Requests') return { ...link, badge: pendingRequests };
@@ -106,8 +111,8 @@ export default function Navbar() {
     : baseLinks;
 
   const handleLogout = () => {
+    window.location.replace('/');
     logout();
-    navigate("/");
   };
 
   return (
@@ -143,14 +148,14 @@ export default function Navbar() {
       <div style={{ width: "100%", padding: "0 24px", display: "grid", gridTemplateColumns: "auto 1fr auto", alignItems: "center", gap: "0" }}>
 
         {/* Logo — left */}
-        <Link to="/" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none", marginRight: "40px" }}>
+        <div onClick={() => navigate(logoPath)} style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none", marginRight: "40px", cursor: "pointer" }}>
           <div style={{ width: "36px", height: "36px", background: "#2563EB", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <GraduationCap size={20} color="white" />
           </div>
           <span style={{ fontSize: "18px", fontWeight: 800, color: "#0F172A", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
             Edu<span style={{ color: "#2563EB" }}>Reach</span>
           </span>
-        </Link>
+        </div>
 
         {/* Nav Links — center */}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "28px" }}>

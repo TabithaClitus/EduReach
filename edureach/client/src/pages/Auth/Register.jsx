@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { GraduationCap, Users, Mail, Lock, Eye, EyeOff, User, MapPin } from "lucide-react";
+import { GraduationCap, Mail, Lock, Eye, EyeOff, User, MapPin } from "lucide-react";
 import useAuthStore from "../../store/authStore";
 import api from "../../services/api";
 
@@ -16,29 +16,44 @@ const languages = [
 const states = ["Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana","Himachal Pradesh","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal"];
 
 export default function Register() {
-  const [role, setRole] = useState("student");
+  const role = "student";
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [fieldErrors, setFieldErrors] = useState({ name: "", email: "", password: "", confirmPassword: "" });
   const [form, setForm] = useState({ name: "", email: "", password: "", confirmPassword: "", language: "en", state: "", district: "", grade: "", isRural: false });
   const { login } = useAuthStore();
   const navigate = useNavigate();
 
-  const set = (key, val) => setForm(f => ({ ...f, [key]: val }));
+  const set = (key, val) => {
+    setForm(f => ({ ...f, [key]: val }));
+    setFieldErrors(fe => ({ ...fe, [key]: "" }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    if (form.password !== form.confirmPassword) return setError("Passwords do not match.");
-    if (form.password.length < 6) return setError("Password must be at least 6 characters.");
+
+    // Inline validation
+    const fe = { name: "", email: "", password: "", confirmPassword: "" };
+    if (!form.name || form.name.trim().length < 2) fe.name = "Name must be at least 2 characters.";
+    if (!form.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) fe.email = "Please enter a valid email address.";
+    if (!form.password || form.password.length < 6) fe.password = "Password must be at least 6 characters.";
+    if (form.password !== form.confirmPassword) fe.confirmPassword = "Passwords do not match.";
+    if (Object.values(fe).some(v => v)) { setFieldErrors(fe); return; }
+
     setLoading(true);
     try {
       const { data } = await api.post("/auth/register", { ...form, role });
       login(data.user, data.token);
-      navigate("/dashboard");
+      if (data.user.role === 'mentor') navigate('/mentor-dashboard');
+      else if (data.user.role === 'admin') navigate('/admin');
+      else navigate('/dashboard');
     } catch (err) {
-      setError(err.response?.data?.message || "Registration failed. Please try again.");
+      const msg = err.response?.data?.message || "Registration failed. Please try again.";
+      if (msg.toLowerCase().includes('email')) setFieldErrors(fe => ({ ...fe, email: msg }));
+      else setError(msg);
     } finally {
       setLoading(false);
     }
@@ -82,24 +97,6 @@ export default function Register() {
             </div>
           )}
 
-          {/* Role Selector */}
-          <div style={{ marginBottom: "28px" }}>
-            <label style={labelStyle}>I am a</label>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
-              {[
-                { value: "student", icon: GraduationCap, label: "Student", sub: "I want to learn" },
-                { value: "mentor", icon: Users, label: "Mentor", sub: "I want to teach" },
-              ].map(r => (
-                <button key={r.value} type="button" onClick={() => setRole(r.value)}
-                  style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "6px", padding: "18px 12px", borderRadius: "12px", border: `2px solid ${role === r.value ? "#2563EB" : "#E2E8F0"}`, background: role === r.value ? "#EFF6FF" : "#fff", cursor: "pointer", transition: "all 0.15s" }}>
-                  <r.icon size={22} color={role === r.value ? "#2563EB" : "#94A3B8"} />
-                  <span style={{ fontSize: "14px", fontWeight: 700, color: role === r.value ? "#2563EB" : "#374151" }}>{r.label}</span>
-                  <span style={{ fontSize: "12px", color: "#94A3B8" }}>{r.sub}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-
           <form onSubmit={handleSubmit}>
 
             {/* Name */}
@@ -107,8 +104,9 @@ export default function Register() {
               <label style={labelStyle}>Full name</label>
               <div style={{ position: "relative" }}>
                 <User size={16} color="#94A3B8" style={{ position: "absolute", left: "14px", top: "13px" }} />
-                <input type="text" placeholder="Raj Kumar" value={form.name} onChange={e => set("name", e.target.value)} style={inputStyle} required />
+                <input type="text" placeholder="Raj Kumar" value={form.name} onChange={e => set("name", e.target.value)} style={{ ...inputStyle, borderColor: fieldErrors.name ? '#EF4444' : '#E2E8F0' }} required />
               </div>
+              {fieldErrors.name && <p style={{ margin: '4px 0 0', fontSize: 12, color: '#EF4444' }}>{fieldErrors.name}</p>}
             </div>
 
             {/* Email */}
@@ -116,8 +114,9 @@ export default function Register() {
               <label style={labelStyle}>Email address</label>
               <div style={{ position: "relative" }}>
                 <Mail size={16} color="#94A3B8" style={{ position: "absolute", left: "14px", top: "13px" }} />
-                <input type="email" placeholder="you@example.com" value={form.email} onChange={e => set("email", e.target.value)} style={inputStyle} required />
+                <input type="email" placeholder="you@example.com" value={form.email} onChange={e => set("email", e.target.value)} style={{ ...inputStyle, borderColor: fieldErrors.email ? '#EF4444' : '#E2E8F0' }} required />
               </div>
+              {fieldErrors.email && <p style={{ margin: '4px 0 0', fontSize: 12, color: '#EF4444' }}>{fieldErrors.email}</p>}
             </div>
 
             {/* Password row */}
@@ -126,21 +125,23 @@ export default function Register() {
                 <label style={labelStyle}>Password</label>
                 <div style={{ position: "relative" }}>
                   <Lock size={16} color="#94A3B8" style={{ position: "absolute", left: "14px", top: "13px" }} />
-                  <input type={showPassword ? "text" : "password"} placeholder="Min 6 chars" value={form.password} onChange={e => set("password", e.target.value)} style={{ ...inputStyle, paddingRight: "44px" }} required />
+                  <input type={showPassword ? "text" : "password"} placeholder="Min 6 chars" value={form.password} onChange={e => set("password", e.target.value)} style={{ ...inputStyle, paddingRight: "44px", borderColor: fieldErrors.password ? '#EF4444' : '#E2E8F0' }} required />
                   <button type="button" onClick={() => setShowPassword(!showPassword)} style={{ position: "absolute", right: "12px", top: "13px", background: "none", border: "none", cursor: "pointer", color: "#94A3B8" }}>
                     {showPassword ? <EyeOff size={15} /> : <Eye size={15} />}
                   </button>
                 </div>
+                {fieldErrors.password && <p style={{ margin: '4px 0 0', fontSize: 12, color: '#EF4444' }}>{fieldErrors.password}</p>}
               </div>
               <div>
                 <label style={labelStyle}>Confirm password</label>
                 <div style={{ position: "relative" }}>
                   <Lock size={16} color="#94A3B8" style={{ position: "absolute", left: "14px", top: "13px" }} />
-                  <input type={showConfirm ? "text" : "password"} placeholder="Re-enter" value={form.confirmPassword} onChange={e => set("confirmPassword", e.target.value)} style={{ ...inputStyle, paddingRight: "44px" }} required />
+                  <input type={showConfirm ? "text" : "password"} placeholder="Re-enter" value={form.confirmPassword} onChange={e => set("confirmPassword", e.target.value)} style={{ ...inputStyle, paddingRight: "44px", borderColor: fieldErrors.confirmPassword ? '#EF4444' : '#E2E8F0' }} required />
                   <button type="button" onClick={() => setShowConfirm(!showConfirm)} style={{ position: "absolute", right: "12px", top: "13px", background: "none", border: "none", cursor: "pointer", color: "#94A3B8" }}>
                     {showConfirm ? <EyeOff size={15} /> : <Eye size={15} />}
                   </button>
                 </div>
+                {fieldErrors.confirmPassword && <p style={{ margin: '4px 0 0', fontSize: 12, color: '#EF4444' }}>{fieldErrors.confirmPassword}</p>}
               </div>
             </div>
 
@@ -171,17 +172,15 @@ export default function Register() {
             </div>
 
             {/* Grade */}
-            {role === "student" && (
-              <div style={{ marginBottom: "18px" }}>
-                <label style={labelStyle}>Grade</label>
-                <select value={form.grade} onChange={e => set("grade", e.target.value)} style={selectStyle}>
-                  <option value="">Select grade</option>
-                  {Array.from({ length: 12 }, (_, i) => (
-                    <option key={i+1} value={`${i+1}`}>Class {i+1}</option>
-                  ))}
-                </select>
-              </div>
-            )}
+            <div style={{ marginBottom: "18px" }}>
+              <label style={labelStyle}>Grade</label>
+              <select value={form.grade} onChange={e => set("grade", e.target.value)} style={selectStyle}>
+                <option value="">Select grade</option>
+                {Array.from({ length: 12 }, (_, i) => (
+                  <option key={i+1} value={`${i+1}`}>Class {i+1}</option>
+                ))}
+              </select>
+            </div>
 
             {/* Rural */}
             <div style={{ display: "flex", alignItems: "flex-start", gap: "12px", background: "#F0FDF4", border: "1.5px solid #BBF7D0", borderRadius: "12px", padding: "16px", marginBottom: "24px" }}>
@@ -203,7 +202,13 @@ export default function Register() {
           </form>
         </div>
 
-        <p style={{ textAlign: "center", fontSize: "14px", color: "#64748B", marginTop: "24px" }}>
+        <p style={{ textAlign: "center", fontSize: "13px", color: "#64748B", marginTop: "16px" }}>
+          Are you a mentor?{" "}
+          <a href="mailto:admin@edureach.in" style={{ color: "#2563EB", fontWeight: 600, textDecoration: "none" }}>Contact admin</a>
+          {" "}to get access.
+        </p>
+
+        <p style={{ textAlign: "center", fontSize: "14px", color: "#64748B", marginTop: "12px" }}>
           Already have an account?{" "}
           <Link to="/login" style={{ color: "#2563EB", fontWeight: 700, textDecoration: "none" }}>Sign in</Link>
         </p>

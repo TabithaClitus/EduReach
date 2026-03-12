@@ -310,7 +310,7 @@ export default function Mentoring() {
 
   async function handleRequest(mentor) {
     if (!user) {
-      navigate('/login');
+      navigate('/');
       return;
     }
     setRequestingId(mentor._id);
@@ -321,6 +321,8 @@ export default function Mentoring() {
       });
       // Mark ONLY this mentor's card as requested
       setRequestedIds(new Set([mentor.user._id.toString()]));
+      api.post('/streak/badge', { badgeId: 'first_mentor' }).catch(() => {});
+      api.post('/activity', { icon: '🤝', text: 'Mentor request sent', type: 'mentor' }).catch(() => {});
     } catch (e) {
       alert(e.response?.data?.message || 'Failed to send request.');
     } finally { setRequestingId(null); }

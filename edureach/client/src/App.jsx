@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import useAuthStore from './store/authStore';
 import { useEffect } from 'react';
 import Navbar from './components/common/Navbar';
 import ProtectedRoute from './components/common/ProtectedRoute';
@@ -35,6 +36,7 @@ import Admin from './pages/Admin';
 
 const AppLayout = () => {
   const location = useLocation();
+  const { user, isAuthenticated } = useAuthStore();
   const hideFooterPaths = ['/login', '/register'];
   const showFooter = location.pathname === '/';
 
@@ -44,7 +46,13 @@ const AppLayout = () => {
       <Navbar />
       <main className="flex-1 pt-[68px]">
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={
+            isAuthenticated ? (
+              user?.role === 'mentor' ? <Navigate to="/mentor-dashboard" replace /> :
+              user?.role === 'admin'  ? <Navigate to="/admin" replace /> :
+              <Navigate to="/dashboard" replace />
+            ) : <Landing />
+          } />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route

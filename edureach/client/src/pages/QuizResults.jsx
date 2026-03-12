@@ -1,11 +1,23 @@
+import { useEffect } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { QUIZ_DATA } from './QuizTake';
+import api from '../services/api';
 
 export default function QuizResults() {
   const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
   const state = location.state;
+
+  useEffect(() => {
+    if (!state) return;
+    const pct = Math.round((state.score / state.total) * 100);
+    api.post('/streak/badge', { badgeId: 'first_quiz' }).catch(() => {});
+    api.post('/activity', { icon: '📝', text: `Completed ${state.topic} Quiz`, type: 'quiz' }).catch(() => {});
+    if (pct === 100) {
+      api.post('/streak/badge', { badgeId: 'perfect_score' }).catch(() => {});
+    }
+  }, []);
 
   if (!state) {
     navigate('/quiz');

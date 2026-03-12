@@ -42,6 +42,25 @@ const userSchema = new mongoose.Schema(
     isRural: { type: Boolean, default: false },
     appliedScholarships: [{ type: mongoose.Schema.Types.ObjectId, ref: "Scholarship" }],
 
+    // ── Streak & Badges ───────────────────────────────────────────────────────
+    streak: { type: Number, default: 0 },
+    lastActiveDate: { type: Date, default: null },
+    longestStreak: { type: Number, default: 0 },
+    badges: [{
+      id: String,
+      name: String,
+      icon: String,
+      earnedAt: { type: Date, default: Date.now },
+    }],
+    totalLessons: { type: Number, default: 0 },
+    totalQuizzes: { type: Number, default: 0 },
+    activities: [{
+      icon: { type: String, default: '📌' },
+      text: { type: String, required: true },
+      type: { type: String, default: 'other' },
+      createdAt: { type: Date, default: Date.now },
+    }],
+
     // ── Mentorship status (student side) ─────────────────────────────────────
     mentorshipStatus: { type: String, enum: ['none', 'pending', 'accepted', 'declined'], default: 'none' },
     myMentor: { type: mongoose.Schema.Types.ObjectId, ref: 'User', default: null },
@@ -68,10 +87,7 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-userSchema.pre("save", async function () {
-  if (!this.isModified("password")) return;
-  this.password = await bcrypt.hash(this.password, 12);
-});
+// Password is hashed in the controller before User.create() — no pre-save hook needed.
 
 userSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);

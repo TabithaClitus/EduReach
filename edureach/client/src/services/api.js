@@ -28,7 +28,7 @@ api.interceptors.response.use(
     const isAuthEndpoint = url.includes('/auth/');
     if (error.response?.status === 401 && !isAuthEndpoint) {
       useAuthStore.getState().logout();
-      window.location.href = '/login';
+      window.location.href = '/';
     }
     return Promise.reject(error);
   }

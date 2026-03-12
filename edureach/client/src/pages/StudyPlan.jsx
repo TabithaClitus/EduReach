@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import api from '../services/api';
 
 const PAGE_STYLE = {
   minHeight: '100vh',
@@ -78,6 +79,8 @@ export default function StudyPlan() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Server error');
       setPlan(data);
+      api.post('/streak/badge', { badgeId: 'study_plan' }).catch(() => {});
+      api.post('/activity', { icon: '📅', text: 'Generated Study Plan', type: 'studyplan' }).catch(() => {});
     } catch (err) {
       setError('Failed to generate plan. Please try again.');
     } finally {
