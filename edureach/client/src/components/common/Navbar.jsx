@@ -14,6 +14,7 @@ const studentLinks = [
   { label: "Quiz", path: "/quiz" },
   { label: "Study Plan", path: "/study-plan" },
   { label: "Speech Therapy", path: "/speech-therapy" },
+  { label: "🤖 AI Tutor", path: "/doubt-solver" },
 ];
 
 const mentorLinks = [
@@ -52,7 +53,9 @@ export default function Navbar() {
     role === 'admin' ? '/admin' : '/dashboard';
 
   const [pendingRequests, setPendingRequests] = useState(0);
-  const unreadChats = 2;
+  const [unreadChats, setUnreadChats] = useState(0);
+  const [deferredInstallPrompt, setDeferredInstallPrompt] = useState(null);
+  const [canInstall, setCanInstall] = useState(false);
 
   // ── Notification toasts ─────────────────────────────────────────────────────────
   const [toasts, setToasts] = useState([]);
@@ -62,6 +65,46 @@ export default function Navbar() {
     const id = Date.now();
     setToasts(prev => [...prev, { id, msg, type }]);
     setTimeout(() => setToasts(prev => prev.filter(t => t.id !== id)), 5000);
+  };
+
+  const fetchUnreadChats = async () => {
+    if (role !== 'mentor' || !isAuthenticated || !user) {
+      setUnreadChats(0);
+      return;
+    }
+
+    const mentorId = user.id || user._id;
+    if (!mentorId) return;
+
+    try {
+      const { data } = await api.get('/mentors/my-students');
+      const students = data.data || [];
+
+      const unreadByRoom = await Promise.all(students.map(async (s) => {
+        const studentId = s.studentId?.toString() || s._id?.toString();
+        if (!studentId) return 0;
+
+        const roomId = `chat_${[mentorId.toString(), studentId.toString()].sort().join('_')}`;
+        try {
+          const res = await fetch(`http://localhost:5000/api/chat/${roomId}`);
+          const roomMessages = await res.json();
+          if (!Array.isArray(roomMessages) || roomMessages.length === 0) return 0;
+
+          const lastSeen = Number(localStorage.getItem('lastSeen_' + roomId) || '0');
+          const hasUnread = roomMessages.some(m => (
+            new Date(m.createdAt).getTime() > lastSeen &&
+            String(m.sender) !== String(mentorId)
+          ));
+          return hasUnread ? 1 : 0;
+        } catch {
+          return 0;
+        }
+      }));
+
+      setUnreadChats(unreadByRoom.reduce((sum, value) => sum + value, 0));
+    } catch {
+      setUnreadChats(0);
+    }
   };
 
   // ── Socket: register user + listen for mentorship notifications ───────────
@@ -85,6 +128,13 @@ export default function Navbar() {
       }
     });
 
+    socket.on('receiveMessage', (msg) => {
+      if (role !== 'mentor') return;
+      if (String(msg.sender) === String(userId)) return;
+      localStorage.setItem('lastMessageTs_' + msg.roomId, String(new Date(msg.createdAt).getTime() || Date.now()));
+      fetchUnreadChats();
+    });
+
     return () => socket.disconnect();
   }, [isAuthenticated, user?.id || user?._id]);
 
@@ -100,6 +150,52 @@ export default function Navbar() {
     const interval = setInterval(fetchCount, 15000);
     return () => clearInterval(interval);
   }, [role]);
+
+  useEffect(() => {
+    if (role !== 'mentor') return;
+    fetchUnreadChats();
+    const interval = setInterval(fetchUnreadChats, 15000);
+    const onStorage = () => fetchUnreadChats();
+    const onSeenUpdated = () => fetchUnreadChats();
+    window.addEventListener('storage', onStorage);
+    window.addEventListener('chat-lastseen-updated', onSeenUpdated);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('storage', onStorage);
+      window.removeEventListener('chat-lastseen-updated', onSeenUpdated);
+    };
+  }, [role, isAuthenticated, user?.id, user?._id]);
+
+  useEffect(() => {
+    const onBeforeInstallPrompt = (event) => {
+      event.preventDefault();
+      setDeferredInstallPrompt(event);
+      setCanInstall(true);
+    };
+
+    const onInstalled = () => {
+      setDeferredInstallPrompt(null);
+      setCanInstall(false);
+    };
+
+    window.addEventListener('beforeinstallprompt', onBeforeInstallPrompt);
+    window.addEventListener('appinstalled', onInstalled);
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', onBeforeInstallPrompt);
+      window.removeEventListener('appinstalled', onInstalled);
+    };
+  }, []);
+
+  const handleInstall = async () => {
+    if (!deferredInstallPrompt) return;
+    deferredInstallPrompt.prompt();
+    const { outcome } = await deferredInstallPrompt.userChoice;
+    if (outcome === 'accepted') {
+      setCanInstall(false);
+      setDeferredInstallPrompt(null);
+    }
+  };
 
   const baseLinks = !isAuthenticated ? [] : role === 'mentor' ? mentorLinks : role === 'admin' ? adminLinks : studentLinks;
   const navLinks = role === 'mentor'
@@ -175,6 +271,16 @@ export default function Navbar() {
 
         {/* Right side — EN, Login, Register */}
         <div style={{ display: "flex", alignItems: "center", gap: "16px", justifyContent: "flex-end" }}>
+
+          {canInstall && (
+            <button
+              onClick={handleInstall}
+              style={{ fontSize: "13px", fontWeight: 700, color: "#FFFFFF", background: "#2563EB", border: "none", borderRadius: "8px", padding: "7px 12px", cursor: "pointer" }}
+              title="Install EduReach"
+            >
+              Install App
+            </button>
+          )}
 
           {/* Language */}
           <div style={{ position: "relative" }}>

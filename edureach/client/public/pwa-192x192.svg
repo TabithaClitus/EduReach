@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="EduReach icon">
+  <rect width="192" height="192" rx="40" fill="#6c63ff" />
+  <circle cx="96" cy="96" r="58" fill="#ffffff" opacity="0.12" />
+  <path d="M60 112V68l36-14 36 14v44l-36 14-36-14Z" fill="#ffffff" />
+  <path d="M96 54v72" stroke="#6c63ff" stroke-width="6" stroke-linecap="round" />
+  <path d="M74 78h44" stroke="#6c63ff" stroke-width="6" stroke-linecap="round" />
+</svg>

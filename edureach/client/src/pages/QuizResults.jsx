@@ -13,7 +13,7 @@ export default function QuizResults() {
     if (!state) return;
     const pct = Math.round((state.score / state.total) * 100);
     api.post('/streak/badge', { badgeId: 'first_quiz' }).catch(() => {});
-    api.post('/activity', { icon: '📝', text: `Completed ${state.topic} Quiz`, type: 'quiz' }).catch(() => {});
+    api.post('/activity', { type: 'quiz_completed', title: `Completed ${state.topic} Quiz`, description: `Score: ${state.score}/${state.total} (${Math.round((state.score / state.total) * 100)}%)` }).catch(() => {});
     if (pct === 100) {
       api.post('/streak/badge', { badgeId: 'perfect_score' }).catch(() => {});
     }

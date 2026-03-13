@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import useAuthStore from './store/authStore';
 import { useEffect } from 'react';
+import { useRegisterSW } from 'virtual:pwa-register/react';
 import Navbar from './components/common/Navbar';
 import ProtectedRoute from './components/common/ProtectedRoute';
+import useOnlineStatus from './hooks/useOnlineStatus';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -33,17 +35,46 @@ import QuizResults from './pages/QuizResults';
 import MentorDashboard from './pages/MentorDashboard';
 import StudentDetail from './pages/StudentDetail';
 import Admin from './pages/Admin';
+import AiDoubtSolver from './pages/AiDoubtSolver';
 
 const AppLayout = () => {
   const location = useLocation();
   const { user, isAuthenticated } = useAuthStore();
+  const isOnline = useOnlineStatus();
   const hideFooterPaths = ['/login', '/register'];
   const showFooter = location.pathname === '/';
 
+  useRegisterSW({
+    immediate: true,
+  });
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <style>{`@keyframes offline-dot-pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .45; transform: scale(.88); } }`}</style>
       <ScrollToTop />
       <Navbar />
+      {!isOnline && (
+        <div style={{
+          position: 'fixed',
+          top: 68,
+          left: 0,
+          right: 0,
+          zIndex: 110,
+          background: '#374151',
+          color: '#FFFFFF',
+          height: 34,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: 8,
+          fontSize: 13,
+          fontWeight: 500,
+          boxShadow: '0 2px 10px rgba(0,0,0,0.12)',
+        }}>
+          <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#93C5FD', animation: 'offline-dot-pulse 1.2s ease-in-out infinite' }} />
+          <span>📡 You're offline — showing cached content</span>
+        </div>
+      )}
       <main className="flex-1 pt-[68px]">
         <Routes>
           <Route path="/" element={
@@ -204,6 +235,14 @@ const AppLayout = () => {
             element={
               <ProtectedRoute>
                 <Admin />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/doubt-solver"
+            element={
+              <ProtectedRoute>
+                <AiDoubtSolver />
               </ProtectedRoute>
             }
           />

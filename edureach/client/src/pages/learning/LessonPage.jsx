@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import api from '../../services/api';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, CheckCircle2, XCircle, Sparkles, BookOpen, Play, HelpCircle, X, Pencil } from 'lucide-react';
 
@@ -24251,7 +24252,10 @@ const LessonPage = () => {
                         style={{ marginBottom: '64px' }}
                     >
                         <button
-                            onClick={() => navigate(`/learning/class/${classId}/subject/${subjectId}/chapter/${currentLesson.nextLesson.id}`)}
+                            onClick={() => {
+                              api.post('/activity', { type: 'lesson_completed', title: currentLesson.title || `Lesson complete`, description: `Completed ${subjectId} lesson` }).catch(() => {});
+                              navigate(`/learning/class/${classId}/subject/${subjectId}/chapter/${currentLesson.nextLesson.id}`);
+                            }}
                             style={{
                                 width: '100%',
                                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',

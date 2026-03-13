@@ -80,7 +80,7 @@ export default function StudyPlan() {
       if (!response.ok) throw new Error(data.error || 'Server error');
       setPlan(data);
       api.post('/streak/badge', { badgeId: 'study_plan' }).catch(() => {});
-      api.post('/activity', { icon: '📅', text: 'Generated Study Plan', type: 'studyplan' }).catch(() => {});
+      api.post('/activity', { type: 'study_plan_created', title: 'Study Plan Created', description: `${form.grade} · ${form.subjects?.join(', ') || 'All subjects'}` }).catch(() => {});
     } catch (err) {
       setError('Failed to generate plan. Please try again.');
     } finally {

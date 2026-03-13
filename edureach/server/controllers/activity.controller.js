@@ -13,10 +13,11 @@ exports.getActivity = async (req, res) => {
 
 exports.addActivity = async (req, res) => {
   try {
-    const { icon, text, type } = req.body;
-    if (!text || !type) return res.status(400).json({ success: false, message: 'text and type required' });
+    const { icon, text, type, title, description } = req.body;
+    const finalTitle = title || text;
+    if (!finalTitle || !type) return res.status(400).json({ success: false, message: 'title/text and type required' });
     await User.findByIdAndUpdate(req.user._id || req.user.id, {
-      $push: { activities: { icon: icon || '📌', text, type } },
+      $push: { activities: { icon: icon || '📌', text: finalTitle, title: finalTitle, description: description || '', type } },
     });
     res.json({ success: true });
   } catch (err) {

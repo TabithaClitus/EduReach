@@ -85,6 +85,8 @@ app.use("/api/mentors", mentorRoutes);
 app.use("/api/chat", require("./routes/chat.routes"));
 app.use("/api/streak", require("./routes/streak.routes"));
 app.use("/api/activity", require("./routes/activity.routes"));
+app.use("/api/doubt", require("./routes/doubt.routes"));
+app.use("/api/conversations", require("./routes/conversation.routes"));
 
 // ── Study Plan AI (Groq) ────────────────────────────────
 app.post("/api/study-plan/generate", generateStudyPlan);

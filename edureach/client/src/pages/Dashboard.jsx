@@ -17,18 +17,34 @@ const activeCourses = [
   { subject: 'English', topic: 'Grammar Basics', progress: 80, color: '#7C3AED' },
 ];
 
-const formatTime = (date) => {
+function relativeTime(date) {
   const diff = Date.now() - new Date(date).getTime();
+  const mins  = Math.floor(diff / 60000);
   const hours = Math.floor(diff / 3600000);
-  const days = Math.floor(diff / 86400000);
-  if (hours < 1) return 'Just now';
+  const days  = Math.floor(diff / 86400000);
+  if (mins  <  2) return 'Just now';
+  if (mins  < 60) return `${mins} min ago`;
   if (hours < 24) return `${hours}h ago`;
-  return `${days} day${days > 1 ? 's' : ''} ago`;
-};
+  if (days  ===1) return 'Yesterday';
+  if (days  <  7) return `${days} days ago`;
+  return new Date(date).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+}
 
-const typeColors = {
-  quiz: '#6c63ff', lesson: '#10b981', mentor: '#f59e0b',
-  studyplan: '#3b82f6', badge: '#ef4444', default: '#94A3B8',
+const ACTIVITY_CONFIG = {
+  quiz_completed:      { icon: '📝', color: '#059669', bg: '#ECFDF5' },
+  lesson_completed:    { icon: '📚', color: '#2563EB', bg: '#EFF6FF' },
+  streak_milestone:    { icon: '🔥', color: '#EA580C', bg: '#FFF7ED' },
+  mentor_connected:    { icon: '🤝', color: '#7C3AED', bg: '#F5F3FF' },
+  study_plan_created:  { icon: '📅', color: '#0D9488', bg: '#F0FDFA' },
+  badge_earned:        { icon: '🏆', color: '#B45309', bg: '#FFFBEB' },
+  scholarship_applied: { icon: '💰', color: '#CA8A04', bg: '#FEFCE8' },
+  // legacy type keys
+  quiz:      { icon: '📝', color: '#059669', bg: '#ECFDF5' },
+  lesson:    { icon: '📚', color: '#2563EB', bg: '#EFF6FF' },
+  mentor:    { icon: '🤝', color: '#7C3AED', bg: '#F5F3FF' },
+  studyplan: { icon: '📅', color: '#0D9488', bg: '#F0FDFA' },
+  badge:     { icon: '🏆', color: '#B45309', bg: '#FFFBEB' },
+  default:   { icon: '📌', color: '#94A3B8', bg: '#F8FAFC' },
 };
 
 
@@ -74,10 +90,17 @@ export default function Dashboard() {
       setHasMentor(badges.some(b => b.id === 'first_mentor'));
       setHasStudyPlan(badges.some(b => b.id === 'study_plan'));
     }).catch(() => {});
-    api.get('/activity').then(({ data }) => {
-      setActivities(data.activities || []);
-    }).catch(() => {});
   }, []);
+
+  // Activity feed — fetch on mount + refresh every 30s
+  useEffect(() => {
+    if (!token) return;
+    const fetchActivity = () =>
+      api.get('/activity').then(({ data }) => setActivities(data.activities || [])).catch(() => {});
+    fetchActivity();
+    const id = setInterval(fetchActivity, 30000);
+    return () => clearInterval(id);
+  }, [token]);
 
   useEffect(() => {
     if (newBadgeAlert) {
@@ -162,21 +185,28 @@ export default function Dashboard() {
           </div>
 
           {/* Activity Feed */}
-          <div style={{ background: 'white', borderRadius: 20, padding: 24, boxShadow: '0 2px 12px rgba(0,0,0,0.07)' }}>
+          <div style={{ background: 'white', borderRadius: 20, padding: 24, boxShadow: '0 2px 12px rgba(0,0,0,0.07)', display: 'flex', flexDirection: 'column' }}>
             <div style={{ fontWeight: 700, fontSize: 16, color: '#0F172A', marginBottom: 20 }}>🕐 Recent Activity</div>
             {activities.length === 0 ? (
-              <div style={{ textAlign: 'center', color: '#94A3B8', fontSize: 13, paddingTop: 24 }}>
-                No activity yet — start learning! 🚀
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', paddingTop: 32, paddingBottom: 24, textAlign: 'center' }}>
+                <div style={{ fontSize: 48, marginBottom: 12 }}>🚀</div>
+                <div style={{ fontSize: 14, fontWeight: 600, color: '#374151', marginBottom: 6 }}>No activity yet</div>
+                <div style={{ fontSize: 12, color: '#94A3B8' }}>Complete a lesson or quiz to see your activity here</div>
               </div>
             ) : activities.map((a, i) => {
-              const color = typeColors[a.type] || typeColors.default;
+              const cfg = ACTIVITY_CONFIG[a.type] || ACTIVITY_CONFIG.default;
+              const title = a.title || a.text || 'Activity';
+              const desc  = a.description || '';
               return (
-                <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', paddingBottom: i < activities.length - 1 ? 16 : 0, marginBottom: i < activities.length - 1 ? 16 : 0, borderBottom: i < activities.length - 1 ? `2px solid ${color}22` : 'none' }}>
-                  <div style={{ width: 10, height: 10, borderRadius: '50%', background: color, flexShrink: 0, marginTop: 4, boxShadow: `0 0 0 3px ${color}33` }} />
-                  <div style={{ flex: 1 }}>
-                    <p style={{ margin: 0, fontSize: 13, color: '#374151', fontWeight: 500 }}>{a.icon} {a.text}</p>
-                    <p style={{ margin: '3px 0 0', fontSize: 11, color: '#94A3B8' }}>{formatTime(a.createdAt)}</p>
+                <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', paddingBottom: i < activities.length - 1 ? 14 : 0, marginBottom: i < activities.length - 1 ? 14 : 0, borderBottom: i < activities.length - 1 ? '1px solid #F1F5F9' : 'none' }}>
+                  <div style={{ width: 36, height: 36, borderRadius: 10, background: cfg.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, flexShrink: 0, border: `1px solid ${cfg.color}22` }}>
+                    {cfg.icon}
                   </div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <p style={{ margin: 0, fontSize: 13, color: '#1E293B', fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{title}</p>
+                    {desc && <p style={{ margin: '2px 0 0', fontSize: 11, color: '#64748B', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{desc}</p>}
+                  </div>
+                  <span style={{ fontSize: 10, color: '#94A3B8', flexShrink: 0, marginTop: 3, whiteSpace: 'nowrap' }}>{relativeTime(a.createdAt)}</span>
                 </div>
               );
             })}

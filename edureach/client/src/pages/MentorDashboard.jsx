@@ -8,6 +8,7 @@ function formatMsgTime(ts) {
   if (!ts) return '';
   return new Date(ts).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }
+function sortByRecent(a, b) { return (b._ts || 0) - (a._ts || 0); }
 
 // ─── Sample Data ──────────────────────────────────────────────────────────────
 
@@ -432,6 +433,9 @@ function ChatsTab() {
   const [loading, setLoading] = useState(true);
   const endRef = useRef(null);
   const socketRef = useRef(null);
+  const activeIdRef = useRef(null);
+  const chatsRef = useRef([]);
+  const mentorIdRef = useRef(null);
 
   const activeChat = chats.find(c => c.id === activeId);
   const mentorId = user?.id || user?._id;
@@ -441,6 +445,11 @@ function ChatsTab() {
     if (!mentorId || !studentId) return null;
     return `chat_${[mentorId.toString(), studentId.toString()].sort().join('_')}`;
   };
+
+  // Keep refs in sync for stable socket closures
+  useEffect(() => { activeIdRef.current = activeId; }, [activeId]);
+  useEffect(() => { chatsRef.current = chats; }, [chats]);
+  useEffect(() => { mentorIdRef.current = user?.id || user?._id; }, [user]);
 
   // Create socket once
   useEffect(() => {
@@ -453,7 +462,7 @@ function ChatsTab() {
     if (!user) return;
     setLoading(true);
     api.get('/mentors/my-students')
-      .then(({ data }) => {
+      .then(async ({ data }) => {
         const students = data.data || [];
         const mapped = students.map(s => ({
           id: s.studentId?.toString() || s._id?.toString(),
@@ -465,11 +474,87 @@ function ChatsTab() {
           subject: s.subject || '',
           lastMsg: '', time: '', unread: 0, online: false,
         }));
-        setChats(mapped);
+
+        const hydrated = await Promise.all(mapped.map(async (chat) => {
+          const roomId = buildRoomId(chat.studentId);
+          if (!roomId) return chat;
+          try {
+            const res = await fetch(`http://localhost:5000/api/chat/${roomId}`);
+            const roomMessages = await res.json();
+            if (!Array.isArray(roomMessages) || roomMessages.length === 0) return chat;
+            const lastMsgObj = roomMessages[roomMessages.length - 1];
+            const lastSeen = Number(localStorage.getItem('lastSeen_' + roomId) || '0');
+            const unreadCount = roomMessages.filter(m => (
+              new Date(m.createdAt).getTime() > lastSeen &&
+              String(m.sender) !== String(mentorId)
+            )).length;
+            return {
+              ...chat,
+              lastMsg: lastMsgObj.text || '',
+              time: formatMsgTime(lastMsgObj.createdAt),
+              _ts: new Date(lastMsgObj.createdAt).getTime() || 0,
+              unread: unreadCount,
+            };
+          } catch {
+            return chat;
+          }
+        }));
+
+        setChats([...hydrated].sort(sortByRecent));
       })
       .catch(() => setChats([]))
       .finally(() => setLoading(false));
   }, [user]);
+
+  // Join ALL rooms once students are loaded so we receive messages for every chat
+  useEffect(() => {
+    if (!user || chats.length === 0) return;
+    chats.forEach(c => {
+      const rid = buildRoomId(c.studentId);
+      if (rid) socketRef.current?.emit('joinRoom', rid);
+    });
+  }, [chats.length, user]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Global socket listener — routes incoming messages to active chat window OR increments unread badge
+  useEffect(() => {
+    const socket = socketRef.current;
+    if (!socket) return;
+    const onAnyMessage = (msg) => {
+      const aid = activeIdRef.current;
+      const mid = mentorIdRef.current;
+      if (!mid) return;
+
+      localStorage.setItem('lastMessageTs_' + msg.roomId, String(new Date(msg.createdAt).getTime() || Date.now()));
+
+      // Append to messages if this belongs to the active room
+      const ac = chatsRef.current.find(c => c.id === aid);
+      if (ac) {
+        const rid = `chat_${[mid.toString(), ac.studentId.toString()].sort().join('_')}`;
+        if (rid === msg.roomId) {
+          setMessages(pm => [...pm, msg]);
+          localStorage.setItem('lastSeen_' + rid, Date.now().toString());
+          window.dispatchEvent(new Event('chat-lastseen-updated'));
+        }
+      }
+
+      // Update chat list preview + unread badge
+      setChats(prev => prev.map(c => {
+        if (!c.studentId) return c;
+        const rid = `chat_${[mid.toString(), c.studentId.toString()].sort().join('_')}`;
+        if (rid !== msg.roomId) return c;
+        const incomingFromStudent = String(msg.sender) !== String(mid);
+        return {
+          ...c,
+          lastMsg: msg.text,
+          time: formatMsgTime(msg.createdAt),
+          _ts: new Date(msg.createdAt).getTime() || Date.now(),
+          unread: c.id === aid ? 0 : incomingFromStudent ? (c.unread || 0) + 1 : (c.unread || 0),
+        };
+      }).sort(sortByRecent));
+    };
+    socket.on('receiveMessage', onAnyMessage);
+    return () => socket.off('receiveMessage', onAnyMessage);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Join room + load messages when active chat changes
   useEffect(() => {
@@ -485,24 +570,29 @@ function ChatsTab() {
       .then(r => r.json())
       .then(data => {
         if (!Array.isArray(data)) return;
+
+        localStorage.setItem('lastSeen_' + roomId, Date.now().toString());
+        window.dispatchEvent(new Event('chat-lastseen-updated'));
+
         // Merge: keep any real-time messages that arrived during the fetch
         setMessages(prev => {
           const historyIds = new Set(data.map(m => m._id?.toString()).filter(Boolean));
           const realtimeOnly = prev.filter(m => m._id && !historyIds.has(m._id.toString()));
           return [...data, ...realtimeOnly];
         });
+
+        const lastMsgObj = data[data.length - 1];
+        setChats(prev => prev.map(c => c.id === activeId
+          ? {
+              ...c,
+              unread: 0,
+              lastMsg: lastMsgObj?.text || c.lastMsg,
+              time: lastMsgObj?.createdAt ? formatMsgTime(lastMsgObj.createdAt) : c.time,
+              _ts: lastMsgObj?.createdAt ? new Date(lastMsgObj.createdAt).getTime() : (c._ts || 0),
+            }
+          : c).sort(sortByRecent));
       })
       .catch(() => {});
-
-    const onMessage = (msg) => {
-      setMessages(prev => [...prev, msg]);
-      setChats(prev => prev.map(c =>
-        c.id === activeId ? { ...c, lastMsg: msg.text, time: formatMsgTime(msg.createdAt), unread: 0 } : c
-      ));
-    };
-    socketRef.current?.on('receiveMessage', onMessage);
-
-    return () => { socketRef.current?.off('receiveMessage', onMessage); };
   }, [activeId, user, chats.length]);
 
   useEffect(() => {
@@ -510,6 +600,11 @@ function ChatsTab() {
   }, [messages.length]);
 
   const handleSelect = (chat) => {
+    const roomId = buildRoomId(chat.studentId);
+    if (roomId) {
+      localStorage.setItem('lastSeen_' + roomId, Date.now().toString());
+      window.dispatchEvent(new Event('chat-lastseen-updated'));
+    }
     setChats(prev => prev.map(c => c.id === chat.id ? { ...c, unread: 0 } : c));
     setActiveId(chat.id);
     setMessages([]);
@@ -563,7 +658,7 @@ function ChatsTab() {
                 <p style={{ margin: '2px 0 0', fontSize: 12, color: '#64748B', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>{c.lastMsg}</p>
               </div>
               {c.unread > 0 && (
-                <div style={{ width: 20, height: 20, borderRadius: '50%', background: '#2563EB', color: 'white', fontSize: 11, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <div style={{ width: 20, height: 20, borderRadius: '50%', background: '#059669', color: 'white', fontSize: 11, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   {c.unread}
                 </div>
               )}

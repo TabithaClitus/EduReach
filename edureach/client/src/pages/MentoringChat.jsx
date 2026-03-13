@@ -50,6 +50,10 @@ export default function MentoringChat() {
   useEffect(() => {
     if (!roomId) return;
 
+    // Mark conversation as read when chat opens
+    localStorage.setItem('lastSeen_' + roomId, Date.now().toString());
+    window.dispatchEvent(new Event('chat-lastseen-updated'));
+
     fetch(`http://localhost:5000/api/chat/${roomId}`)
       .then(r => r.json())
       .then(data => {
@@ -66,7 +70,11 @@ export default function MentoringChat() {
 
     socketRef.current?.emit('joinRoom', roomId);
 
-    const onMessage = (msg) => setMessages(prev => [...prev, msg]);
+    const onMessage = (msg) => {
+      setMessages(prev => [...prev, msg]);
+      localStorage.setItem('lastSeen_' + roomId, Date.now().toString());
+      window.dispatchEvent(new Event('chat-lastseen-updated'));
+    };
     socketRef.current?.on('receiveMessage', onMessage);
     return () => socketRef.current?.off('receiveMessage', onMessage);
   }, [roomId]);

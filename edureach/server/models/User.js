@@ -55,10 +55,12 @@ const userSchema = new mongoose.Schema(
     totalLessons: { type: Number, default: 0 },
     totalQuizzes: { type: Number, default: 0 },
     activities: [{
-      icon: { type: String, default: '📌' },
-      text: { type: String, required: true },
-      type: { type: String, default: 'other' },
-      createdAt: { type: Date, default: Date.now },
+      icon:        { type: String, default: '📌' },
+      text:        { type: String },
+      title:       { type: String },
+      description: { type: String, default: '' },
+      type:        { type: String, default: 'other' },
+      createdAt:   { type: Date, default: Date.now },
     }],
 
     // ── Mentorship status (student side) ─────────────────────────────────────

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { io } from 'socket.io-client';
-import { Users, MessageCircle, Star, Send } from 'lucide-react';
+import { Users, Star } from 'lucide-react';
 import api from '../services/api';
 import useAuthStore from '../store/authStore';
 
@@ -12,6 +12,12 @@ const SUBJECTS = [
 ];
 
 const LANG_LABELS = { en: 'English', hi: 'Hindi', ta: 'Tamil', te: 'Telugu', kn: 'Kannada', ml: 'Malayalam' };
+
+function formatMsgTime(ts) {
+  if (!ts) return '';
+  return new Date(ts).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+}
+function sortByRecent(a, b) { return (b._ts || 0) - (a._ts || 0); }
 
 // ── Components ──────────────────────────────────────────
 
@@ -136,20 +142,15 @@ export default function Mentoring() {
   const { user } = useAuthStore();
   const isStudent = user?.role === 'student';
   const isMentor = user?.role === 'mentor';
+  const userId = user?.id || user?._id;
 
   const [tab, setTab] = useState('discover');
-  const [selectedChat, setSelectedChat] = useState(null);
 
   useEffect(() => {
     if (location.state?.tab === 'chat') {
       setTab('chat');
     }
   }, [location.state]);
-
-  const sampleChats = [
-    { id: 1, mentorName: 'Arjun Sharma', lastMessage: 'See you tomorrow at 5pm!', time: '2:30 PM', unread: 2, initials: 'AS' },
-    { id: 2, mentorName: 'Priya Nair', lastMessage: 'Great work on that problem set!', time: 'Yesterday', unread: 0, initials: 'PN' },
-  ];
 
   // Discover
   const [mentors, setMentors] = useState([]);
@@ -170,9 +171,13 @@ export default function Mentoring() {
   const [selectedMatch, setSelectedMatch] = useState(null);
   const [messages, setMessages] = useState([]);
   const [newMsg, setNewMsg] = useState('');
-  const [typingUser, setTypingUser] = useState('');
   const socketRef = useRef(null);
   const messagesEndRef = useRef(null);
+  const selectedMatchRef = useRef(null);
+  const activeMatchesRef = useRef([]);
+
+  useEffect(() => { selectedMatchRef.current = selectedMatch; }, [selectedMatch]);
+  useEffect(() => { activeMatchesRef.current = activeMatches; }, [activeMatches]);
 
   // Rating modal
   const [ratingMatch, setRatingMatch] = useState(null);
@@ -221,23 +226,64 @@ export default function Mentoring() {
     return () => clearInterval(interval);
   }, [tab, isStudent]);
 
-  // Socket room + listeners for selected match
+  const getOtherParticipant = (match) => {
+    const studentId = match?.student?._id?.toString();
+    const mentorId = match?.mentor?._id?.toString();
+    const me = userId?.toString();
+    return me && studentId === me ? match?.mentor : match?.student;
+  };
+
+  const buildRoomIdForMatch = (match) => {
+    const other = getOtherParticipant(match);
+    const otherId = other?._id;
+    if (!userId || !otherId) return null;
+    return `chat_${[userId.toString(), otherId.toString()].sort().join('_')}`;
+  };
+
+  // Join all chat rooms after active matches load
   useEffect(() => {
-    if (!selectedMatch) return;
+    if (tab !== 'chat' || activeMatches.length === 0) return;
+    activeMatches.forEach((m) => {
+      const roomId = m.roomId || buildRoomIdForMatch(m);
+      if (roomId) socketRef.current?.emit('joinRoom', roomId);
+    });
+  }, [tab, activeMatches.length]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Global listener for realtime incoming messages
+  useEffect(() => {
     const socket = socketRef.current;
-    socket.emit('join-room', selectedMatch._id);
-    const onMsg = (msg) => setMessages((prev) => [...prev, msg]);
-    const onTyping = (name) => setTypingUser(name);
-    const onStopTyping = () => setTypingUser('');
-    socket.on('new-message', onMsg);
-    socket.on('typing', onTyping);
-    socket.on('stop-typing', onStopTyping);
-    return () => {
-      socket.off('new-message', onMsg);
-      socket.off('typing', onTyping);
-      socket.off('stop-typing', onStopTyping);
+    if (!socket) return;
+
+    const onMessage = (msg) => {
+      const hasRoom = activeMatchesRef.current.some(m => m.roomId === msg.roomId);
+      if (!hasRoom) {
+        fetchActiveMatches();
+        return;
+      }
+
+      const current = selectedMatchRef.current;
+      if (current?.roomId === msg.roomId) {
+        setMessages((prev) => [...prev, msg]);
+        localStorage.setItem('lastSeen_' + msg.roomId, Date.now().toString());
+        window.dispatchEvent(new Event('chat-lastseen-updated'));
+      }
+
+      setActiveMatches((prev) => prev.map((m) => {
+        if (m.roomId !== msg.roomId) return m;
+        const incoming = String(msg.sender) !== String(userId);
+        return {
+          ...m,
+          lastMsg: msg.text || '',
+          time: formatMsgTime(msg.createdAt),
+          _ts: new Date(msg.createdAt).getTime() || Date.now(),
+          unread: current?._id === m._id ? 0 : incoming ? (m.unread || 0) + 1 : (m.unread || 0),
+        };
+      }).sort(sortByRecent));
     };
-  }, [selectedMatch]);
+
+    socket.on('receiveMessage', onMessage);
+    return () => socket.off('receiveMessage', onMessage);
+  }, [userId]);
 
   // Auto-scroll messages
   useEffect(() => {
@@ -293,14 +339,42 @@ export default function Mentoring() {
   async function fetchActiveMatches() {
     try {
       const { data } = await api.get('/mentors/active-matches');
-      setActiveMatches(data.data || []);
-    } catch (e) { console.error(e); }
-  }
-
-  async function fetchMessages(matchId) {
-    try {
-      const { data } = await api.get(`/mentors/messages/${matchId}`);
-      setMessages(data.data || []);
+      const list = data.data || [];
+      const hydrated = await Promise.all(list.map(async (match) => {
+        const other = getOtherParticipant(match);
+        const roomId = buildRoomIdForMatch(match);
+        const base = {
+          ...match,
+          roomId,
+          displayName: other?.name || 'Mentor',
+          initials: (other?.name || 'M').split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2),
+          lastMsg: '',
+          time: '',
+          unread: 0,
+        };
+        if (!roomId) return base;
+        try {
+          const res = await fetch(`http://localhost:5000/api/chat/${roomId}`);
+          const roomMessages = await res.json();
+          if (!Array.isArray(roomMessages) || roomMessages.length === 0) return base;
+          const lastMsgObj = roomMessages[roomMessages.length - 1];
+          const lastSeen = Number(localStorage.getItem('lastSeen_' + roomId) || '0');
+          const unreadCount = roomMessages.filter(m => (
+            new Date(m.createdAt).getTime() > lastSeen &&
+            String(m.sender) !== String(userId)
+          )).length;
+          return {
+            ...base,
+            lastMsg: lastMsgObj.text || '',
+            time: formatMsgTime(lastMsgObj.createdAt),
+            _ts: new Date(lastMsgObj.createdAt).getTime() || 0,
+            unread: unreadCount,
+          };
+        } catch {
+          return base;
+        }
+      }));
+      setActiveMatches([...hydrated].sort(sortByRecent));
     } catch (e) { console.error(e); }
   }
 
@@ -322,7 +396,7 @@ export default function Mentoring() {
       // Mark ONLY this mentor's card as requested
       setRequestedIds(new Set([mentor.user._id.toString()]));
       api.post('/streak/badge', { badgeId: 'first_mentor' }).catch(() => {});
-      api.post('/activity', { icon: '🤝', text: 'Mentor request sent', type: 'mentor' }).catch(() => {});
+      api.post('/activity', { type: 'mentor_connected', title: 'Mentor Request Sent', description: `Requested ${mentor.user?.name || 'a mentor'} as your mentor` }).catch(() => {});
     } catch (e) {
       alert(e.response?.data?.message || 'Failed to send request.');
     } finally { setRequestingId(null); }
@@ -340,30 +414,38 @@ export default function Mentoring() {
     } finally { setRespondingId(null); }
   }
 
-  function handleSelectMatch(match) {
+  async function handleSelectMatch(match) {
+    const roomId = match.roomId || buildRoomIdForMatch(match);
+    if (!roomId) return;
+
     setSelectedMatch(match);
-    fetchMessages(match._id);
+    localStorage.setItem('lastSeen_' + roomId, Date.now().toString());
+    window.dispatchEvent(new Event('chat-lastseen-updated'));
+
+    setActiveMatches(prev => prev.map(m => m._id === match._id ? { ...m, unread: 0 } : m));
+
+    try {
+      socketRef.current?.emit('joinRoom', roomId);
+      const res = await fetch(`http://localhost:5000/api/chat/${roomId}`);
+      const roomMessages = await res.json();
+      setMessages(Array.isArray(roomMessages) ? roomMessages : []);
+    } catch {
+      setMessages([]);
+    }
   }
 
   function handleSend() {
     if (!newMsg.trim() || !selectedMatch) return;
-    socketRef.current.emit('send-message', {
-      matchId: selectedMatch._id,
-      senderId: user._id,
-      content: newMsg.trim(),
+    const roomId = selectedMatch.roomId || buildRoomIdForMatch(selectedMatch);
+    if (!roomId) return;
+    socketRef.current?.emit('sendMessage', {
+      roomId,
+      sender: userId,
+      senderRole: user?.role,
+      senderName: user?.name,
+      text: newMsg.trim(),
     });
     setNewMsg('');
-    socketRef.current.emit('stop-typing', selectedMatch._id);
-  }
-
-  function handleTypingChange(val) {
-    setNewMsg(val);
-    if (!selectedMatch) return;
-    socketRef.current.emit('typing', { matchId: selectedMatch._id, userName: user.name });
-    clearTimeout(window.__typingTimer);
-    window.__typingTimer = setTimeout(() => {
-      socketRef.current.emit('stop-typing', selectedMatch._id);
-    }, 2000);
   }
 
   async function handleSubmitRating() {
@@ -386,6 +468,8 @@ export default function Mentoring() {
     { id: 'requests', label: isStudent ? '\uD83D\uDCCB My Requests' : '\uD83D\uDCE9 Incoming Requests' },
     { id: 'chat', label: '\uD83D\uDCAC Active Chats' },
   ];
+
+  const unreadChatCount = activeMatches.reduce((sum, m) => sum + (m.unread > 0 ? 1 : 0), 0);
 
   return (
     <div style={{ minHeight: '100vh', background: '#F8FAFC', paddingTop: '68px' }}>
@@ -420,6 +504,11 @@ export default function Mentoring() {
                 }}
               >
                 {t.label}
+                {t.id === 'chat' && unreadChatCount > 0 && (
+                  <span style={{ marginLeft: 6, background: '#EF4444', color: '#fff', borderRadius: 999, fontSize: 10, fontWeight: 700, padding: '1px 6px' }}>
+                    {unreadChatCount}
+                  </span>
+                )}
               </button>
             ))}
           </div>
@@ -604,14 +693,11 @@ export default function Mentoring() {
                     <p style={{ fontSize: '13px', marginTop: '4px' }}>Get a mentor request accepted first</p>
                   </div>
                 ) : activeMatches.map((match) => {
-                  const mentor = match.mentor || {};
-                  const mName = mentor.name || 'Mentor';
-                  const initials = mName.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
-                  const isSelected = selectedChat?._id === match._id;
+                  const isSelected = selectedMatch?._id === match._id;
                   return (
                     <div
                       key={match._id}
-                      onClick={() => setSelectedChat(match)}
+                      onClick={() => handleSelectMatch(match)}
                       style={{
                         display: 'flex', alignItems: 'center', gap: '12px',
                         padding: '14px 20px', cursor: 'pointer',
@@ -621,12 +707,22 @@ export default function Mentoring() {
                       }}
                     >
                       <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: '#DBEAFE', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '16px', fontWeight: 700, color: '#2563EB', flexShrink: 0 }}>
-                        {initials}
+                        {match.initials}
                       </div>
                       <div style={{ flex: 1, minWidth: 0 }}>
-                        <p style={{ fontWeight: 600, fontSize: '14px', color: '#0F172A', margin: '0 0 3px 0' }}>{mName}</p>
-                        <p style={{ fontSize: '13px', color: '#64748B', margin: 0 }}>{match.subject || 'Active mentor'}</p>
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+                          <p style={{ fontWeight: 600, fontSize: '14px', color: '#0F172A', margin: '0 0 3px 0' }}>{match.displayName}</p>
+                          <span style={{ fontSize: 11, color: '#94A3B8', flexShrink: 0 }}>{match.time || ''}</span>
+                        </div>
+                        <p style={{ fontSize: '13px', color: '#64748B', margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                          {match.lastMsg || 'No messages yet'}
+                        </p>
                       </div>
+                      {match.unread > 0 && (
+                        <div style={{ width: 20, height: 20, borderRadius: '50%', background: '#059669', color: 'white', fontSize: 11, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                          {match.unread}
+                        </div>
+                      )}
                     </div>
                   );
                 })}
@@ -635,7 +731,7 @@ export default function Mentoring() {
 
             {/* ── RIGHT PANEL ── */}
             <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-              {!selectedChat ? (
+              {!selectedMatch ? (
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '16px' }}>
                   <div style={{ fontSize: '64px', lineHeight: 1 }}>💬</div>
                   <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#0F172A', margin: 0 }}>Select a conversation</h3>
@@ -647,38 +743,66 @@ export default function Mentoring() {
                   <div style={{ padding: '20px 24px', borderBottom: '1px solid #F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                       <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: '#DBEAFE', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '15px', fontWeight: 700, color: '#2563EB', flexShrink: 0 }}>
-                        {(selectedChat.mentor?.name || 'M').split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)}
+                        {selectedMatch.initials}
                       </div>
                       <div>
-                        <p style={{ fontWeight: 700, fontSize: '16px', color: '#0F172A', margin: '0 0 3px 0' }}>{selectedChat.mentor?.name || 'Mentor'}</p>
+                        <p style={{ fontWeight: 700, fontSize: '16px', color: '#0F172A', margin: '0 0 3px 0' }}>{selectedMatch.displayName}</p>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                           <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#10B981', display: 'inline-block' }} />
                           <span style={{ fontSize: '12px', color: '#10B981', fontWeight: 500 }}>Active</span>
                         </div>
                       </div>
                     </div>
-                    <button
-                      onClick={() => navigate('/mentoring/chat/active')}
-                      onMouseEnter={e => e.currentTarget.style.background = '#1D4ED8'}
-                      onMouseLeave={e => e.currentTarget.style.background = '#2563EB'}
-                      style={{ background: '#2563EB', color: '#fff', padding: '10px 20px', borderRadius: '8px', border: 'none', fontWeight: 600, cursor: 'pointer', fontSize: '14px' }}
-                    >
-                      Open Chat →
-                    </button>
                   </div>
 
-                  {/* CTA panel */}
-                  <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '16px', background: '#F8FAFC' }}>
-                    <div style={{ fontSize: '48px' }}>💬</div>
-                    <p style={{ fontSize: '16px', fontWeight: 600, color: '#0F172A', margin: 0 }}>
-                      Chat with {selectedChat.mentor?.name || 'your mentor'}
-                    </p>
-                    <p style={{ fontSize: '13px', color: '#64748B', margin: 0 }}>Click "Open Chat" to start a real-time conversation</p>
+                  {/* Messages */}
+                  <div style={{ flex: 1, overflowY: 'auto', padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: 10, background: '#F8FAFC' }}>
+                    {messages.length === 0 && (
+                      <div style={{ textAlign: 'center', color: '#94A3B8', marginTop: 40 }}>
+                        <p style={{ fontSize: 28 }}>💬</p>
+                        <p style={{ fontSize: 13 }}>No messages yet</p>
+                      </div>
+                    )}
+                    {messages.map((m) => {
+                      const isMine = String(m.sender) === String(userId);
+                      return (
+                        <div key={m._id || m.createdAt} style={{ display: 'flex', justifyContent: isMine ? 'flex-end' : 'flex-start' }}>
+                          <div style={{
+                            maxWidth: '70%', padding: '10px 14px', borderRadius: isMine ? '18px 18px 4px 18px' : '18px 18px 18px 4px',
+                            background: isMine ? '#2563EB' : 'white',
+                            color: isMine ? 'white' : '#374151',
+                            fontSize: 14, lineHeight: 1.5,
+                            boxShadow: !isMine ? '0 1px 4px rgba(0,0,0,0.08)' : 'none',
+                          }}>
+                            <p style={{ margin: '0 0 4px' }}>{m.text}</p>
+                            <p style={{ margin: 0, fontSize: 11, opacity: 0.7, textAlign: 'right' }}>{formatMsgTime(m.createdAt)}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                    <div ref={messagesEndRef} />
+                  </div>
+
+                  {/* Input */}
+                  <div style={{ padding: '12px 20px', borderTop: '1px solid #F1F5F9', display: 'flex', gap: 10 }}>
+                    <input
+                      value={newMsg}
+                      onChange={e => setNewMsg(e.target.value)}
+                      onKeyDown={e => {
+                        if (e.key === 'Enter' && !e.shiftKey) {
+                          e.preventDefault();
+                          handleSend();
+                        }
+                      }}
+                      placeholder="Type a message..."
+                      style={{ flex: 1, padding: '10px 16px', border: '1.5px solid #E2E8F0', borderRadius: 24, fontSize: 14, outline: 'none', fontFamily: 'inherit', color: '#374151', background: '#fff' }}
+                    />
                     <button
-                      onClick={() => navigate('/mentoring/chat/active')}
-                      style={{ background: '#2563EB', color: '#fff', padding: '12px 28px', borderRadius: '10px', border: 'none', fontWeight: 600, cursor: 'pointer', fontSize: '15px' }}
+                      onClick={handleSend}
+                      disabled={!newMsg.trim()}
+                      style={{ width: 42, height: 42, borderRadius: '50%', background: newMsg.trim() ? '#2563EB' : '#E2E8F0', color: 'white', border: 'none', cursor: newMsg.trim() ? 'pointer' : 'not-allowed', fontSize: 18, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}
                     >
-                      Open Chat →
+                      ➤
                     </button>
                   </div>
                 </>
