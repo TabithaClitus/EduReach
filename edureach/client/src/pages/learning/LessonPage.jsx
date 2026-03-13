@@ -5657,6 +5657,332 @@ const lessonData = {
         ],
         summaryEnd: 'Great job! You are mastering advanced grammar skills!',
         nextLesson: { id: 'reading-comprehension', title: 'Reading Comprehension' }
+    },
+
+    '5-vocabulary-building': {
+        title: 'Vocabulary Building',
+        subtitle: 'Learn new words, idioms, phrases, synonyms, and antonyms to improve your vocabulary and communication skills.',
+        videoSubtitle: 'Watch these videos to learn words, synonyms, antonyms, and common idioms!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/VdKK4gWFO0c?si=KlFRtvQCac-awFIK', title: 'Vocabulary: New Words & Meanings', thumb: 'https://img.youtube.com/vi/VdKK4gWFO0c/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/4O5UTqByabU?si=NotTuB-QPaJkrtFt', title: 'Synonyms & Antonyms', thumb: 'https://img.youtube.com/vi/4O5UTqByabU/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/uYVem2B-a90?si=xM1Skks_ks4Q2DAM', title: 'Idioms & Phrases for Kids', thumb: 'https://img.youtube.com/vi/uYVem2B-a90/hqdefault.jpg' }
+        ],
+        quiz: [
+            {
+                question: 'What does “vocabulary” mean?',
+                visual: '📚',
+                options: ['A list of numbers', 'The words we know and use', 'A type of book cover', 'Only difficult words'],
+                correct: 1
+            },
+            {
+                question: 'Which word is a synonym of “happy”?',
+                visual: '😊',
+                options: ['Joyful', 'Angry', 'Hungry', 'Sleepy'],
+                correct: 0
+            },
+            {
+                question: 'Which word is an antonym of “early”?',
+                visual: '⏰',
+                options: ['Soon', 'Late', 'Quick', 'First'],
+                correct: 1
+            },
+            {
+                question: 'Choose the synonym of “big”.',
+                visual: '🐘',
+                options: ['Tiny', 'Large', 'Short', 'Slow'],
+                correct: 1
+            },
+            {
+                question: 'Choose the antonym of “hot”.',
+                visual: '🌡️',
+                options: ['Warm', 'Cold', 'Boiling', 'Sunny'],
+                correct: 1
+            },
+            {
+                question: 'What does the idiom “break the ice” mean?',
+                visual: '🧊',
+                options: ['To crack real ice', 'To start a conversation', 'To stop talking', 'To win a race'],
+                correct: 1
+            },
+            {
+                question: 'Which pair are antonyms?',
+                visual: '↔️',
+                options: ['Quick – Fast', 'Big – Large', 'Tall – Short', 'Happy – Joyful'],
+                correct: 2
+            },
+            {
+                question: 'Which pair are synonyms?',
+                visual: '🔁',
+                options: ['Dark – Bright', 'Fast – Quick', 'Open – Close', 'Up – Down'],
+                correct: 1
+            },
+            {
+                question: 'A good way to learn new words is to:',
+                visual: '🧠',
+                options: ['Skip reading', 'Read books and ask meanings', 'Never use new words', 'Only watch cartoons'],
+                correct: 1
+            },
+            {
+                question: 'Which phrase best completes the sentence? “I was nervous, but my friend told me to ____.”',
+                visual: '💬',
+                options: ['hit the books', 'spill the beans', 'break the ice', 'rain cats and dogs'],
+                correct: 2
+            }
+        ],
+        summary: [
+            'Vocabulary is the words we know and use.',
+            'We can learn new words by reading, listening, and asking meanings.',
+            'Synonyms are words with the same or similar meanings.',
+            'Antonyms are words with opposite meanings.',
+            'Idioms and phrases have special meanings.'
+        ],
+        summaryEnd: 'Excellent! You are building a stronger vocabulary every day!',
+        nextLesson: { id: 'creative-writing', title: 'Creative Writing' }
+    },
+
+    '5-creative-writing': {
+        title: 'Creative Writing',
+        subtitle: 'Write essays, letters, stories, and paragraphs with proper structure and creativity.',
+        videoSubtitle: 'Watch these videos to learn how to write paragraphs, letters, essays, and stories!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/RodUHlwVabA?si=-IN8o2qfmXZlQHLa', title: 'Creative Writing Basics', thumb: 'https://img.youtube.com/vi/RodUHlwVabA/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/lMRTtUrSFOc?si=RKkuR0VuukFT-W5x', title: 'Paragraph Writing', thumb: 'https://img.youtube.com/vi/lMRTtUrSFOc/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/evSugQfCXGY?si=QjlBIhRnpypPyhLs', title: 'Story Writing Tips', thumb: 'https://img.youtube.com/vi/evSugQfCXGY/hqdefault.jpg' }
+        ],
+        quiz: [
+            {
+                question: 'What is the first sentence of a paragraph called?',
+                visual: '🧩',
+                options: ['Closing sentence', 'Topic sentence', 'Story sentence', 'Ending sentence'],
+                correct: 1
+            },
+            {
+                question: 'Which part of an essay tells what the essay is about?',
+                visual: '📄',
+                options: ['Conclusion', 'Introduction', 'Body', 'Signature'],
+                correct: 1
+            },
+            {
+                question: 'Which is the correct order for an essay?',
+                visual: '🧠',
+                options: ['Body, Introduction, Conclusion', 'Introduction, Body, Conclusion', 'Conclusion, Body, Introduction', 'Greeting, Body, Closing'],
+                correct: 1
+            },
+            {
+                question: 'Which is an informal letter greeting?',
+                visual: '✉️',
+                options: ['Dear Principal,', 'Respected Sir,', 'Hi Riya,', 'To whom it may concern,'],
+                correct: 2
+            },
+            {
+                question: 'Which part comes at the end of a letter?',
+                visual: '📝',
+                options: ['Sender’s address', 'Date', 'Closing', 'Greeting'],
+                correct: 2
+            },
+            {
+                question: 'A story should have characters, setting, and a:',
+                visual: '📚',
+                options: ['Calculator', 'Problem', 'Timetable', 'Map'],
+                correct: 1
+            },
+            {
+                question: 'What is the purpose of supporting sentences in a paragraph?',
+                visual: '🔎',
+                options: ['To confuse the reader', 'To give details about the topic sentence', 'To end the paragraph quickly', 'To add random words'],
+                correct: 1
+            },
+            {
+                question: 'Which is a good tip for creative writing?',
+                visual: '💡',
+                options: ['Never re-read your work', 'Use descriptive words', 'Skip punctuation', 'Write without any plan'],
+                correct: 1
+            },
+            {
+                question: 'Which part of a story shows how the problem is solved?',
+                visual: '✅',
+                options: ['Setting', 'Solution', 'Characters', 'Title'],
+                correct: 1
+            },
+            {
+                question: 'Why should we check spelling and punctuation?',
+                visual: '🔤',
+                options: ['To make writing clear and correct', 'To make writing longer', 'To remove meanings', 'To avoid reading'],
+                correct: 0
+            }
+        ],
+        summary: [
+            'Creative writing helps you express ideas and imagination.',
+            'A paragraph has a topic sentence, supporting sentences, and an ending sentence.',
+            'An essay has an introduction, body, and conclusion.',
+            'Informal letters include address, date, greeting, body, and closing.',
+            'A story has characters, setting, problem, and solution.'
+        ],
+        summaryEnd: 'Great work! Keep writing and improving every day!',
+        nextLesson: { id: 'poetry', title: 'Poetry & Literature' }
+    },
+
+    '5-poetry': {
+        title: 'Poetry & Literature',
+        subtitle: 'Enjoy poems, understand their meanings, and learn simple literary devices like rhyme, alliteration, and simile.',
+        videoSubtitle: 'Watch these videos to enjoy poetry and understand simple literary devices!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/Zg1tN-Ol1g8?si=PppTxIuzt4-j7vJZ', title: 'Poetry for Kids: Rhythm & Rhyme', thumb: 'https://img.youtube.com/vi/Zg1tN-Ol1g8/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/OY2zPFQsKSI?si=P3hVJkYrRF-FAoiW', title: 'Literary Devices (Rhyme, Alliteration, Simile)', thumb: 'https://img.youtube.com/vi/OY2zPFQsKSI/hqdefault.jpg' }
+        ],
+        quiz: [
+            {
+                question: 'What is a poem?',
+                visual: '🎵',
+                options: ['A long newspaper article', 'A form of writing that expresses ideas and feelings creatively', 'A math problem', 'A science experiment'],
+                correct: 1
+            },
+            {
+                question: 'Which is a common feature of poems?',
+                visual: '📝',
+                options: ['Only long paragraphs', 'Short lines and rhythm', 'Only numbers', 'Only pictures'],
+                correct: 1
+            },
+            {
+                question: 'Rhyme means:',
+                visual: '🔔',
+                options: ['Words that sound the same at the end', 'Words that start the same', 'Opposite words', 'Very long words'],
+                correct: 0
+            },
+            {
+                question: 'Alliteration is:',
+                visual: '🔁',
+                options: ['Repeating the same starting sound', 'Repeating the same ending sound', 'Comparing using like/as', 'A moral of a story'],
+                correct: 0
+            },
+            {
+                question: 'A simile compares two things using:',
+                visual: '🧠',
+                options: ['and', 'because', 'like or as', 'but'],
+                correct: 2
+            },
+            {
+                question: 'Which sentence has alliteration?',
+                visual: '👄',
+                options: ['The sun is bright.', 'Silly snakes slide slowly.', 'I like apples.', 'The cat slept.'],
+                correct: 1
+            },
+            {
+                question: 'Which is a simile?',
+                visual: '✨',
+                options: ['He is brave.', 'She ran fast.', 'The moon is like a silver coin.', 'Birds sing songs.'],
+                correct: 2
+            },
+            {
+                question: 'Stories and fables often teach us:',
+                visual: '📚',
+                options: ['Only spelling', 'Morals and values', 'Only numbers', 'Only drawings'],
+                correct: 1
+            },
+            {
+                question: 'A good way to enjoy a poem is to:',
+                visual: '🎤',
+                options: ['Read it aloud', 'Skip every line', 'Only read the title', 'Read without thinking'],
+                correct: 0
+            },
+            {
+                question: 'To understand a poem better, we should:',
+                visual: '🔍',
+                options: ['Read slowly and find the main idea', 'Read as fast as possible', 'Ignore the words', 'Copy it many times'],
+                correct: 0
+            }
+        ],
+        summary: [
+            'Poems express feelings and ideas using creative language.',
+            'Poems often have short lines, rhythm, and rhyming words.',
+            'Rhyme, alliteration, and simile are simple literary devices.',
+            'Reading poems aloud helps you enjoy rhythm and meaning.',
+            'Stories and fables teach morals and values.'
+        ],
+        summaryEnd: 'Great job! Keep enjoying poems and stories every day!',
+        nextLesson: { id: 'punctuation-spelling', title: 'Punctuation & Spelling' }
+    },
+
+    '5-punctuation-spelling': {
+        title: 'Punctuation & Spelling',
+        subtitle: 'Use punctuation marks correctly and improve your spelling skills through examples and practice.',
+        videoSubtitle: 'Watch these videos to learn punctuation rules and spelling tips!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/DHk0EWevpk0?si=fjYTZBexUqaP6iWW', title: 'Punctuation for Kids', thumb: 'https://img.youtube.com/vi/DHk0EWevpk0/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/B2GlzUlzVG8?si=UWbDJeAwUn_1mub6', title: 'Spelling Tips and Tricks', thumb: 'https://img.youtube.com/vi/B2GlzUlzVG8/hqdefault.jpg' }
+        ],
+        quiz: [
+            {
+                question: 'Which punctuation mark is used at the end of a question?',
+                visual: '❓',
+                options: ['Comma', 'Full stop', 'Question mark', 'Exclamation mark'],
+                correct: 2
+            },
+            {
+                question: 'Which sentence needs a full stop at the end?',
+                visual: '📝',
+                options: ['What is your name?', 'I like reading books', 'Wow!', 'Do you play football?'],
+                correct: 1
+            },
+            {
+                question: 'Which punctuation mark separates items in a list?',
+                visual: '🍎',
+                options: ['Comma', 'Question mark', 'Full stop', 'Exclamation mark'],
+                correct: 0
+            },
+            {
+                question: 'Choose the correct spelling:',
+                visual: '🔤',
+                options: ['Frend', 'Friend', 'Freind', 'Frient'],
+                correct: 1
+            },
+            {
+                question: 'Which punctuation mark shows strong feelings?',
+                visual: '😃',
+                options: ['Comma', 'Full stop', 'Question mark', 'Exclamation mark'],
+                correct: 3
+            },
+            {
+                question: 'Which sentence uses capital letters correctly?',
+                visual: '🔠',
+                options: ['ravi lives in chennai.', 'Ravi lives in chennai.', 'ravi lives in Chennai.', 'Ravi lives in Chennai.'],
+                correct: 3
+            },
+            {
+                question: 'Which is the correct spelling of “because”?',
+                visual: '✅',
+                options: ['Becuse', 'Becoz', 'Because', 'Becaus'],
+                correct: 2
+            },
+            {
+                question: 'What should we do if we are not sure about a spelling?',
+                visual: '📖',
+                options: ['Guess and move on', 'Use a dictionary', 'Never write the word', 'Skip the sentence'],
+                correct: 1
+            },
+            {
+                question: 'Which sentence is a question?',
+                visual: '❔',
+                options: ['We are going to school.', 'Where are you going', 'It is raining today.', 'I like apples.'],
+                correct: 1
+            },
+            {
+                question: 'Which correction is correct?',
+                visual: '🛠️',
+                options: ['recieve → recieve', 'recieve → receive', 'receive → recieve', 'receive → recive'],
+                correct: 1
+            }
+        ],
+        summary: [
+            'Punctuation makes writing clear and easy to understand.',
+            'Full stop ends a sentence, question mark ends a question, and exclamation mark shows strong feeling.',
+            'Commas help separate items and ideas.',
+            'Capital letters are used at the beginning of sentences and for names/places.',
+            'Correct spelling helps the reader understand the meaning.'
+        ],
+        summaryEnd: 'Well done! Keep practicing punctuation and spelling every day!',
+        nextLesson: null
     }
 };
 
@@ -19096,6 +19422,876 @@ const LessonPage = () => {
                                     📚 Practice reading every day to improve!
                                 </p>
                             </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ═══════════════════════════════════════════════════════════════════════════════════
+                    CLASS 5 ENGLISH - READING COMPREHENSION (LESSON CONTENT ONLY)
+                ═══════════════════════════════════════════════════════════════════════════════════ */}
+                {classId === '5' && chapterId === 'reading-comprehension' && (
+                    <>
+                        <Section>
+                            <SectionTitle emoji="📖">1. Introduction to Reading Comprehension</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                    <strong>Reading comprehension</strong> means <strong>understanding what you read</strong>. When you read a story,
+                                    a lesson, or even a short notice, you are not only saying the words—you are also trying to understand the message
+                                    behind those words.
+                                </p>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                    Understanding what you read is important because it helps you enjoy stories, learn from your textbooks,
+                                    and follow instructions in daily life. For example, when you read a Maths word problem, you must understand
+                                    the situation before you can solve it. When you read a school notice, you must understand what you need to do.
+                                </p>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 16 }}>
+                                    <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.9, margin: 0 }}>
+                                        Think of it like this: <strong>your eyes read the words, but your brain understands the meaning</strong>.
+                                        If your brain is not thinking, reading becomes like looking at lines and shapes without understanding.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">2. Why Reading Comprehension is Important</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                    Reading comprehension helps you in many ways:
+                                </p>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                        <strong>Understand stories and lessons:</strong> You know who the characters are, what happened, and what the story teaches.
+                                    </li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                        <strong>Improve vocabulary:</strong> When you understand the sentence, you can guess the meaning of new words.
+                                    </li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                        <strong>Answer questions correctly:</strong> You can find information in the passage to support your answers.
+                                    </li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                        <strong>Develop thinking skills:</strong> You can think about why something happened and what it teaches you.
+                                    </li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                        <strong>Learn new ideas:</strong> You discover new facts about people, animals, nature, and the world.
+                                    </li>
+                                </ul>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 16 }}>
+                                    <p style={{ fontSize: '15px', color: '#92400E', lineHeight: 1.9, margin: 0 }}>
+                                        <strong>Real-life example:</strong> When you read a recipe, you must understand each step to cook the dish correctly.
+                                        When you read bus information, you must understand it to get off at the right stop.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧠">3. Skills Needed for Good Reading Comprehension</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                    To understand a passage well, you need to use several skills together:
+                                </p>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 16, marginTop: 4 }}>
+                                    <p style={{ fontSize: '15px', color: '#1D4ED8', fontWeight: 700, margin: '0 0 6px' }}>a) Finding the main idea</p>
+                                    <p style={{ fontSize: '15px', color: '#1E3A8A', lineHeight: 1.9, margin: 0 }}>
+                                        The <strong>main idea</strong> is what the passage is mostly about.  
+                                        Example: If a paragraph talks about how trees give us oxygen, shade and fruits, the main idea is
+                                        “Trees are very useful.”
+                                    </p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 16 }}>
+                                    <p style={{ fontSize: '15px', color: '#047857', fontWeight: 700, margin: '0 0 6px' }}>b) Identifying important details</p>
+                                    <p style={{ fontSize: '15px', color: '#065F46', lineHeight: 1.9, margin: 0 }}>
+                                        Important details answer questions like <strong>who, what, where, when, why, how</strong>.
+                                        They support the main idea. For example, in a picnic story, details may tell where they went,
+                                        what they ate, and what games they played.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F5F3FF', border: '1px solid #C4B5FD', borderRadius: 16, padding: 16 }}>
+                                    <p style={{ fontSize: '15px', color: '#6D28D9', fontWeight: 700, margin: '0 0 6px' }}>c) Understanding new words from context</p>
+                                    <p style={{ fontSize: '15px', color: '#4C1D95', lineHeight: 1.9, margin: 0 }}>
+                                        <strong>Context</strong> means the other words in the sentence. They give clues about a new word.
+                                        Example: “Grandfather sat in a <strong>comfortable</strong> chair and smiled.”  
+                                        From this, you can guess “comfortable” means nice and easy to sit in.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#FEF3C7', border: '1px solid #FCD34D', borderRadius: 16, padding: 16 }}>
+                                    <p style={{ fontSize: '15px', color: '#B45309', fontWeight: 700, margin: '0 0 6px' }}>d) Thinking about what the author is trying to say</p>
+                                    <p style={{ fontSize: '15px', color: '#92400E', lineHeight: 1.9, margin: 0 }}>
+                                        Many stories have a message. For example, a story about sharing lunch with a hungry friend
+                                        may be teaching that <strong>kindness and sharing are important</strong>.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#E0F2FE', border: '1px solid #93C5FD', borderRadius: 16, padding: 16 }}>
+                                    <p style={{ fontSize: '15px', color: '#075985', fontWeight: 700, margin: '0 0 6px' }}>e) Connecting the story to real life</p>
+                                    <p style={{ fontSize: '15px', color: '#0C4A6E', lineHeight: 1.9, margin: 0 }}>
+                                        When you connect the passage to your own life, you remember it better.  
+                                        Example: A story about being nervous before a test may remind you of how you feel before your exams.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📚">4. Strategies to Improve Reading Comprehension</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                    Here are some easy steps you can follow whenever you read a passage:
+                                </p>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                        <strong>Read slowly and carefully:</strong> Do not rush. Give your brain time to think.
+                                    </li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                        <strong>Read more than once if needed:</strong> First reading for the story, second reading for details.
+                                    </li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                        <strong>Notice important words:</strong> Pay attention to names, places, and time words like “yesterday” or “after school”.
+                                    </li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                        <strong>Ask questions while reading:</strong> Ask yourself “Who is this about?” and “What happened?”
+                                    </li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                        <strong>Think after each paragraph:</strong> Pause and ask, “What did I just learn?”
+                                    </li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📜">5. Example Reading Passage</SectionTitle>
+                            <div style={{ background: 'linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%)', border: '1px solid #6EE7B7', borderRadius: 16, padding: 20, marginBottom: 12 }}>
+                                <h4 style={{ margin: '0 0 10px', fontSize: '17px', color: '#065F46' }}>The Stray Puppy</h4>
+                                <p style={{ margin: 0, fontSize: '15.5px', color: '#334155', lineHeight: 1.9, textAlign: 'justify' }}>
+                                    One afternoon, Arjun was walking home from school when he heard a soft whimper near a shop. Behind a pile of boxes,
+                                    he found a small puppy shivering in the rain. Its fur was wet, and it looked hungry. Arjun felt worried. He asked the
+                                    shopkeeper if the puppy belonged to anyone, but no one knew. Arjun took off his scarf and gently wrapped it around the puppy.
+                                    Then he carried it to a nearby tea stall and bought a small bowl of milk.  
+                                    At home, Arjun told his mother what had happened. His mother agreed to help. They dried the puppy, gave it food, and
+                                    put it in a warm corner. The next day, Arjun made a “Lost Puppy” poster and asked neighbours to check. A week later, a little
+                                    girl came running to Arjun’s house. The puppy jumped happily into her arms. Arjun smiled, feeling proud that he had helped.
+                                </p>
+                            </div>
+                            <p style={{ fontSize: '15px', color: '#047857', lineHeight: 1.9, margin: 0 }}>
+                                <strong>Main idea:</strong> Helping others and being kind, even to animals, can make a big difference.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔍">6. Understanding the Passage</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 10px' }}>
+                                Try to answer these questions using the passage:
+                            </p>
+                            <ol style={{ margin: 0, paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>What did Arjun hear near the shop, and what did he find?</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Why did Arjun think the puppy needed help?</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>What did Arjun and his mother do for the puppy at home?</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>How did they try to find the puppy’s owner?</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Why did Arjun feel proud at the end of the story?</li>
+                            </ol>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="💡">7. Tips for Students</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Read every day:</strong> Even 15 minutes of reading daily makes you a stronger reader.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Read different texts:</strong> Stories, articles, poems, and lessons all teach different skills.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Learn new words:</strong> Note down new words, meanings, and use them in your own sentences.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Talk about what you read:</strong> Discuss stories with friends, parents, or teachers to understand better.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Stay focused:</strong> Read in a quiet place and avoid distractions while reading.</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✅">8. Key Points to Remember</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Reading comprehension means understanding what you read.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>It helps you in all subjects and in real life.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Always look for the main idea and important details.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Use context clues to guess the meaning of new words.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Ask questions while reading to keep your mind active.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Read regularly and talk about what you read to become a confident reader.</li>
+                            </ul>
+                        </Section>
+                    </>
+                )}
+
+                {/* ═══════════════════════════════════════════════════════════════════════════════════
+                    CLASS 5 ENGLISH - ADVANCED GRAMMAR (LESSON CONTENT ONLY)
+                ═══════════════════════════════════════════════════════════════════════════════════ */}
+                {classId === '5' && chapterId === 'advanced-grammar' && (
+                    <>
+                        <Section>
+                            <SectionTitle emoji="📝">What is Grammar?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                <strong>Grammar</strong> is a set of rules that helps us speak and write correctly.
+                                In Class 5, we learn some <strong>advanced grammar</strong> ideas like tenses, voice,
+                                direct and indirect speech, and conjunctions.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⏳">Tenses (Past, Present, Future)</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                <strong>Tense</strong> tells us <strong>when</strong> an action happens.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 12 }}>
+                                {[
+                                    { title: 'Present', ex: 'I play football.' },
+                                    { title: 'Past', ex: 'I played football yesterday.' },
+                                    { title: 'Future', ex: 'I will play football tomorrow.' },
+                                ].map((item) => (
+                                    <div key={item.title} style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: 16, padding: 16 }}>
+                                        <div style={{ fontSize: '14px', fontWeight: 900, color: '#0F172A', marginBottom: 8 }}>{item.title}</div>
+                                        <div style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>{item.ex}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔄">Active Voice and Passive Voice</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                In <strong>active voice</strong>, the subject does the action. In <strong>passive voice</strong>, the action is done to the subject.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 16 }}>
+                                <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                    <strong>Active:</strong> The boy kicked the ball.
+                                </p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                    <strong>Passive:</strong> The ball was kicked by the boy.
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="💬">Direct Speech and Indirect Speech</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                <strong>Direct speech</strong> uses the exact words someone said. <strong>Indirect speech</strong> tells what someone said without using the exact words.
+                            </p>
+                            <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 16 }}>
+                                <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#92400E', lineHeight: 1.8 }}>
+                                    <strong>Direct:</strong> She said, “I am happy.”
+                                </p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#92400E', lineHeight: 1.8 }}>
+                                    <strong>Indirect:</strong> She said that she was happy.
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔗">Conjunctions</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                <strong>Conjunctions</strong> join words and sentences. Some common conjunctions are:
+                                <strong> and, but, because, or, so</strong>.
+                            </p>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 14 }}>
+                                {['and', 'but', 'because', 'or', 'so'].map((w) => (
+                                    <span key={w} style={{ background: '#EEF2FF', border: '1px solid #C7D2FE', color: '#3730A3', fontWeight: 900, padding: '8px 12px', borderRadius: 999, fontSize: 13 }}>
+                                        {w}
+                                    </span>
+                                ))}
+                            </div>
+                            <div style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: 16, padding: 16 }}>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                    Example: I want to play, <strong>but</strong> it is raining.
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✅">Quick Tips</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 10, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Look for time words (yesterday, today, tomorrow) to identify tenses.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>In active voice, the doer is clear. In passive voice, the action is more important.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Use quotation marks (“ ”) in direct speech.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Use conjunctions to connect ideas and make your writing smoother.</li>
+                            </ul>
+                        </Section>
+                    </>
+                )}
+
+                {/* ═══════════════════════════════════════════════════════════════════════════════════
+                    CLASS 5 ENGLISH - VOCABULARY BUILDING (LESSON CONTENT ONLY)
+                ═══════════════════════════════════════════════════════════════════════════════════ */}
+                {classId === '5' && chapterId === 'vocabulary-building' && (
+                    <>
+                        {/* 1. Introduction */}
+                        <Section>
+                            <SectionTitle emoji="📚">1. Introduction to Vocabulary</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                <strong>Vocabulary</strong> means the <strong>words we know and use</strong>. Your vocabulary helps you
+                                read better, write better, and speak clearly. When you learn new words, you can explain your ideas in a
+                                stronger way. Instead of saying “That movie was nice,” you can say “That movie was <strong>amazing</strong>!”
+                            </p>
+                            <div style={{ marginTop: 14, background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 16 }}>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155', lineHeight: 1.9 }}>
+                                    Vocabulary is like a <strong>toolbox</strong>. The more tools you have, the easier it is to build good sentences.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* 2. Learning New Words */}
+                        <Section>
+                            <SectionTitle emoji="🔎">2. Learning New Words</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                Here are easy ways to learn new words:
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Read books and stories:</strong> You meet new words in every chapter.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Listen carefully:</strong> Teachers, podcasts, and conversations teach new words.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Ask the meaning:</strong> If a word is unfamiliar, ask or look it up.</li>
+                            </ul>
+                            <div style={{ marginTop: 16, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 12 }}>
+                                {[
+                                    { word: 'Curious', meaning: 'wanting to know more', ex: 'I was curious about how the rainbow formed.' },
+                                    { word: 'Brave', meaning: 'not afraid; courageous', ex: 'The brave firefighter saved the cat.' },
+                                    { word: 'Polite', meaning: 'having good manners', ex: 'It is polite to say “please” and “thank you”.' },
+                                    { word: 'Imagine', meaning: 'to form a picture in your mind', ex: 'Imagine a world where everyone helps each other.' },
+                                    { word: 'Tiny', meaning: 'very small', ex: 'A tiny ant carried a crumb bigger than itself.' },
+                                ].map((w) => (
+                                    <div key={w.word} style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: 16, padding: 16 }}>
+                                        <div style={{ fontSize: '15px', fontWeight: 900, color: '#0F172A' }}>{w.word}</div>
+                                        <div style={{ fontSize: '14px', color: '#64748B', marginTop: 4, lineHeight: 1.7 }}>
+                                            <strong>Meaning:</strong> {w.meaning}
+                                        </div>
+                                        <div style={{ fontSize: '14px', color: '#334155', marginTop: 8, lineHeight: 1.7 }}>
+                                            <strong>Example:</strong> {w.ex}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* 3. Synonyms */}
+                        <Section>
+                            <SectionTitle emoji="🔁">3. Synonyms</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                <strong>Synonyms</strong> are words that have the <strong>same or similar meaning</strong>.
+                                Using synonyms makes your writing more interesting.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 12 }}>
+                                {[
+                                    { a: 'Happy', b: 'Joyful', ex: 'I felt happy/joyful when I won the prize.' },
+                                    { a: 'Big', b: 'Large', ex: 'We saw a big/large elephant at the zoo.' },
+                                    { a: 'Fast', b: 'Quick', ex: 'The quick runner finished the race first.' },
+                                    { a: 'Brave', b: 'Courageous', ex: 'The brave/courageous child spoke the truth.' },
+                                    { a: 'Smart', b: 'Clever', ex: 'My clever friend solved the puzzle.' },
+                                ].map((p) => (
+                                    <div key={p.a} style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 16 }}>
+                                        <div style={{ fontSize: '15px', fontWeight: 900, color: '#1D4ED8' }}>{p.a} – {p.b}</div>
+                                        <div style={{ marginTop: 8, fontSize: '14px', color: '#1E3A8A', lineHeight: 1.7 }}>
+                                            <strong>Example:</strong> {p.ex}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* 4. Antonyms */}
+                        <Section>
+                            <SectionTitle emoji="↔️">4. Antonyms</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                <strong>Antonyms</strong> are words that have <strong>opposite meanings</strong>.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 12 }}>
+                                {[
+                                    { a: 'Hot', b: 'Cold', ex: 'The tea is hot, but the ice cream is cold.' },
+                                    { a: 'Tall', b: 'Short', ex: 'My brother is tall, and I am short.' },
+                                    { a: 'Early', b: 'Late', ex: 'Please come early, not late.' },
+                                    { a: 'Open', b: 'Close', ex: 'Open the window and close the door.' },
+                                    { a: 'Strong', b: 'Weak', ex: 'After exercise, my legs felt weak.' },
+                                ].map((p) => (
+                                    <div key={p.a} style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 16 }}>
+                                        <div style={{ fontSize: '15px', fontWeight: 900, color: '#047857' }}>{p.a} – {p.b}</div>
+                                        <div style={{ marginTop: 8, fontSize: '14px', color: '#065F46', lineHeight: 1.7 }}>
+                                            <strong>Example:</strong> {p.ex}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* 5. Idioms and Phrases */}
+                        <Section>
+                            <SectionTitle emoji="💬">5. Idioms and Phrases</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                <strong>Idioms</strong> and <strong>phrases</strong> are groups of words that have a special meaning.
+                                The meaning is often different from the literal meaning of the words.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 12 }}>
+                                {[
+                                    { idiom: 'Break the ice', meaning: 'to start a conversation', ex: 'The teacher told a funny story to break the ice.' },
+                                    { idiom: 'Hit the books', meaning: 'to study hard', ex: 'I will hit the books before my test.' },
+                                    { idiom: 'Piece of cake', meaning: 'very easy', ex: 'The first question was a piece of cake.' },
+                                    { idiom: 'Once in a blue moon', meaning: 'very rarely', ex: 'We eat pizza once in a blue moon.' },
+                                    { idiom: 'Spill the beans', meaning: 'to tell a secret', ex: 'Don’t spill the beans about the surprise!' },
+                                ].map((i) => (
+                                    <div key={i.idiom} style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 16 }}>
+                                        <div style={{ fontSize: '15px', fontWeight: 900, color: '#92400E' }}>{i.idiom} – {i.meaning}</div>
+                                        <div style={{ marginTop: 8, fontSize: '14px', color: '#78350F', lineHeight: 1.7 }}>
+                                            <strong>Example:</strong> {i.ex}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* 6. Tips */}
+                        <Section>
+                            <SectionTitle emoji="🌱">6. Tips to Improve Vocabulary</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Read regularly:</strong> storybooks, magazines, and school lessons.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Learn one word a day:</strong> write it, learn meaning, and use it.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Use new words in sentences:</strong> speaking and writing helps you remember.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Play word games:</strong> crosswords, word search, scrabble, and spelling games.</li>
+                            </ul>
+                        </Section>
+
+                        {/* 7. Key Points */}
+                        <Section>
+                            <SectionTitle emoji="✅">7. Key Points to Remember</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Vocabulary is the words we know and use.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Reading and listening help us learn new words.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Synonyms have similar meanings.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Antonyms have opposite meanings.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Idioms and phrases have special meanings.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Using new words often makes your vocabulary stronger.</li>
+                            </ul>
+                        </Section>
+                    </>
+                )}
+
+                {/* ═══════════════════════════════════════════════════════════════════════════════════
+                    CLASS 5 ENGLISH - CREATIVE WRITING (LESSON CONTENT ONLY)
+                ═══════════════════════════════════════════════════════════════════════════════════ */}
+                {classId === '5' && chapterId === 'creative-writing' && (
+                    <>
+                        {/* 1. Introduction */}
+                        <Section>
+                            <SectionTitle emoji="✨">1. Introduction to Creative Writing</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                <strong>Creative writing</strong> means writing in a way that shows your <strong>thoughts, ideas, feelings, and imagination</strong>.
+                                It can be a paragraph, a letter, an essay, or a story. Creative writing helps you explain your ideas clearly and also makes
+                                your writing interesting for the reader.
+                            </p>
+                            <div style={{ marginTop: 14, background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 16 }}>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#92400E', lineHeight: 1.9 }}>
+                                    Writing skills are important in school (answers, essays, projects) and in daily life (messages, emails, notes, forms).
+                                    When you write well, people understand you better.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* 2. Paragraph Writing */}
+                        <Section>
+                            <SectionTitle emoji="🧩">2. Paragraph Writing</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                A <strong>paragraph</strong> is a group of sentences about <strong>one main idea</strong>. A good paragraph has:
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Beginning sentence (Topic sentence):</strong> tells what the paragraph is about.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Supporting sentences:</strong> give details, reasons, and examples.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Ending sentence:</strong> completes the idea.</li>
+                            </ul>
+                            <div style={{ marginTop: 14, background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                <p style={{ margin: '0 0 10px', fontSize: '15px', fontWeight: 800, color: '#0F172A' }}>Example Paragraph: My School</p>
+                                <p style={{ margin: 0, fontSize: '15.5px', color: '#334155', lineHeight: 1.9, textAlign: 'justify' }}>
+                                    My school is a happy place where I learn many new things. The teachers explain lessons in a simple way and encourage us to ask questions.
+                                    We have a clean library where I enjoy reading storybooks. During games period, I play with my friends and learn teamwork.
+                                    My school also teaches good manners and discipline. I feel proud to be a student of my school.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* 3. Essay Writing */}
+                        <Section>
+                            <SectionTitle emoji="📝">3. Essay Writing</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                An <strong>essay</strong> is a longer piece of writing on one topic. Most essays have three parts:
+                                <strong> Introduction</strong> (start), <strong>Body</strong> (details), and <strong>Conclusion</strong> (ending).
+                            </p>
+                            <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                <p style={{ margin: '0 0 10px', fontSize: '15px', fontWeight: 800, color: '#1D4ED8' }}>Example Essay (My Favorite Hobby)</p>
+                                <p style={{ margin: 0, fontSize: '15.5px', color: '#1E3A8A', lineHeight: 1.9, textAlign: 'justify' }}>
+                                    My favorite hobby is reading storybooks. I enjoy reading because books take me into different worlds and teach me new ideas.
+                                    Every evening, I read for at least twenty minutes after finishing my homework. I like adventure stories the most because they are exciting.
+                                    Reading also improves my vocabulary and helps me write better sentences. When I learn a new word, I try to use it in my own writing.
+                                    Reading makes me calm and happy, and it is a hobby that I can enjoy anywhere. I believe reading is the best way to learn and have fun at the same time.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* 4. Letter Writing */}
+                        <Section>
+                            <SectionTitle emoji="✉️">4. Letter Writing (Informal Letter)</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                An <strong>informal letter</strong> is a friendly letter written to a friend or family member. A simple format is:
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Sender’s address</strong></li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Date</strong></li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Greeting</strong> (Dear/Hi …)</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Body</strong> (message)</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Closing</strong> (Your friend, Yours lovingly…)</li>
+                            </ul>
+                            <div style={{ marginTop: 14, background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 16, padding: 18 }}>
+                                <p style={{ margin: '0 0 10px', fontSize: '15px', fontWeight: 800, color: '#9A3412' }}>Example Letter (to a friend)</p>
+                                <div style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16, lineHeight: 1.9, color: '#334155' }}>
+                                    <div>12, Lake View Street,</div>
+                                    <div>Chennai – 6000XX</div>
+                                    <div style={{ marginTop: 8 }}>13 March 2026</div>
+                                    <div style={{ marginTop: 12 }}><strong>Dear Riya,</strong></div>
+                                    <div style={{ marginTop: 8 }}>
+                                        How are you? I hope you are doing well. Our school is preparing for the annual day, and I am practicing for a dance performance.
+                                        It is fun but sometimes I feel nervous. Yesterday, our class teacher taught us a new poem, and it was very interesting.
+                                        I wish you were here to enjoy it with me. Please write back and tell me about your school and your hobbies.
+                                    </div>
+                                    <div style={{ marginTop: 12 }}>Your friend,</div>
+                                    <div><strong>Meena</strong></div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* 5. Story Writing */}
+                        <Section>
+                            <SectionTitle emoji="📖">5. Story Writing</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                A good story usually has:
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Characters:</strong> who the story is about</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Setting:</strong> where and when it happens</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Problem:</strong> a challenge</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Solution:</strong> how the problem is solved</li>
+                            </ul>
+                            <div style={{ marginTop: 14, background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                <p style={{ margin: '0 0 10px', fontSize: '15px', fontWeight: 800, color: '#065F46' }}>Example Story: The Lost Pencil</p>
+                                <p style={{ margin: 0, fontSize: '15.5px', color: '#334155', lineHeight: 1.9, textAlign: 'justify' }}>
+                                    On a busy school morning, Aarav could not find his favorite pencil. He searched his bag and desk, but it was not there.
+                                    He felt worried because the class had a drawing activity. Aarav asked his friends, but no one had seen it. Just then,
+                                    he noticed a pencil on the floor near the window. It looked like his, but he was not sure. He picked it up and saw his name written on it.
+                                    Aarav felt relieved. He thanked the class monitor who said, “Always check calmly before you panic.” Aarav learned that staying calm helps us solve problems faster.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* 6. Tips */}
+                        <Section>
+                            <SectionTitle emoji="✅">6. Tips for Better Creative Writing</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Think first:</strong> plan your idea before you start writing.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Use simple sentences:</strong> clear writing is strong writing.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Use describing words:</strong> adjectives make your writing lively.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Check spelling and punctuation:</strong> it makes your writing neat.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Read again:</strong> re-reading helps you improve and correct mistakes.</li>
+                            </ul>
+                        </Section>
+
+                        {/* 7. Key Points */}
+                        <Section>
+                            <SectionTitle emoji="📌">7. Key Points to Remember</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Creative writing helps express ideas and imagination.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>A paragraph has a topic sentence, supporting sentences, and an ending sentence.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>An essay has an introduction, body, and conclusion.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>An informal letter includes address, date, greeting, body, and closing.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>A story needs characters, setting, problem, and solution.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Planning and re-reading help you become a better writer.</li>
+                            </ul>
+                        </Section>
+                    </>
+                )}
+
+                {/* ═══════════════════════════════════════════════════════════════════════════════════
+                    CLASS 5 ENGLISH - POETRY & LITERATURE (LESSON CONTENT ONLY)
+                ═══════════════════════════════════════════════════════════════════════════════════ */}
+                {false && classId === '5' && chapterId === 'poetry' && (
+                    <>
+                        {/* 1. Introduction */}
+                        <Section>
+                            <SectionTitle emoji="📖">1. Introduction to Poetry and Literature</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                <strong>Poetry</strong> is a special kind of writing that uses beautiful and creative language to express
+                                <strong> feelings</strong>, <strong>thoughts</strong>, or <strong>ideas</strong>. Poems can make us feel happy,
+                                calm, excited, or even thoughtful.
+                            </p>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '12px 0 0' }}>
+                                <strong>Literature</strong> is a big word that includes many kinds of writing such as poems, stories, fables,
+                                and short tales. Poems and stories help us use our imagination and learn new ways to speak and write.
+                            </p>
+                            <div style={{ marginTop: 14, background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 16 }}>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155', lineHeight: 1.9 }}>
+                                    Reading poems and stories is enjoyable because they take us to new places, show us different characters,
+                                    and teach us new words. They also improve language skills like vocabulary, pronunciation, and sentence writing.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* 2. What is a Poem */}
+                        <Section>
+                            <SectionTitle emoji="🎵">2. What is a Poem?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                A <strong>poem</strong> is a form of writing that expresses feelings, thoughts, or ideas using creative words.
+                                Poems often look different from stories because they are written in <strong>short lines</strong>.
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Short lines:</strong> Poems are often written in small lines.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Rhythm:</strong> Many poems have a musical beat when read aloud.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Rhyming words:</strong> Some poems use words that sound the same at the end.</li>
+                            </ul>
+                            <div style={{ marginTop: 14, background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                <p style={{ margin: '0 0 10px', fontSize: '15px', fontWeight: 800, color: '#92400E' }}>Example Poem</p>
+                                <div style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: 12, padding: 14, color: '#334155', lineHeight: 1.9 }}>
+                                    <div>The sun wakes up the sleepy sky,</div>
+                                    <div>Birds sing songs as clouds float by.</div>
+                                    <div>Flowers smile in morning light,</div>
+                                    <div>Everything feels fresh and bright.</div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* 3. Understanding meaning */}
+                        <Section>
+                            <SectionTitle emoji="🔍">3. Understanding the Meaning of a Poem</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                To understand a poem, try these steps:
+                            </p>
+                            <ul style={{ margin: '12px 0 0', paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Read slowly:</strong> read each line carefully.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Find the main idea:</strong> ask “What is this poem mostly about?”</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Think about the feeling:</strong> is it happy, calm, excited, or sad?</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Think about the message:</strong> what does the poet want you to notice?</li>
+                            </ul>
+                            <div style={{ marginTop: 14, background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 16 }}>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#065F46', lineHeight: 1.9 }}>
+                                    <strong>Meaning of the poem:</strong> The poem describes a happy morning in nature. It shows the sun, birds, clouds,
+                                    and flowers. The message is that mornings feel fresh and bright, and nature is beautiful.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* 4. Literary devices */}
+                        <Section>
+                            <SectionTitle emoji="🧠">4. Literary Devices in Poems</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                Writers use simple tools called <strong>literary devices</strong> to make poems interesting.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 12 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 16 }}>
+                                    <div style={{ fontSize: '15px', fontWeight: 900, color: '#1D4ED8' }}>Rhyme</div>
+                                    <p style={{ margin: '8px 0 0', fontSize: '14.5px', color: '#1E3A8A', lineHeight: 1.8 }}>
+                                        Rhyme means words that sound the same at the end.  
+                                        Example: <strong>sky</strong> – <strong>by</strong>, <strong>light</strong> – <strong>bright</strong>
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F5F3FF', border: '1px solid #C4B5FD', borderRadius: 16, padding: 16 }}>
+                                    <div style={{ fontSize: '15px', fontWeight: 900, color: '#6D28D9' }}>Alliteration</div>
+                                    <p style={{ margin: '8px 0 0', fontSize: '14.5px', color: '#4C1D95', lineHeight: 1.8 }}>
+                                        Alliteration is repeating the same starting sound.  
+                                        Example: <strong>Silly snakes slide slowly</strong>.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 16 }}>
+                                    <div style={{ fontSize: '15px', fontWeight: 900, color: '#92400E' }}>Simile</div>
+                                    <p style={{ margin: '8px 0 0', fontSize: '14.5px', color: '#78350F', lineHeight: 1.8 }}>
+                                        A simile compares two things using <strong>like</strong> or <strong>as</strong>.  
+                                        Example: The moon is <strong>like</strong> a silver coin.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* 5. Stories */}
+                        <Section>
+                            <SectionTitle emoji="📚">5. Enjoying Stories and Literature</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                Literature also includes <strong>stories, fables, and short tales</strong>. Stories entertain us and often teach
+                                lessons about kindness, honesty, courage, and hard work. The lesson in a story is called a <strong>moral</strong>.
+                            </p>
+                            <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 16, padding: 18 }}>
+                                <p style={{ margin: '0 0 10px', fontSize: '15px', fontWeight: 800, color: '#9A3412' }}>Example Story (100–120 words)</p>
+                                <p style={{ margin: 0, fontSize: '15.5px', color: '#334155', lineHeight: 1.9, textAlign: 'justify' }}>
+                                    Tina found a small wallet near the school gate. She opened it and saw a bus pass and some money inside.
+                                    For a moment, she thought about keeping it, but she remembered her teacher’s words about honesty.
+                                    Tina took the wallet to the office and told the clerk where she found it. Soon, a worried man came searching for it.
+                                    When he got his wallet back, he smiled and thanked Tina. He said, “You did the right thing.”
+                                    Tina felt proud because she chose honesty.
+                                </p>
+                                <p style={{ margin: '10px 0 0', fontSize: '14.5px', color: '#9A3412', fontWeight: 800 }}>
+                                    Moral: Honesty is the best policy.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* 6. Tips */}
+                        <Section>
+                            <SectionTitle emoji="💡">6. Tips for Enjoying Poetry and Literature</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Read poems aloud:</strong> it helps you feel the rhythm and rhyme.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Imagine the pictures:</strong> make a movie in your mind while reading.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Think about feelings:</strong> ask what emotion the poem gives you.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Discuss with others:</strong> talk to friends/teachers about meaning and moral.</li>
+                            </ul>
+                        </Section>
+
+                        {/* 7. Key Points */}
+                        <Section>
+                            <SectionTitle emoji="✅">7. Key Points to Remember</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Poetry expresses feelings and ideas in creative language.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Poems often have short lines, rhythm, and rhyming words.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Read slowly to understand the main idea and message.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Rhyme, alliteration, and simile make poems interesting.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Stories and fables teach morals and values.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Reading aloud and imagining scenes helps you enjoy literature.</li>
+                            </ul>
+                        </Section>
+                    </>
+                )}
+
+                {/* ═══════════════════════════════════════════════════════════════════════════════════
+                    CLASS 5 ENGLISH - PUNCTUATION & SPELLING (LESSON CONTENT ONLY)
+                ═══════════════════════════════════════════════════════════════════════════════════ */}
+                {classId === '5' && chapterId === 'punctuation-spelling' && (
+                    <>
+                        {/* 1. Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🖊️">1. Introduction to Punctuation and Spelling</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                <strong>Punctuation</strong> means using marks like <strong>.</strong> <strong>,</strong> <strong>?</strong> and <strong>!</strong>
+                                to make sentences clear. Punctuation is like traffic signals for reading. It tells the reader when to stop, pause, or ask a question.
+                            </p>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '12px 0 0' }}>
+                                <strong>Spelling</strong> means writing words with the correct letters in the correct order. Correct spelling helps the reader
+                                understand your writing easily. When punctuation and spelling are correct, your writing looks neat and professional.
+                            </p>
+                            <div style={{ marginTop: 14, background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 16 }}>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155', lineHeight: 1.9 }}>
+                                    Example: “Let’s eat, Grandma!” and “Let’s eat Grandma!” have very different meanings.  
+                                    A comma can change the meaning completely.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* 2. Common Punctuation Marks */}
+                        <Section>
+                            <SectionTitle emoji="❗">2. Common Punctuation Marks</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 12 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 16 }}>
+                                    <div style={{ fontSize: '15px', fontWeight: 900, color: '#1D4ED8' }}>Full Stop (.)</div>
+                                    <p style={{ margin: '8px 0 0', fontSize: '14.5px', color: '#1E3A8A', lineHeight: 1.8 }}>
+                                        Used at the end of a sentence.  
+                                        Example: <strong>I like reading books.</strong>
+                                    </p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 16 }}>
+                                    <div style={{ fontSize: '15px', fontWeight: 900, color: '#047857' }}>Comma (,)</div>
+                                    <p style={{ margin: '8px 0 0', fontSize: '14.5px', color: '#065F46', lineHeight: 1.8 }}>
+                                        Used to separate items or ideas in a sentence.  
+                                        Example: <strong>I bought apples, bananas, and oranges.</strong>
+                                    </p>
+                                </div>
+                                <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 16, padding: 16 }}>
+                                    <div style={{ fontSize: '15px', fontWeight: 900, color: '#9A3412' }}>Question Mark (?)</div>
+                                    <p style={{ margin: '8px 0 0', fontSize: '14.5px', color: '#7C2D12', lineHeight: 1.8 }}>
+                                        Used at the end of a question.  
+                                        Example: <strong>Where are you going?</strong>
+                                    </p>
+                                </div>
+                                <div style={{ background: '#FDF2F8', border: '1px solid #FBCFE8', borderRadius: 16, padding: 16 }}>
+                                    <div style={{ fontSize: '15px', fontWeight: 900, color: '#9D174D' }}>Exclamation Mark (!)</div>
+                                    <p style={{ margin: '8px 0 0', fontSize: '14.5px', color: '#831843', lineHeight: 1.8 }}>
+                                        Used to show strong feelings like surprise or excitement.  
+                                        Example: <strong>What a beautiful day!</strong>
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F5F3FF', border: '1px solid #C4B5FD', borderRadius: 16, padding: 16 }}>
+                                    <div style={{ fontSize: '15px', fontWeight: 900, color: '#6D28D9' }}>Capital Letters</div>
+                                    <p style={{ margin: '8px 0 0', fontSize: '14.5px', color: '#4C1D95', lineHeight: 1.8 }}>
+                                        Used at the beginning of sentences and for proper nouns (names/places).  
+                                        Example: <strong>Ravi lives in Chennai.</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* 3. Importance of Correct Spelling */}
+                        <Section>
+                            <SectionTitle emoji="🔤">3. Importance of Correct Spelling</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                Correct spelling helps readers understand your writing easily. If a word is spelled wrongly, the reader may feel confused.
+                                Sometimes spelling mistakes can even change the meaning of a sentence.
+                            </p>
+                            <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 16 }}>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#92400E', lineHeight: 1.9 }}>
+                                    Example: “I love <strong>dessert</strong>.” (sweet food)  
+                                    vs “I live in the <strong>desert</strong>.” (dry place)
+                                </p>
+                            </div>
+                            <div style={{ marginTop: 14, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 12 }}>
+                                {[
+                                    { wrong: 'Frend', right: 'Friend' },
+                                    { wrong: 'Becuse', right: 'Because' },
+                                    { wrong: 'Recieve', right: 'Receive' },
+                                    { wrong: 'Neccessary', right: 'Necessary' },
+                                    { wrong: 'Beautifull', right: 'Beautiful' },
+                                ].map((w) => (
+                                    <div key={w.wrong} style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: 16, padding: 14 }}>
+                                        <div style={{ fontSize: '14px', color: '#64748B' }}><strong>Wrong:</strong> {w.wrong}</div>
+                                        <div style={{ marginTop: 6, fontSize: '15px', color: '#0F172A', fontWeight: 900 }}><strong>Correct:</strong> {w.right}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* 4. Rules and Tips */}
+                        <Section>
+                            <SectionTitle emoji="💡">4. Spelling Rules and Tips</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Read regularly:</strong> reading helps you see correct spelling again and again.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Learn new words daily:</strong> one new word every day makes a big difference.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Break long words:</strong> for example, <em>un + happy</em> = unhappy.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Use a dictionary:</strong> check spelling when you are unsure.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Write words multiple times:</strong> practice helps you remember.</li>
+                            </ul>
+                        </Section>
+
+                        {/* 5. Practice Exercise */}
+                        <Section>
+                            <SectionTitle emoji="🧩">5. Practice Exercise</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                Correct the punctuation or spelling in these sentences:
+                            </p>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                                {[
+                                    { wrong: 'where are you going', right: 'Where are you going?' },
+                                    { wrong: 'i bought apples bananas and oranges.', right: 'I bought apples, bananas, and oranges.' },
+                                    { wrong: 'what a wonderfull day', right: 'What a wonderful day!' },
+                                    { wrong: 'ravi lives in chennai', right: 'Ravi lives in Chennai.' },
+                                    { wrong: 'Please bring youre notebook tomorrow', right: 'Please bring your notebook tomorrow.' },
+                                ].map((s, idx) => (
+                                    <div key={idx} style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: 16, padding: 14 }}>
+                                        <div style={{ fontSize: '14px', fontWeight: 900, color: '#0F172A' }}>Sentence {idx + 1}</div>
+                                        <div style={{ marginTop: 6, fontSize: '15px', color: '#64748B' }}><strong>Fix:</strong> {s.wrong}</div>
+                                        <div style={{ marginTop: 8, fontSize: '15px', color: '#0F172A' }}><strong>Correct:</strong> {s.right}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* 6. Key Points */}
+                        <Section>
+                            <SectionTitle emoji="✅">6. Key Points to Remember</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Punctuation makes sentences clear and easy to read.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Use a full stop (.) at the end of a sentence.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Use a comma (,) to separate items in a list.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Use a question mark (?) for questions and an exclamation mark (!) for strong feelings.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Use capital letters for the start of sentences and names/places.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Correct spelling helps the reader understand your meaning.</li>
+                            </ul>
                         </Section>
                     </>
                 )}
