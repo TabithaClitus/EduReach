@@ -144,16 +144,64 @@ const class4Subjects = [
         accentColor: '#FFA000',
         buttonGradient: 'linear-gradient(135deg, #FFB300 0%, #FF8F00 100%)',
     },
+];
+
+// Class 5 subjects (English, Mathematics, Science, Social Studies, Computer Basics)
+const class5Subjects = [
     {
-        id: 'gk',
-        name: 'General Knowledge',
-        description: 'Discover facts about science, technology, sports, famous personalities, and current events.',
-        icon: '💡',
-        emoji: '💡',
-        bgColor: '#F3E5F5',
-        iconBg: '#E1BEE7',
-        accentColor: '#9C27B0',
-        buttonGradient: 'linear-gradient(135deg, #AB47BC 0%, #8E24AA 100%)',
+        id: 'english',
+        name: 'English',
+        description: 'Develop advanced reading comprehension, grammar, vocabulary, and creative writing through engaging activities.',
+        icon: '📖',
+        emoji: '📚',
+        bgColor: '#E3F2FD',
+        iconBg: '#BBDEFB',
+        accentColor: '#2196F3',
+        buttonGradient: 'linear-gradient(135deg, #42A5F5 0%, #1E88E5 100%)',
+    },
+    {
+        id: 'maths',
+        name: 'Mathematics',
+        description: 'Master fractions, decimals, geometry, data handling, and problem-solving with real-world applications.',
+        icon: '➕✖️',
+        emoji: '🔢',
+        bgColor: '#FFF3E0',
+        iconBg: '#FFE0B2',
+        accentColor: '#FF9800',
+        buttonGradient: 'linear-gradient(135deg, #FF9800 0%, #F57C00 100%)',
+    },
+    {
+        id: 'science',
+        name: 'Science',
+        description: 'Explore the wonders of physics, chemistry, biology, and the environment through experiments and discovery.',
+        icon: '🔬',
+        emoji: '🔬',
+        bgColor: '#E8F5E9',
+        iconBg: '#C8E6C9',
+        accentColor: '#4CAF50',
+        buttonGradient: 'linear-gradient(135deg, #66BB6A 0%, #43A047 100%)',
+    },
+    {
+        id: 'social',
+        name: 'Social Studies',
+        description: 'Learn about history, geography, civics, and cultures with stories, maps, and real-life connections.',
+        icon: '🗺️',
+        emoji: '🌍',
+        bgColor: '#FFF8E1',
+        iconBg: '#FFECB3',
+        accentColor: '#FFA000',
+        buttonGradient: 'linear-gradient(135deg, #FFB300 0%, #FF8F00 100%)',
+    },
+    {
+        id: 'computers',
+        name: 'Computer Basics',
+        description: 'Learn about computers, the internet, typing skills, and basic coding concepts in a fun and interactive way.',
+        icon: '💻',
+        emoji: '💻',
+        bgColor: '#EDE7F6',
+        iconBg: '#D1C4E9',
+        accentColor: '#673AB7',
+        buttonGradient: 'linear-gradient(135deg, #7E57C2 0%, #5E35B1 100%)',
     },
 ];
 
@@ -161,6 +209,7 @@ const class4Subjects = [
 const getSubjectsForClass = (classId) => {
     if (classId === '3') return class3Subjects;
     if (classId === '4') return class4Subjects;
+    if (classId === '5') return class5Subjects;
     return baseSubjects;
 };
 

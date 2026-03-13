@@ -5496,80 +5496,6 @@ const lessonData = {
             'Every job deserves respect'
         ],
         summaryEnd: 'Great job! You are learning about communities and occupations!',
-		nextLesson: { id: 'local-government', title: 'Local Government' }
-    },
-
-    // CLASS 4 – SOCIAL STUDIES – LOCAL GOVERNMENT
-    '4-local-government': {
-        title: 'Local Government',
-        subtitle: 'Discover how local governments work and serve the community.',
-        pdfUrl: '',
-        videos: [
-            { src: 'https://www.youtube.com/embed/FVQhFIF2-tI?si=hULVOa7Ry8tzhEdG', title: 'Village Panchayat', thumb: 'https://img.youtube.com/vi/FVQhFIF2-tI/hqdefault.jpg' },
-            { src: 'https://www.youtube.com/embed/ydjV_EFqYQU?si=newQoCZQ9W7iq7mv', title: 'Municipal Government', thumb: 'https://img.youtube.com/vi/ydjV_EFqYQU/hqdefault.jpg' },
-            { src: 'https://www.youtube.com/embed/xGXAUKH0ay8?si=Qa8WtuxK2omaIQrE', title: 'Local Government Services', thumb: 'https://img.youtube.com/vi/xGXAUKH0ay8/hqdefault.jpg' }
-        ],
-        videoSubtitle: 'Watch these videos to learn about local government, panchayats, and municipal services!',
-        quiz: [
-            {
-                question: 'Local government manages:',
-                options: ['Local areas', 'Whole world', 'Only schools'],
-                correct: 0
-            },
-            {
-                question: 'Village local government is called:',
-                options: ['Panchayat', 'Parliament', 'Court'],
-                correct: 0
-            },
-            {
-                question: 'The leader of a village Panchayat is called:',
-                options: ['Sarpanch', 'President', 'Mayor'],
-                correct: 0
-            },
-            {
-                question: 'Municipalities manage:',
-                options: ['Towns', 'Oceans', 'Mountains'],
-                correct: 0
-            },
-            {
-                question: 'Municipal corporations manage:',
-                options: ['Cities', 'Villages', 'Forests'],
-                correct: 0
-            },
-            {
-                question: 'Local government helps maintain:',
-                options: ['Roads', 'Planets', 'Stars'],
-                correct: 0
-            },
-            {
-                question: 'Which service is provided by local government?',
-                options: ['Garbage collection', 'Flying airplanes', 'Space travel'],
-                correct: 0
-            },
-            {
-                question: 'Local government provides:',
-                options: ['Water supply', 'Mountains', 'Clouds'],
-                correct: 0
-            },
-            {
-                question: 'Citizens can help local government by:',
-                options: ['Keeping surroundings clean', 'Breaking rules', 'Ignoring laws'],
-                correct: 0
-            },
-            {
-                question: 'Local government helps:',
-                options: ['Develop communities', 'Stop development', 'Destroy towns'],
-                correct: 0
-            }
-        ],
-        summary: [
-            'Local government manages villages, towns, and cities',
-            'Panchayats manage villages',
-            'Municipalities and corporations manage towns and cities',
-            'Local governments provide important public services',
-            'Citizens help local governments improve communities'
-        ],
-        summaryEnd: 'Great job! You are learning how local government helps our communities!',
 		nextLesson: { id: 'culture-and-festivals', title: 'Culture and Festivals' }
     },
 
@@ -5644,6 +5570,92 @@ const lessonData = {
         ],
         summaryEnd: "Great job! You are learning about India's culture and festivals!",
         nextLesson: null
+    },
+
+    // ═══════════════════════════════════════════════════════════════════════════════
+    //                          CLASS 5 ENGLISH LESSONS
+    // ═══════════════════════════════════════════════════════════════════════════════
+
+    '5-advanced-grammar': {
+        title: 'Advanced Grammar',
+        subtitle: 'Learn about tenses, active and passive voice, direct and indirect speech, and conjunctions.',
+        videoSubtitle: 'Watch these videos to master grammar concepts like tenses, voice, and speech!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/fo46yFWIJzU?si=-fDoDwBn7D14aaPp', title: 'Grammar – Tenses Explained', thumb: 'https://img.youtube.com/vi/fo46yFWIJzU/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/nsFPDc-TXww?si=8gQXz-09MWZnskh0', title: 'Active and Passive Voice', thumb: 'https://img.youtube.com/vi/nsFPDc-TXww/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/MwQdQI7valM?si=KXPqhjAin942UJGI', title: 'Direct and Indirect Speech', thumb: 'https://img.youtube.com/vi/MwQdQI7valM/hqdefault.jpg' }
+        ],
+        quiz: [
+            {
+                question: 'What is the past tense of "play"?',
+                visual: '📝',
+                options: ['Play', 'Played', 'Playing', 'Plays'],
+                correct: 1
+            },
+            {
+                question: 'Which sentence is in the future tense?',
+                visual: '⏰',
+                options: ['I will go to school tomorrow.', 'I went to school yesterday.', 'I go to school every day.', 'I am going to school.'],
+                correct: 0
+            },
+            {
+                question: 'Choose the sentence in passive voice:',
+                visual: '🔄',
+                options: ['The ball was kicked by the boy.', 'The boy kicked the ball.', 'The boy kicks the ball.', 'The boy is kicking.'],
+                correct: 0
+            },
+            {
+                question: 'Which conjunction fits? "I want to play ___ it is raining."',
+                visual: '🔗',
+                options: ['but', 'and', 'so', 'or'],
+                correct: 0
+            },
+            {
+                question: 'Convert to indirect speech: She said, "I am happy."',
+                visual: '💬',
+                options: ['She said that she was happy.', 'She says she is happy.', 'She said I am happy.', 'She told happy.'],
+                correct: 0
+            },
+            {
+                question: 'Which word is a conjunction?',
+                visual: '🔗',
+                options: ['because', 'running', 'beautiful', 'quickly'],
+                correct: 0
+            },
+            {
+                question: 'Which sentence is in the present tense?',
+                visual: '📖',
+                options: ['She reads a book every day.', 'She read a book yesterday.', 'She will read a book.', 'She was reading.'],
+                correct: 0
+            },
+            {
+                question: 'Change to active voice: "The cake was baked by mother."',
+                visual: '🍰',
+                options: ['Mother baked the cake.', 'The cake baked mother.', 'Mother was baked.', 'The cake is baking.'],
+                correct: 0
+            },
+            {
+                question: 'Which sentence uses "and" correctly?',
+                visual: '✏️',
+                options: ['Tom and Jerry are friends.', 'Tom and runs fast.', 'And the dog barked.', 'She is and happy.'],
+                correct: 0
+            },
+            {
+                question: 'Which is direct speech?',
+                visual: '🗣️',
+                options: ['He said, "I am tired."', 'He said that he was tired.', 'He told me he was tired.', 'He says he is tired.'],
+                correct: 0
+            }
+        ],
+        summary: [
+            'Grammar helps us speak and write correctly.',
+            'Tenses tell us when an action happens – past, present, or future.',
+            'Active voice shows the doer performing the action; passive voice shows the action being done.',
+            'Direct speech uses exact words; indirect speech reports what someone said.',
+            'Conjunctions (and, but, because, or, so) join words and sentences together.'
+        ],
+        summaryEnd: 'Great job! You are mastering advanced grammar skills!',
+        nextLesson: { id: 'reading-comprehension', title: 'Reading Comprehension' }
     }
 };
 
@@ -5705,7 +5717,11 @@ const LessonPage = () => {
         return acc + (answers[key] === lesson.quiz[key].correct ? 1 : 0);
     }, 0);
 
-    const currentLesson = lessonData[`${classId}-${chapterId}`] || lessonData[chapterId];
+    const currentLesson =
+        lessonData[`${classId}-${chapterId}`] ||
+        // Class 5 currently reuses Class 4 lesson content.
+        (classId === '5' ? lessonData[`4-${chapterId}`] : null) ||
+        lessonData[chapterId];
 
     if (!currentLesson) {
         // Fallback for other chapters
@@ -23251,11 +23267,300 @@ const LessonPage = () => {
                 {/* ─────────────────────────────────────────────────────────────────────────
                     CLASS 4 – SOCIAL STUDIES – COMMUNITY AND OCCUPATIONS
                 ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '4' && chapterId === 'community-and-occupations' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="👋">Introduction – Community and Occupations</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                We all live with other people around us. Our family, friends, neighbours, and many others make up our <strong>community</strong>. In every community, people do different <strong>jobs</strong> or <strong>occupations</strong> to help each other.
+                            </p>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Have you ever wondered who grows the food you eat? Or who keeps your neighbourhood clean? Let's learn about communities and the important jobs people do!
+                            </p>
+                            <div style={{ background: '#F3E5F5', borderRadius: '16px', padding: '20px', marginTop: '16px', border: '2px solid #CE93D8' }}>
+                                <p style={{ fontSize: '15px', color: '#7B1FA2', margin: 0 }}>
+                                    💡 <strong>Think about it:</strong> What job does your mother or father do? That is their occupation!
+                                </p>
+                            </div>
+                        </Section>
 
-                // ─────────────────────────────────────────────────────────────────────────
-                //     CLASS 4 – SOCIAL STUDIES – LOCAL GOVERNMENT
-                // ───────────────────────────────────────────────────────────────────────────
-                {chapterId === 'local-government' && (
+                        {/* Section 2: What is a Community? */}
+                        <Section>
+                            <SectionTitle emoji="🏘️">What is a Community?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                A <strong>community</strong> is a group of people who live, work, and play together in the same area. They share things and help each other.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px', marginTop: '20px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #66BB6A', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '48px', marginBottom: '12px' }}>🏡</div>
+                                    <h4 style={{ fontSize: '18px', color: '#2E7D32', margin: '0 0 8px 0', fontWeight: 700 }}>Village</h4>
+                                    <p style={{ fontSize: '14px', color: '#388E3C', margin: 0 }}>A small community with few people</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FFECB3 0%, #FFE082 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #FFD54F', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '48px', marginBottom: '12px' }}>🏘️</div>
+                                    <h4 style={{ fontSize: '18px', color: '#F57F17', margin: '0 0 8px 0', fontWeight: 700 }}>Town</h4>
+                                    <p style={{ fontSize: '14px', color: '#FF8F00', margin: 0 }}>A bigger community with more people</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #BBDEFB 0%, #90CAF9 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #42A5F5', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '48px', marginBottom: '12px' }}>🏙️</div>
+                                    <h4 style={{ fontSize: '18px', color: '#1565C0', margin: '0 0 8px 0', fontWeight: 700 }}>City</h4>
+                                    <p style={{ fontSize: '14px', color: '#1976D2', margin: 0 }}>A large community with many people</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #F8BBD0 0%, #F48FB1 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #EC407A', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '48px', marginBottom: '12px' }}>🏫</div>
+                                    <h4 style={{ fontSize: '18px', color: '#C2185B', margin: '0 0 8px 0', fontWeight: 700 }}>School</h4>
+                                    <p style={{ fontSize: '14px', color: '#D81B60', margin: 0 }}>Students and teachers form a community</p>
+                                </div>
+                            </div>
+                            <div style={{ background: '#E8F5E9', borderRadius: '12px', padding: '16px', marginTop: '16px', border: '1px solid #A5D6A7' }}>
+                                <p style={{ fontSize: '15px', color: '#2E7D32', margin: 0 }}>
+                                    🤝 <strong>Remember:</strong> In a community, people live together, share things, and help each other in many ways!
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: What are Occupations? */}
+                        <Section>
+                            <SectionTitle emoji="💼">What are Occupations?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                An <strong>occupation</strong> is the work or job that a person does to earn money. People do different jobs to take care of their families and help others in the community.
+                            </p>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Some people grow food, some teach children, some keep us safe, and some build houses. Every job is important because it helps the community in some way.
+                            </p>
+                            <div style={{ background: 'linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%)', borderRadius: '16px', padding: '20px', marginTop: '16px', border: '2px solid #FFD54F' }}>
+                                <p style={{ fontSize: '15px', color: '#F57F17', margin: 0 }}>
+                                    🌟 <strong>Fun Fact:</strong> There are hundreds of different occupations in the world! Can you name five jobs?
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Types of Occupations */}
+                        <Section>
+                            <SectionTitle emoji="👷">Types of Occupations in a Community</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Let's learn about some common occupations and why they are important:
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px', marginTop: '20px' }}>
+                                {/* Farmers */}
+                                <div style={{ background: 'linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #81C784' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px', textAlign: 'center' }}>👨‍🌾</div>
+                                    <h4 style={{ fontSize: '16px', color: '#2E7D32', fontWeight: 700, margin: '0 0 8px 0', textAlign: 'center' }}>Farmers</h4>
+                                    <p style={{ fontSize: '14px', color: '#388E3C', margin: '0 0 8px 0' }}>Farmers grow crops like rice, wheat, and vegetables. They also raise animals.</p>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '8px', padding: '10px', border: '1px solid #A5D6A7' }}>
+                                        <p style={{ fontSize: '13px', color: '#2E7D32', margin: 0 }}>⭐ <strong>Why important:</strong> They provide food for everyone to eat.</p>
+                                    </div>
+                                </div>
+
+                                {/* Teachers */}
+                                <div style={{ background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #64B5F6' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px', textAlign: 'center' }}>👩‍🏫</div>
+                                    <h4 style={{ fontSize: '16px', color: '#1565C0', fontWeight: 700, margin: '0 0 8px 0', textAlign: 'center' }}>Teachers</h4>
+                                    <p style={{ fontSize: '14px', color: '#1976D2', margin: '0 0 8px 0' }}>Teachers teach students in schools. They help children learn to read, write, and think.</p>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '8px', padding: '10px', border: '1px solid #90CAF9' }}>
+                                        <p style={{ fontSize: '13px', color: '#1565C0', margin: 0 }}>⭐ <strong>Why important:</strong> They help children grow wise and smart.</p>
+                                    </div>
+                                </div>
+
+                                {/* Doctors */}
+                                <div style={{ background: 'linear-gradient(135deg, #FCE4EC 0%, #F8BBD0 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #F06292' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px', textAlign: 'center' }}>👨‍⚕️</div>
+                                    <h4 style={{ fontSize: '16px', color: '#C2185B', fontWeight: 700, margin: '0 0 8px 0', textAlign: 'center' }}>Doctors</h4>
+                                    <p style={{ fontSize: '14px', color: '#D81B60', margin: '0 0 8px 0' }}>Doctors check patients and treat them when they are sick. They work in hospitals and clinics.</p>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '8px', padding: '10px', border: '1px solid #F48FB1' }}>
+                                        <p style={{ fontSize: '13px', color: '#C2185B', margin: 0 }}>⭐ <strong>Why important:</strong> They keep people healthy and save lives.</p>
+                                    </div>
+                                </div>
+
+                                {/* Police Officers */}
+                                <div style={{ background: 'linear-gradient(135deg, #E1BEE7 0%, #CE93D8 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #AB47BC' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px', textAlign: 'center' }}>👮</div>
+                                    <h4 style={{ fontSize: '16px', color: '#7B1FA2', fontWeight: 700, margin: '0 0 8px 0', textAlign: 'center' }}>Police Officers</h4>
+                                    <p style={{ fontSize: '14px', color: '#8E24AA', margin: '0 0 8px 0' }}>Police officers keep the community safe. They catch bad people and maintain law and order.</p>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '8px', padding: '10px', border: '1px solid #CE93D8' }}>
+                                        <p style={{ fontSize: '13px', color: '#7B1FA2', margin: 0 }}>⭐ <strong>Why important:</strong> They protect people and keep the peace.</p>
+                                    </div>
+                                </div>
+
+                                {/* Shopkeepers */}
+                                <div style={{ background: 'linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #FFB74D' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px', textAlign: 'center' }}>🛒</div>
+                                    <h4 style={{ fontSize: '16px', color: '#E65100', fontWeight: 700, margin: '0 0 8px 0', textAlign: 'center' }}>Shopkeepers</h4>
+                                    <p style={{ fontSize: '14px', color: '#F57C00', margin: '0 0 8px 0' }}>Shopkeepers sell things like food, clothes, books, and other items in their shops.</p>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '8px', padding: '10px', border: '1px solid #FFCC80' }}>
+                                        <p style={{ fontSize: '13px', color: '#E65100', margin: 0 }}>⭐ <strong>Why important:</strong> They make daily items easy to buy for everyone.</p>
+                                    </div>
+                                </div>
+
+                                {/* Drivers */}
+                                <div style={{ background: 'linear-gradient(135deg, #ECEFF1 0%, #CFD8DC 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #90A4AE' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px', textAlign: 'center' }}>🚌</div>
+                                    <h4 style={{ fontSize: '16px', color: '#455A64', fontWeight: 700, margin: '0 0 8px 0', textAlign: 'center' }}>Drivers</h4>
+                                    <p style={{ fontSize: '14px', color: '#607D8B', margin: '0 0 8px 0' }}>Drivers drive buses, auto-rickshaws, trucks, and taxis. They take people and goods from one place to another.</p>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '8px', padding: '10px', border: '1px solid #B0BEC5' }}>
+                                        <p style={{ fontSize: '13px', color: '#455A64', margin: 0 }}>⭐ <strong>Why important:</strong> They help people travel and move goods around.</p>
+                                    </div>
+                                </div>
+
+                                {/* Construction Workers */}
+                                <div style={{ background: 'linear-gradient(135deg, #D7CCC8 0%, #BCAAA4 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #A1887F' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px', textAlign: 'center' }}>🏗️</div>
+                                    <h4 style={{ fontSize: '16px', color: '#5D4037', fontWeight: 700, margin: '0 0 8px 0', textAlign: 'center' }}>Construction Workers</h4>
+                                    <p style={{ fontSize: '14px', color: '#6D4C41', margin: '0 0 8px 0' }}>Construction workers build houses, schools, bridges, and roads. They use bricks, cement, and tools.</p>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '8px', padding: '10px', border: '1px solid #BCAAA4' }}>
+                                        <p style={{ fontSize: '13px', color: '#5D4037', margin: 0 }}>⭐ <strong>Why important:</strong> They build the places where we live, learn, and work.</p>
+                                    </div>
+                                </div>
+
+                                {/* Sanitation Workers */}
+                                <div style={{ background: 'linear-gradient(135deg, #B2DFDB 0%, #80CBC4 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #4DB6AC' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px', textAlign: 'center' }}>🧹</div>
+                                    <h4 style={{ fontSize: '16px', color: '#00695C', fontWeight: 700, margin: '0 0 8px 0', textAlign: 'center' }}>Sanitation Workers</h4>
+                                    <p style={{ fontSize: '14px', color: '#00796B', margin: '0 0 8px 0' }}>Sanitation workers clean our streets, collect garbage, and keep our surroundings tidy.</p>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '8px', padding: '10px', border: '1px solid #80CBC4' }}>
+                                        <p style={{ fontSize: '13px', color: '#00695C', margin: 0 }}>⭐ <strong>Why important:</strong> They keep our community clean and healthy.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: How Occupations Help the Community */}
+                        <Section>
+                            <SectionTitle emoji="🤝">How Occupations Help the Community</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Every job in a community is connected to other jobs. People with different occupations depend on each other. No single job can work alone!
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px', marginTop: '20px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #81C784' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>👨‍🌾</span>
+                                        <span style={{ fontSize: '20px' }}>→</span>
+                                        <span style={{ fontSize: '28px' }}>🛒</span>
+                                    </div>
+                                    <p style={{ fontSize: '14px', color: '#2E7D32', margin: 0 }}>Farmers grow food, and shopkeepers sell it to people.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #64B5F6' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>🏗️</span>
+                                        <span style={{ fontSize: '20px' }}>→</span>
+                                        <span style={{ fontSize: '28px' }}>🏫</span>
+                                    </div>
+                                    <p style={{ fontSize: '14px', color: '#1565C0', margin: 0 }}>Construction workers build schools where teachers can teach.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FCE4EC 0%, #F8BBD0 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #F06292' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>👨‍⚕️</span>
+                                        <span style={{ fontSize: '20px' }}>→</span>
+                                        <span style={{ fontSize: '28px' }}>😊</span>
+                                    </div>
+                                    <p style={{ fontSize: '14px', color: '#C2185B', margin: 0 }}>Doctors treat the sick so everyone can stay healthy and work.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #E1BEE7 0%, #CE93D8 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #AB47BC' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>🧹</span>
+                                        <span style={{ fontSize: '20px' }}>→</span>
+                                        <span style={{ fontSize: '28px' }}>🌿</span>
+                                    </div>
+                                    <p style={{ fontSize: '14px', color: '#7B1FA2', margin: 0 }}>Sanitation workers keep streets clean so people stay healthy.</p>
+                                </div>
+                            </div>
+                            <div style={{ background: 'linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%)', borderRadius: '16px', padding: '20px', textAlign: 'center', marginTop: '20px', border: '2px solid #FFD54F' }}>
+                                <p style={{ fontSize: '17px', color: '#F57F17', fontWeight: 600, margin: 0 }}>
+                                    ⭐ Every job is valuable. No job is big or small. All occupations help the community grow!
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Example Scenario */}
+                        <Section>
+                            <SectionTitle emoji="🏡">A Day in Sunflower Village</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Let's imagine a small village called <strong>Sunflower Village</strong> and see how different people work together:
+                            </p>
+                            <div style={{ background: 'linear-gradient(135deg, #FFFDE7 0%, #FFF9C4 100%)', borderRadius: '16px', padding: '24px', marginTop: '20px', border: '2px solid #FFF176' }}>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>🌅</span>
+                                        <p style={{ fontSize: '15px', color: '#F57F17', margin: 0, lineHeight: 1.7 }}>
+                                            Early in the morning, <strong>Ramu the farmer</strong> wakes up and goes to his field to water his crops.
+                                        </p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>🏫</span>
+                                        <p style={{ fontSize: '15px', color: '#F57F17', margin: 0, lineHeight: 1.7 }}>
+                                            <strong>Meena the teacher</strong> walks to the village school. She teaches children how to read and count.
+                                        </p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>🏥</span>
+                                        <p style={{ fontSize: '15px', color: '#F57F17', margin: 0, lineHeight: 1.7 }}>
+                                            <strong>Dr. Sharma</strong> opens the village clinic. He checks sick people and gives them medicine.
+                                        </p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>🛒</span>
+                                        <p style={{ fontSize: '15px', color: '#F57F17', margin: 0, lineHeight: 1.7 }}>
+                                            <strong>Lakshmi the shopkeeper</strong> opens her shop. She sells vegetables that Ramu grew on his farm.
+                                        </p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>🧹</span>
+                                        <p style={{ fontSize: '15px', color: '#F57F17', margin: 0, lineHeight: 1.7 }}>
+                                            <strong>Kumar the sanitation worker</strong> sweeps the roads and collects garbage to keep the village clean.
+                                        </p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>👮</span>
+                                        <p style={{ fontSize: '15px', color: '#F57F17', margin: 0, lineHeight: 1.7 }}>
+                                            <strong>Constable Suresh</strong> patrols the village and makes sure everyone is safe.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style={{ background: '#E8F5E9', borderRadius: '12px', padding: '16px', marginTop: '16px', border: '1px solid #A5D6A7' }}>
+                                <p style={{ fontSize: '15px', color: '#2E7D32', margin: 0 }}>
+                                    🌻 <strong>See?</strong> Everyone in Sunflower Village has a special job. Together, they make the village a happy and safe place to live!
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Key Points to Remember */}
+                        <Section>
+                            <SectionTitle emoji="📝">Key Points to Remember</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '16px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)', borderRadius: '12px', padding: '16px', border: '1px solid #64B5F6', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>✅</span>
+                                    <p style={{ fontSize: '15px', color: '#1565C0', margin: 0, fontWeight: 600 }}>A community is a group of people who live, work, and help each other.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)', borderRadius: '12px', padding: '16px', border: '1px solid #81C784', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>✅</span>
+                                    <p style={{ fontSize: '15px', color: '#2E7D32', margin: 0, fontWeight: 600 }}>An occupation is the work a person does to earn money and help society.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%)', borderRadius: '12px', padding: '16px', border: '1px solid #FFB74D', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>✅</span>
+                                    <p style={{ fontSize: '15px', color: '#E65100', margin: 0, fontWeight: 600 }}>Farmers, teachers, doctors, police, shopkeepers, drivers, builders, and cleaners are all important workers.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FCE4EC 0%, #F8BBD0 100%)', borderRadius: '12px', padding: '16px', border: '1px solid #F06292', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>✅</span>
+                                    <p style={{ fontSize: '15px', color: '#C2185B', margin: 0, fontWeight: 600 }}>People with different jobs depend on each other to live well.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #E1BEE7 0%, #CE93D8 100%)', borderRadius: '12px', padding: '16px', border: '1px solid #AB47BC', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>✅</span>
+                                    <p style={{ fontSize: '15px', color: '#7B1FA2', margin: 0, fontWeight: 600 }}>No job is big or small – every occupation is valuable and needed.</p>
+                                </div>
+                            </div>
+                            <div style={{ background: 'linear-gradient(135deg, #7B1FA2 0%, #9C27B0 100%)', borderRadius: '16px', padding: '20px', textAlign: 'center', marginTop: '20px' }}>
+                                <p style={{ fontSize: '17px', color: '#FFFFFF', fontWeight: 600, margin: 0 }}>
+                                    👷 Communities are strong when everyone does their job with love and care!
+                                </p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 4 – SOCIAL STUDIES – LOCAL GOVERNMENT */}
+                {false && chapterId === 'local-government' && (
                     <>
                         {/* 1. Lesson Content Section */}
                         <Section id="lesson-content">
@@ -23367,133 +23672,324 @@ const LessonPage = () => {
                     </>
                 )}
 
-                // ─────────────────────────────────────────────────────────────────────────
-                //     CLASS 4 – SOCIAL STUDIES – CULTURE AND FESTIVALS
-                // ───────────────────────────────────────────────────────────────────────────
+                {/* CLASS 4 – SOCIAL STUDIES – CULTURE AND FESTIVALS */}
                 {classId === '4' && chapterId === 'culture-and-festivals' && (
                     <>
-                        {/* Sidebar Navigation */}
-                        <nav style={{ position: 'sticky', top: 100, left: 0, alignSelf: 'flex-start', marginBottom: 32, zIndex: 2 }}>
-                            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 16 }}>
-                                <li><a href="#lesson-content" style={{ color: '#D97706', fontWeight: 600, fontSize: 16, textDecoration: 'none' }}>Lesson Content</a></li>
-                                <li><a href="#videos" style={{ color: '#D97706', fontWeight: 600, fontSize: 16, textDecoration: 'none' }}>Videos</a></li>
-                                <li><a href="#quiz" style={{ color: '#D97706', fontWeight: 600, fontSize: 16, textDecoration: 'none' }}>Quiz</a></li>
-                            </ul>
-                        </nav>
-
-                        {/* 1. Lesson Content Section */}
+                        {/* Section 1: Introduction */}
                         <Section id="lesson-content">
+                            <SectionTitle emoji="🌍">Introduction – Culture and Festivals</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                India is a beautiful country with many different people. Each group of people has its own <strong>culture</strong>. They speak different languages, eat different foods, and wear different clothes.
+                            </p>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                People also celebrate special days called <strong>festivals</strong>. Festivals are happy occasions when families and friends come together with joy.
+                            </p>
+                            <div style={{ background: 'linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%)', borderRadius: '16px', padding: '20px', marginTop: '16px', border: '2px solid #FFD54F' }}>
+                                <p style={{ fontSize: '15px', color: '#F57F17', margin: 0 }}>
+                                    🌟 <strong>Did you know?</strong> India is called the "land of festivals" because there are so many celebrations throughout the year! Our different cultures and festivals make our country special and diverse.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: What is Culture? */}
+                        <Section>
                             <SectionTitle emoji="🎨">What is Culture?</SectionTitle>
                             <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
-                                Culture is the <strong>way of life of people in a society</strong>.<br /><br />
-                                It includes:
+                                <strong>Culture</strong> is the way of life of a group of people. It includes the things they do every day, the way they talk, the food they cook, and the clothes they wear.
                             </p>
-                            <ul style={{ fontSize: '15px', color: '#D97706', marginLeft: 24, marginBottom: 16 }}>
-                                <li>Language</li>
-                                <li>Food</li>
-                                <li>Clothing</li>
-                                <li>Music</li>
-                                <li>Dance</li>
-                                <li>Traditions</li>
-                            </ul>
-                            <div style={{ background: '#FEF3C7', borderRadius: '12px', padding: '16px', border: '1px solid #FBBF24', marginBottom: 12 }}>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Culture is passed from parents to children. It makes each community unique and special.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '16px', marginTop: '20px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #64B5F6', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px' }}>🗣️</div>
+                                    <p style={{ fontSize: '14px', color: '#1565C0', fontWeight: 700, margin: '0 0 4px 0' }}>Language</p>
+                                    <p style={{ fontSize: '12px', color: '#1976D2', margin: 0 }}>Hindi, Tamil, Telugu, Bengali…</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #FFB74D', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px' }}>🍛</div>
+                                    <p style={{ fontSize: '14px', color: '#E65100', fontWeight: 700, margin: '0 0 4px 0' }}>Food</p>
+                                    <p style={{ fontSize: '12px', color: '#F57C00', margin: 0 }}>Dosa, Roti, Biryani, Momos…</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FCE4EC 0%, #F8BBD0 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #F06292', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px' }}>👗</div>
+                                    <p style={{ fontSize: '14px', color: '#C2185B', fontWeight: 700, margin: '0 0 4px 0' }}>Clothing</p>
+                                    <p style={{ fontSize: '12px', color: '#D81B60', margin: 0 }}>Saree, Kurta, Lungi, Sherwani…</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #E1BEE7 0%, #CE93D8 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #AB47BC', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px' }}>🎵</div>
+                                    <p style={{ fontSize: '14px', color: '#7B1FA2', fontWeight: 700, margin: '0 0 4px 0' }}>Music & Dance</p>
+                                    <p style={{ fontSize: '12px', color: '#8E24AA', margin: 0 }}>Bharatanatyam, Bhangra, Kathak…</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #66BB6A', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px' }}>🪔</div>
+                                    <p style={{ fontSize: '14px', color: '#2E7D32', fontWeight: 700, margin: '0 0 4px 0' }}>Traditions</p>
+                                    <p style={{ fontSize: '12px', color: '#388E3C', margin: 0 }}>Customs passed down for years</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FFECB3 0%, #FFE082 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #FFD54F', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px' }}>🤝</div>
+                                    <p style={{ fontSize: '14px', color: '#F57F17', fontWeight: 700, margin: '0 0 4px 0' }}>Customs</p>
+                                    <p style={{ fontSize: '12px', color: '#FF8F00', margin: 0 }}>Greetings, rituals, and habits</p>
+                                </div>
+                            </div>
+                            <div style={{ background: '#FEF3C7', borderRadius: '12px', padding: '16px', marginTop: '16px', border: '1px solid #FBBF24' }}>
                                 <p style={{ fontSize: '15px', color: '#B45309', margin: 0 }}>
-                                    🪔 Culture reflects the identity of a community or country.
+                                    💡 <strong>Example:</strong> In South India, people eat rice and sambar. In North India, people eat roti and dal. Both are part of Indian culture!
                                 </p>
                             </div>
                         </Section>
 
-                        {/* 2. Cultural Diversity in India */}
+                        {/* Section 3: What are Festivals? */}
                         <Section>
-                            <SectionTitle emoji="🤝">Unity in Diversity</SectionTitle>
+                            <SectionTitle emoji="🎊">What are Festivals?</SectionTitle>
                             <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
-                                India is known for its <strong>unity in diversity</strong>.<br /><br />
-                                People from different regions follow different traditions, languages, and customs.
+                                <strong>Festivals</strong> are special days when people celebrate with happiness and joy. They are an important part of every culture.
                             </p>
-                            <ul style={{ fontSize: '15px', color: '#D97706', marginLeft: 24, marginBottom: 16 }}>
-                                <li>Different traditional dresses</li>
-                                <li>Different foods</li>
-                                <li>Different languages</li>
-                            </ul>
-                            <div style={{ background: '#FDE68A', borderRadius: '12px', padding: '16px', border: '1px solid #FBBF24', marginBottom: 12 }}>
-                                <p style={{ fontSize: '15px', color: '#B45309', margin: 0 }}>
-                                    🇮🇳 Despite these differences, people in India live together peacefully.
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                People celebrate festivals for many reasons:
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginTop: '20px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #FFECB3 0%, #FFE082 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #FFD54F', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>🙏</div>
+                                    <h4 style={{ fontSize: '15px', color: '#F57F17', fontWeight: 700, margin: '0 0 6px 0' }}>Religious Reasons</h4>
+                                    <p style={{ fontSize: '13px', color: '#FF8F00', margin: 0 }}>To worship God and follow religious teachings</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #81C784', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>🌾</div>
+                                    <h4 style={{ fontSize: '15px', color: '#2E7D32', fontWeight: 700, margin: '0 0 6px 0' }}>Traditions</h4>
+                                    <p style={{ fontSize: '13px', color: '#388E3C', margin: 0 }}>To follow customs passed down from elders</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FCE4EC 0%, #F8BBD0 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #F06292', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>😊</div>
+                                    <h4 style={{ fontSize: '15px', color: '#C2185B', fontWeight: 700, margin: '0 0 6px 0' }}>Happiness</h4>
+                                    <p style={{ fontSize: '13px', color: '#D81B60', margin: 0 }}>To spend happy times with family and friends</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #64B5F6', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>📜</div>
+                                    <h4 style={{ fontSize: '15px', color: '#1565C0', fontWeight: 700, margin: '0 0 6px 0' }}>Remembering Events</h4>
+                                    <p style={{ fontSize: '13px', color: '#1976D2', margin: 0 }}>To remember important events from history</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Major Festivals Celebrated in India */}
+                        <Section>
+                            <SectionTitle emoji="🎉">Major Festivals Celebrated in India</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                India celebrates many beautiful festivals. Let's learn about some of the most popular ones:
+                            </p>
+
+                            {/* Diwali */}
+                            <div style={{ background: 'linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%)', borderRadius: '16px', padding: '24px', marginTop: '20px', border: '2px solid #FFD54F' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                                    <div style={{ fontSize: '40px' }}>🪔</div>
+                                    <h4 style={{ fontSize: '20px', color: '#F57F17', fontWeight: 700, margin: 0 }}>Diwali – Festival of Lights</h4>
+                                </div>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px' }}>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '12px', padding: '14px', border: '1px solid #FFE082' }}>
+                                        <p style={{ fontSize: '13px', color: '#E65100', margin: 0 }}><strong>📅 When:</strong> October or November</p>
+                                    </div>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '12px', padding: '14px', border: '1px solid #FFE082' }}>
+                                        <p style={{ fontSize: '13px', color: '#E65100', margin: 0 }}><strong>❓ Why:</strong> To celebrate the victory of light over darkness and good over evil. It marks the return of Lord Rama to Ayodhya.</p>
+                                    </div>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '12px', padding: '14px', border: '1px solid #FFE082' }}>
+                                        <p style={{ fontSize: '13px', color: '#E65100', margin: 0 }}><strong>🎆 How:</strong> People light diyas and candles, burst crackers, share sweets, and decorate their homes with rangoli.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Pongal */}
+                            <div style={{ background: 'linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)', borderRadius: '16px', padding: '24px', marginTop: '16px', border: '2px solid #81C784' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                                    <div style={{ fontSize: '40px' }}>🌾</div>
+                                    <h4 style={{ fontSize: '20px', color: '#2E7D32', fontWeight: 700, margin: 0 }}>Pongal – Harvest Festival</h4>
+                                </div>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px' }}>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '12px', padding: '14px', border: '1px solid #A5D6A7' }}>
+                                        <p style={{ fontSize: '13px', color: '#2E7D32', margin: 0 }}><strong>📅 When:</strong> January (usually 14th–17th)</p>
+                                    </div>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '12px', padding: '14px', border: '1px solid #A5D6A7' }}>
+                                        <p style={{ fontSize: '13px', color: '#2E7D32', margin: 0 }}><strong>❓ Why:</strong> To thank the Sun God and nature for a good harvest. Farmers celebrate the new crop.</p>
+                                    </div>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '12px', padding: '14px', border: '1px solid #A5D6A7' }}>
+                                        <p style={{ fontSize: '13px', color: '#2E7D32', margin: 0 }}><strong>🍚 How:</strong> People cook sweet rice (Pongal) in new pots, decorate cows, draw kolams, and thank farmers.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Eid */}
+                            <div style={{ background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)', borderRadius: '16px', padding: '24px', marginTop: '16px', border: '2px solid #64B5F6' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                                    <div style={{ fontSize: '40px' }}>🌙</div>
+                                    <h4 style={{ fontSize: '20px', color: '#1565C0', fontWeight: 700, margin: 0 }}>Eid – Festival of Joy</h4>
+                                </div>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px' }}>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '12px', padding: '14px', border: '1px solid #90CAF9' }}>
+                                        <p style={{ fontSize: '13px', color: '#1565C0', margin: 0 }}><strong>📅 When:</strong> After the holy month of Ramadan (date changes every year)</p>
+                                    </div>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '12px', padding: '14px', border: '1px solid #90CAF9' }}>
+                                        <p style={{ fontSize: '13px', color: '#1565C0', margin: 0 }}><strong>❓ Why:</strong> To celebrate the end of fasting during Ramadan. It is a time of thanks and prayer.</p>
+                                    </div>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '12px', padding: '14px', border: '1px solid #90CAF9' }}>
+                                        <p style={{ fontSize: '13px', color: '#1565C0', margin: 0 }}><strong>🕌 How:</strong> People offer prayers, wear new clothes, share delicious food like biryani and sevaiyan, and greet each other with "Eid Mubarak."</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Christmas */}
+                            <div style={{ background: 'linear-gradient(135deg, #FFCDD2 0%, #EF9A9A 100%)', borderRadius: '16px', padding: '24px', marginTop: '16px', border: '2px solid #EF5350' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                                    <div style={{ fontSize: '40px' }}>🎄</div>
+                                    <h4 style={{ fontSize: '20px', color: '#C62828', fontWeight: 700, margin: 0 }}>Christmas – Birthday of Jesus Christ</h4>
+                                </div>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px' }}>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '12px', padding: '14px', border: '1px solid #EF9A9A' }}>
+                                        <p style={{ fontSize: '13px', color: '#C62828', margin: 0 }}><strong>📅 When:</strong> 25th December, every year</p>
+                                    </div>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '12px', padding: '14px', border: '1px solid #EF9A9A' }}>
+                                        <p style={{ fontSize: '13px', color: '#C62828', margin: 0 }}><strong>❓ Why:</strong> To celebrate the birth of Jesus Christ, who taught love, kindness, and peace.</p>
+                                    </div>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '12px', padding: '14px', border: '1px solid #EF9A9A' }}>
+                                        <p style={{ fontSize: '13px', color: '#C62828', margin: 0 }}><strong>🎅 How:</strong> People decorate Christmas trees, go to church, sing carols, exchange gifts, and enjoy cakes and plum pudding.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Holi */}
+                            <div style={{ background: 'linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%)', borderRadius: '16px', padding: '24px', marginTop: '16px', border: '2px solid #BA68C8' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                                    <div style={{ fontSize: '40px' }}>🌈</div>
+                                    <h4 style={{ fontSize: '20px', color: '#7B1FA2', fontWeight: 700, margin: 0 }}>Holi – Festival of Colors</h4>
+                                </div>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px' }}>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '12px', padding: '14px', border: '1px solid #CE93D8' }}>
+                                        <p style={{ fontSize: '13px', color: '#7B1FA2', margin: 0 }}><strong>📅 When:</strong> March (on the full moon day)</p>
+                                    </div>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '12px', padding: '14px', border: '1px solid #CE93D8' }}>
+                                        <p style={{ fontSize: '13px', color: '#7B1FA2', margin: 0 }}><strong>❓ Why:</strong> To celebrate the arrival of spring and the victory of good over evil (story of Prahlad and Holika).</p>
+                                    </div>
+                                    <div style={{ background: '#FFFFFF', borderRadius: '12px', padding: '14px', border: '1px solid #CE93D8' }}>
+                                        <p style={{ fontSize: '13px', color: '#7B1FA2', margin: 0 }}><strong>🎨 How:</strong> People play with colored powders and water, dance, sing, eat gujiya and sweets, and have lots of fun together!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: How Festivals Bring People Together */}
+                        <Section>
+                            <SectionTitle emoji="🤝">How Festivals Bring People Together</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Festivals are not just about celebrations. They bring people <strong>closer together</strong>. During festivals, people forget their differences and share <strong>love and happiness</strong>.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginTop: '20px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #81C784', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px' }}>😊</div>
+                                    <p style={{ fontSize: '15px', color: '#2E7D32', fontWeight: 700, margin: '0 0 6px 0' }}>Spreading Happiness</p>
+                                    <p style={{ fontSize: '13px', color: '#388E3C', margin: 0 }}>People share sweets, gifts, and smiles with everyone.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #64B5F6', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px' }}>🕊️</div>
+                                    <p style={{ fontSize: '15px', color: '#1565C0', fontWeight: 700, margin: '0 0 6px 0' }}>Creating Unity</p>
+                                    <p style={{ fontSize: '13px', color: '#1976D2', margin: 0 }}>People of all religions celebrate each other's festivals.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%)', borderRadius: '16px', padding: '20px', border: '2px solid #FFB74D', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '10px' }}>🤲</div>
+                                    <p style={{ fontSize: '15px', color: '#E65100', fontWeight: 700, margin: '0 0 6px 0' }}>Showing Respect</p>
+                                    <p style={{ fontSize: '13px', color: '#F57C00', margin: 0 }}>People respect and learn about different traditions and beliefs.</p>
+                                </div>
+                            </div>
+                            <div style={{ background: 'linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%)', borderRadius: '16px', padding: '20px', textAlign: 'center', marginTop: '20px', border: '2px solid #FFD54F' }}>
+                                <p style={{ fontSize: '17px', color: '#F57F17', fontWeight: 600, margin: 0 }}>
+                                    🇮🇳 In India, people celebrate festivals of all religions. This is what makes our country truly special!
                                 </p>
                             </div>
                         </Section>
 
-                        {/* 3. Festivals in India */}
+                        {/* Section 6: Example Scenario */}
                         <Section>
-                            <SectionTitle emoji="🎉">Popular Indian Festivals</SectionTitle>
+                            <SectionTitle emoji="🏫">A Festival Day at Sunshine School</SectionTitle>
                             <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
-                                India celebrates many festivals throughout the year.
+                                Let's read a short story about how children celebrate festivals together:
                             </p>
-                            <ul style={{ fontSize: '15px', color: '#D97706', marginLeft: 24, marginBottom: 16 }}>
-                                <li>Diwali → festival of lights</li>
-                                <li>Holi → festival of colors</li>
-                                <li>Pongal → harvest festival</li>
-                                <li>Eid → celebrated by Muslims</li>
-                                <li>Christmas → celebrated by Christians</li>
-                            </ul>
-                            <div style={{ background: '#FECACA', borderRadius: '12px', padding: '16px', border: '1px solid #F87171', marginBottom: 12 }}>
-                                <p style={{ fontSize: '15px', color: '#B91C1C', margin: 0 }}>
-                                    🎊 Festivals bring joy and strengthen community bonds.
+                            <div style={{ background: 'linear-gradient(135deg, #FFFDE7 0%, #FFF9C4 100%)', borderRadius: '16px', padding: '24px', marginTop: '20px', border: '2px solid #FFF176' }}>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>🏫</span>
+                                        <p style={{ fontSize: '15px', color: '#F57F17', margin: 0, lineHeight: 1.7 }}>
+                                            It was <strong>Cultural Day</strong> at Sunshine School. The teacher, Mrs. Rani, asked each student to share something about their festival.
+                                        </p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>🪔</span>
+                                        <p style={{ fontSize: '15px', color: '#F57F17', margin: 0, lineHeight: 1.7 }}>
+                                            <strong>Aarav</strong> talked about Diwali. He said, "We light diyas, eat sweets, and burst crackers with our family!"
+                                        </p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>🌙</span>
+                                        <p style={{ fontSize: '15px', color: '#F57F17', margin: 0, lineHeight: 1.7 }}>
+                                            <strong>Fatima</strong> shared about Eid. She said, "We wear new clothes, pray together, and share yummy sevaiyan with our neighbours!"
+                                        </p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>🎄</span>
+                                        <p style={{ fontSize: '15px', color: '#F57F17', margin: 0, lineHeight: 1.7 }}>
+                                            <strong>John</strong> told everyone about Christmas. He said, "We decorate a big tree, sing carols, and Santa Claus brings us gifts!"
+                                        </p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>🌾</span>
+                                        <p style={{ fontSize: '15px', color: '#F57F17', margin: 0, lineHeight: 1.7 }}>
+                                            <strong>Kavitha</strong> explained Pongal. She said, "We cook sweet Pongal in a clay pot and thank the Sun for our food!"
+                                        </p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                        <span style={{ fontSize: '28px' }}>😊</span>
+                                        <p style={{ fontSize: '15px', color: '#F57F17', margin: 0, lineHeight: 1.7 }}>
+                                            All the children clapped for each other. They shared food from their festivals and danced together. Mrs. Rani smiled and said, <strong>"See how beautiful our country is! All festivals teach us love, kindness, and respect."</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style={{ background: '#E8F5E9', borderRadius: '12px', padding: '16px', marginTop: '16px', border: '1px solid #A5D6A7' }}>
+                                <p style={{ fontSize: '15px', color: '#2E7D32', margin: 0 }}>
+                                    🌻 <strong>Lesson:</strong> When we respect each other's culture and festivals, we build a happy and peaceful community!
                                 </p>
                             </div>
                         </Section>
 
-                        {/* 4. Traditions and Celebrations */}
+                        {/* Section 7: Key Points to Remember */}
                         <Section>
-                            <SectionTitle emoji="🪔">Indian Traditions</SectionTitle>
-                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
-                                Traditions are customs that are followed for many years.
-                            </p>
-                            <ul style={{ fontSize: '15px', color: '#D97706', marginLeft: 24, marginBottom: 16 }}>
-                                <li>Lighting lamps during Diwali</li>
-                                <li>Decorating homes during festivals</li>
-                                <li>Preparing special foods</li>
-                            </ul>
-                            <div style={{ background: '#F3E8FF', borderRadius: '12px', padding: '16px', border: '1px solid #A78BFA', marginBottom: 12 }}>
-                                <p style={{ fontSize: '15px', color: '#7C3AED', margin: 0 }}>
-                                    🕯️ Traditions connect people with their culture and history.
-                                </p>
+                            <SectionTitle emoji="📝">Key Points to Remember</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '16px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)', borderRadius: '12px', padding: '16px', border: '1px solid #64B5F6', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>✅</span>
+                                    <p style={{ fontSize: '15px', color: '#1565C0', margin: 0, fontWeight: 600 }}>Culture is the way of life of a group of people – it includes language, food, clothing, music, and traditions.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)', borderRadius: '12px', padding: '16px', border: '1px solid #81C784', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>✅</span>
+                                    <p style={{ fontSize: '15px', color: '#2E7D32', margin: 0, fontWeight: 600 }}>Festivals are special days when people celebrate with joy, prayer, food, and family.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%)', borderRadius: '12px', padding: '16px', border: '1px solid #FFB74D', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>✅</span>
+                                    <p style={{ fontSize: '15px', color: '#E65100', margin: 0, fontWeight: 600 }}>India celebrates many festivals like Diwali, Pongal, Eid, Christmas, and Holi.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FCE4EC 0%, #F8BBD0 100%)', borderRadius: '12px', padding: '16px', border: '1px solid #F06292', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>✅</span>
+                                    <p style={{ fontSize: '15px', color: '#C2185B', margin: 0, fontWeight: 600 }}>Festivals bring people together and create unity and happiness.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #E1BEE7 0%, #CE93D8 100%)', borderRadius: '12px', padding: '16px', border: '1px solid #AB47BC', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>✅</span>
+                                    <p style={{ fontSize: '15px', color: '#7B1FA2', margin: 0, fontWeight: 600 }}>We should always respect and learn about different cultures and festivals.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #B2DFDB 0%, #80CBC4 100%)', borderRadius: '12px', padding: '16px', border: '1px solid #4DB6AC', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>✅</span>
+                                    <p style={{ fontSize: '15px', color: '#00695C', margin: 0, fontWeight: 600 }}>India's diversity is its strength – "Unity in Diversity" is what makes our country special!</p>
+                                </div>
                             </div>
-                        </Section>
-
-                        {/* 5. Importance of Festivals */}
-                        <Section>
-                            <SectionTitle emoji="🌟">Why Festivals are Important</SectionTitle>
-                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
-                                Festivals help people:
-                            </p>
-                            <ul style={{ fontSize: '15px', color: '#D97706', marginLeft: 24, marginBottom: 16 }}>
-                                <li>Celebrate together</li>
-                                <li>Share happiness</li>
-                                <li>Strengthen relationships</li>
-                                <li>Respect different cultures</li>
-                            </ul>
-                            <div style={{ background: '#D1FAE5', borderRadius: '12px', padding: '16px', border: '1px solid #34D399', marginBottom: 12 }}>
-                                <p style={{ fontSize: '15px', color: '#059669', margin: 0 }}>
-                                    🎈 Festivals bring people closer and promote unity.
-                                </p>
-                            </div>
-                        </Section>
-
-                        {/* 6. Respecting Different Cultures */}
-                        <Section>
-                            <SectionTitle emoji="🤲">Respecting Diversity</SectionTitle>
-                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
-                                India has many cultures and religions.<br /><br />
-                                People should respect different traditions and celebrations.
-                            </p>
-                            <ul style={{ fontSize: '15px', color: '#D97706', marginLeft: 24, marginBottom: 16 }}>
-                                <li>Learning about other festivals</li>
-                                <li>Participating in cultural events</li>
-                                <li>Respecting different beliefs</li>
-                            </ul>
-                            <div style={{ background: '#FDE68A', borderRadius: '12px', padding: '16px', border: '1px solid #FBBF24', marginBottom: 12 }}>
-                                <p style={{ fontSize: '15px', color: '#B45309', margin: 0 }}>
-                                    🤝 Respecting diversity helps build harmony in society.
+                            <div style={{ background: 'linear-gradient(135deg, #FF9800 0%, #F57C00 100%)', borderRadius: '16px', padding: '20px', textAlign: 'center', marginTop: '20px' }}>
+                                <p style={{ fontSize: '17px', color: '#FFFFFF', fontWeight: 600, margin: 0 }}>
+                                    🎉 Celebrate every festival with love, respect every culture, and spread happiness everywhere!
                                 </p>
                             </div>
                         </Section>
