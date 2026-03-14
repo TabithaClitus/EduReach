@@ -86,16 +86,8 @@ export default function Navbar() {
 
         const roomId = `chat_${[mentorId.toString(), studentId.toString()].sort().join('_')}`;
         try {
-          const res = await fetch(`http://localhost:5000/api/chat/${roomId}`);
-          const roomMessages = await res.json();
-          if (!Array.isArray(roomMessages) || roomMessages.length === 0) return 0;
-
-          const lastSeen = Number(localStorage.getItem('lastSeen_' + roomId) || '0');
-          const hasUnread = roomMessages.some(m => (
-            new Date(m.createdAt).getTime() > lastSeen &&
-            String(m.sender) !== String(mentorId)
-          ));
-          return hasUnread ? 1 : 0;
+          const { data: status } = await api.get(`/chat/${roomId}/status`, { params: { userId: mentorId } });
+          return status.unreadCount > 0 ? 1 : 0;
         } catch {
           return 0;
         }
@@ -128,15 +120,22 @@ export default function Navbar() {
       }
     });
 
-    socket.on('receiveMessage', (msg) => {
+    const onChatMessage = (msg) => {
       if (role !== 'mentor') return;
       if (String(msg.sender) === String(userId)) return;
       localStorage.setItem('lastMessageTs_' + msg.roomId, String(new Date(msg.createdAt).getTime() || Date.now()));
       fetchUnreadChats();
-    });
+    };
 
-    return () => socket.disconnect();
-  }, [isAuthenticated, user?.id || user?._id]);
+    socket.on('chat-message', onChatMessage);
+    socket.on('receiveMessage', onChatMessage);
+
+    return () => {
+      socket.off('chat-message', onChatMessage);
+      socket.off('receiveMessage', onChatMessage);
+      socket.disconnect();
+    };
+  }, [isAuthenticated, role, user?.id, user?._id]);
 
   // ── Initial + polling fetch of pending count for mentor (every 15s) ────────
   useEffect(() => {

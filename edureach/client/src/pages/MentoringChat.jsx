@@ -21,13 +21,38 @@ export default function MentoringChat() {
   const [loading, setLoading] = useState(true);
   const messagesEndRef = useRef(null);
   const socketRef = useRef(null);
+  const roomIdRef = useRef(null);
+
+  useEffect(() => {
+    roomIdRef.current = roomId;
+  }, [roomId]);
+
+  const setLastSeenForRoom = (rid, messageLike) => {
+    if (!rid) return;
+    api.post(`/chat/${rid}/read`, {
+      userId,
+      readAt: messageLike?.createdAt || null,
+    }).catch(() => {});
+    window.dispatchEvent(new Event('chat-lastseen-updated'));
+  };
 
   // Connect socket once
   useEffect(() => {
     const socket = io('http://localhost:5000');
     socketRef.current = socket;
-    return () => socket.disconnect();
-  }, []);
+
+    const onConnect = () => {
+      if (userId) socket.emit('register-user', userId);
+      if (roomIdRef.current) socket.emit('joinRoom', roomIdRef.current);
+    };
+
+    socket.on('connect', onConnect);
+
+    return () => {
+      socket.off('connect', onConnect);
+      socket.disconnect();
+    };
+  }, [userId]);
 
   // Fetch accepted mentor, build roomId
   useEffect(() => {
@@ -50,14 +75,12 @@ export default function MentoringChat() {
   useEffect(() => {
     if (!roomId) return;
 
-    // Mark conversation as read when chat opens
-    localStorage.setItem('lastSeen_' + roomId, Date.now().toString());
-    window.dispatchEvent(new Event('chat-lastseen-updated'));
-
     fetch(`http://localhost:5000/api/chat/${roomId}`)
       .then(r => r.json())
       .then(data => {
         if (Array.isArray(data)) {
+          const last = data[data.length - 1];
+          setLastSeenForRoom(roomId, last);
           setMessages(prev => {
             const historyIds = new Set(data.map(m => m._id?.toString()).filter(Boolean));
             const realtimeOnly = prev.filter(m => m._id && !historyIds.has(m._id.toString()));
@@ -71,9 +94,9 @@ export default function MentoringChat() {
     socketRef.current?.emit('joinRoom', roomId);
 
     const onMessage = (msg) => {
+      if (msg.roomId !== roomId) return;
       setMessages(prev => [...prev, msg]);
-      localStorage.setItem('lastSeen_' + roomId, Date.now().toString());
-      window.dispatchEvent(new Event('chat-lastseen-updated'));
+      setLastSeenForRoom(roomId, msg);
     };
     socketRef.current?.on('receiveMessage', onMessage);
     return () => socketRef.current?.off('receiveMessage', onMessage);

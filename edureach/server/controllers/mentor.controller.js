@@ -71,14 +71,16 @@ exports.requestMentor = async (req, res) => {
       return res.status(400).json({ success: false, message: 'mentorUserId is required.' });
     }
 
-    // Prevent duplicate requests
-    if (req.user.mentorshipStatus === 'pending' || req.user.mentorshipStatus === 'accepted') {
-      return res.status(400).json({ success: false, message: 'You already have an active mentorship request.' });
-    }
-    // Also check via DB in case stale token
     const studentDoc = await User.findById(studentId);
-    if (studentDoc.mentorshipStatus === 'pending' || studentDoc.mentorshipStatus === 'accepted') {
-      return res.status(400).json({ success: false, message: 'You already have an active mentorship request.' });
+
+    // Allow multiple mentors, but avoid duplicate active/pending request to the same mentor.
+    const existingRequest = await MentorMatch.findOne({
+      student: studentId,
+      mentor: mentorUserId,
+      status: { $in: ['pending', 'active'] },
+    }).select('_id');
+    if (existingRequest) {
+      return res.status(400).json({ success: false, message: 'You already requested this mentor.' });
     }
 
     const mentor = await User.findById(mentorUserId);
@@ -101,11 +103,12 @@ exports.requestMentor = async (req, res) => {
       },
     });
 
-    // 2. Update student's status
-    await User.findByIdAndUpdate(studentId, {
-      mentorshipStatus: 'pending',
-      requestedMentorId: mentorUserId,
-    });
+    // 2. Keep student profile stable if already accepted; otherwise set pending for compatibility.
+    if (!studentDoc.myMentor) {
+      await User.findByIdAndUpdate(studentId, {
+        mentorshipStatus: 'pending',
+      });
+    }
 
     // 3. Also create MentorMatch so the chat system continues to work
     const match = await MentorMatch.create({
@@ -223,12 +226,30 @@ exports.respondToRequest = async (req, res) => {
         myMentor: req.user._id,
       });
     } else {
-      // Declined: reset so student can request again
-      await User.findByIdAndUpdate(studentId, {
-        mentorshipStatus: 'none',
-        requestedMentorId: null,
-        myMentor: null,
-      });
+      // Declined: recompute flags from remaining matches.
+      const [anyActive, anyPending] = await Promise.all([
+        MentorMatch.findOne({ student: studentId, status: 'active' }).sort('-updatedAt'),
+        MentorMatch.findOne({ student: studentId, status: 'pending' }).sort('-updatedAt'),
+      ]);
+
+      if (anyActive) {
+        await User.findByIdAndUpdate(studentId, {
+          mentorshipStatus: 'accepted',
+          myMentor: anyActive.mentor,
+        });
+      } else if (anyPending) {
+        await User.findByIdAndUpdate(studentId, {
+          mentorshipStatus: 'pending',
+          requestedMentorId: anyPending.mentor,
+          myMentor: null,
+        });
+      } else {
+        await User.findByIdAndUpdate(studentId, {
+          mentorshipStatus: 'none',
+          requestedMentorId: null,
+          myMentor: null,
+        });
+      }
     }
 
     // Real-time notification to student

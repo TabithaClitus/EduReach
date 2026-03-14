@@ -11,6 +11,9 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifestFilename: 'manifest.json',
+      devOptions: {
+        enabled: false, // No service worker in dev — installed PWA gets fresh files like any browser tab
+      },
       includeAssets: ['vite.svg', 'pwa-192x192.svg', 'pwa-512x512.svg'],
       manifest: {
         name: 'EduReach',
@@ -95,6 +98,8 @@ export default defineConfig({
     }),
   ],
   server: {
+    port: 5173,
+    strictPort: true,
     proxy: {
       '/api': 'http://localhost:5000',
     },

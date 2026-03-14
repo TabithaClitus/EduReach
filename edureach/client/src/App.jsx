@@ -46,6 +46,16 @@ const AppLayout = () => {
 
   useRegisterSW({
     immediate: true,
+    onNeedRefresh() {
+      // New version available — reload immediately so PWA stays in sync
+      window.location.reload();
+    },
+    onRegistered(registration) {
+      // Poll for updates every 60 seconds
+      if (registration) {
+        setInterval(() => registration.update(), 60_000);
+      }
+    },
   });
 
   return (
