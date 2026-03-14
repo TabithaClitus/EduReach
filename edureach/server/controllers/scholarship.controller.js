@@ -4,11 +4,11 @@ const Scholarship = require("../models/Scholarship");
 // @route  GET /api/scholarships
 exports.getScholarships = async (req, res) => {
   try {
-    const { state, category, search, page = 1, limit = 15 } = req.query;
+    const { state, gender, search, page = 1, limit = 15 } = req.query;
 
     const filter = {};
     if (state) filter["eligibility.state"] = { $in: ["", "All", state] };
-    if (category) filter.category = { $regex: category, $options: "i" };
+    if (gender) filter["eligibility.gender"] = { $in: ["", "All", gender] };
     if (search) {
       filter.$or = [
         { title: { $regex: search, $options: "i" } },
@@ -59,6 +59,26 @@ exports.createScholarship = async (req, res) => {
   try {
     const scholarship = await Scholarship.create(req.body);
     res.status(201).json({ success: true, data: scholarship });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+// @desc   Update scholarship
+// @route  PUT /api/scholarships/:id
+exports.updateScholarship = async (req, res) => {
+  try {
+    let scholarship = await Scholarship.findById(req.params.id);
+    if (!scholarship) {
+      return res.status(404).json({ success: false, message: "Scholarship not found" });
+    }
+
+    scholarship = await Scholarship.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    });
+
+    res.json({ success: true, data: scholarship });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
