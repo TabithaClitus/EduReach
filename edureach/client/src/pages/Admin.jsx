@@ -358,6 +358,244 @@ function MentorsTab() {
   );
 }
 
+function ScholarshipsTab() {
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [deletingId, setDeletingId] = useState('');
+  const [error, setError] = useState('');
+  const [form, setForm] = useState({
+    title: '',
+    provider: '',
+    amount: '',
+    deadline: '',
+    description: '',
+    applicationUrl: '',
+    state: '',
+    caste: '',
+    income: '',
+    course: '',
+    grade: '',
+    gender: '',
+  });
+
+  const loadScholarships = async () => {
+    setLoading(true);
+    try {
+      const { data } = await api.get('/scholarships', { params: { page: 1, limit: 100 } });
+      setItems(data.data || []);
+    } catch {
+      setItems([]);
+      setError('Failed to load scholarships');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    loadScholarships();
+  }, []);
+
+  const [editingId, setEditingId] = useState(null);
+  const [isFormView, setIsFormView] = useState(false);
+
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const onEdit = (sch) => {
+    setEditingId(sch._id);
+    setForm({
+      title: sch.title || '',
+      provider: sch.provider || '',
+      amount: sch.amount || '',
+      deadline: sch.deadline ? new Date(sch.deadline).toISOString().split('T')[0] : '',
+      description: sch.description || '',
+      applicationUrl: sch.applicationUrl || '',
+      state: sch.eligibility?.state || '',
+      caste: sch.eligibility?.caste || '',
+      income: sch.eligibility?.income || '',
+      course: sch.eligibility?.course || '',
+      grade: sch.eligibility?.grade || '',
+      gender: sch.eligibility?.gender || '',
+    });
+    setError('');
+    setIsFormView(true);
+  };
+
+  const cancelEdit = () => {
+    setEditingId(null);
+    setForm({
+      title: '', provider: '', amount: '', deadline: '', description: '',
+      applicationUrl: '', state: '', caste: '', income: '', course: '', grade: '', gender: ''
+    });
+    setError('');
+    setIsFormView(false);
+  };
+
+  const onCreate = async (e) => {
+    e.preventDefault();
+    if (!form.title.trim()) {
+      setError('Title is required');
+      return;
+    }
+
+    setSaving(true);
+    setError('');
+
+    try {
+      const payload = {
+        title: form.title.trim(),
+        provider: form.provider.trim(),
+        amount: form.amount.trim(),
+        deadline: form.deadline || undefined,
+        description: form.description.trim(),
+        applicationUrl: form.applicationUrl.trim(),
+        eligibility: {
+          state: form.state.trim(),
+          caste: form.caste.trim(),
+          income: form.income.trim(),
+          course: form.course.trim(),
+          grade: form.grade.trim(),
+          gender: form.gender.trim(),
+        },
+      };
+
+      if (editingId) {
+        await api.put(`/scholarships/${editingId}`, payload);
+        setEditingId(null);
+      } else {
+        await api.post('/scholarships', payload);
+      }
+
+      setForm({
+        title: '',
+        provider: '',
+        amount: '',
+        deadline: '',
+        description: '',
+        applicationUrl: '',
+        state: '',
+        caste: '',
+        income: '',
+        course: '',
+        grade: '',
+        gender: '',
+      });
+
+      setIsFormView(false);
+      await loadScholarships();
+    } catch (err) {
+      setError(err?.response?.data?.message || `Failed to ${editingId ? 'update' : 'add'} scholarship`);
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const onDelete = async (id) => {
+    setDeletingId(id);
+    setError('');
+    try {
+      await api.delete(`/scholarships/${id}`);
+      await loadScholarships();
+    } catch (err) {
+      setError(err?.response?.data?.message || 'Failed to delete scholarship');
+    } finally {
+      setDeletingId('');
+    }
+  };
+
+  return (
+    <div style={{ maxWidth: 1000, margin: '0 auto' }}>
+      
+      {/* ── FORM VIEW ── */}
+      {isFormView ? (
+        <div style={{ background: '#fff', border: '1px solid #F1F5F9', borderRadius: 14, padding: 24, boxShadow: '0 1px 4px rgba(0,0,0,0.04)', maxWidth: 800, margin: '0 auto' }}>
+          <p style={{ margin: '0 0 16px', fontWeight: 700, fontSize: 16, color: '#0F172A' }}>
+            {editingId ? 'Edit Scholarship' : 'Add Scholarship'}
+          </p>
+          <form onSubmit={onCreate} style={{ display: 'flex', flexDirection: 'column', gap: 10, width: '100%' }}>
+            <input name="title" value={form.title} onChange={onChange} placeholder="Title*" style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+            <input name="provider" value={form.provider} onChange={onChange} placeholder="Provider" style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+              <input name="amount" value={form.amount} onChange={onChange} placeholder="Amount" style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+              <input name="deadline" type="date" value={form.deadline} onChange={onChange} style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+            </div>
+            <textarea name="description" value={form.description} onChange={onChange} placeholder="Description" rows={3} style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0', resize: 'vertical' }} />
+            <input name="applicationUrl" value={form.applicationUrl} onChange={onChange} placeholder="Application URL" style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
+              <input name="state" value={form.state} onChange={onChange} placeholder="State" style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+              <input name="grade" value={form.grade} onChange={onChange} placeholder="Grade" style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+              <input name="gender" value={form.gender} onChange={onChange} placeholder="Gender" style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
+              <input name="caste" value={form.caste} onChange={onChange} placeholder="Caste" style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+              <input name="income" value={form.income} onChange={onChange} placeholder="Income Limit" style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+              <input name="course" value={form.course} onChange={onChange} placeholder="Course" style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+            </div>
+            {error && <p style={{ margin: 0, fontSize: 12, color: '#B91C1C' }}>{error}</p>}
+            <div style={{ display: 'flex', gap: 10 }}>
+              <button type="submit" disabled={saving} style={{ flex: 1, padding: '10px 14px', border: 'none', borderRadius: 8, background: '#2563EB', color: '#fff', fontWeight: 700, cursor: 'pointer', opacity: saving ? 0.7 : 1 }}>
+                {saving ? 'Saving...' : (editingId ? 'Update Scholarship' : 'Add Scholarship')}
+              </button>
+              <button type="button" onClick={cancelEdit} disabled={saving} style={{ padding: '10px 14px', border: '1px solid #E2E8F0', borderRadius: 8, background: '#fff', color: '#475569', fontWeight: 700, cursor: 'pointer' }}>
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      ) : (
+
+      /* ── LIST VIEW ── */
+        <div style={{ background: '#fff', border: '1px solid #F1F5F9', borderRadius: 14, padding: 24, boxShadow: '0 1px 4px rgba(0,0,0,0.04)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+            <p style={{ margin: 0, fontWeight: 700, fontSize: 16, color: '#0F172A' }}>Existing Scholarships</p>
+            <button 
+              onClick={() => setIsFormView(true)} 
+              style={{ background: '#2563EB', color: '#fff', border: 'none', borderRadius: 8, padding: '8px 16px', fontSize: 13, fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6 }}
+            >
+              + Add new scholarship
+            </button>
+          </div>
+          
+          {loading ? (
+            <p style={{ fontSize: 13, color: '#94A3B8' }}>Loading scholarships...</p>
+          ) : items.length === 0 ? (
+            <p style={{ fontSize: 13, color: '#94A3B8' }}>No scholarships found.</p>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, maxHeight: 600, overflowY: 'auto', overflowX: 'hidden', paddingRight: 4 }}>
+              {items.map((sch) => (
+                <div key={sch._id} style={{ border: '1px solid #E2E8F0', borderRadius: 10, padding: '14px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16 }}>
+                  <div style={{ minWidth: 0, flex: 1 }}>
+                    <p style={{ margin: 0, fontSize: 14, fontWeight: 700, color: '#0F172A', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{sch.title}</p>
+                    <p style={{ margin: '4px 0 0', fontSize: 13, color: '#64748B' }}>{sch.provider || 'Provider not set'}</p>
+                  </div>
+                  <div style={{ display: 'flex', gap: 8 }}>
+                    <button
+                      onClick={() => onEdit(sch)}
+                      style={{ padding: '8px 14px', flexShrink: 0, border: 'none', borderRadius: 8, background: '#EFF6FF', color: '#1D4ED8', fontSize: 13, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      onClick={() => onDelete(sch._id)}
+                      disabled={deletingId === sch._id}
+                      style={{ padding: '8px 14px', flexShrink: 0, border: 'none', borderRadius: 8, background: '#FEE2E2', color: '#991B1B', fontSize: 13, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap', opacity: deletingId === sch._id ? 0.7 : 1 }}
+                    >
+                      {deletingId === sch._id ? 'Deleting...' : 'Delete'}
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ── Reports Tab ───────────────────────────────────────────────────────────────
 function ReportsTab() {
   const engagement = [
@@ -496,6 +734,7 @@ export default function Admin() {
   const tabs = [
     { key: 'overview', label: 'Overview',  icon: '🏠' },
     { key: 'users',    label: 'Users',     icon: '👥' },
+    { key: 'scholarships', label: 'Scholarships', icon: '🎓' },
     { key: 'mentors',  label: 'Mentors',   icon: '👨‍🏫' },
     { key: 'reports',  label: 'Reports',   icon: '📊' },
   ];
@@ -539,6 +778,7 @@ export default function Admin() {
         {/* Tab content */}
         {activeTab === 'overview' && <OverviewTab />}
         {activeTab === 'users'    && <UsersTab />}
+        {activeTab === 'scholarships' && <ScholarshipsTab />}
         {activeTab === 'mentors'  && <MentorsTab />}
         {activeTab === 'reports'  && <ReportsTab />}
       </div>
