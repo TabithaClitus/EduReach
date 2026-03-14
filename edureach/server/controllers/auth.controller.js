@@ -102,3 +102,19 @@ exports.getMe = async (req, res) => {
   }
 };
 
+exports.getAdminUsers = async (req, res) => {
+  try {
+    const users = await User.find({})
+      .select('name email role createdAt appliedScholarships')
+      .populate({
+        path: 'appliedScholarships',
+        select: 'title provider amount deadline',
+      })
+      .sort({ createdAt: -1 });
+
+    res.json({ success: true, data: users });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+};
+

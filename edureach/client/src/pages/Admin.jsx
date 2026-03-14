@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import api from '../services/api';
 
 // ── Shared helpers ────────────────────────────────────────────────────────────
 function Avatar({ initials, bg = '#EDE9FE', color = '#7C3AED', size = 40 }) {
@@ -172,24 +173,30 @@ function OverviewTab() {
 
 // ── Users Tab ─────────────────────────────────────────────────────────────────
 function UsersTab() {
-  const [users, setUsers] = useState(USERS);
+  const [users, setUsers] = useState([]);
   const [search, setSearch] = useState('');
-  const [expandedId, setExpandedId] = useState(null);
-  const [pendingDelete, setPendingDelete] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      setLoading(true);
+      try {
+        const { data } = await api.get('/auth/admin/users');
+        setUsers(data.data || []);
+      } catch {
+        setUsers([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUsers();
+  }, []);
 
   const filtered = users.filter(u =>
-    u.name.toLowerCase().includes(search.toLowerCase()) ||
-    u.email.toLowerCase().includes(search.toLowerCase())
+    (u.name || '').toLowerCase().includes(search.toLowerCase()) ||
+    (u.email || '').toLowerCase().includes(search.toLowerCase())
   );
-
-  const suspend = (id) => {
-    setUsers(prev => prev.map(u => u.id === id ? { ...u, status: u.status === 'suspended' ? 'active' : 'suspended' } : u));
-  };
-
-  const remove = (id) => {
-    setUsers(prev => prev.filter(u => u.id !== id));
-    setPendingDelete(null);
-  };
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -208,75 +215,42 @@ function UsersTab() {
       {/* Table */}
       <div style={{ background: '#fff', border: '1px solid #F1F5F9', borderRadius: 14, overflow: 'hidden', boxShadow: '0 1px 4px rgba(0,0,0,0.04)' }}>
         {/* Header */}
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 2fr 1fr 1fr 1.5fr 1fr', padding: '12px 20px', background: '#F8FAFC', borderBottom: '1px solid #F1F5F9' }}>
-          {['Name', 'Email', 'Role', 'Status', 'Joined', 'Actions'].map(h => (
+        <div style={{ display: 'grid', gridTemplateColumns: '1.8fr 2fr 1fr 2fr 1.2fr', padding: '12px 20px', background: '#F8FAFC', borderBottom: '1px solid #F1F5F9' }}>
+          {['Name', 'Email', 'Role', 'Scholarships', 'Joined'].map(h => (
             <span key={h} style={{ fontSize: 11, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: 0.5 }}>{h}</span>
           ))}
         </div>
 
-        {filtered.length === 0 ? (
+        {loading ? (
+          <div style={{ padding: '40px 20px', textAlign: 'center', color: '#94A3B8', fontSize: 14 }}>Loading users...</div>
+        ) : filtered.length === 0 ? (
           <div style={{ padding: '40px 20px', textAlign: 'center', color: '#94A3B8', fontSize: 14 }}>No users found.</div>
         ) : (
           filtered.map(u => (
-            <div key={u.id}>
-              {/* Row */}
-              <div style={{ display: 'grid', gridTemplateColumns: '2fr 2fr 1fr 1fr 1.5fr 1fr', padding: '14px 20px', borderBottom: '1px solid #F8FAFC', alignItems: 'center' }}>
+            <div key={u._id}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.8fr 2fr 1fr 2fr 1.2fr', padding: '14px 20px', borderBottom: '1px solid #F8FAFC', alignItems: 'center', gap: 8 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                  <Avatar initials={u.name.split(' ').map(n => n[0]).join('').slice(0, 2)} size={34} />
-                  <span style={{ fontSize: 13, fontWeight: 600, color: '#0F172A' }}>{u.name}</span>
+                  <Avatar initials={(u.name || 'U').split(' ').map(n => n[0]).join('').slice(0, 2)} size={34} />
+                  <span style={{ fontSize: 13, fontWeight: 600, color: '#0F172A' }}>{u.name || 'Unknown User'}</span>
                 </div>
                 <span style={{ fontSize: 13, color: '#64748B' }}>{u.email}</span>
-                <Badge label={u.role} />
-                <Badge label={u.status} />
-                <span style={{ fontSize: 12, color: '#94A3B8' }}>{u.joined}</span>
-                <div style={{ display: 'flex', gap: 6 }}>
-                  <button title="View" onClick={() => setExpandedId(expandedId === u.id ? null : u.id)}
-                    style={{ padding: '5px 9px', background: '#EFF6FF', color: '#2563EB', border: 'none', borderRadius: 6, cursor: 'pointer', fontSize: 13 }}>👁</button>
-                  <button title={u.status === 'suspended' ? 'Unsuspend' : 'Suspend'} onClick={() => suspend(u.id)}
-                    style={{ padding: '5px 9px', background: u.status === 'suspended' ? '#D1FAE5' : '#FEF3C7', color: u.status === 'suspended' ? '#065F46' : '#92400E', border: 'none', borderRadius: 6, cursor: 'pointer', fontSize: 13 }}>
-                    {u.status === 'suspended' ? '🔓' : '🔒'}
-                  </button>
-                  <button title="Delete" onClick={() => setPendingDelete(u.id)}
-                    style={{ padding: '5px 9px', background: '#FEE2E2', color: '#991B1B', border: 'none', borderRadius: 6, cursor: 'pointer', fontSize: 13 }}>🗑</button>
+                <Badge label={u.role || 'student'} />
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {(u.appliedScholarships || []).length === 0 ? (
+                    <span style={{ fontSize: 12, color: '#94A3B8' }}>None</span>
+                  ) : (
+                    u.appliedScholarships.slice(0, 2).map((sch) => (
+                      <span key={sch._id} style={{ background: '#EFF6FF', color: '#1D4ED8', fontSize: 11, fontWeight: 600, padding: '3px 8px', borderRadius: 99 }}>
+                        {sch.title}
+                      </span>
+                    ))
+                  )}
+                  {(u.appliedScholarships || []).length > 2 && (
+                    <span style={{ fontSize: 11, color: '#64748B' }}>+{u.appliedScholarships.length - 2}</span>
+                  )}
                 </div>
+                <span style={{ fontSize: 12, color: '#94A3B8' }}>{u.createdAt ? new Date(u.createdAt).toLocaleDateString() : '-'}</span>
               </div>
-
-              {/* Expanded detail */}
-              {expandedId === u.id && (
-                <div style={{ padding: '14px 20px 18px', background: '#F8FAFC', borderBottom: '1px solid #F1F5F9' }}>
-                  <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
-                    <div>
-                      <p style={{ margin: '0 0 4px', fontSize: 11, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase' }}>Full Name</p>
-                      <p style={{ margin: 0, fontSize: 14, color: '#0F172A', fontWeight: 600 }}>{u.name}</p>
-                    </div>
-                    <div>
-                      <p style={{ margin: '0 0 4px', fontSize: 11, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase' }}>Email</p>
-                      <p style={{ margin: 0, fontSize: 14, color: '#0F172A' }}>{u.email}</p>
-                    </div>
-                    <div>
-                      <p style={{ margin: '0 0 4px', fontSize: 11, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase' }}>Role</p>
-                      <Badge label={u.role} />
-                    </div>
-                    <div>
-                      <p style={{ margin: '0 0 4px', fontSize: 11, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase' }}>Account Status</p>
-                      <Badge label={u.status} />
-                    </div>
-                    <div>
-                      <p style={{ margin: '0 0 4px', fontSize: 11, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase' }}>Joined</p>
-                      <p style={{ margin: 0, fontSize: 14, color: '#0F172A' }}>{u.joined}</p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Delete confirmation */}
-              {pendingDelete === u.id && (
-                <div style={{ padding: '12px 20px', background: '#FFF5F5', borderBottom: '1px solid #FEE2E2', display: 'flex', alignItems: 'center', gap: 12 }}>
-                  <span style={{ fontSize: 13, color: '#991B1B', fontWeight: 500 }}>Are you sure you want to delete <strong>{u.name}</strong>?</span>
-                  <button onClick={() => remove(u.id)} style={{ padding: '5px 14px', background: '#EF4444', color: '#fff', border: 'none', borderRadius: 6, fontWeight: 600, cursor: 'pointer', fontSize: 12 }}>Delete</button>
-                  <button onClick={() => setPendingDelete(null)} style={{ padding: '5px 14px', background: '#F1F5F9', color: '#475569', border: 'none', borderRadius: 6, fontWeight: 600, cursor: 'pointer', fontSize: 12 }}>Cancel</button>
-                </div>
-              )}
             </div>
           ))
         )}
@@ -353,6 +327,175 @@ function MentorsTab() {
             </div>
           </div>
         ))}
+      </div>
+    </div>
+  );
+}
+
+function ScholarshipsTab() {
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [deletingId, setDeletingId] = useState('');
+  const [error, setError] = useState('');
+  const [form, setForm] = useState({
+    title: '',
+    provider: '',
+    amount: '',
+    deadline: '',
+    description: '',
+    applicationUrl: '',
+    state: '',
+    caste: '',
+    income: '',
+    course: '',
+    grade: '',
+    gender: '',
+  });
+
+  const loadScholarships = async () => {
+    setLoading(true);
+    try {
+      const { data } = await api.get('/scholarships', { params: { page: 1, limit: 100 } });
+      setItems(data.data || []);
+    } catch {
+      setItems([]);
+      setError('Failed to load scholarships');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    loadScholarships();
+  }, []);
+
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const onCreate = async (e) => {
+    e.preventDefault();
+    if (!form.title.trim()) {
+      setError('Title is required');
+      return;
+    }
+
+    setSaving(true);
+    setError('');
+
+    try {
+      const payload = {
+        title: form.title.trim(),
+        provider: form.provider.trim(),
+        amount: form.amount.trim(),
+        deadline: form.deadline || undefined,
+        description: form.description.trim(),
+        applicationUrl: form.applicationUrl.trim(),
+        eligibility: {
+          state: form.state.trim(),
+          caste: form.caste.trim(),
+          income: form.income.trim(),
+          course: form.course.trim(),
+          grade: form.grade.trim(),
+          gender: form.gender.trim(),
+        },
+      };
+
+      await api.post('/scholarships', payload);
+
+      setForm({
+        title: '',
+        provider: '',
+        amount: '',
+        deadline: '',
+        description: '',
+        applicationUrl: '',
+        state: '',
+        caste: '',
+        income: '',
+        course: '',
+        grade: '',
+        gender: '',
+      });
+
+      await loadScholarships();
+    } catch (err) {
+      setError(err?.response?.data?.message || 'Failed to add scholarship');
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const onDelete = async (id) => {
+    setDeletingId(id);
+    setError('');
+    try {
+      await api.delete(`/scholarships/${id}`);
+      await loadScholarships();
+    } catch (err) {
+      setError(err?.response?.data?.message || 'Failed to delete scholarship');
+    } finally {
+      setDeletingId('');
+    }
+  };
+
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 20 }}>
+      <div style={{ background: '#fff', border: '1px solid #F1F5F9', borderRadius: 14, padding: 20, boxShadow: '0 1px 4px rgba(0,0,0,0.04)' }}>
+        <p style={{ margin: '0 0 14px', fontWeight: 700, fontSize: 16, color: '#0F172A' }}>Add Scholarship</p>
+        <form onSubmit={onCreate} style={{ display: 'grid', gap: 10 }}>
+          <input name="title" value={form.title} onChange={onChange} placeholder="Title*" style={{ padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+          <input name="provider" value={form.provider} onChange={onChange} placeholder="Provider" style={{ padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+            <input name="amount" value={form.amount} onChange={onChange} placeholder="Amount" style={{ padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+            <input name="deadline" type="date" value={form.deadline} onChange={onChange} style={{ padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+          </div>
+          <textarea name="description" value={form.description} onChange={onChange} placeholder="Description" rows={3} style={{ padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0', resize: 'vertical' }} />
+          <input name="applicationUrl" value={form.applicationUrl} onChange={onChange} placeholder="Application URL" style={{ padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
+            <input name="state" value={form.state} onChange={onChange} placeholder="State" style={{ padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+            <input name="grade" value={form.grade} onChange={onChange} placeholder="Grade" style={{ padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+            <input name="gender" value={form.gender} onChange={onChange} placeholder="Gender" style={{ padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
+            <input name="caste" value={form.caste} onChange={onChange} placeholder="Caste" style={{ padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+            <input name="income" value={form.income} onChange={onChange} placeholder="Income Limit" style={{ padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+            <input name="course" value={form.course} onChange={onChange} placeholder="Course" style={{ padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+          </div>
+          {error && <p style={{ margin: 0, fontSize: 12, color: '#B91C1C' }}>{error}</p>}
+          <button type="submit" disabled={saving} style={{ padding: '10px 14px', border: 'none', borderRadius: 8, background: '#2563EB', color: '#fff', fontWeight: 700, cursor: 'pointer', opacity: saving ? 0.7 : 1 }}>
+            {saving ? 'Adding...' : 'Add Scholarship'}
+          </button>
+        </form>
+      </div>
+
+      <div style={{ background: '#fff', border: '1px solid #F1F5F9', borderRadius: 14, padding: 20, boxShadow: '0 1px 4px rgba(0,0,0,0.04)' }}>
+        <p style={{ margin: '0 0 14px', fontWeight: 700, fontSize: 16, color: '#0F172A' }}>Existing Scholarships</p>
+        {loading ? (
+          <p style={{ fontSize: 13, color: '#94A3B8' }}>Loading scholarships...</p>
+        ) : items.length === 0 ? (
+          <p style={{ fontSize: 13, color: '#94A3B8' }}>No scholarships found.</p>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10, maxHeight: 560, overflow: 'auto', paddingRight: 4 }}>
+            {items.map((sch) => (
+              <div key={sch._id} style={{ border: '1px solid #E2E8F0', borderRadius: 10, padding: '10px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10 }}>
+                <div style={{ minWidth: 0 }}>
+                  <p style={{ margin: 0, fontSize: 13, fontWeight: 700, color: '#0F172A', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{sch.title}</p>
+                  <p style={{ margin: '3px 0 0', fontSize: 12, color: '#64748B' }}>{sch.provider || 'Provider not set'}</p>
+                </div>
+                <button
+                  onClick={() => onDelete(sch._id)}
+                  disabled={deletingId === sch._id}
+                  style={{ padding: '6px 10px', border: 'none', borderRadius: 8, background: '#FEE2E2', color: '#991B1B', fontSize: 12, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap', opacity: deletingId === sch._id ? 0.7 : 1 }}
+                >
+                  {deletingId === sch._id ? 'Deleting...' : 'Delete'}
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -496,6 +639,7 @@ export default function Admin() {
   const tabs = [
     { key: 'overview', label: 'Overview',  icon: '🏠' },
     { key: 'users',    label: 'Users',     icon: '👥' },
+    { key: 'scholarships', label: 'Scholarships', icon: '🎓' },
     { key: 'mentors',  label: 'Mentors',   icon: '👨‍🏫' },
     { key: 'reports',  label: 'Reports',   icon: '📊' },
   ];
@@ -539,6 +683,7 @@ export default function Admin() {
         {/* Tab content */}
         {activeTab === 'overview' && <OverviewTab />}
         {activeTab === 'users'    && <UsersTab />}
+        {activeTab === 'scholarships' && <ScholarshipsTab />}
         {activeTab === 'mentors'  && <MentorsTab />}
         {activeTab === 'reports'  && <ReportsTab />}
       </div>

@@ -64,6 +64,26 @@ exports.createScholarship = async (req, res) => {
   }
 };
 
+// @desc   Delete scholarship
+// @route  DELETE /api/scholarships/:id
+exports.deleteScholarship = async (req, res) => {
+  try {
+    const scholarship = await Scholarship.findById(req.params.id);
+    if (!scholarship) {
+      return res.status(404).json({ success: false, message: "Scholarship not found" });
+    }
+
+    await scholarship.deleteOne();
+
+    res.json({
+      success: true,
+      message: "Scholarship deleted successfully",
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
 // @desc   Check student eligibility for a scholarship
 // @route  GET /api/scholarships/:id/eligibility
 exports.checkEligibility = async (req, res) => {

@@ -4,6 +4,7 @@ const {
   getScholarships,
   getScholarshipById,
   createScholarship,
+  deleteScholarship,
   checkEligibility,
   applyScholarship,
   getAppliedScholarships,
@@ -22,6 +23,7 @@ router.get("/:id", getScholarshipById);
 
 // Admin only
 router.post("/", verifyToken, requireRole("admin"), createScholarship);
+router.delete("/:id", verifyToken, requireRole("admin"), deleteScholarship);
 
 // Protected
 router.post("/:id/apply", verifyToken, applyScholarship);
