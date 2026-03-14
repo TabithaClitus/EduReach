@@ -9,10 +9,11 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const { login, user, isAuthenticated } = useAuthStore();
+  const { login, user, token, isAuthenticated } = useAuthStore();
   const navigate = useNavigate();
+  const hasSession = isAuthenticated || Boolean(user && token);
 
-  if (isAuthenticated && user) {
+  if (hasSession && user) {
     if (user.role === 'admin') return <Navigate to="/admin" replace />;
     if (user.role === 'mentor') return <Navigate to="/mentor-dashboard" replace />;
     return <Navigate to="/dashboard" replace />;
@@ -21,6 +22,12 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+
+    if (!navigator.onLine) {
+      setError("You're offline. Connect to the internet to sign in.");
+      return;
+    }
+
     setLoading(true);
     try {
       const { data } = await api.post("/auth/login", form);
@@ -33,7 +40,12 @@ export default function Login() {
         navigate('/dashboard');
       }
     } catch (err) {
-      setError(err.response?.data?.message || "Login failed. Please try again.");
+      const isNetworkError = err.code === 'ERR_NETWORK' || err.code === 'ECONNABORTED' || !err.response;
+      setError(
+        isNetworkError
+          ? "Cannot reach server. Check your internet or backend connection and try again."
+          : (err.response?.data?.message || "Login failed. Please try again.")
+      );
     } finally {
       setLoading(false);
     }

@@ -43,12 +43,13 @@ const languages = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const { isAuthenticated, user, logout } = useAuthStore();
+  const { isAuthenticated, user, token, logout } = useAuthStore();
   const { language, setLanguage } = useLanguageStore();
   const navigate = useNavigate();
+  const hasSession = isAuthenticated || Boolean(user && token);
   const role = user?.role || 'student';
 
-  const logoPath = !isAuthenticated ? '/' :
+  const logoPath = !hasSession ? '/' :
     role === 'mentor' ? '/mentor-dashboard' :
     role === 'admin' ? '/admin' : '/dashboard';
 
@@ -68,7 +69,7 @@ export default function Navbar() {
   };
 
   const fetchUnreadChats = async () => {
-    if (role !== 'mentor' || !isAuthenticated || !user) {
+    if (role !== 'mentor' || !hasSession || !user) {
       setUnreadChats(0);
       return;
     }
@@ -109,7 +110,7 @@ export default function Navbar() {
 
   // ── Socket: register user + listen for mentorship notifications ───────────
   useEffect(() => {
-    if (!isAuthenticated || !user) return;
+    if (!hasSession || !user) return;
     const userId = user.id || user._id;
     if (!userId) return;
 
@@ -136,7 +137,7 @@ export default function Navbar() {
     });
 
     return () => socket.disconnect();
-  }, [isAuthenticated, user?.id || user?._id]);
+  }, [hasSession, user?.id || user?._id]);
 
   // ── Initial + polling fetch of pending count for mentor (every 15s) ────────
   useEffect(() => {
@@ -164,7 +165,7 @@ export default function Navbar() {
       window.removeEventListener('storage', onStorage);
       window.removeEventListener('chat-lastseen-updated', onSeenUpdated);
     };
-  }, [role, isAuthenticated, user?.id, user?._id]);
+  }, [role, hasSession, user?.id, user?._id]);
 
   useEffect(() => {
     const onBeforeInstallPrompt = (event) => {
@@ -197,7 +198,7 @@ export default function Navbar() {
     }
   };
 
-  const baseLinks = !isAuthenticated ? [] : role === 'mentor' ? mentorLinks : role === 'admin' ? adminLinks : studentLinks;
+  const baseLinks = !hasSession ? [] : role === 'mentor' ? mentorLinks : role === 'admin' ? adminLinks : studentLinks;
   const navLinks = role === 'mentor'
     ? baseLinks.map(link => {
         if (link.label === 'Requests') return { ...link, badge: pendingRequests };
