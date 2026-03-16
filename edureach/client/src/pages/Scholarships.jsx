@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Search, ChevronDown, CheckCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import api from "../services/api";
 import useAuthStore from "../store/authStore";
@@ -261,9 +261,9 @@ export default function Scholarships() {
                       {/* Tags */}
                       {tags.length > 0 && (
                         <div className="flex flex-wrap gap-1.5 mb-4">
-                          {tags.slice(0, 4).map((tag) => (
+                          {tags.slice(0, 4).map((tag, i) => (
                             <span
-                              key={tag}
+                              key={`${tag}-${i}`}
                               className={`text-[11px] font-medium px-2.5 py-0.5 rounded-full ${tagStyle(tag)}`}
                             >
                               {tag}

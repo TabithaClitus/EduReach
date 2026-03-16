@@ -1,6 +1,33 @@
-import { useState } from 'react';
+import { useState, useEffect, Component } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error("Admin Tab Error:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{ padding: 24, background: '#FEE2E2', color: '#991B1B', borderRadius: 14, border: '1px solid #FCA5A5' }}>
+          <h3 style={{ margin: '0 0 8px' }}>Something went wrong.</h3>
+          <p style={{ margin: 0, fontSize: 13, fontFamily: 'monospace' }}>{this.state.error?.toString()}</p>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 // ── Shared helpers ────────────────────────────────────────────────────────────
 function Avatar({ initials, bg = '#EDE9FE', color = '#7C3AED', size = 40 }) {
@@ -565,11 +592,11 @@ function ScholarshipsTab() {
             <p style={{ fontSize: 13, color: '#94A3B8' }}>No scholarships found.</p>
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12, maxHeight: 600, overflowY: 'auto', overflowX: 'hidden', paddingRight: 4 }}>
-              {items.map((sch) => (
-                <div key={sch._id} style={{ border: '1px solid #E2E8F0', borderRadius: 10, padding: '14px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16 }}>
+              {items.map((sch, i) => (
+                <div key={sch?._id || i} style={{ border: '1px solid #E2E8F0', borderRadius: 10, padding: '14px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16 }}>
                   <div style={{ minWidth: 0, flex: 1 }}>
-                    <p style={{ margin: 0, fontSize: 14, fontWeight: 700, color: '#0F172A', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{sch.title}</p>
-                    <p style={{ margin: '4px 0 0', fontSize: 13, color: '#64748B' }}>{sch.provider || 'Provider not set'}</p>
+                    <p style={{ margin: 0, fontSize: 14, fontWeight: 700, color: '#0F172A', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{sch?.title || 'Unknown Scholarship'}</p>
+                    <p style={{ margin: '4px 0 0', fontSize: 13, color: '#64748B' }}>{sch?.provider || 'Provider not set'}</p>
                   </div>
                   <div style={{ display: 'flex', gap: 8 }}>
                     <button
@@ -579,11 +606,11 @@ function ScholarshipsTab() {
                       Edit
                     </button>
                     <button
-                      onClick={() => onDelete(sch._id)}
-                      disabled={deletingId === sch._id}
-                      style={{ padding: '8px 14px', flexShrink: 0, border: 'none', borderRadius: 8, background: '#FEE2E2', color: '#991B1B', fontSize: 13, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap', opacity: deletingId === sch._id ? 0.7 : 1 }}
+                      onClick={() => sch && onDelete(sch._id)}
+                      disabled={sch && deletingId === sch._id}
+                      style={{ padding: '8px 14px', flexShrink: 0, border: 'none', borderRadius: 8, background: '#FEE2E2', color: '#991B1B', fontSize: 13, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap', opacity: (sch && deletingId === sch._id) ? 0.7 : 1 }}
                     >
-                      {deletingId === sch._id ? 'Deleting...' : 'Delete'}
+                      {(sch && deletingId === sch._id) ? 'Deleting...' : 'Delete'}
                     </button>
                   </div>
                 </div>
@@ -776,11 +803,13 @@ export default function Admin() {
         </div>
 
         {/* Tab content */}
-        {activeTab === 'overview' && <OverviewTab />}
-        {activeTab === 'users'    && <UsersTab />}
-        {activeTab === 'scholarships' && <ScholarshipsTab />}
-        {activeTab === 'mentors'  && <MentorsTab />}
-        {activeTab === 'reports'  && <ReportsTab />}
+        <ErrorBoundary>
+          {activeTab === 'overview' && <OverviewTab />}
+          {activeTab === 'users'    && <UsersTab />}
+          {activeTab === 'scholarships' && <ScholarshipsTab />}
+          {activeTab === 'mentors'  && <MentorsTab />}
+          {activeTab === 'reports'  && <ReportsTab />}
+        </ErrorBoundary>
       </div>
     </div>
   );
