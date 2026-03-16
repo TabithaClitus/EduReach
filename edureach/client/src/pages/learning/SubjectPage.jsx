@@ -205,11 +205,71 @@ const class5Subjects = [
     },
 ];
 
+// Class 6 subjects (English, Mathematics, Science, Social Studies, Computer Science)
+const class6Subjects = [
+    {
+        id: 'maths',
+        name: 'Mathematics',
+        description: 'Dive into algebra, integers, fractions, decimals, geometry, and data handling in depth.',
+        icon: '➕✖️',
+        emoji: '🔢',
+        bgColor: '#FFF3E0',
+        iconBg: '#FFE0B2',
+        accentColor: '#FF9800',
+        buttonGradient: 'linear-gradient(135deg, #FF9800 0%, #F57C00 100%)',
+    },
+    {
+        id: 'science',
+        name: 'Science',
+        description: 'Explore light and shadows, electricity, living organisms, and their surroundings.',
+        icon: '🔬',
+        emoji: '🔬',
+        bgColor: '#E8F5E9',
+        iconBg: '#C8E6C9',
+        accentColor: '#4CAF50',
+        buttonGradient: 'linear-gradient(135deg, #66BB6A 0%, #43A047 100%)',
+    },
+    {
+        id: 'social',
+        name: 'Social Studies',
+        description: 'Learn about ancient history, our earth, diversity, and local government functions.',
+        icon: '🗺️',
+        emoji: '🌍',
+        bgColor: '#FFF8E1',
+        iconBg: '#FFECB3',
+        accentColor: '#FFA000',
+        buttonGradient: 'linear-gradient(135deg, #FFB300 0%, #FF8F00 100%)',
+    },
+    {
+        id: 'english',
+        name: 'English',
+        description: 'Enhance your literature and grammar skills with complex stories, poems, and exercises.',
+        icon: '📖',
+        emoji: '📚',
+        bgColor: '#E3F2FD',
+        iconBg: '#BBDEFB',
+        accentColor: '#2196F3',
+        buttonGradient: 'linear-gradient(135deg, #42A5F5 0%, #1E88E5 100%)',
+    },
+    {
+        id: 'computers',
+        name: 'Computer Science',
+        description: 'Learn advanced computer concepts, introduction to internet, and basic programming.',
+        icon: '💻',
+        emoji: '💻',
+        bgColor: '#EDE7F6',
+        iconBg: '#D1C4E9',
+        accentColor: '#673AB7',
+        buttonGradient: 'linear-gradient(135deg, #7E57C2 0%, #5E35B1 100%)',
+    },
+];
+
 // Function to get subjects based on class
 const getSubjectsForClass = (classId) => {
     if (classId === '3') return class3Subjects;
     if (classId === '4') return class4Subjects;
     if (classId === '5') return class5Subjects;
+    if (classId === '6') return class6Subjects;
     return baseSubjects;
 };
 
