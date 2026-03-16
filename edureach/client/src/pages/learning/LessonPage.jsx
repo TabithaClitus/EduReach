@@ -6278,6 +6278,727 @@ const lessonData = {
         ],
         summaryEnd: 'Well done! You have learned data handling with tables, bar graphs, and pie charts!',
         nextLesson: null
+    },
+
+    '5-plants-and-their-functions': {
+        title: 'Plants and Their Functions',
+        subtitle: 'Learn about plant parts, photosynthesis, and how plants grow and survive.',
+        videoSubtitle: 'Watch these videos to learn about plants and their functions!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/v6YhghG7mzQ?si=OLolXCQfqww088J2', title: 'Plants and Their Parts', thumb: 'https://img.youtube.com/vi/v6YhghG7mzQ/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/18amLZ9vfG8?si=ViwcKKFeUWoZWBqs', title: 'Plant Functions and Photosynthesis', thumb: 'https://img.youtube.com/vi/18amLZ9vfG8/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Which part of the plant absorbs water from the soil?', visual: '🌿', options: ['Stem', 'Roots', 'Leaves', 'Flower'], correct: 1 },
+            { question: 'Which part of the plant makes food?', visual: '🍃', options: ['Roots', 'Stem', 'Leaves', 'Fruit'], correct: 2 },
+            { question: 'The process by which plants make food is called', visual: '🌱', options: ['Digestion', 'Photosynthesis', 'Respiration', 'Circulation'], correct: 1 },
+            { question: 'Which gas do plants release during photosynthesis?', visual: '💨', options: ['Carbon dioxide', 'Nitrogen', 'Oxygen', 'Hydrogen'], correct: 2 },
+            { question: 'Which part of the plant supports it and carries water?', visual: '🌿', options: ['Stem', 'Leaf', 'Flower', 'Seed'], correct: 0 },
+            { question: 'Which part of the plant helps in reproduction?', visual: '🌸', options: ['Roots', 'Leaves', 'Flowers', 'Stem'], correct: 2 },
+            { question: 'Seeds grow into', visual: '🌱', options: ['Fruits', 'New plants', 'Leaves', 'Roots'], correct: 1 },
+            { question: 'What do plants need for photosynthesis?', visual: '☀️', options: ['Sunlight', 'Water', 'Carbon dioxide', 'All of these'], correct: 3 },
+            { question: 'Which of the following stores food?', visual: '🥕', options: ['Root', 'Stem', 'Fruit', 'All of these'], correct: 3 },
+            { question: 'Which of the following is necessary for plant growth?', visual: '🌿', options: ['Sunlight', 'Water', 'Air', 'All of these'], correct: 3 }
+        ],
+        summary: [
+            'Plants have roots, stem, leaves, flowers, and fruits; each part has a special function.',
+            'Leaves make food through photosynthesis using sunlight, water, and carbon dioxide.',
+            'Roots absorb water and minerals; the stem supports and transports nutrients.',
+            'Flowers help in reproduction; seeds grow into new plants.'
+        ],
+        summaryEnd: 'Great job! You have learned about plants and their functions!',
+        nextLesson: { id: 'animals-and-their-habitats', title: 'Animals and Their Habitats' }
+    },
+
+    '5-animals-and-their-habitats': {
+        title: 'Animals and Their Habitats',
+        subtitle: 'Discover different types of animals and the habitats where they live.',
+        videoSubtitle: 'Watch these videos to learn about animals and their habitats!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/5hFoZq0qgrM?si=vP0m1uhTFWvE722f', title: 'Animals and Their Homes', thumb: 'https://img.youtube.com/vi/5hFoZq0qgrM/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/luYp9AvVEI0?si=-wiiG74mVNWcGfCl', title: 'Habitats and Adaptations', thumb: 'https://img.youtube.com/vi/luYp9AvVEI0/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'The natural home of an animal is called', visual: '🏠', options: ['Shelter', 'Habitat', 'Nest', 'Forest'], correct: 1 },
+            { question: 'Which animal lives in the desert?', visual: '🏜️', options: ['Camel', 'Penguin', 'Dolphin', 'Polar bear'], correct: 0 },
+            { question: 'Which animal lives in water?', visual: '🌊', options: ['Tiger', 'Fish', 'Elephant', 'Horse'], correct: 1 },
+            { question: 'Which animal lives in polar regions?', visual: '❄️', options: ['Camel', 'Lion', 'Polar bear', 'Tiger'], correct: 2 },
+            { question: 'Amphibians can live', visual: '🐸', options: ['only on land', 'only in water', 'both on land and in water', 'in trees only'], correct: 2 },
+            { question: 'Fish breathe using', visual: '🐟', options: ['lungs', 'gills', 'skin', 'wings'], correct: 1 },
+            { question: 'Which habitat has many trees and plants?', visual: '🌳', options: ['Desert', 'Forest', 'Ocean', 'Polar region'], correct: 1 },
+            { question: 'Adaptations help animals', visual: '🦊', options: ['sleep', 'survive in their environment', 'change color only', 'fly always'], correct: 1 },
+            { question: 'Penguins live in', visual: '🐧', options: ['deserts', 'forests', 'polar regions', 'rivers'], correct: 2 },
+            { question: 'Which animal is an amphibian?', visual: '🐸', options: ['Frog', 'Lion', 'Eagle', 'Tiger'], correct: 0 }
+        ],
+        summary: [
+            'A habitat is the natural home where an animal lives and finds food, water, air, and shelter.',
+            'Different types of animals live on land, in water, in forests, deserts, polar regions, and other habitats.',
+            'Animals have special adaptations, like thick fur, gills, or humps, to survive in their habitats.',
+            'Protecting habitats helps animals survive and keeps nature balanced.'
+        ],
+        summaryEnd: 'Excellent! You have learned about animals and their habitats!',
+        nextLesson: { id: 'human-body-systems', title: 'Human Body Systems' }
+    },
+
+    '5-human-body-systems': {
+        title: 'Human Body Systems',
+        subtitle: 'Learn about major body systems and how they work together to keep us healthy.',
+        videoSubtitle: 'Watch these videos to understand human body systems!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/uIQe-RA17ek?si=oR7k98in83bqDeof', title: 'Human Body Systems Overview', thumb: 'https://img.youtube.com/vi/uIQe-RA17ek/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/KQOgN9reko8?si=7yMrROkhPylwQ63q', title: 'Organs and Systems of the Body', thumb: 'https://img.youtube.com/vi/KQOgN9reko8/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'The skeletal system is made up of', visual: '🦴', options: ['muscles', 'bones', 'organs', 'nerves'], correct: 1 },
+            { question: 'Which organ protects the brain?', visual: '🧠', options: ['Rib cage', 'Skull', 'Spine', 'Heart'], correct: 1 },
+            { question: 'Digestion begins in the', visual: '🍽️', options: ['stomach', 'mouth', 'intestine', 'lungs'], correct: 1 },
+            { question: 'Which organ pumps blood through the body?', visual: '❤️', options: ['Brain', 'Heart', 'Lungs', 'Stomach'], correct: 1 },
+            { question: 'Which system helps us breathe?', visual: '🌬️', options: ['Digestive system', 'Respiratory system', 'Circulatory system', 'Skeletal system'], correct: 1 },
+            { question: 'The lungs are part of the', visual: '🫁', options: ['circulatory system', 'digestive system', 'respiratory system', 'skeletal system'], correct: 2 },
+            { question: 'Which system carries oxygen and nutrients through the body?', visual: '🩸', options: ['Circulatory system', 'Digestive system', 'Skeletal system', 'Nervous system'], correct: 0 },
+            { question: 'The rib cage protects the', visual: '🫀', options: ['brain', 'lungs and heart', 'stomach', 'legs'], correct: 1 },
+            { question: 'The tube that carries food to the stomach is called', visual: '🧵', options: ['intestine', 'esophagus', 'lungs', 'artery'], correct: 1 },
+            { question: 'The adult human body has about', visual: '🦴', options: ['150 bones', '206 bones', '250 bones', '300 bones'], correct: 1 }
+        ],
+        summary: [
+            'Body systems are groups of organs that work together to perform special tasks.',
+            'The skeletal system gives shape, supports the body, and protects important organs.',
+            'The digestive system breaks down food into nutrients; the respiratory system helps us breathe.',
+            'The circulatory system carries oxygen and nutrients around the body; all systems work together to keep us healthy.'
+        ],
+        summaryEnd: 'Great job! You have learned about the main human body systems!',
+        nextLesson: { id: 'food-and-nutrition', title: 'Food and Nutrition' }
+    },
+
+    '5-food-and-nutrition': {
+        title: 'Food and Nutrition',
+        subtitle: 'Understand nutrients, balanced diet, and healthy eating habits.',
+        videoSubtitle: 'Watch these videos to learn about food and nutrition!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/a-084pqI05U?si=fsyDXRc5zKliGSPm', title: 'Food and Nutrients', thumb: 'https://img.youtube.com/vi/a-084pqI05U/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/EhfOZMOF9W4?si=m7ExAeIwPnD8lVfd', title: 'Balanced Diet and Healthy Eating', thumb: 'https://img.youtube.com/vi/EhfOZMOF9W4/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Food gives us', visual: '🍎', options: ['energy', 'light', 'sound', 'heat'], correct: 0 },
+            { question: 'The main source of energy for the body is', visual: '🍚', options: ['proteins', 'carbohydrates', 'vitamins', 'minerals'], correct: 1 },
+            { question: 'Which nutrient helps build muscles?', visual: '💪', options: ['Proteins', 'Fats', 'Vitamins', 'Minerals'], correct: 0 },
+            { question: 'Which nutrient keeps the body warm?', visual: '🧈', options: ['Proteins', 'Fats', 'Vitamins', 'Minerals'], correct: 1 },
+            { question: 'Which vitamin is good for eyesight?', visual: '🥕', options: ['Vitamin A', 'Vitamin B', 'Vitamin C', 'Vitamin D'], correct: 0 },
+            { question: 'Calcium helps build strong', visual: '🦷', options: ['muscles', 'bones and teeth', 'skin', 'hair'], correct: 1 },
+            { question: 'Which of the following is rich in protein?', visual: '🥚', options: ['Rice', 'Eggs', 'Bread', 'Sugar'], correct: 1 },
+            { question: 'A diet that contains all nutrients in the right amount is called', visual: '🥗', options: ['junk diet', 'balanced diet', 'liquid diet', 'sweet diet'], correct: 1 },
+            { question: 'Fruits and vegetables are rich in', visual: '🍊', options: ['vitamins and minerals', 'fats', 'sugar', 'salt'], correct: 0 },
+            { question: 'Which habit helps keep us healthy?', visual: '💧', options: ['Eating junk food every day', 'Drinking plenty of water', 'Skipping meals', 'Eating only sweets'], correct: 1 }
+        ],
+        summary: [
+            'Nutrients like carbohydrates, proteins, fats, vitamins, and minerals keep our body healthy and strong.',
+            'Carbohydrates give energy; proteins build and repair muscles; fats provide energy and keep us warm.',
+            'Vitamins and minerals protect us from diseases and build strong bones and teeth.',
+            'A balanced diet and healthy eating habits help children grow properly and stay active.'
+        ],
+        summaryEnd: 'Excellent! You have learned about food, nutrients, and healthy eating!',
+        nextLesson: { id: 'matter-and-its-states', title: 'Matter and Its States' }
+    },
+
+    '5-matter-and-its-states': {
+        title: 'Matter and Its States',
+        subtitle: 'Learn about solids, liquids, gases, and how matter changes from one state to another.',
+        videoSubtitle: 'Watch these videos to understand matter and its states!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/DE3LCPfP8N8?si=NIQM29tOMA66yMaU', title: 'States of Matter', thumb: 'https://img.youtube.com/vi/DE3LCPfP8N8/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/vNvElea-124?si=g0k8jlEBdVY30U_V', title: 'Solids, Liquids, and Gases', thumb: 'https://img.youtube.com/vi/vNvElea-124/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Matter is anything that', visual: '⚛️', options: ['has color only', 'has mass and occupies space', 'is invisible', 'is solid only'], correct: 1 },
+            { question: 'Which state of matter has a fixed shape and volume?', visual: '📦', options: ['Solid', 'Liquid', 'Gas', 'Air'], correct: 0 },
+            { question: 'Which state of matter takes the shape of its container?', visual: '🥤', options: ['Solid', 'Liquid', 'Gas', 'Stone'], correct: 1 },
+            { question: 'Which state of matter spreads out to fill all available space?', visual: '💨', options: ['Solid', 'Liquid', 'Gas', 'Ice'], correct: 2 },
+            { question: 'When ice melts, it changes into', visual: '🧊', options: ['gas', 'liquid water', 'air', 'solid'], correct: 1 },
+            { question: 'The process in which water changes into vapor is called', visual: '🌡️', options: ['freezing', 'evaporation', 'melting', 'condensation'], correct: 1 },
+            { question: 'When water freezes, it becomes', visual: '❄️', options: ['ice', 'vapor', 'air', 'steam'], correct: 0 },
+            { question: 'Which of the following is a gas?', visual: '💨', options: ['Milk', 'Air', 'Ice', 'Stone'], correct: 1 },
+            { question: 'Which process changes gas into liquid?', visual: '💧', options: ['Evaporation', 'Condensation', 'Melting', 'Freezing'], correct: 1 },
+            { question: 'Steam is an example of', visual: '🌫️', options: ['solid', 'liquid', 'gas', 'ice'], correct: 2 }
+        ],
+        summary: [
+            'Matter is anything that has mass and occupies space and exists mainly as solids, liquids, or gases.',
+            'Solids have a fixed shape and volume; liquids have fixed volume but no fixed shape; gases have neither fixed shape nor fixed volume.',
+            'Heating and cooling can change matter from one state to another through melting, freezing, evaporation, and condensation.',
+            'Water is a common example that exists as ice (solid), water (liquid), and water vapor (gas).'
+        ],
+        summaryEnd: 'Well done! You have learned about matter and its three main states!',
+        nextLesson: { id: 'force-motion-and-energy', title: 'Force, Motion, and Energy' }
+    },
+
+    '5-force-motion-and-energy': {
+        title: 'Force, Motion, and Energy',
+        subtitle: 'Understand force as push or pull, different types of motion, simple machines, and basic forms of energy.',
+        videoSubtitle: 'Watch these videos to explore force, motion, and energy!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/IaCVUKEJ3Lc?si=N6hlBe3M1xLQ-bN1', title: 'Force and Motion Basics', thumb: 'https://img.youtube.com/vi/IaCVUKEJ3Lc/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/hh3OOGFVSiw?si=iPsqbEDBabo9fY43', title: 'Simple Machines and Energy', thumb: 'https://img.youtube.com/vi/hh3OOGFVSiw/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A push or pull is called', visual: '🤚', options: ['motion', 'force', 'energy', 'speed'], correct: 1 },
+            { question: 'Motion means', visual: '🚶', options: ['rest', 'movement', 'weight', 'energy'], correct: 1 },
+            { question: 'Which of the following is an example of force?', visual: '🚪', options: ['Sleeping', 'Pushing a door', 'Reading', 'Listening'], correct: 1 },
+            { question: 'A bicycle wheel is an example of', visual: '🚲', options: ['lever', 'pulley', 'wheel and axle', 'inclined plane'], correct: 2 },
+            { question: 'Which motion repeats again and again?', visual: '⏰', options: ['Straight motion', 'Circular motion', 'Periodic motion', 'Slow motion'], correct: 2 },
+            { question: 'Energy is the ability to', visual: '⚡', options: ['sleep', 'do work', 'stand', 'rest'], correct: 1 },
+            { question: 'The Sun provides', visual: '🌞', options: ['heat and light energy', 'sound energy', 'electrical energy', 'chemical energy'], correct: 0 },
+            { question: 'Which simple machine helps lift heavy objects?', visual: '🔧', options: ['Lever', 'Wheel', 'Screw', 'Axle'], correct: 0 },
+            { question: 'A swinging pendulum shows', visual: '🕰️', options: ['straight motion', 'circular motion', 'periodic motion', 'random motion'], correct: 2 },
+            { question: 'Which energy helps us see objects?', visual: '💡', options: ['Sound energy', 'Heat energy', 'Light energy', 'Wind energy'], correct: 2 }
+        ],
+        summary: [
+            'Force is a push or pull that can move, stop, or change the direction or shape of an object.',
+            'Motion is the movement of an object; it can be straight-line, circular, or periodic.',
+            'Simple machines like levers, pulleys, and wheels help us do work more easily.',
+            'Energy is the ability to do work and exists in many forms such as heat, light, sound, and electrical energy.'
+        ],
+        summaryEnd: 'Great job! You have learned the basics of force, motion, simple machines, and energy!',
+        nextLesson: { id: 'earth-and-space', title: 'Earth and Space' }
+    },
+
+    '5-earth-and-space': {
+        title: 'Earth and Space',
+        subtitle: 'Explore our solar system, Earth’s movements, the Moon, and space phenomena.',
+        videoSubtitle: 'Watch these videos to learn about Earth and space!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/6SzjlsuyTdk?si=Wup9ECk_8a7O6bnq', title: 'Solar System and Earth', thumb: 'https://img.youtube.com/vi/6SzjlsuyTdk/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/riMAITbLqZI?si=35lh3Osxf9l8dOly', title: 'Day, Night and Seasons', thumb: 'https://img.youtube.com/vi/riMAITbLqZI/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Earth is the ____ planet from the Sun.', visual: '🌍', options: ['second', 'third', 'fourth', 'fifth'], correct: 1 },
+            { question: 'The Sun is a', visual: '🌞', options: ['planet', 'star', 'satellite', 'comet'], correct: 1 },
+            { question: 'One rotation of the Earth takes about', visual: '🕒', options: ['12 hours', '24 hours', '30 days', '365 days'], correct: 1 },
+            { question: 'Earth’s revolution around the Sun takes about', visual: '🌞', options: ['30 days', '24 hours', '365 days', '12 months only'], correct: 2 },
+            { question: 'The natural satellite of Earth is', visual: '🌙', options: ['Mars', 'Sun', 'Moon', 'Jupiter'], correct: 2 },
+            { question: 'When the Moon comes between the Earth and the Sun, it causes', visual: '🌑', options: ['lunar eclipse', 'solar eclipse', 'rainfall', 'earthquake'], correct: 1 },
+            { question: 'The largest planet in our solar system is', visual: '🪐', options: ['Earth', 'Jupiter', 'Saturn', 'Mars'], correct: 1 },
+            { question: 'The path in which planets move around the Sun is called', visual: '🌀', options: ['axis', 'orbit', 'pathline', 'ring'], correct: 1 },
+            { question: 'The spinning movement of the Earth is called', visual: '🌀', options: ['revolution', 'rotation', 'motion', 'orbit'], correct: 1 },
+            { question: 'Seasons are mainly caused by', visual: '🍂', options: ['Earth’s revolution around the Sun', 'Earth’s rotation only', 'the Moon', 'the stars'], correct: 0 }
+        ],
+        summary: [
+            'The solar system includes the Sun, eight planets, and many other objects that orbit the Sun.',
+            'Earth is the third planet from the Sun and is the only known planet to support life.',
+            'Earth’s rotation causes day and night, while its revolution and tilted axis cause seasons.',
+            'The Moon is Earth’s natural satellite, and eclipses and other phenomena occur due to the positions of Earth, Moon, and Sun.'
+        ],
+        summaryEnd: 'Excellent! You have explored Earth, the solar system, and space phenomena!',
+        nextLesson: { id: 'environment-and-conservation', title: 'Environment and Conservation' }
+    },
+
+    '5-environment-and-conservation': {
+        title: 'Environment and Conservation',
+        subtitle: 'Learn about our environment, pollution, deforestation, and how to protect nature.',
+        videoSubtitle: 'Watch these videos to understand environment and conservation!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/yEBFGh-iyqw?si=lObNPFnWqFHVIgD4', title: 'Our Environment', thumb: 'https://img.youtube.com/vi/yEBFGh-iyqw/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/X2YgM1Zw4_E?si=JMDoK3vSbzIpphz_', title: 'Pollution and Conservation', thumb: 'https://img.youtube.com/vi/X2YgM1Zw4_E/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'The environment includes', visual: '🌎', options: ['plants and animals only', 'living and non-living things', 'humans only', 'water only'], correct: 1 },
+            { question: 'Smoke from vehicles causes', visual: '🚗', options: ['water pollution', 'air pollution', 'land pollution', 'noise pollution'], correct: 1 },
+            { question: 'Cutting down large numbers of trees is called', visual: '🌳', options: ['irrigation', 'deforestation', 'cultivation', 'pollution'], correct: 1 },
+            { question: 'Which of the following helps protect the environment?', visual: '🌱', options: ['Planting trees', 'Throwing garbage on roads', 'Cutting forests', 'Burning plastic'], correct: 0 },
+            { question: 'Which pollution affects rivers and lakes?', visual: '🌊', options: ['Air pollution', 'Land pollution', 'Water pollution', 'Noise pollution'], correct: 2 },
+            { question: 'The three R’s stand for', visual: '♻️', options: ['Reduce, Reuse, Recycle', 'Read, Write, Repeat', 'Run, Rest, Relax', 'Repair, Replace, Remove'], correct: 0 },
+            { question: 'Recycling helps to', visual: '♻️', options: ['increase waste', 'reduce waste', 'destroy resources', 'pollute the environment'], correct: 1 },
+            { question: 'Trees help by', visual: '🌳', options: ['releasing oxygen', 'polluting air', 'causing floods', 'reducing soil'], correct: 0 },
+            { question: 'Plastic waste mainly causes', visual: '🗑️', options: ['air pollution', 'land pollution', 'light pollution', 'sound pollution'], correct: 1 },
+            { question: 'Protecting the environment helps', visual: '🌍', options: ['animals only', 'plants only', 'humans only', 'all living things'], correct: 3 }
+        ],
+        summary: [
+            'The environment includes all living and non-living things around us, such as plants, animals, air, water, and soil.',
+            'Pollution and deforestation harm the environment and disturb the balance of nature.',
+            'Conservation means protecting natural resources using methods like Reduce, Reuse, and Recycle.',
+            'Planting trees, reducing plastic, saving water, and keeping surroundings clean help protect the environment for future generations.'
+        ],
+        summaryEnd: 'Wonderful! You have learned how to care for the environment and conserve our natural resources!',
+        nextLesson: null
+    },
+
+    '5-our-earth-and-the-solar-system': {
+        title: 'Our Earth and the Solar System',
+        subtitle: 'Learn about the Sun, Earth, Moon, and other planets in our solar system.',
+        videoSubtitle: 'Watch these videos to explore our Earth and the solar system!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/riMAITbLqZI?si=H5Q_LAtsQFZvqWhx', title: 'Solar System for Kids', thumb: 'https://img.youtube.com/vi/riMAITbLqZI/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/ErUZVWUP0c4?si=bPiTSvd0gmj2Lkxe', title: 'Planets of Our Solar System', thumb: 'https://img.youtube.com/vi/ErUZVWUP0c4/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/e8YzKyot4Pc?si=4xl7iE9hOr-HCRft', title: 'The Sun, Earth and Moon', thumb: 'https://img.youtube.com/vi/e8YzKyot4Pc/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'The center of the solar system is', visual: '☀️', options: ['Earth', 'Sun', 'Moon', 'Jupiter'], correct: 1 },
+            { question: 'Earth is the ____ planet from the Sun', visual: '🌍', options: ['second', 'third', 'fourth', 'fifth'], correct: 1 },
+            { question: 'The natural satellite of Earth is', visual: '🌙', options: ['Mars', 'Moon', 'Sun', 'Venus'], correct: 1 },
+            { question: 'How many planets are in the solar system?', visual: '🪐', options: ['7', '8', '9', '10'], correct: 1 },
+            { question: 'Which planet is the largest?', visual: '🪐', options: ['Earth', 'Mars', 'Jupiter', 'Venus'], correct: 2 },
+            { question: 'Which planet has famous rings?', visual: '💍', options: ['Saturn', 'Mercury', 'Mars', 'Neptune'], correct: 0 },
+            { question: 'The Sun provides', visual: '☀️', options: ['water', 'light and heat', 'air', 'soil'], correct: 1 },
+            { question: 'The path in which planets move around the Sun is called', visual: '🌀', options: ['orbit', 'axis', 'circle', 'pathline'], correct: 0 },
+            { question: 'Which object reflects sunlight and shines at night?', visual: '🌙', options: ['Sun', 'Moon', 'Mars', 'Jupiter'], correct: 1 },
+            { question: 'Asteroids are', visual: '☄️', options: ['large planets', 'small rocky objects in space', 'stars', 'moons'], correct: 1 }
+        ],
+        summary: [
+            'The solar system is a group of planets and other objects that revolve around the Sun.',
+            'The Sun is a star that provides light and heat, making life on Earth possible.',
+            'Earth is the third planet from the Sun and the only known planet to support life.',
+            'The Moon is Earth’s natural satellite and shows different phases as it orbits our planet.',
+            'There are eight planets in the solar system, each with different sizes and characteristics.',
+            'Other objects in space include asteroids, comets, and meteors.'
+        ],
+        summaryEnd: 'Great work! You have learned about our Earth, the Sun, the Moon, and the planets in our solar system!',
+        nextLesson: { id: 'maps-and-directions', title: 'Maps and Directions' }
+    },
+
+    '5-maps-and-directions': {
+        title: 'Maps and Directions',
+        subtitle: 'Learn how maps show places on Earth and how directions help us find our way.',
+        videoSubtitle: 'Watch these videos to understand maps, directions, and symbols!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/v2T5QYbvpBc?si=2cNpq6SIHn2ZAsOd', title: 'What is a Map?', thumb: 'https://img.youtube.com/vi/v2T5QYbvpBc/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/cwUuVdF8ohY?si=KpGeCHCDAj_H9Ojv', title: 'Directions and Compass', thumb: 'https://img.youtube.com/vi/cwUuVdF8ohY/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/Te0Td0QVoj0?si=7rc66CP_eO8i7Sc_', title: 'Map Symbols and Scale', thumb: 'https://img.youtube.com/vi/Te0Td0QVoj0/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A map is a', visual: '🗺️', options: ['picture of a person', 'drawing of the Earth or a part of it', 'type of machine', 'book of stories'], correct: 1 },
+            { question: 'The four main directions are', visual: '🧭', options: ['North, South, East, West', 'Up, Down, Left, Right', 'Front, Back, Side, Top', 'East, West, Left, Right'], correct: 0 },
+            { question: 'The tool used to find directions is', visual: '🧭', options: ['ruler', 'compass', 'clock', 'scale'], correct: 1 },
+            { question: 'A map that shows mountains and rivers is called', visual: '⛰️', options: ['political map', 'thematic map', 'physical map', 'road map'], correct: 2 },
+            { question: 'A map that shows countries and boundaries is called', visual: '🌍', options: ['political map', 'physical map', 'climate map', 'world map'], correct: 0 },
+            { question: 'The section that explains map symbols is called', visual: '📖', options: ['index', 'key or legend', 'title', 'scale'], correct: 1 },
+            { question: 'The direction of sunrise is', visual: '🌅', options: ['North', 'South', 'East', 'West'], correct: 2 },
+            { question: 'The opposite direction of North is', visual: '🧭', options: ['East', 'West', 'South', 'North-East'], correct: 2 },
+            { question: 'The scale of a map shows', visual: '📏', options: ['color of the map', 'distance relationship', 'map symbols', 'directions'], correct: 1 },
+            { question: 'Modern maps are often created using', visual: '🛰️', options: ['satellites', 'trees', 'rivers', 'roads'], correct: 0 }
+        ],
+        summary: [
+            'A map is a drawing of the Earth or part of it on a flat surface that shows locations and features.',
+            'There are different types of maps such as physical, political, and thematic maps.',
+            'Directions like North, South, East, and West help us find places, and a compass is used to locate them.',
+            'Map symbols and the legend explain what different signs on a map mean.',
+            'The scale of a map shows how distances on the map compare to real distances on the ground.'
+        ],
+        summaryEnd: 'Well done! You have learned how maps and directions help us find places and understand our world better!',
+        nextLesson: { id: 'landforms-and-water-bodies', title: 'Landforms and Water Bodies' }
+    },
+
+    '5-landforms-and-water-bodies': {
+        title: 'Landforms and Water Bodies',
+        subtitle: 'Explore mountains, plains, plateaus, valleys, and major water bodies on Earth.',
+        videoSubtitle: 'Watch these videos to learn about landforms and water bodies!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/QLhKCr_qTJU?si=NX1io5kAj5z1Vjq8', title: 'Landforms and Water Bodies', thumb: 'https://img.youtube.com/vi/QLhKCr_qTJU/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/bNWuQD7QHBc?si=pUdg9M8TCSQKki4V', title: 'Types of Water Bodies', thumb: 'https://img.youtube.com/vi/bNWuQD7QHBc/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'High areas of land with steep slopes are called', visual: '🏔️', options: ['plains', 'mountains', 'plateaus', 'valleys'], correct: 1 },
+            { question: 'Flat and fertile land is called', visual: '🌾', options: ['mountain', 'plateau', 'plain', 'valley'], correct: 2 },
+            { question: 'A plateau is also known as', visual: '🗻', options: ['high mountain', 'tableland', 'desert', 'valley'], correct: 1 },
+            { question: 'Rivers usually flow into', visual: '🌊', options: ['mountains', 'plains', 'seas or oceans', 'forests'], correct: 2 },
+            { question: 'Large bodies of water surrounded by land are called', visual: '🏞️', options: ['oceans', 'rivers', 'lakes', 'seas'], correct: 2 },
+            { question: 'The largest water bodies on Earth are', visual: '🌊', options: ['lakes', 'rivers', 'seas', 'oceans'], correct: 3 },
+            { question: 'The highest mountain range in the world is', visual: '🏔️', options: ['Andes', 'Alps', 'Himalayas', 'Rockies'], correct: 2 },
+            { question: 'Which water body flows continuously?', visual: '🏞️', options: ['lake', 'river', 'sea', 'ocean'], correct: 1 },
+            { question: 'Plateaus are important because they often contain', visual: '⛏️', options: ['forests', 'minerals', 'rivers', 'oceans'], correct: 1 },
+            { question: 'The Pacific Ocean is the', visual: '🌊', options: ['smallest ocean', 'largest ocean', 'coldest ocean', 'shallowest ocean'], correct: 1 }
+        ],
+        summary: [
+            'Landforms are natural features of land such as mountains, plains, plateaus, and valleys.',
+            'Mountains are high and steep; plains are flat and fertile; plateaus are tablelands; valleys are low areas between hills or mountains.',
+            'Water bodies include rivers, lakes, seas, and oceans; oceans are the largest and cover about 71% of Earth’s surface.',
+            'Landforms and water bodies support life, influence climate, and help humans in farming, transport, and trade.'
+        ],
+        summaryEnd: 'Great job! You have learned about major landforms and water bodies on Earth!',
+        nextLesson: { id: 'weather-and-climate', title: 'Weather and Climate' }
+    },
+
+    '5-weather-and-climate': {
+        title: 'Weather and Climate',
+        subtitle: 'Understand what weather and climate mean, how seasons change, and different climate types around the world.',
+        videoSubtitle: 'Watch these videos to learn about weather and climate!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/hY3sa68hpM8?si=q0SRWJUbxqrGaRJJ', title: 'Weather and Climate', thumb: 'https://img.youtube.com/vi/hY3sa68hpM8/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/0geUS_j3gis?si=WgqIui-p85cJOXRt', title: 'Climate Types and Seasons', thumb: 'https://img.youtube.com/vi/0geUS_j3gis/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Weather describes', visual: '☀️', options: ['long-term atmospheric conditions', 'daily atmospheric conditions', 'only rainfall', 'only temperature'], correct: 1 },
+            { question: 'Climate refers to', visual: '🌍', options: ['day-to-day weather', 'average weather over many years', 'rainfall only', 'wind speed only'], correct: 1 },
+            { question: 'Which season is usually the hottest?', visual: '🌞', options: ['Winter', 'Summer', 'Spring', 'Rainy season'], correct: 1 },
+            { question: 'Which season usually has heavy rainfall?', visual: '🌧️', options: ['Summer', 'Winter', 'Rainy season', 'Spring'], correct: 2 },
+            { question: 'Extremely cold regions near the poles have', visual: '❄️', options: ['tropical climate', 'desert climate', 'polar climate', 'temperate climate'], correct: 2 },
+            { question: 'Very hot regions with little rainfall have', visual: '🏜️', options: ['desert climate', 'polar climate', 'tropical climate', 'temperate climate'], correct: 0 },
+            { question: 'Seasons occur because of Earth\'s', visual: '🌀', options: ['size', 'revolution and tilted axis', 'oceans', 'clouds'], correct: 1 },
+            { question: 'Which of the following is part of weather?', visual: '🌡️', options: ['temperature', 'rainfall', 'wind', 'all of these'], correct: 3 },
+            { question: 'Tropical regions are usually', visual: '🌴', options: ['cold and dry', 'hot and rainy', 'cold and snowy', 'dry and windy'], correct: 1 },
+            { question: 'Farmers study weather mainly to', visual: '🌾', options: ['choose crops and planting time', 'build houses', 'travel', 'study stars'], correct: 0 }
+        ],
+        summary: [
+            'Weather is the day-to-day condition of the atmosphere, while climate is the average weather over many years.',
+            'Elements of weather include temperature, rainfall, wind, clouds, and humidity.',
+            'The four main seasons are summer, winter, rainy season (monsoon), and spring.',
+            'Different climate types include tropical, desert, polar, and temperate climates.',
+            'Factors like distance from the equator, altitude, and nearness to oceans affect climate.',
+            'Understanding weather and climate helps farmers, scientists, and people prepare for different conditions.'
+        ],
+        summaryEnd: 'Excellent! You have learned about weather, climate, seasons, and climate types around the world!',
+        nextLesson: { id: 'natural-resources', title: 'Natural Resources' }
+    },
+
+    '5-natural-resources': {
+        title: 'Natural Resources',
+        subtitle: 'Learn about valuable materials from nature such as air, water, soil, minerals, and forests, and why we must conserve them.',
+        videoSubtitle: 'Watch these videos to learn about natural resources!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/ajk-pvm5vfQ?si=UrSxDyUjdJaJ1dFC', title: 'Natural Resources', thumb: 'https://img.youtube.com/vi/ajk-pvm5vfQ/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/CXCT2R1K6Ts?si=Z1WV52Rz1c-L7vRo', title: 'Conservation of Resources', thumb: 'https://img.youtube.com/vi/CXCT2R1K6Ts/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Natural resources are', visual: '🌍', options: ['man-made objects', 'materials found in nature', 'machines', 'buildings'], correct: 1 },
+            { question: 'Which natural resource is necessary for breathing?', visual: '💨', options: ['soil', 'air', 'minerals', 'forests'], correct: 1 },
+            { question: 'Which natural resource is used for drinking and farming?', visual: '💧', options: ['air', 'water', 'minerals', 'sunlight'], correct: 1 },
+            { question: 'Soil helps plants by providing', visual: '🌱', options: ['electricity', 'nutrients', 'machines', 'light'], correct: 1 },
+            { question: 'Which of the following is a mineral?', visual: '⛏️', options: ['iron', 'water', 'air', 'soil'], correct: 0 },
+            { question: 'Forests provide', visual: '🌳', options: ['oxygen', 'food', 'shelter for animals', 'all of these'], correct: 3 },
+            { question: 'Which of the following helps conserve natural resources?', visual: '♻️', options: ['planting trees', 'wasting water', 'polluting rivers', 'cutting forests'], correct: 0 },
+            { question: 'Trees help the environment by', visual: '🌲', options: ['producing oxygen', 'polluting air', 'reducing rainfall', 'destroying habitats'], correct: 0 },
+            { question: 'Minerals are mainly used for', visual: '🔧', options: ['building and manufacturing', 'breathing', 'drinking', 'farming'], correct: 0 },
+            { question: 'Which action protects natural resources?', visual: '🌎', options: ['recycling', 'polluting water', 'wasting electricity', 'cutting trees unnecessarily'], correct: 0 }
+        ],
+        summary: [
+            'Natural resources are materials found in nature that are useful to living things, including air, water, soil, minerals, and forests.',
+            'Air provides oxygen for breathing; water is essential for drinking, farming, and cleaning.',
+            'Soil provides nutrients for plant growth; minerals like iron and copper are used in industries.',
+            'Forests provide oxygen, wood, medicines, and habitats for wildlife.',
+            'Conservation means using resources wisely through planting trees, reducing waste, and recycling.',
+            'Natural resources support life, provide raw materials, help grow food, and maintain environmental balance.'
+        ],
+        summaryEnd: 'Great job! You have learned about natural resources and how to conserve them for future generations!',
+        nextLesson: { id: 'our-government', title: 'Our Government' }
+    },
+
+    '5-our-government': {
+        title: 'Our Government',
+        subtitle: 'Learn about what a government is, types of government, levels of government, and why it is important for every country.',
+        videoSubtitle: 'Watch these videos to learn about our government!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/J40N2k4Ks5g?si=xnV0MQ5RrT2MElWk', title: 'What is Government?', thumb: 'https://img.youtube.com/vi/J40N2k4Ks5g/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/S2bxkt3Nbpk?si=Ve20Lvpw3T_qI7li', title: 'Types of Government', thumb: 'https://img.youtube.com/vi/S2bxkt3Nbpk/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/ryS71AKZ2pI?si=w7STGIXsFYjpwrW2', title: 'Government of India', thumb: 'https://img.youtube.com/vi/ryS71AKZ2pI/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A government is a group of people who', visual: '🏤', options: ['build houses', 'run and manage a country', 'grow crops', 'teach in schools'], correct: 1 },
+            { question: 'India is a', visual: '🇮🇳', options: ['monarchy', 'dictatorship', 'democracy', 'empire'], correct: 2 },
+            { question: 'In a democracy, leaders are chosen by', visual: '🗳️', options: ['kings', 'soldiers', 'citizens through voting', 'judges'], correct: 2 },
+            { question: 'Which level of government manages the whole country?', visual: '🏢', options: ['Local government', 'State government', 'Central government', 'Village government'], correct: 2 },
+            { question: 'Which level manages towns and villages?', visual: '🏡', options: ['Central government', 'State government', 'Local government', 'National government'], correct: 2 },
+            { question: 'Governments make', visual: '📜', options: ['machines', 'laws', 'games', 'books'], correct: 1 },
+            { question: 'Which service is provided by the government?', visual: '🏗️', options: ['roads', 'schools', 'hospitals', 'all of these'], correct: 3 },
+            { question: 'Which government manages individual states?', visual: '🏢', options: ['Central government', 'State government', 'Local government', 'World government'], correct: 1 },
+            { question: 'The right to vote is important in a', visual: '✅', options: ['monarchy', 'democracy', 'dictatorship', 'empire'], correct: 1 },
+            { question: 'Governments help maintain', visual: '⚖️', options: ['chaos', 'law and order', 'noise', 'confusion'], correct: 1 }
+        ],
+        summary: [
+            'A government is a group of people who make decisions and rules to manage and run a country.',
+            'Governments make laws, provide services like schools and hospitals, and protect citizens.',
+            'Types of government include democracy, monarchy, and dictatorship.',
+            'In India, government works at three levels: Central, State, and Local.',
+            'Democracy means people choose their leaders through elections and voting.',
+            'The government is responsible for roads, education, healthcare, law and order, and disaster relief.'
+        ],
+        summaryEnd: 'Excellent! You have learned about our government and how it works to serve the people!',
+        nextLesson: { id: 'rights-and-duties-of-citizens', title: 'Rights and Duties of Citizens' }
+    },
+
+    '5-rights-and-duties-of-citizens': {
+        title: 'Rights and Duties of Citizens',
+        subtitle: 'Learn about the basic rights and duties of citizens in a democratic country and why they are important.',
+        videoSubtitle: 'Watch these videos to learn about rights and duties!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/a2-QL59pVRo?si=NN--bwqDyfkqhJOq', title: 'Rights and Duties', thumb: 'https://img.youtube.com/vi/a2-QL59pVRo/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/FWwEMFSY1r0?si=dXrqBDMuOXTf8n76', title: 'Fundamental Rights', thumb: 'https://img.youtube.com/vi/FWwEMFSY1r0/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Rights are', visual: '⚖️', options: ['punishments', 'freedoms given to citizens', 'jobs', 'duties'], correct: 1 },
+            { question: 'Duties are', visual: '📝', options: ['responsibilities of citizens', 'freedoms', 'laws only', 'punishments'], correct: 0 },
+            { question: 'Which is a basic right?', visual: '🤝', options: ['Right to equality', 'Right to pollution', 'Right to waste water', 'Right to break laws'], correct: 0 },
+            { question: 'In a democracy, citizens have the right to', visual: '🗳️', options: ['vote', 'break laws', 'ignore rules', 'avoid duties'], correct: 0 },
+            { question: 'Which of the following is a duty of citizens?', visual: '✅', options: ['damaging public property', 'respecting laws', 'ignoring rules', 'wasting resources'], correct: 1 },
+            { question: 'Education is', visual: '📚', options: ['a punishment', 'a basic right', 'a tax', 'a duty only'], correct: 1 },
+            { question: 'Protecting the environment is', visual: '🌍', options: ['unnecessary', "a citizen's duty", 'a right only', 'a government job only'], correct: 1 },
+            { question: 'Citizens should respect', visual: '🇧🇴', options: ['laws', 'national symbols', 'other people', 'all of these'], correct: 3 },
+            { question: 'Rights and duties help maintain', visual: '✊', options: ['confusion', 'peace and order', 'pollution', 'conflicts'], correct: 1 },
+            { question: 'The right to vote helps citizens', visual: '🗳️', options: ['choose leaders', 'avoid laws', 'travel abroad', 'control weather'], correct: 0 }
+        ],
+        summary: [
+            'Rights are freedoms and protections given to citizens by law, such as equality, freedom, education, and voting.',
+            'Duties are responsibilities citizens must perform, like respecting laws, protecting property, and keeping the environment clean.',
+            'Every citizen has the right to equality, freedom, education, life and safety, and voting.',
+            'Duties include respecting laws, the national flag, protecting public property, and being kind to others.',
+            'Rights and duties go together – both are essential for a strong and peaceful society.',
+            'Fulfilling duties helps build a better nation and strengthens democracy.'
+        ],
+        summaryEnd: 'Well done! You have learned about the rights and duties of citizens in a democracy!',
+        nextLesson: { id: 'culture-and-festivals-of-india', title: 'Culture and Festivals of India' }
+    },
+
+    '5-culture-and-festivals-of-india': {
+        title: 'Culture and Festivals of India',
+        subtitle: 'Learn about the vibrant culture, diverse traditions, and the major festivals celebrated across India.',
+        videoSubtitle: 'Watch these videos to learn about Indian culture and festivals!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/omcGccw6c58?si=RYzX1-OUKQFXi8oD', title: 'Indian Culture', thumb: 'https://img.youtube.com/vi/omcGccw6c58/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/lK3oqU2WNY0?si=MhQ9KvtsR4Pj7kVP', title: 'Festivals of India', thumb: 'https://img.youtube.com/vi/lK3oqU2WNY0/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Culture refers to', visual: '🎨', options: ['machines only', 'traditions and way of life', 'buildings', 'roads'], correct: 1 },
+            { question: 'India is known for its', visual: '🇮🇳', options: ['single culture', 'cultural diversity', 'no festivals', 'only one language'], correct: 1 },
+            { question: 'Diwali is known as the', visual: '🪔', options: ['Festival of Colors', 'Festival of Lights', 'Harvest Festival', 'Winter Festival'], correct: 1 },
+            { question: 'Holi is the', visual: '🎨', options: ['Festival of Lights', 'Festival of Colors', 'Festival of Harvest', 'Festival of Music'], correct: 1 },
+            { question: 'Eid is celebrated by', visual: '🕌', options: ['Hindus', 'Muslims', 'Christians', 'Buddhists'], correct: 1 },
+            { question: 'Christmas celebrates the birth of', visual: '🎄', options: ['Buddha', 'Mahatma Gandhi', 'Jesus Christ', 'Guru Nanak'], correct: 2 },
+            { question: 'Which festival involves decorating homes with lamps?', visual: '🪔', options: ['Holi', 'Diwali', 'Eid', 'Christmas'], correct: 1 },
+            { question: '“Unity in Diversity” means', visual: '🤝', options: ['people are all the same', 'people with different cultures live together peacefully', 'only one religion exists', 'no traditions exist'], correct: 1 },
+            { question: 'Which of the following is a harvest festival in India?', visual: '🌾', options: ['Pongal', 'Christmas', 'Eid', 'Diwali'], correct: 0 },
+            { question: 'Festivals help people', visual: '🎉', options: ['argue', 'celebrate and share happiness', 'stop traditions', 'avoid culture'], correct: 1 }
+        ],
+        summary: [
+            'Culture refers to the way of life of people, including traditions, beliefs, arts, food habits, and celebrations.',
+            'India is a land of “Unity in Diversity” because people of different religions, languages, and cultures live peacefully.',
+            'Diwali is the Festival of Lights, Holi is the Festival of Colors.',
+            'Eid is celebrated by Muslims, and Christmas is celebrated by Christians to mark the birth of Jesus Christ.',
+            'Festivals bring people together, promote happiness, preserve traditions, and encourage sharing.',
+            'Other major festivals include Pongal, Baisakhi, Onam, Navratri, and Ganesh Chaturthi.'
+        ],
+        summaryEnd: 'Amazing! You have successfully learned about the rich culture and festivals of India!',
+        nextLesson: null
+    },
+
+    '5-introduction-to-computers': {
+        title: 'Introduction to Computers',
+        subtitle: 'Learn what a computer is, its parts, and how it works.',
+        videoSubtitle: 'Watch these videos to understand computers better!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/67TNabOXBc8?si=4wjd0wqBtAhUS7-2', title: 'What is a Computer?', thumb: 'https://img.youtube.com/vi/67TNabOXBc8/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/RmbFJq2jADY?si=X5wjUkZYh6_j1EH1', title: 'Parts of a Computer', thumb: 'https://img.youtube.com/vi/RmbFJq2jADY/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/eEo_aacpwCw?si=sWEzypuUR7scce6y', title: 'How Computers Work', thumb: 'https://img.youtube.com/vi/eEo_aacpwCw/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A computer is a', visual: '🖥️', options: ['book', 'machine that processes information', 'toy', 'vehicle'], correct: 1 },
+            { question: 'The brain of the computer is', visual: '🧠', options: ['keyboard', 'mouse', 'CPU', 'monitor'], correct: 2 },
+            { question: 'Which device is used to type information?', visual: '⌨️', options: ['mouse', 'keyboard', 'monitor', 'speaker'], correct: 1 },
+            { question: 'The monitor is used to', visual: '📺', options: ['display information', 'print documents', 'store data', 'play games only'], correct: 0 },
+            { question: 'The mouse is used to', visual: '🖱️', options: ['move the cursor', 'print documents', 'store files', 'type letters'], correct: 0 },
+            { question: 'Which device produces sound?', visual: '🔊', options: ['monitor', 'speakers', 'keyboard', 'CPU'], correct: 1 },
+            { question: 'A printer is used to', visual: '🖨️', options: ['show videos', 'print documents', 'store files', 'play music'], correct: 1 },
+            { question: 'The first step in the IPO cycle is', visual: '🔄', options: ['output', 'processing', 'input', 'storage'], correct: 2 },
+            { question: 'Computers are used in', visual: '🏢', options: ['schools', 'hospitals', 'offices', 'all of these'], correct: 3 },
+            { question: 'Computers help us', visual: '🚀', options: ['work faster', 'store information', 'communicate', 'all of these'], correct: 3 }
+        ],
+        summary: [
+            'A computer is an electronic machine that helps us perform tasks quickly and accurately.',
+            'A computer follows the Input–Process–Output (IPO) cycle.',
+            'The main parts of a computer are Monitor, Keyboard, Mouse, CPU, Speakers, and Printer.',
+            'The CPU is called the brain of the computer.',
+            'Computers are used in education, communication, entertainment, and business.',
+            'They help complete tasks quickly, store large amounts of information, and support learning.'
+        ],
+        summaryEnd: 'Fantastic! You have successfully learned the basics of computers!',
+        nextLesson: { id: 'input-output-devices', title: 'Input & Output Devices' }
+    },
+
+    '5-input-output-devices': {
+        title: 'Input & Output Devices',
+        subtitle: 'Learn about the different devices used to give instructions and receive results from a computer.',
+        videoSubtitle: 'Watch these videos to understand input and output devices!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/DuYF3uD9AYQ?si=1RPCUl-naaN8MMyx', title: 'Input and Output Devices', thumb: 'https://img.youtube.com/vi/DuYF3uD9AYQ/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/k9_CXK8y78g?si=kHHO9lUl9XCMK-j9', title: 'Computer Devices Explained', thumb: 'https://img.youtube.com/vi/k9_CXK8y78g/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A device used to enter data into a computer is called', visual: '⌨️', options: ['output device', 'input device', 'storage device', 'memory device'], correct: 1 },
+            { question: 'Which of the following is an input device?', visual: '🤔', options: ['monitor', 'printer', 'keyboard', 'speaker'], correct: 2 },
+            { question: 'Which device is used to move the cursor on the screen?', visual: '🖱️', options: ['mouse', 'keyboard', 'monitor', 'printer'], correct: 0 },
+            { question: 'Which device displays images and text from the computer?', visual: '📺', options: ['monitor', 'printer', 'speaker', 'scanner'], correct: 0 },
+            { question: 'Which device prints documents on paper?', visual: '🖨️', options: ['scanner', 'printer', 'mouse', 'keyboard'], correct: 1 },
+            { question: 'Which device is used to record sound?', visual: '🎤', options: ['microphone', 'monitor', 'printer', 'mouse'], correct: 0 },
+            { question: 'Which device produces sound from the computer?', visual: '🔊', options: ['keyboard', 'speaker', 'scanner', 'mouse'], correct: 1 },
+            { question: 'A scanner is used to', visual: '🖨️', options: ['print documents', 'copy images into the computer', 'play music', 'type letters'], correct: 1 },
+            { question: 'Touchscreen devices allow users to', visual: '👆', options: ['type faster', 'touch the screen to give input', 'print pictures', 'record sound'], correct: 1 },
+            { question: 'Monitor is an example of', visual: '🖥️', options: ['input device', 'output device', 'storage device', 'memory device'], correct: 1 }
+        ],
+        summary: [
+            'Input devices are used to enter data and instructions into the computer. Examples include the keyboard, mouse, microphone, scanner, and touchscreen.',
+            'Output devices display or produce the results of computer processing. Examples include the monitor, printer, speakers, and projector.',
+            'The keyboard is used for typing, while a mouse is used for pointing and selecting items.',
+            'A monitor displays visual information, and a printer produces physical copies on paper.',
+            'These devices are essential for communicating with the computer and making it useful for various tasks.'
+        ],
+        summaryEnd: 'Great job! You now know all about input and output devices!',
+        nextLesson: { id: 'ms-word', title: 'MS Word Basics' }
+    },
+
+    '5-ms-word': {
+        title: 'MS Word Basics',
+        subtitle: 'Learn how to create, edit, and format documents using Microsoft Word.',
+        videoSubtitle: 'Watch these videos to learn the basics of MS Word!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/ZNQj2owRymo?si=sGvxMfyeu25dcCnz', title: 'MS Word Introduction', thumb: 'https://img.youtube.com/vi/ZNQj2owRymo/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/S-nHYzK-BVg?si=LIJZe1gKaRFz636b', title: 'Formatting in MS Word', thumb: 'https://img.youtube.com/vi/S-nHYzK-BVg/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'MS Word is a', visual: '📝', options: ['game', 'word processing software', 'calculator', 'browser'], correct: 1 },
+            { question: 'MS Word is used to', visual: '📄', options: ['type and create documents', 'play music', 'watch movies', 'send emails only'], correct: 0 },
+            { question: 'The area where we type text is called', visual: '⌨️', options: ['ribbon', 'document area', 'title bar', 'status bar'], correct: 1 },
+            { question: 'Which tab is used to add pictures?', visual: '🖼️', options: ['Home', 'Insert', 'View', 'Layout'], correct: 1 },
+            { question: 'Which tool makes text darker?', visual: '𝗕', options: ['Italic', 'Bold', 'Underline', 'Font size'], correct: 1 },
+            { question: 'Which key moves the cursor to the next line?', visual: '↵', options: ['Spacebar', 'Enter', 'Shift', 'Ctrl'], correct: 1 },
+            { question: 'Which option saves a document?', visual: '💾', options: ['File → Save', 'Insert → Save', 'View → Save', 'Home → Save'], correct: 0 },
+            { question: 'Which of the following is used to change the size of text?', visual: '🔡', options: ['Font Size', 'Font Color', 'Font Style', 'Insert'], correct: 0 },
+            { question: 'MS Word helps students create', visual: '🎒', options: ['assignments', 'letters', 'reports', 'all of these'], correct: 3 },
+            { question: 'Which part shows the document name?', visual: '🏷️', options: ['Ribbon', 'Title Bar', 'Status Bar', 'Scroll Bar'], correct: 1 }
+        ],
+        summary: [
+            'Microsoft Word is a word processing software used to create, edit, and format documents.',
+            'The main parts of the MS Word window include the Title Bar, Ribbon, Document Area, Scroll Bar, and Status Bar.',
+            'Users can type text and use formatting tools like Font Size, Bold, Italic, and Underline to make it look attractive.',
+            'Pictures can be added using the Insert tab to make documents more interesting.',
+            'Documents must be saved using "Save As" so they can be opened and edited later.',
+            'MS Word is widely used for school projects, reports, letters, and notices.'
+        ],
+        summaryEnd: 'Excellent! You have successfully learned the basics of MS Word!',
+        nextLesson: { id: 'ms-paint', title: 'MS Paint' }
+    },
+
+    '5-ms-paint': {
+        title: 'MS Paint',
+        subtitle: 'Learn how to draw, color, and create simple graphics using Microsoft Paint.',
+        videoSubtitle: 'Watch these videos to learn how to use MS Paint!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/qbhu8kATMlA?si=tIHHOmFoCWzjwY60', title: 'MS Paint Basics', thumb: 'https://img.youtube.com/vi/qbhu8kATMlA/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/QvtH7BA-hro?si=wBdPtDRA3siro09u', title: 'Tools and Shapes in MS Paint', thumb: 'https://img.youtube.com/vi/QvtH7BA-hro/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'MS Paint is used for', visual: '🎨', options: ['drawing pictures', 'typing documents', 'browsing the internet', 'sending emails'], correct: 0 },
+            { question: 'The area where we draw pictures is called', visual: '📄', options: ['ribbon', 'canvas', 'status bar', 'title bar'], correct: 1 },
+            { question: 'Which tool is used to draw freehand lines?', visual: '✏️', options: ['pencil tool', 'fill tool', 'eraser tool', 'text tool'], correct: 0 },
+            { question: 'Which tool removes parts of a drawing?', visual: '🧽', options: ['brush', 'eraser', 'pencil', 'shape tool'], correct: 1 },
+            { question: 'Which tool fills color inside shapes?', visual: '🪣', options: ['pencil tool', 'fill with color tool', 'eraser tool', 'text tool'], correct: 1 },
+            { question: 'Which tool is used to type words in MS Paint?', visual: '🅰️', options: ['pencil tool', 'text tool', 'shape tool', 'brush tool'], correct: 1 },
+            { question: 'Which of the following is a shape in MS Paint?', visual: '⭐', options: ['circle', 'triangle', 'rectangle', 'all of these'], correct: 3 },
+            { question: 'The color box is used to', visual: '🎨', options: ['choose colors', 'draw shapes', 'erase pictures', 'type text'], correct: 0 },
+            { question: 'Which menu is used to save drawings?', visual: '💾', options: ['home', 'insert', 'file', 'view'], correct: 2 },
+            { question: 'MS Paint helps students develop', visual: '🧠', options: ['creativity', 'drawing skills', 'computer skills', 'all of these'], correct: 3 }
+        ],
+        summary: [
+            'MS Paint is a simple graphics program used to draw and color pictures on a computer.',
+            'The Canvas is the main area where you create your drawings.',
+            'The Ribbon contains all drawing tools, shapes, and colors.',
+            'Important tools include Pencil, Brush, Eraser, Fill with Color, and Text Tool.',
+            'You can add different ready-made shapes like circles and rectangles to your drawing.',
+            'All your drawings can be saved using the File → Save As option.'
+        ],
+        summaryEnd: 'Amazing work! You are now ready to be a digital artist using MS Paint!',
+        nextLesson: { id: 'internet-basics', title: 'Internet Basics' }
+    },
+
+    '5-internet-basics': {
+        title: 'Internet Basics',
+        subtitle: 'Learn what the internet is, how to use it, and how to stay safe online.',
+        videoSubtitle: 'Watch these videos to understand the basics of the internet!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/UXsomnDkntI?si=-tW8mBWIUbPxuS9g', title: 'What is the Internet?', thumb: 'https://img.youtube.com/vi/UXsomnDkntI/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/HctZVuaagPI?si=_RJ1xDb06BcDzzso', title: 'How to Browse the Web safely', thumb: 'https://img.youtube.com/vi/HctZVuaagPI/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'The internet is', visual: '🌐', options: ['a computer game', 'a network connecting computers worldwide', 'a television program', 'a book'], correct: 1 },
+            { question: 'A website is', visual: '📄', options: ['a computer device', 'a collection of web pages', 'a keyboard tool', 'a printer'], correct: 1 },
+            { question: 'Which program is used to open websites?', visual: '🌍', options: ['browser', 'calculator', 'paint', 'speaker'], correct: 0 },
+            { question: 'Which of the following is a web browser?', visual: '🦊', options: ['Google Chrome', 'Microsoft Word', 'Excel', 'Paint'], correct: 0 },
+            { question: 'A search engine helps us', visual: '🔍', options: ['draw pictures', 'find information on the internet', 'play music', 'type documents'], correct: 1 },
+            { question: 'Which of the following is a search engine?', visual: '🔎', options: ['Google', 'Paint', 'Word', 'Excel'], correct: 0 },
+            { question: 'Which of the following should not be shared online?', visual: '🛑', options: ['school subject', 'favorite color', 'home address and password', 'hobbies'], correct: 2 },
+            { question: 'The internet helps people', visual: '💡', options: ['learn new information', 'communicate', 'watch videos', 'all of these'], correct: 3 },
+            { question: 'Safe internet use means', visual: '🛡️', options: ['sharing passwords', 'visiting unsafe websites', 'protecting personal information', 'ignoring safety rules'], correct: 2 },
+            { question: 'The internet is useful for', visual: '🌟', options: ['education', 'communication', 'entertainment', 'all of these'], correct: 3 }
+        ],
+        summary: [
+            'The Internet is a worldwide network of computers that allow sharing of information globally.',
+            'A website is a collection of web pages that provide different kinds of information online.',
+            'A Web Browser (like Chrome, Edge, or Firefox) is needed to view websites.',
+            'Search Engines (like Google or Bing) help users find specific topics and answers fast.',
+            'Online safety is crucial: NEVER share passwords or personal information with strangers.',
+            'The internet is a powerful tool for learning, communication, shopping, and entertainment.'
+        ],
+        summaryEnd: 'Fantastic! You now understand the internet and how to use it safely!',
+        nextLesson: { id: 'coding-basics', title: 'Introduction to Coding' }
+    },
+
+    '5-coding-basics': {
+        title: 'Introduction to Coding',
+        subtitle: 'Learn the basics of coding, sequences, loops, and conditions.',
+        videoSubtitle: 'Watch these videos to understand how coding works!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/eSYeHlwDCNA?si=HK6c8oAM5oLuc48w', title: 'What is Coding?', thumb: 'https://img.youtube.com/vi/eSYeHlwDCNA/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/g1J4181W8ss?si=ilg84gGtw2-usOpo', title: 'Coding Basics', thumb: 'https://img.youtube.com/vi/g1J4181W8ss/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Coding means', visual: '💻', options: ['drawing pictures', 'writing instructions for a computer', 'playing games', 'typing letters'], correct: 1 },
+            { question: 'Instructions in coding must follow', visual: '📝', options: ['random order', 'correct sequence', 'no order', 'color patterns'], correct: 1 },
+            { question: 'A loop is used to', visual: '🔁', options: ['stop a program', 'repeat instructions', 'delete code', 'print documents'], correct: 1 },
+            { question: 'A condition helps the computer', visual: '🤔', options: ['repeat tasks', 'make decisions', 'stop working', 'store data'], correct: 1 },
+            { question: 'Which statement represents a condition?', visual: '⚖️', options: ['Move forward', 'Repeat 3 times', 'If it rains, open umbrella', 'Stop program'], correct: 2 },
+            { question: 'Which concept means performing steps in order?', visual: '🔢', options: ['loop', 'sequence', 'condition', 'input'], correct: 1 },
+            { question: 'Coding helps students improve', visual: '🧠', options: ['logical thinking', 'creativity', 'problem-solving', 'all of these'], correct: 3 },
+            { question: 'Which platform is commonly used for beginner coding?', visual: '😺', options: ['Scratch', 'Word', 'Paint', 'Excel'], correct: 0 },
+            { question: 'Repeating an action several times uses', visual: '🔄', options: ['sequence', 'loop', 'condition', 'input'], correct: 1 },
+            { question: 'Coding is used to create', visual: '📱', options: ['games', 'apps', 'websites', 'all of these'], correct: 3 }
+        ],
+        summary: [
+            'Coding is writing step-by-step instructions that a computer can understand and follow.',
+            'A Sequence is a set of instructions performed in a specific order.',
+            'A Loop is used to repeat a block of instructions multiple times without rewriting them.',
+            'A Condition tells the computer to make a decision based on a certain situation (like IF-THEN).',
+            'Visual block-based platforms like Scratch are a great way for beginners to learn coding.',
+            'Coding helps improve problem-solving, logical thinking, and creativity.'
+        ],
+        summaryEnd: 'Superb! You have taken your first step into the amazing world of coding!',
+        nextLesson: { id: 'computer-safety', title: 'Computer Safety & Ethics' }
+    },
+
+    '5-computer-safety': {
+        title: 'Computer Safety & Ethics',
+        subtitle: 'Learn how to use computers and the internet safely and responsibly.',
+        videoSubtitle: 'Watch these videos to learn about computer safety and ethics!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/nVEyG3C-Mqw?si=iIATm-y1-nOAk5w_', title: 'Computer Safety', thumb: 'https://img.youtube.com/vi/nVEyG3C-Mqw/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/YitHISP0Isk?si=ThPDxe6CjvMSv9QF', title: 'Internet Safety Rules', thumb: 'https://img.youtube.com/vi/YitHISP0Isk/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/JkkTN0pQ_Ug?si=grT0QD2BmfwJk8Ob', title: 'Computer Ethics', thumb: 'https://img.youtube.com/vi/JkkTN0pQ_Ug/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Computer safety means', visual: '🛡️', options: ['playing games safely', 'protecting users and information', 'using computers slowly', 'typing faster'], correct: 1 },
+            { question: 'A password is used to', visual: '🔑', options: ['open a website', 'protect accounts', 'print documents', 'draw pictures'], correct: 1 },
+            { question: 'A strong password should include', visual: '🔐', options: ['letters only', 'numbers only', 'letters, numbers, and symbols', 'simple words only'], correct: 2 },
+            { question: 'Which of the following should not be shared online?', visual: '🛑', options: ['favorite color', 'personal address', 'hobbies', 'favorite subject'], correct: 1 },
+            { question: 'Computer ethics means', visual: '⚖️', options: ['damaging computers', 'responsible use of technology', 'ignoring rules', 'spreading viruses'], correct: 1 },
+            { question: 'Which action is safe online?', visual: '✅', options: ['sharing passwords', 'talking to strangers online', 'informing a teacher about suspicious messages', 'opening unknown links'], correct: 2 },
+            { question: "Copying someone else's work without permission is", visual: '🚫', options: ['good practice', 'computer ethics', 'wrong behavior', 'safe browsing'], correct: 2 },
+            { question: 'Which of the following helps protect accounts?', visual: '🛡️', options: ['weak passwords', 'strong passwords', 'sharing passwords', 'ignoring security'], correct: 1 },
+            { question: 'Responsible computer use includes', visual: '🤝', options: ['respecting others', 'spreading viruses', 'hacking systems', 'copying illegal software'], correct: 0 },
+            { question: 'Computer safety helps', visual: '🌐', options: ['protect information', 'prevent cyber dangers', 'encourage safe internet use', 'all of these'], correct: 3 }
+        ],
+        summary: [
+            'Computer safety means protecting ourselves and our data while using computers.',
+            'Always use strong passwords containing letters, numbers, and symbols.',
+            'Never share personal information like your address or phone number online.',
+            'Computer ethics means using technology in a respectful and responsible way.',
+            'Do not copy others’ work without permission or spread false information.',
+            'Responsible behavior makes the internet a safer place for everyone.'
+        ],
+        summaryEnd: 'Great job! You are now ready to be a safe and responsible digital citizen!',
+        nextLesson: null
     }
 };
 
@@ -7657,6 +8378,1427 @@ const LessonPage = () => {
                                     <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. In a pie chart, if half the circle represents reading, what fraction does it represent?</p>
                                     <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. If 15 like apples and 10 like bananas, how many students were surveyed in total?</p>
                                     <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Which type of graph is best for comparing different categories?</p>
+                                </div>
+                            </Section>
+                        </>
+                    )}
+
+                    {classId === '5' && chapterId === 'plants-and-their-functions' && (
+                        <>
+                            <Section>
+                                <SectionTitle emoji="🌿">Introduction</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                    Plants are living things that grow in the soil and need sunlight, air, and water to survive. They are very important for
+                                    life on Earth because they produce food and oxygen. Plants also provide shelter, medicine, wood, and many other useful
+                                    materials. Understanding how plants grow and function helps us learn how nature supports life.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌱">Parts of a Plant</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    Most plants have five main parts: <strong>roots, stem, leaves, flowers, and fruits</strong>. Each part has a special
+                                    function that helps the plant grow and survive.
+                                </p>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                    <div style={{ background: '#E8F5E9', border: '1px solid #A5D6A7', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#2E7D32' }}>Roots</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#1B5E20' }}>Roots grow under the soil and hold the plant firmly in the ground. They absorb water and minerals from the soil.</p>
+                                        <p style={{ margin: '8px 0 0', fontSize: '14px', color: '#388E3C', fontStyle: 'italic' }}>Example: Carrot and radish are examples of roots that store food.</p>
+                                    </div>
+                                    <div style={{ background: '#FFF3E0', border: '1px solid #FFCC80', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#E65100' }}>Stem</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#BF360C' }}>The stem supports the plant and keeps it upright. It carries water and nutrients from the roots to the leaves.</p>
+                                        <p style={{ margin: '8px 0 0', fontSize: '14px', color: '#E65100', fontStyle: 'italic' }}>Example: Sugarcane and bamboo are examples of strong stems.</p>
+                                    </div>
+                                    <div style={{ background: '#E8F5E9', border: '1px solid #81C784', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#1B5E20' }}>Leaves</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#2E7D32' }}>Leaves are usually green and are known as the <strong>food factories of the plant</strong>. They prepare food using sunlight, carbon dioxide, and water.</p>
+                                        <p style={{ margin: '8px 0 0', fontSize: '14px', color: '#388E3C', fontStyle: 'italic' }}>Example: Large green leaves help plants absorb more sunlight.</p>
+                                    </div>
+                                    <div style={{ background: '#FCE4EC', border: '1px solid #F8BBD9', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#AD1457' }}>Flowers</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#880E4F' }}>Flowers are the reproductive part of a plant. They help plants produce seeds that grow into new plants.</p>
+                                        <p style={{ margin: '8px 0 0', fontSize: '14px', color: '#C2185B', fontStyle: 'italic' }}>Example: Flowers attract insects and birds which help in pollination.</p>
+                                    </div>
+                                    <div style={{ background: '#FFF9C4', border: '1px solid #FFF176', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#F57F17' }}>Fruits and Seeds</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#E65100' }}>Fruits protect the seeds of the plant. Seeds can grow into new plants when they receive water, air, and sunlight.</p>
+                                        <p style={{ margin: '8px 0 0', fontSize: '14px', color: '#FF8F00', fontStyle: 'italic' }}>Example: An apple contains seeds that can grow into a new apple tree.</p>
+                                    </div>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="☀️">Photosynthesis</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    <strong>Photosynthesis</strong> is the process by which plants make their own food. Plants use sunlight, water, and carbon
+                                    dioxide to produce food and oxygen.
+                                </p>
+                                <div style={{ background: '#E8F5E9', border: '1px solid #81C784', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', fontWeight: 700, color: '#2E7D32' }}>During photosynthesis:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#1B5E20', lineHeight: 1.9 }}>
+                                        <li>Plants absorb sunlight using chlorophyll in the leaves.</li>
+                                        <li>They take carbon dioxide from the air.</li>
+                                        <li>They absorb water through their roots.</li>
+                                    </ul>
+                                    <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#1B5E20', fontWeight: 600 }}>The plant then produces food (glucose) and releases oxygen into the air.</p>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="💧">How Plants Grow and Survive</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    Plants need several important things to grow and stay healthy:
+                                </p>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Sunlight</strong> – provides energy for photosynthesis</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Water</strong> – helps transport nutrients and maintain plant health</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Air</strong> – plants use carbon dioxide for making food</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}><strong>Soil</strong> – provides minerals and support for the plant</li>
+                                </ul>
+                                <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#475569' }}>Without these essentials, plants cannot grow properly.</p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. Why are leaves called the food factories of plants?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Because they make food for the plant through photosynthesis.</p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What part of the plant absorbs water from the soil?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Roots absorb water and minerals from the soil.</p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. What helps plants produce seeds?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Flowers help plants produce seeds.</p>
+                                    </div>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌟">Interesting Facts About Plants</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Some plants grow in water, such as lotus and water lily.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Bamboo is one of the fastest growing plants in the world.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Plants release oxygen which humans and animals need to breathe.</li>
+                                </ul>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="💡">Tips to Protect Plants</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Plant more trees in your surroundings.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Do not cut plants unnecessarily.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Water plants regularly.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Take care of gardens and forests.</li>
+                                </ul>
+                            </Section>
+
+                            <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                                <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Name the five main parts of a plant.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Which part of the plant prepares food?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What do roots absorb from the soil?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What process do plants use to make food?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name two things plants need to grow.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. What is the function of flowers in plants?</p>
+                                </div>
+                            </Section>
+                        </>
+                    )}
+
+                    {classId === '5' && chapterId === 'animals-and-their-habitats' && (
+                        <>
+                            <Section>
+                                <SectionTitle emoji="🐾">Introduction</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                    Animals live in different places around the world. The natural home where an animal lives is called its
+                                    <strong> habitat</strong>. A habitat provides animals with food, water, air, shelter, and space to survive.
+                                    Different animals are suited to different habitats depending on their physical features and behavior.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🐾">Types of Animals</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    Animals can be grouped in different ways. One simple way is based on where they live.
+                                </p>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                    <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#9A3412' }}>Land Animals</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#9A3412' }}>
+                                            Land animals live on land. They move using legs and breathe air through lungs.
+                                            <span style={{ display: 'block', marginTop: 6 }}>Examples: lion, elephant, tiger, dog, horse.</span>
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#0369A1' }}>Water Animals</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#0369A1' }}>
+                                            Water animals live in water bodies such as oceans, rivers, and lakes. Many water animals breathe using gills.
+                                            <span style={{ display: 'block', marginTop: 6 }}>Examples: fish, whale, dolphin, octopus.</span>
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#166534' }}>Amphibians</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#166534' }}>
+                                            Amphibians can live both on land and in water. They usually begin their life in water and later live on land.
+                                            <span style={{ display: 'block', marginTop: 6 }}>Examples: frog, salamander, toad.</span>
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#EEF2FF', border: '1px solid #C7D2FE', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#4F46E5' }}>Birds</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#4F46E5' }}>
+                                            Birds are animals with feathers and wings. Most birds can fly and build nests for shelter.
+                                            <span style={{ display: 'block', marginTop: 6 }}>Examples: eagle, sparrow, pigeon, parrot.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌍">Habitats of Animals</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    Different habitats support different kinds of animals. Each habitat has special conditions like temperature,
+                                    food availability, and climate.
+                                </p>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                    <div style={{ background: '#E8F5E9', border: '1px solid #A5D6A7', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#2E7D32' }}>Forest Habitat</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#2E7D32' }}>
+                                            Forests have many trees and plants. Animals living in forests find food and shelter among trees.
+                                            <span style={{ display: 'block', marginTop: 6 }}>Examples: deer, tiger, monkey, bear.</span>
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#9A3412' }}>Desert Habitat</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#9A3412' }}>
+                                            Deserts are very hot during the day and cold at night. Animals living in deserts have special features that help them
+                                            survive with very little water.
+                                            <span style={{ display: 'block', marginTop: 6 }}>Example: The camel stores fat in its hump which helps it survive long periods without food and water.</span>
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#0369A1' }}>Polar Habitat</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#0369A1' }}>
+                                            Polar regions are extremely cold and covered with ice. Animals living there have thick fur or fat layers to keep them warm.
+                                            <span style={{ display: 'block', marginTop: 6 }}>Examples: polar bear, penguin, seal.</span>
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#0EA5E9' }}>Aquatic Habitat</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#0EA5E9' }}>
+                                            Aquatic habitats include oceans, seas, rivers, and lakes. Animals living here have bodies suited for swimming.
+                                            <span style={{ display: 'block', marginTop: 6 }}>Examples: fish, dolphins, whales.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🦊">Animal Adaptations</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    <strong>Adaptations</strong> are special features or behaviors that help animals survive in their habitats.
+                                </p>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Camels have long legs and humps to survive in deserts.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Polar bears have thick fur and fat to stay warm in icy regions.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Fish have gills that help them breathe underwater.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Birds have wings that help them fly.</li>
+                                </ul>
+                                <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#475569' }}>
+                                    These adaptations help animals find food, stay safe from predators, and survive in their environment.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌿">Importance of Habitats</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    Habitats provide animals with everything they need to live. If habitats are destroyed, animals may not survive.
+                                </p>
+                                <p style={{ fontSize: '15px', color: '#475569', margin: '0 0 8px' }}>Ways to protect habitats include:</p>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Planting trees</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Protecting forests</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Reducing pollution</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Protecting wildlife</li>
+                                </ul>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is a habitat?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: A habitat is the natural home where an animal lives.</p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Why do polar bears have thick fur?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Thick fur helps them stay warm in cold polar regions.</p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why do fish have gills?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Gills help fish breathe underwater.</p>
+                                    </div>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌟">Interesting Facts About Animals</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Some animals migrate to different places during certain seasons.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>The Arctic fox changes its fur color to blend with snow.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Dolphins are very intelligent animals that communicate with sounds.</li>
+                                </ul>
+                            </Section>
+
+                            <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                                <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What is the meaning of habitat?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name two animals that live in forests.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Which animals live in deserts?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What special feature helps fish breathe underwater?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Why do animals need habitats?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Name one animal that lives in polar regions.</p>
+                                </div>
+                            </Section>
+                        </>
+                    )}
+
+                    {classId === '5' && chapterId === 'human-body-systems' && (
+                        <>
+                            <Section>
+                                <SectionTitle emoji="🧍‍♂️">Introduction</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                    The human body is made up of many parts that work together to keep us alive and healthy. Different groups of organs perform
+                                    special tasks in our body. These groups of organs are called <strong>body systems</strong>. Each system has an important
+                                    role that helps the body function properly.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🦴">The Skeletal System</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    The <strong>skeletal system</strong> is made up of <strong>bones</strong>. It forms the framework of the body and gives
+                                    shape and support.
+                                </p>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700, color: '#1D4ED8' }}>Functions of the Skeletal System</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#1E3A8A', lineHeight: 1.8 }}>
+                                        <li>Supports the body and helps us stand upright.</li>
+                                        <li>Protects important organs such as the brain and heart.</li>
+                                        <li>Works with muscles to help the body move.</li>
+                                    </ul>
+                                </div>
+                                <div style={{ marginTop: 14, background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#0369A1' }}>Examples</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#0369A1', lineHeight: 1.8 }}>
+                                        <li>The <strong>skull</strong> protects the brain.</li>
+                                        <li>The <strong>rib cage</strong> protects the heart and lungs.</li>
+                                        <li>The <strong>spine</strong> supports the body.</li>
+                                    </ul>
+                                    <p style={{ margin: '10px 0 0', fontSize: '15px', color: '#0369A1' }}>An adult human body has about <strong>206 bones</strong>.</p>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🍽️">The Digestive System</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    The <strong>digestive system</strong> helps the body break down food into nutrients that provide energy and help the body grow.
+                                </p>
+                                <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700, color: '#9A3412' }}>Main Parts</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#9A3412', lineHeight: 1.8 }}>
+                                        <li><strong>Mouth</strong> – where digestion begins by chewing food.</li>
+                                        <li><strong>Esophagus</strong> – the tube that carries food from the mouth to the stomach.</li>
+                                        <li><strong>Stomach</strong> – where food is mixed with digestive juices.</li>
+                                        <li><strong>Small intestine</strong> – where most nutrients are absorbed.</li>
+                                        <li><strong>Large intestine</strong> – where water is absorbed and waste is formed.</li>
+                                    </ul>
+                                </div>
+                                <div style={{ marginTop: 14, background: '#FEF3C7', border: '1px solid #FBBF24', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700, color: '#92400E' }}>Process of Digestion</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#92400E', lineHeight: 1.8 }}>
+                                        <li>Food is chewed in the mouth.</li>
+                                        <li>It moves through the esophagus to the stomach.</li>
+                                        <li>The stomach breaks down the food further.</li>
+                                        <li>Nutrients are absorbed in the small intestine.</li>
+                                        <li>Waste is removed through the large intestine.</li>
+                                    </ul>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🫁">The Respiratory System</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    The <strong>respiratory system</strong> helps us breathe and provides oxygen to the body.
+                                </p>
+                                <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700, color: '#0369A1' }}>Main Parts</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#0369A1', lineHeight: 1.8 }}>
+                                        <li><strong>Nose</strong> – allows air to enter the body.</li>
+                                        <li><strong>Windpipe (trachea)</strong> – carries air to the lungs.</li>
+                                        <li><strong>Lungs</strong> – absorb oxygen from the air.</li>
+                                    </ul>
+                                </div>
+                                <div style={{ marginTop: 14, background: '#EEF2FF', border: '1px solid #C7D2FE', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700, color: '#4F46E5' }}>Breathing Process</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#4F46E5', lineHeight: 1.8 }}>
+                                        <li>When we inhale, oxygen enters the lungs.</li>
+                                        <li>The oxygen is then carried to the blood.</li>
+                                        <li>When we exhale, carbon dioxide is removed from the body.</li>
+                                    </ul>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="❤️">The Circulatory System</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    The <strong>circulatory system</strong> transports oxygen, nutrients, and other important substances throughout the body.
+                                </p>
+                                <div style={{ background: '#FCE7F3', border: '1px solid #F9A8D4', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700, color: '#BE185D' }}>Main Parts</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#9D174D', lineHeight: 1.8 }}>
+                                        <li><strong>Heart</strong> – pumps blood throughout the body.</li>
+                                        <li><strong>Blood</strong> – carries oxygen and nutrients.</li>
+                                        <li><strong>Blood vessels</strong> – tubes that carry blood to different parts of the body.</li>
+                                    </ul>
+                                    <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#9D174D' }}>The heart beats continuously to keep blood moving.</p>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🤝">Importance of Body Systems</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    All body systems work together to keep the body healthy and functioning properly. If one system does not work correctly,
+                                    it can affect other systems in the body.
+                                </p>
+                                <p style={{ fontSize: '15px', color: '#475569', margin: '0 0 8px' }}>For example:</p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>The digestive system provides nutrients.</li>
+                                    <li>The circulatory system transports these nutrients.</li>
+                                    <li>The respiratory system supplies oxygen needed by cells.</li>
+                                </ul>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. Which body system helps us breathe?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: The respiratory system.</p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Which organ pumps blood in the body?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: The heart.</p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Which system helps break down food?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: The digestive system.</p>
+                                    </div>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌟">Interesting Facts About the Human Body</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>The human heart beats about 100,000 times a day.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>The lungs help us breathe about 20,000 times each day.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Bones are strong but also lightweight.</li>
+                                </ul>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="💪">Healthy Habits for a Healthy Body</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Eat a balanced diet with fruits and vegetables.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Exercise regularly to keep muscles and bones strong.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Drink plenty of water.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Get enough sleep.</li>
+                                </ul>
+                            </Section>
+
+                            <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                                <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What is the function of the skeletal system?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name two parts of the digestive system.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Which organ pumps blood throughout the body?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Which system helps us breathe?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What protects the brain?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why is the circulatory system important?</p>
+                                </div>
+                            </Section>
+                        </>
+                    )}
+
+                    {classId === '5' && chapterId === 'food-and-nutrition' && (
+                        <>
+                            <Section>
+                                <SectionTitle emoji="🍽️">Introduction</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                    <strong>Food</strong> is essential for all living beings. It gives us energy to work and play, helps our body grow, and
+                                    keeps us healthy. Different types of food provide different nutrients that our body needs to function properly. These
+                                    nutrients help build strong bones and muscles, protect us from diseases, and keep our body active.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🥗">What are Nutrients?</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    <strong>Nutrients</strong> are substances in food that our body needs for energy, growth, and good health. The main
+                                    nutrients in food are <strong>carbohydrates, proteins, fats, vitamins, and minerals</strong>.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🍞">Carbohydrates</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    Carbohydrates are the main source of energy for the body. They help us perform daily activities such as walking, running,
+                                    and studying.
+                                </p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>
+                                    <strong>Examples:</strong> rice, bread, potatoes, wheat, and cereals.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🥚">Proteins</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    Proteins help the body grow and repair damaged tissues. They are important for building muscles and strengthening the body.
+                                </p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>
+                                    <strong>Examples:</strong> eggs, milk, beans, lentils, fish, and nuts.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🧈">Fats</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    Fats provide energy and help keep the body warm. However, too much fat can be harmful, so fats should be eaten in moderate
+                                    amounts.
+                                </p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>
+                                    <strong>Examples:</strong> butter, oil, cheese, nuts, and ghee.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🍊">Vitamins</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    Vitamins help protect the body from diseases and keep the body systems working properly.
+                                </p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>Vitamin A helps keep our eyes healthy.</li>
+                                    <li>Vitamin C helps protect us from infections.</li>
+                                </ul>
+                                <p style={{ margin: '8px 0 0', fontSize: '15px', color: '#334155' }}>
+                                    <strong>Foods rich in vitamins:</strong> oranges, carrots, spinach, tomatoes, and other fruits and vegetables.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🥛">Minerals</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    Minerals are nutrients that help build strong bones and teeth and support important body functions.
+                                </p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li><strong>Calcium</strong> strengthens bones and teeth.</li>
+                                    <li><strong>Iron</strong> helps carry oxygen in the blood.</li>
+                                </ul>
+                                <p style={{ margin: '8px 0 0', fontSize: '15px', color: '#334155' }}>
+                                    <strong>Foods rich in minerals:</strong> milk, leafy vegetables, nuts, and fruits.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🥗">Balanced Diet</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    A <strong>balanced diet</strong> is a diet that contains all the important nutrients in the right amounts. Eating a variety
+                                    of foods ensures that our body gets everything it needs to stay healthy.
+                                </p>
+                                <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 8px' }}>A balanced diet includes:</p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>Grains and cereals</li>
+                                    <li>Fruits and vegetables</li>
+                                    <li>Protein-rich foods</li>
+                                    <li>Milk and dairy products</li>
+                                </ul>
+                                <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#334155' }}>
+                                    Eating a balanced diet helps children grow properly and stay active.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="✅">Healthy Eating Habits</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Eat fresh fruits and vegetables every day.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Drink plenty of water.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Avoid eating too much junk food.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Eat meals at regular times.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Wash hands before eating.</li>
+                                </ul>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. Why do we need food?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                            Answer: Food gives us energy, helps us grow, and keeps us healthy.
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Which nutrient helps build muscles?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Proteins help build and repair muscles.</p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why should we eat fruits and vegetables?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                            Answer: They provide vitamins and minerals that protect us from diseases.
+                                        </p>
+                                    </div>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌟">Interesting Facts About Food</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>The human body needs more than 40 different nutrients to stay healthy.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Milk is a good source of calcium which helps strengthen bones.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Carrots contain vitamin A which is good for eyesight.</li>
+                                </ul>
+                            </Section>
+
+                            <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                                <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What are nutrients?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name two foods rich in carbohydrates.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Which nutrient helps build muscles?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is a balanced diet?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name two foods rich in vitamins.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why are minerals important for the body?</p>
+                                </div>
+                            </Section>
+                        </>
+                    )}
+
+                    {classId === '5' && chapterId === 'matter-and-its-states' && (
+                        <>
+                            <Section>
+                                <SectionTitle emoji="⚛️">Introduction</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                    Everything around us is made of <strong>matter</strong>. Matter is anything that has <strong>mass</strong> and
+                                    <strong> occupies space</strong>. The air we breathe, the water we drink, and the objects we touch are all examples of
+                                    matter. Matter exists in different forms called <strong>states of matter</strong>. The three main states of matter are
+                                    <strong> solid, liquid, and gas</strong>.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="📦">Solids</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    Solids have a <strong>fixed shape and fixed volume</strong>. The particles in solids are packed closely together, which
+                                    makes them strong and firm. Solids do not flow and usually keep their shape unless a force changes them.
+                                </p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>
+                                    <strong>Examples:</strong> book, stone, table, ice, pencil.
+                                </p>
+                                <p style={{ margin: '8px 0 0', fontSize: '15px', color: '#334155' }}>
+                                    Example: A chair remains in the same shape unless someone moves or breaks it.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="💧">Liquids</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    Liquids have a <strong>fixed volume but no fixed shape</strong>. They take the shape of the container in which they are
+                                    placed. The particles in liquids are not as tightly packed as in solids, so liquids can flow.
+                                </p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>
+                                    <strong>Examples:</strong> water, milk, juice, oil.
+                                </p>
+                                <p style={{ margin: '8px 0 0', fontSize: '15px', color: '#334155' }}>
+                                    Example: Water poured into a glass takes the shape of the glass.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="💨">Gases</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    Gases have <strong>no fixed shape and no fixed volume</strong>. Gas particles move freely and spread out in all
+                                    directions.
+                                </p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>
+                                    <strong>Examples:</strong> air, oxygen, carbon dioxide, water vapor.
+                                </p>
+                                <p style={{ margin: '8px 0 0', fontSize: '15px', color: '#334155' }}>
+                                    Example: Air fills the space inside a balloon.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🔄">Changes in States of Matter</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    Matter can change from one state to another when it is heated or cooled.
+                                </p>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                    <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#0369A1' }}>Melting</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#0369A1' }}>
+                                            Melting occurs when a <strong>solid changes into a liquid</strong> due to heat.
+                                        </p>
+                                        <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#0369A1' }}>Example: Ice melts into water when heated.</p>
+                                    </div>
+                                    <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#0369A1' }}>Freezing</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#0369A1' }}>
+                                            Freezing occurs when a <strong>liquid changes into a solid</strong> due to cooling.
+                                        </p>
+                                        <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#0369A1' }}>Example: Water freezes into ice in a freezer.</p>
+                                    </div>
+                                    <div style={{ background: '#FEF3C7', border: '1px solid #FBBF24', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#92400E' }}>Evaporation</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#92400E' }}>
+                                            Evaporation is the process in which a <strong>liquid changes into gas</strong> when heated.
+                                        </p>
+                                        <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#92400E' }}>
+                                            Example: Water evaporates into water vapor when heated.
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#0369A1' }}>Condensation</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#0369A1' }}>
+                                            Condensation occurs when a <strong>gas changes into a liquid</strong> when cooled.
+                                        </p>
+                                        <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#0369A1' }}>
+                                            Example: Water vapor in the air forms water droplets on a cold surface.
+                                        </p>
+                                    </div>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌧️">Importance of States of Matter</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    Understanding the states of matter helps us explain many natural processes.
+                                </p>
+                                <div style={{ background: '#E8F5E9', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#166534' }}>Example: Water in three states</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8 }}>
+                                        <li>Ice – solid</li>
+                                        <li>Water – liquid</li>
+                                        <li>Water vapor – gas</li>
+                                    </ul>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is matter?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                            Answer: Matter is anything that has mass and occupies space.
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>
+                                            2. Which state of matter has a fixed shape and volume?
+                                        </p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Solids have a fixed shape and volume.</p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>
+                                            3. Why do liquids take the shape of their container?
+                                        </p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                            Answer: Because liquid particles can move and flow.
+                                        </p>
+                                    </div>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌟">Interesting Facts About Matter</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Air is made of different gases such as oxygen and nitrogen.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Steam is water in the form of gas.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Some substances can easily change from one state to another.</li>
+                                </ul>
+                            </Section>
+
+                            <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                                <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What are the three main states of matter?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Give two examples of solids.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Give two examples of liquids.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Name two gases around us.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What happens during melting?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. What is evaporation?</p>
+                                </div>
+                            </Section>
+                        </>
+                    )}
+
+                    {classId === '5' && chapterId === 'force-motion-and-energy' && (
+                        <>
+                            <Section>
+                                <SectionTitle emoji="⚡">Introduction</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                    <strong>Force</strong>, <strong>motion</strong>, and <strong>energy</strong> are important concepts that help us
+                                    understand how objects move and work. In our daily life, we use force to push or pull objects. When a force acts on an
+                                    object, it can cause the object to move. Energy is the ability to do work and is required for movement and many activities.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🤚">Force</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    A <strong>force</strong> is a push or pull applied to an object. Forces can change the position, shape, or speed of an
+                                    object.
+                                </p>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#1D4ED8' }}>Examples of Force</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#1E3A8A', lineHeight: 1.8 }}>
+                                        <li>Pushing a door to open it</li>
+                                        <li>Pulling a rope</li>
+                                        <li>Kicking a football</li>
+                                        <li>Lifting a school bag</li>
+                                    </ul>
+                                </div>
+                                <div style={{ marginTop: 14, background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#0369A1' }}>Effects of Force</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#0369A1', lineHeight: 1.8 }}>
+                                        <li>A force can move an object that is at rest.</li>
+                                        <li>A force can stop a moving object.</li>
+                                        <li>A force can change the direction of a moving object.</li>
+                                        <li>A force can change the shape of an object.</li>
+                                    </ul>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🚗">Motion</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    <strong>Motion</strong> is the movement of an object from one place to another.
+                                </p>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155' }}>
+                                    <strong>Examples:</strong> a car moving on a road, a ball rolling on the ground, a bird flying in the sky, a person walking.
+                                </p>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#166534' }}>Types of Motion</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8 }}>
+                                        <li><strong>Straight-line motion</strong> – movement in a straight path (example: a train moving on a straight track).</li>
+                                        <li><strong>Circular motion</strong> – movement in a circular path (example: the hands of a clock).</li>
+                                        <li><strong>Periodic motion</strong> – motion that repeats at regular intervals (example: a swinging pendulum).</li>
+                                    </ul>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🛠️">Simple Machines</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    <strong>Simple machines</strong> are tools that help us do work more easily by reducing effort.
+                                </p>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                    <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#0369A1' }}>Lever</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#0369A1' }}>Helps lift heavy objects. Example: seesaw.</p>
+                                    </div>
+                                    <div style={{ background: '#FEF3C7', border: '1px solid #FBBF24', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#92400E' }}>Pulley</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#92400E' }}>Helps lift loads using a rope. Example: flagpole.</p>
+                                    </div>
+                                    <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#0369A1' }}>Wheel and Axle</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#0369A1' }}>Helps objects move easily. Example: bicycle wheel.</p>
+                                    </div>
+                                    <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#166534' }}>Inclined Plane</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#166534' }}>
+                                            A sloping surface that helps move objects to higher places. Example: ramp.
+                                        </p>
+                                    </div>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="⚡">Energy</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    <strong>Energy</strong> is the ability to do work. Without energy, nothing can move or function.
+                                </p>
+                                <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#9A3412' }}>Types of Energy</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#9A3412', lineHeight: 1.8 }}>
+                                        <li><strong>Heat Energy</strong> – energy that produces heat (fire, sunlight).</li>
+                                        <li><strong>Light Energy</strong> – energy that produces light (sun, electric bulb).</li>
+                                        <li><strong>Sound Energy</strong> – energy produced by vibrations (music, ringing bell).</li>
+                                        <li><strong>Electrical Energy</strong> – energy produced by electricity (television, computer, fan).</li>
+                                    </ul>
+                                </div>
+                                <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#475569' }}>
+                                    Energy allows us to move and perform activities. Machines, vehicles, and plants (using sunlight) also need energy to work.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is force?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Force is a push or pull acting on an object.</p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is motion?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                            Answer: Motion is the movement of an object from one place to another.
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why are simple machines useful?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Simple machines help us do work more easily.</p>
+                                    </div>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>The Earth moves around the Sun in circular motion.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Windmills use wind energy to produce electricity.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>The Sun is the main source of energy for life on Earth.</li>
+                                </ul>
+                            </Section>
+
+                            <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                                <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define force.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Give two examples of motion.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Name two simple machines.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is energy?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name two types of energy.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why are simple machines important?</p>
+                                </div>
+                            </Section>
+                        </>
+                    )}
+
+                    {classId === '5' && chapterId === 'earth-and-space' && (
+                        <>
+                            <Section>
+                                <SectionTitle emoji="🌍">Introduction</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                    Earth is the planet where we live. It is part of a larger system called the <strong>solar system</strong>, which includes
+                                    the Sun, planets, moons, and other objects in space. Studying Earth and space helps us understand how our planet moves, why
+                                    day and night occur, and how different natural phenomena take place.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="☀️">The Solar System</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    The <strong>solar system</strong> consists of the Sun and all the objects that move around it due to the Sun’s gravity. The
+                                    Sun is a <strong>star</strong> and the main source of light and energy for our solar system.
+                                </p>
+                                <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 8px' }}>The eight planets that revolve around the Sun are:</p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>Mercury</li>
+                                    <li>Venus</li>
+                                    <li>Earth</li>
+                                    <li>Mars</li>
+                                    <li>Jupiter</li>
+                                    <li>Saturn</li>
+                                    <li>Uranus</li>
+                                    <li>Neptune</li>
+                                </ul>
+                                <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#334155' }}>
+                                    Each planet moves in a path around the Sun called an <strong>orbit</strong>.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌎">Earth – Our Home Planet</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    Earth is the <strong>third planet from the Sun</strong> and the only planet known to support life. It has air, water, and
+                                    the right temperature needed for living things to survive.
+                                </p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>
+                                    About <strong>71% of Earth’s surface is covered by water</strong>, while the rest is land.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🔄">Rotation of the Earth</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    The Earth spins on its axis. This spinning movement is called <strong>rotation</strong>.
+                                </p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>
+                                    One complete rotation takes about <strong>24 hours</strong>, which causes <strong>day and night</strong>.
+                                </p>
+                                <p style={{ margin: '8px 0 0', fontSize: '15px', color: '#334155' }}>
+                                    When one side of the Earth faces the Sun, it experiences day. When the same side turns away from the Sun, it experiences
+                                    night.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌞">Revolution of the Earth</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    The Earth also moves around the Sun. This movement is called <strong>revolution</strong>.
+                                </p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>
+                                    One complete revolution around the Sun takes about <strong>365 days</strong>, which makes one year.
+                                </p>
+                                <p style={{ margin: '8px 0 0', fontSize: '15px', color: '#334155' }}>
+                                    The revolution of Earth, along with the tilt of its axis, causes different <strong>seasons</strong> such as summer,
+                                    winter, spring, and autumn.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌙">The Moon</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    The <strong>Moon</strong> is Earth’s natural satellite. It revolves around the Earth and reflects light from the Sun.
+                                </p>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155' }}>
+                                    The Moon goes through different shapes called <strong>phases</strong>, such as:
+                                </p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>New Moon</li>
+                                    <li>Half Moon</li>
+                                    <li>Full Moon</li>
+                                </ul>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="✨">Natural Phenomena</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    Natural phenomena are events that occur naturally on Earth or in space.
+                                </p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>
+                                        <strong>Solar Eclipse</strong> – when the Moon comes between the Earth and the Sun and blocks sunlight.
+                                    </li>
+                                    <li>
+                                        <strong>Lunar Eclipse</strong> – when the Earth comes between the Sun and the Moon, casting a shadow on the Moon.
+                                    </li>
+                                    <li>
+                                        <strong>Meteors</strong> – small space rocks that burn when entering Earth’s atmosphere.
+                                    </li>
+                                </ul>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🔍">Importance of Studying Earth and Space</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>It helps us understand our planet and environment.</li>
+                                    <li>It explains natural events such as day and night, seasons, and eclipses.</li>
+                                    <li>It helps scientists explore space and discover new information about the universe.</li>
+                                </ul>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is the solar system?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                            Answer: The solar system includes the Sun and all the planets and objects that revolve around it.
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What causes day and night?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                            Answer: The rotation of the Earth causes day and night.
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>
+                                            3. How long does Earth take to revolve around the Sun?
+                                        </p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                            Answer: Earth takes about 365 days to complete one revolution.
+                                        </p>
+                                    </div>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌟">Interesting Facts About Space</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>The Sun is about 109 times bigger than Earth.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Jupiter is the largest planet in our solar system.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>The Moon is the closest object to Earth in space.</li>
+                                </ul>
+                            </Section>
+
+                            <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                                <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What is the solar system?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name the eight planets of the solar system.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is Earth’s rotation?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is Earth’s revolution?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What causes seasons on Earth?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. What is a solar eclipse?</p>
+                                </div>
+                            </Section>
+                        </>
+                    )}
+
+                    {classId === '5' && chapterId === 'our-earth-and-the-solar-system' && (
+                        <>
+                            <Section>
+                                <SectionTitle emoji="🌌">Introduction</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                    The <strong>solar system</strong> is a group of planets and other objects that move around the Sun. The Sun is at the
+                                    center and provides <strong>light</strong> and <strong>heat</strong> to all the planets. Our planet <strong>Earth</strong>{' '}
+                                    is one of the eight planets that revolve around the Sun. By studying the solar system, we understand our place in space and
+                                    how planets move.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="☀️">The Sun</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    The <strong>Sun</strong> is a huge ball of hot gases and is at the center of the solar system. It gives us{' '}
+                                    <strong>light</strong> and <strong>heat</strong>, which are necessary for life on Earth. Without the Sun, plants would not
+                                    grow and living things could not survive.
+                                </p>
+                                <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#9A3412' }}>Important facts about the Sun</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#9A3412', lineHeight: 1.8 }}>
+                                        <li>The Sun is a <strong>star</strong>.</li>
+                                        <li>It is the <strong>largest object</strong> in our solar system.</li>
+                                        <li>It provides energy that supports life on Earth.</li>
+                                    </ul>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌍">Earth – Our Home Planet</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    <strong>Earth</strong> is the <strong>third planet</strong> from the Sun and the only known planet where life exists. It
+                                    has air, water, and the right temperature needed for plants, animals, and humans to live.
+                                </p>
+                                <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#0369A1' }}>Important features of Earth</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#0369A1', lineHeight: 1.8 }}>
+                                        <li>Earth has both <strong>land and water</strong>.</li>
+                                        <li>About <strong>71%</strong> of Earth’s surface is covered with water.</li>
+                                        <li>It has an <strong>atmosphere</strong> that protects living things.</li>
+                                    </ul>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌙">The Moon</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    The <strong>Moon</strong> is Earth’s natural satellite. It revolves around the Earth and reflects light from the Sun. The
+                                    Moon does not produce its own light.
+                                </p>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>Interesting facts about the Moon</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                        <li>It takes about <strong>27 days</strong> to orbit the Earth.</li>
+                                        <li>
+                                            The Moon shows different shapes called <strong>phases</strong> such as new moon, half moon, and full moon.
+                                        </li>
+                                        <li>The Moon affects the <strong>ocean tides</strong> on Earth.</li>
+                                    </ul>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🪐">Planets of the Solar System</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    There are <strong>eight planets</strong> in the solar system that revolve around the Sun in fixed paths called{' '}
+                                    <strong>orbits</strong>.
+                                </p>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155' }}>The eight planets are:</p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>Mercury</li>
+                                    <li>Venus</li>
+                                    <li>Earth</li>
+                                    <li>Mars</li>
+                                    <li>Jupiter</li>
+                                    <li>Saturn</li>
+                                    <li>Uranus</li>
+                                    <li>Neptune</li>
+                                </ul>
+                                <div style={{ marginTop: 14, background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#166534' }}>Examples and special features</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8 }}>
+                                        <li><strong>Mercury</strong> is the closest planet to the Sun.</li>
+                                        <li><strong>Jupiter</strong> is the largest planet in the solar system.</li>
+                                        <li><strong>Saturn</strong> is famous for its beautiful <strong>rings</strong>.</li>
+                                    </ul>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="☄️">Other Objects in Space</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>
+                                        <strong>Asteroids</strong> – small rocky objects that orbit the Sun.
+                                    </li>
+                                    <li>
+                                        <strong>Comets</strong> – icy objects that travel through space and sometimes appear with bright tails.
+                                    </li>
+                                    <li>
+                                        <strong>Meteors</strong> – small space rocks that burn when entering Earth’s atmosphere.
+                                    </li>
+                                </ul>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="📚">Importance of the Solar System</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>Helps us understand how Earth moves in space.</li>
+                                    <li>Explains natural events like <strong>day and night</strong>.</li>
+                                    <li>Helps scientists study planets and explore space.</li>
+                                </ul>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is the solar system?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                            Answer: The solar system is the group of planets and other objects that revolve around the Sun.
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>
+                                            2. Why is the Sun important for life on Earth?
+                                        </p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                            Answer: The Sun provides light and heat that support life.
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>
+                                            3. What is Earth’s natural satellite?
+                                        </p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: The Moon.</p>
+                                    </div>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Earth is the only planet known to support life.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Jupiter is the largest planet in the solar system.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Saturn has large rings made of ice and rock.</li>
+                                </ul>
+                            </Section>
+
+                            <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                                <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What is the center of the solar system?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Which planet do we live on?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Name the natural satellite of Earth.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. How many planets are in the solar system?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name two planets of the solar system.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. What are asteroids?</p>
+                                </div>
+                            </Section>
+                        </>
+                    )}
+
+                    {classId === '5' && chapterId === 'environment-and-conservation' && (
+                        <>
+                            <Section>
+                                <SectionTitle emoji="🌎">Introduction</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: 0 }}>
+                                    The <strong>environment</strong> includes everything around us such as air, water, soil, plants, animals, and humans.
+                                    A healthy environment is necessary for life on Earth. However, human activities such as pollution and deforestation can harm
+                                    the environment. Learning about environmental conservation helps us protect nature and keep our planet safe for future
+                                    generations.
+                                </p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌱">What is the Environment?</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    The environment is made up of <strong>living things and non-living things</strong>.
+                                </p>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                                    <div style={{ background: '#E8F5E9', border: '1px solid #A5D6A7', borderRadius: 16, padding: 16 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#166534' }}>Living things include:</p>
+                                        <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8 }}>
+                                            <li>Plants</li>
+                                            <li>Animals</li>
+                                            <li>Humans</li>
+                                        </ul>
+                                    </div>
+                                    <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 16 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#0369A1' }}>Non-living things include:</p>
+                                        <ul style={{ margin: 0, paddingLeft: 18, color: '#0369A1', lineHeight: 1.8 }}>
+                                            <li>Air</li>
+                                            <li>Water</li>
+                                            <li>Soil</li>
+                                            <li>Sunlight</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#334155' }}>All living things depend on the environment for survival.</p>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="☠️">Pollution</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    <strong>Pollution</strong> occurs when harmful substances are added to the environment, making it dirty and unsafe for
+                                    living things.
+                                </p>
+                                <SectionTitle emoji="🌫️">Types of Pollution</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 8 }}>
+                                    <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 16 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#0369A1' }}>Air Pollution</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#0369A1' }}>Caused by smoke, harmful gases, and dust released into the air.</p>
+                                        <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#0369A1' }}>
+                                            Examples: smoke from factories, vehicle exhaust, burning of garbage.
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 16 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#0369A1' }}>Water Pollution</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#0369A1' }}>
+                                            Happens when harmful substances are mixed with rivers, lakes, and oceans.
+                                        </p>
+                                        <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#0369A1' }}>
+                                            Examples: industrial waste, plastic waste, oil spills.
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#FEF3C7', border: '1px solid #FBBF24', borderRadius: 16, padding: 16 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#92400E' }}>Land Pollution</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#92400E' }}>
+                                            Occurs when waste materials are dumped on the ground.
+                                        </p>
+                                        <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#92400E' }}>
+                                            Examples: plastic waste, garbage dumps, chemical waste.
+                                        </p>
+                                    </div>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="⚠️">Effects of Pollution</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>Harm to plants and animals.</li>
+                                    <li>Health problems for humans.</li>
+                                    <li>Contamination of water and soil.</li>
+                                    <li>Damage to ecosystems and the balance of nature.</li>
+                                </ul>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌳">Deforestation</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 8px' }}>
+                                    <strong>Deforestation</strong> means cutting down large numbers of trees and forests.
+                                </p>
+                                <SectionTitle emoji="🪓">Causes of Deforestation</SectionTitle>
+                                <ul style={{ margin: '0 0 8px', paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>Building cities and roads.</li>
+                                    <li>Agriculture and farming.</li>
+                                    <li>Cutting trees for wood and paper.</li>
+                                </ul>
+                                <SectionTitle emoji="⚠️">Effects of Deforestation</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>Loss of wildlife habitats.</li>
+                                    <li>Soil erosion.</li>
+                                    <li>Climate changes.</li>
+                                    <li>Reduction of oxygen in the air.</li>
+                                </ul>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="♻️">Conservation of the Environment</SectionTitle>
+                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: 1.9, margin: '0 0 12px' }}>
+                                    Environmental conservation means protecting and using natural resources wisely.
+                                </p>
+                                <SectionTitle emoji="✅">Ways to Protect the Environment</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>Plant more trees.</li>
+                                    <li>Reduce the use of plastic.</li>
+                                    <li>Recycle materials such as paper and glass.</li>
+                                    <li>Save water and electricity.</li>
+                                    <li>Avoid throwing garbage in public places.</li>
+                                </ul>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="♻️">The Three R’s of Conservation</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li><strong>Reduce</strong> – Use fewer resources.</li>
+                                    <li><strong>Reuse</strong> – Use items again instead of throwing them away.</li>
+                                    <li><strong>Recycle</strong> – Convert waste materials into new products.</li>
+                                </ul>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌍">Importance of Protecting the Environment</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>Protects plants and animals.</li>
+                                    <li>Maintains clean air and water.</li>
+                                    <li>Helps maintain balance in nature.</li>
+                                    <li>Ensures a healthy future for humans.</li>
+                                </ul>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is the environment?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                            Answer: The environment includes all living and non-living things around us.
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is pollution?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                            Answer: Pollution is the contamination of the environment by harmful substances.
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why is deforestation harmful?</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                            Answer: It destroys animal habitats and affects the balance of nature.
+                                        </p>
+                                    </div>
+                                </div>
+                            </Section>
+
+                            <Section>
+                                <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                                <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Trees absorb carbon dioxide and release oxygen.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Recycling helps reduce waste and saves natural resources.</li>
+                                    <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Plants help keep the air clean.</li>
+                                </ul>
+                            </Section>
+
+                            <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                                <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What is the environment?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name two types of pollution.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is deforestation?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Name two ways to protect the environment.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What are the three R’s of conservation?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why are trees important for the environment?</p>
                                 </div>
                             </Section>
                         </>
@@ -25183,6 +27325,2758 @@ const LessonPage = () => {
                                 <p style={{ fontSize: '17px', color: '#FFFFFF', fontWeight: 600, margin: 0 }}>
                                     🗺️ Maps help us explore and understand our world!
                                 </p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 5 – SOCIAL STUDIES – MAPS AND DIRECTIONS
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '5' && chapterId === 'maps-and-directions' && (
+                    <>
+                        <Section>
+                            <SectionTitle emoji="🗺️">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                A <strong>map</strong> is a drawing of the Earth or a part of the Earth on a flat surface. Maps help us understand the location
+                                of places, distances between locations, and important features such as rivers, mountains, cities, and roads. Maps are useful
+                                tools for travelers, students, and scientists to study the Earth.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📍">What is a Map?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                A map shows the position of places and features on the Earth. It helps people find locations and understand how places are
+                                connected.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🗺️">Types of Maps</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 12px' }}>
+                                There are different types of maps. Each type shows different kinds of information.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#E3F2FD', borderRadius: 16, padding: 18, border: '1px solid #90CAF9' }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#1D4ED8' }}>Physical Maps</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#1E3A8A' }}>
+                                        Show natural features such as <strong>mountains, rivers, oceans, and plains</strong>.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#FFF3E0', borderRadius: 16, padding: 18, border: '1px solid #FFCC80' }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#C05621' }}>Political Maps</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#7B341E' }}>
+                                        Show <strong>countries, states, cities</strong>, and their boundaries.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#E0F2F1', borderRadius: 16, padding: 18, border: '1px solid #80CBC4' }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#047857' }}>Thematic Maps</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#065F46' }}>
+                                        Show specific information such as <strong>climate, population, or natural resources</strong>.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧭">Main Directions</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 8px' }}>
+                                <strong>Directions</strong> help us know which way to go to reach a place. The four main directions are called{' '}
+                                <strong>cardinal directions</strong>.
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>North</li>
+                                <li>South</li>
+                                <li>East</li>
+                                <li>West</li>
+                            </ul>
+                            <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#334155' }}>
+                                Example: If you move toward the <strong>sunrise</strong>, you are moving toward the <strong>East</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧭">Intermediate Directions</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 8px' }}>
+                                Between the four main directions, there are additional directions called <strong>intermediate directions</strong>.
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>North-East (NE)</li>
+                                <li>North-West (NW)</li>
+                                <li>South-East (SE)</li>
+                                <li>South-West (SW)</li>
+                            </ul>
+                            <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#334155' }}>
+                                These directions help give more <strong>accurate</strong> locations on a map.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧭">Compass</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 8px' }}>
+                                A <strong>compass</strong> is a tool used to find directions. It has a magnetic needle that always points toward the{' '}
+                                <strong>North</strong>.
+                            </p>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: 0 }}>
+                                A compass helps <strong>travelers and explorers</strong> navigate and find their way.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📌">Map Symbols</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 8px' }}>
+                                Maps use <strong>symbols</strong> to represent different places and features because there is not enough space to draw
+                                everything in detail.
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>A blue line may represent a <strong>river</strong>.</li>
+                                <li>A small square may represent a <strong>building</strong>.</li>
+                                <li>A star may represent a <strong>capital city</strong>.</li>
+                            </ul>
+                            <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#334155' }}>
+                                These symbols are explained in a section of the map called the <strong>legend or key</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📏">Scale of a Map</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 8px' }}>
+                                The <strong>scale</strong> of a map shows the relationship between the distance on the map and the actual distance on the
+                                ground.
+                            </p>
+                            <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>
+                                Example: <strong>1 centimeter</strong> on the map may represent <strong>10 kilometers</strong> on Earth.
+                            </p>
+                            <p style={{ margin: '8px 0 0', fontSize: '15px', color: '#334155' }}>
+                                Using the scale helps us measure real distances between places.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌍">Importance of Maps and Directions</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Help people find locations easily.</li>
+                                <li>Assist travelers in reaching destinations.</li>
+                                <li>Help students study geography.</li>
+                                <li>Used in navigation by pilots and sailors.</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is a map?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A map is a drawing of the Earth or part of it on a flat surface.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>
+                                        2. What are the four main directions?
+                                    </p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: North, South, East, and West.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>
+                                        3. What tool helps us find directions?
+                                    </p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: A compass.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>The oldest known maps were made thousands of years ago.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Modern maps are often created using satellites.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Digital maps are used in mobile phones and GPS systems.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What is a map used for?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name the four main directions.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What does a compass do?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What are map symbols?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What is the scale of a map?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Name two types of maps.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 5 – SOCIAL STUDIES – LANDFORMS AND WATER BODIES
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '5' && chapterId === 'landforms-and-water-bodies' && (
+                    <>
+                        <Section>
+                            <SectionTitle emoji="🌍">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                The surface of the Earth is made up of different natural features called <strong>landforms</strong> and{' '}
+                                <strong>water bodies</strong>. Landforms are the natural shapes of the land, while water bodies are areas where water is found
+                                on Earth. These features shape our environment and influence how people live, travel, and grow food.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⛰️">Landforms</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                <strong>Landforms</strong> are natural physical features of the Earth’s surface such as mountains, plains, plateaus, and
+                                valleys.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏔️">Mountains</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 8px' }}>
+                                <strong>Mountains</strong> are very high areas of land with steep slopes. They are higher than hills and often have cold
+                                climates.
+                            </p>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: 0 }}>
+                                Example: The <strong>Himalayas</strong> are the highest mountain range in the world.
+                            </p>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: '8px 0 0' }}>
+                                Mountains are important because they are sources of rivers and provide habitats for many plants and animals.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌾">Plains</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 8px' }}>
+                                <strong>Plains</strong> are large areas of flat land. They are very suitable for farming and building cities because the land is
+                                level and fertile.
+                            </p>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: 0 }}>
+                                Example: The <strong>Indo-Gangetic Plain</strong> in India is one of the most fertile plains.
+                            </p>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: '8px 0 0' }}>
+                                Many people live in plains because they are good for agriculture and transportation.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🗻">Plateaus</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 8px' }}>
+                                <strong>Plateaus</strong> are areas of high land that have flat tops. They are sometimes called <strong>tablelands</strong>{' '}
+                                because they look like a table.
+                            </p>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: 0 }}>
+                                Example: The <strong>Deccan Plateau</strong> in India.
+                            </p>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: '8px 0 0' }}>
+                                Plateaus often contain valuable <strong>minerals</strong> and natural resources.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏞️">Valleys</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 8px' }}>
+                                <strong>Valleys</strong> are low areas of land between mountains or hills. Rivers often flow through valleys.
+                            </p>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: 0 }}>
+                                Example: The <strong>Kashmir Valley</strong>.
+                            </p>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: '8px 0 0' }}>
+                                Valleys usually have fertile soil and are good for farming.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌊">Water Bodies</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                <strong>Water bodies</strong> are places where water collects naturally on the Earth’s surface, such as rivers, lakes, seas, and
+                                oceans.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏞️">Rivers</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 8px' }}>
+                                <strong>Rivers</strong> are flowing bodies of water that move from higher land to lower land and usually flow into seas or
+                                oceans.
+                            </p>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: 0 }}>
+                                Examples: The <strong>Ganga River</strong>, The <strong>Nile River</strong>.
+                            </p>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: '8px 0 0' }}>
+                                Rivers are important because they provide water for drinking, farming, and transportation.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏝️">Lakes</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 8px' }}>
+                                <strong>Lakes</strong> are large bodies of water surrounded by land.
+                            </p>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: 0 }}>
+                                Examples: <strong>Dal Lake</strong> in India, <strong>Lake Victoria</strong> in Africa.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌊">Seas</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 8px' }}>
+                                <strong>Seas</strong> are large bodies of saltwater that are partly surrounded by land.
+                            </p>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: 0 }}>
+                                Example: The <strong>Arabian Sea</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌊">Oceans</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 8px' }}>
+                                <strong>Oceans</strong> are the largest water bodies on Earth. They cover about <strong>71% of the Earth’s surface</strong>.
+                            </p>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 8px' }}>The five major oceans are:</p>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Pacific Ocean</li>
+                                <li>Atlantic Ocean</li>
+                                <li>Indian Ocean</li>
+                                <li>Southern Ocean</li>
+                                <li>Arctic Ocean</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌱">Importance of Landforms and Water Bodies</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>They support plants and animals.</li>
+                                <li>They influence weather and climate.</li>
+                                <li>They provide natural resources.</li>
+                                <li>They help humans in farming, transportation, and trade.</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What are landforms?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Landforms are natural physical features of the Earth&apos;s surface.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>
+                                        2. Why are plains suitable for farming?
+                                    </p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Plains have flat and fertile land that is ideal for agriculture.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>
+                                        3. What is the largest water body on Earth?
+                                    </p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Oceans are the largest water bodies.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    <strong>Mount Everest</strong> in the Himalayas is the highest mountain in the world.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    The <strong>Pacific Ocean</strong> is the largest ocean on Earth.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Many major cities developed near rivers because of water availability.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Name three types of landforms.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. What is a plateau?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Name two major rivers.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What are oceans?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Why are rivers important?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Name the largest ocean on Earth.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 5 – SOCIAL STUDIES – WEATHER AND CLIMATE
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '5' && chapterId === 'weather-and-climate' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🌤️">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                Weather and climate describe the conditions of the atmosphere around us. <strong>Weather</strong> tells us what
+                                the atmosphere is like at a particular time and place, while <strong>climate</strong> describes the usual weather
+                                patterns of a place over a long period. Understanding weather and climate helps us learn about seasons,
+                                environments, and how people adapt to different conditions around the world.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: What is Weather? */}
+                        <Section>
+                            <SectionTitle emoji="☀️">Weather</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                <strong>Weather</strong> is the day-to-day condition of the atmosphere at a particular place and time.
+                                Weather can change quickly, sometimes within a few hours.
+                            </p>
+                            <div style={{ background: '#FFF3E0', borderRadius: '12px', padding: '16px', marginTop: '12px', border: '1px solid #FFB74D' }}>
+                                <p style={{ fontSize: '15px', color: '#E65100', margin: 0 }}>
+                                    💡 <strong>Example:</strong> A day may start sunny, become cloudy in the afternoon, and rain in the evening. These changes describe the weather of that day.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Elements of Weather */}
+                        <Section>
+                            <SectionTitle emoji="🌡️">Elements of Weather</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Weather is described using different elements. These help us understand daily weather conditions.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px', marginTop: '12px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #FF8A65 0%, #FF7043 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #F4511E', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>🌡️</div>
+                                    <p style={{ fontSize: '16px', color: '#FFFFFF', fontWeight: 700, margin: '0 0 6px 0' }}>Temperature</p>
+                                    <p style={{ fontSize: '13px', color: '#FFCCBC', margin: 0 }}>How hot or cold the air is</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #90CAF9 0%, #64B5F6 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #42A5F5', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>🌧️</div>
+                                    <p style={{ fontSize: '16px', color: '#0D47A1', fontWeight: 700, margin: '0 0 6px 0' }}>Rainfall</p>
+                                    <p style={{ fontSize: '13px', color: '#1565C0', margin: 0 }}>Amount of rain from clouds</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #81D4FA 0%, #4FC3F7 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #29B6F6', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>💨</div>
+                                    <p style={{ fontSize: '16px', color: '#01579B', fontWeight: 700, margin: '0 0 6px 0' }}>Wind</p>
+                                    <p style={{ fontSize: '13px', color: '#0277BD', margin: 0 }}>Movement of air</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #CFD8DC 0%, #B0BEC5 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #90A4AE', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>☁️</div>
+                                    <p style={{ fontSize: '16px', color: '#37474F', fontWeight: 700, margin: '0 0 6px 0' }}>Clouds</p>
+                                    <p style={{ fontSize: '13px', color: '#455A64', margin: 0 }}>Water droplets in the sky</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #A5D6A7 0%, #81C784 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #66BB6A', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>💧</div>
+                                    <p style={{ fontSize: '16px', color: '#1B5E20', fontWeight: 700, margin: '0 0 6px 0' }}>Humidity</p>
+                                    <p style={{ fontSize: '13px', color: '#2E7D32', margin: 0 }}>Moisture in the air</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Seasons */}
+                        <Section>
+                            <SectionTitle emoji="🍂">Seasons</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Seasons are different periods of the year that have distinct weather patterns. Seasons occur because
+                                the <strong>Earth revolves around the Sun and its axis is tilted</strong>.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #FFF9C4 0%, #FFF176 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #FFEE58', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>☀️</div>
+                                    <p style={{ fontSize: '16px', color: '#F57F17', fontWeight: 700, margin: '0 0 6px 0' }}>Summer</p>
+                                    <p style={{ fontSize: '13px', color: '#F9A825', margin: 0 }}>Hot weather and longer days</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #BBDEFB 0%, #90CAF9 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #64B5F6', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>❄️</div>
+                                    <p style={{ fontSize: '16px', color: '#1565C0', fontWeight: 700, margin: '0 0 6px 0' }}>Winter</p>
+                                    <p style={{ fontSize: '13px', color: '#1976D2', margin: 0 }}>Cold weather and shorter days</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #B3E5FC 0%, #81D4FA 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #4FC3F7', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>🌧️</div>
+                                    <p style={{ fontSize: '16px', color: '#0277BD', fontWeight: 700, margin: '0 0 6px 0' }}>Rainy Season</p>
+                                    <p style={{ fontSize: '13px', color: '#01579B', margin: 0 }}>Heavy rainfall (Monsoon)</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #66BB6A', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>🌸</div>
+                                    <p style={{ fontSize: '16px', color: '#2E7D32', fontWeight: 700, margin: '0 0 6px 0' }}>Spring</p>
+                                    <p style={{ fontSize: '13px', color: '#388E3C', margin: 0 }}>Mild weather with blooming plants</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Climate */}
+                        <Section>
+                            <SectionTitle emoji="🌍">Climate</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                <strong>Climate</strong> is the average weather of a place over a long period of time, usually many years.
+                                Climate changes slowly compared to weather. Different regions of the world have different climates.
+                            </p>
+                        </Section>
+
+                        {/* Section 6: Types of Climate */}
+                        <Section>
+                            <SectionTitle emoji="🗺️">Types of Climate</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '18px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #FFAB91 0%, #FF8A65 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #FF7043' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>🌴</div>
+                                    <h4 style={{ fontSize: '16px', color: '#BF360C', fontWeight: 700, margin: '0 0 8px 0' }}>Tropical Climate</h4>
+                                    <p style={{ fontSize: '14px', color: '#D84315', margin: '0 0 6px 0' }}>Hot temperatures and heavy rainfall throughout the year.</p>
+                                    <p style={{ fontSize: '13px', color: '#E64A19', fontStyle: 'italic', margin: 0 }}>Example: Countries near the equator</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FFECB3 0%, #FFE082 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #FFD54F' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>🏜️</div>
+                                    <h4 style={{ fontSize: '16px', color: '#F57F17', fontWeight: 700, margin: '0 0 8px 0' }}>Desert Climate</h4>
+                                    <p style={{ fontSize: '14px', color: '#FF8F00', margin: '0 0 6px 0' }}>Very hot during the day with very little rainfall.</p>
+                                    <p style={{ fontSize: '13px', color: '#FFA000', fontStyle: 'italic', margin: 0 }}>Example: Sahara Desert</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #E1F5FE 0%, #B3E5FC 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #81D4FA' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>🧊</div>
+                                    <h4 style={{ fontSize: '16px', color: '#01579B', fontWeight: 700, margin: '0 0 8px 0' }}>Polar Climate</h4>
+                                    <p style={{ fontSize: '14px', color: '#0277BD', margin: '0 0 6px 0' }}>Extremely cold with snow and ice most of the year.</p>
+                                    <p style={{ fontSize: '13px', color: '#0288D1', fontStyle: 'italic', margin: 0 }}>Example: Arctic and Antarctic regions</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #DCEDC8 0%, #C5E1A5 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #AED581' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>🌿</div>
+                                    <h4 style={{ fontSize: '16px', color: '#33691E', fontWeight: 700, margin: '0 0 8px 0' }}>Temperate Climate</h4>
+                                    <p style={{ fontSize: '14px', color: '#558B2F', margin: 0 }}>Moderate temperatures with clear seasonal changes.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Factors Affecting Climate */}
+                        <Section>
+                            <SectionTitle emoji="📊">Factors Affecting Climate</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                These factors determine whether a place becomes hot, cold, wet, or dry.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #3B82F6' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🌐</div>
+                                    <div style={{ fontWeight: 700, color: '#1E40AF', fontSize: '15px' }}>Distance from the Equator</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Places near the equator are hotter</div>
+                                </div>
+                                <div style={{ background: '#ECFDF5', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #10B981' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>⛰️</div>
+                                    <div style={{ fontWeight: 700, color: '#065F46', fontSize: '15px' }}>Altitude</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Higher places are cooler</div>
+                                </div>
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #6366F1' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🌊</div>
+                                    <div style={{ fontWeight: 700, color: '#3730A3', fontSize: '15px' }}>Distance from Oceans</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Coastal areas have milder climate</div>
+                                </div>
+                                <div style={{ background: '#FEF3C7', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #F59E0B' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>💨</div>
+                                    <div style={{ fontWeight: 700, color: '#92400E', fontSize: '15px' }}>Wind Patterns</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Winds carry heat and moisture</div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Importance */}
+                        <Section>
+                            <SectionTitle emoji="🌱">Importance of Weather and Climate</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Helps farmers decide when to plant crops.</li>
+                                <li>Helps people prepare for storms, floods, and droughts.</li>
+                                <li>Influences clothing, houses, and lifestyles.</li>
+                                <li>Helps scientists understand environmental changes.</li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 9: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is weather?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Weather is the day-to-day condition of the atmosphere.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is climate?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Climate is the average weather condition of a place over a long time.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why do seasons occur?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Seasons occur because the Earth revolves around the Sun and its axis is tilted.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 10: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    The <strong>equator</strong> receives the most direct sunlight on Earth.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    <strong>Polar regions</strong> are the coldest places on Earth.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    <strong>Deserts</strong> receive very little rainfall each year.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 11: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define weather.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name the four main seasons.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is climate?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Name two types of climates.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Which season usually has the highest temperatures?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why is climate important for farmers?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 5 – SOCIAL STUDIES – NATURAL RESOURCES
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '5' && chapterId === 'natural-resources' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🌍">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                Natural resources are materials and substances that come from nature and are useful to living things.
+                                These resources are provided by the Earth and help humans, animals, and plants survive. Natural resources
+                                include <strong>air, water, soil, minerals, and forests</strong>. They are important for food production,
+                                shelter, energy, and maintaining life on Earth.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: Air */}
+                        <Section>
+                            <SectionTitle emoji="💨">Air</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Air is one of the most important natural resources. It is a mixture of gases such as <strong>oxygen,
+                                nitrogen, and carbon dioxide</strong>.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #3B82F6' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🫁</div>
+                                    <div style={{ fontWeight: 700, color: '#1E40AF', fontSize: '15px' }}>Breathing</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Living organisms need oxygen to breathe</div>
+                                </div>
+                                <div style={{ background: '#ECFDF5', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #10B981' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🌿</div>
+                                    <div style={{ fontWeight: 700, color: '#065F46', fontSize: '15px' }}>Photosynthesis</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Plants use CO₂ to make food</div>
+                                </div>
+                                <div style={{ background: '#FEF3C7', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #F59E0B' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🌤️</div>
+                                    <div style={{ fontWeight: 700, color: '#92400E', fontSize: '15px' }}>Weather & Climate</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Air helps control weather patterns</div>
+                                </div>
+                            </div>
+                            <div style={{ background: '#FFF3E0', borderRadius: '12px', padding: '16px', marginTop: '16px', border: '1px solid #FFB74D' }}>
+                                <p style={{ fontSize: '15px', color: '#E65100', margin: 0 }}>
+                                    💡 <strong>Example:</strong> Wind is moving air and can be used to produce energy using windmills.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Water */}
+                        <Section>
+                            <SectionTitle emoji="💧">Water</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Water is essential for all living things. Humans, animals, and plants need water to survive.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #E1F5FE 0%, #B3E5FC 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #81D4FA' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#01579B', fontWeight: 700, margin: '0 0 12px 0' }}>🌊 Sources of Water</h4>
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                        <div style={{ background: '#FFFFFF', borderRadius: '10px', padding: '10px', border: '1px solid #90CAF9' }}>
+                                            <p style={{ fontSize: '14px', color: '#1976D2', margin: 0 }}>🌧️ Rain</p>
+                                        </div>
+                                        <div style={{ background: '#FFFFFF', borderRadius: '10px', padding: '10px', border: '1px solid #90CAF9' }}>
+                                            <p style={{ fontSize: '14px', color: '#1976D2', margin: 0 }}>🏞️ Rivers & Lakes</p>
+                                        </div>
+                                        <div style={{ background: '#FFFFFF', borderRadius: '10px', padding: '10px', border: '1px solid #90CAF9' }}>
+                                            <p style={{ fontSize: '14px', color: '#1976D2', margin: 0 }}>🌊 Oceans</p>
+                                        </div>
+                                        <div style={{ background: '#FFFFFF', borderRadius: '10px', padding: '10px', border: '1px solid #90CAF9' }}>
+                                            <p style={{ fontSize: '14px', color: '#1976D2', margin: 0 }}>🕳️ Groundwater</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #81C784' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#2E7D32', fontWeight: 700, margin: '0 0 12px 0' }}>🛠️ Uses of Water</h4>
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                        <div style={{ background: '#FFFFFF', borderRadius: '10px', padding: '10px', border: '1px solid #A5D6A7' }}>
+                                            <p style={{ fontSize: '14px', color: '#388E3C', margin: 0 }}>🥤 Drinking & Cooking</p>
+                                        </div>
+                                        <div style={{ background: '#FFFFFF', borderRadius: '10px', padding: '10px', border: '1px solid #A5D6A7' }}>
+                                            <p style={{ fontSize: '14px', color: '#388E3C', margin: 0 }}>🌾 Agriculture & Irrigation</p>
+                                        </div>
+                                        <div style={{ background: '#FFFFFF', borderRadius: '10px', padding: '10px', border: '1px solid #A5D6A7' }}>
+                                            <p style={{ fontSize: '14px', color: '#388E3C', margin: 0 }}>🧹 Cleaning & Sanitation</p>
+                                        </div>
+                                        <div style={{ background: '#FFFFFF', borderRadius: '10px', padding: '10px', border: '1px solid #A5D6A7' }}>
+                                            <p style={{ fontSize: '14px', color: '#388E3C', margin: 0 }}>🏭 Industrial Purposes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Soil */}
+                        <Section>
+                            <SectionTitle emoji="🌱">Soil</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Soil is the upper layer of the Earth's surface where plants grow. It contains minerals and nutrients
+                                that support plant life.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: '#FFF8E1', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #FFB300' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🪤</div>
+                                    <div style={{ fontWeight: 700, color: '#E65100', fontSize: '15px' }}>Nutrients for Plants</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Provides essential minerals for growth</div>
+                                </div>
+                                <div style={{ background: '#E8F5E9', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #43A047' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🌾</div>
+                                    <div style={{ fontWeight: 700, color: '#2E7D32', fontSize: '15px' }}>Agriculture</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Supports food production worldwide</div>
+                                </div>
+                                <div style={{ background: '#E3F2FD', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #1E88E5' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>💧</div>
+                                    <div style={{ fontWeight: 700, color: '#1565C0', fontSize: '15px' }}>Water Storage</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Stores water for plant roots</div>
+                                </div>
+                            </div>
+                            <div style={{ background: '#FFF3E0', borderRadius: '12px', padding: '16px', marginTop: '16px', border: '1px solid #FFB74D' }}>
+                                <p style={{ fontSize: '15px', color: '#E65100', margin: 0 }}>
+                                    👩‍🌾 Farmers depend on fertile soil to grow crops such as <strong>rice, wheat, and vegetables</strong>.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Minerals */}
+                        <Section>
+                            <SectionTitle emoji="⛏️">Minerals</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Minerals are natural substances found deep inside the Earth. They are used to make many everyday
+                                products and tools. Minerals are valuable resources that support industries and development.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #ECEFF1 0%, #CFD8DC 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #90A4AE', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>🔩</div>
+                                    <p style={{ fontSize: '16px', color: '#455A64', fontWeight: 700, margin: '0 0 6px 0' }}>Iron</p>
+                                    <p style={{ fontSize: '13px', color: '#546E7A', margin: 0 }}>Used for machines and buildings</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FFECB3 0%, #FFE082 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #FFD54F', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>🔌</div>
+                                    <p style={{ fontSize: '16px', color: '#F57F17', fontWeight: 700, margin: '0 0 6px 0' }}>Copper</p>
+                                    <p style={{ fontSize: '13px', color: '#FF8F00', margin: 0 }}>Used for electrical wires</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FFF9C4 0%, #FFF176 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #FFEE58', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>💍</div>
+                                    <p style={{ fontSize: '16px', color: '#F9A825', fontWeight: 700, margin: '0 0 6px 0' }}>Gold</p>
+                                    <p style={{ fontSize: '13px', color: '#F57F17', margin: 0 }}>Used for jewelry</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Forests */}
+                        <Section>
+                            <SectionTitle emoji="🌳">Forests</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Forests are large areas covered with trees and plants. They are important natural resources that
+                                support both humans and wildlife.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: '#E8F5E9', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #43A047' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🌿</div>
+                                    <div style={{ fontWeight: 700, color: '#2E7D32', fontSize: '15px' }}>Produce Oxygen</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Trees release oxygen and absorb CO₂</div>
+                                </div>
+                                <div style={{ background: '#FFF3E0', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #FB8C00' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🍎</div>
+                                    <div style={{ fontWeight: 700, color: '#E65100', fontSize: '15px' }}>Resources</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Provide wood, fruits, and medicines</div>
+                                </div>
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #3B82F6' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🦜</div>
+                                    <div style={{ fontWeight: 700, color: '#1E40AF', fontSize: '15px' }}>Habitats</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Home for animals and birds</div>
+                                </div>
+                                <div style={{ background: '#FCE4EC', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #E91E63' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🏞️</div>
+                                    <div style={{ fontWeight: 700, color: '#880E4F', fontSize: '15px' }}>Prevent Erosion</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Help prevent soil erosion</div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Conservation */}
+                        <Section>
+                            <SectionTitle emoji="♻️">Conservation of Natural Resources</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Natural resources must be used wisely so that they remain available for future generations.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #66BB6A', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>🌲</div>
+                                    <p style={{ fontSize: '15px', color: '#2E7D32', fontWeight: 700, margin: 0 }}>Plant more trees</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #BBDEFB 0%, #90CAF9 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #64B5F6', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>🚰</div>
+                                    <p style={{ fontSize: '15px', color: '#1565C0', fontWeight: 700, margin: 0 }}>Avoid wasting water</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #F3E5F5 0%, #CE93D8 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #AB47BC', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>🌎</div>
+                                    <p style={{ fontSize: '15px', color: '#7B1FA2', fontWeight: 700, margin: 0 }}>Reduce pollution</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #DCEDC8 0%, #C5E1A5 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #AED581', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>♻️</div>
+                                    <p style={{ fontSize: '15px', color: '#33691E', fontWeight: 700, margin: 0 }}>Recycle and reuse</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Importance */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Importance of Natural Resources</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Support life on Earth.</li>
+                                <li>Provide raw materials for industries.</li>
+                                <li>Help grow food and crops.</li>
+                                <li>Maintain environmental balance.</li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 9: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What are natural resources?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Natural resources are materials found in nature that are useful to living things.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Why is water important?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Water is needed for drinking, agriculture, and survival of living organisms.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why are forests important?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Forests provide oxygen, resources, and habitats for animals.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 10: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    About <strong>71% of the Earth's surface</strong> is covered with water.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Trees help purify the air by absorbing <strong>carbon dioxide</strong>.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    <strong>Minerals</strong> are used to build many modern technologies.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 11: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define natural resources.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name two important natural resources.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Why is soil important for plants?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Name two minerals.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Why are forests valuable?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. What can we do to conserve natural resources?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 5 – SOCIAL STUDIES – OUR GOVERNMENT
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '5' && chapterId === 'our-government' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🏤">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                A <strong>government</strong> is a group of people who make decisions and rules to manage and run a country.
+                                The government works to maintain order, provide services, and protect the rights of citizens. Every
+                                country has a system of government that helps organize society and ensure that people live safely
+                                and peacefully.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: Why Do We Need a Government? */}
+                        <Section>
+                            <SectionTitle emoji="❓">Why Do We Need a Government?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                A government is necessary to manage the country and solve problems that affect the people.
+                                Without a government, it would be difficult to maintain peace and organize society.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #3B82F6' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>📜</div>
+                                    <div style={{ fontWeight: 700, color: '#1E40AF', fontSize: '15px' }}>Making Laws</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>To maintain order in society</div>
+                                </div>
+                                <div style={{ background: '#ECFDF5', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #10B981' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🏥</div>
+                                    <div style={{ fontWeight: 700, color: '#065F46', fontSize: '15px' }}>Public Services</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Schools, hospitals, and roads</div>
+                                </div>
+                                <div style={{ background: '#FEF3C7', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #F59E0B' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🛡️</div>
+                                    <div style={{ fontWeight: 700, color: '#92400E', fontSize: '15px' }}>Protection</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Protecting from external threats</div>
+                                </div>
+                                <div style={{ background: '#FCE4EC', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #E91E63' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>⚖️</div>
+                                    <div style={{ fontWeight: 700, color: '#880E4F', fontSize: '15px' }}>Justice & Equality</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Ensuring fairness for all citizens</div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Types of Government */}
+                        <Section>
+                            <SectionTitle emoji="🏢">Types of Government</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Different countries have different types of government systems.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '18px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #66BB6A' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>🗳️</div>
+                                    <h4 style={{ fontSize: '16px', color: '#2E7D32', fontWeight: 700, margin: '0 0 8px 0' }}>Democracy</h4>
+                                    <p style={{ fontSize: '14px', color: '#388E3C', margin: '0 0 6px 0' }}>People choose their leaders through elections. Citizens have the right to vote.</p>
+                                    <p style={{ fontSize: '13px', color: '#43A047', fontStyle: 'italic', margin: 0 }}>Example: India is a democratic country</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FFECB3 0%, #FFE082 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #FFD54F' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>👑</div>
+                                    <h4 style={{ fontSize: '16px', color: '#F57F17', fontWeight: 700, margin: '0 0 8px 0' }}>Monarchy</h4>
+                                    <p style={{ fontSize: '14px', color: '#FF8F00', margin: '0 0 6px 0' }}>Ruled by a king or queen. Leadership is often passed down through families.</p>
+                                    <p style={{ fontSize: '13px', color: '#FFA000', fontStyle: 'italic', margin: 0 }}>Example: The United Kingdom</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FFCDD2 0%, #EF9A9A 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #EF5350' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>✊</div>
+                                    <h4 style={{ fontSize: '16px', color: '#C62828', fontWeight: 700, margin: '0 0 8px 0' }}>Dictatorship</h4>
+                                    <p style={{ fontSize: '14px', color: '#D32F2F', margin: '0 0 6px 0' }}>One leader has complete control. Citizens have limited freedom.</p>
+                                    <p style={{ fontSize: '13px', color: '#E53935', fontStyle: 'italic', margin: 0 }}>Some countries have been ruled by dictators</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Levels of Government */}
+                        <Section>
+                            <SectionTitle emoji="🏛️">Levels of Government</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                In many countries, including India, the government works at different levels to manage different areas.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #64B5F6', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>🏢</div>
+                                    <p style={{ fontSize: '16px', color: '#1565C0', fontWeight: 700, margin: '0 0 6px 0' }}>Central Government</p>
+                                    <p style={{ fontSize: '13px', color: '#1976D2', margin: 0 }}>Manages the entire country. Makes national laws and policies.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #F3E5F5 0%, #CE93D8 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #AB47BC', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>🏣</div>
+                                    <p style={{ fontSize: '16px', color: '#7B1FA2', fontWeight: 700, margin: '0 0 6px 0' }}>State Government</p>
+                                    <p style={{ fontSize: '13px', color: '#8E24AA', margin: 0 }}>Manages the affairs of individual states.</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FFF3E0 0%, #FFCC80 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #FFB74D', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '44px', marginBottom: '10px' }}>🏡</div>
+                                    <p style={{ fontSize: '16px', color: '#E65100', fontWeight: 700, margin: '0 0 6px 0' }}>Local Government</p>
+                                    <p style={{ fontSize: '13px', color: '#F57C00', margin: 0 }}>Manages towns, cities, and villages. Handles sanitation, water, and local roads.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Responsibilities */}
+                        <Section>
+                            <SectionTitle emoji="📋">Responsibilities of the Government</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                These responsibilities help improve the quality of life for citizens.
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Building roads and bridges</li>
+                                <li>Providing education and healthcare</li>
+                                <li>Maintaining law and order</li>
+                                <li>Protecting the environment</li>
+                                <li>Helping during natural disasters</li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 6: Importance */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Importance of Government</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #3B82F6' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🛡️</div>
+                                    <div style={{ fontWeight: 700, color: '#1E40AF', fontSize: '15px' }}>Safety & Security</div>
+                                </div>
+                                <div style={{ background: '#ECFDF5', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #10B981' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🏥</div>
+                                    <div style={{ fontWeight: 700, color: '#065F46', fontSize: '15px' }}>Essential Services</div>
+                                </div>
+                                <div style={{ background: '#FEF3C7', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #F59E0B' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>⚖️</div>
+                                    <div style={{ fontWeight: 700, color: '#92400E', fontSize: '15px' }}>Rights & Freedoms</div>
+                                </div>
+                                <div style={{ background: '#F3E5F5', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #AB47BC' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🚀</div>
+                                    <div style={{ fontWeight: 700, color: '#7B1FA2', fontSize: '15px' }}>Development & Progress</div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is a government?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A government is a group of people who manage and run a country.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Why do countries need governments?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Governments make laws, provide services, and maintain order in society.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. What type of government does India have?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: India has a democratic government.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    <strong>India</strong> is the largest democracy in the world.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Citizens in a democracy have the <strong>right to vote</strong>.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Governments create <strong>laws</strong> to maintain peace and order.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 9: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define government.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name two functions of the government.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is democracy?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Name the three levels of government.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Why is government important for a country?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. What services does the government provide?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 5 – SOCIAL STUDIES – RIGHTS AND DUTIES OF CITIZENS
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '5' && chapterId === 'rights-and-duties-of-citizens' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="⚖️">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                In a democratic country, citizens have certain <strong>rights and duties</strong>. Rights are freedoms
+                                and protections given to people by the law, while duties are responsibilities that citizens must follow
+                                to maintain peace and harmony in society. Understanding rights and duties helps people become
+                                responsible citizens and contribute positively to their country.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: What are Rights? */}
+                        <Section>
+                            <SectionTitle emoji="📜">What are Rights?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Rights are the basic freedoms and protections that every citizen is entitled to. These rights allow
+                                people to live with dignity, express their opinions, and participate in the country's governance.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #66BB6A', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>🤝</div>
+                                    <p style={{ fontSize: '15px', color: '#2E7D32', fontWeight: 700, margin: '0 0 6px 0' }}>Right to Equality</p>
+                                    <p style={{ fontSize: '13px', color: '#388E3C', margin: 0 }}>All citizens are equal before the law</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #BBDEFB 0%, #90CAF9 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #64B5F6', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>🗣️</div>
+                                    <p style={{ fontSize: '15px', color: '#1565C0', fontWeight: 700, margin: '0 0 6px 0' }}>Right to Freedom</p>
+                                    <p style={{ fontSize: '13px', color: '#1976D2', margin: 0 }}>Freedom to express opinions and move freely</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FFECB3 0%, #FFE082 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #FFD54F', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>📚</div>
+                                    <p style={{ fontSize: '15px', color: '#F57F17', fontWeight: 700, margin: '0 0 6px 0' }}>Right to Education</p>
+                                    <p style={{ fontSize: '13px', color: '#FF8F00', margin: 0 }}>Every child has the right to learn</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #FFCDD2 0%, #EF9A9A 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #EF5350', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>🛡️</div>
+                                    <p style={{ fontSize: '15px', color: '#C62828', fontWeight: 700, margin: '0 0 6px 0' }}>Right to Life & Safety</p>
+                                    <p style={{ fontSize: '13px', color: '#D32F2F', margin: 0 }}>Right to live safely and peacefully</p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #F3E5F5 0%, #CE93D8 100%)', borderRadius: '16px', padding: '22px', border: '2px solid #AB47BC', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '36px', marginBottom: '10px' }}>🗳️</div>
+                                    <p style={{ fontSize: '15px', color: '#7B1FA2', fontWeight: 700, margin: '0 0 6px 0' }}>Right to Vote</p>
+                                    <p style={{ fontSize: '13px', color: '#8E24AA', margin: 0 }}>Choose leaders in a democracy</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: What are Duties? */}
+                        <Section>
+                            <SectionTitle emoji="✏️">What are Duties?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Duties are responsibilities that citizens must perform for the welfare of society and the country.
+                                By fulfilling their duties, citizens help build a strong and peaceful society.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #3B82F6' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>📜</div>
+                                    <div style={{ fontWeight: 700, color: '#1E40AF', fontSize: '15px' }}>Respect Laws</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Follow the laws of the country</div>
+                                </div>
+                                <div style={{ background: '#ECFDF5', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #10B981' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🇵🇷</div>
+                                    <div style={{ fontWeight: 700, color: '#065F46', fontSize: '15px' }}>National Symbols</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Respect the flag and anthem</div>
+                                </div>
+                                <div style={{ background: '#FEF3C7', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #F59E0B' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🏢</div>
+                                    <div style={{ fontWeight: 700, color: '#92400E', fontSize: '15px' }}>Public Property</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Protect shared public property</div>
+                                </div>
+                                <div style={{ background: '#ECFDF5', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #059669' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🌍</div>
+                                    <div style={{ fontWeight: 700, color: '#065F46', fontSize: '15px' }}>Clean Environment</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Keep the environment clean</div>
+                                </div>
+                                <div style={{ background: '#FCE4EC', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #E91E63' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🤗</div>
+                                    <div style={{ fontWeight: 700, color: '#880E4F', fontSize: '15px' }}>Kindness & Respect</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Show respect and kindness to others</div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Importance */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Importance of Rights and Duties</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Protect freedom and equality.</li>
+                                <li>Promote responsibility among citizens.</li>
+                                <li>Help maintain peace and order.</li>
+                                <li>Strengthen democracy.</li>
+                            </ul>
+                            <div style={{ background: '#FFF3E0', borderRadius: '12px', padding: '16px', marginTop: '16px', border: '1px solid #FFB74D' }}>
+                                <p style={{ fontSize: '15px', color: '#E65100', margin: 0 }}>
+                                    💡 <strong>Remember:</strong> Rights and duties go together. If people enjoy their rights but do not perform their duties, society cannot function properly.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What are rights?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Rights are freedoms and protections given to citizens by law.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What are duties?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Duties are responsibilities that citizens must perform for the benefit of society.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why are duties important?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Duties help maintain peace, order, and responsibility in society.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    <strong>Voting</strong> is one of the most important rights in a democracy.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Children have the right to <strong>free and compulsory education</strong> in many countries.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Citizens who follow their duties help build a <strong>better nation</strong>.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 7: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What are rights?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. What are duties?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Name two rights of citizens.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Name two duties of citizens.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Why is the right to education important?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why should citizens respect laws?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 5 – SOCIAL STUDIES – CULTURE AND FESTIVALS OF INDIA
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '5' && chapterId === 'culture-and-festivals-of-india' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🇮🇳">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                India is a country known for its rich and diverse culture. Culture includes the traditions, customs, 
+                                languages, food, clothing, music, and festivals of a group of people. India is home to many different 
+                                cultures because people from different religions, regions, and communities live together. Festivals 
+                                are an important part of Indian culture and bring people together in celebration and joy.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: What is Culture? */}
+                        <Section>
+                            <SectionTitle emoji="🎨">What is Culture?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Culture refers to the way of life of people in a society. It includes their traditions, beliefs, 
+                                arts, food habits, clothing styles, and celebrations. India's culture is unique because it combines 
+                                traditions from many communities.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #3B82F6' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>👘</div>
+                                    <div style={{ fontWeight: 700, color: '#1E40AF', fontSize: '15px' }}>Traditional Clothing</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Sarees, dhotis, and kurta-pajamas</div>
+                                </div>
+                                <div style={{ background: '#ECFDF5', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #10B981' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🗣️</div>
+                                    <div style={{ fontWeight: 700, color: '#065F46', fontSize: '15px' }}>Languages</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Different languages spoken in various regions</div>
+                                </div>
+                                <div style={{ background: '#FEF3C7', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #F59E0B' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🎵</div>
+                                    <div style={{ fontWeight: 700, color: '#92400E', fontSize: '15px' }}>Music and Dance</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Traditional music and dance forms</div>
+                                </div>
+                                <div style={{ background: '#FCE4EC', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #E91E63' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🍛</div>
+                                    <div style={{ fontWeight: 700, color: '#880E4F', fontSize: '15px' }}>Food and Cuisines</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Regional foods and delicious cuisines</div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Unity in Diversity */}
+                        <Section>
+                            <SectionTitle emoji="🤝">Unity in Diversity</SectionTitle>
+                            <div style={{ background: 'linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #FFD54F', textAlign: 'center' }}>
+                                <p style={{ fontSize: '16px', color: '#F57F17', lineHeight: 1.8, margin: 0 }}>
+                                    India is often called a land of <strong>“Unity in Diversity.”</strong> This means that even though 
+                                    people speak different languages, follow different religions, and celebrate different festivals, 
+                                    they live together peacefully and respect each other’s traditions. This diversity makes Indian 
+                                    culture vibrant and unique.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Major Festivals of India */}
+                        <Section>
+                            <SectionTitle emoji="🎉">Major Festivals of India</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Festivals are special occasions celebrated with happiness, rituals, and gatherings. People decorate 
+                                their homes, prepare special foods, wear traditional clothes, and spend time with family and friends.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
+                                <div style={{ background: '#FFF3E0', borderRadius: '16px', padding: '20px', border: '1px solid #FFB74D' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '10px' }}>
+                                        <div style={{ fontSize: '32px' }}>🪔</div>
+                                        <h4 style={{ fontSize: '18px', color: '#E65100', margin: 0, fontWeight: 700 }}>Diwali</h4>
+                                    </div>
+                                    <p style={{ fontSize: '14px', color: '#F57C00', margin: '0 0 8px 0' }}>The <strong>Festival of Lights</strong></p>
+                                    <p style={{ fontSize: '14px', color: '#475569', margin: 0, lineHeight: 1.6 }}>People decorate their homes with lamps and candles, exchange sweets, and celebrate the victory of light over darkness.</p>
+                                </div>
+                                <div style={{ background: '#F3E5F5', borderRadius: '16px', padding: '20px', border: '1px solid #BA68C8' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '10px' }}>
+                                        <div style={{ fontSize: '32px' }}>🎨</div>
+                                        <h4 style={{ fontSize: '18px', color: '#7B1FA2', margin: 0, fontWeight: 700 }}>Holi</h4>
+                                    </div>
+                                    <p style={{ fontSize: '14px', color: '#9C27B0', margin: '0 0 8px 0' }}>The <strong>Festival of Colors</strong></p>
+                                    <p style={{ fontSize: '14px', color: '#475569', margin: 0, lineHeight: 1.6 }}>People celebrate by throwing colored powders and water at each other and enjoying festive foods.</p>
+                                </div>
+                                <div style={{ background: '#E8F5E9', borderRadius: '16px', padding: '20px', border: '1px solid #81C784' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '10px' }}>
+                                        <div style={{ fontSize: '32px' }}>🕌</div>
+                                        <h4 style={{ fontSize: '18px', color: '#2E7D32', margin: 0, fontWeight: 700 }}>Eid</h4>
+                                    </div>
+                                    <p style={{ fontSize: '14px', color: '#388E3C', margin: '0 0 8px 0' }}>An important festival celebrated by Muslims</p>
+                                    <p style={{ fontSize: '14px', color: '#475569', margin: 0, lineHeight: 1.6 }}>People offer prayers at mosques, share meals, and give charity to help those in need.</p>
+                                </div>
+                                <div style={{ background: '#E1F5FE', borderRadius: '16px', padding: '20px', border: '1px solid #4FC3F7' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '10px' }}>
+                                        <div style={{ fontSize: '32px' }}>🎄</div>
+                                        <h4 style={{ fontSize: '18px', color: '#0277BD', margin: 0, fontWeight: 700 }}>Christmas</h4>
+                                    </div>
+                                    <p style={{ fontSize: '14px', color: '#0288D1', margin: '0 0 8px 0' }}>Celebrated by Christians to mark the birth of Jesus Christ</p>
+                                    <p style={{ fontSize: '14px', color: '#475569', margin: 0, lineHeight: 1.6 }}>People decorate Christmas trees, exchange gifts, and attend church services.</p>
+                                </div>
+                            </div>
+                            <div style={{ background: '#F8FAFC', borderRadius: '12px', padding: '16px', marginTop: '16px', border: '1px dashed #CBD5E1' }}>
+                                <p style={{ fontSize: '15px', color: '#475569', margin: 0, textAlign: 'center' }}>
+                                    🌾 Other festivals celebrated in India include <strong>Pongal, Baisakhi, Onam, Navratri, and Ganesh Chaturthi</strong>.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Importance of Festivals */}
+                        <Section>
+                            <SectionTitle emoji="✨">Importance of Festivals</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Bring families and communities together.</li>
+                                <li>Promote happiness and celebration.</li>
+                                <li>Help preserve traditions and culture.</li>
+                                <li>Encourage sharing and kindness among people.</li>
+                            </ul>
+                            <p style={{ fontSize: '15px', color: '#059669', margin: '12px 0 0 0', fontWeight: 600 }}>
+                                💡 Festivals teach people to respect different cultures and traditions.
+                            </p>
+                        </Section>
+
+                        {/* Section 6: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is culture?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Culture is the way of life of people, including their traditions, customs, food, and celebrations.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Why is India called a land of unity in diversity?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Because people from many religions, languages, and cultures live together peacefully.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. What is the Festival of Lights?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Diwali is known as the Festival of Lights.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    India celebrates <strong>hundreds of festivals</strong> each year.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Different regions celebrate festivals in <strong>unique ways</strong>.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    <strong>Traditional dances and music</strong> are often performed during festivals.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 8: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What is culture?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name two traditional clothing styles in India.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What does “Unity in Diversity” mean?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Name two festivals celebrated in India.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Why are festivals important?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Which festival is known as the Festival of Colors?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 5 – COMPUTERS – INTRODUCTION TO COMPUTERS
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '5' && chapterId === 'introduction-to-computers' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🖥️">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                A <strong>computer</strong> is an electronic machine that helps us perform many tasks quickly and accurately. 
+                                Computers are used in schools, homes, offices, hospitals, and many other places. They can store information, 
+                                perform calculations, display pictures, play videos, and help us communicate with others.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: What is a Computer? */}
+                        <Section>
+                            <SectionTitle emoji="🤔">What is a Computer?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                A computer is a device that accepts <strong>input</strong>, processes the information, and produces <strong>output</strong>.
+                            </p>
+                            <div style={{ background: '#EFF6FF', padding: '20px', borderRadius: '16px', borderLeft: '4px solid #3B82F6' }}>
+                                <p style={{ fontSize: '15px', color: '#1E40AF', margin: '0 0 10px 0', fontWeight: 600 }}>🌟 Example</p>
+                                <p style={{ fontSize: '15px', color: '#334155', margin: 0, lineHeight: 1.6 }}>
+                                    When we type on the keyboard (input), the computer processes the information and displays the result on the monitor (output).
+                                </p>
+                                <p style={{ fontSize: '15px', color: '#059669', margin: '10px 0 0 0', fontWeight: 700 }}>
+                                    This process is called the Input–Process–Output cycle (IPO cycle).
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Parts of a Computer */}
+                        <Section>
+                            <SectionTitle emoji="🧩">Parts of a Computer</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                A computer system has several important parts that work together.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>📺</div>
+                                    <div style={{ fontWeight: 700, color: '#334155', fontSize: '15px' }}>Monitor</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>The screen that displays information such as text, images, and videos.</div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>⌨️</div>
+                                    <div style={{ fontWeight: 700, color: '#334155', fontSize: '15px' }}>Keyboard</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Used to type letters, numbers, and commands into the computer.</div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🖱️</div>
+                                    <div style={{ fontWeight: 700, color: '#334155', fontSize: '15px' }}>Mouse</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>A pointing device used to move the cursor, click icons, and select items.</div>
+                                </div>
+                                <div style={{ background: '#FEF3C7', padding: '16px', borderRadius: '12px', border: '1px solid #FDE68A' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🧠</div>
+                                    <div style={{ fontWeight: 700, color: '#92400E', fontSize: '15px' }}>CPU</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>The <strong>brain of the computer</strong>. Processes instructions and controls all operations.</div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🔊</div>
+                                    <div style={{ fontWeight: 700, color: '#334155', fontSize: '15px' }}>Speakers</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Produce sound from the computer, such as music or voice.</div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🖨️</div>
+                                    <div style={{ fontWeight: 700, color: '#334155', fontSize: '15px' }}>Printer</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Produces a printed copy of documents and pictures from the computer.</div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: How a Computer Works */}
+                        <Section>
+                            <SectionTitle emoji="⚙️">How a Computer Works</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                                <div style={{ background: '#F3E5F5', borderRadius: '16px', padding: '20px', border: '1px solid #CE93D8' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#7B1FA2', margin: '0 0 8px 0', fontWeight: 700 }}>Step 1: Input 📥</h4>
+                                    <p style={{ fontSize: '15px', color: '#475569', margin: 0 }}>Information is entered into the computer using devices like a keyboard or mouse.</p>
+                                </div>
+                                <div style={{ background: '#E1F5FE', borderRadius: '16px', padding: '20px', border: '1px solid #81D4FA' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#0288D1', margin: '0 0 8px 0', fontWeight: 700 }}>Step 2: Processing 🧠</h4>
+                                    <p style={{ fontSize: '15px', color: '#475569', margin: 0 }}>The CPU processes the information and performs the required operations.</p>
+                                </div>
+                                <div style={{ background: '#E8F5E9', borderRadius: '16px', padding: '20px', border: '1px solid #A5D6A7' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#2E7D32', margin: '0 0 8px 0', fontWeight: 700 }}>Step 3: Output 📤</h4>
+                                    <p style={{ fontSize: '15px', color: '#475569', margin: 0 }}>The result is shown on the monitor or printed on paper.</p>
+                                </div>
+                                <p style={{ fontSize: '15px', color: '#059669', margin: '0', fontWeight: 600, textAlign: 'center' }}>
+                                    ✨ This sequence of steps helps the computer perform tasks efficiently. ✨
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Uses of Computers */}
+                        <Section>
+                            <SectionTitle emoji="🚀">Uses of Computers</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li><strong>Education</strong> – students use computers to learn and research.</li>
+                                <li><strong>Communication</strong> – people send emails and messages using computers.</li>
+                                <li><strong>Entertainment</strong> – computers can play games, music, and videos.</li>
+                                <li><strong>Business</strong> – companies use computers to store data and manage work.</li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 6: Importance of Computers */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Importance of Computers</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Help complete tasks quickly and accurately.</li>
+                                <li>Store large amounts of information.</li>
+                                <li>Support learning and communication.</li>
+                                <li>Assist in many industries and daily activities.</li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 7: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is a computer?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A computer is an electronic machine that processes information and performs tasks.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Which part of the computer is called the brain?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: The CPU is called the brain of the computer.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. What device is used to type information into the computer?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: The keyboard is used to type information.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="💡">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    The first computers were very large and filled entire rooms.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Modern computers are much smaller and faster.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Computers are used in space research and scientific discoveries.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 9: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define a computer.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name three parts of a computer.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is the function of a monitor?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is the CPU?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What is the IPO cycle?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Name two uses of computers.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 5 – COMPUTERS – INPUT & OUTPUT DEVICES
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '5' && chapterId === 'input-output-devices' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🖥️">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                Computers work with the help of different devices that allow users to give instructions and receive results. 
+                                These devices are called <strong>input devices</strong> and <strong>output devices</strong>. Input devices 
+                                allow us to enter data into the computer, while output devices show the results after the computer processes the information.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: What are Input Devices? */}
+                        <Section>
+                            <SectionTitle emoji="📥">What are Input Devices?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Input devices are hardware components used to enter data and instructions into the computer.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', border: '1px solid #BFDBFE' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>⌨️</div>
+                                    <div style={{ fontWeight: 700, color: '#1E40AF', fontSize: '15px' }}>Keyboard</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Used to type letters, numbers, and commands into the computer.</div>
+                                </div>
+                                <div style={{ background: '#ECFDF5', padding: '16px', borderRadius: '12px', border: '1px solid #A7F3D0' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🖱️</div>
+                                    <div style={{ fontWeight: 700, color: '#065F46', fontSize: '15px' }}>Mouse</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>A pointing device used to move the cursor, click icons, and select items.</div>
+                                </div>
+                                <div style={{ background: '#FEF3C7', padding: '16px', borderRadius: '12px', border: '1px solid #FDE68A' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🎤</div>
+                                    <div style={{ fontWeight: 700, color: '#92400E', fontSize: '15px' }}>Microphone</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Used to input sound. Allows users to record voice or communicate through audio.</div>
+                                </div>
+                                <div style={{ background: '#F3E5F5', padding: '16px', borderRadius: '12px', border: '1px solid #E9D5FF' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🖨️</div>
+                                    <div style={{ fontWeight: 700, color: '#6B21A8', fontSize: '15px' }}>Scanner</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Used to copy pictures or documents from paper into the computer as digital files.</div>
+                                </div>
+                                <div style={{ background: '#FCE4EC', padding: '16px', borderRadius: '12px', border: '1px solid #FBCFE8' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>👆</div>
+                                    <div style={{ fontWeight: 700, color: '#9D174D', fontSize: '15px' }}>Touchscreen</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Allows users to interact with the computer by touching the screen directly.</div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: What are Output Devices? */}
+                        <Section>
+                            <SectionTitle emoji="📤">What are Output Devices?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Output devices are hardware components that display or produce the result of computer processing.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: '#E0F2FE', padding: '16px', borderRadius: '12px', border: '1px solid #BAE6FD' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>📺</div>
+                                    <div style={{ fontWeight: 700, color: '#0369A1', fontSize: '15px' }}>Monitor</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Displays text, images, videos, and other information from the computer.</div>
+                                </div>
+                                <div style={{ background: '#E8F5E9', padding: '16px', borderRadius: '12px', border: '1px solid #BBF7D0' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🖨️</div>
+                                    <div style={{ fontWeight: 700, color: '#166534', fontSize: '15px' }}>Printer</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Produces a printed copy of documents or pictures on paper.</div>
+                                </div>
+                                <div style={{ background: '#FFF3E0', padding: '16px', borderRadius: '12px', border: '1px solid #FED7AA' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>🔊</div>
+                                    <div style={{ fontWeight: 700, color: '#C2410C', fontSize: '15px' }}>Speakers</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Produce sound from the computer such as music, videos, or voice recordings.</div>
+                                </div>
+                                <div style={{ background: '#F3E5F5', padding: '16px', borderRadius: '12px', border: '1px solid #E9D5FF' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px' }}>📽️</div>
+                                    <div style={{ fontWeight: 700, color: '#7E22CE', fontSize: '15px' }}>Projector</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '4px' }}>Displays images or videos from the computer onto a large screen or wall.</div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Difference Between Input and Output Devices */}
+                        <Section>
+                            <SectionTitle emoji="⚖️">Difference Between Input and Output Devices</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '16px' }}>
+                                <div style={{ background: '#F1F5F9', borderLeft: '4px solid #3B82F6', padding: '16px', borderRadius: '0 12px 12px 0' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#1E40AF', margin: '0 0 8px 0', fontWeight: 700 }}>📥 Input Devices</h4>
+                                    <p style={{ fontSize: '14px', color: '#334155', margin: '0 0 4px 0', lineHeight: 1.6 }}>Used to enter data into the computer.</p>
+                                    <p style={{ fontSize: '13px', color: '#64748B', margin: 0 }}><strong>Examples:</strong> keyboard, mouse, microphone, scanner.</p>
+                                </div>
+                                <div style={{ background: '#F1F5F9', borderLeft: '4px solid #10B981', padding: '16px', borderRadius: '0 12px 12px 0' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#065F46', margin: '0 0 8px 0', fontWeight: 700 }}>📤 Output Devices</h4>
+                                    <p style={{ fontSize: '14px', color: '#334155', margin: '0 0 4px 0', lineHeight: 1.6 }}>Used to show or produce the results from the computer.</p>
+                                    <p style={{ fontSize: '13px', color: '#64748B', margin: 0 }}><strong>Examples:</strong> monitor, printer, speakers, projector.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Importance of Devices */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Importance of Input and Output Devices</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Help users communicate with the computer.</li>
+                                <li>Allow data to be entered and results to be displayed.</li>
+                                <li>Make computers useful for learning, communication, and entertainment.</li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 6: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is an input device?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: An input device is a device used to enter data into the computer.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is an output device?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: An output device displays the result after the computer processes information.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Which device is used to print documents?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A printer is used to print documents.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="💡">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    The keyboard has many keys used for typing letters and numbers.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Touchscreen devices allow users to interact with computers directly by touching the screen.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Speakers convert digital signals into sound.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 8: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What are input devices?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. What are output devices?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Name two input devices.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Name two output devices.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What is the function of a printer?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. What device is used to move the cursor?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 5 – COMPUTERS – MS WORD BASICS
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '5' && chapterId === 'ms-word' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="📝">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                <strong>Microsoft Word (MS Word)</strong> is a word processing software used to create, edit, and format documents. 
+                                It helps people write letters, school assignments, reports, and many other types of documents. 
+                                MS Word allows users to type text, change fonts, add images, and organize information in a clear and neat format.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: What is MS Word? */}
+                        <Section>
+                            <SectionTitle emoji="💻">What is MS Word?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                MS Word is part of the <strong>Microsoft Office</strong> package and is used to create digital documents. 
+                                It provides many tools that make typing and editing easier.
+                            </p>
+                            <div style={{ background: '#F8FAFC', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0' }}>
+                                <h4 style={{ fontSize: '16px', color: '#1E40AF', margin: '0 0 12px 0', fontWeight: 700 }}>Common uses of MS Word:</h4>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8 }}>
+                                    <li>Writing letters</li>
+                                    <li>Creating school assignments</li>
+                                    <li>Making reports and projects</li>
+                                    <li>Preparing notices and invitations</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Starting MS Word */}
+                        <Section>
+                            <SectionTitle emoji="🚀">Starting MS Word</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                To start MS Word on a computer:
+                            </p>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #3B82F6', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ background: '#BFDBFE', color: '#1E3A8A', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '14px' }}>1</div>
+                                    <span style={{ color: '#334155', fontSize: '15px' }}>Click the <strong>Start Menu</strong>.</span>
+                                </div>
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #3B82F6', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ background: '#BFDBFE', color: '#1E3A8A', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '14px' }}>2</div>
+                                    <span style={{ color: '#334155', fontSize: '15px' }}>Select <strong>Microsoft Word</strong> from the list of programs.</span>
+                                </div>
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #3B82F6', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ background: '#BFDBFE', color: '#1E3A8A', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '14px' }}>3</div>
+                                    <span style={{ color: '#334155', fontSize: '15px' }}>A new blank document will appear where you can start typing.</span>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Parts of the MS Word Window */}
+                        <Section>
+                            <SectionTitle emoji="🧩">Parts of the MS Word Window</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                                <div style={{ background: '#FCE4EC', padding: '16px', borderRadius: '12px', border: '1px solid #FBCFE8' }}>
+                                    <div style={{ fontWeight: 700, color: '#9D174D', fontSize: '15px', marginBottom: '4px' }}>🏷️ Title Bar</div>
+                                    <div style={{ color: '#475569', fontSize: '14px' }}>Shows the name of the document and the program.</div>
+                                </div>
+                                <div style={{ background: '#E0F2FE', padding: '16px', borderRadius: '12px', border: '1px solid #BAE6FD' }}>
+                                    <div style={{ fontWeight: 700, color: '#0369A1', fontSize: '15px', marginBottom: '4px' }}>🎀 Ribbon</div>
+                                    <div style={{ color: '#475569', fontSize: '14px' }}>Contains different tabs such as Home, Insert, and Layout that provide tools for editing and formatting.</div>
+                                </div>
+                                <div style={{ background: '#F3F4F6', padding: '16px', borderRadius: '12px', border: '1px solid #E5E7EB' }}>
+                                    <div style={{ fontWeight: 700, color: '#374151', fontSize: '15px', marginBottom: '4px' }}>📄 Document Area</div>
+                                    <div style={{ color: '#475569', fontSize: '14px' }}>The large white space where you type and edit your text.</div>
+                                </div>
+                                <div style={{ background: '#FEF3C7', padding: '16px', borderRadius: '12px', border: '1px solid #FDE68A' }}>
+                                    <div style={{ fontWeight: 700, color: '#92400E', fontSize: '15px', marginBottom: '4px' }}>↕️ Scroll Bar</div>
+                                    <div style={{ color: '#475569', fontSize: '14px' }}>Allows you to move up and down through the document.</div>
+                                </div>
+                                <div style={{ background: '#E8F5E9', padding: '16px', borderRadius: '12px', border: '1px solid #BBF7D0' }}>
+                                    <div style={{ fontWeight: 700, color: '#166534', fontSize: '15px', marginBottom: '4px' }}>📊 Status Bar</div>
+                                    <div style={{ color: '#475569', fontSize: '14px' }}>Shows information such as page number and word count.</div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Typing and Formatting */}
+                        <Section>
+                            <SectionTitle emoji="⌨️">Typing and Formatting Text</SectionTitle>
+                            
+                            <h4 style={{ fontSize: '16px', color: '#1E40AF', margin: '0 0 12px 0', fontWeight: 700 }}>Typing Text:</h4>
+                            <ul style={{ margin: '0 0 20px 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Click inside the document area.</li>
+                                <li>Use the keyboard to type letters and numbers.</li>
+                                <li>Press <strong>Enter</strong> to move to the next line.</li>
+                            </ul>
+
+                            <h4 style={{ fontSize: '16px', color: '#1E40AF', margin: '0 0 12px 0', fontWeight: 700 }}>Formatting Text (Making it look neat):</h4>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px', marginBottom: '16px' }}>
+                                <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '10px', border: '1px solid #E2E8F0' }}>
+                                    <strong>Font Style</strong> – change the appearance of text
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '10px', border: '1px solid #E2E8F0' }}>
+                                    <strong>Font Size</strong> – make text bigger or smaller
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '10px', border: '1px solid #E2E8F0' }}>
+                                    <strong><span style={{ fontWeight: 900 }}>Bold</span></strong> – make text darker
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '10px', border: '1px solid #E2E8F0' }}>
+                                    <strong><span style={{ fontStyle: 'italic' }}>Italic</span></strong> – slant the text
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '10px', border: '1px solid #E2E8F0' }}>
+                                    <strong><span style={{ textDecoration: 'underline' }}>Underline</span></strong> – draw a line under the text
+                                </div>
+                            </div>
+                            
+                            <div style={{ background: '#FFFBEB', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #F59E0B' }}>
+                                <p style={{ fontSize: '15px', color: '#92400E', margin: '0 0 6px 0', fontWeight: 700 }}>🌟 Example</p>
+                                <p style={{ fontSize: '14px', color: '#475569', margin: 0 }}>
+                                    A title can be written in <strong>bold and larger font</strong> to make it stand out.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Inserting Images and Saving */}
+                        <Section>
+                            <SectionTitle emoji="🖼️">Inserting Images & Saving</SectionTitle>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                                <div style={{ background: '#FCE4EC', padding: '20px', borderRadius: '16px', border: '1px solid #FBCFE8' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#9D174D', margin: '0 0 12px 0', fontWeight: 700 }}>Inserting Images</h4>
+                                    <p style={{ fontSize: '14px', color: '#475569', margin: '0 0 12px 0' }}>Images help make documents more interesting.</p>
+                                    <ol style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '14px' }}>
+                                        <li>Click the <strong>Insert</strong> tab.</li>
+                                        <li>Select <strong>Pictures</strong>.</li>
+                                        <li>Choose an image from the computer.</li>
+                                        <li>The picture will appear in the document.</li>
+                                    </ol>
+                                </div>
+
+                                <div style={{ background: '#E0F2FE', padding: '20px', borderRadius: '16px', border: '1px solid #BAE6FD' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#0369A1', margin: '0 0 12px 0', fontWeight: 700 }}>Saving a Document</h4>
+                                    <p style={{ fontSize: '14px', color: '#475569', margin: '0 0 12px 0' }}>Saving ensures that the work can be opened and edited later.</p>
+                                    <ol style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '14px' }}>
+                                        <li>Click <strong>File</strong>.</li>
+                                        <li>Select <strong>Save As</strong>.</li>
+                                        <li>Choose a location on the computer.</li>
+                                        <li>Enter a file name and click <strong>Save</strong>.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is MS Word?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: MS Word is a word processing program used to create and edit documents.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is the purpose of formatting text?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Formatting makes text clearer, more organized, and attractive.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Which tab is used to insert pictures?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: The Insert tab is used to insert pictures.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="💡">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    MS Word was first released in 1983.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    It is one of the most widely used word processing programs in the world.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Many students use MS Word to prepare school assignments.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 9: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What is MS Word used for?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name two parts of the MS Word window.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is the function of the Ribbon?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. How do you insert an image in MS Word?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Why should we save documents?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Name two formatting tools.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 5 – COMPUTERS – MS PAINT
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '5' && chapterId === 'ms-paint' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🎨">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                <strong>MS Paint</strong> is a simple computer program used for drawing and coloring pictures. 
+                                It allows users to create artwork, draw shapes, add colors, and design simple graphics using different tools. 
+                                MS Paint is easy to use and is often one of the first drawing programs students learn when using a computer.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: What is MS Paint? */}
+                        <Section>
+                            <SectionTitle emoji="🖥️">What is MS Paint?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                MS Paint is a <strong>basic graphics editing program</strong> that comes with the Windows operating system. 
+                                It allows users to create pictures digitally using a mouse or touchscreen.
+                            </p>
+                            <div style={{ background: '#EFF6FF', padding: '20px', borderRadius: '16px', border: '1px solid #BFDBFE' }}>
+                                <h4 style={{ fontSize: '16px', color: '#1E40AF', margin: '0 0 12px 0', fontWeight: 700 }}>Uses of MS Paint:</h4>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                    <li>Drawing pictures</li>
+                                    <li>Coloring drawings</li>
+                                    <li>Creating simple designs</li>
+                                    <li>Practicing creativity and art</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Starting MS Paint */}
+                        <Section>
+                            <SectionTitle emoji="🚀">Starting MS Paint</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                To open MS Paint on a computer:
+                            </p>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #3B82F6', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ background: '#BFDBFE', color: '#1E3A8A', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '14px' }}>1</div>
+                                    <span style={{ color: '#334155', fontSize: '15px' }}>Click the <strong>Start Menu</strong>.</span>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #3B82F6', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ background: '#BFDBFE', color: '#1E3A8A', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '14px' }}>2</div>
+                                    <span style={{ color: '#334155', fontSize: '15px' }}>Search for <strong>Paint</strong> or select <strong>MS Paint</strong> from the list of programs.</span>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #3B82F6', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ background: '#BFDBFE', color: '#1E3A8A', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '14px' }}>3</div>
+                                    <span style={{ color: '#334155', fontSize: '15px' }}>The Paint window will open, showing a blank canvas for drawing.</span>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Parts of the MS Paint Window */}
+                        <Section>
+                            <SectionTitle emoji="🧩">Parts of the MS Paint Window</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                                <div style={{ background: '#FCE4EC', padding: '16px', borderRadius: '12px', border: '1px solid #FBCFE8' }}>
+                                    <div style={{ fontWeight: 700, color: '#9D174D', fontSize: '15px', marginBottom: '4px' }}>🏷️ Title Bar</div>
+                                    <div style={{ color: '#475569', fontSize: '14px' }}>Shows the name of the program and the file.</div>
+                                </div>
+                                <div style={{ background: '#E0F2FE', padding: '16px', borderRadius: '12px', border: '1px solid #BAE6FD' }}>
+                                    <div style={{ fontWeight: 700, color: '#0369A1', fontSize: '15px', marginBottom: '4px' }}>🎀 Ribbon</div>
+                                    <div style={{ color: '#475569', fontSize: '14px' }}>Contains tools such as brushes, shapes, colors, and editing options.</div>
+                                </div>
+                                <div style={{ background: '#F3F4F6', padding: '16px', borderRadius: '12px', border: '1px solid #E5E7EB' }}>
+                                    <div style={{ fontWeight: 700, color: '#374151', fontSize: '15px', marginBottom: '4px' }}>📄 Drawing Area (Canvas)</div>
+                                    <div style={{ color: '#475569', fontSize: '14px' }}>The white area where users create drawings.</div>
+                                </div>
+                                <div style={{ background: '#FEF3C7', padding: '16px', borderRadius: '12px', border: '1px solid #FDE68A' }}>
+                                    <div style={{ fontWeight: 700, color: '#92400E', fontSize: '15px', marginBottom: '4px' }}>🎨 Color Box</div>
+                                    <div style={{ color: '#475569', fontSize: '14px' }}>Allows users to choose different colors for drawing and filling shapes.</div>
+                                </div>
+                                <div style={{ background: '#E8F5E9', padding: '16px', borderRadius: '12px', border: '1px solid #BBF7D0' }}>
+                                    <div style={{ fontWeight: 700, color: '#166534', fontSize: '15px', marginBottom: '4px' }}>📊 Status Bar</div>
+                                    <div style={{ color: '#475569', fontSize: '14px' }}>Shows information about the drawing area.</div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Tools in MS Paint */}
+                        <Section>
+                            <SectionTitle emoji="🛠️">Tools in MS Paint</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                MS Paint has several magical tools to help you draw! 
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '28px', marginBottom: '8px' }}>✏️</div>
+                                    <div style={{ fontWeight: 700, color: '#334155', fontSize: '15px' }}>Pencil Tool</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '6px' }}>Used to draw freehand lines, just like a real pencil.</div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '28px', marginBottom: '8px' }}>🖌️</div>
+                                    <div style={{ fontWeight: 700, color: '#334155', fontSize: '15px' }}>Brush Tool</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '6px' }}>Used to create thicker and more artistic strokes.</div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '28px', marginBottom: '8px' }}>🧽</div>
+                                    <div style={{ fontWeight: 700, color: '#334155', fontSize: '15px' }}>Eraser Tool</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '6px' }}>Removes unwanted parts of a drawing.</div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '28px', marginBottom: '8px' }}>🪣</div>
+                                    <div style={{ fontWeight: 700, color: '#334155', fontSize: '15px' }}>Fill with Color</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '6px' }}>Fills closed shapes with your selected color.</div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '28px', marginBottom: '8px' }}>🅰️</div>
+                                    <div style={{ fontWeight: 700, color: '#334155', fontSize: '15px' }}>Text Tool</div>
+                                    <div style={{ color: '#475569', fontSize: '13px', marginTop: '6px' }}>Allows you to type words inside your drawings.</div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Shapes and Saving */}
+                        <Section>
+                            <SectionTitle emoji="⭐">Shapes & Saving in MS Paint</SectionTitle>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(250px, 1fr) 1fr', gap: '20px' }}>
+                                <div style={{ background: '#FEF3C7', padding: '20px', borderRadius: '16px', border: '1px solid #FDE68A' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#92400E', margin: '0 0 12px 0', fontWeight: 700 }}>Shapes in MS Paint</h4>
+                                    <p style={{ fontSize: '14px', color: '#475569', margin: '0 0 12px 0' }}>Ready-made shapes to insert and color.</p>
+                                    <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '12px' }}>
+                                        <div style={{ background: 'white', padding: '8px 12px', borderRadius: '8px', border: '1px solid #FCD34D', fontSize: '14px', fontWeight: 600 }}>⭕ Circle</div>
+                                        <div style={{ background: 'white', padding: '8px 12px', borderRadius: '8px', border: '1px solid #FCD34D', fontSize: '14px', fontWeight: 600 }}>🔲 Rectangle</div>
+                                        <div style={{ background: 'white', padding: '8px 12px', borderRadius: '8px', border: '1px solid #FCD34D', fontSize: '14px', fontWeight: 600 }}>🔺 Triangle</div>
+                                        <div style={{ background: 'white', padding: '8px 12px', borderRadius: '8px', border: '1px solid #FCD34D', fontSize: '14px', fontWeight: 600 }}>➡️ Arrow</div>
+                                        <div style={{ background: 'white', padding: '8px 12px', borderRadius: '8px', border: '1px solid #FCD34D', fontSize: '14px', fontWeight: 600 }}>⭐ Star</div>
+                                    </div>
+                                    <p style={{ fontSize: '13px', color: '#B45309', margin: 0, fontWeight: 600 }}>You can draw shapes and fill them with colors!</p>
+                                </div>
+
+                                <div style={{ background: '#E0F2FE', padding: '20px', borderRadius: '16px', border: '1px solid #BAE6FD' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#0369A1', margin: '0 0 12px 0', fontWeight: 700 }}>Saving a Drawing</h4>
+                                    <p style={{ fontSize: '14px', color: '#475569', margin: '0 0 12px 0' }}>After drawing, save it so you don't lose it!</p>
+                                    <ol style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '14px' }}>
+                                        <li>Click <strong>File</strong>.</li>
+                                        <li>Select <strong>Save As</strong>.</li>
+                                        <li>Choose the location on the computer.</li>
+                                        <li>Enter a file name and click <strong>Save</strong>.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is MS Paint used for?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: MS Paint is used for drawing and coloring pictures on a computer.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is the canvas in MS Paint?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: The canvas is the area where drawings are created.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Which tool is used to erase parts of a drawing?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: The Eraser tool is used to remove unwanted parts.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="💡">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    MS Paint was first introduced with Microsoft Windows in 1985.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Many artists and students use it to create simple digital drawings.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Paint supports many colors and drawing tools.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 9: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What is MS Paint?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name two tools in MS Paint.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is the canvas used for?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Which tool fills shapes with color?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. How do you save a drawing?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Name two shapes available in MS Paint.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 5 – COMPUTERS – INTERNET BASICS
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '5' && chapterId === 'internet-basics' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🌐">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                The <strong>Internet</strong> is a worldwide network of computers that are connected to each other. 
+                                It allows people to share information, communicate with others, and access knowledge from anywhere in the world. 
+                                Today, the internet is used for learning, communication, entertainment, and many daily activities.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: What is the Internet? */}
+                        <Section>
+                            <SectionTitle emoji="💻">What is the Internet?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                The internet connects millions of computers and devices around the world. 
+                                These devices share information through websites, emails, and online services.
+                            </p>
+                            <div style={{ background: '#F8FAFC', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0' }}>
+                                <h4 style={{ fontSize: '16px', color: '#1E40AF', margin: '0 0 12px 0', fontWeight: 700 }}>People use the internet to:</h4>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8 }}>
+                                    <li>Search for information</li>
+                                    <li>Watch videos</li>
+                                    <li>Send emails and messages</li>
+                                    <li>Attend online classes</li>
+                                    <li>Read news and articles</li>
+                                </ul>
+                                <p style={{ margin: '12px 0 0 0', fontWeight: 600, color: '#0F172A', fontSize: '15px' }}>
+                                    ✨ The internet makes it easy to learn new things quickly!
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Websites and Web Browsers */}
+                        <Section>
+                            <SectionTitle emoji="🌍">Websites & Web Browsers</SectionTitle>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+                                <div style={{ background: '#EFF6FF', padding: '20px', borderRadius: '16px', border: '1px solid #BFDBFE' }}>
+                                    <div style={{ fontSize: '28px', marginBottom: '8px' }}>📄</div>
+                                    <h4 style={{ fontSize: '16px', color: '#1E3A8A', margin: '0 0 8px 0', fontWeight: 700 }}>Websites and Web Pages</h4>
+                                    <p style={{ fontSize: '14px', color: '#334155', margin: '0 0 12px 0', lineHeight: 1.6 }}>
+                                        A <strong>website</strong> is a collection of web pages that provide information on the internet. Each single page is a <strong>web page</strong>.
+                                    </p>
+                                    <div style={{ fontSize: '13px', color: '#475569' }}>
+                                        <strong>Examples:</strong> Educational websites, News websites, Shopping websites.
+                                    </div>
+                                </div>
+
+                                <div style={{ background: '#FEF3C7', padding: '20px', borderRadius: '16px', border: '1px solid #FDE68A' }}>
+                                    <div style={{ fontSize: '28px', marginBottom: '8px' }}>🦊</div>
+                                    <h4 style={{ fontSize: '16px', color: '#92400E', margin: '0 0 8px 0', fontWeight: 700 }}>Web Browser</h4>
+                                    <p style={{ fontSize: '14px', color: '#334155', margin: '0 0 12px 0', lineHeight: 1.6 }}>
+                                        A <strong>web browser</strong> is a program used to access and view websites on the internet.
+                                    </p>
+                                    <div style={{ fontSize: '13px', color: '#475569' }}>
+                                        <strong>Examples:</strong> Google Chrome, Microsoft Edge, Mozilla Firefox, Safari.
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Search Engines */}
+                        <Section>
+                            <SectionTitle emoji="🔍">Search Engines</SectionTitle>
+                            <div style={{ background: '#FCE4EC', padding: '20px', borderRadius: '16px', border: '1px solid #FBCFE8' }}>
+                                <p style={{ fontSize: '15px', color: '#9D174D', margin: '0 0 12px 0', fontWeight: 600 }}>
+                                    A <strong>search engine</strong> is a tool that helps users find information on the internet.
+                                </p>
+                                <p style={{ fontSize: '14px', color: '#475569', margin: '0 0 12px 0', lineHeight: 1.6 }}>
+                                    Users type keywords into the search engine, and it shows a list of websites related to the topic.
+                                </p>
+                                <ul style={{ margin: '0 0 16px 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '14px' }}>
+                                    <li><strong>Google</strong></li>
+                                    <li><strong>Bing</strong></li>
+                                    <li><strong>Yahoo</strong></li>
+                                </ul>
+                                <div style={{ background: 'white', padding: '12px', borderRadius: '8px', borderLeft: '4px solid #F472B6' }}>
+                                    <p style={{ fontSize: '14px', color: '#831843', margin: '0 0 4px 0', fontWeight: 700 }}>Example</p>
+                                    <p style={{ fontSize: '13px', color: '#475569', margin: 0 }}>
+                                        If a student types <strong>“planets of the solar system”</strong>, the search engine will display websites containing information about planets.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Safe Internet Browsing */}
+                        <Section>
+                            <SectionTitle emoji="🛡️">Safe Internet Browsing</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                The internet is very useful, but it is important to use it safely!
+                            </p>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: '#FEF2F2', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #EF4444', display: 'flex', alignItems: 'center', gap: '14px' }}>
+                                    <div style={{ fontSize: '24px' }}>🛑</div>
+                                    <span style={{ color: '#7F1D1D', fontSize: '14px', fontWeight: 600 }}>Do not share personal information such as address or passwords.</span>
+                                </div>
+                                <div style={{ background: '#FEF2F2', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #EF4444', display: 'flex', alignItems: 'center', gap: '14px' }}>
+                                    <div style={{ fontSize: '24px' }}>🚷</div>
+                                    <span style={{ color: '#7F1D1D', fontSize: '14px', fontWeight: 600 }}>Do not talk to strangers online.</span>
+                                </div>
+                                <div style={{ background: '#ECFEFF', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #06B6D4', display: 'flex', alignItems: 'center', gap: '14px' }}>
+                                    <div style={{ fontSize: '24px' }}>🔐</div>
+                                    <span style={{ color: '#164E63', fontSize: '14px', fontWeight: 600 }}>Use strong passwords for accounts.</span>
+                                </div>
+                                <div style={{ background: '#ECFEFF', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #06B6D4', display: 'flex', alignItems: 'center', gap: '14px' }}>
+                                    <div style={{ fontSize: '24px' }}>🎓</div>
+                                    <span style={{ color: '#164E63', fontSize: '14px', fontWeight: 600 }}>Visit trusted and educational websites.</span>
+                                </div>
+                                <div style={{ background: '#FFFBEB', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #F59E0B', display: 'flex', alignItems: 'center', gap: '14px', gridColumn: '1 / -1' }}>
+                                    <div style={{ fontSize: '24px' }}>📢</div>
+                                    <span style={{ color: '#92400E', fontSize: '15px', fontWeight: 700 }}>Always inform parents or teachers if something suspicious appears online!</span>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Uses & Importance */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Uses & Importance of the Internet</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                                <div style={{ background: '#F1F5F9', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#1E293B', margin: '0 0 10px 0', fontWeight: 700 }}>Uses of the Internet:</h4>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '14px' }}>
+                                        <li>Learning and education</li>
+                                        <li>Communication with friends and family</li>
+                                        <li>Watching videos and listening to music</li>
+                                        <li>Online shopping</li>
+                                        <li>Playing educational games</li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#F1F5F9', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#1E293B', margin: '0 0 10px 0', fontWeight: 700 }}>Importance of the Internet:</h4>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '14px' }}>
+                                        <li>Provides quick access to information</li>
+                                        <li>Helps people communicate around the world</li>
+                                        <li>Supports online learning</li>
+                                        <li>Connects people globally</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is the internet?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: The internet is a global network that connects computers and allows people to share information.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is a web browser used for?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A web browser is used to open and view websites.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why is it important to browse safely?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Safe browsing protects personal information and prevents online dangers.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="💡">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    The internet connects billions of devices worldwide.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    The first email was sent in 1971.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Search engines help people find millions of websites in seconds.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 9: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define the internet.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. What is a website?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Name two web browsers.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is a search engine?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Why is internet safety important?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Name two uses of the internet.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 5 – COMPUTERS – INTRO TO CODING
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '5' && chapterId === 'coding-basics' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="💻">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                <strong>Coding</strong> is the process of giving instructions to a computer so that it can perform specific tasks. 
+                                These instructions are written in special programming languages that computers understand. 
+                                Coding is used to create websites, games, apps, and many other technologies we use every day. 
+                                Learning coding helps students develop logical thinking and problem-solving skills.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: What is Coding? */}
+                        <Section>
+                            <SectionTitle emoji="🤖">What is Coding?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Coding means writing instructions that tell a computer what to do. 
+                                These instructions are written step by step so the computer can follow them correctly.
+                            </p>
+                            <div style={{ background: '#FFFBEB', padding: '16px', borderRadius: '12px', borderLeft: '4px solid #F59E0B', marginBottom: '16px' }}>
+                                <p style={{ fontSize: '15px', color: '#92400E', margin: '0 0 6px 0', fontWeight: 700 }}>🌟 Example</p>
+                                <p style={{ fontSize: '14px', color: '#475569', margin: 0 }}>
+                                    If you want a robot to move forward and pick up an object, you must give the robot clear instructions in the correct order.
+                                </p>
+                            </div>
+                            <div style={{ background: '#F8FAFC', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0' }}>
+                                <h4 style={{ fontSize: '16px', color: '#1E40AF', margin: '0 0 12px 0', fontWeight: 700 }}>Coding helps computers perform tasks such as:</h4>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '14px' }}>
+                                    <li>Running games</li>
+                                    <li>Displaying websites</li>
+                                    <li>Solving mathematical problems</li>
+                                    <li>Controlling machines and robots</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Sequence in Coding */}
+                        <Section>
+                            <SectionTitle emoji="🔢">Sequence in Coding</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 12px' }}>
+                                A <strong>sequence</strong> is a set of instructions that are followed in a specific order.
+                            </p>
+                            <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', border: '1px solid #BFDBFE' }}>
+                                <p style={{ fontSize: '15px', color: '#1E3A8A', margin: '0 0 10px 0', fontWeight: 700 }}>Example of a sequence:</p>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                    <div style={{ background: 'white', padding: '10px 16px', borderRadius: '8px', borderLeft: '4px solid #3B82F6', fontSize: '14px', fontWeight: 600, color: '#334155' }}>Step 1: Start the program</div>
+                                    <div style={{ background: 'white', padding: '10px 16px', borderRadius: '8px', borderLeft: '4px solid #3B82F6', fontSize: '14px', fontWeight: 600, color: '#334155' }}>Step 2: Move forward</div>
+                                    <div style={{ background: 'white', padding: '10px 16px', borderRadius: '8px', borderLeft: '4px solid #3B82F6', fontSize: '14px', fontWeight: 600, color: '#334155' }}>Step 3: Turn right</div>
+                                    <div style={{ background: 'white', padding: '10px 16px', borderRadius: '8px', borderLeft: '4px solid #EF4444', fontSize: '14px', fontWeight: 600, color: '#334155' }}>Step 4: Stop</div>
+                                </div>
+                                <p style={{ fontSize: '13px', color: '#B45309', margin: '10px 0 0 0', fontWeight: 600 }}>
+                                    ⚠️ If the steps are not in the correct order, the computer will not perform the task correctly.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Loops and Conditions */}
+                        <Section>
+                            <SectionTitle emoji="🔁">Loops and Conditions</SectionTitle>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+                                {/* Loops */}
+                                <div style={{ background: '#FCE4EC', padding: '20px', borderRadius: '16px', border: '1px solid #FBCFE8' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#9D174D', margin: '0 0 8px 0', fontWeight: 700 }}>🔁 Loops in Coding</h4>
+                                    <p style={{ fontSize: '14px', color: '#475569', margin: '0 0 12px 0', lineHeight: 1.6 }}>
+                                        A <strong>loop</strong> is used when an instruction needs to be repeated many times.
+                                    </p>
+                                    <div style={{ background: 'white', padding: '12px', borderRadius: '8px', border: '1px solid #F9A8D4', marginBottom: '12px' }}>
+                                        <p style={{ fontSize: '13px', color: '#831843', margin: '0 0 6px 0', fontWeight: 600 }}>Instead of moving forward 5 individual times:</p>
+                                        <div style={{ fontFamily: 'monospace', fontSize: '14px', color: '#1F2937', background: '#F3F4F6', padding: '8px', borderRadius: '6px' }}>
+                                            Repeat 5 times:<br />
+                                            &nbsp;&nbsp;Move forward
+                                        </div>
+                                    </div>
+                                    <p style={{ fontSize: '13px', color: '#9D174D', margin: 0, fontWeight: 600 }}>Loops help make programs shorter and easier to manage.</p>
+                                </div>
+
+                                {/* Conditions */}
+                                <div style={{ background: '#E0F2FE', padding: '20px', borderRadius: '16px', border: '1px solid #BAE6FD' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#0369A1', margin: '0 0 8px 0', fontWeight: 700 }}>🤔 Conditions in Coding</h4>
+                                    <p style={{ fontSize: '14px', color: '#475569', margin: '0 0 12px 0', lineHeight: 1.6 }}>
+                                        A <strong>condition</strong> tells the computer to make a decision based on a situation.
+                                    </p>
+                                    <ul style={{ margin: '0 0 12px 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '13px', fontWeight: 600 }}>
+                                        <li>If it is raining → open an umbrella</li>
+                                        <li>If the traffic light is green → move forward</li>
+                                        <li>If the answer is correct → show "Well Done"</li>
+                                    </ul>
+                                    <p style={{ fontSize: '13px', color: '#0369A1', margin: 0, fontWeight: 600 }}>In coding, conditions are often written as <strong>IF–THEN statements</strong>.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Putting it Together */}
+                        <Section>
+                            <SectionTitle emoji="🧩">Simple Coding Example</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                This example shows how sequences, loops, and conditions work together in coding:
+                            </p>
+                            <div style={{ background: '#1E293B', color: '#A7F3D0', padding: '20px', borderRadius: '12px', fontFamily: 'monospace', fontSize: '15px', lineHeight: 2, boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}>
+                                <div style={{ color: '#34D399' }}>Start</div>
+                                <div>Move forward 🚶</div>
+                                <div style={{ color: '#FCD34D' }}>Repeat 3 times: Jump 🦘</div>
+                                <div style={{ color: '#60A5FA' }}>If obstacle ahead → Turn left ↩️</div>
+                                <div style={{ color: '#F87171' }}>Stop 🛑</div>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Why Learn Coding? */}
+                        <Section>
+                            <SectionTitle emoji="🎓">Why Learn Coding?</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(250px, 1fr) minmax(250px, 1fr)', gap: '16px' }}>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ fontSize: '24px' }}>🧠</div>
+                                    <div style={{ color: '#334155', fontSize: '14px', fontWeight: 600 }}>Develops logical thinking</div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ fontSize: '24px' }}>🧩</div>
+                                    <div style={{ color: '#334155', fontSize: '14px', fontWeight: 600 }}>Improves problem-solving skills</div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ fontSize: '24px' }}>🎨</div>
+                                    <div style={{ color: '#334155', fontSize: '14px', fontWeight: 600 }}>Encourages creativity</div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ fontSize: '24px' }}>⚙️</div>
+                                    <div style={{ color: '#334155', fontSize: '14px', fontWeight: 600 }}>Helps understand how technology works</div>
+                                </div>
+                            </div>
+                            <p style={{ margin: '16px 0 0 0', fontSize: '15px', color: '#475569', background: '#ECFEFF', padding: '14px', borderRadius: '10px', borderLeft: '4px solid #06B6D4' }}>
+                                💡 Many students start learning coding using visual programming tools such as <strong>Scratch</strong> or simple block-based coding platforms!
+                            </p>
+                        </Section>
+
+                        {/* Section 7: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is coding?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Coding is writing instructions that tell a computer what to do.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is a sequence in coding?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A sequence is a set of instructions performed in a specific order.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why are loops useful in programming?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Loops help repeat instructions without writing them many times.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="💡">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Many modern games and apps are created using coding.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Coding helps control robots, machines, and smart devices.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Block-based coding platforms help beginners learn programming easily.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 9: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define coding.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. What is a sequence in programming?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is a loop?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is a condition?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Why is coding important?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Name one beginner coding platform.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 5 – COMPUTERS – COMPUTER SAFETY & ETHICS
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '5' && chapterId === 'computer-safety' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🛡️">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                Computers and the internet are powerful tools that help us learn, communicate, and explore information. 
+                                However, it is important to use computers safely and responsibly. <strong>Computer safety</strong> means 
+                                protecting ourselves and our personal information while using computers and the internet. 
+                                <strong>Computer ethics</strong> means using technology in a respectful and responsible way.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: What is Computer Safety? */}
+                        <Section>
+                            <SectionTitle emoji="🔒">What is Computer Safety?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Computer safety refers to practices that protect users, devices, and information from harm while using computers.
+                            </p>
+                            <div style={{ background: '#FEF2F2', padding: '20px', borderRadius: '16px', border: '1px solid #FECACA' }}>
+                                <h4 style={{ fontSize: '16px', color: '#991B1B', margin: '0 0 12px 0', fontWeight: 700 }}>Examples of computer safety practices:</h4>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#7F1D1D', lineHeight: 1.8 }}>
+                                    <li>Using strong passwords</li>
+                                    <li>Not sharing personal information online</li>
+                                    <li>Avoiding unknown websites or downloads</li>
+                                    <li>Keeping computers protected with antivirus software</li>
+                                </ul>
+                            </div>
+                            <p style={{ fontSize: '15px', color: '#059669', margin: '16px 0 0 0', fontWeight: 600 }}>
+                                💡 Following these practices helps keep users and their data safe.
+                            </p>
+                        </Section>
+
+                        {/* Section 3: Passwords and Security */}
+                        <Section>
+                            <SectionTitle emoji="🔑">Passwords and Security</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                A <strong>password</strong> is a secret code used to protect accounts and personal information.
+                            </p>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(250px, 1fr) 1fr', gap: '20px' }}>
+                                <div style={{ background: '#F8FAFC', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#1E3A8A', margin: '0 0 12px 0', fontWeight: 700 }}>Tips for Strong Passwords:</h4>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                        <li>Use a mix of letters, numbers, and symbols.</li>
+                                        <li>Do not use easy passwords like "12345" or "password".</li>
+                                        <li>Do not share passwords with strangers.</li>
+                                        <li>Change passwords regularly.</li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#FFFBEB', padding: '20px', borderRadius: '16px', border: '1px solid #FDE68A', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                                    <div style={{ fontSize: '32px', marginBottom: '8px' }}>🔐</div>
+                                    <p style={{ fontSize: '14px', color: '#92400E', margin: '0 0 8px 0', fontWeight: 600 }}>Example of a strong password:</p>
+                                    <div style={{ background: 'white', padding: '10px 20px', borderRadius: '8px', border: '2px dashed #F59E0B', fontFamily: 'monospace', fontSize: '18px', fontWeight: 700, color: '#B45309' }}>
+                                        Edu@1234
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Online Safety Rules */}
+                        <Section>
+                            <SectionTitle emoji="🛑">Online Safety Rules</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                When using the internet, it is important to follow safety rules to stay protected from dangers.
+                            </p>
+                            <div style={{ background: '#EFF6FF', padding: '20px', borderRadius: '16px', border: '1px solid #BFDBFE' }}>
+                                <h4 style={{ fontSize: '16px', color: '#1E40AF', margin: '0 0 12px 0', fontWeight: 700 }}>Safe internet practices:</h4>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#1E3A8A', lineHeight: 1.8, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                    <li><span style={{ fontWeight: 600 }}>Do not</span> share personal information such as address, phone number, or school details.</li>
+                                    <li><span style={{ fontWeight: 600 }}>Do not</span> talk to strangers online.</li>
+                                    <li><span style={{ fontWeight: 600 }}>Do not</span> open suspicious links or attachments.</li>
+                                    <li><span style={{ fontWeight: 600 }}>Always inform</span> a parent or teacher if something unusual happens online.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Responsible Use of Computers */}
+                        <Section>
+                            <SectionTitle emoji="🤝">Responsible Use of Computers</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Computers should be used in a responsible and respectful way. Just like in real life, manners matter online too!
+                            </p>
+                            <div style={{ background: '#F0FDF4', padding: '20px', borderRadius: '16px', border: '1px solid #BBF7D0' }}>
+                                <h4 style={{ fontSize: '16px', color: '#166534', margin: '0 0 12px 0', fontWeight: 700 }}>Examples of responsible behavior:</h4>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#14532D', lineHeight: 1.8 }}>
+                                    <li>Use computers for learning and productive activities.</li>
+                                    <li>Respect other people’s work and privacy.</li>
+                                    <li>Do not use computers to spread harmful or false information.</li>
+                                    <li>Avoid spending too much time on games or entertainment.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Computer Ethics */}
+                        <Section>
+                            <SectionTitle emoji="⚖️">Computer Ethics</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                <strong>Computer ethics</strong> refers to the moral rules and behavior people should follow when using computers and technology.
+                            </p>
+                            <div style={{ background: '#FDF4FF', padding: '20px', borderRadius: '16px', border: '1px solid #FBCFE8' }}>
+                                <h4 style={{ fontSize: '16px', color: '#86198F', margin: '0 0 12px 0', fontWeight: 700 }}>Examples of good computer ethics:</h4>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#701A75', lineHeight: 1.8 }}>
+                                    <li>Do not copy someone else's work without permission.</li>
+                                    <li>Do not hack or damage computer systems.</li>
+                                    <li>Do not spread viruses or harmful software.</li>
+                                    <li>Respect digital content and copyright laws.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Importance */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Importance of Computer Safety and Ethics</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ fontSize: '24px' }}>🛡️</div>
+                                    <div style={{ color: '#334155', fontSize: '14px', fontWeight: 600 }}>Protects personal information</div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ fontSize: '24px' }}>🛑</div>
+                                    <div style={{ color: '#334155', fontSize: '14px', fontWeight: 600 }}>Prevents cyber dangers</div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ fontSize: '24px' }}>🙌</div>
+                                    <div style={{ color: '#334155', fontSize: '14px', fontWeight: 600 }}>Encourages responsible digital behavior</div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ fontSize: '24px' }}>🌍</div>
+                                    <div style={{ color: '#334155', fontSize: '14px', fontWeight: 600 }}>Helps create a safe online environment</div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is computer safety?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Computer safety means protecting users and information while using computers and the internet.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is computer ethics?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Computer ethics refers to responsible and respectful behavior when using technology.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why are strong passwords important?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Strong passwords protect accounts and personal information from unauthorized access.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 9: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="💡">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Cybersecurity experts work to protect computers and networks from attacks.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Strong passwords help prevent hacking.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Responsible internet use helps keep online communities safe.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 10: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define computer safety.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. What is computer ethics?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Why are passwords important?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Name two rules for safe internet use.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Why should we respect others' work online?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Name one way to protect personal information.</p>
                             </div>
                         </Section>
                     </>
