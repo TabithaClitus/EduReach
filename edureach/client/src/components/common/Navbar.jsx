@@ -27,6 +27,7 @@ const mentorLinks = [
 const adminLinks = [
   { label: "Overview", path: "/admin" },
   { label: "Users", path: "/admin?tab=users" },
+  { label: "Scholarships", path: "/admin?tab=scholarships" },
   { label: "Mentors", path: "/admin?tab=mentors" },
   { label: "Reports", path: "/admin?tab=reports" },
 ];

@@ -1,6 +1,7 @@
 import { useState, useEffect, Component } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import api from '../services/api';
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -591,30 +592,59 @@ function ScholarshipsTab() {
           ) : items.length === 0 ? (
             <p style={{ fontSize: 13, color: '#94A3B8' }}>No scholarships found.</p>
           ) : (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, maxHeight: 600, overflowY: 'auto', overflowX: 'hidden', paddingRight: 4 }}>
-              {items.map((sch, i) => (
-                <div key={sch?._id || i} style={{ border: '1px solid #E2E8F0', borderRadius: 10, padding: '14px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16 }}>
-                  <div style={{ minWidth: 0, flex: 1 }}>
-                    <p style={{ margin: 0, fontSize: 14, fontWeight: 700, color: '#0F172A', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{sch?.title || 'Unknown Scholarship'}</p>
-                    <p style={{ margin: '4px 0 0', fontSize: 13, color: '#64748B' }}>{sch?.provider || 'Provider not set'}</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 16, maxHeight: 640, overflowY: 'auto', overflowX: 'hidden', paddingRight: 4, paddingBottom: 10 }}>
+              {items.map((sch, i) => {
+                const amountStr = sch?.amount ? (sch.amount.startsWith('₹') ? sch.amount : `₹ ${sch.amount}`) : null;
+                const deadlineStr = sch?.deadline ? new Date(sch.deadline).toLocaleDateString() : 'No deadline';
+                
+                return (
+                  <div key={sch?._id || i} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 14, padding: 20, display: 'flex', flexDirection: 'column', gap: 12, boxShadow: '0 2px 8px rgba(0,0,0,0.04)', transition: 'transform 0.15s', cursor: 'default' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 10 }}>
+                      <p style={{ margin: 0, fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.5, color: '#64748B', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                        {sch?.provider || 'Provider not set'}
+                      </p>
+                      <span style={{ fontSize: 11, fontWeight: 700, background: '#F1F5F9', color: '#475569', padding: '3px 8px', borderRadius: 99, whiteSpace: 'nowrap' }}>
+                        ⏳ {deadlineStr}
+                      </span>
+                    </div>
+
+                    <h3 style={{ margin: 0, fontSize: 15, fontWeight: 800, color: '#0F172A', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                      {sch?.title || 'Unknown Scholarship'}
+                    </h3>
+
+                    {amountStr && (
+                      <p style={{ margin: 0, fontSize: 16, fontWeight: 800, color: '#10B981' }}>
+                        {amountStr} <span style={{ fontSize: 11, fontWeight: 600, color: '#94A3B8' }}>/ year</span>
+                      </p>
+                    )}
+
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 'auto' }}>
+                      {sch?.eligibility?.grade && sch.eligibility.grade !== 'All' && (
+                        <span style={{ background: '#F3F4F6', color: '#4B5563', fontSize: 11, fontWeight: 600, padding: '3px 9px', borderRadius: 99 }}>{sch.eligibility.grade}</span>
+                      )}
+                      {sch?.eligibility?.state && sch.eligibility.state !== 'All' && (
+                        <span style={{ background: '#E0F2FE', color: '#0369A1', fontSize: 11, fontWeight: 600, padding: '3px 9px', borderRadius: 99 }}>{sch.eligibility.state}</span>
+                      )}
+                    </div>
+
+                    <div style={{ display: 'flex', gap: 8, marginTop: 8, paddingTop: 12, borderTop: '1px solid #F1F5F9' }}>
+                      <button
+                        onClick={() => onEdit(sch)}
+                        style={{ flex: 1, padding: '8px 0', border: '1px solid #E2E8F0', borderRadius: 8, background: '#fff', color: '#1D4ED8', fontSize: 12, fontWeight: 700, cursor: 'pointer', transition: 'background 0.15s' }}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onClick={() => sch && onDelete(sch._id)}
+                        disabled={sch && deletingId === sch._id}
+                        style={{ flex: 1, padding: '8px 0', border: 'none', borderRadius: 8, background: '#FEE2E2', color: '#B91C1C', fontSize: 12, fontWeight: 700, cursor: 'pointer', opacity: (sch && deletingId === sch._id) ? 0.7 : 1, transition: 'background 0.15s' }}
+                      >
+                        {(sch && deletingId === sch._id) ? 'Deleting...' : 'Delete'}
+                      </button>
+                    </div>
                   </div>
-                  <div style={{ display: 'flex', gap: 8 }}>
-                    <button
-                      onClick={() => onEdit(sch)}
-                      style={{ padding: '8px 14px', flexShrink: 0, border: 'none', borderRadius: 8, background: '#EFF6FF', color: '#1D4ED8', fontSize: 13, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}
-                    >
-                      Edit
-                    </button>
-                    <button
-                      onClick={() => sch && onDelete(sch._id)}
-                      disabled={sch && deletingId === sch._id}
-                      style={{ padding: '8px 14px', flexShrink: 0, border: 'none', borderRadius: 8, background: '#FEE2E2', color: '#991B1B', fontSize: 13, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap', opacity: (sch && deletingId === sch._id) ? 0.7 : 1 }}
-                    >
-                      {(sch && deletingId === sch._id) ? 'Deleting...' : 'Delete'}
-                    </button>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
         </div>
