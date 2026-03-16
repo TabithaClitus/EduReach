@@ -4,18 +4,28 @@ import api from "../services/api";
 import useAuthStore from "../store/authStore";
 import Loader from "../components/common/Loader";
 
-const CATEGORIES = [
-  "All Categories",
-  "Merit", "Need-based", "Merit-cum-Means",
-  "Technical", "State", "Minority", "Corporate",
-  "Foundation", "Defence", "Pre-Matric",
-  "Post-Matric", "Higher Education", "Research Fellowship",
+const CLASSES = [
+  "All Classes",
+  "Class 1", "Class 2", "Class 3", "Class 4", "Class 5",
+  "Class 6", "Class 7", "Class 8", "Class 9", "Class 10",
+  "Class 11", "Class 12", "Undergraduate", "Postgraduate", "PhD"
+];
+
+const GENDERS = [
+  "All Genders",
+  "Male", "Female", "Other"
 ];
 
 const STATES = [
   "State",
-  "Tamil Nadu", "Karnataka", "Uttar Pradesh", "Maharashtra",
-  "Andhra Pradesh", "Telangana", "Kerala", "Rajasthan", "Bihar",
+  "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
+  "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
+  "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram",
+  "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana",
+  "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal",
+  "Andaman and Nicobar", "Chandigarh", "Dadra and Nagar Haveli",
+  "Daman and Diu", "Delhi", "Jammu and Kashmir", "Ladakh",
+  "Lakshadweep", "Puducherry"
 ];
 
 const JUNK_RE = /whatsapp|^buddy4study|channel|messaging|telegram|newsletter/i;
@@ -89,7 +99,8 @@ export default function Scholarships() {
   const [selectedSch, setSelectedSch]   = useState(null);
 
   const [search,   setSearch]   = useState("");
-  const [category, setCategory] = useState("All Categories");
+  const [grade,    setGrade]    = useState("All Classes");
+  const [gender,   setGender]   = useState("All Genders");
   const [state,    setState]    = useState("State");
 
   const { isAuthenticated } = useAuthStore();
@@ -104,7 +115,8 @@ export default function Scholarships() {
       const params = { page, limit: 10 };
       if (search && search.trim())                params.search   = search.trim();
       if (state    !== "State")                   params.state    = state;
-      if (category !== "All Categories")          params.category = category;
+      if (grade    !== "All Classes")             params.grade    = grade;
+      if (gender   !== "All Genders")             params.gender   = gender;
       const res = await api.get("/scholarships", { params });
       setScholarships((res.data.data || []).filter(isValid));
       setPagination(res.data.pagination || {});
@@ -178,22 +190,33 @@ export default function Scholarships() {
               />
             </div>
             
-            <div style={{ position: 'relative', width: 180 }}>
+            <div style={{ position: 'relative', width: 150 }}>
               <select
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-                style={{ width: '100%', height: '100%', appearance: 'none', padding: '0 36px 0 16px', background: '#F1F5F9', borderRadius: 10, border: 'none', outline: 'none', fontSize: 14, color: '#334155', cursor: 'pointer', fontWeight: 500 }}
+                value={grade}
+                onChange={(e) => setGrade(e.target.value)}
+                style={{ width: '100%', height: '100%', appearance: 'none', padding: '0 32px 0 16px', background: '#F1F5F9', borderRadius: 10, border: 'none', outline: 'none', fontSize: 14, color: '#334155', cursor: 'pointer', fontWeight: 500 }}
               >
-                {CATEGORIES.map((c) => <option key={c}>{c}</option>)}
+                {CLASSES.map((c) => <option key={c}>{c}</option>)}
               </select>
               <ChevronDown size={14} color="#64748B" style={{ position: 'absolute', right: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }} />
             </div>
 
-            <div style={{ position: 'relative', width: 180 }}>
+            <div style={{ position: 'relative', width: 140 }}>
+              <select
+                value={gender}
+                onChange={(e) => setGender(e.target.value)}
+                style={{ width: '100%', height: '100%', appearance: 'none', padding: '0 32px 0 16px', background: '#F1F5F9', borderRadius: 10, border: 'none', outline: 'none', fontSize: 14, color: '#334155', cursor: 'pointer', fontWeight: 500 }}
+              >
+                {GENDERS.map((g) => <option key={g}>{g}</option>)}
+              </select>
+              <ChevronDown size={14} color="#64748B" style={{ position: 'absolute', right: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }} />
+            </div>
+
+            <div style={{ position: 'relative', width: 170 }}>
               <select
                 value={state}
                 onChange={(e) => setState(e.target.value)}
-                style={{ width: '100%', height: '100%', appearance: 'none', padding: '0 36px 0 16px', background: '#F1F5F9', borderRadius: 10, border: 'none', outline: 'none', fontSize: 14, color: '#334155', cursor: 'pointer', fontWeight: 500 }}
+                style={{ width: '100%', height: '100%', appearance: 'none', padding: '0 32px 0 16px', background: '#F1F5F9', borderRadius: 10, border: 'none', outline: 'none', fontSize: 14, color: '#334155', cursor: 'pointer', fontWeight: 500, textOverflow: 'ellipsis' }}
               >
                 {STATES.map((s) => <option key={s}>{s}</option>)}
               </select>
