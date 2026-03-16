@@ -4,11 +4,13 @@ const Scholarship = require("../models/Scholarship");
 // @route  GET /api/scholarships
 exports.getScholarships = async (req, res) => {
   try {
-    const { state, category, search, page = 1, limit = 15 } = req.query;
+    const { state, grade, gender, search, page = 1, limit = 15 } = req.query;
 
     const filter = {};
     if (state) filter["eligibility.state"] = { $in: ["", "All", state] };
-    if (category) filter.category = { $regex: category, $options: "i" };
+    if (grade) filter["eligibility.grade"] = { $in: ["", "All", grade] };
+    if (gender) filter["eligibility.gender"] = { $in: ["", "All", gender] };
+    
     if (search) {
       filter.$or = [
         { title: { $regex: search, $options: "i" } },
