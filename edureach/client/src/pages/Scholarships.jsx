@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Search, ChevronDown, CheckCircle, ChevronLeft, ChevronRight } from "lucide-react";
+import { Search, ChevronDown, CheckCircle, ChevronLeft, ChevronRight, X } from "lucide-react";
 import api from "../services/api";
 import useAuthStore from "../store/authStore";
 import Loader from "../components/common/Loader";
@@ -86,6 +86,7 @@ export default function Scholarships() {
   const [pagination, setPagination]     = useState({});
   const [currentPage, setCurrentPage]   = useState(1);
   const [applying, setApplying]         = useState(null);
+  const [selectedSch, setSelectedSch]   = useState(null);
 
   const [search,   setSearch]   = useState("");
   const [category, setCategory] = useState("All Categories");
@@ -124,7 +125,11 @@ export default function Scholarships() {
   const handleSearch = (e) => { e.preventDefault(); fetchScholarships(1); };
 
   const handleApply = async (sch) => {
-    if (!isAuthenticated || applying) return;
+    if (applying) return;
+    if (!isAuthenticated) {
+      if (sch.applicationUrl) window.open(sch.applicationUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
     setApplying(sch._id);
     try {
       await api.post(`/scholarships/${sch._id}/apply`);
@@ -230,7 +235,11 @@ export default function Scholarships() {
                 const tags      = buildTags(sch);
 
                 return (
-                  <div key={sch._id} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 16, display: 'flex', flexDirection: 'column', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.03)', transition: 'transform 0.2s, box-shadow 0.2s' }}>
+                  <div 
+                    key={sch._id} 
+                    onClick={() => setSelectedSch(sch)}
+                    style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 16, display: 'flex', flexDirection: 'column', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.03)', transition: 'transform 0.2s, box-shadow 0.2s', cursor: 'pointer' }}
+                  >
                     {/* Card body */}
                     <div style={{ padding: 20, display: 'flex', flexDirection: 'column', flex: 1 }}>
                       {/* Provider row + deadline */}
@@ -261,7 +270,7 @@ export default function Scholarships() {
 
                       {/* Tags */}
                       {tags.length > 0 && (
-                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 16, marginTop: 'auto' }}>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 0, marginTop: 'auto' }}>
                           {tags.slice(0, 4).map((tag, i) => {
                             const s = getTagStyle(tag);
                             return (
@@ -276,40 +285,6 @@ export default function Scholarships() {
                         </div>
                       )}
                     </div>
-
-                    {/* Buttons */}
-                    <div style={{ borderTop: '1px solid #F1F5F9', padding: '16px 20px', background: '#FAFAFA', display: 'flex', gap: 10 }}>
-                      <a
-                        href={sch.applicationUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ flex: 1, padding: '10px 0', border: '1px solid #E2E8F0', borderRadius: 10, fontSize: 13, fontWeight: 700, color: '#475569', background: '#fff', textAlign: 'center', textDecoration: 'none', display: 'inline-block' }}
-                      >
-                        Details
-                      </a>
-                      
-                      {isApplied ? (
-                        <a
-                          href={sch.applicationUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{ flex: 1, padding: '10px 0', border: 'none', borderRadius: 10, fontSize: 13, fontWeight: 700, color: '#fff', background: '#10B981', textAlign: 'center', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}
-                        >
-                          <CheckCircle size={16} /> Applied
-                        </a>
-                      ) : (
-                        <button
-                          onClick={() => handleApply(sch)}
-                          disabled={!isAuthenticated || applying === sch._id}
-                          style={{ flex: 1, padding: '10px 0', border: 'none', borderRadius: 10, fontSize: 13, fontWeight: 700, color: '#fff', background: '#0F172A', cursor: (!isAuthenticated || applying === sch._id) ? 'not-allowed' : 'pointer', opacity: (!isAuthenticated || applying === sch._id) ? 0.6 : 1 }}
-                        >
-                          {applying === sch._id ? "Opening…" : "Apply Now"}
-                        </button>
-                      )}
-                    </div>
-                    {!isAuthenticated && (
-                      <p style={{ margin: '-6px 0 14px', textAlign: 'center', fontSize: 11, color: '#94A3B8', fontWeight: 500, background: '#FAFAFA' }}>Sign in to apply directly</p>
-                    )}
                   </div>
                 );
               })}
@@ -346,6 +321,91 @@ export default function Scholarships() {
           </>
         )}
       </div>
+
+      {/* ── Modal ── */}
+      {selectedSch && (
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(15, 23, 42, 0.6)', backdropFilter: 'blur(4px)', zIndex: 100, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }} onClick={() => setSelectedSch(null)}>
+          <div onClick={(e) => e.stopPropagation()} style={{ background: '#fff', borderRadius: 24, width: '100%', maxWidth: 600, maxHeight: '90vh', display: 'flex', flexDirection: 'column', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)', overflow: 'hidden', animation: 'fadeInUp 0.3s ease' }}>
+            
+            {/* Modal Header */}
+            <div style={{ padding: '24px 32px', borderBottom: '1px solid #F1F5F9', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+              <div>
+                <p style={{ margin: 0, fontSize: 11, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8, color: '#64748B' }}>
+                  {selectedSch.provider || "Government of India"}
+                </p>
+                <h2 style={{ margin: '8px 0 0', fontSize: 22, fontWeight: 800, color: '#0F172A', lineHeight: 1.3 }}>
+                  {selectedSch.title}
+                </h2>
+              </div>
+              <button onClick={() => setSelectedSch(null)} style={{ background: '#F1F5F9', border: 'none', borderRadius: '50%', width: 36, height: 36, display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: '#475569', flexShrink: 0 }}>
+                <X size={18} />
+              </button>
+            </div>
+
+            {/* Modal Body */}
+            <div style={{ padding: '32px', overflowY: 'auto', flex: 1 }}>
+              <div style={{ display: 'flex', gap: 24, marginBottom: 24, flexWrap: 'wrap' }}>
+                {selectedSch.amount && /\d/.test(selectedSch.amount) && (
+                  <div style={{ background: '#ECFDF5', padding: '16px 20px', borderRadius: 16 }}>
+                    <p style={{ margin: 0, fontSize: 13, fontWeight: 700, color: '#059669', marginBottom: 4 }}>Scholarship Amount</p>
+                    <p style={{ margin: 0, fontSize: 24, fontWeight: 800, color: '#10B981' }}>
+                      {selectedSch.amount.startsWith("₹") ? selectedSch.amount : `₹ ${selectedSch.amount}`}
+                      <span style={{ fontSize: 14, fontWeight: 600, color: '#059669', marginLeft: 4 }}>/ year</span>
+                    </p>
+                  </div>
+                )}
+                <div style={{ background: '#F8FAFC', padding: '16px 20px', borderRadius: 16 }}>
+                  <p style={{ margin: 0, fontSize: 13, fontWeight: 700, color: '#64748B', marginBottom: 4 }}>Application Deadline</p>
+                  <div style={{ marginTop: 6 }}><DeadlineBadge deadline={selectedSch.deadline} /></div>
+                </div>
+              </div>
+
+              <h3 style={{ margin: '0 0 12px', fontSize: 16, fontWeight: 800, color: '#0F172A' }}>About the Program</h3>
+              <p style={{ margin: '0 0 24px', fontSize: 15, color: '#475569', lineHeight: 1.7, whiteSpace: 'pre-line' }}>
+                {selectedSch.description || "No description available for this scholarship."}
+              </p>
+
+              <h3 style={{ margin: '0 0 12px', fontSize: 16, fontWeight: 800, color: '#0F172A' }}>Eligibility Criteria</h3>
+              {buildTags(selectedSch).length > 0 ? (
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                  {buildTags(selectedSch).map((tag, i) => {
+                    const s = getTagStyle(tag);
+                    return (
+                      <span key={`${tag}-${i}`} style={{ background: s.bg, color: s.text, fontSize: 13, fontWeight: 600, padding: '6px 14px', borderRadius: 99 }}>
+                        {tag}
+                      </span>
+                    );
+                  })}
+                </div>
+              ) : (
+                <p style={{ margin: 0, fontSize: 14, color: '#64748B' }}>None specified.</p>
+              )}
+            </div>
+
+            {/* Modal Footer */}
+            <div style={{ padding: '24px 32px', borderTop: '1px solid #F1F5F9', background: '#FAFAFA' }}>
+              {appliedIds.has(selectedSch._id) ? (
+                <a
+                  href={selectedSch.applicationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, width: '100%', padding: '16px 0', border: 'none', borderRadius: 14, fontSize: 16, fontWeight: 700, color: '#fff', background: '#10B981', textAlign: 'center', textDecoration: 'none' }}
+                >
+                  <CheckCircle size={20} /> You have applied to this scholarship
+                </a>
+              ) : (
+                <button
+                  onClick={() => handleApply(selectedSch)}
+                  disabled={applying === selectedSch._id}
+                  style={{ display: 'block', width: '100%', padding: '16px 0', border: 'none', borderRadius: 14, fontSize: 16, fontWeight: 700, color: '#fff', background: '#2563EB', cursor: applying === selectedSch._id ? 'not-allowed' : 'pointer', opacity: applying === selectedSch._id ? 0.7 : 1, transition: 'background 0.2s' }}
+                >
+                  {applying === selectedSch._id ? "Redirecting..." : "Apply Now on Official Portal"}
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
