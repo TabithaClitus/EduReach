@@ -7376,6 +7376,321 @@ const lessonData = {
         ],
         summaryEnd: 'Great job! You now understand how to compare quantities using ratios and proportions!',
         nextLesson: null
+    },
+
+    // ─────────────────────────────────────────────────────────────────────────────
+    // CLASS 6 – SCIENCE
+    // ─────────────────────────────────────────────────────────────────────────────
+    '6-components-of-food': {
+        title: 'Components of Food',
+        subtitle: 'Learn about nutrients, balanced diet, and deficiency diseases.',
+        videoSubtitle: 'Watch these videos to learn more about the components of our food!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/-D4VSa2g-O4?si=I99Vc970dl77tpQp', title: 'Components of Food', thumb: 'https://img.youtube.com/vi/-D4VSa2g-O4/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/I1ffbVovAKw?si=HtmmoGyE30E3Rsro', title: 'Balanced Diet & Nutrients', thumb: 'https://img.youtube.com/vi/I1ffbVovAKw/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Nutrients are substances that', visual: '🍏', options: ['spoil food', 'provide energy and help the body grow', 'make food taste better', 'change food color'], correct: 1 },
+            { question: 'Which nutrient gives energy to the body?', visual: '⚡', options: ['carbohydrates', 'vitamins', 'minerals', 'water'], correct: 0 },
+            { question: 'Proteins help in', visual: '💪', options: ['body growth and repair', 'providing color to food', 'making bones weak', 'digestion only'], correct: 0 },
+            { question: 'Which vitamin helps maintain good eyesight?', visual: '👁️', options: ['Vitamin A', 'Vitamin B', 'Vitamin C', 'Vitamin K'], correct: 0 },
+            { question: 'Which mineral helps strengthen bones?', visual: '🦴', options: ['iron', 'calcium', 'sodium', 'iodine'], correct: 1 },
+            { question: 'A balanced diet contains', visual: '🥗', options: ['only carbohydrates', 'only proteins', 'all nutrients in proper amounts', 'only fruits'], correct: 2 },
+            { question: 'Lack of Vitamin C causes', visual: '🍊', options: ['rickets', 'scurvy', 'anemia', 'night blindness'], correct: 1 },
+            { question: 'Which food is rich in protein?', visual: '🥚', options: ['rice', 'bread', 'eggs', 'sugar'], correct: 2 },
+            { question: 'Roughage helps in', visual: '🌾', options: ['digestion', 'eyesight', 'blood formation', 'bone growth'], correct: 0 },
+            { question: 'Eating a balanced diet helps us', visual: '🛡️', options: ['stay healthy', 'grow properly', 'prevent diseases', 'all of these'], correct: 3 }
+        ],
+        summary: [
+            'Nutrients provide energy and help our body grow and function properly.',
+            'Carbohydrates give energy, proteins help in growth, and fats provide extra energy.',
+            'Vitamins and minerals protect the body from diseases and maintain good health.',
+            'A balanced diet contains all essential nutrients, water, and roughage in correct amounts.',
+            'Lack of essential nutrients in our diet can lead to deficiency diseases like scurvy or anemia.'
+        ],
+        summaryEnd: 'Fantastic! You now know all about the important nutrients your body needs to stay healthy and strong!',
+        nextLesson: { id: 'sorting-materials-into-groups', title: 'Sorting Materials into Groups' }
+    },
+
+    '6-sorting-materials-into-groups': {
+        title: 'Sorting Materials into Groups',
+        subtitle: 'Learn about materials, their properties, and how to sort them.',
+        videoSubtitle: 'Watch these videos to learn about sorting materials!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/r4Iuu9WSgic?si=c9YZHJUpBAQ2mpZw', title: 'Sorting Materials into Groups', thumb: 'https://img.youtube.com/vi/r4Iuu9WSgic/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/UdaKBpoFoJ0?si=plX54F5yoNsrVkn1', title: 'Properties of Materials', thumb: 'https://img.youtube.com/vi/UdaKBpoFoJ0/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Materials are substances used to', visual: '🏗️', options: ['destroy objects', 'make objects', 'measure objects', 'draw objects'], correct: 1 },
+            { question: 'Which of the following is a material?', visual: '🧴', options: ['book', 'plastic', 'table', 'chair'], correct: 1 },
+            { question: 'Which material is shiny?', visual: '✨', options: ['wood', 'metal', 'cotton', 'rubber'], correct: 1 },
+            { question: 'Which of the following is a hard material?', visual: '🪨', options: ['sponge', 'cotton', 'stone', 'rubber'], correct: 2 },
+            { question: 'Which substance dissolves in water?', visual: '🧂', options: ['sand', 'salt', 'chalk', 'stone'], correct: 1 },
+            { question: 'Glass is a', visual: '🪟', options: ['opaque material', 'translucent material', 'transparent material', 'soft material'], correct: 2 },
+            { question: 'Which material allows some light to pass through?', visual: '🌘', options: ['transparent', 'translucent', 'opaque', 'solid'], correct: 1 },
+            { question: 'Which object will float on water?', visual: '🪵', options: ['stone', 'metal', 'wood', 'iron'], correct: 2 },
+            { question: 'Materials that do not allow light to pass are called', visual: '🚪', options: ['transparent', 'translucent', 'opaque', 'shiny'], correct: 2 },
+            { question: 'Sorting materials helps us', visual: '📦', options: ['understand their properties', 'organize them', 'study them easily', 'all of these'], correct: 3 }
+        ],
+        summary: [
+            'Materials are the substances we use to make objects (e.g., wood, plastic, metal).',
+            'We sort materials to study them easily and understand their properties.',
+            'Materials can be shiny or dull, hard or soft, and soluble or insoluble.',
+            'Based on light passing through, materials are transparent, translucent, or opaque.',
+            'Some materials float on water, while others sink.'
+        ],
+        summaryEnd: 'Great job! You now understand how and why we sort different materials into groups!',
+        nextLesson: { id: 'separation-of-substances', title: 'Separation of Substances' }
+    },
+
+    '6-separation-of-substances': {
+        title: 'Separation of Substances',
+        subtitle: 'Learn the various methods used to separate materials from mixtures.',
+        videoSubtitle: 'Watch these videos to understand how to separate substances!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/TkkFIVe-pFI?si=pFar2zoi3AOzdkwx', title: 'Methods of Separation Part 1', thumb: 'https://img.youtube.com/vi/TkkFIVe-pFI/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/iRer_JLXC6k?si=QQAYd4JsOabJmgor', title: 'Methods of Separation Part 2', thumb: 'https://img.youtube.com/vi/iRer_JLXC6k/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/Y_WwzIcp_dU?si=GhU_S_eFJ-cARd94', title: 'Evaporation and Condensation', thumb: 'https://img.youtube.com/vi/Y_WwzIcp_dU/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Separation of substances helps to', visual: '🔬', options: ['mix materials', 'remove unwanted materials', 'destroy materials', 'color materials'], correct: 1 },
+            { question: 'Removing stones from rice is done by', visual: '🍚', options: ['filtration', 'handpicking', 'evaporation', 'condensation'], correct: 1 },
+            { question: 'Which method separates flour from bran?', visual: '🥣', options: ['sieving', 'filtration', 'winnowing', 'evaporation'], correct: 0 },
+            { question: 'Winnowing separates', visual: '🌾', options: ['water from salt', 'heavier particles from lighter ones', 'lighter particles from heavier ones', 'solids from liquids'], correct: 2 },
+            { question: 'Filtration separates', visual: '☕', options: ['solids from liquids', 'liquids from gases', 'gases from solids', 'solids from solids'], correct: 0 },
+            { question: 'Evaporation changes', visual: '☀️', options: ['solid to liquid', 'liquid to gas', 'gas to liquid', 'solid to gas'], correct: 1 },
+            { question: 'Condensation changes', visual: '💧', options: ['liquid to gas', 'gas to liquid', 'solid to liquid', 'gas to solid'], correct: 1 },
+            { question: 'Which method is used to obtain salt from seawater?', visual: '🌊', options: ['filtration', 'evaporation', 'handpicking', 'sieving'], correct: 1 },
+            { question: 'When sand settles at the bottom of water, it is called', visual: '⏳', options: ['evaporation', 'condensation', 'sedimentation', 'filtration'], correct: 2 },
+            { question: 'Pouring the clear liquid after sedimentation is called', visual: '🚰', options: ['decantation', 'filtration', 'sieving', 'winnowing'], correct: 0 }
+        ],
+        summary: [
+            'We separate substances to remove unwanted materials or obtain useful ones.',
+            'Handpicking is used when unwanted materials are visible and can be picked by hand.',
+            'Sieving and winnowing separate particles based on size and weight (using wind).',
+            'Sedimentation/Decantation and Filtration separate insoluble solids from liquids.',
+            'Evaporation (liquid to gas) and Condensation (gas to liquid) separate dissolved solids from liquids.'
+        ],
+        summaryEnd: 'Well done! You have learned the important scientific methods to separate mixtures!',
+        nextLesson: { id: 'getting-to-know-plants', title: 'Getting to Know Plants' }
+    },
+
+    '6-getting-to-know-plants': {
+        title: 'Getting to Know Plants',
+        subtitle: 'Learn about the different parts of a plant and their important functions.',
+        videoSubtitle: 'Watch these videos to explore the amazing world of plants!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/WmSsRCiFWuk?si=oYUzgHfrGVd5r-Tn', title: 'Getting to Know Plants Part 1', thumb: 'https://img.youtube.com/vi/WmSsRCiFWuk/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/gGGfdAReO-A?si=HG9miQMwuTeonKyn', title: 'Parts of a Plant', thumb: 'https://img.youtube.com/vi/gGGfdAReO-A/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'The part of the plant that grows below the soil is', visual: '🌱', options: ['leaf', 'stem', 'root', 'flower'], correct: 2 },
+            { question: 'Roots help plants to', visual: '💧', options: ['make food', 'absorb water and minerals', 'produce flowers', 'grow fruits'], correct: 1 },
+            { question: 'The green color of leaves is mainly used for', visual: '🍃', options: ['decoration', 'photosynthesis', 'reproduction', 'storage'], correct: 1 },
+            { question: 'The process by which plants make food is called', visual: '☀️', options: ['respiration', 'digestion', 'photosynthesis', 'evaporation'], correct: 2 },
+            { question: 'Which plant part supports leaves and flowers?', visual: '🎋', options: ['root', 'stem', 'leaf', 'fruit'], correct: 1 },
+            { question: 'Which root system has many thin roots?', visual: '🌾', options: ['tap root', 'fibrous root', 'main root', 'stem root'], correct: 1 },
+            { question: 'Flowers help plants in', visual: '🌺', options: ['photosynthesis', 'reproduction', 'absorption', 'storage'], correct: 1 },
+            { question: 'Which plant stores food in its root?', visual: '🥕', options: ['carrot', 'mango', 'coconut', 'banana'], correct: 0 },
+            { question: 'Seeds grow into', visual: '🌰', options: ['flowers', 'leaves', 'new plants', 'fruits'], correct: 2 },
+            { question: 'Plants provide', visual: '🌍', options: ['oxygen', 'food', 'shelter', 'all of these'], correct: 3 }
+        ],
+        summary: [
+            'Plants have main parts: roots, stem, leaves, flowers, and fruits.',
+            'Roots (tap or fibrous) anchor the plant and absorb water and minerals from the soil.',
+            'The stem supports the plant and transports water and nutrients.',
+            'Leaves prepare food for the plant using sunlight, water, and carbon dioxide (photosynthesis).',
+            'Flowers are for reproduction and turn into fruits, which contain seeds to grow new plants.'
+        ],
+        summaryEnd: 'Fantastic! You now know the different parts of a plant and how they help it live!',
+        nextLesson: { id: 'body-movements', title: 'Body Movements' }
+    },
+
+    '6-body-movements': {
+        title: 'Body Movements',
+        subtitle: 'Learn about the skeletal system, muscles, joints, and how different animals move.',
+        videoSubtitle: 'Watch these videos to understand how bodies move!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/IvgKzVx82Ls?si=yRF5Sxj_zN2oFonB', title: 'Human Body Movements', thumb: 'https://img.youtube.com/vi/IvgKzVx82Ls/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/b8IhVKhAWis?si=b4Wcff-xT7WlK6jg', title: 'Animal Movements', thumb: 'https://img.youtube.com/vi/b8IhVKhAWis/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'The framework of bones in the human body is called', visual: '🦴', options: ['muscles', 'skeletal system', 'skin', 'joints'], correct: 1 },
+            { question: 'An adult human body has about', visual: '🧍', options: ['150 bones', '206 bones', '300 bones', '500 bones'], correct: 1 },
+            { question: 'A joint is the place where', visual: '🔗', options: ['muscles meet', 'bones meet', 'nerves meet', 'tissues meet'], correct: 1 },
+            { question: 'Which joint allows movement in all directions?', visual: '🔄', options: ['hinge joint', 'pivot joint', 'ball and socket joint', 'fixed joint'], correct: 2 },
+            { question: 'Which joint is present in the elbow?', visual: '💪', options: ['hinge joint', 'ball joint', 'pivot joint', 'fixed joint'], correct: 0 },
+            { question: 'Bones move with the help of', visual: '🏃', options: ['skin', 'muscles', 'hair', 'blood'], correct: 1 },
+            { question: 'Which animal moves by slithering?', visual: '🐍', options: ['frog', 'snake', 'fish', 'bird'], correct: 1 },
+            { question: 'Fish swim using', visual: '🐟', options: ['wings', 'legs', 'fins and tail', 'muscles only'], correct: 2 },
+            { question: 'Birds move in the air by', visual: '🦅', options: ['running', 'flying', 'jumping', 'crawling'], correct: 1 },
+            { question: 'Movement helps animals to', visual: '🐾', options: ['find food', 'escape danger', 'survive', 'all of these'], correct: 3 }
+        ],
+        summary: [
+            'The skeletal system (206 bones in adults) provides shape, support, and protection to the body.',
+            'Bones work together with muscles (which contract and relax) to create movement.',
+            'Joints are where bones meet. Types include: Ball and Socket, Hinge, Pivot, and Fixed.',
+            'Different animals move differently: humans walk, birds fly, fish swim, snakes slither.',
+            'Earthworms use muscles and grip to move, while snails use a muscular foot.'
+        ],
+        summaryEnd: 'Great work! You now understand the amazing mechanics of body movements!',
+        nextLesson: { id: 'living-organisms-and-surroundings', title: 'The Living Organisms and Their Surroundings' }
+    },
+
+    '6-living-organisms-and-surroundings': {
+        title: 'The Living Organisms and Their Surroundings',
+        subtitle: 'Learn about habitats, adaptations, and the characteristics of living things.',
+        videoSubtitle: 'Watch these videos to explore the world of living organisms!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/BMUyxcM4ymU?si=A5Ay6IGQafEZT-Fo', title: 'Living Organisms & Habitats', thumb: 'https://img.youtube.com/vi/BMUyxcM4ymU/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/DoL9pH37O3A?si=GfvhO3kn5VrMBOX9', title: 'Adaptations in Animals', thumb: 'https://img.youtube.com/vi/DoL9pH37O3A/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'The natural home of an organism is called', visual: '🏠', options: ['shelter', 'habitat', 'nest', 'environment'], correct: 1 },
+            { question: 'Which of the following is a terrestrial habitat?', visual: '🌲', options: ['ocean', 'river', 'forest', 'lake'], correct: 2 },
+            { question: 'Which of the following is an aquatic animal?', visual: '🐟', options: ['tiger', 'camel', 'fish', 'lion'], correct: 2 },
+            { question: 'Adaptation helps organisms to', visual: '🦎', options: ['change color only', 'survive in their environment', 'stop growing', 'avoid breathing'], correct: 1 },
+            { question: 'Camels are adapted to live in', visual: '🐪', options: ['forests', 'deserts', 'oceans', 'mountains'], correct: 1 },
+            { question: 'Fish breathe using', visual: '🐠', options: ['lungs', 'gills', 'skin', 'fins'], correct: 1 },
+            { question: 'Growth is a characteristic of', visual: '🌱', options: ['non-living things', 'living things', 'machines', 'rocks'], correct: 1 },
+            { question: 'Plants bend toward sunlight because they', visual: '🌻', options: ['move randomly', 'respond to stimuli', 'stop growing', 'produce seeds'], correct: 1 },
+            { question: 'Living organisms produce young ones through', visual: '🐣', options: ['respiration', 'reproduction', 'movement', 'excretion'], correct: 1 },
+            { question: 'Habitats provide', visual: '🌍', options: ['food', 'shelter', 'water', 'all of these'], correct: 3 }
+        ],
+        summary: [
+            'A habitat is the natural home where an organism lives (forests, deserts, oceans, etc.).',
+            'Terrestrial habitats are land-based (forests, deserts); aquatic habitats are water-based (rivers, oceans).',
+            'Adaptations are special features that help organisms survive (e.g., camel humps, fish gills, polar bear fur).',
+            'Living things share characteristics: movement, growth, respiration, response to stimuli, reproduction, and excretion.',
+            'Habitats provide food, water, shelter, and protection — destroying them threatens survival.'
+        ],
+        summaryEnd: 'Excellent! You now understand how living organisms interact with their surroundings!',
+        nextLesson: { id: 'motion-and-measurement', title: 'Motion and Measurement of Distances' }
+    },
+
+    '6-motion-and-measurement': {
+        title: 'Motion and Measurement of Distances',
+        subtitle: 'Learn about standard units of measurement and different types of motion.',
+        videoSubtitle: 'Watch these videos to understand motion and measurement!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/2iVvqELKRZ0?si=8JbsnTAhtftRbhdQ', title: 'Motion & Types of Motion', thumb: 'https://img.youtube.com/vi/2iVvqELKRZ0/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/QRoOFJDMU7w?si=OCFaH9UkMo9ghXVV', title: 'Measurement of Distances', thumb: 'https://img.youtube.com/vi/QRoOFJDMU7w/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Motion means', visual: '🚗', options: ['staying still', 'change in position', 'growth of objects', 'color change'], correct: 1 },
+            { question: 'The SI unit of length is', visual: '📏', options: ['centimeter', 'meter', 'kilometer', 'millimeter'], correct: 1 },
+            { question: 'Which instrument is used to measure length?', visual: '📐', options: ['thermometer', 'ruler', 'clock', 'barometer'], correct: 1 },
+            { question: '1 meter equals', visual: '🔢', options: ['10 centimeters', '50 centimeters', '100 centimeters', '1000 centimeters'], correct: 2 },
+            { question: 'Circular motion occurs in', visual: '🔄', options: ['straight path', 'zigzag path', 'circular path', 'random path'], correct: 2 },
+            { question: 'The motion of a train on a straight track is', visual: '🚆', options: ['circular motion', 'rectilinear motion', 'periodic motion', 'rotational motion'], correct: 1 },
+            { question: 'A swinging pendulum shows', visual: '🕰️', options: ['circular motion', 'periodic motion', 'rectilinear motion', 'random motion'], correct: 1 },
+            { question: 'A rotating fan shows', visual: '🌀', options: ['translational motion', 'rotational motion', 'periodic motion', 'straight motion'], correct: 1 },
+            { question: 'Distance between cities is measured in', visual: '🗺️', options: ['meters', 'centimeters', 'kilometers', 'millimeters'], correct: 2 },
+            { question: 'Standard units help in', visual: '✅', options: ['accurate measurement', 'confusion', 'random measurement', 'guessing'], correct: 0 }
+        ],
+        summary: [
+            'Motion is the change in position of an object over time.',
+            'The SI unit of length is the meter (m). 1 m = 100 cm; 1 km = 1000 m.',
+            'Standard units replaced body-part measurements (handspan, cubit) for accuracy and consistency.',
+            'Types of motion: Rectilinear (straight line), Circular (circular path), Periodic (repeating), and Rotational (around an axis).',
+            'Measurement tools include rulers, measuring tapes, meter scales, and odometers.'
+        ],
+        summaryEnd: 'Well done! You now understand how motion works and how we measure distances!',
+        nextLesson: null
+    },
+
+    '6-air-around-us': {
+        title: 'Air Around Us',
+        subtitle: 'Learn about the composition of air, its presence everywhere, and importance.',
+        videoSubtitle: 'Watch these videos to understand more about the air around us!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/teFVIkbK2bM?si=Da1rqRC4_vxbVASm', title: 'Air Around Us - Part 1', thumb: 'https://img.youtube.com/vi/teFVIkbK2bM/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/u1PmBJuCLqo?si=Y-jSt17cr2xqpBgX', title: 'Properties of Air', thumb: 'https://img.youtube.com/vi/u1PmBJuCLqo/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/nm_1_1-ox9U?si=o_ja6xdw6S17wIt-', title: 'Importance of Air', thumb: 'https://img.youtube.com/vi/nm_1_1-ox9U/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Air is a mixture of', visual: '💨', options: ['solids', 'liquids', 'gases', 'metals'], correct: 2 },
+            { question: 'The largest component of air is', visual: '📊', options: ['oxygen', 'nitrogen', 'carbon dioxide', 'hydrogen'], correct: 1 },
+            { question: 'Humans breathe in', visual: '🫁', options: ['nitrogen', 'oxygen', 'carbon dioxide', 'hydrogen'], correct: 1 },
+            { question: 'Plants use carbon dioxide for', visual: '🌱', options: ['respiration', 'photosynthesis', 'digestion', 'evaporation'], correct: 1 },
+            { question: 'Moving air is called', visual: '🌬️', options: ['rain', 'wind', 'cloud', 'fog'], correct: 1 },
+            { question: 'Which of the following shows the presence of air?', visual: '🎈', options: ['inflated balloon', 'flying kite', 'moving leaves', 'all of these'], correct: 3 },
+            { question: 'Air pollution is caused by', visual: '🏭', options: ['smoke', 'dust', 'harmful gases', 'all of these'], correct: 3 },
+            { question: 'Air contains', visual: '💧', options: ['dust particles', 'water vapor', 'gases', 'all of these'], correct: 3 },
+            { question: 'Air around the Earth forms the', visual: '🌍', options: ['ocean', 'atmosphere', 'forest', 'desert'], correct: 1 },
+            { question: 'Planting trees helps', visual: '🌳', options: ['increase pollution', 'reduce air pollution', 'stop oxygen', 'reduce rain'], correct: 1 }
+        ],
+        summary: [
+            'Air is an invisible mixture of gases (78% Nitrogen, 21% Oxygen, and small amounts of CO2, water vapor, and dust).',
+            'Air is present everywhere, including in soil spaces and dissolved in water.',
+            'Plants use carbon dioxide for photosynthesis, while humans and animals need oxygen for respiration.',
+            'Air pollution occurs when harmful substances mix with the air. We can reduce it by planting trees and using clean energy.',
+            'The layer of air surrounding the Earth is called the atmosphere. Moving air is called wind.'
+        ],
+        summaryEnd: 'Excellent! You now know all about the air around us and its importance for life on Earth!',
+        nextLesson: { id: 'light-shadows-and-reflections', title: 'Light, Shadows and Reflections' }
+    },
+
+    '6-light-shadows-and-reflections': {
+        title: 'Light, Shadows and Reflections',
+        subtitle: 'Understand how light travels, shadows form, and mirrors work.',
+        videoSubtitle: 'Watch these videos to learn about light, shadows and reflections!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/uQunphLhK5U?si=OJ_KrFb_qcmC2J59', title: 'Light & Shadows', thumb: 'https://img.youtube.com/vi/uQunphLhK5U/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/AbyHtfDG8ME?si=rSYB9eV7mENerNTi', title: 'Reflection & Mirrors', thumb: 'https://img.youtube.com/vi/AbyHtfDG8ME/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Light helps us', visual: '👁️', options: ['hear sounds', 'see objects', 'taste food', 'smell flowers'], correct: 1 },
+            { question: 'The main natural source of light is', visual: '☀️', options: ['Moon', 'Sun', 'stars', 'fire'], correct: 1 },
+            { question: 'Light travels in', visual: '📏', options: ['curves', 'zigzag lines', 'straight lines', 'circles'], correct: 2 },
+            { question: 'A shadow is formed when', visual: '👥', options: ['light passes through objects', 'light is blocked by an object', 'light disappears', 'light bends'], correct: 1 },
+            { question: 'Which material does not allow light to pass?', visual: '🧱', options: ['glass', 'water', 'metal', 'air'], correct: 2 },
+            { question: 'Reflection means', visual: '🪞', options: ['bending of light', 'blocking of light', 'bouncing back of light', 'absorption of light'], correct: 2 },
+            { question: 'A plane mirror is', visual: '🖼️', options: ['curved', 'flat', 'round', 'triangular'], correct: 1 },
+            { question: 'Which material is transparent?', visual: '🪟', options: ['wood', 'metal', 'glass', 'stone'], correct: 2 },
+            { question: 'The image in a plane mirror is', visual: '🪞', options: ['upside down', 'larger than object', 'same size as object', 'invisible'], correct: 2 },
+            { question: 'A torch is a source of', visual: '🔦', options: ['sound', 'heat only', 'light', 'water'], correct: 2 }
+        ],
+        summary: [
+            'Light is a form of energy that helps us see objects. The Sun is the main natural source.',
+            'Light travels in straight lines; this is called rectilinear propagation of light.',
+            'A shadow is formed when an opaque object blocks light. Transparent objects let light pass, translucent ones let some pass, opaque ones block it completely.',
+            'Reflection is the bouncing back of light from a surface (like a mirror).',
+            'A plane mirror forms an upright image that is the same size as the object but reversed left to right.'
+        ],
+        summaryEnd: 'Fantastic! You now understand the fascinating concepts of light, shadows, and reflections!',
+        nextLesson: { id: 'electricity-and-circuits', title: 'Electricity and Circuits' }
+    },
+
+    '6-electricity-and-circuits': {
+        title: 'Electricity and Circuits',
+        subtitle: 'Learn about electric cells, bulbs, switches, and simple electric circuits.',
+        videoSubtitle: 'Watch these videos to understand electricity and circuits!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/4W8_exfOSLc?si=X8bbvQPz_QPp7pWC', title: 'Electricity and Circuits - Part 1', thumb: 'https://img.youtube.com/vi/4W8_exfOSLc/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/2kVG-LgVMgI?si=OVEV5qXigVZCyaUX', title: 'Electric Cell & Bulb', thumb: 'https://img.youtube.com/vi/2kVG-LgVMgI/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Electricity is a form of', visual: '⚡', options: ['matter', 'energy', 'water', 'gas'], correct: 1 },
+            { question: 'An electric cell produces', visual: '🔋', options: ['heat only', 'sound', 'electricity', 'air'], correct: 2 },
+            { question: 'The device that produces light in a circuit is', visual: '💡', options: ['switch', 'bulb', 'wire', 'battery'], correct: 1 },
+            { question: 'A switch is used to', visual: '🎚️', options: ['produce electricity', 'control the flow of electricity', 'store electricity', 'increase electricity'], correct: 1 },
+            { question: 'A closed circuit allows', visual: '🔄', options: ['no current flow', 'electricity to flow', 'air flow', 'water flow'], correct: 1 },
+            { question: 'A broken path of electricity is called', visual: '❌', options: ['closed circuit', 'open circuit', 'electric cell', 'conductor'], correct: 1 },
+            { question: 'Which of the following is a conductor?', visual: '🔌', options: ['plastic', 'rubber', 'copper', 'wood'], correct: 2 },
+            { question: 'Which of the following is an insulator?', visual: '🛑', options: ['iron', 'copper', 'aluminum', 'rubber'], correct: 3 },
+            { question: 'A flashlight uses', visual: '🔦', options: ['electric cells', 'water', 'magnets', 'wind'], correct: 0 },
+            { question: 'Electricity helps power', visual: '🏙️', options: ['lights', 'fans', 'machines', 'all of these'], correct: 3 }
+        ],
+        summary: [
+            'Electricity is a form of energy used to power devices. It flows through a closed path called an electric circuit.',
+            'An electric cell produces electricity using chemical energy. It has a positive (+) and a negative (−) terminal.',
+            'An electric bulb produces light when electric current passes through its filament.',
+            'A switch is a device used to open (break) or close (complete) an electric circuit.',
+            'Conductors allow electricity to pass through them (e.g., copper, iron). Insulators do not allow electricity to pass (e.g., plastic, rubber).'
+        ],
+        summaryEnd: 'Great job! You have explored the fundamental concepts of electricity, circuits, conductors, and insulators!',
+        nextLesson: null
     }
 };
 
@@ -31959,7 +32274,7 @@ const LessonPage = () => {
                                 <div style={{ background: '#F0FDF4', padding: '20px', borderRadius: '16px', border: '1px solid #BBF7D0' }}>
                                     <h4 style={{ fontSize: '15px', color: '#166534', margin: '0 0 12px 0', fontWeight: 700 }}>Comparing Decimals</h4>
                                     <p style={{ fontSize: '14px', color: '#14532D', margin: '0 0 8px' }}>Compare digits from left to right after the decimal point.</p>
-                                    <p style={{ fontSize: '14px', color: '#14532D', margin: 0, fontFamily: 'monospace' }}>0.75 > 0.5 &nbsp;&nbsp; 2.34 > 2.29</p>
+                                    <p style={{ fontSize: '14px', color: '#14532D', margin: 0, fontFamily: 'monospace' }}>0.75 &gt; 0.5 &nbsp;&nbsp; 2.34 &gt; 2.29</p>
                                 </div>
                             </div>
                         </Section>
@@ -32808,7 +33123,1843 @@ const LessonPage = () => {
 
 
                 {/* ─────────────────────────────────────────────────────────────────────────
-                    CLASS 4 – SOCIAL STUDIES – PHYSICAL FEATURES OF THE EARTH
+                    CLASS 6 – SCIENCE – COMPONENTS OF FOOD
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'components-of-food' && (
+                    <>
+                        {/* Section 1: Introduction & What are Nutrients? */}
+                        <Section>
+                            <SectionTitle emoji="🍎">Introduction to Food & Nutrients</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Food is essential for all living beings. It provides energy for our daily activities and helps our body grow and stay healthy. The food we eat contains different substances called <strong>nutrients</strong>.
+                            </p>
+                            <div style={{ background: '#F0FDF4', padding: '16px', borderRadius: '12px', border: '1px solid #BBF7D0', marginBottom: '16px' }}>
+                                <p style={{ fontSize: '15px', color: '#166534', margin: 0 }}>
+                                    <strong>Nutrients</strong> are substances present in food that provide energy and help the body grow and function properly.
+                                </p>
+                            </div>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 12px', fontWeight: 600 }}>The main nutrients found in food are:</p>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
+                                {['🍞 Carbohydrates', '🥚 Proteins', '🥜 Fats', '🍊 Vitamins', '🦴 Minerals'].map(nutrient => (
+                                    <span key={nutrient} style={{ background: '#EFF6FF', color: '#1E40AF', padding: '6px 14px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, border: '1px solid #BFDBFE' }}>
+                                        {nutrient}
+                                    </span>
+                                ))}
+                            </div>
+                            <p style={{ fontSize: '14px', color: '#64748B', margin: 0, fontStyle: 'italic' }}>
+                                In addition, <strong>water and dietary fiber (roughage)</strong> are also very important for our body.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: Carbohydrates & Proteins */}
+                        <Section>
+                            <SectionTitle emoji="⚡">Carbohydrates & Proteins</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 1fr) minmax(280px, 1fr)', gap: '20px' }}>
+                                {/* Carbohydrates */}
+                                <div style={{ background: '#FFFBEB', padding: '20px', borderRadius: '16px', border: '1px solid #FDE68A' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#92400E', margin: '0 0 12px 0', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                        <span style={{ fontSize: '20px' }}>🍞</span> Carbohydrates
+                                    </h4>
+                                    <p style={{ fontSize: '14px', color: '#B45309', margin: '0 0 12px', lineHeight: 1.6 }}>
+                                        Carbohydrates are the <strong>main source of energy</strong>. They help us perform daily activities like studying and playing.
+                                    </p>
+                                    <p style={{ fontSize: '13px', color: '#78350F', fontWeight: 700, margin: '0 0 6px' }}>Rich food sources:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 16, color: '#92400E', fontSize: '13px', lineHeight: 1.8 }}>
+                                        <li>Rice and Wheat</li>
+                                        <li>Bread</li>
+                                        <li>Potatoes</li>
+                                        <li>Sugar</li>
+                                    </ul>
+                                </div>
+                                {/* Proteins */}
+                                <div style={{ background: '#FDF4FF', padding: '20px', borderRadius: '16px', border: '1px solid #F5D0FE' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#86198F', margin: '0 0 12px 0', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                        <span style={{ fontSize: '20px' }}>💪</span> Proteins
+                                    </h4>
+                                    <p style={{ fontSize: '14px', color: '#A21CAF', margin: '0 0 12px', lineHeight: 1.6 }}>
+                                        Called <strong>body-building foods</strong>. They help in the growth and repair of body tissues, especially for children.
+                                    </p>
+                                    <p style={{ fontSize: '13px', color: '#701A75', fontWeight: 700, margin: '0 0 6px' }}>Rich food sources:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 16, color: '#86198F', fontSize: '13px', lineHeight: 1.8 }}>
+                                        <li>Milk and Eggs</li>
+                                        <li>Fish</li>
+                                        <li>Beans and Pulses</li>
+                                        <li>Nuts</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Fats, Vitamins & Minerals */}
+                        <Section>
+                            <SectionTitle emoji="🛡️">Fats, Vitamins & Minerals</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
+                                {/* Fats */}
+                                <div style={{ background: '#FFF1F2', padding: '16px', borderRadius: '14px', border: '1px solid #FECDD3' }}>
+                                    <h5 style={{ fontSize: '15px', color: '#BE123C', margin: '0 0 8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                        <span>🧈</span> Fats
+                                    </h5>
+                                    <p style={{ fontSize: '13px', color: '#9F1239', margin: '0 0 8px', lineHeight: 1.6 }}>Provide <strong>extra energy</strong> and keep the body warm. Should be eaten in moderation.</p>
+                                    <p style={{ fontSize: '12px', color: '#881337', margin: 0 }}><strong>Examples:</strong> Butter, Oil, Ghee, Cheese</p>
+                                </div>
+                                {/* Vitamins */}
+                                <div style={{ background: '#F0FDF4', padding: '16px', borderRadius: '14px', border: '1px solid #BBF7D0' }}>
+                                    <h5 style={{ fontSize: '15px', color: '#15803D', margin: '0 0 8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                        <span>🍊</span> Vitamins
+                                    </h5>
+                                    <p style={{ fontSize: '13px', color: '#166534', margin: '0 0 8px', lineHeight: 1.6 }}>Protect from diseases. <strong>Vit A:</strong> Eyesight. <strong>Vit C:</strong> Fights infections. <strong>Vit D:</strong> Strong bones.</p>
+                                    <p style={{ fontSize: '12px', color: '#14532D', margin: 0 }}><strong>Sources:</strong> Fruits and vegetables</p>
+                                </div>
+                                {/* Minerals */}
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '14px', border: '1px solid #BFDBFE' }}>
+                                    <h5 style={{ fontSize: '15px', color: '#1D4ED8', margin: '0 0 8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                        <span>🦴</span> Minerals
+                                    </h5>
+                                    <p style={{ fontSize: '13px', color: '#1E40AF', margin: '0 0 8px', lineHeight: 1.6 }}>Important for growth. <strong>Calcium:</strong> Bones & teeth. <strong>Iron:</strong> Blood formation.</p>
+                                    <p style={{ fontSize: '12px', color: '#1E3A8A', margin: 0 }}><strong>Sources:</strong> Milk, greens, meat</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Balanced Diet */}
+                        <Section>
+                            <SectionTitle emoji="🥗">What is a Balanced Diet?</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(250px, 1fr) minmax(250px, 1fr)', gap: '20px', alignItems: 'center' }}>
+                                <div>
+                                    <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 12px', lineHeight: 1.6 }}>
+                                        A <strong>balanced diet</strong> is a diet that contains all nutrients in the right amounts needed by the body. It keeps the body strong and healthy.
+                                    </p>
+                                    <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
+                                        <p style={{ fontSize: '14px', color: '#0F172A', fontWeight: 700, margin: '0 0 8px' }}>It must include:</p>
+                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                                            {['Carbs', 'Proteins', 'Fats', 'Vitamins', 'Minerals', 'Water', 'Roughage'].map(item => (
+                                                <span key={item} style={{ background: '#E2E8F0', color: '#334155', padding: '4px 10px', borderRadius: '8px', fontSize: '12px', fontWeight: 600 }}>
+                                                    {item}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#FFF7ED', padding: '20px', borderRadius: '16px', border: '1px solid #FED7AA' }}>
+                                    <h4 style={{ fontSize: '15px', color: '#9A3412', margin: '0 0 12px 0', fontWeight: 700 }}>🍽️ Example of a Balanced Meal</h4>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#7C2D12', fontSize: '14px', lineHeight: 1.8 }}>
+                                        <li>Rice or chapati (Carbs)</li>
+                                        <li>Dal or beans (Proteins)</li>
+                                        <li>Vegetables (Vitamins & Minerals)</li>
+                                        <li>Milk or yogurt (Calcium/Protein)</li>
+                                        <li>Fruits (Vitamins)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Deficiency Diseases */}
+                        <Section>
+                            <SectionTitle emoji="⚠️">Deficiency Diseases</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 16px', lineHeight: 1.6 }}>
+                                When the body does not get enough of certain nutrients over a long period, it can lead to <strong>deficiency diseases</strong>. Eating a balanced diet helps prevent them.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
+                                <div style={{ background: '#FEF2F2', padding: '14px', borderRadius: '12px', border: '1px solid #FECACA', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ fontSize: '24px' }}>👁️</div>
+                                    <div>
+                                        <p style={{ fontSize: '12px', color: '#991B1B', margin: '0 0 4px', fontWeight: 600 }}>Lack of Vitamin A</p>
+                                        <p style={{ fontSize: '14px', color: '#7F1D1D', margin: 0, fontWeight: 700 }}>Night blindness</p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#FEF2F2', padding: '14px', borderRadius: '12px', border: '1px solid #FECACA', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ fontSize: '24px' }}>🍊</div>
+                                    <div>
+                                        <p style={{ fontSize: '12px', color: '#991B1B', margin: '0 0 4px', fontWeight: 600 }}>Lack of Vitamin C</p>
+                                        <p style={{ fontSize: '14px', color: '#7F1D1D', margin: 0, fontWeight: 700 }}>Scurvy</p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#FEF2F2', padding: '14px', borderRadius: '12px', border: '1px solid #FECACA', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ fontSize: '24px' }}>🦴</div>
+                                    <div>
+                                        <p style={{ fontSize: '12px', color: '#991B1B', margin: '0 0 4px', fontWeight: 600 }}>Lack of Vitamin D / Calcium</p>
+                                        <p style={{ fontSize: '14px', color: '#7F1D1D', margin: 0, fontWeight: 700 }}>Rickets / Weak bones</p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#FEF2F2', padding: '14px', borderRadius: '12px', border: '1px solid #FECACA', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ fontSize: '24px' }}>🩸</div>
+                                    <div>
+                                        <p style={{ fontSize: '12px', color: '#991B1B', margin: '0 0 4px', fontWeight: 600 }}>Lack of Iron</p>
+                                        <p style={{ fontSize: '14px', color: '#7F1D1D', margin: 0, fontWeight: 700 }}>Anemia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What are nutrients?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Nutrients are substances in food that provide energy and help the body grow.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is a balanced diet?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A balanced diet contains all essential nutrients in the correct amounts.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Name one deficiency disease caused by lack of vitamins.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Scurvy (caused by lack of Vitamin C).
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define nutrients.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name the five main nutrients in food.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is a balanced diet?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Give two examples of protein-rich foods.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name two vitamins and their functions.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. What happens if the body lacks nutrients?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 6 – SCIENCE – SORTING MATERIALS INTO GROUPS
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'sorting-materials-into-groups' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="📦">What are Materials?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                We see many different objects around us such as books, toys, utensils, and clothes. These objects are made from different <strong>materials</strong> like wood, metal, plastic, glass, and cloth.
+                            </p>
+                            <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', border: '1px solid #BFDBFE', marginBottom: '16px' }}>
+                                <p style={{ fontSize: '15px', color: '#1E40AF', margin: 0, fontWeight: 600 }}>
+                                    📌 Materials are substances used to make objects.
+                                </p>
+                            </div>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px', marginBottom: '20px' }}>
+                                <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                    <span style={{ fontSize: '20px' }}>🪵</span>
+                                    <span style={{ fontSize: '14px', color: '#334155', fontWeight: 600 }}>Wood (Table)</span>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                    <span style={{ fontSize: '20px' }}>🧴</span>
+                                    <span style={{ fontSize: '14px', color: '#334155', fontWeight: 600 }}>Plastic (Bottle)</span>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                    <span style={{ fontSize: '20px' }}>🥄</span>
+                                    <span style={{ fontSize: '14px', color: '#334155', fontWeight: 600 }}>Metal (Spoon)</span>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: Why Sort Materials? */}
+                        <Section>
+                            <SectionTitle emoji="🔍">Why Do We Sort Materials?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 16px', lineHeight: 1.6 }}>
+                                To study them easily, we group materials based on their <strong>similar properties</strong>. Sorting materials helps us:
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px', marginBottom: '16px' }}>
+                                <div style={{ background: '#F0FDF4', padding: '14px', borderRadius: '12px', border: '1px solid #BBF7D0', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '6px' }}>📚</div>
+                                    <p style={{ fontSize: '13px', color: '#14532D', margin: 0, fontWeight: 600 }}>Study materials easily</p>
+                                </div>
+                                <div style={{ background: '#FFFBEB', padding: '14px', borderRadius: '12px', border: '1px solid #FDE68A', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '6px' }}>💡</div>
+                                    <p style={{ fontSize: '13px', color: '#92400E', margin: 0, fontWeight: 600 }}>Understand their properties</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', padding: '14px', borderRadius: '12px', border: '1px solid #F5D0FE', textAlign: 'center' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '6px' }}>🛠️</div>
+                                    <p style={{ fontSize: '13px', color: '#701A75', margin: 0, fontWeight: 600 }}>Choose suitable materials</p>
+                                </div>
+                            </div>
+                            <p style={{ fontSize: '14px', color: '#475569', margin: 0, fontStyle: 'italic' }}>
+                                Example: Cooking utensils are made of metal because metal can withstand heat. Wood would just burn!
+                            </p>
+                        </Section>
+
+                        {/* Section 3: Properties (Appearance, Hardness, Solubility) */}
+                        <Section>
+                            <SectionTitle emoji="🔬">Properties of Materials</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
+                                {/* Appearance */}
+                                <div style={{ background: '#FFF1F2', padding: '18px', borderRadius: '16px', border: '1px solid #FECDD3' }}>
+                                    <h4 style={{ fontSize: '15px', color: '#9F1239', margin: '0 0 10px 0', fontWeight: 700 }}>✨ Appearance</h4>
+                                    <p style={{ fontSize: '13px', color: '#881337', margin: '0 0 8px', lineHeight: 1.6 }}>Some materials are <strong>shiny</strong>, while others are <strong>dull</strong>.</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#BE123C', fontSize: '13px', lineHeight: 1.8 }}>
+                                        <li><strong>Shiny:</strong> Gold, Silver, Aluminum</li>
+                                        <li><strong>Dull:</strong> Wood, Plastic</li>
+                                    </ul>
+                                </div>
+                                {/* Hardness */}
+                                <div style={{ background: '#F5F3FF', padding: '18px', borderRadius: '16px', border: '1px solid #DDD6FE' }}>
+                                    <h4 style={{ fontSize: '15px', color: '#5B21B6', margin: '0 0 10px 0', fontWeight: 700 }}>🪨 Hardness</h4>
+                                    <p style={{ fontSize: '13px', color: '#4C1D95', margin: '0 0 8px', lineHeight: 1.6 }}>Some materials are <strong>hard</strong>, while others are <strong>soft</strong>.</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#6D28D9', fontSize: '13px', lineHeight: 1.8 }}>
+                                        <li><strong>Hard:</strong> Stone, Metal, Glass</li>
+                                        <li><strong>Soft:</strong> Cotton, Sponge, Rubber</li>
+                                    </ul>
+                                </div>
+                                {/* Solubility */}
+                                <div style={{ background: '#E0F2FE', padding: '18px', borderRadius: '16px', border: '1px solid #BAE6FD' }}>
+                                    <h4 style={{ fontSize: '15px', color: '#0369A1', margin: '0 0 10px 0', fontWeight: 700 }}>🧂 Solubility in Water</h4>
+                                    <p style={{ fontSize: '13px', color: '#075985', margin: '0 0 8px', lineHeight: 1.6 }}>Some materials <strong>dissolve</strong>, others do not.</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#0284C7', fontSize: '13px', lineHeight: 1.8 }}>
+                                        <li><strong>Soluble:</strong> Salt, Sugar</li>
+                                        <li><strong>Insoluble:</strong> Sand, Chalk powder</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Transparency */}
+                        <Section>
+                            <SectionTitle emoji="🪟">Transparency</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 16px', lineHeight: 1.6 }}>
+                                Materials can also be grouped based on how much light passes through them.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px' }}>
+                                <div style={{ background: '#F0FDF4', padding: '16px', borderRadius: '14px', border: '1px solid #BBF7D0' }}>
+                                    <div style={{ fontSize: '28px', marginBottom: '8px' }}>👓</div>
+                                    <h5 style={{ fontSize: '14px', color: '#166534', margin: '0 0 4px', fontWeight: 700 }}>Transparent</h5>
+                                    <p style={{ fontSize: '13px', color: '#14532D', margin: '0 0 6px', lineHeight: 1.5 }}>Allow light to pass completely.</p>
+                                    <p style={{ fontSize: '12px', color: '#166534', margin: 0, fontStyle: 'italic' }}>Examples: Glass, clean water</p>
+                                </div>
+                                <div style={{ background: '#FFFBEB', padding: '16px', borderRadius: '14px', border: '1px solid #FDE68A' }}>
+                                    <div style={{ fontSize: '28px', marginBottom: '8px' }}>🌫️</div>
+                                    <h5 style={{ fontSize: '14px', color: '#92400E', margin: '0 0 4px', fontWeight: 700 }}>Translucent</h5>
+                                    <p style={{ fontSize: '13px', color: '#78350F', margin: '0 0 6px', lineHeight: 1.5 }}>Allow some light to pass through.</p>
+                                    <p style={{ fontSize: '12px', color: '#92400E', margin: 0, fontStyle: 'italic' }}>Examples: Butter paper, frosted glass</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '14px', border: '1px solid #CBD5E1' }}>
+                                    <div style={{ fontSize: '28px', marginBottom: '8px' }}>🧱</div>
+                                    <h5 style={{ fontSize: '14px', color: '#334155', margin: '0 0 4px', fontWeight: 700 }}>Opaque</h5>
+                                    <p style={{ fontSize: '13px', color: '#1E293B', margin: '0 0 6px', lineHeight: 1.5 }}>Do not allow light to pass through.</p>
+                                    <p style={{ fontSize: '12px', color: '#334155', margin: 0, fontStyle: 'italic' }}>Examples: Wood, metal, stone</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Floating & Sinking */}
+                        <Section>
+                            <SectionTitle emoji="⛴️">Floating and Sinking</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px', alignItems: 'center' }}>
+                                <p style={{ fontSize: '15px', color: '#334155', margin: 0, lineHeight: 1.6 }}>
+                                    Some materials float on water, while others sink. This is another way to group them!
+                                </p>
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', border: '1px solid #BFDBFE' }}>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#1E40AF', fontSize: '14px', lineHeight: 1.8 }}>
+                                        <li><strong>Float:</strong> Wood and plastic 🪵🛟</li>
+                                        <li><strong>Sink:</strong> Stone and metal 🪨⚓</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What are materials?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Materials are substances used to make objects.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Why do we sort materials into groups?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Sorting helps us study materials easily and understand their properties.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Give one example of a transparent material.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Glass.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="💡">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Gold and silver are shiny metals.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Plastic is widely used because it is lightweight and durable.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Some materials can change their properties when heated or cooled.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 8: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define materials.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name three materials used to make objects.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is the difference between hard and soft materials?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Give two examples of soluble substances.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name two transparent materials.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Which materials float on water?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 6 – SCIENCE – SEPARATION OF SUBSTANCES
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'separation-of-substances' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🔍">Why Do We Separate Substances?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                In our daily life, many materials are found mixed together. For example, tea leaves in tea, sand in water, or stones in grains. To obtain useful substances or remove unwanted materials, we separate them using different <strong>methods of separation</strong>.
+                            </p>
+                            <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', border: '1px solid #BFDBFE', marginBottom: '20px' }}>
+                                <p style={{ fontSize: '15px', color: '#1E40AF', margin: '0 0 10px', fontWeight: 700 }}>Reasons for Separation:</p>
+                                <ul style={{ margin: 0, paddingLeft: 20, color: '#1E3A8A', fontSize: '14px', lineHeight: 1.8 }}>
+                                    <li>To remove unwanted or harmful materials</li>
+                                    <li>To obtain useful components</li>
+                                    <li>To make substances pure</li>
+                                </ul>
+                            </div>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>🍚</span>
+                                    <span style={{ fontSize: '14px', color: '#334155', fontWeight: 600 }}>Removing stones from rice</span>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>☕</span>
+                                    <span style={{ fontSize: '14px', color: '#334155', fontWeight: 600 }}>Separating tea leaves from tea</span>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>🌊</span>
+                                    <span style={{ fontSize: '14px', color: '#334155', fontWeight: 600 }}>Obtaining salt from seawater</span>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: Solid-Solid Separation (Handpicking, Sieving, Winnowing) */}
+                        <Section>
+                            <SectionTitle emoji="🌾">Methods of Separation (Solids)</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
+                                {/* Handpicking */}
+                                <div style={{ background: '#FFF7ED', padding: '18px', borderRadius: '16px', border: '1px solid #FED7AA' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#9A3412', margin: '0 0 10px 0', fontWeight: 700 }}>✋ Handpicking</h4>
+                                    <p style={{ fontSize: '14px', color: '#7C2D12', margin: '0 0 8px', lineHeight: 1.6 }}>Used when unwanted materials can be easily picked by hand.</p>
+                                    <div style={{ background: '#FFEDD5', padding: '10px', borderRadius: '8px', fontSize: '13px', color: '#9A3412', fontStyle: 'italic' }}>
+                                        <strong>Example:</strong> Removing small stones or dirt from rice or pulses before cooking.
+                                    </div>
+                                </div>
+                                {/* Sieving */}
+                                <div style={{ background: '#F5F3FF', padding: '18px', borderRadius: '16px', border: '1px solid #DDD6FE' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#5B21B6', margin: '0 0 10px 0', fontWeight: 700 }}>🥣 Sieving</h4>
+                                    <p style={{ fontSize: '14px', color: '#4C1D95', margin: '0 0 8px', lineHeight: 1.6 }}>Used when particles of different sizes need to be separated using a mesh.</p>
+                                    <div style={{ background: '#EDE9FE', padding: '10px', borderRadius: '8px', fontSize: '13px', color: '#5B21B6', fontStyle: 'italic' }}>
+                                        <strong>Example:</strong> Separating fine flour from the larger wheat bran using a sieve.
+                                    </div>
+                                </div>
+                                {/* Winnowing */}
+                                <div style={{ background: '#F0FDF4', padding: '18px', borderRadius: '16px', border: '1px solid #BBF7D0' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#166534', margin: '0 0 10px 0', fontWeight: 700 }}>🍃 Winnowing</h4>
+                                    <p style={{ fontSize: '14px', color: '#14532D', margin: '0 0 8px', lineHeight: 1.6 }}>Used to separate lighter particles from heavier particles with the help of wind.</p>
+                                    <div style={{ background: '#DCFCE7', padding: '10px', borderRadius: '8px', fontSize: '13px', color: '#166534', fontStyle: 'italic' }}>
+                                        <strong>Example:</strong> Farmers separate the very light husk from the heavier grain seeds.
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Solid-Liquid Separation (Sedimentation/Decantation/Filtration) */}
+                        <Section>
+                            <SectionTitle emoji="💧">Separating Insolubles from Liquids</SectionTitle>
+                            <div style={{ background: '#F8FAFC', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0', marginBottom: '16px' }}>
+                                <h4 style={{ fontSize: '16px', color: '#0F172A', margin: '0 0 12px 0', fontWeight: 700 }}>Sedimentation and Decantation</h4>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'minmax(250px, 1fr) minmax(250px, 1fr)', gap: '16px' }}>
+                                    <div style={{ background: '#FFFFFF', padding: '14px', borderRadius: '12px', border: '1px solid #CBD5E1' }}>
+                                        <h5 style={{ fontSize: '14px', color: '#334155', margin: '0 0 6px' }}>1. Sedimentation ⏳</h5>
+                                        <p style={{ fontSize: '13px', color: '#475569', margin: 0, lineHeight: 1.6 }}>
+                                            When a mixture (like sand and water) is left undisturbed, the heavier particles settle at the bottom.
+                                        </p>
+                                    </div>
+                                    <div style={{ background: '#FFFFFF', padding: '14px', borderRadius: '12px', border: '1px solid #CBD5E1' }}>
+                                        <h5 style={{ fontSize: '14px', color: '#334155', margin: '0 0 6px' }}>2. Decantation 🚰</h5>
+                                        <p style={{ fontSize: '13px', color: '#475569', margin: 0, lineHeight: 1.6 }}>
+                                            The clear liquid above the settled particles is carefully poured out into another container.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style={{ background: '#FEF2F2', padding: '20px', borderRadius: '16px', border: '1px solid #FECACA' }}>
+                                <h4 style={{ fontSize: '16px', color: '#9F1239', margin: '0 0 12px 0', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                    <span style={{ fontSize: '20px' }}>☕</span> Filtration
+                                </h4>
+                                <p style={{ fontSize: '15px', color: '#881337', margin: '0 0 8px', lineHeight: 1.6 }}>
+                                    Filtration is used to completely separate insoluble solids from liquids using a filter (like filter paper, cloth, or a strainer).
+                                </p>
+                                <p style={{ fontSize: '14px', color: '#BE123C', margin: 0, fontStyle: 'italic' }}>
+                                    <strong>Example:</strong> Separating tea leaves from tea using a strainer.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Evaporation & Condensation */}
+                        <Section>
+                            <SectionTitle emoji="☀️">Evaporation & Condensation</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 16px', lineHeight: 1.6 }}>
+                                These methods are used to separate <strong>soluble solids</strong> (things dissolved in liquids) from liquids, and to get the liquid back!
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 1fr) minmax(280px, 1fr)', gap: '20px' }}>
+                                <div style={{ background: '#FFFBEB', padding: '18px', borderRadius: '16px', border: '1px solid #FDE68A' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+                                        <div style={{ fontSize: '28px' }}>♨️</div>
+                                        <h4 style={{ fontSize: '16px', color: '#92400E', margin: 0, fontWeight: 700 }}>Evaporation</h4>
+                                    </div>
+                                    <p style={{ fontSize: '14px', color: '#B45309', margin: '0 0 10px', lineHeight: 1.6 }}>
+                                        The process of converting a liquid into vapor by heating. (Liquid → Gas)
+                                    </p>
+                                    <div style={{ background: '#FEF3C7', padding: '10px', borderRadius: '8px', border: '1px solid #FCD34D' }}>
+                                        <p style={{ fontSize: '13px', color: '#92400E', margin: 0 }}>
+                                            <strong>Example:</strong> Obtaining salt from seawater. When heated by the sun, water evaporates and salt remains.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#E0F2FE', padding: '18px', borderRadius: '16px', border: '1px solid #BAE6FD' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+                                        <div style={{ fontSize: '28px' }}>🌧️</div>
+                                        <h4 style={{ fontSize: '16px', color: '#0369A1', margin: 0, fontWeight: 700 }}>Condensation</h4>
+                                    </div>
+                                    <p style={{ fontSize: '14px', color: '#075985', margin: '0 0 10px', lineHeight: 1.6 }}>
+                                        The process where water vapor cools down and changes back into liquid. (Gas → Liquid)
+                                    </p>
+                                    <div style={{ background: '#F0F9FF', padding: '10px', borderRadius: '8px', border: '1px solid #7DD3FC' }}>
+                                        <p style={{ fontSize: '13px', color: '#0369A1', margin: 0 }}>
+                                            <strong>Example:</strong> Water droplets forming on the outside of a cold glass of water.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. Why do we separate substances?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: To remove unwanted materials and obtain useful substances.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Which method is used to separate tea leaves from tea?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Filtration.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Which process is used to obtain salt from seawater?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Evaporation.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="💡">Interesting Facts / Importance</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Water purification uses several separation methods (like filtration and sedimentation) to make water safe for drinking!
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Farmers have used separation methods like winnowing for thousands of years.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Evaporation and condensation play hugely important roles in the Earth's natural water cycle.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 7: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What is meant by separation of substances?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Define filtration.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is evaporation?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is condensation?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Give one example of a process where we use handpicking.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Which method separates light husk from heavier grains?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 6 – SCIENCE – GETTING TO KNOW PLANTS
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'getting-to-know-plants' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🌿">Getting to Know Plants</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Plants are an important part of our environment. They provide us with <strong>food, oxygen, medicines, and shelter</strong>. Plants are living organisms that grow, reproduce, and respond to their surroundings.
+                            </p>
+                            <div style={{ background: '#F0FDF4', padding: '16px', borderRadius: '12px', border: '1px solid #BBF7D0', marginBottom: '20px' }}>
+                                <p style={{ fontSize: '15px', color: '#166534', margin: '0 0 10px', fontWeight: 700 }}>A typical plant has several main parts:</p>
+                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                                    {['🌱 Roots', '🎋 Stem', '🍃 Leaves', '🌺 Flowers', '🍎 Fruits & Seeds'].map(part => (
+                                        <span key={part} style={{ background: '#DCFCE7', color: '#166534', padding: '6px 14px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, border: '1px solid #BBF7D0' }}>
+                                            {part}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: Roots */}
+                        <Section>
+                            <SectionTitle emoji="🌱">The Roots</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 12px', lineHeight: 1.6 }}>
+                                Roots are the part of the plant that usually grow <strong>below the soil</strong>.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(250px, 1fr) minmax(280px, 1fr)', gap: '16px' }}>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
+                                    <h4 style={{ fontSize: '15px', color: '#0F172A', margin: '0 0 10px 0', fontWeight: 700 }}>Functions of Roots:</h4>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', fontSize: '14px', lineHeight: 1.8 }}>
+                                        <li>Anchor the plant firmly in the soil</li>
+                                        <li>Absorb water and minerals from the soil</li>
+                                        <li>Store food in some plants (like Carrot, Radish, Beetroot)</li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#FFFBEB', padding: '16px', borderRadius: '12px', border: '1px solid #FDE68A' }}>
+                                    <h4 style={{ fontSize: '15px', color: '#92400E', margin: '0 0 10px 0', fontWeight: 700 }}>Types of Roots:</h4>
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                                        <div style={{ background: '#FEF3C7', padding: '10px', borderRadius: '8px' }}>
+                                            <p style={{ margin: '0 0 4px', fontSize: '14px', color: '#92400E', fontWeight: 600 }}>1. Tap Root (e.g., Carrot)</p>
+                                            <p style={{ margin: 0, fontSize: '13px', color: '#B45309' }}>One main root growing deep with smaller side roots.</p>
+                                        </div>
+                                        <div style={{ background: '#FEF3C7', padding: '10px', borderRadius: '8px' }}>
+                                            <p style={{ margin: '0 0 4px', fontSize: '14px', color: '#92400E', fontWeight: 600 }}>2. Fibrous Root (e.g., Grass)</p>
+                                            <p style={{ margin: 0, fontSize: '13px', color: '#B45309' }}>Many thin roots of similar size spreading in the soil.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Stem */}
+                        <Section>
+                            <SectionTitle emoji="🎋">The Stem</SectionTitle>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
+                                <div style={{ flex: '1 1 300px' }}>
+                                    <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 12px', lineHeight: 1.6 }}>
+                                        The <strong>stem</strong> is the part of the plant that grows <strong>above the ground</strong> and supports the plant, holding it upright.
+                                    </p>
+                                    <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', border: '1px solid #BFDBFE', marginBottom: '12px' }}>
+                                        <h4 style={{ fontSize: '15px', color: '#1E40AF', margin: '0 0 8px 0', fontWeight: 700 }}>Functions:</h4>
+                                        <ul style={{ margin: 0, paddingLeft: 18, color: '#1E3A8A', fontSize: '14px', lineHeight: 1.8 }}>
+                                            <li>Supports leaves, flowers, and fruits</li>
+                                            <li>Transports water and nutrients from roots to other parts</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div style={{ flex: '1 1 250px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                                    <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                        <span style={{ fontSize: '24px' }}>🌿</span>
+                                        <div>
+                                            <p style={{ fontSize: '13px', color: '#64748B', margin: '0 0 2px' }}>Soft Stem (Herbs)</p>
+                                            <p style={{ fontSize: '14px', color: '#334155', margin: 0, fontWeight: 600 }}>Mint, Spinach</p>
+                                        </div>
+                                    </div>
+                                    <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                        <span style={{ fontSize: '24px' }}>🌳</span>
+                                        <div>
+                                            <p style={{ fontSize: '13px', color: '#64748B', margin: '0 0 2px' }}>Hard Stem (Trees)</p>
+                                            <p style={{ fontSize: '14px', color: '#334155', margin: 0, fontWeight: 600 }}>Mango, Neem</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Leaves & Photosynthesis */}
+                        <Section>
+                            <SectionTitle emoji="🍃">Leaves & Photosynthesis</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 16px', lineHeight: 1.6 }}>
+                                Leaves are usually <strong>green and flat</strong>. They are known as the food factory of the plant!
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
+                                <div style={{ background: '#F0FDF4', padding: '18px', borderRadius: '16px', border: '1px solid #BBF7D0' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#166534', margin: '0 0 12px 0', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                        <span style={{ fontSize: '20px' }}>☀️</span> Photosynthesis
+                                    </h4>
+                                    <p style={{ fontSize: '14px', color: '#14532D', margin: '0 0 10px', lineHeight: 1.6 }}>
+                                        Leaves make food using <strong>sunlight, water, and carbon dioxide</strong>. This incredible process is called photosynthesis.
+                                    </p>
+                                    <div style={{ background: '#DCFCE7', padding: '10px', borderRadius: '8px', border: '1px solid #86EFAC' }}>
+                                        <p style={{ fontSize: '13px', color: '#166534', margin: 0, fontWeight: 600 }}>
+                                            During this, plants produce OXYGEN, which is essential for humans and animals!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '18px', borderRadius: '16px', border: '1px solid #E2E8F0' }}>
+                                    <h4 style={{ fontSize: '15px', color: '#0F172A', margin: '0 0 10px 0', fontWeight: 700 }}>Parts of a Leaf:</h4>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', fontSize: '14px', lineHeight: 1.8 }}>
+                                        <li><strong>Petiole:</strong> The stalk that connects the leaf to the stem</li>
+                                        <li><strong>Lamina:</strong> The broad flat part of the leaf</li>
+                                        <li><strong>Veins:</strong> Small lines that carry water and food</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Flowers, Fruits, Seeds */}
+                        <Section>
+                            <SectionTitle emoji="🌺">Flowers, Fruits, and Seeds</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                                <div style={{ background: '#FFF1F2', padding: '16px', borderRadius: '12px', border: '1px solid #FECDD3' }}>
+                                    <div style={{ fontSize: '32px', marginBottom: '10px' }}>🌸</div>
+                                    <h4 style={{ fontSize: '15px', color: '#BE123C', margin: '0 0 6px', fontWeight: 700 }}>Flowers</h4>
+                                    <p style={{ fontSize: '13px', color: '#9F1239', margin: 0, lineHeight: 1.6 }}>
+                                        The <strong>reproductive parts</strong> of plants. They help in reproduction, attract insects for pollination, and eventually produce fruits and seeds. (Parts: Petals, Sepals, Stamens, Pistil)
+                                    </p>
+                                </div>
+                                <div style={{ background: '#FFF7ED', padding: '16px', borderRadius: '12px', border: '1px solid #FED7AA' }}>
+                                    <div style={{ fontSize: '32px', marginBottom: '10px' }}>🍎</div>
+                                    <h4 style={{ fontSize: '15px', color: '#9A3412', margin: '0 0 6px', fontWeight: 700 }}>Fruit</h4>
+                                    <p style={{ fontSize: '13px', color: '#7C2D12', margin: 0, lineHeight: 1.6 }}>
+                                        A fruit develops from a flower and <strong>protects the seeds</strong> inside it. (Examples: Apple, Mango, Tomato)
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F5F3FF', padding: '16px', borderRadius: '12px', border: '1px solid #DDD6FE' }}>
+                                    <div style={{ fontSize: '32px', marginBottom: '10px' }}>🌰</div>
+                                    <h4 style={{ fontSize: '15px', color: '#5B21B6', margin: '0 0 6px', fontWeight: 700 }}>Seeds</h4>
+                                    <p style={{ fontSize: '13px', color: '#4C1D95', margin: 0, lineHeight: 1.6 }}>
+                                        Seeds <strong>grow into new plants</strong> when placed in suitable conditions (soil, water, warmth).
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What are the main parts of a plant?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Roots, stem, leaves, flowers, fruits, and seeds.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is the function of roots?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Roots absorb water and minerals and anchor the plant in the soil.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. What process helps plants make food?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Photosynthesis.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="💡">Importance & Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Plants are essential for maintaining life on Earth and ecological balance.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Plants produce <strong>oxygen</strong> during photosynthesis, which we need to breathe!
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Some plants (like carrots and potatoes) surprisingly store food in their roots or stems.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 8: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Name the main parts of a plant.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. What is the function of the stem?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is photosynthesis?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Name two plants with tap roots.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name two plants with fibrous roots.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why are leaves important for plants?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 6 – SCIENCE – BODY MOVEMENTS
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'body-movements' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🏃">Why Do We Move?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Movement is an important feature of all living organisms. Humans and animals move to find food, escape danger, and perform daily activities. Our body can move because of the <strong>skeletal system, muscles, and joints</strong> working together.
+                            </p>
+                            <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', border: '1px solid #BFDBFE' }}>
+                                <p style={{ fontSize: '15px', color: '#1E40AF', margin: '0 0 10px', fontWeight: 700 }}>Importance of Movement:</p>
+                                <ul style={{ margin: 0, paddingLeft: 20, color: '#1E3A8A', fontSize: '14px', lineHeight: 1.8 }}>
+                                    <li>Helps organisms perform daily activities</li>
+                                    <li>Allows animals to search for food</li>
+                                    <li>Helps escape from predators</li>
+                                    <li>Supports overall survival and growth</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: Human Skeletal System & Muscles */}
+                        <Section>
+                            <SectionTitle emoji="🦴">Skeletal System & Muscles</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
+                                <div style={{ background: '#F8FAFC', padding: '18px', borderRadius: '16px', border: '1px solid #E2E8F0' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#0F172A', margin: '0 0 12px 0', fontWeight: 700 }}>The Skeletal System</h4>
+                                    <p style={{ fontSize: '14px', color: '#475569', margin: '0 0 10px', lineHeight: 1.6 }}>
+                                        The framework of bones that supports and shapes the body. An adult has about <strong>206 bones</strong>.
+                                    </p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', fontSize: '13px', lineHeight: 1.8 }}>
+                                        <li>Provides shape and support</li>
+                                        <li>Protects internal organs (Skull protects brain, Rib cage protects heart/lungs)</li>
+                                        <li>Produces blood cells in bone marrow</li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#FFF1F2', padding: '18px', borderRadius: '16px', border: '1px solid #FECDD3' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#BE123C', margin: '0 0 12px 0', fontWeight: 700 }}>Muscles</h4>
+                                    <p style={{ fontSize: '14px', color: '#9F1239', margin: '0 0 10px', lineHeight: 1.6 }}>
+                                        Bones alone cannot move the body. They work together with muscles!
+                                    </p>
+                                    <div style={{ background: '#FFE4E6', padding: '10px', borderRadius: '8px', border: '1px solid #FDA4AF' }}>
+                                        <p style={{ fontSize: '13px', color: '#881337', margin: 0, lineHeight: 1.5 }}>
+                                            Muscles are attached to bones and help them move by <strong>contracting (getting shorter/tighter) and relaxing</strong>. (e.g., Bending your arm)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Joints */}
+                        <Section>
+                            <SectionTitle emoji="🔗">Types of Joints</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 16px', lineHeight: 1.6 }}>
+                                A <strong>joint</strong> is the place where two or more bones meet. Joints allow different parts of our body to bend and move.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                                <div style={{ background: '#F0FDF4', padding: '16px', borderRadius: '12px', border: '1px solid #BBF7D0' }}>
+                                    <div style={{ fontSize: '28px', marginBottom: '8px' }}>🔄</div>
+                                    <h4 style={{ fontSize: '15px', color: '#166534', margin: '0 0 4px', fontWeight: 700 }}>Ball & Socket</h4>
+                                    <p style={{ fontSize: '13px', color: '#14532D', margin: 0, lineHeight: 1.5 }}>
+                                        Allows movement in all directions. <br/><strong>(Shoulder, Hip)</strong>
+                                    </p>
+                                </div>
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', border: '1px solid #BFDBFE' }}>
+                                    <div style={{ fontSize: '28px', marginBottom: '8px' }}>🚪</div>
+                                    <h4 style={{ fontSize: '15px', color: '#1E40AF', margin: '0 0 4px', fontWeight: 700 }}>Hinge Joint</h4>
+                                    <p style={{ fontSize: '13px', color: '#1E3A8A', margin: 0, lineHeight: 1.5 }}>
+                                        Allows movement in only one direction (like a door). <br/><strong>(Elbow, Knee)</strong>
+                                    </p>
+                                </div>
+                                <div style={{ background: '#FFFBEB', padding: '16px', borderRadius: '12px', border: '1px solid #FDE68A' }}>
+                                    <div style={{ fontSize: '28px', marginBottom: '8px' }}>🔁</div>
+                                    <h4 style={{ fontSize: '15px', color: '#92400E', margin: '0 0 4px', fontWeight: 700 }}>Pivot Joint</h4>
+                                    <p style={{ fontSize: '13px', color: '#78350F', margin: 0, lineHeight: 1.5 }}>
+                                        Allows rotational movement. <br/><strong>(Neck joint)</strong>
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
+                                    <div style={{ fontSize: '28px', marginBottom: '8px' }}>🔒</div>
+                                    <h4 style={{ fontSize: '15px', color: '#475569', margin: '0 0 4px', fontWeight: 700 }}>Fixed Joint</h4>
+                                    <p style={{ fontSize: '13px', color: '#334155', margin: 0, lineHeight: 1.5 }}>
+                                        Do not allow any movement. <br/><strong>(Bones in the skull)</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Animal Movements */}
+                        <Section>
+                            <SectionTitle emoji="🐾">Animal Movements</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 16px', lineHeight: 1.6 }}>
+                                Different animals move in unique ways depending on their body structure. Let's look at some examples:
+                            </p>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
+                                {['🚶 Walking (Humans)', '🦅 Flying (Birds)', '🐟 Swimming (Fish)', '🐍 Slithering (Snakes)', '🐸 Hopping (Frogs)'].map(move => (
+                                    <span key={move} style={{ background: '#F1F5F9', color: '#334155', padding: '8px 16px', borderRadius: '24px', fontSize: '14px', fontWeight: 600, border: '1px solid #CBD5E1' }}>
+                                        {move}
+                                    </span>
+                                ))}
+                            </div>
+                            
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '14px' }}>
+                                    <div style={{ fontSize: '32px' }}>🪱</div>
+                                    <div>
+                                        <h4 style={{ fontSize: '15px', color: '#0F172A', margin: '0 0 4px', fontWeight: 700 }}>Earthworms</h4>
+                                        <p style={{ fontSize: '14px', color: '#475569', margin: 0, lineHeight: 1.5 }}>
+                                            Move by contracting and expanding their body muscles. Tiny hair-like structures (bristles) help them grip the soil.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '14px' }}>
+                                    <div style={{ fontSize: '32px' }}>🐌</div>
+                                    <div>
+                                        <h4 style={{ fontSize: '15px', color: '#0F172A', margin: '0 0 4px', fontWeight: 700 }}>Snails</h4>
+                                        <p style={{ fontSize: '14px', color: '#475569', margin: 0, lineHeight: 1.5 }}>
+                                            Move slowly using a thick, <strong>muscular foot</strong> that slides along the surface.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '14px' }}>
+                                    <div style={{ fontSize: '32px' }}>🐟</div>
+                                    <div>
+                                        <h4 style={{ fontSize: '15px', color: '#0F172A', margin: '0 0 4px', fontWeight: 700 }}>Fish</h4>
+                                        <p style={{ fontSize: '14px', color: '#475569', margin: 0, lineHeight: 1.5 }}>
+                                            Swim using their <strong>fins and tail</strong>, which help propel them and steer through the water.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is the skeletal system?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: The skeletal system is the framework of bones that supports the body.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is a joint?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A joint is a place where two or more bones meet.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Name one animal that moves by slithering.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Snake.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="💡">Fascinating Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    The human skeleton contains exactly <strong>206 bones</strong> when fully adult, but babies are born with around 300!
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    The smallest bone in the human body is located deep inside your <strong>ear</strong>.
+                                </li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>
+                                    Different animals have completely different ways of moving perfectly adapted to their unique body structures.
+                                </li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 7: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What is the function of the skeletal system?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. What are joints?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Name two types of joints.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. How do fish move in water?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. How do snakes move?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Name two animals that can fly.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 6 – SCIENCE – THE LIVING ORGANISMS AND THEIR SURROUNDINGS
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'living-organisms-and-surroundings' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🌍">Living Organisms and Their Surroundings</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Living organisms exist everywhere around us. We see plants, animals, birds, insects, and microorganisms in different environments. The place where an organism lives is called its <strong>habitat</strong>. Living organisms have special features that help them survive in their surroundings. These features are called <strong>adaptations</strong>.
+                            </p>
+                            <div style={{ background: 'linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)', borderRadius: '16px', padding: '20px', marginTop: '16px' }}>
+                                <p style={{ fontSize: '15px', color: '#2E7D32', margin: 0, fontWeight: 600 }}>
+                                    🌿 In this lesson, you will learn about <strong>habitats</strong>, <strong>adaptations</strong>, and the <strong>characteristics of living things</strong>!
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: What is a Habitat? */}
+                        <Section>
+                            <SectionTitle emoji="🏠">What is a Habitat?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                A <strong>habitat</strong> is the natural home or environment where a plant or animal lives and grows. Each habitat provides the basic needs of living organisms such as <strong>food, water, air, and shelter</strong>.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '12px', marginTop: '16px' }}>
+                                {[
+                                    { name: 'Forest', emoji: '🌲' },
+                                    { name: 'Desert', emoji: '🏜️' },
+                                    { name: 'Ocean', emoji: '🌊' },
+                                    { name: 'Grassland', emoji: '🌾' },
+                                    { name: 'Mountain', emoji: '🏔️' }
+                                ].map((h, i) => (
+                                    <div key={i} style={{ background: '#F1F8E9', borderRadius: '14px', padding: '16px', textAlign: 'center', border: '2px solid #AED581' }}>
+                                        <span style={{ fontSize: '28px' }}>{h.emoji}</span>
+                                        <p style={{ margin: '8px 0 0', fontSize: '14px', fontWeight: 600, color: '#33691E' }}>{h.name}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Types of Habitats */}
+                        <Section>
+                            <SectionTitle emoji="🗺️">Types of Habitats</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+                                <div style={{ background: 'linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #FFB74D' }}>
+                                    <h4 style={{ fontSize: '18px', color: '#E65100', fontWeight: 700, margin: '0 0 12px' }}>🌍 Terrestrial Habitat</h4>
+                                    <p style={{ fontSize: '15px', color: '#BF360C', lineHeight: 1.8, margin: '0 0 12px' }}>
+                                        A <strong>terrestrial habitat</strong> is a land-based habitat.
+                                    </p>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                                        {['Forest', 'Desert', 'Grassland', 'Mountain'].map((item, i) => (
+                                            <span key={i} style={{ background: '#FF8A65', color: '#fff', borderRadius: '20px', padding: '4px 14px', fontSize: '13px', fontWeight: 600 }}>{item}</span>
+                                        ))}
+                                    </div>
+                                    <p style={{ fontSize: '14px', color: '#BF360C', margin: '12px 0 0', lineHeight: 1.8 }}>
+                                        🦁 Animals like lions, elephants, camels, and tigers live on land.
+                                    </p>
+                                </div>
+                                <div style={{ background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)', borderRadius: '16px', padding: '24px', border: '2px solid #64B5F6' }}>
+                                    <h4 style={{ fontSize: '18px', color: '#1565C0', fontWeight: 700, margin: '0 0 12px' }}>🌊 Aquatic Habitat</h4>
+                                    <p style={{ fontSize: '15px', color: '#0D47A1', lineHeight: 1.8, margin: '0 0 12px' }}>
+                                        An <strong>aquatic habitat</strong> is a water-based habitat.
+                                    </p>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                                        {['Rivers', 'Lakes', 'Oceans', 'Ponds'].map((item, i) => (
+                                            <span key={i} style={{ background: '#42A5F5', color: '#fff', borderRadius: '20px', padding: '4px 14px', fontSize: '13px', fontWeight: 600 }}>{item}</span>
+                                        ))}
+                                    </div>
+                                    <p style={{ fontSize: '14px', color: '#0D47A1', margin: '12px 0 0', lineHeight: 1.8 }}>
+                                        🐟 Animals like fish, whales, and dolphins live in water.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Adaptation */}
+                        <Section>
+                            <SectionTitle emoji="🦎">Adaptation</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                <strong>Adaptation</strong> refers to special features or behaviors that help organisms survive in their habitats. Adaptations allow organisms to find food, protect themselves, and reproduce successfully.
+                            </p>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                {[
+                                    { emoji: '🐪', text: 'Camels have humps that help them survive in deserts.' },
+                                    { emoji: '🐟', text: 'Fish have gills that help them breathe underwater.' },
+                                    { emoji: '🐻‍❄️', text: 'Polar bears have thick fur to survive in cold regions.' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#F3E5F5', borderRadius: '14px', padding: '14px 18px', border: '1px solid #CE93D8' }}>
+                                        <span style={{ fontSize: '28px' }}>{item.emoji}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#4A148C', lineHeight: 1.6 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Characteristics of Living Things */}
+                        <Section>
+                            <SectionTitle emoji="🧬">Characteristics of Living Things</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                All living organisms share certain common characteristics:
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '14px' }}>
+                                {[
+                                    { title: 'Movement', emoji: '🏃', desc: 'Living things can move on their own. Animals walk, birds fly.', color: '#E3F2FD', border: '#64B5F6', text: '#1565C0' },
+                                    { title: 'Growth', emoji: '🌱', desc: 'Living things grow and develop over time. A small plant grows into a large tree.', color: '#E8F5E9', border: '#81C784', text: '#2E7D32' },
+                                    { title: 'Respiration', emoji: '💨', desc: 'Living organisms breathe to obtain energy. Humans breathe using lungs.', color: '#FFF3E0', border: '#FFB74D', text: '#E65100' },
+                                    { title: 'Response to Stimuli', emoji: '🌻', desc: 'Living organisms respond to changes. Plants bend toward sunlight.', color: '#FFFDE7', border: '#FFF176', text: '#F57F17' },
+                                    { title: 'Reproduction', emoji: '🐣', desc: 'Living organisms produce new individuals of their own kind.', color: '#FCE4EC', border: '#F48FB1', text: '#C62828' },
+                                    { title: 'Excretion', emoji: '♻️', desc: 'Living organisms remove waste substances from their bodies.', color: '#F3E5F5', border: '#CE93D8', text: '#6A1B9A' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ background: item.color, borderRadius: '14px', padding: '18px', border: `2px solid ${item.border}` }}>
+                                        <h4 style={{ fontSize: '16px', color: item.text, fontWeight: 700, margin: '0 0 8px' }}>{item.emoji} {item.title}</h4>
+                                        <p style={{ fontSize: '14px', color: item.text, margin: 0, lineHeight: 1.7 }}>{item.desc}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Importance of Habitats */}
+                        <Section>
+                            <SectionTitle emoji="🛡️">Importance of Habitats</SectionTitle>
+                            <div style={{ background: 'linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)', borderRadius: '16px', padding: '24px' }}>
+                                <ul style={{ fontSize: '16px', color: '#1B5E20', lineHeight: 2, margin: 0, paddingLeft: '20px' }}>
+                                    <li>Provide shelter and protection</li>
+                                    <li>Supply food and water</li>
+                                    <li>Allow organisms to survive and reproduce</li>
+                                </ul>
+                                <div style={{ background: '#FFEBEE', borderRadius: '12px', padding: '14px', marginTop: '16px' }}>
+                                    <p style={{ fontSize: '14px', color: '#C62828', margin: 0, fontWeight: 600 }}>
+                                        ⚠️ If habitats are destroyed, living organisms may struggle to survive.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="💡">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                                {[
+                                    { q: 'What is a habitat?', a: 'A habitat is the natural home of an organism.' },
+                                    { q: 'Name two aquatic animals.', a: 'Fish and whales.' },
+                                    { q: 'What is adaptation?', a: 'Adaptation is a special feature that helps an organism survive in its environment.' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ background: '#F3E5F5', borderRadius: '14px', padding: '18px', border: '1px solid #CE93D8' }}>
+                                        <p style={{ fontSize: '15px', color: '#4A148C', fontWeight: 600, margin: '0 0 6px' }}>Q{i + 1}: {item.q}</p>
+                                        <p style={{ fontSize: '14px', color: '#7B1FA2', margin: 0 }}>✅ {item.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                {[
+                                    'Some animals migrate to different places to find food and suitable weather.',
+                                    'Plants adapt to different climates such as deserts and rainforests.',
+                                    'Habitats play an important role in maintaining ecological balance.'
+                                ].map((fact, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFDE7', borderRadius: '14px', padding: '14px 18px', border: '1px solid #FFF176' }}>
+                                        <span style={{ fontSize: '22px' }}>⭐</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#F57F17', lineHeight: 1.6 }}>{fact}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 9: Practice Exercises */}
+                        <Section>
+                            <SectionTitle emoji="📝">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define habitat.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name two terrestrial habitats.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Give two examples of aquatic animals.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is adaptation?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name two characteristics of living things.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why are habitats important?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 6 – SCIENCE – MOTION AND MEASUREMENT OF DISTANCES
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'motion-and-measurement' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🚗">What is Motion?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Movement is a common part of our daily life. When an object changes its position with respect to time, it is said to be in <strong>motion</strong>. To describe motion, we often measure the <strong>distance</strong> traveled by objects.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '12px', marginTop: '16px' }}>
+                                {[
+                                    { name: 'Car on Road', emoji: '🚗' },
+                                    { name: 'Bird in Sky', emoji: '🐦' },
+                                    { name: 'Person Walking', emoji: '🚶' },
+                                    { name: 'Rotating Fan', emoji: '🌀' }
+                                ].map((ex, i) => (
+                                    <div key={i} style={{ background: '#E3F2FD', borderRadius: '14px', padding: '16px', textAlign: 'center', border: '2px solid #64B5F6' }}>
+                                        <span style={{ fontSize: '28px' }}>{ex.emoji}</span>
+                                        <p style={{ margin: '8px 0 0', fontSize: '13px', fontWeight: 600, color: '#1565C0' }}>{ex.name}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 2: Measuring Distance */}
+                        <Section>
+                            <SectionTitle emoji="📏">Measuring Distance</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Distance is the length between two points. To measure distance accurately, we use measuring tools:
+                            </p>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '12px' }}>
+                                {[
+                                    { name: 'Ruler', emoji: '📏' },
+                                    { name: 'Measuring Tape', emoji: '🧵' },
+                                    { name: 'Meter Scale', emoji: '📐' },
+                                    { name: 'Odometer', emoji: '🔢' }
+                                ].map((tool, i) => (
+                                    <div key={i} style={{ background: '#FFF3E0', borderRadius: '14px', padding: '14px 20px', border: '2px solid #FFB74D', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                        <span style={{ fontSize: '24px' }}>{tool.emoji}</span>
+                                        <span style={{ fontSize: '14px', fontWeight: 600, color: '#E65100' }}>{tool.name}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Standard Units of Measurement */}
+                        <Section>
+                            <SectionTitle emoji="📐">Standard Units of Measurement</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Standard units help ensure measurements are consistent everywhere. The standard unit of length in the <strong>International System of Units (SI)</strong> is the <strong>meter (m)</strong>.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '12px', marginTop: '16px' }}>
+                                {[
+                                    { unit: 'Millimeter (mm)', color: '#E8F5E9', border: '#81C784', text: '#2E7D32' },
+                                    { unit: 'Centimeter (cm)', color: '#E3F2FD', border: '#64B5F6', text: '#1565C0' },
+                                    { unit: 'Meter (m)', color: '#FFF3E0', border: '#FFB74D', text: '#E65100' },
+                                    { unit: 'Kilometer (km)', color: '#F3E5F5', border: '#CE93D8', text: '#6A1B9A' }
+                                ].map((u, i) => (
+                                    <div key={i} style={{ background: u.color, borderRadius: '14px', padding: '16px', textAlign: 'center', border: `2px solid ${u.border}` }}>
+                                        <p style={{ margin: 0, fontSize: '15px', fontWeight: 700, color: u.text }}>{u.unit}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            <div style={{ background: '#E8EAF6', borderRadius: '14px', padding: '18px', marginTop: '16px', border: '2px solid #9FA8DA' }}>
+                                <p style={{ fontSize: '15px', color: '#283593', margin: '0 0 6px', fontWeight: 600 }}>📊 Conversions:</p>
+                                <p style={{ fontSize: '14px', color: '#3949AB', margin: 0, lineHeight: 1.8 }}>1 meter = 100 centimeters<br/>1 kilometer = 1000 meters</p>
+                            </div>
+                            <div style={{ background: '#FFFDE7', borderRadius: '14px', padding: '18px', marginTop: '12px', border: '2px solid #FFF176' }}>
+                                <p style={{ fontSize: '15px', color: '#F57F17', margin: '0 0 6px', fontWeight: 600 }}>📝 Examples of Measurements:</p>
+                                <p style={{ fontSize: '14px', color: '#F9A825', margin: 0, lineHeight: 1.8 }}>Length of a pencil → centimeters<br/>Height of a door → meters<br/>Distance between cities → kilometers</p>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Importance of Standard Units */}
+                        <Section>
+                            <SectionTitle emoji="✅">Importance of Standard Units</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Before standard units were used, people measured length using body parts like <strong>handspan, footstep, or cubit</strong>. However, these measurements were not accurate because they varied from person to person.
+                            </p>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                                {['Accuracy', 'Consistency', 'Universal understanding'].map((benefit, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', background: '#E8F5E9', borderRadius: '12px', padding: '12px 16px', border: '1px solid #A5D6A7' }}>
+                                        <span style={{ fontSize: '20px' }}>✅</span>
+                                        <span style={{ fontSize: '15px', color: '#2E7D32', fontWeight: 600 }}>{benefit}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Types of Motion */}
+                        <Section>
+                            <SectionTitle emoji="🔄">Types of Motion</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Objects can move in different ways. The type of motion depends on how the object changes position.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { title: 'Rectilinear Motion', emoji: '➡️', desc: 'Object moves in a straight line.', example: 'A train moving on a straight track.', color: '#E3F2FD', border: '#64B5F6', text: '#1565C0' },
+                                    { title: 'Circular Motion', emoji: '🔄', desc: 'Object moves along a circular path.', example: 'The hands of a clock.', color: '#FFF3E0', border: '#FFB74D', text: '#E65100' },
+                                    { title: 'Periodic Motion', emoji: '🕰️', desc: 'Motion repeats after a fixed interval.', example: 'A swinging pendulum.', color: '#F3E5F5', border: '#CE93D8', text: '#6A1B9A' },
+                                    { title: 'Rotational Motion', emoji: '🌀', desc: 'Object rotates around a fixed axis.', example: 'A spinning top or rotating fan.', color: '#E8F5E9', border: '#81C784', text: '#2E7D32' }
+                                ].map((motion, i) => (
+                                    <div key={i} style={{ background: motion.color, borderRadius: '16px', padding: '20px', border: `2px solid ${motion.border}` }}>
+                                        <h4 style={{ fontSize: '17px', color: motion.text, fontWeight: 700, margin: '0 0 8px' }}>{motion.emoji} {motion.title}</h4>
+                                        <p style={{ fontSize: '14px', color: motion.text, margin: '0 0 8px', lineHeight: 1.7 }}>{motion.desc}</p>
+                                        <div style={{ background: 'rgba(255,255,255,0.7)', borderRadius: '10px', padding: '10px 14px' }}>
+                                            <p style={{ fontSize: '13px', color: motion.text, margin: 0, fontStyle: 'italic' }}>Example: {motion.example}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Importance of Motion and Measurement */}
+                        <Section>
+                            <SectionTitle emoji="🎯">Importance of Motion and Measurement</SectionTitle>
+                            <div style={{ background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)', borderRadius: '16px', padding: '24px' }}>
+                                <ul style={{ fontSize: '16px', color: '#0D47A1', lineHeight: 2.2, margin: 0, paddingLeft: '20px' }}>
+                                    <li>Helps describe how objects move</li>
+                                    <li>Used in transportation and engineering</li>
+                                    <li>Important in sports and daily activities</li>
+                                    <li>Helps scientists study movement and speed</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="💡">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                                {[
+                                    { q: 'What is motion?', a: 'Motion is the change in position of an object over time.' },
+                                    { q: 'What is the standard unit of length?', a: 'The meter.' },
+                                    { q: 'Name one example of circular motion.', a: 'The hands of a clock.' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ background: '#E8EAF6', borderRadius: '14px', padding: '18px', border: '1px solid #9FA8DA' }}>
+                                        <p style={{ fontSize: '15px', color: '#283593', fontWeight: 600, margin: '0 0 6px' }}>Q{i + 1}: {item.q}</p>
+                                        <p style={{ fontSize: '14px', color: '#3949AB', margin: 0 }}>✅ {item.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                {[
+                                    'The meter was originally defined based on the Earth\'s dimensions.',
+                                    'Motion is an important concept in physics and engineering.',
+                                    'Different measuring tools are used depending on the length being measured.'
+                                ].map((fact, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFDE7', borderRadius: '14px', padding: '14px 18px', border: '1px solid #FFF176' }}>
+                                        <span style={{ fontSize: '22px' }}>⭐</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#F57F17', lineHeight: 1.6 }}>{fact}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 9: Practice Exercises */}
+                        <Section>
+                            <SectionTitle emoji="📝">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define motion.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name the SI unit of length.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Write two units smaller than a meter.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Give one example of circular motion.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What type of motion does a pendulum show?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why are standard units important?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 6 – SCIENCE – AIR AROUND US
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'air-around-us' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🌬️">What is Air?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 16px' }}>
+                                Air is present everywhere around us, even though we cannot see it. All living organisms need air to survive. Plants, animals, and humans depend on air for breathing and other life processes. Air is an <strong>invisible mixture of gases</strong> present in the Earth's atmosphere.
+                            </p>
+                            <div style={{ background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)', borderRadius: '16px', padding: '20px', marginTop: '16px' }}>
+                                <p style={{ fontSize: '15px', color: '#1565C0', margin: 0, fontWeight: 600 }}>
+                                    🎈 Although we cannot see it, we can feel air when the wind blows, a fan is switched on, a balloon inflates, or a kite flies!
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: Composition of Air */}
+                        <Section style={{ background: '#F8FAFC' }}>
+                            <SectionTitle emoji="📊">Composition of Air</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Air is made up of several gases. Main components of air include:
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                                <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#0F172A', fontSize: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>💨 Nitrogen</h4>
+                                    <p style={{ margin: 0, color: '#64748B', fontSize: '14px', lineHeight: 1.6 }}>About 78%. It is the largest component. It helps plants grow and plays an important role in the nitrogen cycle.</p>
+                                </div>
+                                <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#0F172A', fontSize: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>🫁 Oxygen</h4>
+                                    <p style={{ margin: 0, color: '#64748B', fontSize: '14px', lineHeight: 1.6 }}>About 21%. It is essential for <strong>respiration</strong>. Humans and animals breathe in oxygen to produce energy.</p>
+                                </div>
+                                <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#0F172A', fontSize: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>🌱 Carbon Dioxide</h4>
+                                    <p style={{ margin: 0, color: '#64748B', fontSize: '14px', lineHeight: 1.6 }}>Used by plants during <strong>photosynthesis</strong> to prepare food.</p>
+                                </div>
+                                <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#0F172A', fontSize: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>💧 Water Vapor</h4>
+                                    <p style={{ margin: 0, color: '#64748B', fontSize: '14px', lineHeight: 1.6 }}>Helps form clouds and rain. There's also some Argon and tiny dust particles.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Presence and Importance of Air */}
+                        <Section>
+                            <SectionTitle emoji="🌍">Presence and Importance</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Are empty spaces really empty? Even when we think a container is empty, it usually contains air! Air is present in:
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                                <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#0F172A', fontSize: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>🌱 Soil</h4>
+                                    <p style={{ margin: 0, color: '#64748B', fontSize: '14px', lineHeight: 1.6 }}>Air is present in soil spaces.</p>
+                                </div>
+                                <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#0F172A', fontSize: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>🐟 Water</h4>
+                                    <p style={{ margin: 0, color: '#64748B', fontSize: '14px', lineHeight: 1.6 }}>Air is dissolved in water and helps aquatic animals breathe.</p>
+                                </div>
+                                <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#0F172A', fontSize: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>🎈 Empty Objects</h4>
+                                    <p style={{ margin: 0, color: '#64748B', fontSize: '14px', lineHeight: 1.6 }}>Air fills empty spaces in balloons and balls.</p>
+                                </div>
+                            </div>
+                            <div style={{ marginTop: '24px' }}>
+                                <p style={{ margin: '0 0 16px', fontSize: '16px', fontWeight: 600, color: '#0F172A' }}>Why is it important?</p>
+                                <ul style={{ margin: 0, padding: '0 0 0 24px', color: '#334155', fontSize: '16px', lineHeight: 1.8 }}>
+                                    <li>Essential for breathing and survival of living organisms.</li>
+                                    <li>Helps plants make food during photosynthesis.</li>
+                                    <li>Supports burning and combustion.</li>
+                                    <li>Helps in weather changes and the water cycle.</li>
+                                </ul>
+                            </div>
+                            <div style={{ background: 'linear-gradient(135deg, #FFEBEE 0%, #EF9A9A 100%)', borderRadius: '16px', padding: '20px', marginTop: '16px' }}>
+                                <p style={{ fontSize: '15px', color: '#C62828', margin: 0, fontWeight: 600 }}>
+                                    Without air, life on Earth would not be possible!
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Air Pollution */}
+                        <Section style={{ background: '#F8FAFC' }}>
+                            <SectionTitle emoji="🏭">Air Pollution</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Air pollution occurs when harmful substances such as smoke, dust, and gases mix with the air, which can harm plants, animals, and humans. It is caused by:
+                            </p>
+                            <ul style={{ margin: '0 0 20px', padding: '0 0 0 24px', color: '#334155', fontSize: '16px', lineHeight: 1.8 }}>
+                                <li>Vehicle smoke</li>
+                                <li>Factory emissions</li>
+                                <li>Burning garbage and fuels</li>
+                            </ul>
+                            <div style={{ background: 'linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)', borderRadius: '16px', padding: '20px', marginTop: '16px' }}>
+                                <p style={{ fontSize: '15px', color: '#2E7D32', margin: 0, fontWeight: 600 }}>
+                                    🌳 Let's Help! Plant more trees, use public transport or bicycles, avoid burning waste, and use clean energy sources!
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="💡">Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                                {[
+                                    { q: 'What is air made of?', a: 'Air is a mixture of gases such as nitrogen, oxygen, carbon dioxide, and others.' },
+                                    { q: 'Which gas is essential for breathing?', a: 'Oxygen.' },
+                                    { q: 'Why is carbon dioxide important for plants?', a: 'Plants use carbon dioxide for photosynthesis.' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ background: '#F3E5F5', borderRadius: '14px', padding: '18px', border: '1px solid #CE93D8' }}>
+                                        <p style={{ fontSize: '15px', color: '#4A148C', fontWeight: 600, margin: '0 0 6px' }}>Q{i + 1}: {item.q}</p>
+                                        <p style={{ fontSize: '14px', color: '#7B1FA2', margin: 0 }}>✅ {item.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                {[
+                                    'Air surrounds the Earth in a layer called the atmosphere.',
+                                    'Moving air is called wind.',
+                                    'Air pressure helps airplanes fly and birds glide.'
+                                ].map((fact, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFDE7', borderRadius: '14px', padding: '14px 18px', border: '1px solid #FFF176' }}>
+                                        <span style={{ fontSize: '22px' }}>⭐</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#F57F17', lineHeight: 1.6 }}>{fact}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Practice Exercises */}
+                        <Section>
+                            <SectionTitle emoji="📝">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What is air?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name the two main gases present in air.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Why is oxygen important?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is air pollution?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Give two examples showing the presence of air.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. How can we reduce air pollution?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 6 – SCIENCE – LIGHT, SHADOWS AND REFLECTIONS
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'light-shadows-and-reflections' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="🔦">What is Light?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Light is a form of energy that helps us see objects around us. Without light, it would be difficult to see anything. When light falls on objects, it can create <strong>shadows</strong> or bounce back from surfaces, which is called <strong>reflection</strong>.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: Sources of Light */}
+                        <Section style={{ background: '#FFFDE7' }}>
+                            <SectionTitle emoji="☀️">Sources of Light</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Objects that give off light are called <strong>sources of light</strong>. They help illuminate objects so that we can see them.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                                <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #FFF59D', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#F57F17', fontSize: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>🌟 Natural Sources</h4>
+                                    <ul style={{ margin: 0, paddingLeft: '20px', color: '#64748B', fontSize: '14px', lineHeight: 1.6 }}>
+                                        <li>Sun (Main source on Earth)</li>
+                                        <li>Stars</li>
+                                        <li>Fire</li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #FFF59D', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#F57F17', fontSize: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>💡 Artificial Sources</h4>
+                                    <ul style={{ margin: 0, paddingLeft: '20px', color: '#64748B', fontSize: '14px', lineHeight: 1.6 }}>
+                                        <li>Electric bulbs</li>
+                                        <li>Candles</li>
+                                        <li>Flashlights</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: How Light Travels & Shadows */}
+                        <Section>
+                            <SectionTitle emoji="📏">How Light Travels & Shadows</SectionTitle>
+                            <div style={{ background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)', borderRadius: '16px', padding: '20px', marginBottom: '20px' }}>
+                                <p style={{ fontSize: '15px', color: '#1565C0', margin: 0, fontWeight: 600 }}>
+                                    Light travels in strict straight lines! This property is called <strong>rectilinear propagation of light</strong>.
+                                </p>
+                            </div>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '16px' }}>
+                                Because light travels in straight lines, a <strong>shadow</strong> (a dark shape) is formed when an object blocks the light.
+                            </p>
+                            <p style={{ margin: '0 0 16px', fontSize: '16px', fontWeight: 600, color: '#0F172A' }}>Conditions needed for a shadow:</p>
+                            <ul style={{ margin: '0 0 24px', padding: '0 0 0 24px', color: '#334155', fontSize: '16px', lineHeight: 1.8 }}>
+                                <li>A source of light</li>
+                                <li>An opaque object blocking the light</li>
+                                <li>A screen or surface to form the shadow</li>
+                            </ul>
+                            
+                            <p style={{ margin: '0 0 16px', fontSize: '16px', fontWeight: 600, color: '#0F172A' }}>Types of Materials:</p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px' }}>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '14px', border: '1px solid #E2E8F0' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#0F172A', fontSize: '15px' }}>🪟 Transparent</h4>
+                                    <p style={{ margin: 0, color: '#64748B', fontSize: '14px' }}>Allow light to pass completely (e.g., glass, clear water).</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '14px', border: '1px solid #E2E8F0' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#0F172A', fontSize: '15px' }}>🌫️ Translucent</h4>
+                                    <p style={{ margin: 0, color: '#64748B', fontSize: '14px' }}>Allow some light to pass (e.g., butter paper).</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '14px', border: '1px solid #E2E8F0' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#0F172A', fontSize: '15px' }}>🧱 Opaque</h4>
+                                    <p style={{ margin: 0, color: '#64748B', fontSize: '14px' }}>Do not allow light to pass (e.g., wood, metal). They form shadows!</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Reflection of Light */}
+                        <Section style={{ background: '#FFF3E0' }}>
+                            <SectionTitle emoji="🪞">Reflection of Light</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                When light strikes a surface and <strong>bounces back</strong>, it is called <strong>reflection</strong>. Mirrors reflect light and help us see our images!
+                            </p>
+                            <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #FFE0B2', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}>
+                                <h4 style={{ margin: '0 0 12px', color: '#E65100', fontSize: '16px' }}>Characteristics of Plane Mirrors (Flat mirrors):</h4>
+                                <ul style={{ margin: 0, padding: '0 0 0 24px', color: '#334155', fontSize: '16px', lineHeight: 1.8 }}>
+                                    <li>Image is upright.</li>
+                                    <li>Image is the exact same size as the object.</li>
+                                    <li>Image appears reversed from left to right.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="💡">Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                                {[
+                                    { q: 'What is light?', a: 'Light is a form of energy that helps us see objects.' },
+                                    { q: 'What is a shadow?', a: 'A shadow is a dark area formed when an object blocks light.' },
+                                    { q: 'What is reflection?', a: 'Reflection is the bouncing back of light from a surface.' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ background: '#F3E5F5', borderRadius: '14px', padding: '18px', border: '1px solid #CE93D8' }}>
+                                        <p style={{ fontSize: '15px', color: '#4A148C', fontWeight: 600, margin: '0 0 6px' }}>Q{i + 1}: {item.q}</p>
+                                        <p style={{ fontSize: '14px', color: '#7B1FA2', margin: 0 }}>✅ {item.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                {[
+                                    'The Sun is the primary source of natural light on Earth.',
+                                    'Light travels extremely fast at about 300,000 km per second.',
+                                    'Mirrors are used in many devices such as telescopes and periscopes.',
+                                    'Light is essential for vision and supports plant growth through photosynthesis.'
+                                ].map((fact, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#E0F2F1', borderRadius: '14px', padding: '14px 18px', border: '1px solid #B2DFDB' }}>
+                                        <span style={{ fontSize: '22px' }}>⭐</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#00695C', lineHeight: 1.6 }}>{fact}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Practice Exercises */}
+                        <Section>
+                            <SectionTitle emoji="📝">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Name two natural sources of light.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. What does rectilinear propagation of light mean?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is needed to form a shadow?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Define reflection.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What type of mirror is commonly used at home?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Name one transparent and one opaque material.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 6 – SCIENCE – ELECTRICITY AND CIRCUITS
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'electricity-and-circuits' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="⚡">What is Electricity?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Electricity is an important form of energy used in our daily life. It powers many devices such as lights, fans, televisions, and computers. It allows electrical devices to work. Electricity can come from power plants or small sources such as batteries and electric cells.
+                            </p>
+                            <div style={{ background: '#F8FAFC', borderRadius: '16px', padding: '20px', border: '1px solid #E2E8F0' }}>
+                                <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: 600, color: '#0F172A' }}>Examples of devices that use electricity:</p>
+                                <ul style={{ margin: 0, paddingLeft: '24px', color: '#64748B', fontSize: '16px', lineHeight: 1.8 }}>
+                                    <li>Electric bulbs</li>
+                                    <li>Fans</li>
+                                    <li>Televisions</li>
+                                    <li>Computers</li>
+                                    <li>Mobile chargers</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: Electric Cell and Bulb */}
+                        <Section style={{ background: '#FFFDF0' }}>
+                            <SectionTitle emoji="🔋">Electric Cell & Bulb</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
+                                <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #FFF59D', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}>
+                                    <h4 style={{ margin: '0 0 12px', color: '#F57F17', fontSize: '18px', display: 'flex', alignItems: 'center', gap: '8px' }}>🔋 Electric Cell</h4>
+                                    <p style={{ margin: '0 0 12px', color: '#475569', fontSize: '15px', lineHeight: 1.6 }}>
+                                        A device that produces electricity using chemical energy. It has two terminals:
+                                    </p>
+                                    <ul style={{ margin: '0 0 16px', paddingLeft: '20px', color: '#64748B', fontSize: '15px' }}>
+                                        <li><strong>Positive (+) terminal</strong></li>
+                                        <li><strong>Negative (−) terminal</strong></li>
+                                    </ul>
+                                    <p style={{ margin: 0, color: '#475569', fontSize: '14px', fontStyle: 'italic' }}>
+                                        Commonly used in flashlights, remotes, and wall clocks.
+                                    </p>
+                                </div>
+
+                                <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #FFF59D', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}>
+                                    <h4 style={{ margin: '0 0 12px', color: '#F57F17', fontSize: '18px', display: 'flex', alignItems: 'center', gap: '8px' }}>💡 Electric Bulb</h4>
+                                    <p style={{ margin: '0 0 12px', color: '#475569', fontSize: '15px', lineHeight: 1.6 }}>
+                                        Produces light when electric current passes through it. Parts include:
+                                    </p>
+                                    <ul style={{ margin: '0 0 16px', paddingLeft: '20px', color: '#64748B', fontSize: '15px' }}>
+                                        <li>Glass bulb</li>
+                                        <li><strong>Filament</strong> (thin wire inside that heats up)</li>
+                                        <li>Metal base</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Electric Circuit & Switch */}
+                        <Section>
+                            <SectionTitle emoji="🔄">Electric Circuit & Switch</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                An <strong>electric circuit</strong> is a closed path through which electric current flows.
+                            </p>
+                            
+                            <div style={{ background: '#E3F2FD', padding: '20px', borderRadius: '16px', marginBottom: '24px' }}>
+                                <h4 style={{ margin: '0 0 12px', color: '#1565C0', fontSize: '16px' }}>Main parts of a simple electric circuit:</h4>
+                                <ol style={{ margin: 0, paddingLeft: '24px', color: '#1E88E5', fontSize: '16px', fontWeight: 500, lineHeight: 1.8 }}>
+                                    <li>Electric cell</li>
+                                    <li>Connecting wires</li>
+                                    <li>Electric bulb</li>
+                                    <li>Switch</li>
+                                </ol>
+                            </div>
+
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
+                                <div style={{ background: '#E8F5E9', padding: '20px', borderRadius: '16px', border: '1px solid #C8E6C9' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#2E7D32', fontSize: '16px' }}>✅ Closed Circuit</h4>
+                                    <p style={{ margin: 0, color: '#334155', fontSize: '15px', lineHeight: 1.6 }}>
+                                        Allows electricity to flow because the path is complete. (e.g., Switch is ON, bulb glows).
+                                    </p>
+                                </div>
+                                <div style={{ background: '#FFEBEE', padding: '20px', borderRadius: '16px', border: '1px solid #FFCDD2' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#B71C1C', fontSize: '16px' }}>❌ Open Circuit</h4>
+                                    <p style={{ margin: 0, color: '#334155', fontSize: '15px', lineHeight: 1.6 }}>
+                                        Does not allow electricity to flow because the path is broken. (e.g., Switch is OFF, bulb does not glow).
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Conductors and Insulators */}
+                        <Section style={{ background: '#ECEFF1' }}>
+                            <SectionTitle emoji="🔌">Conductors & Insulators</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px' }}>
+                                <div style={{ background: '#FFFFFF', padding: '24px', borderRadius: '20px', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)' }}>
+                                    <h4 style={{ margin: '0 0 16px', color: '#1E293B', fontSize: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                        <span style={{ fontSize: '24px' }}>✅</span> Conductors
+                                    </h4>
+                                    <p style={{ color: '#475569', fontSize: '16px', lineHeight: 1.6, marginBottom: '16px' }}>
+                                        Materials that <strong>allow</strong> electricity to pass through them.
+                                    </p>
+                                    <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                                        <span style={{ background: '#E2E8F0', padding: '6px 12px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, color: '#334155' }}>Copper</span>
+                                        <span style={{ background: '#E2E8F0', padding: '6px 12px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, color: '#334155' }}>Aluminum</span>
+                                        <span style={{ background: '#E2E8F0', padding: '6px 12px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, color: '#334155' }}>Iron</span>
+                                    </div>
+                                </div>
+
+                                <div style={{ background: '#FFFFFF', padding: '24px', borderRadius: '20px', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)' }}>
+                                    <h4 style={{ margin: '0 0 16px', color: '#1E293B', fontSize: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                        <span style={{ fontSize: '24px' }}>🛑</span> Insulators
+                                    </h4>
+                                    <p style={{ color: '#475569', fontSize: '16px', lineHeight: 1.6, marginBottom: '16px' }}>
+                                        Materials that <strong>do not allow</strong> electricity to pass through them.
+                                    </p>
+                                    <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                                        <span style={{ background: '#FFEBEE', padding: '6px 12px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, color: '#D32F2F' }}>Plastic</span>
+                                        <span style={{ background: '#FFEBEE', padding: '6px 12px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, color: '#D32F2F' }}>Rubber</span>
+                                        <span style={{ background: '#FFEBEE', padding: '6px 12px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, color: '#D32F2F' }}>Wood</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Importance of Electricity */}
+                        <Section>
+                            <SectionTitle emoji="💡">Importance of Electricity</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { text: 'Provides light and power', icon: '💡' },
+                                    { text: 'Helps run machines and appliances', icon: '⚙️' },
+                                    { text: 'Supports communication and technology', icon: '📡' },
+                                    { text: 'Improves daily life and comfort', icon: '😌' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#F8FAFC', borderRadius: '14px', padding: '16px 20px', border: '1px solid #E2E8F0' }}>
+                                        <span style={{ fontSize: '24px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#334155', fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="🤔">Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                                {[
+                                    { q: 'What is an electric cell?', a: 'An electric cell is a device that produces electricity.' },
+                                    { q: 'What is an electric circuit?', a: 'An electric circuit is a closed path through which electric current flows.' },
+                                    { q: 'What happens when a circuit is open?', a: 'Electricity cannot flow, so the bulb does not glow.' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ background: '#F3E5F5', borderRadius: '14px', padding: '18px', border: '1px solid #CE93D8' }}>
+                                        <p style={{ fontSize: '15px', color: '#4A148C', fontWeight: 600, margin: '0 0 6px' }}>Q{i + 1}: {item.q}</p>
+                                        <p style={{ fontSize: '14px', color: '#7B1FA2', margin: 0 }}>✅ {item.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                {[
+                                    'Electricity flows very quickly through conductors.',
+                                    'Batteries are made by combining several electric cells.',
+                                    'Many modern devices depend on electricity to function.'
+                                ].map((fact, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFDE7', borderRadius: '14px', padding: '14px 18px', border: '1px solid #FFF176' }}>
+                                        <span style={{ fontSize: '22px' }}>⭐</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#F57F17', lineHeight: 1.6 }}>{fact}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Practice Exercises */}
+                        <Section>
+                            <SectionTitle emoji="📝">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define electricity.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. What are the parts of an electric cell?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is an electric circuit?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is the difference between open and closed circuits?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name two conductors of electricity.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Name two insulators of electricity.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 4 – SOCIAL STUDIES – PHYSICAL FEATURES OF EARTH
                 ─────────────────────────────────────────────────────────────────────────── */}
                 {classId === '4' && chapterId === 'physical-features-of-earth' && (
                     <>
@@ -34512,14 +36663,14 @@ const LessonPage = () => {
             </div>
         </div>
 
-            {/* Footer */ }
-    <div style={{
-        textAlign: 'center', padding: '24px',
-        borderTop: '1px solid #E2E8F0', color: '#94A3B8', fontSize: '13px',
-    }}>
-        © 2024 EduReach Education. All rights reserved.
-    </div>
-        </div >
+            {/* Footer */}
+            <div style={{
+                textAlign: 'center', padding: '24px',
+                borderTop: '1px solid #E2E8F0', color: '#94A3B8', fontSize: '13px',
+            }}>
+                © 2024 EduReach Education. All rights reserved.
+            </div>
+        </div>
     );
 };
 
