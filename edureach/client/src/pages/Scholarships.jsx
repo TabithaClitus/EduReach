@@ -36,36 +36,35 @@ const formatAmount = (raw) => {
 const DeadlineBadge = ({ deadline }) => {
   if (!deadline) return null;
   const days = Math.ceil((new Date(deadline) - new Date()) / 86400000);
-  if (days < 0)
+  if (days < 0) {
     return (
-      <span className="flex items-center gap-1 text-[11px] font-semibold text-gray-400">
-        <span className="w-1.5 h-1.5 rounded-full bg-gray-400 inline-block" />
+      <span style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 11, fontWeight: 700, color: '#94A3B8' }}>
+        <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#94A3B8', display: 'inline-block' }} />
         Closed
       </span>
     );
-  const color = days <= 30 ? "text-red-500" : "text-emerald-500";
+  }
+  const isUrgent = days <= 30;
   return (
-    <span className={`flex items-center gap-1 text-[11px] font-semibold ${color}`}>
-      <span className={`w-1.5 h-1.5 rounded-full ${days <= 30 ? "bg-red-500" : "bg-emerald-500"} inline-block`} />
+    <span style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 11, fontWeight: 700, color: isUrgent ? '#EF4444' : '#10B981' }}>
+      <span style={{ width: 6, height: 6, borderRadius: '50%', background: isUrgent ? '#EF4444' : '#10B981', display: 'inline-block' }} />
       {days}D LEFT
     </span>
   );
 };
 
-const tagStyle = (label) => {
+const getTagStyle = (label) => {
   const l = (label || "").toLowerCase();
-  if (l.includes("female"))                   return "bg-pink-100 text-pink-700";
-  if (l.includes("male"))                     return "bg-blue-100 text-blue-700";
-  if (l.includes("lakh"))                     return "bg-indigo-900 text-white";
-  if (l.includes("class"))                    return "bg-gray-100 text-gray-600";
-  if (["sc","st","obc","minority","general","ebc"].includes(l))
-                                              return "bg-violet-100 text-violet-700";
-  if (l.includes("engineer") || l.includes("science") || l.includes("medic") || l.includes("tech"))
-                                              return "bg-sky-100 text-sky-700";
-  // State names
-  const stateWords = ["tamil","karnataka","maharashtra","uttar","andhra","telangana","kerala","rajasthan","bihar","west","gujarat","punjab"];
-  if (stateWords.some((w) => l.startsWith(w))) return "bg-teal-100 text-teal-700";
-  return "bg-gray-100 text-gray-600";
+  if (l.includes("female")) return { bg: '#FCE7F3', text: '#BE185D' };
+  if (l.includes("male")) return { bg: '#DBEAFE', text: '#1D4ED8' };
+  if (l.includes("lakh")) return { bg: '#312E81', text: '#fff' };
+  if (l.includes("class")) return { bg: '#F1F5F9', text: '#475569' };
+  if (["sc", "st", "obc", "minority", "general", "ebc"].includes(l)) return { bg: '#EDE9FE', text: '#6D28D9' };
+  if (l.includes("engineer") || l.includes("science") || l.includes("medic") || l.includes("tech")) return { bg: '#E0F2FE', text: '#0369A1' };
+  
+  const stateWords = ["tamil", "karnataka", "maharashtra", "uttar", "andhra", "telangana", "kerala", "rajasthan", "bihar", "west", "gujarat", "punjab"];
+  if (stateWords.some((w) => l.startsWith(w))) return { bg: '#CCFBF1', text: '#0F766E' };
+  return { bg: '#F1F5F9', text: '#475569' };
 };
 
 const buildTags = (sch) => {
@@ -148,51 +147,57 @@ export default function Scholarships() {
   })();
 
   return (
-    <div className="min-h-screen bg-gray-50">
-
+    <div style={{ minHeight: '100vh', background: '#F8FAFC', paddingBottom: 60 }}>
       {/* ── Page header ── */}
-      <div className="max-w-7xl mx-auto px-6 pt-8 pb-5">
-        <h1 className="text-2xl font-bold text-gray-900">Scholarships</h1>
-        <p className="text-sm text-gray-500 mt-1">Browse and apply for scholarships tailored to your profile</p>
+      <div style={{ background: 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #7C3AED 100%)', padding: '40px 32px 60px' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <h1 style={{ margin: 0, fontSize: 32, fontWeight: 800, color: '#fff' }}>Scholarships</h1>
+          <p style={{ margin: '8px 0 0', fontSize: 16, color: 'rgba(255,255,255,0.85)' }}>
+            Browse and apply for scholarships perfectly tailored to your profile
+          </p>
+        </div>
       </div>
 
       {/* ── Sticky search bar ── */}
-      <div className="sticky top-[68px] z-20 bg-gray-50 border-b border-gray-100 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-3">
-          <form onSubmit={handleSearch} className="flex gap-3 items-stretch h-11">
-            <div className="flex-1 flex items-center gap-2.5 px-4 bg-white rounded-xl border border-gray-200 shadow-sm focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition">
-              <Search className="w-4 h-4 text-gray-400 flex-shrink-0" />
+      <div style={{ position: 'sticky', top: 0, zIndex: 20, background: '#F8FAFC', padding: '0 24px', transform: 'translateY(-26px)' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <form onSubmit={handleSearch} style={{ display: 'flex', gap: 12, alignItems: 'stretch', height: 52, background: '#fff', padding: 8, borderRadius: 16, border: '1px solid #E2E8F0', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+            <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: 10, padding: '0 16px', borderRadius: 10, background: '#F1F5F9' }}>
+              <Search size={18} color="#64748B" style={{ flexShrink: 0 }} />
               <input
                 type="text"
                 placeholder="Search by name, category or state..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="flex-1 bg-transparent text-sm text-gray-800 placeholder-gray-400 focus:outline-none"
+                style={{ flex: 1, background: 'transparent', border: 'none', outline: 'none', fontSize: 14, color: '#0F172A' }}
               />
             </div>
-            <div className="relative">
+            
+            <div style={{ position: 'relative', width: 180 }}>
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="h-full appearance-none pl-4 pr-8 bg-white rounded-xl border border-gray-200 shadow-sm text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20 cursor-pointer"
+                style={{ width: '100%', height: '100%', appearance: 'none', padding: '0 36px 0 16px', background: '#F1F5F9', borderRadius: 10, border: 'none', outline: 'none', fontSize: 14, color: '#334155', cursor: 'pointer', fontWeight: 500 }}
               >
                 {CATEGORIES.map((c) => <option key={c}>{c}</option>)}
               </select>
-              <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gray-400 pointer-events-none" />
+              <ChevronDown size={14} color="#64748B" style={{ position: 'absolute', right: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }} />
             </div>
-            <div className="relative">
+
+            <div style={{ position: 'relative', width: 180 }}>
               <select
                 value={state}
                 onChange={(e) => setState(e.target.value)}
-                className="h-full appearance-none pl-4 pr-8 bg-white rounded-xl border border-gray-200 shadow-sm text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20 cursor-pointer"
+                style={{ width: '100%', height: '100%', appearance: 'none', padding: '0 36px 0 16px', background: '#F1F5F9', borderRadius: 10, border: 'none', outline: 'none', fontSize: 14, color: '#334155', cursor: 'pointer', fontWeight: 500 }}
               >
                 {STATES.map((s) => <option key={s}>{s}</option>)}
               </select>
-              <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gray-400 pointer-events-none" />
+              <ChevronDown size={14} color="#64748B" style={{ position: 'absolute', right: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }} />
             </div>
+
             <button
               type="submit"
-              className="px-7 bg-primary text-white rounded-xl text-sm font-semibold hover:bg-primary/90 transition-colors shadow-sm whitespace-nowrap"
+              style={{ padding: '0 24px', background: '#2563EB', color: '#fff', border: 'none', borderRadius: 10, fontSize: 14, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}
             >
               Search
             </button>
@@ -200,12 +205,11 @@ export default function Scholarships() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 pt-5 pb-12">
-
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '10px 24px 0' }}>
         {/* Count */}
         {!loading && pagination.total > 0 && (
-          <p className="text-sm text-gray-500 mb-5">
-            Showing <span className="font-semibold text-gray-800">{scholarships.length}</span> scholarships
+          <p style={{ margin: '0 0 20px', fontSize: 14, color: '#64748B' }}>
+            Showing <strong style={{ color: '#0F172A' }}>{scholarships.length}</strong> scholarships
             {pagination.total > scholarships.length ? ` of ${pagination.total}` : ""}
           </p>
         )}
@@ -214,103 +218,97 @@ export default function Scholarships() {
         {loading ? (
           <Loader />
         ) : scholarships.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-24 text-center">
-            <p className="text-gray-400 text-sm">No scholarships found. Try a different search.</p>
+          <div style={{ padding: '80px 0', textAlign: 'center', color: '#94A3B8', fontSize: 15 }}>
+            No scholarships found. Try a different search.
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mb-10">
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 20, marginBottom: 40 }}>
               {scholarships.map((sch) => {
                 const isApplied = appliedIds.has(sch._id);
                 const amount    = formatAmount(sch.amount);
                 const tags      = buildTags(sch);
 
                 return (
-                  <div
-                    key={sch._id}
-                    className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col overflow-hidden"
-                  >
+                  <div key={sch._id} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 16, display: 'flex', flexDirection: 'column', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.03)', transition: 'transform 0.2s, box-shadow 0.2s' }}>
                     {/* Card body */}
-                    <div className="p-5 flex flex-col flex-1">
+                    <div style={{ padding: 20, display: 'flex', flexDirection: 'column', flex: 1 }}>
                       {/* Provider row + deadline */}
-                      <div className="flex items-center justify-between gap-2 mb-2">
-                        <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 leading-tight line-clamp-1 flex-1">
+                      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 10, marginBottom: 10 }}>
+                        <p style={{ margin: 0, fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8, color: '#94A3B8', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', flex: 1 }}>
                           {sch.provider || "Government of India"}
                         </p>
                         <DeadlineBadge deadline={sch.deadline} />
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-[15px] font-bold text-gray-900 leading-snug line-clamp-2 mb-1.5">
+                      <h3 style={{ margin: '0 0 10px', fontSize: 16, fontWeight: 800, color: '#0F172A', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', lineHeight: 1.4 }}>
                         {sch.title}
                       </h3>
 
                       {/* Amount */}
                       {amount && /\d/.test(amount) && (
-                        <p className="text-sm font-bold text-emerald-600 mb-3">
+                        <p style={{ margin: '0 0 12px', fontSize: 18, fontWeight: 800, color: '#10B981' }}>
                           {amount.startsWith("₹") ? amount : `₹ ${amount}`}
-                          <span className="text-xs font-normal text-gray-400 ml-1">/ year</span>
+                          <span style={{ fontSize: 12, fontWeight: 600, color: '#94A3B8', marginLeft: 4 }}>/ year</span>
                         </p>
                       )}
 
                       {/* Description */}
-                      <p className="text-xs text-gray-500 leading-relaxed line-clamp-3 mb-3">
+                      <p style={{ margin: '0 0 16px', fontSize: 13, color: '#64748B', lineHeight: 1.6, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                         {sch.description || "No description available."}
                       </p>
 
                       {/* Tags */}
                       {tags.length > 0 && (
-                        <div className="flex flex-wrap gap-1.5 mb-4">
-                          {tags.slice(0, 4).map((tag, i) => (
-                            <span
-                              key={`${tag}-${i}`}
-                              className={`text-[11px] font-medium px-2.5 py-0.5 rounded-full ${tagStyle(tag)}`}
-                            >
-                              {tag}
-                            </span>
-                          ))}
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 16, marginTop: 'auto' }}>
+                          {tags.slice(0, 4).map((tag, i) => {
+                            const s = getTagStyle(tag);
+                            return (
+                              <span key={`${tag}-${i}`} style={{ background: s.bg, color: s.text, fontSize: 11, fontWeight: 700, padding: '4px 10px', borderRadius: 99 }}>
+                                {tag}
+                              </span>
+                            );
+                          })}
                           {tags.length > 4 && (
-                            <span className="text-[11px] text-gray-400 self-center">+{tags.length - 4}</span>
+                            <span style={{ fontSize: 11, color: '#94A3B8', alignSelf: 'center', fontWeight: 600 }}>+{tags.length - 4}</span>
                           )}
                         </div>
                       )}
-
-                      <div className="flex-1" />
                     </div>
 
-                    {/* Buttons — pinned to bottom, full-width divider style */}
-                    <div className="border-t border-gray-100 px-5 py-3 flex gap-2">
+                    {/* Buttons */}
+                    <div style={{ borderTop: '1px solid #F1F5F9', padding: '16px 20px', background: '#FAFAFA', display: 'flex', gap: 10 }}>
                       <a
                         href={sch.applicationUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 py-2 border border-gray-200 rounded-lg text-xs font-semibold text-gray-600 hover:bg-gray-50 transition-colors text-center"
+                        style={{ flex: 1, padding: '10px 0', border: '1px solid #E2E8F0', borderRadius: 10, fontSize: 13, fontWeight: 700, color: '#475569', background: '#fff', textAlign: 'center', textDecoration: 'none', display: 'inline-block' }}
                       >
-                        Check Details
+                        Details
                       </a>
+                      
                       {isApplied ? (
                         <a
                           href={sch.applicationUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex-1 py-2 bg-emerald-500 text-white rounded-lg text-xs font-semibold text-center hover:bg-emerald-600 transition-colors flex items-center justify-center gap-1.5"
+                          style={{ flex: 1, padding: '10px 0', border: 'none', borderRadius: 10, fontSize: 13, fontWeight: 700, color: '#fff', background: '#10B981', textAlign: 'center', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}
                         >
-                          <CheckCircle className="w-3.5 h-3.5" />
-                          Applied
+                          <CheckCircle size={16} /> Applied
                         </a>
                       ) : (
                         <button
                           onClick={() => handleApply(sch)}
                           disabled={!isAuthenticated || applying === sch._id}
-                          className="flex-1 py-2 bg-gray-900 text-white rounded-lg text-xs font-semibold hover:bg-gray-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                          style={{ flex: 1, padding: '10px 0', border: 'none', borderRadius: 10, fontSize: 13, fontWeight: 700, color: '#fff', background: '#0F172A', cursor: (!isAuthenticated || applying === sch._id) ? 'not-allowed' : 'pointer', opacity: (!isAuthenticated || applying === sch._id) ? 0.6 : 1 }}
                         >
                           {applying === sch._id ? "Opening…" : "Apply Now"}
                         </button>
                       )}
                     </div>
-
                     {!isAuthenticated && (
-                      <p className="text-center text-[11px] text-gray-400 pb-2">Sign in to apply</p>
+                      <p style={{ margin: '-6px 0 14px', textAlign: 'center', fontSize: 11, color: '#94A3B8', fontWeight: 500, background: '#FAFAFA' }}>Sign in to apply directly</p>
                     )}
                   </div>
                 );
@@ -319,23 +317,19 @@ export default function Scholarships() {
 
             {/* Pagination */}
             {totalPages > 1 && (
-              <div className="flex items-center justify-center gap-1.5">
+              <div style={{ display: 'flex', justifyContent: 'center', gap: 8 }}>
                 <button
                   onClick={() => fetchScholarships(currentPage - 1)}
                   disabled={currentPage <= 1}
-                  className="flex items-center gap-1 px-3 h-9 rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-600 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                  style={{ width: 36, height: 36, borderRadius: 10, border: '1px solid #E2E8F0', background: '#fff', color: '#64748B', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: currentPage <= 1 ? 'not-allowed' : 'pointer', opacity: currentPage <= 1 ? 0.5 : 1 }}
                 >
-                  <ChevronLeft className="w-4 h-4" />
+                  <ChevronLeft size={16} />
                 </button>
                 {pageNums.map((p) => (
                   <button
                     key={p}
                     onClick={() => fetchScholarships(p)}
-                    className={`w-9 h-9 flex items-center justify-center rounded-lg text-sm font-semibold transition-colors ${
-                      p === currentPage
-                        ? "bg-gray-900 text-white"
-                        : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50"
-                    }`}
+                    style={{ width: 36, height: 36, borderRadius: 10, border: p === currentPage ? 'none' : '1px solid #E2E8F0', background: p === currentPage ? '#0F172A' : '#fff', color: p === currentPage ? '#fff' : '#475569', fontSize: 13, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}
                   >
                     {p}
                   </button>
@@ -343,9 +337,9 @@ export default function Scholarships() {
                 <button
                   onClick={() => fetchScholarships(currentPage + 1)}
                   disabled={currentPage >= totalPages}
-                  className="flex items-center gap-1 px-3 h-9 rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-600 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                  style={{ width: 36, height: 36, borderRadius: 10, border: '1px solid #E2E8F0', background: '#fff', color: '#64748B', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: currentPage >= totalPages ? 'not-allowed' : 'pointer', opacity: currentPage >= totalPages ? 0.5 : 1 }}
                 >
-                  <ChevronRight className="w-4 h-4" />
+                  <ChevronRight size={16} />
                 </button>
               </div>
             )}
