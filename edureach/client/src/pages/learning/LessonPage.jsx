@@ -7691,6 +7691,291 @@ const lessonData = {
         ],
         summaryEnd: 'Great job! You have explored the fundamental concepts of electricity, circuits, conductors, and insulators!',
         nextLesson: null
+    },
+
+    '6-what-where-how-when': {
+        title: 'What, Where, How and When?',
+        subtitle: 'Explore how historians study the past using questions and sources.',
+        videoSubtitle: 'Watch these videos to understand how we learn about history!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/wwORVr9Og0o?si=b207zcHOcTNL8RBS', title: 'What, Where, How and When?', thumb: 'https://img.youtube.com/vi/wwORVr9Og0o/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/DZWxtbvb-Dw?si=xYwukGP5vqlQEFVn', title: 'Understanding History', thumb: 'https://img.youtube.com/vi/DZWxtbvb-Dw/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'History is the study of', visual: '📜', options: ['future events', 'present events', 'past events', 'imaginary events'], correct: 2 },
+            { question: 'People who study history are called', visual: '🧑‍🏫', options: ['scientists', 'historians', 'engineers', 'artists'], correct: 1 },
+            { question: 'Objects left behind by ancient people are called', visual: '🏺', options: ['artifacts', 'buildings', 'houses', 'tools'], correct: 0 },
+            { question: 'Which of the following is an archaeological source?', visual: '🪙', options: ['ancient coins', 'modern books', 'newspapers', 'computers'], correct: 0 },
+            { question: 'A timeline shows', visual: '📅', options: ['places', 'sequence of events', 'buildings', 'animals'], correct: 1 },
+            { question: 'Ancient civilizations often developed near', visual: '🌊', options: ['mountains', 'rivers', 'deserts', 'forests'], correct: 1 },
+            { question: 'Written records used to study history are called', visual: '📖', options: ['archaeological sources', 'literary sources', 'natural sources', 'scientific sources'], correct: 1 },
+            { question: 'Stories passed through generations are', visual: '🗣️', options: ['oral sources', 'written sources', 'physical sources', 'digital sources'], correct: 0 },
+            { question: 'Studying history helps us', visual: '🌍', options: ['understand the past', 'learn about cultures', 'understand social changes', 'all of these'], correct: 3 },
+            { question: 'Arranging events in order of time is called', visual: '⏳', options: ['mapping', 'chronology', 'measurement', 'classification'], correct: 1 }
+        ],
+        summary: [
+            'History is the study of past events, people, and places. Historians ask What, Where, How, and When to discover the past.',
+            'Many ancient civilizations developed near rivers because rivers provided water, fertile soil, and transportation.',
+            'Historical sources include archaeological sources (tools, coins), literary sources (books, inscriptions), and oral sources (stories passed down).',
+            'Timelines help arrange events in chronological order so we can understand the sequence of history.',
+            'Studying history helps us understand our culture, learn from past events, and connect the past with the present.'
+        ],
+        summaryEnd: 'Excellent! You now understand the basics of how historians study and reconstruct the past!',
+        nextLesson: { id: 'earliest-people', title: 'The Earliest People' }
+    },
+
+    '6-earliest-people': {
+        title: 'The Earliest People',
+        subtitle: 'Discover how the first humans lived as hunter-gatherers and made tools.',
+        videoSubtitle: 'Watch these videos to learn about the life of early humans!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/BkLlMD4Nl1w?si=x4b3IhWhFsfFB97U', title: 'The Earliest People', thumb: 'https://img.youtube.com/vi/BkLlMD4Nl1w/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/167gHV80Hdw?si=Ap3YZhxgD2TN8rzU', title: 'Early Humans and Hunter-Gatherers', thumb: 'https://img.youtube.com/vi/167gHV80Hdw/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/mmCGDsFfl2c?si=_XpnL5TWIIgIL50n', title: 'Stone Age and Early Settlements', thumb: 'https://img.youtube.com/vi/mmCGDsFfl2c/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Early humans who hunted animals and gathered plants are called', visual: '🏕️', options: ['farmers', 'hunter-gatherers', 'traders', 'rulers'], correct: 1 },
+            { question: 'Early humans used tools made mainly of', visual: '🪨', options: ['plastic', 'stone', 'iron', 'steel'], correct: 1 },
+            { question: 'The period when people used stone tools is called', visual: '⚒️', options: ['Iron Age', 'Bronze Age', 'Stone Age', 'Modern Age'], correct: 2 },
+            { question: 'Early humans lived in', visual: '🧑‍🤝‍🧑', options: ['cities', 'caves', 'factories', 'schools'], correct: 1 },
+            { question: 'Fire helped early humans to', visual: '🔥', options: ['cook food', 'stay warm', 'protect from animals', 'all of these'], correct: 3 },
+            { question: 'Early farmers began to grow crops like', visual: '🌾', options: ['wheat', 'barley', 'rice', 'all of these'], correct: 3 },
+            { question: 'Animals first domesticated by humans include', visual: '🐑', options: ['goats', 'sheep', 'cattle', 'all of these'], correct: 3 },
+            { question: 'Farming allowed people to', visual: '🏡', options: ['move constantly', 'live in permanent settlements', 'stop eating food', 'avoid animals'], correct: 1 },
+            { question: 'Early settlements later developed into', visual: '🏘️', options: ['forests', 'villages and cities', 'deserts', 'mountains'], correct: 1 },
+            { question: 'Archaeologists study early human life by examining', visual: '🔍', options: ['ancient tools', 'fossils', 'artifacts', 'all of these'], correct: 3 }
+        ],
+        summary: [
+            'The earliest people were hunter-gatherers who hunted animals and gathered plants for food.',
+            'They lived in small groups, moved frequently, and used simple stone tools for hunting and survival.',
+            'The discovery of fire was a major development that helped cook food, stay warm, and protect from animals.',
+            'Over time, humans learned farming and domesticated animals, leading to permanent settlements.',
+            'Early settlements later developed into villages and cities, forming the basis of civilizations.'
+        ],
+        summaryEnd: 'Well done! You now know how the earliest humans survived and how they evolved from hunter-gatherers to settlers!',
+        nextLesson: { id: 'hunting-gathering-to-growing-food', title: 'From Hunting-Gathering to Growing Food' }
+    },
+
+    '6-hunting-gathering-to-growing-food': {
+        title: 'From Hunting-Gathering to Growing Food',
+        subtitle: 'Learn how early humans transitioned from hunting and gathering to farming and settled life.',
+        videoSubtitle: 'Watch these videos to understand how farming changed human life!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/-m_C0vdZ5-I?si=DS6QLpI7UZ5KtvJ4', title: 'From Hunting to Farming', thumb: 'https://img.youtube.com/vi/-m_C0vdZ5-I/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/rf_dgWj6iks?si=g-KaJD9Wvp8snVfV', title: 'The Agricultural Revolution', thumb: 'https://img.youtube.com/vi/rf_dgWj6iks/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Early humans who hunted animals and gathered plants were called', visual: '🏕️', options: ['farmers', 'hunter-gatherers', 'traders', 'rulers'], correct: 1 },
+            { question: 'Farming began when humans learned to', visual: '🌱', options: ['build houses', 'plant seeds and grow crops', 'make tools', 'cook food'], correct: 1 },
+            { question: 'Domestication means', visual: '🐕', options: ['hunting animals', 'taming animals for use', 'feeding animals', 'protecting animals'], correct: 1 },
+            { question: 'Which animal was among the first domesticated?', visual: '🐶', options: ['dog', 'tiger', 'lion', 'elephant'], correct: 0 },
+            { question: 'Which crop was grown by early farmers?', visual: '🌾', options: ['wheat', 'barley', 'rice', 'all of these'], correct: 3 },
+            { question: 'Early settlements developed near', visual: '🏘️', options: ['deserts', 'mountains', 'rivers', 'oceans'], correct: 2 },
+            { question: 'A tool used to cut crops is called', visual: '🔧', options: ['plough', 'sickle', 'axe', 'hammer'], correct: 1 },
+            { question: 'Farming allowed people to', visual: '🏡', options: ['move constantly', 'live in permanent homes', 'stop working', 'avoid food'], correct: 1 },
+            { question: 'Early farmers used animals for', visual: '🐄', options: ['milk', 'meat', 'farming work', 'all of these'], correct: 3 },
+            { question: 'The change from hunting to farming is called', visual: '📜', options: ['Industrial Revolution', 'Agricultural Revolution', 'Cultural Revolution', 'Scientific Revolution'], correct: 1 }
+        ],
+        summary: [
+            'Early humans were hunter-gatherers who moved from place to place in search of food.',
+            'Over time, they discovered that plants grow from seeds and began farming crops like wheat, barley, and rice.',
+            'Domestication of animals like dogs, goats, sheep, and cattle provided milk, meat, wool, and help in farming.',
+            'Farming led to permanent settlements with houses, fields, and communities living together.',
+            'The shift from hunting to farming is called the Agricultural Revolution and formed the basis of early civilizations.'
+        ],
+        summaryEnd: 'Great job! You now understand how early humans made the incredible transition from hunting and gathering to farming and settled life!',
+        nextLesson: { id: 'in-the-earliest-cities', title: 'In the Earliest Cities' }
+    },
+
+    '6-in-the-earliest-cities': {
+        title: 'In the Earliest Cities',
+        subtitle: 'Learn about Harappa, Mohenjo-daro, and the advanced Indus Valley Civilization.',
+        videoSubtitle: 'Watch these videos to explore the earliest cities of the ancient world!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/XBg38lI-MOQ?si=CLEMasuW9b5tKcQB', title: 'The Indus Valley Civilization', thumb: 'https://img.youtube.com/vi/XBg38lI-MOQ/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/5EzJzZLNQ2U?si=-MQWqd_b1Ug_3y2G', title: 'Life in Harappa and Mohenjo-daro', thumb: 'https://img.youtube.com/vi/5EzJzZLNQ2U/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Harappa was part of the', visual: '🏛️', options: ['Egyptian Civilization', 'Indus Valley Civilization', 'Roman Civilization', 'Greek Civilization'], correct: 1 },
+            { question: 'Harappa was discovered in the', visual: '🔍', options: ['1800s', '1900s', '1920s', '2000s'], correct: 2 },
+            { question: 'Houses in Harappan cities were made of', visual: '🧱', options: ['wood', 'stone', 'baked bricks', 'clay only'], correct: 2 },
+            { question: 'The raised part of the city was called', visual: '🏰', options: ['lower town', 'citadel', 'market', 'fort'], correct: 1 },
+            { question: 'Harappan cities had an advanced', visual: '🚿', options: ['railway system', 'drainage system', 'airport system', 'road bridge system'], correct: 1 },
+            { question: 'Harappan people were skilled in making', visual: '🎨', options: ['pottery', 'jewelry', 'tools', 'all of these'], correct: 3 },
+            { question: 'The Harappans traded with', visual: '🤝', options: ['Mesopotamia', 'China', 'Rome', 'Greece'], correct: 0 },
+            { question: 'The Indus Valley Civilization developed near the', visual: '🌊', options: ['Nile River', 'Indus River', 'Ganges River', 'Amazon River'], correct: 1 },
+            { question: 'Which crop was grown by Harappans?', visual: '🌾', options: ['wheat', 'barley', 'peas', 'all of these'], correct: 3 },
+            { question: 'The study of ancient objects is done by', visual: '🔬', options: ['doctors', 'archaeologists', 'engineers', 'teachers'], correct: 1 }
+        ],
+        summary: [
+            'The Indus Valley Civilization was one of the earliest civilizations with well-planned cities like Harappa and Mohenjo-daro.',
+            'Harappan cities had grid-patterned roads, baked brick houses, and advanced drainage systems.',
+            'Cities were divided into the citadel (upper town) and the lower town where most people lived.',
+            'People farmed wheat, barley, and peas, and were skilled in making pottery, jewelry, and tools.',
+            'The Harappans were active traders who traded with distant lands like Mesopotamia.'
+        ],
+        summaryEnd: 'Excellent! You now know about the amazing Indus Valley Civilization and how the earliest cities were planned and organized!',
+        nextLesson: { id: 'what-books-and-burials-tell-us', title: 'What Books and Burials Tell Us' }
+    },
+
+    '6-what-books-and-burials-tell-us': {
+        title: 'What Books and Burials Tell Us',
+        subtitle: 'Learn how ancient texts like the Vedas and megalithic burials help us understand early societies.',
+        videoSubtitle: 'Watch these videos to explore the secrets hidden in ancient books and burials!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/hPQlQyKMsjg?si=olu95_VVSzjL2WXf', title: 'What Books and Burials Tell Us', thumb: 'https://img.youtube.com/vi/hPQlQyKMsjg/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/AzqnrO63sb8?si=S75Q4JeGElRB_zt4', title: 'The Vedas and Megaliths Explained', thumb: 'https://img.youtube.com/vi/AzqnrO63sb8/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'The oldest Veda is', visual: '📜', options: ['Samaveda', 'Rigveda', 'Yajurveda', 'Atharvaveda'], correct: 1 },
+            { question: 'The Vedas were written in', visual: '✍️', options: ['Hindi', 'Sanskrit', 'Tamil', 'English'], correct: 1 },
+            { question: 'Megaliths are', visual: '🪨', options: ['temples', 'large stone burial structures', 'houses', 'bridges'], correct: 1 },
+            { question: 'Burial sites help archaeologists learn about', visual: '🔍', options: ['ancient tools', 'social life', 'beliefs and traditions', 'all of these'], correct: 3 },
+            { question: 'Which of the following was often found in burial sites?', visual: '🏺', options: ['pottery', 'tools', 'ornaments', 'all of these'], correct: 3 },
+            { question: 'Cattle were considered a sign of', visual: '🐄', options: ['poverty', 'wealth', 'weakness', 'danger'], correct: 1 },
+            { question: 'The Rigveda mainly contains', visual: '📖', options: ['laws', 'hymns and prayers', 'stories', 'poems only'], correct: 1 },
+            { question: 'Megalithic burial sites are commonly found in', visual: '🗺️', options: ['North India', 'South India', 'Europe', 'Africa'], correct: 1 },
+            { question: 'Archaeologists study burial sites to understand', visual: '🧠', options: ['ancient life', 'ancient beliefs', 'social differences', 'all of these'], correct: 3 },
+            { question: 'Ancient books and burials help historians understand', visual: '⏳', options: ['the future', 'the present only', 'the past', 'mathematics'], correct: 2 }
+        ],
+        summary: [
+            'Historians study ancient books, inscriptions, and burial sites to learn about early societies and cultures.',
+            'The Vedas, composed in Sanskrit, are India\'s oldest sacred texts; the Rigveda is the oldest among them.',
+            'During the Vedic period, people lived in small communities, focusing on farming, cattle rearing, and nature worship.',
+            'Megaliths are large stone structures built over burial sites, commonly found in South India, which reveal burial traditions.',
+            'Burial sites containing pottery, tools, and ornaments help uncover ancient social differences, technology, and religious beliefs.'
+        ],
+        summaryEnd: 'Great job! You now understand how historians unfold the mysteries of the past through ancient books and burial sites!',
+        nextLesson: { id: 'kingdoms-kings-and-an-early-republic', title: 'Kingdoms, Kings and an Early Republic' }
+    },
+
+    // ==========================================
+    // CLASS 6 - SOCIAL STUDIES - GEOGRAPHY
+    // ==========================================
+
+    '6-earth-in-solar-system': {
+        title: 'The Earth in the Solar System',
+        subtitle: 'Explore the Sun, planets, stars, and our home planet Earth in the vast Solar System.',
+        videoSubtitle: 'Watch these videos to journey through space and discover our Solar System!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/pPrGhw8PzVQ?si=hISYcoJqu6sIL8Re', title: 'The Solar System Explained', thumb: 'https://img.youtube.com/vi/pPrGhw8PzVQ/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/ErUZVWUP0c4?si=0Y7f9u6uh_TEvGMB', title: 'Planets of the Solar System', thumb: 'https://img.youtube.com/vi/ErUZVWUP0c4/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'The center of the Solar System is', visual: '☀️', options: ['Earth', 'Sun', 'Moon', 'Jupiter'], correct: 1 },
+            { question: 'Earth is the', visual: '🌍', options: ['first planet from the Sun', 'second planet from the Sun', 'third planet from the Sun', 'fourth planet from the Sun'], correct: 2 },
+            { question: 'The natural satellite of Earth is', visual: '🌕', options: ['Sun', 'Moon', 'Mars', 'Venus'], correct: 1 },
+            { question: 'The group of planets revolving around the Sun is called', visual: '🪐', options: ['galaxy', 'universe', 'Solar System', 'constellation'], correct: 2 },
+            { question: 'Earth is called the Blue Planet because', visual: '💧', options: ['it is cold', 'it reflects sunlight', 'it has large amounts of water', 'it is far from the Sun'], correct: 2 },
+            { question: 'Most asteroids are found between', visual: '🪨', options: ['Earth and Mars', 'Mars and Jupiter', 'Jupiter and Saturn', 'Mercury and Venus'], correct: 1 },
+            { question: 'Stars produce', visual: '⭐', options: ['reflected light', 'their own light', 'only heat', 'no light'], correct: 1 },
+            { question: 'The Moon shines because it', visual: '🌙', options: ['produces its own light', 'reflects sunlight', 'burns gases', 'produces energy'], correct: 1 },
+            { question: 'Small rocky bodies in space are called', visual: '☄️', options: ['planets', 'meteoroids', 'stars', 'satellites'], correct: 1 },
+            { question: 'The Sun provides', visual: '🌞', options: ['water', 'oxygen', 'heat and light', 'gravity only'], correct: 2 }
+        ],
+        summary: [
+            'The Solar System consists of the Sun, eight planets, moons, asteroids, comets, and meteoroids moving in orbits.',
+            'The Sun is the center of the Solar System and the main source of heat and light for all the planets.',
+            'Earth, the third planet, supports life due to air, water, and suitable temperature, and is called the Blue Planet.',
+            'Stars are huge balls of hot gases that produce their own light; the Sun is our closest star.',
+            'Asteroids are rocky objects mostly found between Mars and Jupiter, while comets are icy bodies with a bright tail.'
+        ],
+        summaryEnd: 'Fantastic! You have successfully completed your journey through the Solar System and learned about our amazing universe!',
+        nextLesson: { id: 'globe-latitudes-longitudes', title: 'Globe: Latitudes and Longitudes' }
+    },
+
+    '6-globe-latitudes-longitudes': {
+        title: 'Globe: Latitudes and Longitudes',
+        subtitle: 'Learn about the imaginary lines on Earth, the Equator, Prime Meridian, and how to locate places using the grid system.',
+        videoSubtitle: 'Watch these videos to understand latitudes, longitudes, and time zones!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/m0CTq-9ATu4?si=NkoY02MSxfhYx58a', title: 'Latitudes and Longitudes Explained', thumb: 'https://img.youtube.com/vi/m0CTq-9ATu4/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/cwUuVdF8ohY?si=vvh65Hz1H5-HlKcP', title: 'Understanding Time Zones', thumb: 'https://img.youtube.com/vi/cwUuVdF8ohY/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A globe is a', visual: '🌍', options: ['flat map', 'model of the Earth', 'drawing', 'picture'], correct: 1 },
+            { question: 'Latitudes run', visual: '➖', options: ['north to south', 'east to west', 'diagonally', 'randomly'], correct: 1 },
+            { question: 'The Equator is at', visual: '📍', options: ['90° latitude', '45° latitude', '0° latitude', '23½° latitude'], correct: 2 },
+            { question: 'Longitudes run from', visual: '📏', options: ['east to west', 'north to south', 'diagonally', 'randomly'], correct: 1 },
+            { question: 'The Prime Meridian is at', visual: '📌', options: ['90°', '45°', '0°', '180°'], correct: 2 },
+            { question: 'Longitudes help determine', visual: '⏳', options: ['weather', 'time', 'rainfall', 'seasons'], correct: 1 },
+            { question: 'The Earth is divided into how many time zones?', visual: '⏱️', options: ['12', '24', '36', '48'], correct: 1 },
+            { question: 'The Equator divides the Earth into', visual: '🧭', options: ['east and west', 'north and south', 'top and bottom', 'left and right'], correct: 1 },
+            { question: 'The grid system is formed by', visual: '🌐', options: ['rivers and mountains', 'oceans and continents', 'latitudes and longitudes', 'roads and paths'], correct: 2 },
+            { question: 'The Prime Meridian passes through', visual: '🏛️', options: ['India', 'USA', 'England', 'Australia'], correct: 2 }
+        ],
+        summary: [
+            'A globe is a three-dimensional model of the Earth that helps us understand its geography better than flat maps.',
+            'Latitudes are horizontal lines (east to west) and longitudes are vertical lines (north to south) that form a grid system.',
+            'The Equator is at 0° latitude and the Prime Meridian is at 0° longitude.',
+            'The grid system made by these imaginary lines helps in locating any place accurately on the Earth.',
+            'The Earth is divided into 24 time zones based on longitudes, which help calculate time differences.'
+        ],
+        summaryEnd: 'Great work! You now know how to locate any place on Earth and understand how time is measured across the world!',
+        nextLesson: { id: 'motions-of-the-earth', title: 'Motions of the Earth' }
+    },
+
+    '6-motions-of-the-earth': {
+        title: 'Motions of the Earth',
+        subtitle: 'Learn about the rotation and revolution of the Earth, and how they cause day, night, and seasons.',
+        videoSubtitle: 'Watch these videos to understand the Earth\'s movements and the changing seasons!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/zWc4rJVne9o?si=gWmqzWmhU_b-XS7J', title: 'Rotation and Revolution', thumb: 'https://img.youtube.com/vi/zWc4rJVne9o/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/L18-brRutcw?si=dZXK6GJi1sjwnH1X', title: 'How Seasons Change', thumb: 'https://img.youtube.com/vi/L18-brRutcw/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/DnU1X2HC5Xs?si=5urgdRa-VcXPkVlv', title: 'Why Do We Have Leap Years?', thumb: 'https://img.youtube.com/vi/DnU1X2HC5Xs/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Rotation of the Earth causes', visual: '🔄', options: ['seasons', 'day and night', 'rainfall', 'winds'], correct: 1 },
+            { question: 'The Earth takes about how many hours to rotate once?', visual: '⏳', options: ['12 hours', '24 hours', '48 hours', '60 hours'], correct: 1 },
+            { question: 'Revolution of the Earth causes', visual: '🌍', options: ['day and night', 'seasons', 'earthquakes', 'tides'], correct: 1 },
+            { question: 'The Earth takes how many days to revolve around the Sun?', visual: '📅', options: ['100 days', '200 days', '365 days', '500 days'], correct: 2 },
+            { question: 'A leap year has', visual: '📆', options: ['365 days', '366 days', '364 days', '360 days'], correct: 1 },
+            { question: 'The Earth\'s axis is', visual: '〰️', options: ['straight', 'tilted', 'broken', 'circular'], correct: 1 },
+            { question: 'When the Earth is tilted toward the Sun, it is', visual: '🌞', options: ['winter', 'summer', 'autumn', 'spring'], correct: 1 },
+            { question: 'Equinox means', visual: '⚖️', options: ['longest day', 'shortest day', 'equal day and night', 'no sunlight'], correct: 2 },
+            { question: 'The path of Earth\'s revolution is called', visual: '궤', options: ['axis', 'orbit', 'line', 'circle'], correct: 1 },
+            { question: 'Seasons are caused by', visual: '🍂', options: ['rotation only', 'revolution only', 'tilt and revolution', 'wind movement'], correct: 2 }
+        ],
+        summary: [
+            'The Earth has two main motions: rotation (spinning on its axis) and revolution (moving around the Sun).',
+            'Rotation takes 24 hours and causes day and night.',
+            'Revolution takes 365¼ days and, along with the tilted axis, causes the change in seasons.',
+            'A leap year occurs every four years, giving the year 366 days instead of 365.',
+            'Solstices occur when the Sun\'s rays fall directly on the Tropics, and Equinoxes occur when day and night are equal worldwide.'
+        ],
+        summaryEnd: 'Excellent! You clearly understand how the Earth moves to give us our days, nights, and beautiful seasons!',
+        nextLesson: { id: 'maps', title: 'Maps' }
+    },
+
+    '6-maps': {
+        title: 'Maps',
+        subtitle: 'Learn about the types of maps, their components, and how to read them.',
+        videoSubtitle: 'Watch these videos to understand how maps are made and how to use them!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/JXjn8kJDxY0?si=qLoFJvBi_7izpJzl', title: 'Introduction to Maps', thumb: 'https://img.youtube.com/vi/JXjn8kJDxY0/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/5NRybjuUXVo?si=zkMyZxF58OJ8ENVr', title: 'Types of Maps', thumb: 'https://img.youtube.com/vi/5NRybjuUXVo/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/mtsx8V3mE8o?si=BHU0Kb6akLah30Tb', title: 'Map Directions and Symbols', thumb: 'https://img.youtube.com/vi/mtsx8V3mE8o/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A map is a', visual: '🗺️', options: ['globe', 'drawing of Earth', 'model', 'photograph'], correct: 1 },
+            { question: 'Physical maps show', visual: '⛰️', options: ['countries', 'rivers and mountains', 'cities', 'roads'], correct: 1 },
+            { question: 'Political maps show', visual: '🏙️', options: ['natural features', 'climate', 'boundaries', 'rainfall'], correct: 2 },
+            { question: 'A thematic map shows', visual: '📊', options: ['all features', 'only land', 'specific information', 'oceans only'], correct: 2 },
+            { question: 'Scale is used to show', visual: '📏', options: ['direction', 'symbols', 'distance', 'color'], correct: 2 },
+            { question: 'The north direction is usually shown by', visual: '⬆️', options: ['arrow', 'circle', 'square', 'line'], correct: 0 },
+            { question: 'Symbols are explained using', visual: '🔑', options: ['title', 'legend', 'scale', 'compass'], correct: 1 },
+            { question: 'A rough drawing without scale is called', visual: '✏️', options: ['plan', 'map', 'sketch', 'chart'], correct: 2 },
+            { question: 'A detailed drawing with scale is called', visual: '📐', options: ['sketch', 'plan', 'map', 'diagram'], correct: 1 },
+            { question: 'Maps are useful for', visual: '🧭', options: ['navigation', 'understanding geography', 'locating places', 'all of these'], correct: 3 }
+        ],
+        summary: [
+            'A map is a flat representation of the Earth or a part of it, which is easier to carry than a globe.',
+            'There are three main types of maps: physical, political, and thematic.',
+            'Every map has three essential components: distance (scale), direction, and symbols.',
+            'Scale helps us understand the relationship between distance on the map and real distance on the ground.',
+            'Legends or keys help us understand the various symbols and colors used on a map.'
+        ],
+        summaryEnd: 'Great job! You now know how to read and use different types of maps to explore the world!',
     }
 };
 
@@ -34959,6 +35244,793 @@ const LessonPage = () => {
 
 
                 {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 6 – SOCIAL STUDIES – WHAT, WHERE, HOW AND WHEN?
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'what-where-how-when' && (
+                    <>
+                        {/* Section 1: Introduction - What is History? */}
+                        <Section>
+                            <SectionTitle emoji="📜">What is History?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                History helps us understand the <strong>past events, people, and places</strong> that shaped the world we live in today. Historians ask questions such as <strong>What happened? Where did it happen? How did it happen? and When did it happen?</strong>
+                            </p>
+                            <div style={{ background: '#F8FAFC', borderRadius: '16px', padding: '20px', border: '1px solid #E2E8F0' }}>
+                                <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: 600, color: '#0F172A' }}>Through history we learn about:</p>
+                                <ul style={{ margin: 0, paddingLeft: '24px', color: '#64748B', fontSize: '16px', lineHeight: 1.8 }}>
+                                    <li>Ancient civilizations</li>
+                                    <li>Important rulers and leaders</li>
+                                    <li>Cultures and traditions</li>
+                                    <li>Changes in society over time</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: What Happened in the Past? */}
+                        <Section style={{ background: '#FFFDF0' }}>
+                            <SectionTitle emoji="🔍">What Happened in the Past?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '16px' }}>
+                                Historians study events that happened long ago. These events include:
+                            </p>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                {[
+                                    { text: 'The development of early villages and cities', icon: '🏘️' },
+                                    { text: 'The discovery of tools and farming', icon: '🛠️' },
+                                    { text: 'The rise and fall of kingdoms and empires', icon: '👑' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFFFF', borderRadius: '14px', padding: '16px 20px', border: '1px solid #FFF59D' }}>
+                                        <span style={{ fontSize: '24px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#334155', fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Where Did Events Happen? */}
+                        <Section>
+                            <SectionTitle emoji="🗺️">Where Did Events Happen?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                The <strong>location</strong> of events is important in history. Many ancient civilizations developed near <strong>rivers</strong> because rivers provided water, fertile soil, and transportation.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
+                                <div style={{ background: '#E3F2FD', padding: '20px', borderRadius: '16px', border: '1px solid #90CAF9' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#1565C0', fontSize: '16px' }}>🏛️ Indus Valley Civilization</h4>
+                                    <p style={{ margin: 0, color: '#334155', fontSize: '15px', lineHeight: 1.6 }}>Developed near the <strong>Indus River</strong>.</p>
+                                </div>
+                                <div style={{ background: '#FFF3E0', padding: '20px', borderRadius: '16px', border: '1px solid #FFCC80' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#E65100', fontSize: '16px' }}>🏺 Ancient Egyptian Civilization</h4>
+                                    <p style={{ margin: 0, color: '#334155', fontSize: '15px', lineHeight: 1.6 }}>Developed near the <strong>Nile River</strong>.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: How Do We Know About the Past? */}
+                        <Section style={{ background: '#F3E5F5' }}>
+                            <SectionTitle emoji="📚">How Do We Know About the Past?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Historians gather information about the past using different <strong>sources</strong>.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
+                                <div style={{ background: '#FFFFFF', padding: '24px', borderRadius: '20px', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }}>
+                                    <h4 style={{ margin: '0 0 12px', color: '#4A148C', fontSize: '18px', display: 'flex', alignItems: 'center', gap: '8px' }}>🏺 Archaeological Sources</h4>
+                                    <p style={{ margin: '0 0 8px', color: '#475569', fontSize: '15px', lineHeight: 1.6 }}>Objects left behind by people such as tools, pottery, coins, and buildings.</p>
+                                    <p style={{ margin: 0, color: '#7B1FA2', fontSize: '14px', fontStyle: 'italic' }}>Example: Ancient ruins and artifacts.</p>
+                                </div>
+                                <div style={{ background: '#FFFFFF', padding: '24px', borderRadius: '20px', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }}>
+                                    <h4 style={{ margin: '0 0 12px', color: '#4A148C', fontSize: '18px', display: 'flex', alignItems: 'center', gap: '8px' }}>📖 Literary Sources</h4>
+                                    <p style={{ margin: '0 0 8px', color: '#475569', fontSize: '15px', lineHeight: 1.6 }}>Written records such as books, manuscripts, and inscriptions.</p>
+                                    <p style={{ margin: 0, color: '#7B1FA2', fontSize: '14px', fontStyle: 'italic' }}>Example: Ancient texts and historical documents.</p>
+                                </div>
+                                <div style={{ background: '#FFFFFF', padding: '24px', borderRadius: '20px', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }}>
+                                    <h4 style={{ margin: '0 0 12px', color: '#4A148C', fontSize: '18px', display: 'flex', alignItems: 'center', gap: '8px' }}>🗣️ Oral Sources</h4>
+                                    <p style={{ margin: 0, color: '#475569', fontSize: '15px', lineHeight: 1.6 }}>Stories and traditions passed down through generations.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: When Did Events Happen? */}
+                        <Section>
+                            <SectionTitle emoji="⏳">When Did Events Happen?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                To understand history clearly, historians arrange events in <strong>chronological order</strong> (order of time). They use <strong>dates and timelines</strong> to show when events happened.
+                            </p>
+                            <div style={{ background: '#E8F5E9', padding: '20px', borderRadius: '16px', border: '1px solid #C8E6C9' }}>
+                                <h4 style={{ margin: '0 0 12px', color: '#2E7D32', fontSize: '16px' }}>Example Timeline:</h4>
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+                                    <span style={{ background: '#FFFFFF', padding: '10px 20px', borderRadius: '12px', fontWeight: 600, color: '#2E7D32', fontSize: '15px' }}>🪨 Stone Age</span>
+                                    <span style={{ fontSize: '20px', color: '#66BB6A' }}>→</span>
+                                    <span style={{ background: '#FFFFFF', padding: '10px 20px', borderRadius: '12px', fontWeight: 600, color: '#E65100', fontSize: '15px' }}>🥉 Bronze Age</span>
+                                    <span style={{ fontSize: '20px', color: '#66BB6A' }}>→</span>
+                                    <span style={{ background: '#FFFFFF', padding: '10px 20px', borderRadius: '12px', fontWeight: 600, color: '#37474F', fontSize: '15px' }}>⚔️ Iron Age</span>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Importance of Studying History */}
+                        <Section style={{ background: '#ECEFF1' }}>
+                            <SectionTitle emoji="💡">Importance of Studying History</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { text: 'Helps us understand our culture and traditions', icon: '🎭' },
+                                    { text: 'Teaches lessons from past events', icon: '📖' },
+                                    { text: 'Helps us understand how societies changed over time', icon: '🔄' },
+                                    { text: 'Connects the past with the present', icon: '🔗' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFFFF', borderRadius: '14px', padding: '16px 20px', border: '1px solid #E2E8F0' }}>
+                                        <span style={{ fontSize: '24px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#334155', fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="🤔">Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                                {[
+                                    { q: 'What is history?', a: 'History is the study of past events and people.' },
+                                    { q: 'Why did many ancient civilizations develop near rivers?', a: 'Because rivers provided water, fertile soil, and transportation.' },
+                                    { q: 'What are historical sources?', a: 'Sources are materials or evidence that help us learn about the past.' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ background: '#E8EAF6', borderRadius: '14px', padding: '18px', border: '1px solid #9FA8DA' }}>
+                                        <p style={{ fontSize: '15px', color: '#283593', fontWeight: 600, margin: '0 0 6px' }}>Q{i + 1}: {item.q}</p>
+                                        <p style={{ fontSize: '14px', color: '#3949AB', margin: 0 }}>✅ {item.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                {[
+                                    'Archaeologists study ancient objects and ruins to learn about the past.',
+                                    'Some ancient civilizations existed thousands of years ago.',
+                                    'Timelines help historians organize events in chronological order.'
+                                ].map((fact, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#E0F2F1', borderRadius: '14px', padding: '14px 18px', border: '1px solid #B2DFDB' }}>
+                                        <span style={{ fontSize: '22px' }}>⭐</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#00695C', lineHeight: 1.6 }}>{fact}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 9: Practice Exercises */}
+                        <Section>
+                            <SectionTitle emoji="📝">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define history.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Why is it important to study history?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What are archaeological sources?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Give two examples of literary sources.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What is a timeline?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why were rivers important for early civilizations?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 6 – SOCIAL STUDIES – THE EARLIEST PEOPLE
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'earliest-people' && (
+                    <>
+                        {/* Section 1: Who Were the Earliest People? */}
+                        <Section>
+                            <SectionTitle emoji="🏕️">Who Were the Earliest People?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Long ago, before cities and villages existed, the earliest humans lived as <strong>hunter-gatherers</strong>. They depended on nature for food and survival. Over time, humans learned new skills that led to the formation of <strong>early settlements and communities</strong>.
+                            </p>
+                            <div style={{ background: '#F8FAFC', borderRadius: '16px', padding: '20px', border: '1px solid #E2E8F0' }}>
+                                <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: 600, color: '#0F172A' }}>Early humans survived by:</p>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                                    {[
+                                        { text: 'Hunting animals', icon: '🏹' },
+                                        { text: 'Collecting fruits, nuts, and roots', icon: '🍎' },
+                                        { text: 'Fishing from rivers and lakes', icon: '🎣' }
+                                    ].map((item, i) => (
+                                        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', background: '#FFFFFF', borderRadius: '12px', padding: '12px 16px', border: '1px solid #E2E8F0' }}>
+                                            <span style={{ fontSize: '22px' }}>{item.icon}</span>
+                                            <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>{item.text}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: Life of Hunter-Gatherers */}
+                        <Section style={{ background: '#FFF8E1' }}>
+                            <SectionTitle emoji="🧑‍🤝‍🧑">Life of Hunter-Gatherers</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '16px' }}>
+                                Hunter-gatherers lived in <strong>small groups</strong> and depended on nature for survival.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px', marginBottom: '20px' }}>
+                                {[
+                                    { text: 'They moved frequently in search of food and water', icon: '🚶' },
+                                    { text: 'They lived in caves or temporary shelters', icon: '🪨' },
+                                    { text: 'They used simple tools made of stone, wood, or bones', icon: '🛠️' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFFFF', borderRadius: '14px', padding: '16px 20px', border: '1px solid #FFE082' }}>
+                                        <span style={{ fontSize: '24px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#334155', fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            <div style={{ background: '#FFFFFF', borderRadius: '16px', padding: '20px', border: '1px solid #FFE082' }}>
+                                <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: 600, color: '#E65100' }}>Examples of tools:</p>
+                                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                                    {['Stone axes', 'Spears', 'Arrowheads'].map((tool, i) => (
+                                        <span key={i} style={{ background: '#FFF3E0', padding: '8px 18px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, color: '#E65100', border: '1px solid #FFCC80' }}>{tool}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Discovery of Fire */}
+                        <Section>
+                            <SectionTitle emoji="🔥">Discovery of Fire</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                One of the most important discoveries made by early humans was <strong>fire</strong>. The discovery of fire greatly improved their way of life.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { text: 'Cook food', icon: '🍳', bg: '#FFEBEE', border: '#EF9A9A' },
+                                    { text: 'Stay warm in cold weather', icon: '🧣', bg: '#E3F2FD', border: '#90CAF9' },
+                                    { text: 'Protect from wild animals', icon: '🐻', bg: '#FFF3E0', border: '#FFCC80' },
+                                    { text: 'Provide light at night', icon: '🔮', bg: '#F3E5F5', border: '#CE93D8' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ background: item.bg, padding: '20px', borderRadius: '16px', border: `1px solid ${item.border}`, textAlign: 'center' }}>
+                                        <span style={{ fontSize: '32px', display: 'block', marginBottom: '10px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#334155', fontWeight: 600 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Stone Tools and Technology */}
+                        <Section style={{ background: '#ECEFF1' }}>
+                            <SectionTitle emoji="⚒️">Stone Tools and Technology</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Early humans made tools using stones, which is why this period is called the <strong>Stone Age</strong>.
+                            </p>
+                            <div style={{ background: '#FFFFFF', borderRadius: '16px', padding: '20px', border: '1px solid #CFD8DC' }}>
+                                <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: 600, color: '#37474F' }}>Common stone tools:</p>
+                                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                                    {[
+                                        { name: 'Hand axes', icon: '🪨' },
+                                        { name: 'Scrapers', icon: '🛠️' },
+                                        { name: 'Spears', icon: '🏹' }
+                                    ].map((tool, i) => (
+                                        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: '#ECEFF1', padding: '10px 18px', borderRadius: '14px', border: '1px solid #B0BEC5' }}>
+                                            <span style={{ fontSize: '20px' }}>{tool.icon}</span>
+                                            <span style={{ fontSize: '14px', fontWeight: 600, color: '#37474F' }}>{tool.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                                <p style={{ margin: '14px 0 0', fontSize: '14px', color: '#546E7A', lineHeight: 1.6 }}>These tools were used for hunting, cutting, and preparing food.</p>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Beginning of Farming */}
+                        <Section>
+                            <SectionTitle emoji="🌾">Beginning of Farming</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Over time, humans learned how to <strong>grow crops and domesticate animals</strong>. This marked the beginning of agriculture.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
+                                <div style={{ background: '#E8F5E9', padding: '20px', borderRadius: '16px', border: '1px solid #C8E6C9' }}>
+                                    <h4 style={{ margin: '0 0 12px', color: '#2E7D32', fontSize: '16px' }}>🌱 Early Crops</h4>
+                                    <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                                        {['Wheat', 'Barley', 'Rice'].map((crop, i) => (
+                                            <span key={i} style={{ background: '#FFFFFF', padding: '8px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, color: '#2E7D32', border: '1px solid #A5D6A7' }}>{crop}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div style={{ background: '#FFF3E0', padding: '20px', borderRadius: '16px', border: '1px solid #FFCC80' }}>
+                                    <h4 style={{ margin: '0 0 12px', color: '#E65100', fontSize: '16px' }}>🐑 Domesticated Animals</h4>
+                                    <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                                        {['Goats', 'Sheep', 'Cattle'].map((animal, i) => (
+                                            <span key={i} style={{ background: '#FFFFFF', padding: '8px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, color: '#E65100', border: '1px solid #FFCC80' }}>{animal}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Early Settlements */}
+                        <Section style={{ background: '#E8EAF6' }}>
+                            <SectionTitle emoji="🏡">Early Settlements</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                As farming developed, people began to live in <strong>permanent settlements</strong>. These early settlements later developed into villages and cities.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { text: 'Houses made of mud, wood, or stone', icon: '🏠' },
+                                    { text: 'Farming fields near villages', icon: '🌾' },
+                                    { text: 'Communities working together', icon: '🤝' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFFFF', borderRadius: '14px', padding: '16px 20px', border: '1px solid #C5CAE9' }}>
+                                        <span style={{ fontSize: '24px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#283593', fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Importance of Early Human Developments */}
+                        <Section>
+                            <SectionTitle emoji="💡">Importance of Early Human Developments</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { text: 'Discovery of fire improved survival', icon: '🔥' },
+                                    { text: 'Tool-making helped humans hunt and build', icon: '🛠️' },
+                                    { text: 'Farming led to stable communities', icon: '🌾' },
+                                    { text: 'Early settlements formed the basis of civilizations', icon: '🏙️' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#E0F7FA', borderRadius: '14px', padding: '16px 20px', border: '1px solid #80DEEA' }}>
+                                        <span style={{ fontSize: '24px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#006064', fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="🤔">Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                                {[
+                                    { q: 'Who were hunter-gatherers?', a: 'Hunter-gatherers were early humans who hunted animals and gathered plants for food.' },
+                                    { q: 'Why did early humans move from place to place?', a: 'They moved to find food and water.' },
+                                    { q: 'Why was the discovery of fire important?', a: 'Fire helped in cooking food, keeping warm, and protecting against animals.' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ background: '#E8EAF6', borderRadius: '14px', padding: '18px', border: '1px solid #9FA8DA' }}>
+                                        <p style={{ fontSize: '15px', color: '#283593', fontWeight: 600, margin: '0 0 6px' }}>Q{i + 1}: {item.q}</p>
+                                        <p style={{ fontSize: '14px', color: '#3949AB', margin: 0 }}>✅ {item.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 9: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                {[
+                                    'The Stone Age lasted for thousands of years.',
+                                    'Some of the earliest tools discovered by archaeologists are made of stone.',
+                                    'Early humans used caves as shelters.'
+                                ].map((fact, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFDE7', borderRadius: '14px', padding: '14px 18px', border: '1px solid #FFF176' }}>
+                                        <span style={{ fontSize: '22px' }}>⭐</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#F57F17', lineHeight: 1.6 }}>{fact}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 10: Practice Exercises */}
+                        <Section>
+                            <SectionTitle emoji="📝">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define hunter-gatherers.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name two tools used by early humans.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Why did early humans use fire?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is the Stone Age?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name two crops grown by early farmers.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why did early humans begin farming?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 6 – SOCIAL STUDIES – FROM HUNTING-GATHERING TO GROWING FOOD
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'hunting-gathering-to-growing-food' && (
+                    <>
+                        {/* Section 1: Life of Early Hunter-Gatherers */}
+                        <Section>
+                            <SectionTitle emoji="🏕️">Life of Early Hunter-Gatherers</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                In early times, humans survived mainly by <strong>hunting animals and gathering plants</strong> for food. Over time, they began to observe nature and learned how to grow crops and domesticate animals, leading to the beginning of <strong>farming and settled life</strong>.
+                            </p>
+                            <div style={{ background: '#F8FAFC', borderRadius: '16px', padding: '20px', border: '1px solid #E2E8F0' }}>
+                                <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: 600, color: '#0F172A' }}>Features of hunter-gatherer life:</p>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                                    {[
+                                        { text: 'They moved from place to place in search of food', icon: '🚶' },
+                                        { text: 'They lived in caves or temporary shelters', icon: '🪨' },
+                                        { text: 'They used simple tools made of stone, wood, or bone', icon: '🛠️' }
+                                    ].map((item, i) => (
+                                        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', background: '#FFFFFF', borderRadius: '12px', padding: '12px 16px', border: '1px solid #E2E8F0' }}>
+                                            <span style={{ fontSize: '22px' }}>{item.icon}</span>
+                                            <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>{item.text}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                            <div style={{ background: '#FFFFFF', borderRadius: '16px', padding: '20px', border: '1px solid #E2E8F0', marginTop: '16px' }}>
+                                <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: 600, color: '#E65100' }}>Tools used by hunter-gatherers:</p>
+                                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                                    {['Stone axes', 'Spears', 'Scrapers'].map((tool, i) => (
+                                        <span key={i} style={{ background: '#FFF3E0', padding: '8px 18px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, color: '#E65100', border: '1px solid #FFCC80' }}>{tool}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: Why Did Early Humans Move Frequently? */}
+                        <Section style={{ background: '#FFF8E1' }}>
+                            <SectionTitle emoji="🚶">Why Did Early Humans Move Frequently?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '16px' }}>
+                                Early humans moved from one place to another for several important reasons. Moving helped them find new food and better living conditions.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { text: 'Food sources were limited in one place', icon: '🍎', bg: '#FFEBEE', border: '#EF9A9A' },
+                                    { text: 'Animals moved from one area to another', icon: '🦌', bg: '#E3F2FD', border: '#90CAF9' },
+                                    { text: 'Seasonal changes affected food availability', icon: '🌤️', bg: '#E8F5E9', border: '#A5D6A7' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: item.bg, borderRadius: '14px', padding: '16px 20px', border: `1px solid ${item.border}` }}>
+                                        <span style={{ fontSize: '28px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#334155', fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Discovery of Farming */}
+                        <Section>
+                            <SectionTitle emoji="🌱">Discovery of Farming</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Over time, early humans noticed that <strong>plants grew from seeds</strong>. They began planting seeds and growing crops near their homes. This marked the beginning of <strong>agriculture</strong>.
+                            </p>
+                            <div style={{ background: '#E8F5E9', borderRadius: '16px', padding: '20px', border: '1px solid #C8E6C9' }}>
+                                <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: 600, color: '#2E7D32' }}>🌾 Some early crops included:</p>
+                                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                                    {['Wheat', 'Barley', 'Rice', 'Millets'].map((crop, i) => (
+                                        <span key={i} style={{ background: '#FFFFFF', padding: '10px 20px', borderRadius: '20px', fontSize: '15px', fontWeight: 600, color: '#2E7D32', border: '1px solid #A5D6A7' }}>{crop}</span>
+                                    ))}
+                                </div>
+                                <p style={{ margin: '14px 0 0', fontSize: '14px', color: '#388E3C', fontStyle: 'italic' }}>Farming provided a stable and reliable source of food.</p>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Domestication of Animals */}
+                        <Section style={{ background: '#FFF3E0' }}>
+                            <SectionTitle emoji="🐾">Domestication of Animals</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '16px' }}>
+                                Early humans also learned to <strong>domesticate animals</strong>. Domestication means taming animals and keeping them for human use.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
+                                <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #FFCC80' }}>
+                                    <h4 style={{ margin: '0 0 12px', color: '#E65100', fontSize: '16px' }}>🐕 Animals Domesticated</h4>
+                                    <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                                        {['Dogs', 'Goats', 'Sheep', 'Cattle'].map((animal, i) => (
+                                            <span key={i} style={{ background: '#FFF3E0', padding: '8px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, color: '#E65100', border: '1px solid #FFE0B2' }}>{animal}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #FFCC80' }}>
+                                    <h4 style={{ margin: '0 0 12px', color: '#E65100', fontSize: '16px' }}>🎁 Animals Provided</h4>
+                                    <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                                        {['Milk', 'Meat', 'Wool', 'Help in farming & transport'].map((item, i) => (
+                                            <span key={i} style={{ background: '#FFF3E0', padding: '8px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, color: '#BF360C', border: '1px solid #FFE0B2' }}>{item}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: The Beginning of Settled Life */}
+                        <Section>
+                            <SectionTitle emoji="🏡">The Beginning of Settled Life</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                As farming developed, people no longer needed to move constantly. They began living in <strong>permanent settlements</strong>. Villages began to develop near fertile land and water sources.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { text: 'Houses made of mud, wood, or stone', icon: '🏠' },
+                                    { text: 'Fields used for farming', icon: '🌾' },
+                                    { text: 'Communities living together', icon: '🤝' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#E8EAF6', borderRadius: '14px', padding: '16px 20px', border: '1px solid #C5CAE9' }}>
+                                        <span style={{ fontSize: '24px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#283593', fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Tools Used in Farming */}
+                        <Section style={{ background: '#ECEFF1' }}>
+                            <SectionTitle emoji="🔧">Tools Used in Farming</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Early farmers created new tools to help with agriculture. These tools made farming easier and more efficient.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { name: 'Sickles', desc: 'For cutting crops', icon: '🌾' },
+                                    { name: 'Ploughs', desc: 'For preparing land', icon: '🔧' },
+                                    { name: 'Grinding stones', desc: 'For processing grains', icon: '🪨' }
+                                ].map((tool, i) => (
+                                    <div key={i} style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #CFD8DC', textAlign: 'center' }}>
+                                        <span style={{ fontSize: '32px', display: 'block', marginBottom: '10px' }}>{tool.icon}</span>
+                                        <p style={{ margin: '0 0 4px', fontSize: '16px', fontWeight: 700, color: '#37474F' }}>{tool.name}</p>
+                                        <p style={{ margin: 0, fontSize: '13px', color: '#78909C' }}>{tool.desc}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Importance of Farming and Herding */}
+                        <Section>
+                            <SectionTitle emoji="💡">Importance of Farming and Herding</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { text: 'Provided a steady supply of food', icon: '🍞' },
+                                    { text: 'Allowed people to live in permanent homes', icon: '🏠' },
+                                    { text: 'Helped communities grow and develop', icon: '👥' },
+                                    { text: 'Led to the formation of villages and early civilizations', icon: '🏙️' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#E0F7FA', borderRadius: '14px', padding: '16px 20px', border: '1px solid #80DEEA' }}>
+                                        <span style={{ fontSize: '24px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#006064', fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="🤔">Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                                {[
+                                    { q: 'Who were hunter-gatherers?', a: 'People who hunted animals and gathered plants for food.' },
+                                    { q: 'What is domestication?', a: 'Domestication is the process of taming animals for human use.' },
+                                    { q: 'Why did farming lead to settled life?', a: 'Farming allowed people to produce food in one place, so they no longer needed to move constantly.' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ background: '#E8EAF6', borderRadius: '14px', padding: '18px', border: '1px solid #9FA8DA' }}>
+                                        <p style={{ fontSize: '15px', color: '#283593', fontWeight: 600, margin: '0 0 6px' }}>Q{i + 1}: {item.q}</p>
+                                        <p style={{ fontSize: '14px', color: '#3949AB', margin: 0 }}>✅ {item.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 9: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                {[
+                                    'The shift from hunting to farming is called the Agricultural Revolution.',
+                                    'Dogs were among the first animals to be domesticated.',
+                                    'Early farmers depended on rivers and fertile soil for agriculture.'
+                                ].map((fact, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFDE7', borderRadius: '14px', padding: '14px 18px', border: '1px solid #FFF176' }}>
+                                        <span style={{ fontSize: '22px' }}>⭐</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#F57F17', lineHeight: 1.6 }}>{fact}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 10: Practice Exercises */}
+                        <Section>
+                            <SectionTitle emoji="📝">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define hunter-gatherers.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Why did early humans move from place to place?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is agriculture?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Name two animals domesticated by early humans.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name two crops grown by early farmers.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why did early settlements develop near rivers?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 6 – SOCIAL STUDIES – IN THE EARLIEST CITIES
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'in-the-earliest-cities' && (
+                    <>
+                        {/* Section 1: Introduction & Discovery of Harappa */}
+                        <Section>
+                            <SectionTitle emoji="🏛️">The Discovery of Harappa</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Thousands of years ago, some of the first cities in the world developed along rivers. One of the earliest and most advanced civilizations was the <strong>Indus Valley Civilization</strong>, which included cities such as <strong>Harappa and Mohenjo-daro</strong>.
+                            </p>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                The city of <strong>Harappa</strong> was discovered by archaeologists in the <strong>1920s</strong> in present-day Pakistan.
+                            </p>
+                            <div style={{ background: '#F8FAFC', borderRadius: '16px', padding: '20px', border: '1px solid #E2E8F0' }}>
+                                <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: 600, color: '#0F172A' }}>🔍 Archaeologists found many remains such as:</p>
+                                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                                    {['Buildings', 'Tools', 'Pottery', 'Jewelry', 'Seals'].map((item, i) => (
+                                        <span key={i} style={{ background: '#EDE7F6', padding: '10px 20px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, color: '#4527A0', border: '1px solid #D1C4E9' }}>{item}</span>
+                                    ))}
+                                </div>
+                                <p style={{ margin: '14px 0 0', fontSize: '14px', color: '#5E35B1', fontStyle: 'italic' }}>These discoveries helped historians understand how people lived in ancient cities.</p>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: City Planning in Harappa */}
+                        <Section style={{ background: '#E8EAF6' }}>
+                            <SectionTitle emoji="🗺️">City Planning in Harappa</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '16px' }}>
+                                The cities of the Indus Valley Civilization were <strong>carefully planned</strong>. The drainage system was very advanced for that time, showing that the Harappans cared about cleanliness and sanitation.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { text: 'Straight roads forming a grid pattern', icon: '🛣️', bg: '#E3F2FD', border: '#90CAF9' },
+                                    { text: 'Houses made of baked bricks', icon: '🧱', bg: '#FFF3E0', border: '#FFCC80' },
+                                    { text: 'A strong drainage system', icon: '🚿', bg: '#E8F5E9', border: '#A5D6A7' },
+                                    { text: 'Public wells and bathrooms', icon: '🚰', bg: '#F3E5F5', border: '#CE93D8' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: item.bg, borderRadius: '14px', padding: '16px 20px', border: `1px solid ${item.border}` }}>
+                                        <span style={{ fontSize: '28px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#334155', fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 3: The Citadel and the Lower Town */}
+                        <Section>
+                            <SectionTitle emoji="🏰">The Citadel and the Lower Town</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+                                <div style={{ background: '#FFF8E1', padding: '24px', borderRadius: '16px', border: '2px solid #FFD54F' }}>
+                                    <h4 style={{ margin: '0 0 12px', color: '#F57F17', fontSize: '18px' }}>🏛️ The Citadel</h4>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                        The <strong>citadel</strong> was the upper part of the city, built on a raised platform. Important buildings and public structures were located here.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#E8F5E9', padding: '24px', borderRadius: '16px', border: '2px solid #81C784' }}>
+                                    <h4 style={{ margin: '0 0 12px', color: '#2E7D32', fontSize: '18px' }}>🏘️ The Lower Town</h4>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                        The <strong>lower town</strong> was where most people lived. Houses were arranged in blocks along the streets.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Daily Life in Harappan Cities */}
+                        <Section style={{ background: '#FFF3E0' }}>
+                            <SectionTitle emoji="🏡">Daily Life in Harappan Cities</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '16px' }}>
+                                People in Harappan cities lived organized and productive lives. They grew crops such as <strong>wheat, barley, and peas</strong> and kept animals like cattle, sheep, and goats.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { text: 'Farming', icon: '🌾' },
+                                    { text: 'Craft making', icon: '🎨' },
+                                    { text: 'Trading goods', icon: '🤝' },
+                                    { text: 'Building houses', icon: '🏗️' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFFFF', borderRadius: '14px', padding: '16px 20px', border: '1px solid #FFCC80' }}>
+                                        <span style={{ fontSize: '24px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#E65100', fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Crafts and Tools */}
+                        <Section>
+                            <SectionTitle emoji="🎨">Crafts and Tools</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Harappans were skilled craftsmen. Archaeologists also found <strong>seals</strong>, which were used for trade and communication.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { name: 'Jewelry', desc: 'From gold, silver, and beads', icon: '💎' },
+                                    { name: 'Pottery', desc: 'Decorative and functional', icon: '🏺' },
+                                    { name: 'Tools', desc: 'Made of copper and bronze', icon: '🔧' },
+                                    { name: 'Seals', desc: 'Used for trade & identification', icon: '📜' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ background: '#F3E5F5', padding: '20px', borderRadius: '16px', border: '1px solid #CE93D8', textAlign: 'center' }}>
+                                        <span style={{ fontSize: '32px', display: 'block', marginBottom: '10px' }}>{item.icon}</span>
+                                        <p style={{ margin: '0 0 4px', fontSize: '16px', fontWeight: 700, color: '#4A148C' }}>{item.name}</p>
+                                        <p style={{ margin: 0, fontSize: '13px', color: '#7B1FA2' }}>{item.desc}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Trade and Transport */}
+                        <Section style={{ background: '#E3F2FD' }}>
+                            <SectionTitle emoji="🚢">Trade and Transport</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '16px' }}>
+                                The Harappans were active traders. Trade took place both within the region and with distant lands such as <strong>Mesopotamia</strong>.
+                            </p>
+                            <div style={{ background: '#FFFFFF', borderRadius: '16px', padding: '20px', border: '1px solid #90CAF9' }}>
+                                <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: 600, color: '#1565C0' }}>📦 Goods traded by Harappans:</p>
+                                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                                    {['Cotton cloth', 'Jewelry', 'Grains', 'Pottery'].map((item, i) => (
+                                        <span key={i} style={{ background: '#E3F2FD', padding: '10px 20px', borderRadius: '20px', fontSize: '14px', fontWeight: 600, color: '#1565C0', border: '1px solid #90CAF9' }}>{item}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Importance of Early Cities */}
+                        <Section>
+                            <SectionTitle emoji="💡">Importance of Early Cities</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { text: 'Showed advanced urban planning', icon: '🗺️' },
+                                    { text: 'Developed trade and craft industries', icon: '🏭' },
+                                    { text: 'Encouraged social organization and cooperation', icon: '👥' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#E0F7FA', borderRadius: '14px', padding: '16px 20px', border: '1px solid #80DEEA' }}>
+                                        <span style={{ fontSize: '24px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#006064', fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            <p style={{ fontSize: '15px', color: '#00695C', fontStyle: 'italic', marginTop: '16px', textAlign: 'center' }}>
+                                The Indus Valley cities were among the first examples of organized urban life in human history.
+                            </p>
+                        </Section>
+
+                        {/* Section 8: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="🤔">Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                                {[
+                                    { q: 'What is the Indus Valley Civilization?', a: 'It is one of the earliest civilizations known for its well-planned cities such as Harappa and Mohenjo-daro.' },
+                                    { q: 'Why were Harappan cities well organized?', a: 'They had planned roads, drainage systems, and brick houses.' },
+                                    { q: 'What were Harappan seals used for?', a: 'Seals were used for trade and identification.' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ background: '#E8EAF6', borderRadius: '14px', padding: '18px', border: '1px solid #9FA8DA' }}>
+                                        <p style={{ fontSize: '15px', color: '#283593', fontWeight: 600, margin: '0 0 6px' }}>Q{i + 1}: {item.q}</p>
+                                        <p style={{ fontSize: '14px', color: '#3949AB', margin: 0 }}>✅ {item.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 9: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                {[
+                                    'The Indus Valley Civilization existed around 2500 BCE.',
+                                    'Harappan cities had one of the earliest drainage systems in the world.',
+                                    'Cotton was first grown and used for clothing in the Indus Valley.'
+                                ].map((fact, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFDE7', borderRadius: '14px', padding: '14px 18px', border: '1px solid #FFF176' }}>
+                                        <span style={{ fontSize: '22px' }}>⭐</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#F57F17', lineHeight: 1.6 }}>{fact}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 10: Practice Exercises */}
+                        <Section>
+                            <SectionTitle emoji="📝">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Where was Harappa discovered?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. What were the main features of Harappan city planning?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What crops did Harappan people grow?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is the citadel?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name two crafts practiced by Harappans.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why were seals important in Harappan trade?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* ─────────────────────────────────────────────────────────────────────────
                     CLASS 4 – SOCIAL STUDIES – PHYSICAL FEATURES OF EARTH
                 ─────────────────────────────────────────────────────────────────────────── */}
                 {classId === '4' && chapterId === 'physical-features-of-earth' && (
@@ -35193,6 +36265,396 @@ const LessonPage = () => {
                                 <p style={{ fontSize: '17px', color: '#FFFFFF', fontWeight: 600, margin: 0 }}>
                                     🌍 Landforms shape our Earth and influence how we live!
                                 </p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 6 – SOCIAL STUDIES – WHAT BOOKS AND BURIALS TELL US
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'what-books-and-burials-tell-us' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section>
+                            <SectionTitle emoji="📜">What Books and Burials Tell Us</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Historians learn about the past using different sources such as <strong>ancient books, inscriptions, and burial sites</strong>. Important information about early Indian society comes from the <strong>Vedas</strong> and from <strong>megalithic burial sites</strong>.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
+                                <div style={{ background: '#FFF8E1', padding: '24px', borderRadius: '16px', border: '2px solid #FFD54F' }}>
+                                    <h4 style={{ margin: '0 0 12px', color: '#F57F17', fontSize: '18px' }}>📖 The Vedas</h4>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                        Some of the oldest written texts containing information about early society and beliefs.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#ECEFF1', padding: '24px', borderRadius: '16px', border: '2px solid #B0BEC5' }}>
+                                    <h4 style={{ margin: '0 0 12px', color: '#455A64', fontSize: '18px' }}>🪨 Burial Sites</h4>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                        Places where archaeologists find objects placed with the dead, revealing past lives.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: Ancient Books and the Vedas */}
+                        <Section style={{ background: '#F3E5F5' }}>
+                            <SectionTitle emoji="📚">Ancient Books and the Vedas</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '16px' }}>
+                                The <strong>Vedas</strong> are among the oldest sacred texts of India. They were composed in <strong>Sanskrit</strong> and were passed down orally for many generations before being written down.
+                            </p>
+                            <div style={{ background: '#FFFFFF', borderRadius: '16px', padding: '20px', border: '1px solid #CE93D8' }}>
+                                <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: 600, color: '#6A1B9A' }}>The four main Vedas:</p>
+                                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                                    {['Rigveda', 'Samaveda', 'Yajurveda', 'Atharvaveda'].map((veda, i) => (
+                                        <span key={i} style={{ background: '#F3E5F5', padding: '10px 20px', borderRadius: '20px', fontSize: '15px', fontWeight: 600, color: '#4A148C', border: '1px solid #CE93D8' }}>{veda}</span>
+                                    ))}
+                                </div>
+                                <p style={{ margin: '14px 0 0', fontSize: '14px', color: '#7B1FA2', fontStyle: 'italic' }}>The <strong>Rigveda</strong> is the oldest Veda and contains hymns praising various gods and natural forces.</p>
+                            </div>
+                            <div style={{ marginTop: '20px' }}>
+                                <p style={{ margin: '0 0 12px', fontSize: '15px', fontWeight: 600, color: '#4A148C' }}>The Vedas provide information about:</p>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
+                                    {['Early society and traditions', 'Religious beliefs and rituals', 'Daily life of people', 'Early forms of governance'].map((item, i) => (
+                                        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', background: '#FFFFFF', padding: '12px', borderRadius: '10px', border: '1px solid #E1BEE7' }}>
+                                            <span>✅</span>
+                                            <span style={{ fontSize: '14px', color: '#334155' }}>{item}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Life in the Vedic Period */}
+                        <Section>
+                            <SectionTitle emoji="🌱">Life in the Vedic Period</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                During the Vedic period, people lived in small communities and villages. Their lives centered around nature and simple occupations.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { text: 'Depended on farming and cattle rearing', icon: '🌾', bg: '#E8F5E9', color: '#2E7D32' },
+                                    { text: 'Cattle were a sign of wealth', icon: '🐄', bg: '#FFF3E0', color: '#E65100' },
+                                    { text: 'Worshipped natural forces (fire, wind, rain)', icon: '🔥', bg: '#FFEBEE', color: '#C62828' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: item.bg, borderRadius: '14px', padding: '16px 20px', border: '1px solid ' + item.color + '40' }}>
+                                        <span style={{ fontSize: '28px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: item.color, fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Burial Practices */}
+                        <Section style={{ background: '#EFEBE9' }}>
+                            <SectionTitle emoji="⛏️">Burial Practices</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Archaeologists have discovered many <strong>burial sites</strong> that reveal how ancient people treated their dead. Practices often included placing objects with the body, helping archaeologists understand social status and daily life.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { name: 'Pottery', icon: '🏺' },
+                                    { name: 'Tools', icon: '🔧' },
+                                    { name: 'Weapons', icon: '⚔️' },
+                                    { name: 'Ornaments', icon: '💍' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #D7CCC8', textAlign: 'center' }}>
+                                        <span style={{ fontSize: '32px', display: 'block', marginBottom: '10px' }}>{item.icon}</span>
+                                        <p style={{ margin: '0', fontSize: '15px', fontWeight: 600, color: '#5D4037' }}>{item.name}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Megaliths */}
+                        <Section>
+                            <SectionTitle emoji="🪨">Megaliths</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '16px' }}>
+                                <strong>Megaliths</strong> are large stone structures built over burial sites. The word "megalith" means <strong>large stone</strong>. These are found in many parts of India, especially in <strong>South India</strong>.
+                            </p>
+                            <div style={{ background: '#ECEFF1', borderRadius: '16px', padding: '24px', border: '1px solid #CFD8DC' }}>
+                                <p style={{ margin: '0 0 16px', fontSize: '17px', fontWeight: 600, color: '#37474F' }}>Features of megalithic burials:</p>
+                                <ul style={{ margin: 0, paddingLeft: '24px', color: '#455A64', fontSize: '15px', lineHeight: 1.8, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                    <li>Large stone circles or chambers</li>
+                                    <li>Burial pits containing skeletons</li>
+                                    <li>Objects such as iron tools and pottery buried alongside</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: What Burials Tell Us */}
+                        <Section style={{ background: '#F1F8E9' }}>
+                            <SectionTitle emoji="🔍">What Burials Tell Us About the Past</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Burial sites give valuable information about ancient people. Some graves contain many valuable objects, suggesting that the buried person may have been important or wealthy.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { text: 'Social differences among people', icon: '👥' },
+                                    { text: 'Tools and technology used in ancient times', icon: '⚙️' },
+                                    { text: 'Religious beliefs about life and death', icon: '🕊️' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFFFF', borderRadius: '14px', padding: '16px 20px', border: '1px solid #C5E1A5' }}>
+                                        <span style={{ fontSize: '24px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#33691E', fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Importance of Books and Burials */}
+                        <Section>
+                            <SectionTitle emoji="💡">Importance of Books and Burials</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { text: 'Provide evidence about ancient cultures', icon: '🏛️' },
+                                    { text: 'Help historians understand beliefs and traditions', icon: '🧠' },
+                                    { text: 'Reveal information about daily life and social structure', icon: '🏡' },
+                                    { text: 'Help reconstruct the history of early civilizations', icon: '⏳' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#E3F2FD', borderRadius: '14px', padding: '16px 20px', border: '1px solid #90CAF9' }}>
+                                        <span style={{ fontSize: '24px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#1565C0', fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="🤔">Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                                {[
+                                    { q: 'What are the Vedas?', a: 'The Vedas are ancient sacred texts that provide information about early Indian society and beliefs.' },
+                                    { q: 'What are megaliths?', a: 'Megaliths are large stone structures built over burial sites.' },
+                                    { q: 'Why do archaeologists study burial sites?', a: 'Burial sites provide information about ancient culture, tools, and social life.' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ background: '#E8EAF6', borderRadius: '14px', padding: '18px', border: '1px solid #9FA8DA' }}>
+                                        <p style={{ fontSize: '15px', color: '#283593', fontWeight: 600, margin: '0 0 6px' }}>Q{i + 1}: {item.q}</p>
+                                        <p style={{ fontSize: '14px', color: '#3949AB', margin: 0 }}>✅ {item.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 9: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                {[
+                                    'The Rigveda is one of the oldest known texts in the world.',
+                                    'Megalithic burial sites have been discovered across many parts of India.',
+                                    'Archaeologists use artifacts found in graves to study ancient societies.'
+                                ].map((fact, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFDE7', borderRadius: '14px', padding: '14px 18px', border: '1px solid #FFF176' }}>
+                                        <span style={{ fontSize: '22px' }}>⭐</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#F57F17', lineHeight: 1.6 }}>{fact}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 10: Practice Exercises */}
+                        <Section>
+                            <SectionTitle emoji="📝">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Name the four Vedas.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. What language were the Vedas written in?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What are megaliths?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Name two objects found in ancient burial sites.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Why are burial sites important for historians?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. What do the Vedas tell us about early societies?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* ─────────────────────────────────────────────────────────────────────────
+                    CLASS 6 – SOCIAL STUDIES – THE EARTH IN THE SOLAR SYSTEM
+                ─────────────────────────────────────────────────────────────────────────── */}
+                {classId === '6' && chapterId === 'the-earth-in-the-solar-system' && (
+                    <>
+                        {/* Section 1: Introduction & The Solar System */}
+                        <Section>
+                            <SectionTitle emoji="🌌">The Solar System</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Our planet Earth is a part of a vast system in space called the <strong>Solar System</strong>. It consists of the Sun and all the celestial bodies that revolve around it due to gravity.
+                            </p>
+                            <div style={{ background: '#F8FAFC', borderRadius: '16px', padding: '20px', border: '1px solid #E2E8F0' }}>
+                                <p style={{ margin: '0 0 12px', fontSize: '16px', fontWeight: 600, color: '#0F172A' }}>🪐 Main components of the Solar System:</p>
+                                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                                    {[
+                                        { name: 'The Sun', icon: '☀️' },
+                                        { name: 'Planets', icon: '🌍' },
+                                        { name: 'Moons', icon: '🌕' },
+                                        { name: 'Asteroids', icon: '🪨' },
+                                        { name: 'Comets', icon: '☄️' },
+                                        { name: 'Meteoroids', icon: '✨' }
+                                    ].map((item, i) => (
+                                        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: '#EDE7F6', padding: '10px 18px', borderRadius: '20px', border: '1px solid #D1C4E9' }}>
+                                            <span style={{ fontSize: '18px' }}>{item.icon}</span>
+                                            <span style={{ fontSize: '14px', fontWeight: 600, color: '#4527A0' }}>{item.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                                <p style={{ margin: '14px 0 0', fontSize: '14px', color: '#5E35B1', fontStyle: 'italic' }}>These objects move in fixed paths called <strong>orbits</strong> around the Sun.</p>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: The Sun */}
+                        <Section style={{ background: '#FFF3E0' }}>
+                            <SectionTitle emoji="☀️">The Sun</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '16px' }}>
+                                The <strong>Sun</strong> is a huge ball of hot gases that provides <strong>heat and light</strong> to the planets. Without the Sun, life on Earth would not be possible.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { text: 'Center of the Solar System', icon: '🎯' },
+                                    { text: 'Main source of energy for Earth', icon: '⚡' },
+                                    { text: 'All planets revolve around it', icon: '🔄' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFFFF', borderRadius: '14px', padding: '16px 20px', border: '1px solid #FFCC80' }}>
+                                        <span style={{ fontSize: '24px' }}>{item.icon}</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#E65100', fontWeight: 500 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Planets */}
+                        <Section>
+                            <SectionTitle emoji="🪐">The Eight Planets</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginBottom: '20px' }}>
+                                Planets are large celestial bodies that revolve around the Sun in fixed paths called <strong>orbits</strong>.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: '16px' }}>
+                                {[
+                                    { name: 'Mercury', bg: '#F5F5F5', border: '#E0E0E0' },
+                                    { name: 'Venus', bg: '#FFF3E0', border: '#FFE0B2' },
+                                    { name: 'Earth', bg: '#E3F2FD', border: '#BBDEFB' },
+                                    { name: 'Mars', bg: '#FFEBEE', border: '#FFCDD2' },
+                                    { name: 'Jupiter', bg: '#FFF8E1', border: '#FFECB3' },
+                                    { name: 'Saturn', bg: '#FFFDE7', border: '#FFF59D' },
+                                    { name: 'Uranus', bg: '#E0F7FA', border: '#B2EBF2' },
+                                    { name: 'Neptune', bg: '#E8EAF6', border: '#C5CAE9' }
+                                ].map((planet, i) => (
+                                    <div key={i} style={{ background: planet.bg, padding: '16px', borderRadius: '16px', border: `2px solid ${planet.border}`, textAlign: 'center' }}>
+                                        <span style={{ fontSize: '20px', fontWeight: 700, color: '#37474F' }}>{i + 1}</span>
+                                        <p style={{ margin: '8px 0 0', fontSize: '15px', fontWeight: 600, color: '#455A64' }}>{planet.name}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Earth and the Moon */}
+                        <Section style={{ background: '#E3F2FD' }}>
+                            <SectionTitle emoji="🌍">Earth – Our Home Planet</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+                                <div style={{ background: '#FFFFFF', padding: '24px', borderRadius: '16px', border: '2px solid #90CAF9' }}>
+                                    <h4 style={{ margin: '0 0 12px', color: '#1565C0', fontSize: '18px' }}>💧 Why Earth supports life</h4>
+                                    <ul style={{ margin: 0, paddingLeft: '24px', color: '#1976D2', fontSize: '15px', lineHeight: 1.8 }}>
+                                        <li>Presence of air (oxygen)</li>
+                                        <li>Availability of water</li>
+                                        <li>Suitable temperature</li>
+                                    </ul>
+                                    <p style={{ margin: '12px 0 0', fontSize: '14px', color: '#0D47A1', fontStyle: 'italic' }}>Known as the <strong>Blue Planet</strong> because most of it is covered with water.</p>
+                                </div>
+                                <div style={{ background: '#F8F9FA', padding: '24px', borderRadius: '16px', border: '2px solid #DEE2E6' }}>
+                                    <h4 style={{ margin: '0 0 12px', color: '#495057', fontSize: '18px' }}>🌕 The Moon</h4>
+                                    <ul style={{ margin: 0, paddingLeft: '24px', color: '#6C757D', fontSize: '15px', lineHeight: 1.8 }}>
+                                        <li>Earth's natural satellite</li>
+                                        <li>Reflects light from the Sun</li>
+                                        <li>Has no air or water</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 5: Stars, Asteroids, Comets & Meteoroids */}
+                        <Section>
+                            <SectionTitle emoji="⭐">Other Celestial Bodies</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
+                                <div style={{ background: '#FFFDE7', padding: '20px', borderRadius: '14px', border: '1px solid #FFF59D' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#F57F17', fontSize: '16px' }}>⭐ Stars</h4>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#F9A825', lineHeight: 1.6 }}>Huge balls of hot gases producing light and heat. Groups of stars form <strong>constellations</strong>.</p>
+                                </div>
+                                <div style={{ background: '#EFEBE9', padding: '20px', borderRadius: '14px', border: '1px solid #D7CCC8' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#5D4037', fontSize: '16px' }}>🪨 Asteroids</h4>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#6D4C41', lineHeight: 1.6 }}>Small rocky objects. Mostly found in the asteroid belt between Mars and Jupiter.</p>
+                                </div>
+                                <div style={{ background: '#E0F7FA', padding: '20px', borderRadius: '14px', border: '1px solid #B2EBF2' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#00838F', fontSize: '16px' }}>☄️ Comets</h4>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#0097A7', lineHeight: 1.6 }}>Icy bodies that develop a bright tail when they come close to the Sun.</p>
+                                </div>
+                                <div style={{ background: '#FCE4EC', padding: '20px', borderRadius: '14px', border: '1px solid #F8BBD0' }}>
+                                    <h4 style={{ margin: '0 0 8px', color: '#C2185B', fontSize: '16px' }}>✨ Meteoroids</h4>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#D81B60', lineHeight: 1.6 }}>Small pieces of rocks in space. Burn in Earth's atmosphere as <strong>shooting stars</strong>.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Importance of the Solar System */}
+                        <Section style={{ background: '#E8F5E9' }}>
+                            <SectionTitle emoji="💡">Importance of the Solar System</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                {[
+                                    'Helps us understand Earth\'s position in space',
+                                    'Provides energy and light from the Sun',
+                                    'Helps scientists study planets and celestial bodies'
+                                ].map((item, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', background: '#FFFFFF', padding: '14px 20px', borderRadius: '12px', border: '1px solid #C8E6C9' }}>
+                                        <span>✅</span>
+                                        <span style={{ fontSize: '15px', color: '#2E7D32', fontWeight: 500 }}>{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 7: Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="🤔">Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                                {[
+                                    { q: 'What is the Solar System?', a: 'The Solar System is the system consisting of the Sun and all celestial bodies that revolve around it.' },
+                                    { q: 'Why is Earth called the Blue Planet?', a: 'Because most of its surface is covered with water.' },
+                                    { q: 'What is a natural satellite?', a: 'A natural satellite is a celestial body that revolves around a planet, such as the Moon around Earth.' }
+                                ].map((item, i) => (
+                                    <div key={i} style={{ background: '#E8EAF6', borderRadius: '14px', padding: '18px', border: '1px solid #9FA8DA' }}>
+                                        <p style={{ fontSize: '15px', color: '#283593', fontWeight: 600, margin: '0 0 6px' }}>Q{i + 1}: {item.q}</p>
+                                        <p style={{ fontSize: '14px', color: '#3949AB', margin: 0 }}>✅ {item.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 8: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                {[
+                                    'The Solar System formed about 4.6 billion years ago.',
+                                    'Jupiter is the largest planet in the Solar System.',
+                                    'Mercury is the closest planet to the Sun.'
+                                ].map((fact, i) => (
+                                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#FFFDE7', borderRadius: '14px', padding: '14px 18px', border: '1px solid #FFF176' }}>
+                                        <span style={{ fontSize: '22px' }}>⭐</span>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#F57F17', lineHeight: 1.6 }}>{fact}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+
+                        {/* Section 9: Practice Exercises */}
+                        <Section>
+                            <SectionTitle emoji="📝">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What is the Solar System?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name the eight planets of the Solar System.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Why is Earth suitable for life?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is the Moon?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What are asteroids?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. What are stars?</p>
                             </div>
                         </Section>
                     </>
@@ -36365,6 +37827,374 @@ const LessonPage = () => {
                             <div style={{ background: 'linear-gradient(135deg, #FF9800 0%, #F57C00 100%)', borderRadius: '16px', padding: '20px', textAlign: 'center', marginTop: '20px' }}>
                                 <p style={{ fontSize: '17px', color: '#FFFFFF', fontWeight: 600, margin: 0 }}>
                                     🎉 Celebrate every festival with love, respect every culture, and spread happiness everywhere!
+                                </p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – SOCIAL STUDIES – THE EARTH IN THE SOLAR SYSTEM */}
+                {classId === '6' && chapterId === 'earth-in-solar-system' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🌍">The Earth in the Solar System</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Our Earth is a part of a vast universe filled with many celestial bodies. It belongs to the <strong>Solar System</strong>, which includes the Sun, planets, moons, asteroids, and other objects in space. The Sun is at the center, and all the planets revolve around it. In this lesson, students will learn about <strong>planets, stars, asteroids, and Earth's place in space</strong>.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: The Solar System */}
+                        <Section>
+                            <SectionTitle emoji="🪐">The Solar System</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                The <strong>Solar System</strong> consists of the Sun and all the celestial bodies that move around it.
+                            </p>
+                            <h4 style={{ fontSize: '18px', color: '#1E293B', fontWeight: 700, marginTop: '20px' }}>Main components of the Solar System:</h4>
+                            <ul style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginTop: '10px' }}>
+                                <li><strong>The Sun</strong></li>
+                                <li><strong>Planets</strong></li>
+                                <li><strong>Moons</strong> (natural satellites)</li>
+                                <li><strong>Asteroids</strong></li>
+                                <li><strong>Comets</strong></li>
+                                <li><strong>Meteoroids</strong></li>
+                            </ul>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginTop: '10px' }}>
+                                All these bodies move in fixed paths called <strong>orbits</strong>.
+                            </p>
+                        </Section>
+
+                        {/* Section 3: The Sun */}
+                        <Section>
+                            <SectionTitle emoji="☀️">The Sun</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                The <strong>Sun</strong> is a huge ball of hot gases and is the <strong>main source of heat and light</strong> for all planets.
+                            </p>
+                            <h4 style={{ fontSize: '18px', color: '#1E293B', fontWeight: 700, marginTop: '20px' }}>Important facts:</h4>
+                            <ul style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginTop: '10px' }}>
+                                <li>It is at the center of the Solar System.</li>
+                                <li>It provides the pulling force (gravity) that binds the Solar System together.</li>
+                                <li>It is about 150 million km away from the Earth.</li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 4: Planets */}
+                        <Section>
+                            <SectionTitle emoji="🌎">Planets</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                There are <strong>eight planets</strong> in our Solar System. They do not have their own heat or light; they reflect the light of the Sun.
+                            </p>
+                            <h4 style={{ fontSize: '18px', color: '#1E293B', fontWeight: 700, marginTop: '20px' }}>Order of planets from the Sun:</h4>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '16px', marginTop: '16px' }}>
+                                <div style={{ background: '#F1F5F9', padding: '12px', borderRadius: '8px', textAlign: 'center' }}>1. Mercury</div>
+                                <div style={{ background: '#FFF3E0', padding: '12px', borderRadius: '8px', textAlign: 'center' }}>2. Venus</div>
+                                <div style={{ background: '#E3F2FD', padding: '12px', borderRadius: '8px', textAlign: 'center' }}>3. Earth</div>
+                                <div style={{ background: '#FFEBEE', padding: '12px', borderRadius: '8px', textAlign: 'center' }}>4. Mars</div>
+                                <div style={{ background: '#FFF8E1', padding: '12px', borderRadius: '8px', textAlign: 'center' }}>5. Jupiter</div>
+                                <div style={{ background: '#F3E5F5', padding: '12px', borderRadius: '8px', textAlign: 'center' }}>6. Saturn</div>
+                                <div style={{ background: '#E0F7FA', padding: '12px', borderRadius: '8px', textAlign: 'center' }}>7. Uranus</div>
+                                <div style={{ background: '#E8EAF6', padding: '12px', borderRadius: '8px', textAlign: 'center' }}>8. Neptune</div>
+                            </div>
+                            <div style={{ background: '#FEF3C7', borderRadius: '12px', padding: '16px', marginTop: '16px', border: '1px solid #FBBF24' }}>
+                                <p style={{ fontSize: '15px', color: '#B45309', margin: 0 }}>
+                                    💡 <strong>Trick to remember:</strong> My Very Efficient Mother Just Served Us Nuts!
+                                </p>
+                            </div>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginTop: '16px' }}>
+                                <strong>Venus</strong> is considered 'Earth’s twin' because its size and shape are very much similar to that of the Earth.
+                            </p>
+                        </Section>
+
+                        {/* Section 5: The Earth */}
+                        <Section>
+                            <SectionTitle emoji="🌍">The Earth</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                The <strong>Earth</strong> is the third nearest planet to the Sun and the fifth largest planet.
+                            </p>
+                            <ul style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginTop: '10px' }}>
+                                <li>It is slightly flattened at the poles, so its shape is called a <strong>Geoid</strong> (Earth-like shape).</li>
+                                <li>It is the only planet known to support life because of air, water, and suitable temperature.</li>
+                                <li>From space, the Earth appears blue because two-thirds of its surface is covered by water. Therefore, it is called a <strong>blue planet</strong>.</li>
+                            </ul>
+                        </Section>
+                        
+                        {/* Section 6: The Moon */}
+                        <Section>
+                            <SectionTitle emoji="🌕">The Moon</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                The <strong>Moon</strong> is Earth’s only natural satellite.
+                            </p>
+                            <ul style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginTop: '10px' }}>
+                                <li>It moves around the Earth in about 27 days.</li>
+                                <li>It does not have conditions favourable for life.</li>
+                                <li>The surface of the moon has mountains, plains and depressions.</li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 7: Stars, Constellations, Asteroids */}
+                        <Section>
+                            <SectionTitle emoji="✨">Stars, Constellations, Asteroids</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginTop: '20px' }}>
+                                <div style={{ background: '#F8FAFC', borderRadius: '16px', padding: '20px', border: '2px solid #E2E8F0' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#0F172A', fontWeight: 700, margin: '0 0 8px 0' }}>⭐ Stars</h4>
+                                    <p style={{ fontSize: '14px', color: '#334155', margin: 0 }}>Stars are huge balls of hot, glowing gases that produce their own heat and light. The Sun is also a star.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', borderRadius: '16px', padding: '20px', border: '2px solid #E2E8F0' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#0F172A', fontWeight: 700, margin: '0 0 8px 0' }}>🌌 Constellations</h4>
+                                    <p style={{ fontSize: '14px', color: '#334155', margin: 0 }}>Various patterns formed by different groups of stars are called constellations. For example, <strong>Ursa Major</strong> or the Big Bear. The Saptarishi is a part of it and helps locate the Pole Star.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', borderRadius: '16px', padding: '20px', border: '2px solid #E2E8F0' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#0F172A', fontWeight: 700, margin: '0 0 8px 0' }}>🪨 Asteroids & Meteoroids</h4>
+                                    <p style={{ fontSize: '14px', color: '#334155', margin: 0 }}>Asteroids are tiny rocky bodies revolving around the sun, found mainly between Mars and Jupiter. Meteoroids are small pieces of rocks.</p>
+                                </div>
+                             </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – SOCIAL STUDIES – GLOBE: LATITUDES AND LONGITUDES */}
+                {classId === '6' && chapterId === 'globe-latitudes-longitudes' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🌐">Globe: Latitudes and Longitudes</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                To locate places accurately on Earth, geographers use a system of <strong>imaginary lines called latitudes and longitudes</strong>. These lines form a <strong>grid system</strong> on the globe. In this lesson, students will learn about <strong>latitudes, longitudes, the equator, and time zones</strong>.
+                            </p>
+                            <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', marginTop: '20px' }}>
+                                <h4 style={{ fontSize: '18px', color: '#1E293B', margin: '0 0 12px 0' }}>🌍 What is a Globe?</h4>
+                                <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                    A <strong>globe</strong> is a three-dimensional model of the Earth. Globes help us understand the Earth's geography better than flat maps because they show the true shape of the Earth, display continents and oceans correctly, and show imaginary lines used for locating places.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: Latitudes */}
+                        <Section>
+                            <SectionTitle emoji="➖">Latitudes and the Equator</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                <strong>Latitudes</strong> are imaginary horizontal lines drawn from east to west around the Earth. They run parallel to each other, measure distance north or south of the Equator, and are measured in degrees (°).
+                            </p>
+                            <div style={{ background: '#FFF3E0', padding: '16px', borderRadius: '12px', border: '1px solid #FFE0B2', marginTop: '20px' }}>
+                                <h4 style={{ fontSize: '18px', color: '#E65100', margin: '0 0 12px 0' }}>📍 The Equator</h4>
+                                <ul style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0, paddingLeft: '20px' }}>
+                                    <li>It is the most important latitude, located at <strong>0° latitude</strong>.</li>
+                                    <li>It divides the Earth into the <strong>Northern and Southern Hemispheres</strong>.</li>
+                                    <li>It receives direct sunlight throughout the year.</li>
+                                </ul>
+                            </div>
+                            
+                            <h4 style={{ fontSize: '18px', color: '#1E293B', fontWeight: 700, marginTop: '24px' }}>Other Important Latitudes:</h4>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginTop: '16px' }}>
+                                <div style={{ background: '#FFEBEE', padding: '16px', borderRadius: '12px', textAlign: 'center', border: '1px solid #FFCDD2' }}>
+                                    <strong>Tropic of Cancer</strong><br />23½° North
+                                </div>
+                                <div style={{ background: '#E8F5E9', padding: '16px', borderRadius: '12px', textAlign: 'center', border: '1px solid #C8E6C9' }}>
+                                    <strong>Tropic of Capricorn</strong><br />23½° South
+                                </div>
+                                <div style={{ background: '#E3F2FD', padding: '16px', borderRadius: '12px', textAlign: 'center', border: '1px solid #BBDEFB' }}>
+                                    <strong>Arctic Circle</strong><br />66½° North
+                                </div>
+                                <div style={{ background: '#F3E5F5', padding: '16px', borderRadius: '12px', textAlign: 'center', border: '1px solid #E1BEE7' }}>
+                                    <strong>Antarctic Circle</strong><br />66½° South
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Longitudes */}
+                        <Section>
+                            <SectionTitle emoji="📏">Longitudes and the Prime Meridian</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                <strong>Longitudes</strong> are imaginary vertical lines that run from the North Pole to the South Pole. They measure distance east or west of the Prime Meridian, are measured in degrees (°), and unlike latitudes, they are not parallel and meet at the poles.
+                            </p>
+                            <div style={{ background: '#E8EAF6', padding: '16px', borderRadius: '12px', border: '1px solid #C5CAE9', marginTop: '20px' }}>
+                                <h4 style={{ fontSize: '18px', color: '#283593', margin: '0 0 12px 0' }}>📌 The Prime Meridian</h4>
+                                <ul style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0, paddingLeft: '20px' }}>
+                                    <li>It is the main longitude, located at <strong>0° longitude</strong>.</li>
+                                    <li>It passes through Greenwich, England.</li>
+                                    <li>It divides the Earth into the <strong>Eastern and Western Hemispheres</strong>.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Grid System and Time Zones */}
+                        <Section>
+                            <SectionTitle emoji="⏱️">The Grid System and Time Zones</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Latitudes and longitudes together form a <strong>grid system</strong> on the globe. This grid helps locate any place accurately and identify coordinates (like 20°N latitude and 80°E longitude).
+                            </p>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginTop: '16px' }}>
+                                Because the Earth rotates, different places experience different times. The Earth is divided into <strong>24 time zones</strong>, each differing by one hour. The Prime Meridian is used as the reference line for time (Greenwich Mean Time - GMT).
+                            </p>
+                            
+                            <div style={{ background: '#FEF3C7', borderRadius: '12px', padding: '16px', marginTop: '20px', border: '1px solid #FBBF24' }}>
+                                <p style={{ fontSize: '15px', color: '#B45309', margin: 0 }}>
+                                    💡 <strong>Importance:</strong> Latitudes and longitudes help in locating places accurately, assist in navigation, determine climate zones, and help calculate time differences.
+                                </p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – SOCIAL STUDIES – MOTIONS OF THE EARTH */}
+                {classId === '6' && chapterId === 'motions-of-the-earth' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🔄">Motions of the Earth</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                The Earth is not still; it is constantly moving. It has two main types of motion: <strong>rotation</strong> and <strong>revolution</strong>. These movements are responsible for <strong>day and night, seasons, and changes in climate</strong>.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: Rotation */}
+                        <Section>
+                            <SectionTitle emoji="⏳">Rotation of the Earth</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                <strong>Rotation</strong> is the movement of the Earth on its own axis. The Earth rotates on an imaginary line called its <strong>axis</strong>, which is slightly tilted.
+                            </p>
+                            <ul style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginTop: '10px' }}>
+                                <li>The Earth rotates from <strong>west to east</strong>.</li>
+                                <li>It takes about <strong>24 hours</strong> to complete one rotation.</li>
+                                <li>This movement causes <strong>day and night</strong>. When a part of the Earth faces the Sun, it experiences day, and when it faces away, it experiences night.</li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 3: Revolution */}
+                        <Section>
+                            <SectionTitle emoji="🌍">Revolution of the Earth</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                <strong>Revolution</strong> is the movement of the Earth around the Sun. The path followed by the Earth is called its <strong>orbit</strong>.
+                            </p>
+                            <div style={{ background: '#E3F2FD', padding: '16px', borderRadius: '12px', border: '1px solid #BBDEFB', marginTop: '20px' }}>
+                                <h4 style={{ fontSize: '18px', color: '#1565C0', margin: '0 0 12px 0' }}>📅 Leap Year</h4>
+                                <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                    The Earth takes about <strong>365¼ days (1 year)</strong> to complete one revolution. Since a year is usually counted as 365 days, the extra ¼ day is added up and an extra day is given to February every four years. Such a year is called a <strong>leap year</strong>, which has <strong>366 days</strong>.
+                                </p>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Seasons */}
+                        <Section>
+                            <SectionTitle emoji="🍂">Seasons on Earth</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Seasons are caused by the <strong>tilt of the Earth's axis</strong> and the <strong>revolution of the Earth around the Sun</strong>. Different parts of the Earth experience different seasons at different times.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginTop: '20px' }}>
+                                <div style={{ background: '#FFF3E0', padding: '16px', borderRadius: '12px', border: '1px solid #FFE0B2' }}>
+                                    <span style={{ fontSize: '24px' }}>☀️</span>
+                                    <h4 style={{ fontSize: '18px', color: '#E65100', margin: '8px 0' }}>Summer</h4>
+                                    <p style={{ fontSize: '15px', color: '#334155', margin: 0 }}>The part of the Earth tilted toward the Sun receives more sunlight and experiences summer.</p>
+                                </div>
+                                <div style={{ background: '#E0F7FA', padding: '16px', borderRadius: '12px', border: '1px solid #B2EBF2' }}>
+                                    <span style={{ fontSize: '24px' }}>❄️</span>
+                                    <h4 style={{ fontSize: '18px', color: '#00838F', margin: '8px 0' }}>Winter</h4>
+                                    <p style={{ fontSize: '15px', color: '#334155', margin: 0 }}>The part tilted away from the Sun receives less sunlight and experiences winter.</p>
+                                </div>
+                                <div style={{ background: '#E8F5E9', padding: '16px', borderRadius: '12px', border: '1px solid #C8E6C9' }}>
+                                    <span style={{ fontSize: '24px' }}>🌸</span>
+                                    <h4 style={{ fontSize: '18px', color: '#2E7D32', margin: '8px 0' }}>Spring & Autumn</h4>
+                                    <p style={{ fontSize: '15px', color: '#334155', margin: 0 }}>These are pleasant transition seasons between summer and winter.</p>
+                                </div>
+                            </div>
+                            
+                            <h4 style={{ fontSize: '18px', color: '#1E293B', fontWeight: 700, marginTop: '24px' }}>Solstices and Equinoxes:</h4>
+                            <ul style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, marginTop: '10px' }}>
+                                <li><strong>Solstice:</strong> Days when the Sun's rays fall directly on the Tropic of Cancer or Tropic of Capricorn.</li>
+                                <li><strong>Equinox:</strong> Days when day and night are equal in length all over the Earth.</li>
+                            </ul>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – SOCIAL STUDIES – MAPS */}
+                {classId === '6' && chapterId === 'maps' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🗺️">Introduction to Maps</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                A <strong>map</strong> is a drawing of the Earth or a part of it on a flat surface. Maps help us locate places, understand directions, and study geographical features. Unlike a globe, maps are easy to carry and can show detailed information about specific areas.
+                            </p>
+                            <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', marginTop: '20px' }}>
+                                <h4 style={{ fontSize: '18px', color: '#1E293B', margin: '0 0 12px 0' }}>🌍 What is a Map?</h4>
+                                <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                    A map is a representation of the Earth’s surface or a part of it on a flat surface. Maps help us:
+                                </p>
+                                <ul style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '10px 0 0 0', paddingLeft: '20px' }}>
+                                    <li>Locate places correctly.</li>
+                                    <li>Find directions during travel.</li>
+                                    <li>Understand distances between different points.</li>
+                                    <li>Study both physical and political features.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        {/* Section 2: Types of Maps */}
+                        <Section>
+                            <SectionTitle emoji="📂">Types of Maps</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginTop: '20px' }}>
+                                <div style={{ background: '#E8F5E9', padding: '20px', borderRadius: '16px', border: '2px solid #C8E6C9' }}>
+                                    <h4 style={{ fontSize: '18px', color: '#2E7D32', fontWeight: 700 }}>🏔️ Physical Maps</h4>
+                                    <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.6, margin: '8px 0' }}>Show natural features like mountains, rivers, oceans, and plains.</p>
+                                </div>
+                                <div style={{ background: '#FFF3E0', padding: '20px', borderRadius: '16px', border: '2px solid #FFE0B2' }}>
+                                    <h4 style={{ fontSize: '18px', color: '#E65100', fontWeight: 700 }}>🌆 Political Maps</h4>
+                                    <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.6, margin: '8px 0' }}>Show boundaries of countries, states, and cities, including their capitals.</p>
+                                </div>
+                                <div style={{ background: '#E3F2FD', padding: '20px', borderRadius: '16px', border: '2px solid #BBDEFB' }}>
+                                    <h4 style={{ fontSize: '18px', color: '#1565C0', fontWeight: 700 }}>📊 Thematic Maps</h4>
+                                    <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.6, margin: '8px 0' }}>Focus on specific themes like climate, population, or rainfall patterns.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 3: Components of a Map */}
+                        <Section>
+                            <SectionTitle emoji="📏">Components of a Map</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>Every map has three important elements that help us understand and use it effectively.</p>
+                            
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '20px' }}>
+                                <div style={{ background: '#F1F5F9', padding: '16px', borderRadius: '12px', display: 'flex', gap: '16px', alignItems: 'center' }}>
+                                    <span style={{ fontSize: '32px' }}>📡</span>
+                                    <div>
+                                        <h4 style={{ fontSize: '17px', fontWeight: 700, margin: 0 }}>Distance (Scale)</h4>
+                                        <p style={{ fontSize: '15px', color: '#475569', margin: '4px 0 0 0' }}>Maps use a <strong>scale</strong> to show relationships between distances. <em>Example: 1 cm on a map may represent 10 km in real life.</em></p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#F1F5F9', padding: '16px', borderRadius: '12px', display: 'flex', gap: '16px', alignItems: 'center' }}>
+                                    <span style={{ fontSize: '32px' }}>🧭</span>
+                                    <div>
+                                        <h4 style={{ fontSize: '17px', fontWeight: 700, margin: 0 }}>Direction (Compass)</h4>
+                                        <p style={{ fontSize: '15px', color: '#475569', margin: '4px 0 0 0' }}>Maps show the four main directions: <strong>North, South, East, and West</strong>. Most maps have a north arrow.</p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#F1F5F9', padding: '16px', borderRadius: '12px', display: 'flex', gap: '16px', alignItems: 'center' }}>
+                                    <span style={{ fontSize: '32px' }}>🎨</span>
+                                    <div>
+                                        <h4 style={{ fontSize: '17px', fontWeight: 700, margin: 0 }}>Symbols (Legend)</h4>
+                                        <p style={{ fontSize: '15px', color: '#475569', margin: '4px 0 0 0' }}>Symbols represent features like rivers, forests, or mountains. These are explained in a <strong>legend or key</strong>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: Sketch vs Plan */}
+                        <Section>
+                            <SectionTitle emoji="✏️">Sketch and Plan</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginTop: '20px' }}>
+                                <div style={{ background: '#F8FAFC', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0' }}>
+                                    <h4 style={{ fontSize: '18px', fontWeight: 700, color: '#334155' }}>Sketch</h4>
+                                    <p style={{ fontSize: '15px', color: '#64748B', lineHeight: 1.6 }}>A rough drawing of a place based on memory and observation, made <strong>without a scale</strong>.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0' }}>
+                                    <h4 style={{ fontSize: '18px', fontWeight: 700, color: '#334155' }}>Plan</h4>
+                                    <p style={{ fontSize: '15px', color: '#64748B', lineHeight: 1.6 }}>A detailed drawing of a small area using a <strong>large scale</strong> (like a drawing of a room or house).</p>
+                                </div>
+                            </div>
+                            <div style={{ background: '#FEF3C7', borderRadius: '12px', padding: '16px', marginTop: '20px', border: '1px solid #FBBF24' }}>
+                                <p style={{ fontSize: '15px', color: '#B45309', margin: 0 }}>
+                                    💡 <strong>Interesting Fact:</strong> Maps have been used for thousands of years, but today, we even have digital maps on our mobile phones!
                                 </p>
                             </div>
                         </Section>
