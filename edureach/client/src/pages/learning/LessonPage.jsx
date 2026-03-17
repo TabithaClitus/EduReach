@@ -7947,6 +7947,100 @@ const lessonData = {
         nextLesson: { id: 'maps', title: 'Maps' }
     },
 
+    '6-understanding-diversity': {
+        title: 'Understanding Diversity',
+        subtitle: 'Learn what diversity means, its types, and why unity in diversity is important.',
+        videoSubtitle: 'Watch these videos to understand diversity and unity in diversity!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/eF9XpTuvaIg?si=LID6gvOWkJzUEqi5', title: 'Understanding Diversity', thumb: 'https://img.youtube.com/vi/eF9XpTuvaIg/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/mLBmDfFIFW8?si=zuu6gflR5Ev5SQ8P', title: 'Unity in Diversity', thumb: 'https://img.youtube.com/vi/mLBmDfFIFW8/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Diversity means', visual: '🌈', options: ['similarity', 'differences', 'equality', 'uniformity'], correct: 1 },
+            { question: 'India is known for', visual: '🇮🇳', options: ['one culture', 'one language', 'unity in diversity', 'no diversity'], correct: 2 },
+            { question: 'Which is an example of cultural diversity?', visual: '🎉', options: ['festivals', 'languages', 'weather', 'soil'], correct: 0 },
+            { question: 'People following different religions show', visual: '🕌', options: ['unity', 'diversity', 'similarity', 'equality'], correct: 1 },
+            { question: 'Which is a language spoken in India?', visual: '🗣️', options: ['Hindi', 'Tamil', 'Telugu', 'all of these'], correct: 3 },
+            { question: 'Respecting diversity means', visual: '🤝', options: ['ignoring others', 'treating everyone equally', 'fighting with others', 'avoiding people'], correct: 1 },
+            { question: 'Unity in diversity means', visual: '🧩', options: ['being different and fighting', 'living together peacefully', 'having no differences', 'being alone'], correct: 1 },
+            { question: 'Which of the following is a religion?', visual: '🕉️', options: ['English', 'Hinduism', 'Rice', 'Shirt'], correct: 1 },
+            { question: 'Diversity makes society', visual: '🌍', options: ['boring', 'weak', 'rich and interesting', 'empty'], correct: 2 },
+            { question: 'We should', visual: '✅', options: ['respect others', 'discriminate', 'ignore differences', 'fight with others'], correct: 0 }
+        ],
+        summary: [
+            'Diversity means differences among people in a society such as language, religion, food, clothing, and traditions.',
+            'Types of diversity include cultural, religious, linguistic, and regional diversity.',
+            'Unity in diversity means people with different backgrounds live together peacefully and respectfully.',
+            'Diversity makes society rich and vibrant and helps people learn from each other.',
+            'Respecting diversity means treating everyone equally and avoiding discrimination.'
+        ],
+        summaryEnd: 'Excellent! You have learned about diversity, unity in diversity, and how to respect differences in society!',
+        nextLesson: { id: 'government', title: 'Government' }
+    },
+
+    '6-government': {
+        title: 'Government',
+        subtitle: 'Learn what a government is, why we need it, and different forms and levels of government.',
+        videoSubtitle: 'Watch these videos to understand government and how it works!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/7kQgz1SDc0k?si=W0xQU9OcGWsY_1ot', title: 'What is Government?', thumb: 'https://img.youtube.com/vi/7kQgz1SDc0k/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/nHdTLmfLHE0?si=jzLnUxkmCXfAq20d', title: 'Types of Government', thumb: 'https://img.youtube.com/vi/nHdTLmfLHE0/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A government is a group of people who', visual: '🏛️', options: ['teach in schools', 'run a country', 'grow crops', 'build houses'], correct: 1 },
+            { question: 'Democracy means', visual: '🗳️', options: ['rule by king', 'rule by people', 'rule by one person', 'no rule'], correct: 1 },
+            { question: 'In a democracy, leaders are chosen by', visual: '✅', options: ['kings', 'citizens', 'soldiers', 'judges'], correct: 1 },
+            { question: 'Monarchy is a system where', visual: '👑', options: ['people rule', 'king or queen rules', 'no one rules', 'army rules'], correct: 1 },
+            { question: 'In a dictatorship', visual: '⚠️', options: ['people have full freedom', 'one person has power', 'people vote', 'there is no government'], correct: 1 },
+            { question: 'Which level governs the whole country?', visual: '🇮🇳', options: ['local', 'state', 'central', 'village'], correct: 2 },
+            { question: 'Which level manages states?', visual: '🏙️', options: ['central', 'state', 'local', 'global'], correct: 1 },
+            { question: 'Local government manages', visual: '🏘️', options: ['country', 'states', 'towns and villages', 'world'], correct: 2 },
+            { question: 'Government provides', visual: '🏥', options: ['schools', 'hospitals', 'roads', 'all of these'], correct: 3 },
+            { question: 'Government helps maintain', visual: '👮', options: ['chaos', 'law and order', 'confusion', 'noise'], correct: 1 }
+        ],
+        summary: [
+            'A government is a group of people who make laws and run a country.',
+            'We need government to maintain law and order, provide services, protect citizens, and ensure justice.',
+            'Different forms of government include democracy, monarchy, and dictatorship.',
+            'Government works at different levels: central, state, and local.',
+            'A good government helps development by building roads, schools, hospitals, and supporting people during disasters.'
+        ],
+        summaryEnd: 'Well done! You have learned what a government is, why it is needed, and the different forms and levels of government.',
+        nextLesson: { id: 'local-government', title: 'Local Government' }
+    },
+
+    '6-local-government': {
+        title: 'Local Government',
+        subtitle: 'Learn how local government works in villages (Panchayati Raj) and cities (municipal bodies).',
+        videoSubtitle: 'Watch these videos to understand Panchayati Raj and municipal administration!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/CmywwIa3mlA?si=ILGPO7_C_YYNZ2n0', title: 'Local Government Basics', thumb: 'https://img.youtube.com/vi/CmywwIa3mlA/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/KLuzyeW-v2I?si=TQBawhsnttdHJxZH', title: 'Panchayati Raj System', thumb: 'https://img.youtube.com/vi/KLuzyeW-v2I/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/m0eoRaAUX5c?si=VOwxGviJW9Y1g8Js', title: 'Urban Local Bodies', thumb: 'https://img.youtube.com/vi/m0eoRaAUX5c/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Local government works at', visual: '🏘️', options: ['national level', 'international level', 'local level', 'global level'], correct: 2 },
+            { question: 'Panchayati Raj is found in', visual: '🏡', options: ['cities', 'villages', 'countries', 'continents'], correct: 1 },
+            { question: 'The lowest level of Panchayati Raj is', visual: '🗳️', options: ['Zila Parishad', 'Panchayat Samiti', 'Gram Panchayat', 'Municipal Corporation'], correct: 2 },
+            { question: 'Municipal Corporation works in', visual: '🏙️', options: ['villages', 'forests', 'big cities', 'deserts'], correct: 2 },
+            { question: 'Panchayat Samiti works at', visual: '🧩', options: ['village level', 'block level', 'district level', 'national level'], correct: 1 },
+            { question: 'Zila Parishad works at', visual: '🏢', options: ['village', 'block', 'district', 'state'], correct: 2 },
+            { question: 'Which body manages urban areas?', visual: '🚦', options: ['Gram Panchayat', 'Zila Parishad', 'Municipal body', 'Forest department'], correct: 2 },
+            { question: 'Local government provides', visual: '🚰', options: ['water supply', 'roads', 'sanitation', 'all of these'], correct: 3 },
+            { question: 'Members of local government are', visual: '✅', options: ['selected randomly', 'elected by people', 'appointed by kings', 'chosen by teachers'], correct: 1 },
+            { question: 'Local government helps in', visual: '🤝', options: ['solving local problems', 'creating confusion', 'avoiding development', 'stopping services'], correct: 0 }
+        ],
+        summary: [
+            'Local government manages towns, cities, and villages and provides basic services.',
+            'In rural areas, local government works through the Panchayati Raj system at three levels: Gram Panchayat, Panchayat Samiti, and Zila Parishad.',
+            'In urban areas, municipal bodies such as Municipal Corporations, Municipal Councils, and Nagar Panchayats manage cities and towns.',
+            'Local government encourages people’s participation and helps solve local problems quickly.',
+            'It is responsible for cleanliness, water supply, roads, street lighting, and basic health and education services.'
+        ],
+        summaryEnd: 'Great job! You have learned about local government, Panchayati Raj, and municipal administration.',
+        nextLesson: null
+    },
+
     '6-maps': {
         title: 'Maps',
         subtitle: 'Learn about the types of maps, their components, and how to read them.',
@@ -38103,6 +38197,478 @@ const LessonPage = () => {
                                 <li><strong>Solstice:</strong> Days when the Sun's rays fall directly on the Tropic of Cancer or Tropic of Capricorn.</li>
                                 <li><strong>Equinox:</strong> Days when day and night are equal in length all over the Earth.</li>
                             </ul>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – SOCIAL STUDIES – UNDERSTANDING DIVERSITY */}
+                {classId === '6' && chapterId === 'understanding-diversity' && (
+                    <>
+                        <Section>
+                            <SectionTitle emoji="🌈">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                People around the world are different in many ways. They may speak different languages, follow different religions, eat
+                                different foods, and celebrate different festivals. These differences make our society rich and colorful. This is called{' '}
+                                <strong>diversity</strong>. In India, we see a great example of <strong>unity in diversity</strong>, where people of different
+                                cultures live together peacefully. In this lesson, you will learn about <strong>diversity</strong>, its types, and its
+                                importance.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">What is Diversity?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Diversity</strong> means differences among people in a society. These differences can be in:
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Language</li>
+                                <li>Religion</li>
+                                <li>Food habits</li>
+                                <li>Clothing</li>
+                                <li>Traditions and customs</li>
+                            </ul>
+                            <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#334155' }}>
+                                Diversity makes our world interesting and unique.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧠">Types of Diversity</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#9A3412' }}>Cultural Diversity</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#9A3412' }}>Differences in traditions, customs, and lifestyles.</p>
+                                    <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#9A3412' }}>Example: Diwali, Eid, Christmas.</p>
+                                </div>
+                                <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#0369A1' }}>Religious Diversity</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#0369A1' }}>People follow different religions.</p>
+                                    <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#0369A1' }}>Examples: Hinduism, Islam, Christianity, Sikhism.</p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#166534' }}>Linguistic Diversity</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#166534' }}>People speak different languages.</p>
+                                    <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#166534' }}>Example: Hindi, Tamil, Telugu, Bengali, English.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#334155' }}>Regional Diversity</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>
+                                        Differences based on regions such as climate, geography, and lifestyle.
+                                    </p>
+                                    <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#334155' }}>
+                                        Example: Coastal areas eat seafood; mountains wear woollen clothes.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤝">Unity in Diversity</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Unity in diversity</strong> means people with different cultures and backgrounds live together in harmony.
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>People follow different religions</li>
+                                <li>People speak many languages</li>
+                                <li>People celebrate various festivals together</li>
+                            </ul>
+                            <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#334155' }}>
+                                Despite differences, people respect each other and live peacefully.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⭐">Importance of Diversity</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Makes society rich and vibrant</li>
+                                <li>Promotes respect and understanding</li>
+                                <li>Encourages learning from different cultures</li>
+                                <li>Strengthens unity and harmony</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✅">Respecting Diversity</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                To live peacefully, it is important to respect diversity. Ways to respect diversity:
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Treat everyone equally</li>
+                                <li>Respect different religions and traditions</li>
+                                <li>Avoid discrimination</li>
+                                <li>Celebrate differences</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is diversity?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Diversity means differences among people in a society.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is unity in diversity?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: It means people of different cultures living together peacefully.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why is diversity important?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: It makes society rich and promotes understanding and unity.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>India has hundreds of languages and many religions.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Different states in India have unique traditions and festivals.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Diversity exists in food, clothing, and lifestyles.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define diversity.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name two types of diversity.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is unity in diversity?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Give one example of cultural diversity.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Why should we respect diversity?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Name two languages spoken in India.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – SOCIAL STUDIES – GOVERNMENT */}
+                {classId === '6' && chapterId === 'government' && (
+                    <>
+                        <Section>
+                            <SectionTitle emoji="🏛️">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                A <strong>government</strong> is a group of people who make rules and decisions to manage a country. It works to maintain order,
+                                provide services, and protect the rights of citizens. Different countries have different forms of government.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📜">What is Government?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>government</strong> is an organization that makes laws and runs a country. The government helps in:
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Making rules and laws</li>
+                                <li>Maintaining law and order</li>
+                                <li>Providing public services</li>
+                                <li>Protecting citizens</li>
+                            </ul>
+                            <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#334155' }}>
+                                Without a government, it would be difficult to maintain peace and organization in society.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧠">Why Do We Need a Government?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A government is necessary to manage the country and solve problems of the people.
+                            </p>
+                            <p style={{ margin: 0, fontSize: '15px', color: '#334155', fontWeight: 700 }}>Functions of Government:</p>
+                            <ul style={{ margin: '8px 0 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Making laws to maintain order</li>
+                                <li>Providing services such as schools, hospitals, and roads</li>
+                                <li>Protecting the country from external threats</li>
+                                <li>Ensuring justice and equality</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🗳️">Forms of Government</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#E8F5E9', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#166534' }}>Democracy</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#166534' }}>
+                                        In a democracy, people choose their leaders through elections.
+                                    </p>
+                                    <ul style={{ margin: '10px 0 0', paddingLeft: 18, color: '#166534', lineHeight: 1.8 }}>
+                                        <li>Citizens have the right to vote</li>
+                                        <li>Leaders are elected by the people</li>
+                                        <li>People can express their opinions</li>
+                                    </ul>
+                                    <p style={{ margin: '8px 0 0', fontSize: '14px', color: '#166534' }}>Example: India is a democratic country.</p>
+                                </div>
+                                <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#9A3412' }}>Monarchy</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#9A3412' }}>In a monarchy, a king or queen rules the country.</p>
+                                    <ul style={{ margin: '10px 0 0', paddingLeft: 18, color: '#9A3412', lineHeight: 1.8 }}>
+                                        <li>Power is inherited</li>
+                                        <li>The ruler belongs to a royal family</li>
+                                    </ul>
+                                    <p style={{ margin: '8px 0 0', fontSize: '14px', color: '#9A3412' }}>
+                                        Example: The United Kingdom has a constitutional monarchy.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#0369A1' }}>Dictatorship</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#0369A1' }}>
+                                        In a dictatorship, one person has complete control over the country.
+                                    </p>
+                                    <ul style={{ margin: '10px 0 0', paddingLeft: 18, color: '#0369A1', lineHeight: 1.8 }}>
+                                        <li>People have limited freedom</li>
+                                        <li>Decisions are made by one leader</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏢">Levels of Government</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li><strong>Central Government</strong> manages the whole country and makes national laws.</li>
+                                <li><strong>State Government</strong> manages individual states.</li>
+                                <li><strong>Local Government</strong> manages towns, cities, and villages.</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🛠️">Responsibilities of Government</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Building roads and infrastructure</li>
+                                <li>Providing education and healthcare</li>
+                                <li>Maintaining peace and order</li>
+                                <li>Protecting the environment</li>
+                                <li>Helping during disasters</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⭐">Importance of Government</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Ensures safety and security</li>
+                                <li>Provides essential services</li>
+                                <li>Protects rights of citizens</li>
+                                <li>Promotes development</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is a government?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A government is a group of people who run and manage a country.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Why is government necessary?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: It helps maintain order, provide services, and protect people.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>
+                                        3. What type of government does India have?
+                                    </p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: India has a democratic government.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>India is the largest democracy in the world.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Citizens above a certain age have the right to vote.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Governments create laws to maintain peace and order.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define government.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name two functions of government.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is democracy?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is monarchy?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name the three levels of government.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why is government important?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – SOCIAL STUDIES – LOCAL GOVERNMENT */}
+                {classId === '6' && chapterId === 'local-government' && (
+                    <>
+                        <Section>
+                            <SectionTitle emoji="🏘️">Introduction</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: 0 }}>
+                                <strong>Local government</strong> is the system that manages the day-to-day administration of towns, cities, and villages. It
+                                helps people solve local problems and provides basic services. In India, local government works through the{' '}
+                                <strong>Panchayati Raj</strong> system in rural areas and <strong>municipal bodies</strong> in urban areas.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📌">What is Local Government?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Local government</strong> refers to governing bodies that operate at the local level. It helps in:
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Providing basic services</li>
+                                <li>Solving local problems</li>
+                                <li>Improving community life</li>
+                            </ul>
+                            <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#334155' }}>
+                                Local government works closely with people and understands their needs better.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌾">Rural Local Government – Panchayati Raj</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                The <strong>Panchayati Raj system</strong> is the system of local self-government in villages. It has three levels:
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Village Level – <strong>Gram Panchayat</strong></li>
+                                <li>Block Level – <strong>Panchayat Samiti</strong></li>
+                                <li>District Level – <strong>Zila Parishad</strong></li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏡">Gram Panchayat (Village Level)</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                The <strong>Gram Panchayat</strong> is the lowest level of local government in villages. Members are <strong>elected</strong>{' '}
+                                by the people of the village.
+                            </p>
+                            <p style={{ margin: 0, fontSize: '15px', color: '#334155', fontWeight: 700 }}>Functions:</p>
+                            <ul style={{ margin: '8px 0 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Maintains roads, water supply, and sanitation</li>
+                                <li>Provides basic facilities to villagers</li>
+                                <li>Solves local disputes</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">Panchayat Samiti (Block Level)</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Panchayat Samiti</strong> works at the block level and coordinates between villages.
+                            </p>
+                            <p style={{ margin: 0, fontSize: '15px', color: '#334155', fontWeight: 700 }}>Functions:</p>
+                            <ul style={{ margin: '8px 0 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Implements development programs</li>
+                                <li>Supports Gram Panchayats</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏢">Zila Parishad (District Level)</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Zila Parishad</strong> works at the district level.
+                            </p>
+                            <p style={{ margin: 0, fontSize: '15px', color: '#334155', fontWeight: 700 }}>Functions:</p>
+                            <ul style={{ margin: '8px 0 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Supervises development work</li>
+                                <li>Coordinates activities of Panchayat Samitis</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏙️">Urban Local Government</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                Urban areas such as towns and cities are managed by <strong>municipal bodies</strong>.
+                            </p>
+                            <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Types of urban local bodies:</p>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li><strong>Municipal Corporation</strong> (for big cities)</li>
+                                <li><strong>Municipal Council</strong> (for smaller towns)</li>
+                                <li><strong>Nagar Panchayat</strong> (for developing areas)</li>
+                            </ul>
+                            <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Functions of Municipal Bodies:</p>
+                            <ul style={{ margin: '8px 0 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Provide water supply</li>
+                                <li>Maintain roads and streetlights</li>
+                                <li>Manage waste and sanitation</li>
+                                <li>Run public services</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⭐">Importance of Local Government</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Ensures development at the local level</li>
+                                <li>Encourages people&apos;s participation</li>
+                                <li>Solves local problems quickly</li>
+                                <li>Improves living conditions</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🛠️">Responsibilities of Local Government</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Cleanliness and sanitation</li>
+                                <li>Water supply</li>
+                                <li>Road maintenance</li>
+                                <li>Street lighting</li>
+                                <li>Health and education services</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is local government?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Local government manages towns, cities, and villages at the local level.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is Panchayati Raj?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: It is the system of local self-government in rural areas.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>
+                                        3. What is the role of municipal bodies?
+                                    </p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: They manage urban areas and provide basic services.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Panchayati Raj promotes democracy at the grassroots level.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Local government bodies are elected by the people.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Urban local bodies manage large cities efficiently.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define local government.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name the three levels of Panchayati Raj.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is a Gram Panchayat?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What are municipal bodies?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name two functions of local government.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why is local government important?</p>
+                            </div>
                         </Section>
                     </>
                 )}
