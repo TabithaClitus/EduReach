@@ -4,6 +4,12 @@ import api from "../services/api";
 import useAuthStore from "../store/authStore";
 import Loader from "../components/common/Loader";
 
+const CLASSES = [
+  "All Classes", "Class 1", "Class 2", "Class 3", "Class 4", "Class 5",
+  "Class 6", "Class 7", "Class 8", "Class 9", "Class 10",
+  "Class 11", "Class 12", "Undergraduate", "Postgraduate", "PhD"
+];
+
 const GENDERS = [
   "All Genders",
   "Male",
@@ -13,8 +19,14 @@ const GENDERS = [
 
 const STATES = [
   "State",
-  "Tamil Nadu", "Karnataka", "Uttar Pradesh", "Maharashtra",
-  "Andhra Pradesh", "Telangana", "Kerala", "Rajasthan", "Bihar",
+  "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
+  "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
+  "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram",
+  "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana",
+  "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal",
+  "Andaman and Nicobar", "Chandigarh", "Dadra and Nagar Haveli",
+  "Daman and Diu", "Delhi", "Jammu and Kashmir", "Ladakh",
+  "Lakshadweep", "Puducherry"
 ];
 
 const JUNK_RE = /whatsapp|^buddy4study|channel|messaging|telegram|newsletter/i;
@@ -86,6 +98,7 @@ export default function Scholarships() {
   const [applying, setApplying]         = useState(null);
 
   const [search,   setSearch]   = useState("");
+  const [grade,    setGrade]    = useState("All Classes");
   const [gender,   setGender]   = useState("All Genders");
   const [state,    setState]    = useState("State");
 
@@ -103,6 +116,7 @@ export default function Scholarships() {
       const params = { page, limit: 12 };
       if (search && search.trim())                params.search   = search.trim();
       if (state    !== "State")                   params.state    = state;
+      if (grade    !== "All Classes")             params.grade    = grade;
       if (gender   !== "All Genders")             params.gender   = gender;
       const res = await api.get("/scholarships", { params });
       setScholarships((res.data.data || []).filter(isValid));
@@ -178,6 +192,18 @@ export default function Scholarships() {
                 onBlur={() => setIsFocused(false)}
                 style={{ flex: 1, border: 'none', outline: 'none', background: 'transparent', fontSize: 14, color: '#0F172A' }}
               />
+            </div>
+
+            {/* Grade Select */}
+            <div style={{ position: 'relative', width: 160 }}>
+              <select
+                value={grade}
+                onChange={(e) => setGrade(e.target.value)}
+                style={{ width: '100%', height: '100%', padding: '0 36px 0 16px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 12, fontSize: 14, color: '#334155', outline: 'none', appearance: 'none', cursor: 'pointer', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}
+              >
+                {CLASSES.map((c) => <option key={c}>{c}</option>)}
+              </select>
+              <ChevronDown size={14} color="#94A3B8" style={{ position: 'absolute', right: 12, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }} />
             </div>
 
             {/* Gender Select */}

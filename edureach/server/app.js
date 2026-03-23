@@ -24,6 +24,14 @@ const userSockets = new Map();
 app.set('io', io);
 app.set('userSockets', userSockets);
 
+function emitToUser(userId, eventName, payload) {
+  const uid = userId?.toString();
+  if (!uid) return;
+  const sockets = userSockets.get(uid);
+  if (!sockets || sockets.size === 0) return;
+  sockets.forEach((sid) => io.to(sid).emit(eventName, payload));
+}
+
 app.use(cors());
 app.use(express.json());
 
@@ -55,7 +63,18 @@ io.on("connection", (socket) => {
         senderName: data.senderName,
         text: data.text,
       });
+
+      const roomParts = (data.roomId || '').split('_');
+      const participantA = roomParts[1] || null;
+      const participantB = roomParts[2] || null;
+      const senderId = data.sender?.toString();
+      const receiverId = senderId && participantA && participantB
+        ? (senderId === participantA ? participantB : participantA)
+        : null;
+
       io.to(data.roomId).emit("receiveMessage", msg);
+      emitToUser(receiverId, 'chat-message', msg);
+      emitToUser(senderId, 'chat-message', msg);
     } catch (err) {
       console.error("Message save error:", err);
     }

@@ -1,0 +1,8 @@
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+EduReach server running on port 5000
+MongoDB connected: ac-ivjd8h2-shard-00-02.pu3xysb.mongodb.net
+User connected: IoHg3_7BozdZUsr9AAAC
+Registered user 69aa8eaaead199e901bc3f1d on socket IoHg3_7BozdZUsr9AAAC
+User disconnected: IoHg3_7BozdZUsr9AAAC
+User connected: di4ejvMTCecIBG2ZAAAE
+Registered user 69aa8eaaead199e901bc3f1d on socket di4ejvMTCecIBG2ZAAAE

@@ -3,6 +3,28 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import api from '../services/api';
 
+const CLASSES = [
+  "All Classes", "Class 1", "Class 2", "Class 3", "Class 4", "Class 5",
+  "Class 6", "Class 7", "Class 8", "Class 9", "Class 10",
+  "Class 11", "Class 12", "Undergraduate", "Postgraduate", "PhD"
+];
+
+const GENDERS = [
+  "All Genders", "Male", "Female", "Other"
+];
+
+const STATES = [
+  "State",
+  "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
+  "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
+  "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram",
+  "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana",
+  "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal",
+  "Andaman and Nicobar", "Chandigarh", "Dadra and Nagar Haveli",
+  "Daman and Diu", "Delhi", "Jammu and Kashmir", "Ladakh",
+  "Lakshadweep", "Puducherry"
+];
+
 // ── Shared helpers ────────────────────────────────────────────────────────────
 function Avatar({ initials, bg = '#EDE9FE', color = '#7C3AED', size = 40 }) {
   return (
@@ -492,9 +514,18 @@ function ScholarshipsTab() {
           <textarea name="description" value={form.description} onChange={onChange} placeholder="Description" rows={3} style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0', resize: 'vertical' }} />
           <input name="applicationUrl" value={form.applicationUrl} onChange={onChange} placeholder="Application URL" style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
-            <input name="state" value={form.state} onChange={onChange} placeholder="State" style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
-            <input name="grade" value={form.grade} onChange={onChange} placeholder="Grade" style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
-            <input name="gender" value={form.gender} onChange={onChange} placeholder="Gender" style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />
+            <select name="state" value={form.state} onChange={onChange} style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0', background: '#fff', color: '#334155', appearance: 'none' }}>
+              <option value="">Select State</option>
+              {STATES.filter(s => s !== "State").map(s => <option key={s} value={s}>{s}</option>)}
+            </select>
+            <select name="grade" value={form.grade} onChange={onChange} style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0', background: '#fff', color: '#334155', appearance: 'none' }}>
+              <option value="">Select Class/Grade</option>
+              {CLASSES.filter(c => c !== "All Classes").map(c => <option key={c} value={c}>{c}</option>)}
+            </select>
+            <select name="gender" value={form.gender} onChange={onChange} style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0', background: '#fff', color: '#334155', appearance: 'none' }}>
+              <option value="">Select Gender</option>
+              {GENDERS.filter(g => g !== "All Genders").map(g => <option key={g} value={g}>{g}</option>)}
+            </select>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
             <input name="caste" value={form.caste} onChange={onChange} placeholder="Caste" style={{ width: '100%', boxSizing: 'border-box', padding: '10px 12px', borderRadius: 8, border: '1px solid #E2E8F0' }} />

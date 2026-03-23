@@ -175,6 +175,7 @@ export default function Mentoring() {
   const messagesEndRef = useRef(null);
   const selectedMatchRef = useRef(null);
   const activeMatchesRef = useRef([]);
+  const seenMessageIdsRef = useRef(new Set());
 
   useEffect(() => { selectedMatchRef.current = selectedMatch; }, [selectedMatch]);
   useEffect(() => { activeMatchesRef.current = activeMatches; }, [activeMatches]);
@@ -190,10 +191,18 @@ export default function Mentoring() {
     const socket = io('http://localhost:5000', { autoConnect: true });
     socketRef.current = socket;
 
-    const userId = user?.id || user?._id;
-    if (userId) {
-      socket.on('connect', () => socket.emit('register-user', userId));
-    }
+    const onConnect = () => {
+      const currentUserId = user?.id || user?._id;
+      if (currentUserId) {
+        socket.emit('register-user', currentUserId);
+      }
+
+      activeMatchesRef.current.forEach((m) => {
+        const rid = m.roomId || buildRoomIdForMatch(m);
+        if (rid) socket.emit('joinRoom', rid);
+      });
+    };
+    socket.on('connect', onConnect);
 
     // If mentor responds → refresh outgoing list so status badge updates instantly
     socket.on('mentorship-notification', (notif) => {
@@ -202,7 +211,10 @@ export default function Mentoring() {
       }
     });
 
-    return () => socket.disconnect();
+    return () => {
+      socket.off('connect', onConnect);
+      socket.disconnect();
+    };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user?.id, user?._id]);
 
@@ -218,6 +230,12 @@ export default function Mentoring() {
     }
     if (tab === 'chat') fetchActiveMatches();
   }, [tab, subjectFilter, langFilter]);
+
+  useEffect(() => {
+    if (tab !== 'chat') return;
+    const interval = setInterval(fetchActiveMatches, 5000);
+    return () => clearInterval(interval);
+  }, [tab]);
 
   // Poll every 10s while on the My Requests tab (student) so status updates live
   useEffect(() => {
@@ -240,6 +258,15 @@ export default function Mentoring() {
     return `chat_${[userId.toString(), otherId.toString()].sort().join('_')}`;
   };
 
+  const setLastSeenForRoom = (roomId, messageLike) => {
+    if (!roomId) return;
+    api.post(`/chat/${roomId}/read`, {
+      userId,
+      readAt: messageLike?.createdAt || null,
+    }).catch(() => {});
+    window.dispatchEvent(new Event('chat-lastseen-updated'));
+  };
+
   // Join all chat rooms after active matches load
   useEffect(() => {
     if (tab !== 'chat' || activeMatches.length === 0) return;
@@ -255,6 +282,14 @@ export default function Mentoring() {
     if (!socket) return;
 
     const onMessage = (msg) => {
+      const msgId = msg?._id || `${msg?.roomId || ''}:${msg?.sender || ''}:${msg?.createdAt || ''}:${msg?.text || ''}`;
+      if (seenMessageIdsRef.current.has(msgId)) return;
+      seenMessageIdsRef.current.add(msgId);
+      if (seenMessageIdsRef.current.size > 500) {
+        const compact = Array.from(seenMessageIdsRef.current).slice(-300);
+        seenMessageIdsRef.current = new Set(compact);
+      }
+
       const hasRoom = activeMatchesRef.current.some(m => m.roomId === msg.roomId);
       if (!hasRoom) {
         fetchActiveMatches();
@@ -264,8 +299,7 @@ export default function Mentoring() {
       const current = selectedMatchRef.current;
       if (current?.roomId === msg.roomId) {
         setMessages((prev) => [...prev, msg]);
-        localStorage.setItem('lastSeen_' + msg.roomId, Date.now().toString());
-        window.dispatchEvent(new Event('chat-lastseen-updated'));
+        setLastSeenForRoom(msg.roomId, msg);
       }
 
       setActiveMatches((prev) => prev.map((m) => {
@@ -282,7 +316,11 @@ export default function Mentoring() {
     };
 
     socket.on('receiveMessage', onMessage);
-    return () => socket.off('receiveMessage', onMessage);
+    socket.on('chat-message', onMessage);
+    return () => {
+      socket.off('receiveMessage', onMessage);
+      socket.off('chat-message', onMessage);
+    };
   }, [userId]);
 
   // Auto-scroll messages
@@ -354,15 +392,14 @@ export default function Mentoring() {
         };
         if (!roomId) return base;
         try {
-          const res = await fetch(`http://localhost:5000/api/chat/${roomId}`);
-          const roomMessages = await res.json();
+          const [messagesRes, statusRes] = await Promise.all([
+            fetch(`http://localhost:5000/api/chat/${roomId}`),
+            api.get(`/chat/${roomId}/status`, { params: { userId } }),
+          ]);
+          const roomMessages = await messagesRes.json();
           if (!Array.isArray(roomMessages) || roomMessages.length === 0) return base;
           const lastMsgObj = roomMessages[roomMessages.length - 1];
-          const lastSeen = Number(localStorage.getItem('lastSeen_' + roomId) || '0');
-          const unreadCount = roomMessages.filter(m => (
-            new Date(m.createdAt).getTime() > lastSeen &&
-            String(m.sender) !== String(userId)
-          )).length;
+          const unreadCount = statusRes.data?.unreadCount || 0;
           return {
             ...base,
             lastMsg: lastMsgObj.text || '',
@@ -419,8 +456,6 @@ export default function Mentoring() {
     if (!roomId) return;
 
     setSelectedMatch(match);
-    localStorage.setItem('lastSeen_' + roomId, Date.now().toString());
-    window.dispatchEvent(new Event('chat-lastseen-updated'));
 
     setActiveMatches(prev => prev.map(m => m._id === match._id ? { ...m, unread: 0 } : m));
 
@@ -428,6 +463,9 @@ export default function Mentoring() {
       socketRef.current?.emit('joinRoom', roomId);
       const res = await fetch(`http://localhost:5000/api/chat/${roomId}`);
       const roomMessages = await res.json();
+      if (Array.isArray(roomMessages) && roomMessages.length > 0) {
+        setLastSeenForRoom(roomId, roomMessages[roomMessages.length - 1]);
+      }
       setMessages(Array.isArray(roomMessages) ? roomMessages : []);
     } catch {
       setMessages([]);
@@ -470,11 +508,37 @@ export default function Mentoring() {
   ];
 
   const unreadChatCount = activeMatches.reduce((sum, m) => sum + (m.unread > 0 ? 1 : 0), 0);
+  const hidePageChrome = tab === 'chat' && Boolean(selectedMatch);
+  const pageContentStyle = hidePageChrome
+    ? { maxWidth: 'none', margin: 0, padding: 0 }
+    : { maxWidth: '1280px', margin: '0 auto', padding: '32px 24px' };
+  const chatContainerStyle = hidePageChrome
+    ? {
+        display: 'flex',
+        height: 'calc(100vh - 68px)',
+        background: '#fff',
+        borderRadius: 0,
+        boxShadow: 'none',
+        border: 'none',
+        overflow: 'hidden',
+        margin: 0,
+      }
+    : {
+        display: 'flex',
+        height: '600px',
+        background: '#fff',
+        borderRadius: '16px',
+        boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
+        border: '1px solid #F1F5F9',
+        overflow: 'hidden',
+        margin: '0 0 32px 0',
+      };
 
   return (
     <div style={{ minHeight: '100vh', background: '#F8FAFC', paddingTop: '68px' }}>
 
       {/* ── Page Header Band ── */}
+      {!hidePageChrome && (
       <div style={{ background: '#fff', borderBottom: '1px solid #E2E8F0', padding: '28px 0 24px' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px' }}>
           <h1 style={{ fontSize: '26px', fontWeight: 700, color: '#0F172A', marginBottom: '6px', letterSpacing: '-0.3px' }}>
@@ -538,9 +602,10 @@ export default function Mentoring() {
           )}
         </div>
       </div>
+      )}
 
       {/* ── Page Content ── */}
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '32px 24px' }}>
+      <div style={pageContentStyle}>
 
         {/* ── DISCOVER ── */}
         {tab === 'discover' && (
@@ -678,7 +743,7 @@ export default function Mentoring() {
         )}
         {/* ── CHAT ── */}
         {tab === 'chat' && (
-          <div style={{ display: 'flex', height: '600px', background: '#fff', borderRadius: '16px', boxShadow: '0 4px 24px rgba(0,0,0,0.08)', border: '1px solid #F1F5F9', overflow: 'hidden', margin: '0 0 32px 0' }}>
+          <div style={chatContainerStyle}>
 
             {/* ── LEFT PANEL ── */}
             <div style={{ width: '360px', flexShrink: 0, borderRight: '1px solid #F1F5F9', display: 'flex', flexDirection: 'column' }}>

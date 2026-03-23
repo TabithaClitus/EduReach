@@ -87,7 +87,19 @@ const AppLayout = () => {
   const isOnline = useOnlineStatus();
   const hasSession = isAuthenticated || Boolean(user && token);
 
-  useRegisterSW({ immediate: true });
+  useRegisterSW({
+    immediate: true,
+    onNeedRefresh() {
+      // New version available — reload immediately so PWA stays in sync
+      window.location.reload();
+    },
+    onRegistered(registration) {
+      // Poll for updates every 60 seconds
+      if (registration) {
+        setInterval(() => registration.update(), 60_000);
+      }
+    },
+  });
 
   return (
     <div className="min-h-screen flex flex-col bg-background">

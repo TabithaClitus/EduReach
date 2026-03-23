@@ -424,7 +424,7 @@ function StudentsTab({ handleTabClick }) {
 
 // ─── Tab: Chats ───────────────────────────────────────────────────────────────
 
-function ChatsTab() {
+function ChatsTab({ onFocusChange, isFocused }) {
   const { user } = useAuth();
   const [chats, setChats] = useState([]);
   const [activeId, setActiveId] = useState(null);
@@ -436,14 +436,78 @@ function ChatsTab() {
   const activeIdRef = useRef(null);
   const chatsRef = useRef([]);
   const mentorIdRef = useRef(null);
+  const seenMessageIdsRef = useRef(new Set());
 
   const activeChat = chats.find(c => c.id === activeId);
   const mentorId = user?.id || user?._id;
+
+  useEffect(() => {
+    onFocusChange?.(Boolean(activeChat));
+    return () => onFocusChange?.(false);
+  }, [activeChat, onFocusChange]);
 
   // Build roomId for a given studentId
   const buildRoomId = (studentId) => {
     if (!mentorId || !studentId) return null;
     return `chat_${[mentorId.toString(), studentId.toString()].sort().join('_')}`;
+  };
+
+  const setLastSeenForRoom = (roomId, messageLike) => {
+    if (!roomId) return;
+    api.post(`/chat/${roomId}/read`, {
+      userId: mentorIdRef.current,
+      readAt: messageLike?.createdAt || null,
+    }).catch(() => {});
+    window.dispatchEvent(new Event('chat-lastseen-updated'));
+  };
+
+  const fetchChats = async () => {
+    if (!user) return;
+    setLoading(true);
+    try {
+      const { data } = await api.get('/mentors/my-students');
+      const students = data.data || [];
+      const mapped = students.map(s => ({
+        id: s.studentId?.toString() || s._id?.toString(),
+        studentId: s.studentId?.toString() || s._id?.toString(),
+        name: s.studentName || 'Student',
+        avatar: (s.studentName || 'S').split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2),
+        bg: '#EFF6FF', color: '#2563EB',
+        grade: s.grade || '',
+        subject: s.subject || '',
+        lastMsg: '', time: '', unread: 0, online: false,
+      }));
+
+      const hydrated = await Promise.all(mapped.map(async (chat) => {
+        const roomId = buildRoomId(chat.studentId);
+        if (!roomId) return chat;
+        try {
+          const [messagesRes, statusRes] = await Promise.all([
+            fetch(`http://localhost:5000/api/chat/${roomId}`),
+            api.get(`/chat/${roomId}/status`, { params: { userId: mentorId } }),
+          ]);
+          const roomMessages = await messagesRes.json();
+          if (!Array.isArray(roomMessages) || roomMessages.length === 0) return chat;
+          const lastMsgObj = roomMessages[roomMessages.length - 1];
+          const unreadCount = statusRes.data?.unreadCount || 0;
+          return {
+            ...chat,
+            lastMsg: lastMsgObj.text || '',
+            time: formatMsgTime(lastMsgObj.createdAt),
+            _ts: new Date(lastMsgObj.createdAt).getTime() || 0,
+            unread: unreadCount,
+          };
+        } catch {
+          return chat;
+        }
+      }));
+
+      setChats([...hydrated].sort(sortByRecent));
+    } catch {
+      setChats([]);
+    } finally {
+      setLoading(false);
+    }
   };
 
   // Keep refs in sync for stable socket closures
@@ -454,56 +518,37 @@ function ChatsTab() {
   // Create socket once
   useEffect(() => {
     socketRef.current = io('http://localhost:5000');
-    return () => { socketRef.current?.disconnect(); };
+
+    const onConnect = () => {
+      const currentMentorId = mentorIdRef.current;
+      if (currentMentorId) {
+        socketRef.current?.emit('register-user', currentMentorId);
+      }
+
+      chatsRef.current.forEach((c) => {
+        const rid = currentMentorId && c.studentId
+          ? `chat_${[currentMentorId.toString(), c.studentId.toString()].sort().join('_')}`
+          : null;
+        if (rid) socketRef.current?.emit('joinRoom', rid);
+      });
+    };
+
+    socketRef.current.on('connect', onConnect);
+
+    return () => {
+      socketRef.current?.off('connect', onConnect);
+      socketRef.current?.disconnect();
+    };
   }, []);
 
   // Fetch real accepted students
   useEffect(() => {
-    if (!user) return;
-    setLoading(true);
-    api.get('/mentors/my-students')
-      .then(async ({ data }) => {
-        const students = data.data || [];
-        const mapped = students.map(s => ({
-          id: s.studentId?.toString() || s._id?.toString(),
-          studentId: s.studentId?.toString() || s._id?.toString(),
-          name: s.studentName || 'Student',
-          avatar: (s.studentName || 'S').split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2),
-          bg: '#EFF6FF', color: '#2563EB',
-          grade: s.grade || '',
-          subject: s.subject || '',
-          lastMsg: '', time: '', unread: 0, online: false,
-        }));
+    fetchChats();
+  }, [user]);
 
-        const hydrated = await Promise.all(mapped.map(async (chat) => {
-          const roomId = buildRoomId(chat.studentId);
-          if (!roomId) return chat;
-          try {
-            const res = await fetch(`http://localhost:5000/api/chat/${roomId}`);
-            const roomMessages = await res.json();
-            if (!Array.isArray(roomMessages) || roomMessages.length === 0) return chat;
-            const lastMsgObj = roomMessages[roomMessages.length - 1];
-            const lastSeen = Number(localStorage.getItem('lastSeen_' + roomId) || '0');
-            const unreadCount = roomMessages.filter(m => (
-              new Date(m.createdAt).getTime() > lastSeen &&
-              String(m.sender) !== String(mentorId)
-            )).length;
-            return {
-              ...chat,
-              lastMsg: lastMsgObj.text || '',
-              time: formatMsgTime(lastMsgObj.createdAt),
-              _ts: new Date(lastMsgObj.createdAt).getTime() || 0,
-              unread: unreadCount,
-            };
-          } catch {
-            return chat;
-          }
-        }));
-
-        setChats([...hydrated].sort(sortByRecent));
-      })
-      .catch(() => setChats([]))
-      .finally(() => setLoading(false));
+  useEffect(() => {
+    const interval = setInterval(fetchChats, 5000);
+    return () => clearInterval(interval);
   }, [user]);
 
   // Join ALL rooms once students are loaded so we receive messages for every chat
@@ -520,6 +565,14 @@ function ChatsTab() {
     const socket = socketRef.current;
     if (!socket) return;
     const onAnyMessage = (msg) => {
+      const msgId = msg?._id || `${msg?.roomId || ''}:${msg?.sender || ''}:${msg?.createdAt || ''}:${msg?.text || ''}`;
+      if (seenMessageIdsRef.current.has(msgId)) return;
+      seenMessageIdsRef.current.add(msgId);
+      if (seenMessageIdsRef.current.size > 500) {
+        const compact = Array.from(seenMessageIdsRef.current).slice(-300);
+        seenMessageIdsRef.current = new Set(compact);
+      }
+
       const aid = activeIdRef.current;
       const mid = mentorIdRef.current;
       if (!mid) return;
@@ -532,8 +585,7 @@ function ChatsTab() {
         const rid = `chat_${[mid.toString(), ac.studentId.toString()].sort().join('_')}`;
         if (rid === msg.roomId) {
           setMessages(pm => [...pm, msg]);
-          localStorage.setItem('lastSeen_' + rid, Date.now().toString());
-          window.dispatchEvent(new Event('chat-lastseen-updated'));
+          setLastSeenForRoom(rid, msg);
         }
       }
 
@@ -553,7 +605,11 @@ function ChatsTab() {
       }).sort(sortByRecent));
     };
     socket.on('receiveMessage', onAnyMessage);
-    return () => socket.off('receiveMessage', onAnyMessage);
+    socket.on('chat-message', onAnyMessage);
+    return () => {
+      socket.off('receiveMessage', onAnyMessage);
+      socket.off('chat-message', onAnyMessage);
+    };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Join room + load messages when active chat changes
@@ -571,8 +627,8 @@ function ChatsTab() {
       .then(data => {
         if (!Array.isArray(data)) return;
 
-        localStorage.setItem('lastSeen_' + roomId, Date.now().toString());
-        window.dispatchEvent(new Event('chat-lastseen-updated'));
+        const last = data[data.length - 1];
+        setLastSeenForRoom(roomId, last);
 
         // Merge: keep any real-time messages that arrived during the fetch
         setMessages(prev => {
@@ -602,8 +658,7 @@ function ChatsTab() {
   const handleSelect = (chat) => {
     const roomId = buildRoomId(chat.studentId);
     if (roomId) {
-      localStorage.setItem('lastSeen_' + roomId, Date.now().toString());
-      window.dispatchEvent(new Event('chat-lastseen-updated'));
+      setLastSeenForRoom(roomId, null);
     }
     setChats(prev => prev.map(c => c.id === chat.id ? { ...c, unread: 0 } : c));
     setActiveId(chat.id);
@@ -627,8 +682,26 @@ function ChatsTab() {
     setInput('');
   };
 
+  const chatShellStyle = isFocused
+    ? {
+        background: 'white',
+        borderRadius: 0,
+        boxShadow: 'none',
+        overflow: 'hidden',
+        display: 'flex',
+        height: 'calc(100vh - 88px)',
+      }
+    : {
+        background: 'white',
+        borderRadius: 16,
+        boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+        overflow: 'hidden',
+        display: 'flex',
+        height: '560px',
+      };
+
   return (
-    <div style={{ background: 'white', borderRadius: 16, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', overflow: 'hidden', display: 'flex', height: '560px' }}>
+    <div style={chatShellStyle}>
 
       {/* Left: chat list */}
       <div style={{ width: 280, borderRight: '1px solid #F1F5F9', display: 'flex', flexDirection: 'column', flexShrink: 0 }}>
@@ -751,6 +824,7 @@ export default function MentorDashboard() {
   const location = useLocation();
   const navigate = useNavigate();
   const [requests, setRequests] = useState([]);
+  const [isChatFocused, setIsChatFocused] = useState(false);
   const socketRef = useRef(null);
 
   const fetchRequests = useCallback(async () => {
@@ -808,6 +882,10 @@ export default function MentorDashboard() {
   };
 
   const activeTab = getTabFromURL();
+  const hideDashboardChrome = activeTab === 'Chats' && isChatFocused;
+  const dashboardContentStyle = hideDashboardChrome
+    ? { maxWidth: 'none', margin: 0, padding: 0 }
+    : { maxWidth: 1100, margin: '0 auto', padding: '0 32px' };
 
   const handleTabClick = (tab) => {
     if (tab === 'Overview') navigate('/mentor-dashboard');
@@ -818,9 +896,10 @@ export default function MentorDashboard() {
 
   return (
     <div style={{ minHeight: '100vh', background: '#F8FAFC', paddingTop: 88, paddingBottom: 64, fontFamily: 'Inter, sans-serif' }}>
-      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 32px' }}>
+      <div style={dashboardContentStyle}>
 
         {/* Header banner */}
+        {!hideDashboardChrome && (
         <div style={{ background: 'linear-gradient(135deg, #059669, #0D9488)', borderRadius: 20, padding: '36px 40px', marginBottom: 28, color: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
             <p style={{ fontSize: 14, opacity: 0.85, margin: '0 0 4px' }}>👋 Welcome back,</p>
@@ -835,12 +914,13 @@ export default function MentorDashboard() {
             <p style={{ fontSize: 13, opacity: 0.85, margin: '4px 0 0' }}>Students mentored</p>
           </div>
         </div>
+        )}
 
         {/* Tab content */}
         {activeTab === 'Overview' && <OverviewTab requests={requests} handleTabClick={handleTabClick} />}
         {activeTab === 'Requests' && <RequestsTab requests={requests} setRequests={setRequests} onAccept={handleAcceptRequest} onDecline={handleDeclineRequest} />}
         {activeTab === 'My Students' && <StudentsTab handleTabClick={handleTabClick} />}
-        {activeTab === 'Chats' && <ChatsTab />}
+        {activeTab === 'Chats' && <ChatsTab onFocusChange={setIsChatFocused} isFocused={hideDashboardChrome} />}
 
       </div>
     </div>
