@@ -1,0 +1,150 @@
+                {/* CLASS 7 – MATHEMATICS – COMPARING QUANTITIES */}
+                {classId === '7' && subjectId === 'maths' && chapterId === 'comparing-quantities' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="⚖️">Comparing Quantities</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                In daily life, we often compare quantities like prices, marks, and discounts. Concepts like <strong>ratio, percentage, profit, and loss</strong> help us understand and compare values easily. In this lesson, students will learn how to <strong>compare quantities using different mathematical methods</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔢">What is a Ratio?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>ratio</strong> compares two quantities of the same kind.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#475569', fontWeight: 600 }}>Form: a : b</p>
+                                <p style={{ margin: '0 0 8px', fontSize: '16px', color: '#0F172A', fontWeight: 700 }}>Example: 2 : 3</p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#475569', fontStyle: 'italic' }}>This means for every 2 items of one kind, there are 3 of another.</p>
+                            </div>
+                            
+                            <h3 style={{ fontSize: '18px', color: '#0F172A', marginTop: '24px', marginBottom: '16px' }}>Simplifying Ratios</h3>
+                            <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#B45309', lineHeight: 1.6 }}>Divide both terms by their highest common factor.</p>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#92400E', fontWeight: 700 }}>Example: 4 : 8 &rarr; 1 : 2</p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="💯">What is a Percentage?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>percentage</strong> literally means "per hundred". <em>(Symbol: %)</em>
+                            </p>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1E40AF' }}>Understanding Percent</h3>
+                                    <p style={{ margin: 0, fontSize: '16px', color: '#1E3A8A', fontWeight: 600 }}>50% = 50/100 = 1/2</p>
+                                </div>
+                                <div style={{ background: '#F0FDFA', border: '1px solid #99F6E4', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#0F766E' }}>Fraction to Percentage</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#0F766E', fontStyle: 'italic' }}>Multiply by 100.</p>
+                                    <p style={{ margin: 0, fontSize: '16px', color: '#115E59', fontWeight: 600 }}>1/4 = (1/4) × 100 = 25%</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#C026D3' }}>Percentage to Fraction</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#A21CAF', fontStyle: 'italic' }}>Divide by 100.</p>
+                                    <p style={{ margin: 0, fontSize: '16px', color: '#86198F', fontWeight: 600 }}>75% = 75/100 = 3/4</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📈">Profit and Loss</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, marginBottom: 16 }}>
+                                Comparing the Cost Price (CP) to the Selling Price (SP) helps determine financial gain or loss.
+                            </p>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 20 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#047857' }}>Profit 🟢</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>Occurs when Selling Price is more than Cost Price.</p>
+                                    <div style={{ background: '#D1FAE5', padding: '12px', borderRadius: '8px', marginBottom: '12px' }}>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#065F46', fontWeight: 700 }}>Profit = SP - CP</p>
+                                    </div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#064E3B', fontWeight: 700 }}>Example:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#064E3B', lineHeight: 1.6, fontSize: '14px' }}>
+                                        <li>CP = ₹100, SP = ₹120</li>
+                                        <li>Profit = ₹20</li>
+                                    </ul>
+                                </div>
+                                
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 16, padding: 20 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#991B1B' }}>Loss 🔴</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#7F1D1D', lineHeight: 1.6 }}>Occurs when Selling Price is less than Cost Price.</p>
+                                    <div style={{ background: '#FEE2E2', padding: '12px', borderRadius: '8px', marginBottom: '12px' }}>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#991B1B', fontWeight: 700 }}>Loss = CP - SP</p>
+                                    </div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#7F1D1D', fontWeight: 700 }}>Example:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#7F1D1D', lineHeight: 1.6, fontSize: '14px' }}>
+                                        <li>CP = ₹200, SP = ₹150</li>
+                                        <li>Loss = ₹50</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📊">Calculating Profit% and Loss%</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Profit Percentage</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '16px', color: '#059669', fontWeight: 700 }}>Profit% = (Profit / CP) × 100</p>
+                                    <div style={{ borderTop: '1px solid #E2E8F0', marginTop: '12px', paddingTop: '12px' }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569' }}>From ₹20 profit on ₹100 CP:</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#0F172A', fontWeight: 600 }}>(20/100) × 100 = 20%</p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Loss Percentage</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '16px', color: '#E11D48', fontWeight: 700 }}>Loss% = (Loss / CP) × 100</p>
+                                    <div style={{ borderTop: '1px solid #E2E8F0', marginTop: '12px', paddingTop: '12px' }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569' }}>From ₹50 loss on ₹200 CP:</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#0F172A', fontWeight: 600 }}>(50/200) × 100 = 25%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🛍️">Real-Life Applications</SectionTitle>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Shopping discounts during sales and markdowns.</li>
+                                    <li>Tracking success inside retail business and merchant trade.</li>
+                                    <li>Calculating student marks, test score results, and general statistics.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. Find the simplified ratio of 10 to 20.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 1 : 2</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Convert the fraction 1/5 into a percentage.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 20%</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. A product costs ₹500 and securely sells for ₹600. Find the profit.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: ₹100</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Simplify the ratio: 6 : 12</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Convert the fraction 2/5 into a percentage.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Calculate profit if CP = ₹300, and SP = ₹350.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Calculate loss if CP = ₹400, and SP = ₹300.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Find the correct percentage of getting 50 correct out of 200 total.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}

@@ -1,0 +1,149 @@
+                {/* CLASS 7 – MATHEMATICS – LINES & ANGLES */}
+                {classId === '7' && subjectId === 'maths' && chapterId === 'lines-angles' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="📐">Lines & Angles</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Lines and angles are important concepts in geometry. They help us understand shapes, patterns, and designs around us. In this lesson, students will learn about <strong>different types of lines, angles, transversals, and angle relationships like complementary and supplementary angles</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📏">What is a Line?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>line</strong> is a straight path that extends endlessly in both directions.
+                            </p>
+                            
+                            <h3 style={{ fontSize: '18px', color: '#0F172A', marginTop: '24px', marginBottom: '16px' }}>Types of Lines</h3>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1E40AF' }}>Parallel Lines</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#1E3A8A', lineHeight: 1.6 }}>Lines that never meet and remain at an equal distance apart.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#1E40AF', fontStyle: 'italic' }}>Example: Railway tracks</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#C026D3' }}>Intersecting Lines</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#86198F', lineHeight: 1.6 }}>Lines that cross and meet at a single point.</p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#047857' }}>Perpendicular Lines</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>Lines that intersect to form a perfect right angle (90°).</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="∠">What is an Angle?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                An <strong>angle</strong> is formed when two lines or rays meet at a common point. This point is called the <strong>vertex</strong>.
+                            </p>
+                            
+                            <h3 style={{ fontSize: '18px', color: '#0F172A', marginTop: '24px', marginBottom: '16px' }}>Types of Angles</h3>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Acute Angle</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B' }}>Less than 90°</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Right Angle</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B' }}>Exactly 90°</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Obtuse Angle</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B' }}>Between 90° and 180°</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Straight Angle</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B' }}>Exactly 180°</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Reflex Angle</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B' }}>More than 180°</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">Angle Relationships</SectionTitle>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#92400E' }}>Complementary Angles</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#B45309', lineHeight: 1.6 }}>Two angles whose sum is exactly <strong>90°</strong>.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#D97706', fontWeight: 600 }}>Example: 30° + 60° = 90°</p>
+                                </div>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#92400E' }}>Supplementary Angles</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#B45309', lineHeight: 1.6 }}>Two angles whose sum is exactly <strong>180°</strong>.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#D97706', fontWeight: 600 }}>Example: 120° + 60° = 180°</p>
+                                </div>
+                                <div style={{ background: '#F0FDFA', border: '1px solid #99F6E4', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#0F766E' }}>Adjacent Angles</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#115E59', lineHeight: 1.6 }}>Angles that are next to each other, sharing a common vertex and a common side.</p>
+                                </div>
+                                <div style={{ background: '#F0FDFA', border: '1px solid #99F6E4', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#0F766E' }}>Vertically Opposite Angles</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#115E59', lineHeight: 1.6 }}>Angles formed opposite each other when two lines intersect. They are always <strong>equal</strong>.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#0D9488', fontWeight: 600 }}>If one is 50°, the opposite is also 50°.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🛤️">Transversals</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                A <strong>transversal</strong> is a line that cuts across two or more other lines.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>
+                                    When a transversal cuts <em>parallel lines</em>, it forms:
+                                </p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Corresponding Angles</strong> (they are equal)</li>
+                                    <li><strong>Alternate Interior Angles</strong> (they are equal)</li>
+                                    <li><strong>Interior Angles on same side</strong> (their sum is 180°)</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌍">Real-Life Examples</SectionTitle>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>The clock hands changing position to form different angles.</li>
+                                    <li>Road intersections displaying intersecting and perpendicular paths.</li>
+                                    <li>Designs in architecture and buildings using transversals for strength and aesthetics.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. Two angles are 40° and 50°. Are they complementary?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Yes, because 40° + 50° = 90°</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Find the supplementary angle of 70°.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 180° - 70° = 110°</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. If two vertically opposite angles are equal and one is 60°, find the other.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 60°</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define parallel lines.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name three types of angles.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Find the complementary angle of 25°.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Find the supplementary angle of 120°.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What is a transversal?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}

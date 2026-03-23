@@ -1,0 +1,63 @@
+    'integers': {
+        title: 'Integers',
+        subtitle: 'Understand positive numbers, negative numbers, and zero, and learn how to perform operations on them.',
+        videoSubtitle: 'Watch these engaging videos to visualize integers and master operations on a number line!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/AtPS0pWthEo?si=jMLio9BLoYR2XUpC', title: 'Introduction to Integers', thumb: 'https://img.youtube.com/vi/AtPS0pWthEo/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/O6bRgxVRoZ4?si=yTaTABj37VwNF3VZ', title: 'Adding and Subtracting Integers', thumb: 'https://img.youtube.com/vi/O6bRgxVRoZ4/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/u3HANGB47pA?si=hGd3TxME2KnlLsno', title: 'Multiplying and Dividing Integers', thumb: 'https://img.youtube.com/vi/u3HANGB47pA/hqdefault.jpg' }
+        ],
+        quiz: [
+            {
+                question: 'Which is an integer?',
+                options: ['2.5', '-3', '1/2', '3.7'],
+                correct: '-3'
+            },
+            {
+                question: '-4 + (-6) =',
+                options: ['10', '-10', '2', '-2'],
+                correct: '-10'
+            },
+            {
+                question: '7 + (-5) =',
+                options: ['12', '2', '-2', '-12'],
+                correct: '2'
+            },
+            {
+                question: '(-3) × (-4) =',
+                options: ['-12', '12', '-7', '7'],
+                correct: '12'
+            },
+            {
+                question: '10 ÷ (-2) =',
+                options: ['5', '-5', '2', '-2'],
+                correct: '-5'
+            },
+            {
+                question: 'Which is true?',
+                options: ['Positive × Negative = Positive', 'Negative × Negative = Positive', 'Positive × Positive = Negative', 'Negative × Positive = Positive'],
+                correct: 'Negative × Negative = Positive'
+            },
+            {
+                question: '0 is',
+                options: ['positive', 'negative', 'both', 'neither positive nor negative'],
+                correct: 'neither positive nor negative'
+            },
+            {
+                question: '(-8) - 2 =',
+                options: ['-10', '10', '-6', '6'],
+                correct: '-10'
+            },
+            {
+                question: 'Numbers to the left of 0 are',
+                options: ['positive', 'negative', 'both', 'none'],
+                correct: 'negative'
+            },
+            {
+                question: 'Integers include',
+                options: ['only positive numbers', 'only negative numbers', 'positive, negative, and zero', 'decimals'],
+                correct: 'positive, negative, and zero'
+            }
+        ],
+        nextLesson: { id: 'fractions-decimals', title: 'Fractions & Decimals' }
+    },

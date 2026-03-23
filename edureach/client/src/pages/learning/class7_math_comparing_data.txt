@@ -1,0 +1,68 @@
+    'comparing-quantities': {
+        title: 'Comparing Quantities',
+        subtitle: 'Understand ratios, calculate percentages, and determine basic profit and loss.',
+        videoSubtitle: 'Watch these engaging videos to visualize ratios and master calculating discounts and profit!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/Nk9jMzNDOko?si=IXS5L0E7x-QcTUto', title: 'Ratios and Percentages', thumb: 'https://img.youtube.com/vi/Nk9jMzNDOko/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/VYVyTpiErRk?si=id4EufWqrZqDfItL', title: 'Profit, Loss, and Discounts', thumb: 'https://img.youtube.com/vi/VYVyTpiErRk/hqdefault.jpg' }
+        ],
+        summary: [
+            "You have learned how to compare quantities using mathematical ratios.",
+            "You discovered how to easily convert between fractions and percentages.",
+            "You utilized formulas to accurately calculate Profit, Loss, and their percentage values."
+        ],
+        summaryEnd: "Great job completing this lesson!",
+        quiz: [
+            {
+                question: 'A ratio fundamentally compares',
+                options: ['numbers', 'quantities', 'shapes', 'angles'],
+                correct: 'quantities'
+            },
+            {
+                question: 'The percentage 50% is equivalent to the fraction',
+                options: ['1/2', '1/3', '1/4', '1/5'],
+                correct: '1/2'
+            },
+            {
+                question: 'The fraction 1/4 converted to a percentage is',
+                options: ['20%', '25%', '30%', '40%'],
+                correct: '25%'
+            },
+            {
+                question: 'A profit occurs exactly when',
+                options: ['Cost Price > Selling Price', 'Selling Price > Cost Price', 'Cost Price = Selling Price', 'none'],
+                correct: 'Selling Price > Cost Price'
+            },
+            {
+                question: 'A financial loss occurs exactly when',
+                options: ['Selling Price > Cost Price', 'Cost Price > Selling Price', 'Selling Price = Cost Price', 'none'],
+                correct: 'Cost Price > Selling Price'
+            },
+            {
+                question: 'The exact formula to find Profit happens to be',
+                options: ['Cost Price - Selling Price', 'Selling Price - Cost Price', 'Cost Price + Selling Price', 'Selling Price ÷ Cost Price'],
+                correct: 'Selling Price - Cost Price'
+            },
+            {
+                question: 'When simplifying the ratio 2 : 4, the result is',
+                options: ['1 : 2', '2 : 1', '4 : 2', '1 : 4'],
+                correct: '1 : 2'
+            },
+            {
+                question: 'The specified percentage 75% is equal to the fraction',
+                options: ['1/2', '3/4', '1/4', '2/3'],
+                correct: '3/4'
+            },
+            {
+                question: 'The term "Percentage" mathematically means',
+                options: ['per thousand', 'per hundred', 'per ten', 'per one'],
+                correct: 'per hundred'
+            },
+            {
+                question: 'Comparing quantities is frequently used practically in',
+                options: ['shopping', 'business', 'daily life', 'all of these'],
+                correct: 'all of these'
+            }
+        ],
+        nextLesson: { id: 'data-handling', title: 'Data Handling' }
+    },

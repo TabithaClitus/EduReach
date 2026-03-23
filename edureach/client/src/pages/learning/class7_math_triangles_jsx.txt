@@ -1,0 +1,148 @@
+                {/* CLASS 7 – MATHEMATICS – TRIANGLES */}
+                {classId === '7' && subjectId === 'maths' && chapterId === 'triangles' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🔺">Triangles</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                A <strong>triangle</strong> is one of the most basic shapes in geometry. It has three sides, three angles, and three vertices. Triangles are used securely in buildings, bridges, and designs. In this lesson, students will learn about the <strong>types of triangles, their properties, and the Pythagorean Theorem</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📏">What is a Triangle?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>triangle</strong> is a polygon with three sides and three angles.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#475569', fontWeight: 600 }}>Example: △ABC</p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📐">Properties of a Triangle</SectionTitle>
+                            <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#92400E', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>The sum of all interior angles of a triangle is always exactly <strong>180°</strong>.</li>
+                                    <li>A triangle has three unique sides, three angles, and three vertices.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🗂️">Types of Triangles</SectionTitle>
+                            
+                            <h3 style={{ fontSize: '18px', color: '#0F172A', marginTop: '24px', marginBottom: '16px' }}>Based on Sides</h3>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1E40AF' }}>Equilateral Triangle</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#1E3A8A', lineHeight: 1.6 }}>All three sides are completely equal in length.</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#C026D3' }}>Isosceles Triangle</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#86198F', lineHeight: 1.6 }}>At least two of the sides are equal in length.</p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#047857' }}>Scalene Triangle</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>All three sides are completely different lengths from each other.</p>
+                                </div>
+                            </div>
+                            
+                            <h3 style={{ fontSize: '18px', color: '#0F172A', marginTop: '32px', marginBottom: '16px' }}>Based on Angles</h3>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 16 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Acute Triangle</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>All three interior angles are less than 90°.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 16 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Right Triangle</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Exactly one interior angle is a perfect 90°.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 16 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Obtuse Triangle</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Exactly one interior angle is greater than 90°.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="➕">Angle Properties</SectionTitle>
+                            
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#92400E' }}>Angle Sum Property</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#B45309', lineHeight: 1.6 }}>The sum of the three interior angles in any triangle is always <strong>180°</strong>.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#D97706', fontWeight: 600 }}>Example: 50° + 60° + 70° = 180°</p>
+                                </div>
+                                <div style={{ background: '#F0FDFA', border: '1px solid #99F6E4', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#0F766E' }}>Exterior Angle Property</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#115E59', lineHeight: 1.6 }}>The measure of an exterior angle of a triangle equals the sum of its two interior opposite angles.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#0D9488', fontWeight: 600 }}>Example: If interior opposites are 40° and 50°, the exterior angle = 90°.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔢">Pythagorean Theorem</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                In any <strong>right-angled triangle</strong>, the square of the longest side (the hypotenuse) is equal to the sum of the squares of the other two shorter sides.
+                            </p>
+                            
+                            <div style={{ background: '#F3F4F6', border: '1px solid #D1D5DB', borderRadius: 12, padding: '20px', marginTop: '16px', textAlign: 'center' }}>
+                                <p style={{ fontSize: '24px', color: '#1F2937', fontWeight: 800, margin: '0 0 16px' }}>a² + b² = c²</p>
+                                <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#4B5563' }}><strong>a</strong> and <strong>b</strong> are the shorter sides (legs).</p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#4B5563' }}><strong>c</strong> is the longest side directly opposite the right angle (hypotenuse).</p>
+                            </div>
+                            
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16, marginTop: '16px' }}>
+                                <h4 style={{ fontSize: '16px', color: '#334155', margin: '0 0 12px 0' }}>Example problem:</h4>
+                                <p style={{ fontSize: '15px', color: '#475569', margin: '0 0 8px 0' }}>If a = 3 and b = 4:</p>
+                                <ul style={{ paddingLeft: '20px', fontSize: '15px', color: '#475569', margin: 0, lineHeight: 1.8 }}>
+                                    <li>c² = 3² + 4²</li>
+                                    <li>c² = 9 + 16</li>
+                                    <li>c² = 25</li>
+                                    <li><strong>c = 5</strong></li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏗️">Real-Life Applications</SectionTitle>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Crucial shape for structural strength in construction and architecture (like roof trusses).</li>
+                                    <li>Used drastically in surveying to help measure long distances.</li>
+                                    <li>Heavily applied in computer graphics, navigation, and engineering design.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. Find the third angle of a triangle if two angles are 60° and 70°.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 180° - (60° + 70°) = 50°</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. In a right triangle, if the shorter sides are 5 and 12, find the third longest side.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: c² = 5² + 12² = 25 + 144 = 169 &rarr; c = 13</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Find the exterior angle if the two interior angles are 30° and 40°.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 70°</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define what makes a regular polygon a triangle.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name the three types of triangles based solely on lengths of their sides.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Calculate the missing third angle if the known two angles are 45° and 65°.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Use the Pythagorean theorem for shorter sides 6 and 8 to find the hypotenuse.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What is the fundamental property of an equilateral triangle?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}

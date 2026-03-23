@@ -1,0 +1,68 @@
+    'triangles': {
+        title: 'Triangles',
+        subtitle: 'Understand the properties of triangles, their classifications, and the Pythagorean Theorem.',
+        videoSubtitle: 'Watch these engaging videos to visualize angle sum properties and master the Pythagorean Theorem!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/plZV63uofgs?si=NSxnfiwAmOxKfxia', title: 'Introduction to Triangles', thumb: 'https://img.youtube.com/vi/plZV63uofgs/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/TOdGUIDezFE?si=3w6l3hGqxgFdnXqi', title: 'The Pythagorean Theorem', thumb: 'https://img.youtube.com/vi/TOdGUIDezFE/hqdefault.jpg' }
+        ],
+        summary: [
+            "You have learned how to classify triangles based on their sides and angles.",
+            "You explored the core Angle Sum and Exterior Angle properties of triangles.",
+            "You mastered utilizing the Pythagorean Theorem to find missing side lengths."
+        ],
+        summaryEnd: "Great job completing this lesson!",
+        quiz: [
+            {
+                question: 'A triangle has',
+                options: ['2 sides', '3 sides', '4 sides', '5 sides'],
+                correct: '3 sides'
+            },
+            {
+                question: 'The sum of all interior angles in a triangle is',
+                options: ['90°', '180°', '360°', '270°'],
+                correct: '180°'
+            },
+            {
+                question: 'An equilateral triangle has',
+                options: ['2 equal sides', '3 equal sides', 'no equal sides', '4 sides'],
+                correct: '3 equal sides'
+            },
+            {
+                question: 'A right triangle has exactly one angle that is',
+                options: ['45°', '60°', '90°', '120°'],
+                correct: '90°'
+            },
+            {
+                question: 'In the Pythagorean theorem (a² + b² = c²), c represents the',
+                options: ['smallest side', 'middle side', 'hypotenuse', 'angle'],
+                correct: 'hypotenuse'
+            },
+            {
+                question: 'In a right triangle, if the shorter sides are 3 and 4, the third side (hypotenuse) is',
+                options: ['5', '6', '7', '8'],
+                correct: '5'
+            },
+            {
+                question: 'A triangle with all unequal sides is called',
+                options: ['equilateral', 'isosceles', 'scalene', 'right'],
+                correct: 'scalene'
+            },
+            {
+                question: 'The exterior angle of a triangle is equal to the',
+                options: ['sum of its two opposite interior angles', 'difference between interior angles', 'product of all angles', 'zero'],
+                correct: 'sum of its two opposite interior angles'
+            },
+            {
+                question: 'A triangle with angles measuring 60°, 60°, and 60° is',
+                options: ['scalene', 'isosceles', 'equilateral', 'right'],
+                correct: 'equilateral'
+            },
+            {
+                question: 'Triangles are commonly used in',
+                options: ['buildings', 'bridges', 'architectural design', 'all of these'],
+                correct: 'all of these'
+            }
+        ],
+        nextLesson: { id: 'comparing-quantities', title: 'Comparing Quantities' }
+    },

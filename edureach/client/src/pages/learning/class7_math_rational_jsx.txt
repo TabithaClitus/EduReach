@@ -1,0 +1,152 @@
+                {/* CLASS 7 – MATHEMATICS – RATIONAL NUMBERS */}
+                {classId === '7' && subjectId === 'maths' && chapterId === 'rational-numbers' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🔢">Rational Numbers</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Rational numbers are numbers that can be written in the form of a <strong>ratio of two integers</strong>. They include fractions, integers, and decimals. In this lesson, students will learn about <strong>rational numbers, their properties, and operations on them</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤔">What are Rational Numbers?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>rational number</strong> is a number that can be written in the form: <br />
+                                <strong>p/q, where q &ne; 0</strong> <br />
+                                <em>Here, p and q are integers.</em>
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Examples:</p>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#475569', fontWeight: 600 }}>1/2, -3/4, 5, 0, -2</p>
+                                <p style={{ margin: '10px 0 0', fontSize: '14px', color: '#64748B', fontStyle: 'italic' }}>
+                                    (Whole numbers and integers can also be written as fractions, e.g., 5 = 5/1)
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📏">Positive and Negative Rational Numbers</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1E40AF' }}>Positive Rational Numbers</h3>
+                                    <p style={{ margin: 0, fontSize: '16px', color: '#1E3A8A', fontWeight: 600 }}>1/2, 3/5</p>
+                                </div>
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#991B1B' }}>Negative Rational Numbers</h3>
+                                    <p style={{ margin: 0, fontSize: '16px', color: '#7F1D1D', fontWeight: 600 }}>-2/3, -7/4</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📈">Number Line Representation</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                Rational numbers can be shown on a number line just like integers and fractions.
+                            </p>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16, textAlign: 'center' }}>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#166534', fontWeight: 700 }}>
+                                    ... -1, -1/2, 0, 1/2, 1 ...
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⚖️">Equivalent Rational Numbers</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                Different fractions that represent the same value are called <strong>equivalent rational numbers</strong>.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16, textAlign: 'center' }}>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#475569', fontWeight: 700 }}>
+                                    1/2 = 2/4 = 3/6
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="➕">Operations on Rational Numbers</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#92400E' }}>Addition</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#B45309', fontWeight: 600 }}>1/3 + 2/3 = 3/3 = 1</p>
+                                </div>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#92400E' }}>Subtraction</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#B45309', fontWeight: 600 }}>3/4 - 1/2 = 3/4 - 2/4 = 1/4</p>
+                                </div>
+                                <div style={{ background: '#F3E8FF', border: '1px solid #D8B4FE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#6B21A8' }}>Multiplication</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#7E22CE', fontWeight: 600 }}>2/3 × 3/5 = 6/15 = 2/5</p>
+                                </div>
+                                <div style={{ background: '#F3E8FF', border: '1px solid #D8B4FE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#6B21A8' }}>Division</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#7E22CE', fontWeight: 600 }}>4/5 ÷ 2/3 = 4/5 × 3/2 = 12/10 = 6/5</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">Properties of Rational Numbers</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Closure Property</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>The sum, difference, and product of rational numbers are always rational.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Commutative Property</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#475569', lineHeight: 1.6 }}><strong>a + b = b + a</strong></p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}><strong>a × b = b × a</strong></p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Associative & Distributive</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#475569', lineHeight: 1.6 }}><strong>(a + b) + c = a + (b + c)</strong></p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}><strong>a × (b + c) = a×b + a×c</strong></p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#047857' }}>Identity Element</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>Additive identity &rarr; <strong>0</strong></p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>Multiplicative identity &rarr; <strong>1</strong></p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌍">Real-Life Applications</SectionTitle>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Sharing food mathematically (fractions).</li>
+                                    <li>Precise engineering measurements.</li>
+                                    <li>Complex money calculations across currencies.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. Add: 2/5 + 3/5</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 5/5 = 1</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Multiply: 3/4 × 2/3</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 6/12 = 1/2</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Divide: 6/7 ÷ 3/2</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 6/7 × 2/3 = 12/21 = 4/7</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Write 3 examples of rational numbers.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Add: 1/4 + 3/4</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Subtract: 5/6 - 1/3</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Multiply: 2/5 × 5/2</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Divide: 3/8 ÷ 1/4</p>
+                            </div>
+                        </Section>
+                    </>
+                )}

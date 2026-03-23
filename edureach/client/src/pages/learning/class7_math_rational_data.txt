@@ -1,0 +1,63 @@
+    'rational-numbers': {
+        title: 'Rational Numbers',
+        subtitle: 'Discover numbers that can be written as ratios of two integers and learn operations on them.',
+        videoSubtitle: 'Watch these engaging videos to visualize rational numbers and master operations on a number line!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/wswkQxG-Kk8?si=jId_CDuyHmQRMy4v', title: 'Introduction to Rational Numbers', thumb: 'https://img.youtube.com/vi/wswkQxG-Kk8/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/PFYpn7QBh_8?si=JIdKpUG5RqIvBqEZ', title: 'Operations on Rational Numbers', thumb: 'https://img.youtube.com/vi/PFYpn7QBh_8/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/psWBTcEmJaY?si=SgX9KT6BRSeuB-Pi', title: 'Properties of Rational Numbers', thumb: 'https://img.youtube.com/vi/psWBTcEmJaY/hqdefault.jpg' }
+        ],
+        quiz: [
+            {
+                question: 'A rational number is',
+                options: ['only integer', 'p/q form where q ≠ 0', 'only decimal', 'only fraction'],
+                correct: 'p/q form where q ≠ 0'
+            },
+            {
+                question: 'Which is a rational number?',
+                options: ['√2', '1/2', 'π', '√3'],
+                correct: '1/2'
+            },
+            {
+                question: '5 can be written as',
+                options: ['1/5', '5/0', '5/1', '0/5'],
+                correct: '5/1'
+            },
+            {
+                question: 'In a rational number p/q, the denominator q should not be',
+                options: ['1', '2', '0', '5'],
+                correct: '0'
+            },
+            {
+                question: 'Which is an equivalent rational number to 1/2?',
+                options: ['2/3', '2/4', '3/5', '1/3'],
+                correct: '2/4'
+            },
+            {
+                question: '3/4 + 1/4 =',
+                options: ['1', '2', '3', '4'],
+                correct: '1'
+            },
+            {
+                question: '2/3 × 3/2 =',
+                options: ['1', '2', '3', '0'],
+                correct: '1'
+            },
+            {
+                question: 'What is the Additive identity?',
+                options: ['1', '0', '2', '-1'],
+                correct: '0'
+            },
+            {
+                question: 'What is the Multiplicative identity?',
+                options: ['0', '1', '2', '-1'],
+                correct: '1'
+            },
+            {
+                question: 'Rational numbers are used in',
+                options: ['measurements', 'money', 'sharing', 'all of these'],
+                correct: 'all of these'
+            }
+        ],
+        nextLesson: { id: 'algebra', title: 'Algebra (Equations + Expressions)' }
+    },

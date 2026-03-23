@@ -1,0 +1,155 @@
+                {/* CLASS 7 – MATHEMATICS – FRACTIONS & DECIMALS */}
+                {classId === '7' && subjectId === 'maths' && chapterId === 'fractions-decimals' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🥧">Fractions & Decimals</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Fractions and decimals are used to represent parts of a whole and precise values. In Class 7, students learn <strong>advanced operations on fractions and decimals</strong>, which are useful in daily life such as money calculations, measurements, and sharing quantities.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤔">What are Fractions?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>fraction</strong> represents a part of a whole. <br />
+                                <strong>Form:</strong> <em>Fraction = Numerator / Denominator</em>
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Examples:</p>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#475569', fontWeight: 600 }}>1/2, 3/4, 5/6</p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔍">Types of Fractions</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1D4ED8' }}>Proper Fraction</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#1E40AF', lineHeight: 1.6 }}>Numerator &lt; Denominator</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#1E3A8A', fontStyle: 'italic' }}>Example: 3/5</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#C026D3' }}>Improper Fraction</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#86198F', lineHeight: 1.6 }}>Numerator &ge; Denominator</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#701A75', fontStyle: 'italic' }}>Example: 7/4</p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#047857' }}>Mixed Fraction</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>Whole number + fraction</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#064E3B', fontStyle: 'italic' }}>Example: 1 3/4</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="➕">Operations on Fractions</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Addition</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569', lineHeight: 1.6 }}><strong>Rule:</strong> Find LCM of denominators &rarr; make identical &rarr; add numerators.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#0F172A', fontWeight: 600 }}>1/2 + 1/3 = 3/6 + 2/6 = 5/6</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Subtraction</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569', lineHeight: 1.6 }}><strong>Rule:</strong> Find LCM of denominators &rarr; subtract numerators.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#0F172A', fontWeight: 600 }}>3/4 - 1/2 = 3/4 - 2/4 = 1/4</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Multiplication</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569', lineHeight: 1.6 }}><strong>Rule:</strong> Multiply numerators and denominators.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#0F172A', fontWeight: 600 }}>2/3 × 3/5 = 6/15 = 2/5</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Division</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569', lineHeight: 1.6 }}><strong>Rule:</strong> Multiply by the reciprocal.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#0F172A', fontWeight: 600 }}>3/4 ÷ 2/5 = 3/4 × 5/2 = 15/8</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔢">What are Decimals?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Decimals</strong> represent fractions in a different form based on powers of 10.
+                            </p>
+                            <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#92400E', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>0.5 = 1/2</li>
+                                    <li>0.25 = 1/4</li>
+                                </ul>
+                                <p style={{ margin: '14px 0 8px', fontSize: '15px', color: '#92400E', fontWeight: 700 }}>Place Value in Decimals:</p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#92400E', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Tenths</strong> &rarr; 0.1</li>
+                                    <li><strong>Hundredths</strong> &rarr; 0.01</li>
+                                    <li><strong>Thousandths</strong> &rarr; 0.001</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧮">Operations on Decimals</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#991B1B' }}>Addition</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#7F1D1D', lineHeight: 1.6 }}>Align decimal points and add.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#991B1B', fontWeight: 600 }}>2.5 + 1.3 = 3.8</p>
+                                </div>
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#991B1B' }}>Subtraction</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#7F1D1D', lineHeight: 1.6 }}>Align decimal points and subtract.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#991B1B', fontWeight: 600 }}>5.6 - 2.1 = 3.5</p>
+                                </div>
+                                <div style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#6D28D9' }}>Multiplication</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#5B21B6', lineHeight: 1.6 }}>Multiply ignoring decimals, then place the decimal back.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#6D28D9', fontWeight: 600 }}>2.5 × 2 = 5.0</p>
+                                </div>
+                                <div style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#6D28D9' }}>Division</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#5B21B6', lineHeight: 1.6 }}>Divide as normal, keeping the decimal point.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#6D28D9', fontWeight: 600 }}>5.0 ÷ 2 = 2.5</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌍">Real-Life Applications</SectionTitle>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Money (e.g., ₹10.50, ₹25.75)</li>
+                                    <li>Measurements (e.g., 2.5 meters)</li>
+                                    <li>Cooking and sharing portions</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. Add: 2/3 + 1/6</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 4/6 + 1/6 = 5/6</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Multiply: 3/5 × 2/3</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 6/15 = 2/5</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Subtract: 4.5 - 1.2</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 3.3</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Add: 1/4 + 3/8</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Subtract: 5/6 - 1/3</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Multiply: 2/7 × 3/4</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Divide: 6/5 ÷ 2/3</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Add decimals: 3.4 + 2.6</p>
+                            </div>
+                        </Section>
+                    </>
+                )}

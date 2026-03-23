@@ -129,6 +129,490 @@ const simpleWordsExamples = [
 
 // ─── Lesson Data ──────────────────────────────────────────────
 const lessonData = {
+    'comparing-quantities': {
+        title: 'Comparing Quantities',
+        subtitle: 'Understand ratios, calculate percentages, and determine basic profit and loss.',
+        videoSubtitle: 'Watch these engaging videos to visualize ratios and master calculating discounts and profit!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/Nk9jMzNDOko?si=IXS5L0E7x-QcTUto', title: 'Ratios and Percentages', thumb: 'https://img.youtube.com/vi/Nk9jMzNDOko/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/VYVyTpiErRk?si=id4EufWqrZqDfItL', title: 'Profit, Loss, and Discounts', thumb: 'https://img.youtube.com/vi/VYVyTpiErRk/hqdefault.jpg' }
+        ],
+        summary: [
+            "You have learned how to compare quantities using mathematical ratios.",
+            "You discovered how to easily convert between fractions and percentages.",
+            "You utilized formulas to accurately calculate Profit, Loss, and their percentage values."
+        ],
+        summaryEnd: "Great job completing this lesson!",
+        quiz: [
+            {
+                question: 'A ratio fundamentally compares',
+                options: ['numbers', 'quantities', 'shapes', 'angles'],
+                correct: 'quantities'
+            },
+            {
+                question: 'The percentage 50% is equivalent to the fraction',
+                options: ['1/2', '1/3', '1/4', '1/5'],
+                correct: '1/2'
+            },
+            {
+                question: 'The fraction 1/4 converted to a percentage is',
+                options: ['20%', '25%', '30%', '40%'],
+                correct: '25%'
+            },
+            {
+                question: 'A profit occurs exactly when',
+                options: ['Cost Price > Selling Price', 'Selling Price > Cost Price', 'Cost Price = Selling Price', 'none'],
+                correct: 'Selling Price > Cost Price'
+            },
+            {
+                question: 'A financial loss occurs exactly when',
+                options: ['Selling Price > Cost Price', 'Cost Price > Selling Price', 'Selling Price = Cost Price', 'none'],
+                correct: 'Cost Price > Selling Price'
+            },
+            {
+                question: 'The exact formula to find Profit happens to be',
+                options: ['Cost Price - Selling Price', 'Selling Price - Cost Price', 'Cost Price + Selling Price', 'Selling Price ÷ Cost Price'],
+                correct: 'Selling Price - Cost Price'
+            },
+            {
+                question: 'When simplifying the ratio 2 : 4, the result is',
+                options: ['1 : 2', '2 : 1', '4 : 2', '1 : 4'],
+                correct: '1 : 2'
+            },
+            {
+                question: 'The specified percentage 75% is equal to the fraction',
+                options: ['1/2', '3/4', '1/4', '2/3'],
+                correct: '3/4'
+            },
+            {
+                question: 'The term "Percentage" mathematically means',
+                options: ['per thousand', 'per hundred', 'per ten', 'per one'],
+                correct: 'per hundred'
+            },
+            {
+                question: 'Comparing quantities is frequently used practically in',
+                options: ['shopping', 'business', 'daily life', 'all of these'],
+                correct: 'all of these'
+            }
+        ],
+        nextLesson: { id: 'data-handling', title: 'Data Handling' }
+    },
+    'triangles': {
+        title: 'Triangles',
+        subtitle: 'Understand the properties of triangles, their classifications, and the Pythagorean Theorem.',
+        videoSubtitle: 'Watch these engaging videos to visualize angle sum properties and master the Pythagorean Theorem!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/plZV63uofgs?si=NSxnfiwAmOxKfxia', title: 'Introduction to Triangles', thumb: 'https://img.youtube.com/vi/plZV63uofgs/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/TOdGUIDezFE?si=3w6l3hGqxgFdnXqi', title: 'The Pythagorean Theorem', thumb: 'https://img.youtube.com/vi/TOdGUIDezFE/hqdefault.jpg' }
+        ],
+        summary: [
+            "You have learned how to classify triangles based on their sides and angles.",
+            "You explored the core Angle Sum and Exterior Angle properties of triangles.",
+            "You mastered utilizing the Pythagorean Theorem to find missing side lengths."
+        ],
+        summaryEnd: "Great job completing this lesson!",
+        quiz: [
+            {
+                question: 'A triangle has',
+                options: ['2 sides', '3 sides', '4 sides', '5 sides'],
+                correct: '3 sides'
+            },
+            {
+                question: 'The sum of all interior angles in a triangle is',
+                options: ['90°', '180°', '360°', '270°'],
+                correct: '180°'
+            },
+            {
+                question: 'An equilateral triangle has',
+                options: ['2 equal sides', '3 equal sides', 'no equal sides', '4 sides'],
+                correct: '3 equal sides'
+            },
+            {
+                question: 'A right triangle has exactly one angle that is',
+                options: ['45°', '60°', '90°', '120°'],
+                correct: '90°'
+            },
+            {
+                question: 'In the Pythagorean theorem (a² + b² = c²), c represents the',
+                options: ['smallest side', 'middle side', 'hypotenuse', 'angle'],
+                correct: 'hypotenuse'
+            },
+            {
+                question: 'In a right triangle, if the shorter sides are 3 and 4, the third side (hypotenuse) is',
+                options: ['5', '6', '7', '8'],
+                correct: '5'
+            },
+            {
+                question: 'A triangle with all unequal sides is called',
+                options: ['equilateral', 'isosceles', 'scalene', 'right'],
+                correct: 'scalene'
+            },
+            {
+                question: 'The exterior angle of a triangle is equal to the',
+                options: ['sum of its two opposite interior angles', 'difference between interior angles', 'product of all angles', 'zero'],
+                correct: 'sum of its two opposite interior angles'
+            },
+            {
+                question: 'A triangle with angles measuring 60°, 60°, and 60° is',
+                options: ['scalene', 'isosceles', 'equilateral', 'right'],
+                correct: 'equilateral'
+            },
+            {
+                question: 'Triangles are commonly used in',
+                options: ['buildings', 'bridges', 'architectural design', 'all of these'],
+                correct: 'all of these'
+            }
+        ],
+        nextLesson: { id: 'comparing-quantities', title: 'Comparing Quantities' }
+    },
+    'algebra': {
+        title: 'Algebra (Equations + Expressions)',
+        subtitle: 'Learn to use letters and symbols to represent numbers and solve linear equations.',
+        videoSubtitle: 'Watch these engaging videos to visualize algebraic expressions and master building equations!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/q3g68vcMXxM?si=S86L6fTKcxDbs4rW', title: 'Introduction to Algebra', thumb: 'https://img.youtube.com/vi/q3g68vcMXxM/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/NybHckSEQBI?si=6nPfgcANaK48liH6', title: 'Expressions and Variables', thumb: 'https://img.youtube.com/vi/NybHckSEQBI/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/QEnFIgN8UBw?si=-NtlVBQMrs1K0xGI', title: 'Solving Simple Equations', thumb: 'https://img.youtube.com/vi/QEnFIgN8UBw/hqdefault.jpg' }
+        ],
+        summary: [
+            "You have learned how algebra uses variables to represent unknown values.",
+            "You practiced combining like terms and simplifying mathematical expressions.",
+            "You explored how to balance and solve simple linear equations."
+        ],
+        summaryEnd: "Great job completing this lesson!",
+        quiz: [
+            {
+                question: 'Algebra uses',
+                options: ['only numbers', 'letters and numbers', 'shapes', 'colors'],
+                correct: 'letters and numbers'
+            },
+            {
+                question: 'A variable is',
+                options: ['fixed value', 'unknown value', 'number only', 'constant'],
+                correct: 'unknown value'
+            },
+            {
+                question: 'Which is an algebraic expression?',
+                options: ['x = 5', '5', 'x + 3', '10 = 10'],
+                correct: 'x + 3'
+            },
+            {
+                question: 'In 4x, the number 4 is considered the',
+                options: ['variable', 'coefficient', 'constant', 'term'],
+                correct: 'coefficient'
+            },
+            {
+                question: 'Like terms have',
+                options: ['different variables', 'same variables', 'no variables', 'numbers only'],
+                correct: 'same variables'
+            },
+            {
+                question: 'Simplify: 3x + 2x =',
+                options: ['5', '6x', '5x', 'x'],
+                correct: '5x'
+            },
+            {
+                question: 'Solve for x: x + 6 = 10',
+                options: ['2', '3', '4', '5'],
+                correct: '4'
+            },
+            {
+                question: 'Solve for x: 4x = 20',
+                options: ['2', '4', '5', '6'],
+                correct: '5'
+            },
+            {
+                question: 'An equation has an',
+                options: ['no sign', 'equal sign', 'only numbers', 'only letters'],
+                correct: 'equal sign'
+            },
+            {
+                question: 'Algebra helps in',
+                options: ['solving problems', 'drawing', 'cooking', 'playing'],
+                correct: 'solving problems'
+            }
+        ],
+        nextLesson: { id: 'lines-angles', title: 'Lines & Angles' }
+    },
+    'lines-angles': {
+        title: 'Lines & Angles',
+        subtitle: 'Understand shapes, patterns, transverals, and fundamental angle relationships.',
+        videoSubtitle: 'Watch these engaging videos to visualize transversals and master angle properties!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/2dpN0ySaSRw?si=cXiQ9WDKaUxuAk39', title: 'Introduction to Lines and Angles', thumb: 'https://img.youtube.com/vi/2dpN0ySaSRw/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/FICNvhcdeKo?si=KbC9PhgNqqkfvM28', title: 'Complementary & Supplementary', thumb: 'https://img.youtube.com/vi/FICNvhcdeKo/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/Qpq_XEeBBZw?si=hFmQ1JYKGFiVIuTH', title: 'Transversals and Parallel Lines', thumb: 'https://img.youtube.com/vi/Qpq_XEeBBZw/hqdefault.jpg' }
+        ],
+        summary: [
+            "You have learned the basic definitions of lines, intersecting lines, and parallel lines.",
+            "You explored varying types of angles such as acute, obtuse, complementary, and supplementary angles.",
+            "You mastered identifying angle relationships formed by a transversal intersecting parallel lines."
+        ],
+        summaryEnd: "Great job completing this lesson!",
+        quiz: [
+            {
+                question: 'Parallel lines',
+                options: ['meet', 'never meet', 'cross', 'bend'],
+                correct: 'never meet'
+            },
+            {
+                question: 'A right angle is exactly',
+                options: ['45°', '90°', '180°', '60°'],
+                correct: '90°'
+            },
+            {
+                question: 'Complementary angles add up to what sum?',
+                options: ['90°', '180°', '360°', '45°'],
+                correct: '90°'
+            },
+            {
+                question: 'Supplementary angles add up to what sum?',
+                options: ['90°', '180°', '360°', '60°'],
+                correct: '180°'
+            },
+            {
+                question: 'An acute angle is',
+                options: ['> 90°', '< 90°', '= 180°', '> 180°'],
+                correct: '< 90°'
+            },
+            {
+                question: 'Vertically opposite angles are always',
+                options: ['unequal', 'equal', 'random', 'zero'],
+                correct: 'equal'
+            },
+            {
+                question: 'A transversal cuts',
+                options: ['one line', 'two or more lines', 'no line', 'only curves'],
+                correct: 'two or more lines'
+            },
+            {
+                question: 'When a transversal cuts parallel lines, corresponding angles are',
+                options: ['unequal', 'equal', 'zero', 'random'],
+                correct: 'equal'
+            },
+            {
+                question: 'If two angles measure 30° and 60°, they are',
+                options: ['supplementary', 'complementary', 'straight', 'reflex'],
+                correct: 'complementary'
+            },
+            {
+                question: 'An angle measuring 100° is',
+                options: ['acute', 'right', 'obtuse', 'straight'],
+                correct: 'obtuse'
+            }
+        ],
+        nextLesson: { id: 'triangles', title: 'Triangles' }
+    },
+    'rational-numbers': {
+        title: 'Rational Numbers',
+        subtitle: 'Discover numbers that can be written as ratios of two integers and learn operations on them.',
+        videoSubtitle: 'Watch these engaging videos to visualize rational numbers and master operations on a number line!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/wswkQxG-Kk8?si=jId_CDuyHmQRMy4v', title: 'Introduction to Rational Numbers', thumb: 'https://img.youtube.com/vi/wswkQxG-Kk8/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/PFYpn7QBh_8?si=JIdKpUG5RqIvBqEZ', title: 'Operations on Rational Numbers', thumb: 'https://img.youtube.com/vi/PFYpn7QBh_8/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/psWBTcEmJaY?si=SgX9KT6BRSeuB-Pi', title: 'Properties of Rational Numbers', thumb: 'https://img.youtube.com/vi/psWBTcEmJaY/hqdefault.jpg' }
+        ],
+        quiz: [
+            {
+                question: 'A rational number is',
+                options: ['only integer', 'p/q form where q ≠ 0', 'only decimal', 'only fraction'],
+                correct: 'p/q form where q ≠ 0'
+            },
+            {
+                question: 'Which is a rational number?',
+                options: ['√2', '1/2', 'π', '√3'],
+                correct: '1/2'
+            },
+            {
+                question: '5 can be written as',
+                options: ['1/5', '5/0', '5/1', '0/5'],
+                correct: '5/1'
+            },
+            {
+                question: 'In a rational number p/q, the denominator q should not be',
+                options: ['1', '2', '0', '5'],
+                correct: '0'
+            },
+            {
+                question: 'Which is an equivalent rational number to 1/2?',
+                options: ['2/3', '2/4', '3/5', '1/3'],
+                correct: '2/4'
+            },
+            {
+                question: '3/4 + 1/4 =',
+                options: ['1', '2', '3', '4'],
+                correct: '1'
+            },
+            {
+                question: '2/3 × 3/2 =',
+                options: ['1', '2', '3', '0'],
+                correct: '1'
+            },
+            {
+                question: 'What is the Additive identity?',
+                options: ['1', '0', '2', '-1'],
+                correct: '0'
+            },
+            {
+                question: 'What is the Multiplicative identity?',
+                options: ['0', '1', '2', '-1'],
+                correct: '1'
+            },
+            {
+                question: 'Rational numbers are used in',
+                options: ['measurements', 'money', 'sharing', 'all of these'],
+                correct: 'all of these'
+            }
+        ],
+        summary: [
+            "You have learned the core concepts of this topic.",
+            "You practiced solving various mathematical problems and quizzes.",
+            "You explored real-world applications of these principles."
+        ],
+        summaryEnd: "Great job completing this lesson!",
+        nextLesson: { id: 'algebra', title: 'Algebra (Equations + Expressions)' }
+    },
+
+    'fractions-decimals': {
+        title: 'Fractions & Decimals',
+        subtitle: 'Learn advanced operations on fractions and decimals used in calculations, measurements, and daily life.',
+        videoSubtitle: 'Watch these helpful videos to master operations on fractions and decimals!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/0vuHnTWs-VY?si=beW9a9oKbKJf-35U', title: 'Introduction to Fractions', thumb: 'https://img.youtube.com/vi/0vuHnTWs-VY/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/rl7e0djo9Go?si=ydCMOBOgW2KNQbKR', title: 'Operations on Fractions', thumb: 'https://img.youtube.com/vi/rl7e0djo9Go/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/4CKDqvddhhg?si=b2hsEB4uc7WH3vV5', title: 'Understanding Decimals', thumb: 'https://img.youtube.com/vi/4CKDqvddhhg/hqdefault.jpg' }
+        ],
+        quiz: [
+            {
+                question: 'A fraction represents',
+                options: ['whole number', 'part of a whole', 'decimal only', 'integer'],
+                correct: 'part of a whole'
+            },
+            {
+                question: '1/2 + 1/2 =',
+                options: ['1', '2', '1/2', '0'],
+                correct: '1'
+            },
+            {
+                question: '3/4 × 2/3 =',
+                options: ['6/12', '1/2', '2/4', '3/6'],
+                correct: '1/2'
+            },
+            {
+                question: 'Division of fractions uses',
+                options: ['addition', 'subtraction', 'reciprocal', 'LCM'],
+                correct: 'reciprocal'
+            },
+            {
+                question: '0.5 =',
+                options: ['1/2', '1/3', '1/4', '2/3'],
+                correct: '1/2'
+            },
+            {
+                question: '2.5 + 1.5 =',
+                options: ['3.0', '4.0', '5.0', '6.0'],
+                correct: '4.0'
+            },
+            {
+                question: 'Decimal place value of 0.01 is',
+                options: ['tenths', 'hundredths', 'thousandths', 'ones'],
+                correct: 'hundredths'
+            },
+            {
+                question: '5.6 - 2.6 =',
+                options: ['3.0', '2.0', '4.0', '1.0'],
+                correct: '3.0'
+            },
+            {
+                question: '2/3 × 3/2 =',
+                options: ['1', '2', '3', '0'],
+                correct: '1'
+            },
+            {
+                question: 'Fractions are used in',
+                options: ['money', 'measurement', 'sharing', 'all of these'],
+                correct: 'all of these'
+            }
+        ],
+        summary: [
+            "You have learned the core concepts of this topic.",
+            "You practiced solving various mathematical problems and quizzes.",
+            "You explored real-world applications of these principles."
+        ],
+        summaryEnd: "Great job completing this lesson!",
+        nextLesson: { id: 'rational-numbers', title: 'Rational Numbers' }
+    },
+
+    'integers': {
+        title: 'Integers',
+        subtitle: 'Understand positive numbers, negative numbers, and zero, and learn how to perform operations on them.',
+        videoSubtitle: 'Watch these engaging videos to visualize integers and master operations on a number line!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/AtPS0pWthEo?si=jMLio9BLoYR2XUpC', title: 'Introduction to Integers', thumb: 'https://img.youtube.com/vi/AtPS0pWthEo/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/O6bRgxVRoZ4?si=yTaTABj37VwNF3VZ', title: 'Adding and Subtracting Integers', thumb: 'https://img.youtube.com/vi/O6bRgxVRoZ4/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/u3HANGB47pA?si=hGd3TxME2KnlLsno', title: 'Multiplying and Dividing Integers', thumb: 'https://img.youtube.com/vi/u3HANGB47pA/hqdefault.jpg' }
+        ],
+        quiz: [
+            {
+                question: 'Which is an integer?',
+                options: ['2.5', '-3', '1/2', '3.7'],
+                correct: '-3'
+            },
+            {
+                question: '-4 + (-6) =',
+                options: ['10', '-10', '2', '-2'],
+                correct: '-10'
+            },
+            {
+                question: '7 + (-5) =',
+                options: ['12', '2', '-2', '-12'],
+                correct: '2'
+            },
+            {
+                question: '(-3) × (-4) =',
+                options: ['-12', '12', '-7', '7'],
+                correct: '12'
+            },
+            {
+                question: '10 ÷ (-2) =',
+                options: ['5', '-5', '2', '-2'],
+                correct: '-5'
+            },
+            {
+                question: 'Which is true?',
+                options: ['Positive × Negative = Positive', 'Negative × Negative = Positive', 'Positive × Positive = Negative', 'Negative × Positive = Positive'],
+                correct: 'Negative × Negative = Positive'
+            },
+            {
+                question: '0 is',
+                options: ['positive', 'negative', 'both', 'neither positive nor negative'],
+                correct: 'neither positive nor negative'
+            },
+            {
+                question: '(-8) - 2 =',
+                options: ['-10', '10', '-6', '6'],
+                correct: '-10'
+            },
+            {
+                question: 'Numbers to the left of 0 are',
+                options: ['positive', 'negative', 'both', 'none'],
+                correct: 'negative'
+            },
+            {
+                question: 'Integers include',
+                options: ['only positive numbers', 'only negative numbers', 'positive, negative, and zero', 'decimals'],
+                correct: 'positive, negative, and zero'
+            }
+        ],
+        summary: [
+            "You have learned the core concepts of this topic.",
+            "You practiced solving various mathematical problems and quizzes.",
+            "You explored real-world applications of these principles."
+        ],
+        summaryEnd: "Great job completing this lesson!",
+        nextLesson: { id: 'fractions-decimals', title: 'Fractions & Decimals' }
+    },
+
     'intro-to-computers': {
         title: 'Introduction to Computers',
         subtitle: 'Learn what a computer is, its features, and how it helps us in daily life.',
@@ -6753,6 +7237,12 @@ const lessonData = {
             'Check: Divisor × Quotient + Remainder = Dividend.'
         ],
         summaryEnd: 'Well done! You have mastered long division with remainders!',
+        summary: [
+            "You have learned the core concepts of this topic.",
+            "You practiced solving various mathematical problems and quizzes.",
+            "You explored real-world applications of these principles."
+        ],
+        summaryEnd: "Great job completing this lesson!",
         nextLesson: { id: 'fractions-decimals', title: 'Fractions & Decimals' }
     },
 
@@ -43110,6 +43600,1138 @@ const LessonPage = () => {
                         </Section>
                     </>
                 )}
+
+                {/* CLASS 7 – MATHEMATICS – INTEGERS */}
+                {classId === '7' && subjectId === 'maths' && chapterId === 'integers' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="➖">Integers</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Integers include <strong>positive numbers, negative numbers, and zero</strong>. They are used in many real-life situations like temperature, profit and loss, and elevation. In this lesson, students will learn about <strong>integers and how to perform operations like addition, subtraction, multiplication, and division</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤔">What are Integers?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Integers</strong> are whole numbers that can be positive, negative, or zero.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Examples:</p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Positive integers:</strong> 1, 2, 3, 10</li>
+                                    <li><strong>Negative integers:</strong> -1, -2, -5</li>
+                                    <li><strong>Zero:</strong> 0</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📏">Number Line</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                Integers can be represented on a <strong>number line</strong>.
+                            </p>
+                            <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#1E40AF', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Numbers to the <strong>right</strong> of 0 are positive.</li>
+                                    <li>Numbers to the <strong>left</strong> of 0 are negative.</li>
+                                </ul>
+                                <p style={{ margin: '10px 0 0', fontSize: '16px', color: '#1D4ED8', fontWeight: 700, textAlign: 'center' }}>
+                                    ... -3, -2, -1, 0, 1, 2, 3 ...
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="➕">Addition of Integers</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#047857' }}>Rules:</h3>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#064E3B', lineHeight: 1.6, fontSize: '15px' }}>
+                                        <li>Positive + Positive = <strong>Positive</strong></li>
+                                        <li>Negative + Negative = <strong>Negative</strong></li>
+                                        <li>Positive + Negative = <strong>Subtract</strong> and take the sign of the bigger number</li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Examples:</h3>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.6, fontSize: '15px' }}>
+                                        <li>3 + 5 = <strong>8</strong></li>
+                                        <li>(-2) + (-4) = <strong>-6</strong></li>
+                                        <li>5 + (-3) = <strong>2</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="➖">Subtraction of Integers</SectionTitle>
+                            <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#991B1B', fontWeight: 700 }}>Rule:</p>
+                                <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#7F1D1D', lineHeight: 1.8 }}>
+                                    Change subtraction into addition of the opposite number.
+                                </p>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#991B1B', fontWeight: 700 }}>Examples:</p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#7F1D1D', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>5 - 3 = 5 + (-3) = <strong>2</strong></li>
+                                    <li>(-4) - 2 = (-4) + (-2) = <strong>-6</strong></li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✖️">Multiplication of Integers</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#B45309' }}>Rules:</h3>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#92400E', lineHeight: 1.6, fontSize: '15px' }}>
+                                        <li>Positive × Positive = <strong>Positive</strong></li>
+                                        <li>Negative × Negative = <strong>Positive</strong></li>
+                                        <li>Positive × Negative = <strong>Negative</strong></li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Examples:</h3>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.6, fontSize: '15px' }}>
+                                        <li>3 × 4 = <strong>12</strong></li>
+                                        <li>(-2) × (-3) = <strong>6</strong></li>
+                                        <li>5 × (-2) = <strong>-10</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="➗">Division of Integers</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#6D28D9' }}>Rules (Same as Multiplication):</h3>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#5B21B6', lineHeight: 1.6, fontSize: '15px' }}>
+                                        <li>Positive ÷ Positive = <strong>Positive</strong></li>
+                                        <li>Negative ÷ Negative = <strong>Positive</strong></li>
+                                        <li>Positive ÷ Negative = <strong>Negative</strong></li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Examples:</h3>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.6, fontSize: '15px' }}>
+                                        <li>8 ÷ 2 = <strong>4</strong></li>
+                                        <li>(-6) ÷ (-3) = <strong>2</strong></li>
+                                        <li>10 ÷ (-2) = <strong>-5</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">Properties of Integers</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Closure Property</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>The result of operations on integers is always an integer (except division sometimes).</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Commutative Property</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}><strong>a + b = b + a</strong></p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Associative Property</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}><strong>(a + b) + c = a + (b + c)</strong></p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Distributive Property</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}><strong>a × (b + c) = a×b + a×c</strong></p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌍">Real-Life Applications</SectionTitle>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Temperature below zero (e.g., -5°C).</li>
+                                    <li>Profit and loss in business.</li>
+                                    <li>Height above or below sea level.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. The temperature is 3°C. It drops by 7°C. What is the new temperature?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 3 + (-7) = -4°C</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. A person gains ₹10 and then loses ₹6. What is the result?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 10 + (-6) = ₹4</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. What is (-3) × 5?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: -15</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Add: (-5) + 7</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Subtract: 8 - (-3)</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Multiply: (-4) × (-2)</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Divide: 12 ÷ (-3)</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Represent -2 on a number line.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 7 – MATHEMATICS – FRACTIONS & DECIMALS */}
+                {classId === '7' && subjectId === 'maths' && chapterId === 'fractions-decimals' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🥧">Fractions & Decimals</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Fractions and decimals are used to represent parts of a whole and precise values. In Class 7, students learn <strong>advanced operations on fractions and decimals</strong>, which are useful in daily life such as money calculations, measurements, and sharing quantities.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤔">What are Fractions?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>fraction</strong> represents a part of a whole. <br />
+                                <strong>Form:</strong> <em>Fraction = Numerator / Denominator</em>
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Examples:</p>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#475569', fontWeight: 600 }}>1/2, 3/4, 5/6</p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔍">Types of Fractions</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1D4ED8' }}>Proper Fraction</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#1E40AF', lineHeight: 1.6 }}>Numerator &lt; Denominator</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#1E3A8A', fontStyle: 'italic' }}>Example: 3/5</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#C026D3' }}>Improper Fraction</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#86198F', lineHeight: 1.6 }}>Numerator &ge; Denominator</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#701A75', fontStyle: 'italic' }}>Example: 7/4</p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#047857' }}>Mixed Fraction</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>Whole number + fraction</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#064E3B', fontStyle: 'italic' }}>Example: 1 3/4</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="➕">Operations on Fractions</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Addition</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569', lineHeight: 1.6 }}><strong>Rule:</strong> Find LCM of denominators &rarr; make identical &rarr; add numerators.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#0F172A', fontWeight: 600 }}>1/2 + 1/3 = 3/6 + 2/6 = 5/6</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Subtraction</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569', lineHeight: 1.6 }}><strong>Rule:</strong> Find LCM of denominators &rarr; subtract numerators.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#0F172A', fontWeight: 600 }}>3/4 - 1/2 = 3/4 - 2/4 = 1/4</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Multiplication</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569', lineHeight: 1.6 }}><strong>Rule:</strong> Multiply numerators and denominators.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#0F172A', fontWeight: 600 }}>2/3 × 3/5 = 6/15 = 2/5</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Division</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569', lineHeight: 1.6 }}><strong>Rule:</strong> Multiply by the reciprocal.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#0F172A', fontWeight: 600 }}>3/4 ÷ 2/5 = 3/4 × 5/2 = 15/8</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔢">What are Decimals?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Decimals</strong> represent fractions in a different form based on powers of 10.
+                            </p>
+                            <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#92400E', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>0.5 = 1/2</li>
+                                    <li>0.25 = 1/4</li>
+                                </ul>
+                                <p style={{ margin: '14px 0 8px', fontSize: '15px', color: '#92400E', fontWeight: 700 }}>Place Value in Decimals:</p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#92400E', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Tenths</strong> &rarr; 0.1</li>
+                                    <li><strong>Hundredths</strong> &rarr; 0.01</li>
+                                    <li><strong>Thousandths</strong> &rarr; 0.001</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧮">Operations on Decimals</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#991B1B' }}>Addition</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#7F1D1D', lineHeight: 1.6 }}>Align decimal points and add.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#991B1B', fontWeight: 600 }}>2.5 + 1.3 = 3.8</p>
+                                </div>
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#991B1B' }}>Subtraction</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#7F1D1D', lineHeight: 1.6 }}>Align decimal points and subtract.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#991B1B', fontWeight: 600 }}>5.6 - 2.1 = 3.5</p>
+                                </div>
+                                <div style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#6D28D9' }}>Multiplication</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#5B21B6', lineHeight: 1.6 }}>Multiply ignoring decimals, then place the decimal back.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#6D28D9', fontWeight: 600 }}>2.5 × 2 = 5.0</p>
+                                </div>
+                                <div style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#6D28D9' }}>Division</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#5B21B6', lineHeight: 1.6 }}>Divide as normal, keeping the decimal point.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#6D28D9', fontWeight: 600 }}>5.0 ÷ 2 = 2.5</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌍">Real-Life Applications</SectionTitle>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Money (e.g., ₹10.50, ₹25.75)</li>
+                                    <li>Measurements (e.g., 2.5 meters)</li>
+                                    <li>Cooking and sharing portions</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. Add: 2/3 + 1/6</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 4/6 + 1/6 = 5/6</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Multiply: 3/5 × 2/3</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 6/15 = 2/5</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Subtract: 4.5 - 1.2</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 3.3</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Add: 1/4 + 3/8</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Subtract: 5/6 - 1/3</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Multiply: 2/7 × 3/4</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Divide: 6/5 ÷ 2/3</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Add decimals: 3.4 + 2.6</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 7 – MATHEMATICS – RATIONAL NUMBERS */}
+                {classId === '7' && subjectId === 'maths' && chapterId === 'rational-numbers' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🔢">Rational Numbers</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Rational numbers are numbers that can be written in the form of a <strong>ratio of two integers</strong>. They include fractions, integers, and decimals. In this lesson, students will learn about <strong>rational numbers, their properties, and operations on them</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤔">What are Rational Numbers?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>rational number</strong> is a number that can be written in the form: <br />
+                                <strong>p/q, where q &ne; 0</strong> <br />
+                                <em>Here, p and q are integers.</em>
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Examples:</p>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#475569', fontWeight: 600 }}>1/2, -3/4, 5, 0, -2</p>
+                                <p style={{ margin: '10px 0 0', fontSize: '14px', color: '#64748B', fontStyle: 'italic' }}>
+                                    (Whole numbers and integers can also be written as fractions, e.g., 5 = 5/1)
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📏">Positive and Negative Rational Numbers</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1E40AF' }}>Positive Rational Numbers</h3>
+                                    <p style={{ margin: 0, fontSize: '16px', color: '#1E3A8A', fontWeight: 600 }}>1/2, 3/5</p>
+                                </div>
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#991B1B' }}>Negative Rational Numbers</h3>
+                                    <p style={{ margin: 0, fontSize: '16px', color: '#7F1D1D', fontWeight: 600 }}>-2/3, -7/4</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📈">Number Line Representation</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                Rational numbers can be shown on a number line just like integers and fractions.
+                            </p>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16, textAlign: 'center' }}>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#166534', fontWeight: 700 }}>
+                                    ... -1, -1/2, 0, 1/2, 1 ...
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⚖️">Equivalent Rational Numbers</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                Different fractions that represent the same value are called <strong>equivalent rational numbers</strong>.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16, textAlign: 'center' }}>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#475569', fontWeight: 700 }}>
+                                    1/2 = 2/4 = 3/6
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="➕">Operations on Rational Numbers</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#92400E' }}>Addition</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#B45309', fontWeight: 600 }}>1/3 + 2/3 = 3/3 = 1</p>
+                                </div>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#92400E' }}>Subtraction</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#B45309', fontWeight: 600 }}>3/4 - 1/2 = 3/4 - 2/4 = 1/4</p>
+                                </div>
+                                <div style={{ background: '#F3E8FF', border: '1px solid #D8B4FE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#6B21A8' }}>Multiplication</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#7E22CE', fontWeight: 600 }}>2/3 × 3/5 = 6/15 = 2/5</p>
+                                </div>
+                                <div style={{ background: '#F3E8FF', border: '1px solid #D8B4FE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#6B21A8' }}>Division</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#7E22CE', fontWeight: 600 }}>4/5 ÷ 2/3 = 4/5 × 3/2 = 12/10 = 6/5</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">Properties of Rational Numbers</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Closure Property</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>The sum, difference, and product of rational numbers are always rational.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Commutative Property</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#475569', lineHeight: 1.6 }}><strong>a + b = b + a</strong></p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}><strong>a × b = b × a</strong></p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Associative & Distributive</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#475569', lineHeight: 1.6 }}><strong>(a + b) + c = a + (b + c)</strong></p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}><strong>a × (b + c) = a×b + a×c</strong></p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#047857' }}>Identity Element</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>Additive identity &rarr; <strong>0</strong></p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>Multiplicative identity &rarr; <strong>1</strong></p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌍">Real-Life Applications</SectionTitle>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Sharing food mathematically (fractions).</li>
+                                    <li>Precise engineering measurements.</li>
+                                    <li>Complex money calculations across currencies.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. Add: 2/5 + 3/5</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 5/5 = 1</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Multiply: 3/4 × 2/3</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 6/12 = 1/2</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Divide: 6/7 ÷ 3/2</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 6/7 × 2/3 = 12/21 = 4/7</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Write 3 examples of rational numbers.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Add: 1/4 + 3/4</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Subtract: 5/6 - 1/3</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Multiply: 2/5 × 5/2</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Divide: 3/8 ÷ 1/4</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* CLASS 7 – MATHEMATICS – ALGEBRA */}
+                {classId === '7' && subjectId === 'maths' && chapterId === 'algebra' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🔠">Algebra (Equations + Expressions)</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Algebra is a branch of mathematics where we use <strong>letters and symbols to represent numbers</strong>. It helps us solve problems involving unknown values. In this lesson, students will learn how to work with <strong>algebraic expressions and solve simple linear equations step by step</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤔">What is Algebra?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Algebra</strong> uses variables (letters) and numbers to form expressions and equations.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Examples:</p>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#475569', fontWeight: 600 }}>x + 3, 2y - 5</p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🎭">Variables & Expressions</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1E40AF' }}>What is a Variable?</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#1E3A8A', lineHeight: 1.6 }}>A <strong>variable</strong> is a symbol that represents an unknown value.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#1E3A8A', fontStyle: 'italic' }}>Examples: x, y, a, b</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#C026D3' }}>Algebraic Expression</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#86198F', lineHeight: 1.6 }}>A combination of numbers, variables, and operations.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#701A75', fontStyle: 'italic' }}>Examples: 3x + 4, 5y - 2, 2a + 3b</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">Parts of an Expression</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, marginBottom: 16 }}>
+                                Understanding the components of an algebraic expression helps us break it down. For example, let's look at <strong>3x + 4</strong>.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Term</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569', lineHeight: 1.6 }}>Each part separated by a + or - sign.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#0F172A', fontWeight: 600 }}>The terms are <strong>3x</strong> and <strong>4</strong>.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Coefficient</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569', lineHeight: 1.6 }}>The number multiplied directly with a variable.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#0F172A', fontWeight: 600 }}>In 3x, <strong>3</strong> is the coefficient.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Constant</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569', lineHeight: 1.6 }}>A standalone number without any variable.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#0F172A', fontWeight: 600 }}>In 3x + 4, <strong>4</strong> is the constant.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔍">Like and Unlike Terms</SectionTitle>
+                            <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#92400E', lineHeight: 1.8 }}>
+                                    <strong>Like Terms:</strong> Terms that have the exact same variable and power. <br />
+                                    <em>Example: 2x and 5x</em>
+                                </p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#92400E', lineHeight: 1.8 }}>
+                                    <strong>Unlike Terms:</strong> Terms with different variables or powers. <br />
+                                    <em>Example: 2x and 3y</em>
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✂️">Simplifying Expressions</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                We can only combine (add or subtract) <strong>like terms</strong>.
+                            </p>
+                            <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 12, padding: 16, textAlign: 'center' }}>
+                                <p style={{ margin: '0 0 10px', fontSize: '16px', color: '#064E3B', fontWeight: 700 }}>
+                                    3x + 2x = 5x
+                                </p>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#064E3B', fontWeight: 700 }}>
+                                    6y - 4y = 2y
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⚖️">What is an Equation?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                An <strong>equation</strong> is a mathematical statement showing that two expressions are equal, marked with an equals sign (=).
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16, textAlign: 'center' }}>
+                                <p style={{ margin: 0, fontSize: '18px', color: '#0F172A', fontWeight: 700 }}>x + 5 = 12</p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🛠️">Solving Linear Equations</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, marginBottom: 16 }}>
+                                The goal of solving an equation is to isolate the variable (get the letter alone) to find its value.
+                            </p>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F0FDFA', border: '1px solid #99F6E4', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#134E4A' }}>Equation 1</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#0F766E', fontWeight: 600 }}>x + 5 = 12</p>
+                                    <p style={{ margin: '0 0 8px', fontSize: '14px', color: '#115E59' }}>Step: Move 5 using inverse operation (subtraction).</p>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#0F766E', fontWeight: 600 }}>x = 12 - 5</p>
+                                    <div style={{ borderTop: '1px solid #5EEAD4', margin: '8px 0', paddingTop: '8px' }}>
+                                        <p style={{ margin: 0, fontSize: '16px', color: '#134E4A', fontWeight: 700 }}>x = 7</p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#F0FDFA', border: '1px solid #99F6E4', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#134E4A' }}>Equation 2</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#0F766E', fontWeight: 600 }}>3x = 15</p>
+                                    <p style={{ margin: '0 0 8px', fontSize: '14px', color: '#115E59' }}>Step: Isolate x using inverse operation (division).</p>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#0F766E', fontWeight: 600 }}>x = 15 &divide; 3</p>
+                                    <div style={{ borderTop: '1px solid #5EEAD4', margin: '8px 0', paddingTop: '8px' }}>
+                                        <p style={{ margin: 0, fontSize: '16px', color: '#134E4A', fontWeight: 700 }}>x = 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✅">Checking the Solution</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                Substitute the value you found back into the equation to verify it is correct.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#475569', fontWeight: 600 }}>Original: x + 5 = 12</p>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#475569', fontWeight: 600 }}>Substitute 7 for x: 7 + 5 = 12</p>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#16A34A', fontWeight: 800 }}>12 = 12 ✔</p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌍">Real-Life Applications</SectionTitle>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Finding unknown values (e.g., figuring out how many missing points you need to win a game).</li>
+                                    <li>Solving daily budgeting problems (e.g., tracking your spending limit).</li>
+                                    <li>Heavily used in calculating variables in science, geometry, and modern technology.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. If x + 4 = 10, find the value of x.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: x = 6</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. If 2x = 16, find the value of x.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: x = 8</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. If x - 3 = 9, find the value of x.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: x = 12</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Simplify: 4x + 3x</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Simplify: 7y - 2y</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Solve: x + 6 = 14</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Solve: 5x = 25</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Identify terms and coefficient in 2x + 9</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* CLASS 7 – MATHEMATICS – LINES & ANGLES */}
+                {classId === '7' && subjectId === 'maths' && chapterId === 'lines-angles' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="📐">Lines & Angles</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Lines and angles are important concepts in geometry. They help us understand shapes, patterns, and designs around us. In this lesson, students will learn about <strong>different types of lines, angles, transversals, and angle relationships like complementary and supplementary angles</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📏">What is a Line?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>line</strong> is a straight path that extends endlessly in both directions.
+                            </p>
+                            
+                            <h3 style={{ fontSize: '18px', color: '#0F172A', marginTop: '24px', marginBottom: '16px' }}>Types of Lines</h3>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1E40AF' }}>Parallel Lines</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#1E3A8A', lineHeight: 1.6 }}>Lines that never meet and remain at an equal distance apart.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#1E40AF', fontStyle: 'italic' }}>Example: Railway tracks</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#C026D3' }}>Intersecting Lines</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#86198F', lineHeight: 1.6 }}>Lines that cross and meet at a single point.</p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#047857' }}>Perpendicular Lines</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>Lines that intersect to form a perfect right angle (90°).</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="∠">What is an Angle?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                An <strong>angle</strong> is formed when two lines or rays meet at a common point. This point is called the <strong>vertex</strong>.
+                            </p>
+                            
+                            <h3 style={{ fontSize: '18px', color: '#0F172A', marginTop: '24px', marginBottom: '16px' }}>Types of Angles</h3>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Acute Angle</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B' }}>Less than 90°</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Right Angle</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B' }}>Exactly 90°</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Obtuse Angle</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B' }}>Between 90° and 180°</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Straight Angle</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B' }}>Exactly 180°</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Reflex Angle</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B' }}>More than 180°</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">Angle Relationships</SectionTitle>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#92400E' }}>Complementary Angles</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#B45309', lineHeight: 1.6 }}>Two angles whose sum is exactly <strong>90°</strong>.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#D97706', fontWeight: 600 }}>Example: 30° + 60° = 90°</p>
+                                </div>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#92400E' }}>Supplementary Angles</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#B45309', lineHeight: 1.6 }}>Two angles whose sum is exactly <strong>180°</strong>.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#D97706', fontWeight: 600 }}>Example: 120° + 60° = 180°</p>
+                                </div>
+                                <div style={{ background: '#F0FDFA', border: '1px solid #99F6E4', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#0F766E' }}>Adjacent Angles</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#115E59', lineHeight: 1.6 }}>Angles that are next to each other, sharing a common vertex and a common side.</p>
+                                </div>
+                                <div style={{ background: '#F0FDFA', border: '1px solid #99F6E4', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#0F766E' }}>Vertically Opposite Angles</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#115E59', lineHeight: 1.6 }}>Angles formed opposite each other when two lines intersect. They are always <strong>equal</strong>.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#0D9488', fontWeight: 600 }}>If one is 50°, the opposite is also 50°.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🛤️">Transversals</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                A <strong>transversal</strong> is a line that cuts across two or more other lines.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>
+                                    When a transversal cuts <em>parallel lines</em>, it forms:
+                                </p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Corresponding Angles</strong> (they are equal)</li>
+                                    <li><strong>Alternate Interior Angles</strong> (they are equal)</li>
+                                    <li><strong>Interior Angles on same side</strong> (their sum is 180°)</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌍">Real-Life Examples</SectionTitle>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>The clock hands changing position to form different angles.</li>
+                                    <li>Road intersections displaying intersecting and perpendicular paths.</li>
+                                    <li>Designs in architecture and buildings using transversals for strength and aesthetics.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. Two angles are 40° and 50°. Are they complementary?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Yes, because 40° + 50° = 90°</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Find the supplementary angle of 70°.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 180° - 70° = 110°</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. If two vertically opposite angles are equal and one is 60°, find the other.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 60°</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define parallel lines.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name three types of angles.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Find the complementary angle of 25°.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Find the supplementary angle of 120°.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What is a transversal?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* CLASS 7 – MATHEMATICS – TRIANGLES */}
+                {classId === '7' && subjectId === 'maths' && chapterId === 'triangles' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🔺">Triangles</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                A <strong>triangle</strong> is one of the most basic shapes in geometry. It has three sides, three angles, and three vertices. Triangles are used securely in buildings, bridges, and designs. In this lesson, students will learn about the <strong>types of triangles, their properties, and the Pythagorean Theorem</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📏">What is a Triangle?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>triangle</strong> is a polygon with three sides and three angles.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#475569', fontWeight: 600 }}>Example: △ABC</p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📐">Properties of a Triangle</SectionTitle>
+                            <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#92400E', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>The sum of all interior angles of a triangle is always exactly <strong>180°</strong>.</li>
+                                    <li>A triangle has three unique sides, three angles, and three vertices.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🗂️">Types of Triangles</SectionTitle>
+                            
+                            <h3 style={{ fontSize: '18px', color: '#0F172A', marginTop: '24px', marginBottom: '16px' }}>Based on Sides</h3>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1E40AF' }}>Equilateral Triangle</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#1E3A8A', lineHeight: 1.6 }}>All three sides are completely equal in length.</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#C026D3' }}>Isosceles Triangle</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#86198F', lineHeight: 1.6 }}>At least two of the sides are equal in length.</p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#047857' }}>Scalene Triangle</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>All three sides are completely different lengths from each other.</p>
+                                </div>
+                            </div>
+                            
+                            <h3 style={{ fontSize: '18px', color: '#0F172A', marginTop: '32px', marginBottom: '16px' }}>Based on Angles</h3>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 16 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Acute Triangle</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>All three interior angles are less than 90°.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 16 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Right Triangle</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Exactly one interior angle is a perfect 90°.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 16 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Obtuse Triangle</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Exactly one interior angle is greater than 90°.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="➕">Angle Properties</SectionTitle>
+                            
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#92400E' }}>Angle Sum Property</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#B45309', lineHeight: 1.6 }}>The sum of the three interior angles in any triangle is always <strong>180°</strong>.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#D97706', fontWeight: 600 }}>Example: 50° + 60° + 70° = 180°</p>
+                                </div>
+                                <div style={{ background: '#F0FDFA', border: '1px solid #99F6E4', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#0F766E' }}>Exterior Angle Property</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#115E59', lineHeight: 1.6 }}>The measure of an exterior angle of a triangle equals the sum of its two interior opposite angles.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#0D9488', fontWeight: 600 }}>Example: If interior opposites are 40° and 50°, the exterior angle = 90°.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔢">Pythagorean Theorem</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                In any <strong>right-angled triangle</strong>, the square of the longest side (the hypotenuse) is equal to the sum of the squares of the other two shorter sides.
+                            </p>
+                            
+                            <div style={{ background: '#F3F4F6', border: '1px solid #D1D5DB', borderRadius: 12, padding: '20px', marginTop: '16px', textAlign: 'center' }}>
+                                <p style={{ fontSize: '24px', color: '#1F2937', fontWeight: 800, margin: '0 0 16px' }}>a² + b² = c²</p>
+                                <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#4B5563' }}><strong>a</strong> and <strong>b</strong> are the shorter sides (legs).</p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#4B5563' }}><strong>c</strong> is the longest side directly opposite the right angle (hypotenuse).</p>
+                            </div>
+                            
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16, marginTop: '16px' }}>
+                                <h4 style={{ fontSize: '16px', color: '#334155', margin: '0 0 12px 0' }}>Example problem:</h4>
+                                <p style={{ fontSize: '15px', color: '#475569', margin: '0 0 8px 0' }}>If a = 3 and b = 4:</p>
+                                <ul style={{ paddingLeft: '20px', fontSize: '15px', color: '#475569', margin: 0, lineHeight: 1.8 }}>
+                                    <li>c² = 3² + 4²</li>
+                                    <li>c² = 9 + 16</li>
+                                    <li>c² = 25</li>
+                                    <li><strong>c = 5</strong></li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏗️">Real-Life Applications</SectionTitle>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Crucial shape for structural strength in construction and architecture (like roof trusses).</li>
+                                    <li>Used drastically in surveying to help measure long distances.</li>
+                                    <li>Heavily applied in computer graphics, navigation, and engineering design.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. Find the third angle of a triangle if two angles are 60° and 70°.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 180° - (60° + 70°) = 50°</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. In a right triangle, if the shorter sides are 5 and 12, find the third longest side.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: c² = 5² + 12² = 25 + 144 = 169 &rarr; c = 13</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Find the exterior angle if the two interior angles are 30° and 40°.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 70°</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define what makes a regular polygon a triangle.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name the three types of triangles based solely on lengths of their sides.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Calculate the missing third angle if the known two angles are 45° and 65°.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Use the Pythagorean theorem for shorter sides 6 and 8 to find the hypotenuse.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What is the fundamental property of an equilateral triangle?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+
+                {/* CLASS 7 – MATHEMATICS – COMPARING QUANTITIES */}
+                {classId === '7' && subjectId === 'maths' && chapterId === 'comparing-quantities' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="⚖️">Comparing Quantities</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                In daily life, we often compare quantities like prices, marks, and discounts. Concepts like <strong>ratio, percentage, profit, and loss</strong> help us understand and compare values easily. In this lesson, students will learn how to <strong>compare quantities using different mathematical methods</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔢">What is a Ratio?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>ratio</strong> compares two quantities of the same kind.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#475569', fontWeight: 600 }}>Form: a : b</p>
+                                <p style={{ margin: '0 0 8px', fontSize: '16px', color: '#0F172A', fontWeight: 700 }}>Example: 2 : 3</p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#475569', fontStyle: 'italic' }}>This means for every 2 items of one kind, there are 3 of another.</p>
+                            </div>
+                            
+                            <h3 style={{ fontSize: '18px', color: '#0F172A', marginTop: '24px', marginBottom: '16px' }}>Simplifying Ratios</h3>
+                            <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#B45309', lineHeight: 1.6 }}>Divide both terms by their highest common factor.</p>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#92400E', fontWeight: 700 }}>Example: 4 : 8 &rarr; 1 : 2</p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="💯">What is a Percentage?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>percentage</strong> literally means "per hundred". <em>(Symbol: %)</em>
+                            </p>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1E40AF' }}>Understanding Percent</h3>
+                                    <p style={{ margin: 0, fontSize: '16px', color: '#1E3A8A', fontWeight: 600 }}>50% = 50/100 = 1/2</p>
+                                </div>
+                                <div style={{ background: '#F0FDFA', border: '1px solid #99F6E4', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#0F766E' }}>Fraction to Percentage</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#0F766E', fontStyle: 'italic' }}>Multiply by 100.</p>
+                                    <p style={{ margin: 0, fontSize: '16px', color: '#115E59', fontWeight: 600 }}>1/4 = (1/4) × 100 = 25%</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#C026D3' }}>Percentage to Fraction</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#A21CAF', fontStyle: 'italic' }}>Divide by 100.</p>
+                                    <p style={{ margin: 0, fontSize: '16px', color: '#86198F', fontWeight: 600 }}>75% = 75/100 = 3/4</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📈">Profit and Loss</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, marginBottom: 16 }}>
+                                Comparing the Cost Price (CP) to the Selling Price (SP) helps determine financial gain or loss.
+                            </p>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 20 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#047857' }}>Profit 🟢</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>Occurs when Selling Price is more than Cost Price.</p>
+                                    <div style={{ background: '#D1FAE5', padding: '12px', borderRadius: '8px', marginBottom: '12px' }}>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#065F46', fontWeight: 700 }}>Profit = SP - CP</p>
+                                    </div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#064E3B', fontWeight: 700 }}>Example:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#064E3B', lineHeight: 1.6, fontSize: '14px' }}>
+                                        <li>CP = ₹100, SP = ₹120</li>
+                                        <li>Profit = ₹20</li>
+                                    </ul>
+                                </div>
+                                
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 16, padding: 20 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#991B1B' }}>Loss 🔴</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#7F1D1D', lineHeight: 1.6 }}>Occurs when Selling Price is less than Cost Price.</p>
+                                    <div style={{ background: '#FEE2E2', padding: '12px', borderRadius: '8px', marginBottom: '12px' }}>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#991B1B', fontWeight: 700 }}>Loss = CP - SP</p>
+                                    </div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#7F1D1D', fontWeight: 700 }}>Example:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#7F1D1D', lineHeight: 1.6, fontSize: '14px' }}>
+                                        <li>CP = ₹200, SP = ₹150</li>
+                                        <li>Loss = ₹50</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📊">Calculating Profit% and Loss%</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Profit Percentage</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '16px', color: '#059669', fontWeight: 700 }}>Profit% = (Profit / CP) × 100</p>
+                                    <div style={{ borderTop: '1px solid #E2E8F0', marginTop: '12px', paddingTop: '12px' }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569' }}>From ₹20 profit on ₹100 CP:</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#0F172A', fontWeight: 600 }}>(20/100) × 100 = 20%</p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Loss Percentage</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '16px', color: '#E11D48', fontWeight: 700 }}>Loss% = (Loss / CP) × 100</p>
+                                    <div style={{ borderTop: '1px solid #E2E8F0', marginTop: '12px', paddingTop: '12px' }}>
+                                        <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569' }}>From ₹50 loss on ₹200 CP:</p>
+                                        <p style={{ margin: 0, fontSize: '15px', color: '#0F172A', fontWeight: 600 }}>(50/200) × 100 = 25%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🛍️">Real-Life Applications</SectionTitle>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Shopping discounts during sales and markdowns.</li>
+                                    <li>Tracking success inside retail business and merchant trade.</li>
+                                    <li>Calculating student marks, test score results, and general statistics.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. Find the simplified ratio of 10 to 20.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 1 : 2</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Convert the fraction 1/5 into a percentage.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 20%</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. A product costs ₹500 and securely sells for ₹600. Find the profit.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: ₹100</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Simplify the ratio: 6 : 12</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Convert the fraction 2/5 into a percentage.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Calculate profit if CP = ₹300, and SP = ₹350.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Calculate loss if CP = ₹400, and SP = ₹300.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Find the correct percentage of getting 50 correct out of 200 total.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
 
                 {/* ──────────── 6. VIDEO ──────────── */}
                 <Section id="videos">

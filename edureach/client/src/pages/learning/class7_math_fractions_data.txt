@@ -1,0 +1,63 @@
+    'fractions-decimals': {
+        title: 'Fractions & Decimals',
+        subtitle: 'Learn advanced operations on fractions and decimals used in calculations, measurements, and daily life.',
+        videoSubtitle: 'Watch these helpful videos to master operations on fractions and decimals!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/0vuHnTWs-VY?si=beW9a9oKbKJf-35U', title: 'Introduction to Fractions', thumb: 'https://img.youtube.com/vi/0vuHnTWs-VY/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/rl7e0djo9Go?si=ydCMOBOgW2KNQbKR', title: 'Operations on Fractions', thumb: 'https://img.youtube.com/vi/rl7e0djo9Go/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/4CKDqvddhhg?si=b2hsEB4uc7WH3vV5', title: 'Understanding Decimals', thumb: 'https://img.youtube.com/vi/4CKDqvddhhg/hqdefault.jpg' }
+        ],
+        quiz: [
+            {
+                question: 'A fraction represents',
+                options: ['whole number', 'part of a whole', 'decimal only', 'integer'],
+                correct: 'part of a whole'
+            },
+            {
+                question: '1/2 + 1/2 =',
+                options: ['1', '2', '1/2', '0'],
+                correct: '1'
+            },
+            {
+                question: '3/4 × 2/3 =',
+                options: ['6/12', '1/2', '2/4', '3/6'],
+                correct: '1/2'
+            },
+            {
+                question: 'Division of fractions uses',
+                options: ['addition', 'subtraction', 'reciprocal', 'LCM'],
+                correct: 'reciprocal'
+            },
+            {
+                question: '0.5 =',
+                options: ['1/2', '1/3', '1/4', '2/3'],
+                correct: '1/2'
+            },
+            {
+                question: '2.5 + 1.5 =',
+                options: ['3.0', '4.0', '5.0', '6.0'],
+                correct: '4.0'
+            },
+            {
+                question: 'Decimal place value of 0.01 is',
+                options: ['tenths', 'hundredths', 'thousandths', 'ones'],
+                correct: 'hundredths'
+            },
+            {
+                question: '5.6 - 2.6 =',
+                options: ['3.0', '2.0', '4.0', '1.0'],
+                correct: '3.0'
+            },
+            {
+                question: '2/3 × 3/2 =',
+                options: ['1', '2', '3', '0'],
+                correct: '1'
+            },
+            {
+                question: 'Fractions are used in',
+                options: ['money', 'measurement', 'sharing', 'all of these'],
+                correct: 'all of these'
+            }
+        ],
+        nextLesson: { id: 'rational-numbers', title: 'Rational Numbers' }
+    },

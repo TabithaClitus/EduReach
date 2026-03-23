@@ -1,0 +1,69 @@
+    'lines-angles': {
+        title: 'Lines & Angles',
+        subtitle: 'Understand shapes, patterns, transverals, and fundamental angle relationships.',
+        videoSubtitle: 'Watch these engaging videos to visualize transversals and master angle properties!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/2dpN0ySaSRw?si=cXiQ9WDKaUxuAk39', title: 'Introduction to Lines and Angles', thumb: 'https://img.youtube.com/vi/2dpN0ySaSRw/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/FICNvhcdeKo?si=KbC9PhgNqqkfvM28', title: 'Complementary & Supplementary', thumb: 'https://img.youtube.com/vi/FICNvhcdeKo/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/Qpq_XEeBBZw?si=hFmQ1JYKGFiVIuTH', title: 'Transversals and Parallel Lines', thumb: 'https://img.youtube.com/vi/Qpq_XEeBBZw/hqdefault.jpg' }
+        ],
+        summary: [
+            "You have learned the basic definitions of lines, intersecting lines, and parallel lines.",
+            "You explored varying types of angles such as acute, obtuse, complementary, and supplementary angles.",
+            "You mastered identifying angle relationships formed by a transversal intersecting parallel lines."
+        ],
+        summaryEnd: "Great job completing this lesson!",
+        quiz: [
+            {
+                question: 'Parallel lines',
+                options: ['meet', 'never meet', 'cross', 'bend'],
+                correct: 'never meet'
+            },
+            {
+                question: 'A right angle is exactly',
+                options: ['45°', '90°', '180°', '60°'],
+                correct: '90°'
+            },
+            {
+                question: 'Complementary angles add up to what sum?',
+                options: ['90°', '180°', '360°', '45°'],
+                correct: '90°'
+            },
+            {
+                question: 'Supplementary angles add up to what sum?',
+                options: ['90°', '180°', '360°', '60°'],
+                correct: '180°'
+            },
+            {
+                question: 'An acute angle is',
+                options: ['> 90°', '< 90°', '= 180°', '> 180°'],
+                correct: '< 90°'
+            },
+            {
+                question: 'Vertically opposite angles are always',
+                options: ['unequal', 'equal', 'random', 'zero'],
+                correct: 'equal'
+            },
+            {
+                question: 'A transversal cuts',
+                options: ['one line', 'two or more lines', 'no line', 'only curves'],
+                correct: 'two or more lines'
+            },
+            {
+                question: 'When a transversal cuts parallel lines, corresponding angles are',
+                options: ['unequal', 'equal', 'zero', 'random'],
+                correct: 'equal'
+            },
+            {
+                question: 'If two angles measure 30° and 60°, they are',
+                options: ['supplementary', 'complementary', 'straight', 'reflex'],
+                correct: 'complementary'
+            },
+            {
+                question: 'An angle measuring 100° is',
+                options: ['acute', 'right', 'obtuse', 'straight'],
+                correct: 'obtuse'
+            }
+        ],
+        nextLesson: { id: 'triangles', title: 'Triangles' }
+    },

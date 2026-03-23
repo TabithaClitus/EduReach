@@ -1856,6 +1856,36 @@ subjectChapters['6'] = {
     },
 };
 
+// Class 7 distinct chapters
+subjectChapters['7'] = {
+    english: subjectChapters['6'].english,
+    science: subjectChapters['6'].science,
+    social: subjectChapters['6'].social,
+    computers: subjectChapters['6'].computers,
+    maths: {
+        title: 'Mathematics',
+        subtitle: 'Dive deep into numbers and shapes designed for',
+        buttonColor: '#FF9800',
+        buttonHover: '#F57C00',
+        ctaTitle: 'Need more practice?',
+        ctaText: 'Explore algebra, geometry, and advanced arithmetic.',
+        ctaButton: 'Browse All Maths Lessons',
+        chapters: [
+            { id: 'integers', title: 'Integers', description: 'Deep dive into positive and negative numbers and their operations.', emoji: '➖', bgColor: '#FFE0B2', iconBg: '#FFCC80' },
+            { id: 'fractions-decimals', title: 'Fractions & Decimals', description: 'Advanced operations on fractions and decimals.', emoji: '🥧', bgColor: '#B2DFDB', iconBg: '#80CBC4' },
+            { id: 'rational-numbers', title: 'Rational Numbers', description: 'Understand numbers that can be expressed as a ratio.', emoji: '🔢', bgColor: '#FFF9C4', iconBg: '#FFF176' },
+            { id: 'algebra', title: 'Algebra (Equations + Expressions)', description: 'Master solving linear equations and algebraic expressions.', emoji: '✖️', bgColor: '#E8F5E9', iconBg: '#A5D6A7' },
+            { id: 'lines-angles', title: 'Lines & Angles', description: 'Learn about transversals, complementary, and supplementary angles.', emoji: '📐', bgColor: '#D1C4E9', iconBg: '#B39DDB' },
+            { id: 'triangles', title: 'Triangles', description: 'Properties of triangles and Pythagorean theorem.', emoji: '🔺', bgColor: '#E3F2FD', iconBg: '#90CAF9' },
+            { id: 'comparing-quantities', title: 'Comparing Quantities', description: 'Percentages, ratios, profit, and loss.', emoji: '⚖️', bgColor: '#FFF3E0', iconBg: '#FFCC80' },
+            { id: 'data-handling', title: 'Data Handling', description: 'Mean, median, mode, and organizing data with bar graphs.', emoji: '📊', bgColor: '#E1BEE7', iconBg: '#CE93D8' },
+            { id: 'perimeter-area', title: 'Perimeter & Area', description: 'Calculate the perimeter and area of various shapes.', emoji: '📏', bgColor: '#DCEDC8', iconBg: '#AED581' },
+            { id: 'exponents-powers', title: 'Exponents & Powers', description: 'Understand large numbers and the laws of exponents.', emoji: '⚡', bgColor: '#FFCDD2', iconBg: '#EF9A9A' },
+            { id: 'symmetry', title: 'Symmetry', description: 'Lines of symmetry in regular polygons and rotational symmetry.', emoji: '🦋', bgColor: '#FFF8E1', iconBg: '#FFECB3' },
+        ],
+    },
+};
+
 const ChapterPage = () => {
     const { classId, subjectId } = useParams();
     const navigate = useNavigate();

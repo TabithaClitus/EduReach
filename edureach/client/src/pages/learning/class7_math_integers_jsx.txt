@@ -1,0 +1,185 @@
+                {/* CLASS 7 – MATHEMATICS – INTEGERS */}
+                {classId === '7' && subjectId === 'maths' && chapterId === 'integers' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="➖">Integers</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Integers include <strong>positive numbers, negative numbers, and zero</strong>. They are used in many real-life situations like temperature, profit and loss, and elevation. In this lesson, students will learn about <strong>integers and how to perform operations like addition, subtraction, multiplication, and division</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤔">What are Integers?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Integers</strong> are whole numbers that can be positive, negative, or zero.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Examples:</p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Positive integers:</strong> 1, 2, 3, 10</li>
+                                    <li><strong>Negative integers:</strong> -1, -2, -5</li>
+                                    <li><strong>Zero:</strong> 0</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📏">Number Line</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                Integers can be represented on a <strong>number line</strong>.
+                            </p>
+                            <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#1E40AF', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Numbers to the <strong>right</strong> of 0 are positive.</li>
+                                    <li>Numbers to the <strong>left</strong> of 0 are negative.</li>
+                                </ul>
+                                <p style={{ margin: '10px 0 0', fontSize: '16px', color: '#1D4ED8', fontWeight: 700, textAlign: 'center' }}>
+                                    ... -3, -2, -1, 0, 1, 2, 3 ...
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="➕">Addition of Integers</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#047857' }}>Rules:</h3>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#064E3B', lineHeight: 1.6, fontSize: '15px' }}>
+                                        <li>Positive + Positive = <strong>Positive</strong></li>
+                                        <li>Negative + Negative = <strong>Negative</strong></li>
+                                        <li>Positive + Negative = <strong>Subtract</strong> and take the sign of the bigger number</li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Examples:</h3>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.6, fontSize: '15px' }}>
+                                        <li>3 + 5 = <strong>8</strong></li>
+                                        <li>(-2) + (-4) = <strong>-6</strong></li>
+                                        <li>5 + (-3) = <strong>2</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="➖">Subtraction of Integers</SectionTitle>
+                            <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#991B1B', fontWeight: 700 }}>Rule:</p>
+                                <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#7F1D1D', lineHeight: 1.8 }}>
+                                    Change subtraction into addition of the opposite number.
+                                </p>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#991B1B', fontWeight: 700 }}>Examples:</p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#7F1D1D', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>5 - 3 = 5 + (-3) = <strong>2</strong></li>
+                                    <li>(-4) - 2 = (-4) + (-2) = <strong>-6</strong></li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✖️">Multiplication of Integers</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#B45309' }}>Rules:</h3>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#92400E', lineHeight: 1.6, fontSize: '15px' }}>
+                                        <li>Positive × Positive = <strong>Positive</strong></li>
+                                        <li>Negative × Negative = <strong>Positive</strong></li>
+                                        <li>Positive × Negative = <strong>Negative</strong></li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Examples:</h3>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.6, fontSize: '15px' }}>
+                                        <li>3 × 4 = <strong>12</strong></li>
+                                        <li>(-2) × (-3) = <strong>6</strong></li>
+                                        <li>5 × (-2) = <strong>-10</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="➗">Division of Integers</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#6D28D9' }}>Rules (Same as Multiplication):</h3>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#5B21B6', lineHeight: 1.6, fontSize: '15px' }}>
+                                        <li>Positive ÷ Positive = <strong>Positive</strong></li>
+                                        <li>Negative ÷ Negative = <strong>Positive</strong></li>
+                                        <li>Positive ÷ Negative = <strong>Negative</strong></li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Examples:</h3>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.6, fontSize: '15px' }}>
+                                        <li>8 ÷ 2 = <strong>4</strong></li>
+                                        <li>(-6) ÷ (-3) = <strong>2</strong></li>
+                                        <li>10 ÷ (-2) = <strong>-5</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">Properties of Integers</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Closure Property</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>The result of operations on integers is always an integer (except division sometimes).</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Commutative Property</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}><strong>a + b = b + a</strong></p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Associative Property</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}><strong>(a + b) + c = a + (b + c)</strong></p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Distributive Property</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}><strong>a × (b + c) = a×b + a×c</strong></p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌍">Real-Life Applications</SectionTitle>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Temperature below zero (e.g., -5°C).</li>
+                                    <li>Profit and loss in business.</li>
+                                    <li>Height above or below sea level.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. The temperature is 3°C. It drops by 7°C. What is the new temperature?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 3 + (-7) = -4°C</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. A person gains ₹10 and then loses ₹6. What is the result?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: 10 + (-6) = ₹4</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. What is (-3) × 5?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: -15</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Add: (-5) + 7</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Subtract: 8 - (-3)</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Multiply: (-4) × (-2)</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Divide: 12 ÷ (-3)</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Represent -2 on a number line.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}

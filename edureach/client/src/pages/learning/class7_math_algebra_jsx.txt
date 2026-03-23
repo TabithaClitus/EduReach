@@ -1,0 +1,181 @@
+                {/* CLASS 7 – MATHEMATICS – ALGEBRA */}
+                {classId === '7' && subjectId === 'maths' && chapterId === 'algebra' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🔠">Algebra (Equations + Expressions)</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Algebra is a branch of mathematics where we use <strong>letters and symbols to represent numbers</strong>. It helps us solve problems involving unknown values. In this lesson, students will learn how to work with <strong>algebraic expressions and solve simple linear equations step by step</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤔">What is Algebra?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Algebra</strong> uses variables (letters) and numbers to form expressions and equations.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Examples:</p>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#475569', fontWeight: 600 }}>x + 3, 2y - 5</p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🎭">Variables & Expressions</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1E40AF' }}>What is a Variable?</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#1E3A8A', lineHeight: 1.6 }}>A <strong>variable</strong> is a symbol that represents an unknown value.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#1E3A8A', fontStyle: 'italic' }}>Examples: x, y, a, b</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#C026D3' }}>Algebraic Expression</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#86198F', lineHeight: 1.6 }}>A combination of numbers, variables, and operations.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#701A75', fontStyle: 'italic' }}>Examples: 3x + 4, 5y - 2, 2a + 3b</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">Parts of an Expression</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, marginBottom: 16 }}>
+                                Understanding the components of an algebraic expression helps us break it down. For example, let's look at <strong>3x + 4</strong>.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Term</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569', lineHeight: 1.6 }}>Each part separated by a + or - sign.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#0F172A', fontWeight: 600 }}>The terms are <strong>3x</strong> and <strong>4</strong>.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Coefficient</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569', lineHeight: 1.6 }}>The number multiplied directly with a variable.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#0F172A', fontWeight: 600 }}>In 3x, <strong>3</strong> is the coefficient.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Constant</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', color: '#475569', lineHeight: 1.6 }}>A standalone number without any variable.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#0F172A', fontWeight: 600 }}>In 3x + 4, <strong>4</strong> is the constant.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔍">Like and Unlike Terms</SectionTitle>
+                            <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#92400E', lineHeight: 1.8 }}>
+                                    <strong>Like Terms:</strong> Terms that have the exact same variable and power. <br />
+                                    <em>Example: 2x and 5x</em>
+                                </p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#92400E', lineHeight: 1.8 }}>
+                                    <strong>Unlike Terms:</strong> Terms with different variables or powers. <br />
+                                    <em>Example: 2x and 3y</em>
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✂️">Simplifying Expressions</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                We can only combine (add or subtract) <strong>like terms</strong>.
+                            </p>
+                            <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 12, padding: 16, textAlign: 'center' }}>
+                                <p style={{ margin: '0 0 10px', fontSize: '16px', color: '#064E3B', fontWeight: 700 }}>
+                                    3x + 2x = 5x
+                                </p>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#064E3B', fontWeight: 700 }}>
+                                    6y - 4y = 2y
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⚖️">What is an Equation?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                An <strong>equation</strong> is a mathematical statement showing that two expressions are equal, marked with an equals sign (=).
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16, textAlign: 'center' }}>
+                                <p style={{ margin: 0, fontSize: '18px', color: '#0F172A', fontWeight: 700 }}>x + 5 = 12</p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🛠️">Solving Linear Equations</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, marginBottom: 16 }}>
+                                The goal of solving an equation is to isolate the variable (get the letter alone) to find its value.
+                            </p>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F0FDFA', border: '1px solid #99F6E4', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#134E4A' }}>Equation 1</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#0F766E', fontWeight: 600 }}>x + 5 = 12</p>
+                                    <p style={{ margin: '0 0 8px', fontSize: '14px', color: '#115E59' }}>Step: Move 5 using inverse operation (subtraction).</p>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#0F766E', fontWeight: 600 }}>x = 12 - 5</p>
+                                    <div style={{ borderTop: '1px solid #5EEAD4', margin: '8px 0', paddingTop: '8px' }}>
+                                        <p style={{ margin: 0, fontSize: '16px', color: '#134E4A', fontWeight: 700 }}>x = 7</p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#F0FDFA', border: '1px solid #99F6E4', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#134E4A' }}>Equation 2</h3>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#0F766E', fontWeight: 600 }}>3x = 15</p>
+                                    <p style={{ margin: '0 0 8px', fontSize: '14px', color: '#115E59' }}>Step: Isolate x using inverse operation (division).</p>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#0F766E', fontWeight: 600 }}>x = 15 &divide; 3</p>
+                                    <div style={{ borderTop: '1px solid #5EEAD4', margin: '8px 0', paddingTop: '8px' }}>
+                                        <p style={{ margin: 0, fontSize: '16px', color: '#134E4A', fontWeight: 700 }}>x = 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✅">Checking the Solution</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                Substitute the value you found back into the equation to verify it is correct.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#475569', fontWeight: 600 }}>Original: x + 5 = 12</p>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#475569', fontWeight: 600 }}>Substitute 7 for x: 7 + 5 = 12</p>
+                                <p style={{ margin: 0, fontSize: '16px', color: '#16A34A', fontWeight: 800 }}>12 = 12 ✔</p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌍">Real-Life Applications</SectionTitle>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Finding unknown values (e.g., figuring out how many missing points you need to win a game).</li>
+                                    <li>Solving daily budgeting problems (e.g., tracking your spending limit).</li>
+                                    <li>Heavily used in calculating variables in science, geometry, and modern technology.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. If x + 4 = 10, find the value of x.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: x = 6</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. If 2x = 16, find the value of x.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: x = 8</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. If x - 3 = 9, find the value of x.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: x = 12</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Simplify: 4x + 3x</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Simplify: 7y - 2y</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Solve: x + 6 = 14</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. Solve: 5x = 25</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Identify terms and coefficient in 2x + 9</p>
+                            </div>
+                        </Section>
+                    </>
+                )}

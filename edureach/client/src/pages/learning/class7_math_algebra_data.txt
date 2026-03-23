@@ -1,0 +1,69 @@
+    'algebra': {
+        title: 'Algebra (Equations + Expressions)',
+        subtitle: 'Learn to use letters and symbols to represent numbers and solve linear equations.',
+        videoSubtitle: 'Watch these engaging videos to visualize algebraic expressions and master building equations!',
+        videos: [
+            { src: 'https://www.youtube.com/embed/q3g68vcMXxM?si=S86L6fTKcxDbs4rW', title: 'Introduction to Algebra', thumb: 'https://img.youtube.com/vi/q3g68vcMXxM/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/NybHckSEQBI?si=6nPfgcANaK48liH6', title: 'Expressions and Variables', thumb: 'https://img.youtube.com/vi/NybHckSEQBI/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/QEnFIgN8UBw?si=-NtlVBQMrs1K0xGI', title: 'Solving Simple Equations', thumb: 'https://img.youtube.com/vi/QEnFIgN8UBw/hqdefault.jpg' }
+        ],
+        summary: [
+            "You have learned how algebra uses variables to represent unknown values.",
+            "You practiced combining like terms and simplifying mathematical expressions.",
+            "You explored how to balance and solve simple linear equations."
+        ],
+        summaryEnd: "Great job completing this lesson!",
+        quiz: [
+            {
+                question: 'Algebra uses',
+                options: ['only numbers', 'letters and numbers', 'shapes', 'colors'],
+                correct: 'letters and numbers'
+            },
+            {
+                question: 'A variable is',
+                options: ['fixed value', 'unknown value', 'number only', 'constant'],
+                correct: 'unknown value'
+            },
+            {
+                question: 'Which is an algebraic expression?',
+                options: ['x = 5', '5', 'x + 3', '10 = 10'],
+                correct: 'x + 3'
+            },
+            {
+                question: 'In 4x, the number 4 is considered the',
+                options: ['variable', 'coefficient', 'constant', 'term'],
+                correct: 'coefficient'
+            },
+            {
+                question: 'Like terms have',
+                options: ['different variables', 'same variables', 'no variables', 'numbers only'],
+                correct: 'same variables'
+            },
+            {
+                question: 'Simplify: 3x + 2x =',
+                options: ['5', '6x', '5x', 'x'],
+                correct: '5x'
+            },
+            {
+                question: 'Solve for x: x + 6 = 10',
+                options: ['2', '3', '4', '5'],
+                correct: '4'
+            },
+            {
+                question: 'Solve for x: 4x = 20',
+                options: ['2', '4', '5', '6'],
+                correct: '5'
+            },
+            {
+                question: 'An equation has an',
+                options: ['no sign', 'equal sign', 'only numbers', 'only letters'],
+                correct: 'equal sign'
+            },
+            {
+                question: 'Algebra helps in',
+                options: ['solving problems', 'drawing', 'cooking', 'playing'],
+                correct: 'solving problems'
+            }
+        ],
+        nextLesson: { id: 'lines-angles', title: 'Lines & Angles' }
+    },
