@@ -1845,7 +1845,7 @@ subjectChapters['6'] = {
                 iconBg: '#F8BBD0',
             },
             {
-                id: 'intro-to-coding',
+                id: 'coding-basics',
                 title: 'Introduction to Coding',
                 description: 'Learn the basics of giving instructions to computers through coding.',
                 emoji: '👨‍💻',
