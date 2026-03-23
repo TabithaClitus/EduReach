@@ -129,6 +129,430 @@ const simpleWordsExamples = [
 
 // ─── Lesson Data ──────────────────────────────────────────────
 const lessonData = {
+    'intro-to-computers': {
+        title: 'Introduction to Computers',
+        subtitle: 'Learn what a computer is, its features, and how it helps us in daily life.',
+        videoSubtitle: 'Watch these videos to understand the basics of computers! Click a video to watch it in full screen.',
+        videos: [
+            { src: 'https://www.youtube.com/embed/67TNabOXBc8?si=G5OT3tDvijICfLJ3', title: 'What is a Computer?', thumb: 'https://img.youtube.com/vi/67TNabOXBc8/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/eEo_aacpwCw?si=UtjAD7ts78GQqJT5', title: 'Introduction to Computers', thumb: 'https://img.youtube.com/vi/eEo_aacpwCw/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A computer is an', visual: '🖥️', options: ['animal', 'electronic device', 'plant', 'toy'], correct: 1 },
+            { question: 'The IPO cycle stands for', visual: '🔄', options: ['Input–Process–Output', 'Input–Print–Output', 'Inside–Process–Outside', 'Input–Program–Output'], correct: 0 },
+            { question: 'Which is an input device?', visual: '⌨️', options: ['monitor', 'printer', 'keyboard', 'speaker'], correct: 2 },
+            { question: 'Which feature means doing work quickly?', visual: '⚡', options: ['storage', 'speed', 'accuracy', 'diligence'], correct: 1 },
+            { question: 'Computers are used in', visual: '🏥', options: ['schools', 'hospitals', 'banks', 'all of these'], correct: 3 },
+            { question: 'A laptop is', visual: '💻', options: ['very large', 'portable', 'fixed', 'heavy'], correct: 1 },
+            { question: 'Storage means', visual: '💾', options: ['deleting data', 'saving data', 'typing data', 'printing data'], correct: 1 },
+            { question: 'CPU is used for', visual: '🧠', options: ['input', 'processing', 'output', 'storage'], correct: 1 },
+            { question: 'A tablet is', visual: '📱', options: ['a book', 'a touch device', 'a keyboard', 'a printer'], correct: 1 },
+            { question: 'Computers help to', visual: '⏱️', options: ['waste time', 'do work faster', 'avoid work', 'sleep'], correct: 1 }
+        ],
+        summary: [
+            'A computer is an electronic machine that takes input, processes it, and gives output.',
+            'Computers are fast, accurate, versatile, and can store large amounts of data.',
+            'They are used almost everywhere, such as in schools, hospitals, banks, and homes.'
+        ],
+        summaryEnd: 'Fantastic! You have completed the Introduction to Computers lesson.',
+        nextLesson: { id: 'parts-of-a-computer', title: 'Parts of a Computer' }
+    },
+    'parts-of-a-computer': {
+        title: 'Parts of a Computer',
+        subtitle: 'Learn about the main components of a computer like CPU, monitor, keyboard, and mouse.',
+        videoSubtitle: 'Watch these videos to learn about the different parts of a computer! Click a video to watch it in full screen.',
+        videos: [
+            { src: 'https://www.youtube.com/embed/QtDAzhiTXC4?si=m3tHCxxIUev6Ny5y', title: 'Parts of a Computer', thumb: 'https://img.youtube.com/vi/QtDAzhiTXC4/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/V5oRg3j4mZA?si=HycWOZHl5NSProDX', title: 'Computer Hardware', thumb: 'https://img.youtube.com/vi/V5oRg3j4mZA/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/j5IzIogRg7E?si=4BIuwXjTNaUFlCI1', title: 'Input and Output Devices', thumb: 'https://img.youtube.com/vi/j5IzIogRg7E/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'The brain of the computer is', visual: '🧠', options: ['keyboard', 'mouse', 'CPU', 'monitor'], correct: 2 },
+            { question: 'Which is an input device?', visual: '⌨️', options: ['printer', 'monitor', 'keyboard', 'speaker'], correct: 2 },
+            { question: 'Which is an output device?', visual: '🖥️', options: ['mouse', 'keyboard', 'monitor', 'CPU'], correct: 2 },
+            { question: 'A mouse is used to', visual: '🖱️', options: ['print', 'type', 'click and select', 'store data'], correct: 2 },
+            { question: 'A keyboard is used to', visual: '⌨️', options: ['display', 'type', 'print', 'speak'], correct: 1 },
+            { question: 'Which device gives sound output?', visual: '🔊', options: ['monitor', 'printer', 'speaker', 'mouse'], correct: 2 },
+            { question: 'A printer gives', visual: '🖨️', options: ['soft copy', 'hard copy', 'sound', 'light'], correct: 1 },
+            { question: 'Storage devices are used to', visual: '💾', options: ['delete data', 'store data', 'print data', 'display data'], correct: 1 },
+            { question: 'Which of the following is a storage device?', visual: '💿', options: ['mouse', 'keyboard', 'pen drive', 'monitor'], correct: 2 },
+            { question: 'All parts of a computer', visual: '🤝', options: ['work separately', 'work together', 'do nothing', 'are useless'], correct: 1 }
+        ],
+        summary: [
+            'A computer is made up of input devices, processing unit (CPU), and output devices.',
+            'Input devices (like keyboard and mouse) let us enter data.',
+            'The CPU processes data, while output devices (like a monitor or printer) show the result.'
+        ],
+        summaryEnd: 'Great job! You have completed the Parts of a Computer lesson.',
+        nextLesson: { id: 'input-output-devices', title: 'Input & Output Devices' }
+    },
+    'input-output-devices': {
+        title: 'Input & Output Devices',
+        subtitle: 'Learn about the devices used to feed data into a computer and retrieve results from it.',
+        videoSubtitle: 'Watch these videos to learn about different input and output devices! Click a video to watch it in full screen.',
+        videos: [
+            { src: 'https://www.youtube.com/embed/wUHGN-B1tt0?si=5W1lBP4IQscS4xKY', title: 'Input and Output Devices Explained', thumb: 'https://img.youtube.com/vi/wUHGN-B1tt0/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/DuYF3uD9AYQ?si=gXYFpwd59TyFLyII', title: 'Hardware: Input/Output', thumb: 'https://img.youtube.com/vi/DuYF3uD9AYQ/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Input devices are used to', visual: '📥', options: ['show results', 'enter data', 'store data', 'delete data'], correct: 1 },
+            { question: 'Which is an input device?', visual: '⌨️', options: ['monitor', 'printer', 'keyboard', 'speaker'], correct: 2 },
+            { question: 'Which is an output device?', visual: '🖥️', options: ['mouse', 'keyboard', 'monitor', 'scanner'], correct: 2 },
+            { question: 'A microphone is used to input', visual: '🎤', options: ['text', 'sound', 'images', 'video'], correct: 1 },
+            { question: 'A printer produces', visual: '🖨️', options: ['sound', 'soft copy', 'hard copy', 'light'], correct: 2 },
+            { question: 'A monitor shows', visual: '📺', options: ['printed output', 'sound', 'visual output', 'storage'], correct: 2 },
+            { question: 'Soft copy is', visual: '📱', options: ['printed', 'on screen', 'stored', 'deleted'], correct: 1 },
+            { question: 'Hard copy is', visual: '📄', options: ['screen output', 'printed output', 'sound', 'video'], correct: 1 },
+            { question: 'Which device is used to scan documents?', visual: '🖨️', options: ['mouse', 'keyboard', 'scanner', 'speaker'], correct: 2 },
+            { question: 'Input and output devices help to', visual: '🤝', options: ['avoid computers', 'interact with computers', 'destroy data', 'stop processing'], correct: 1 }
+        ],
+        summary: [
+            'Input devices (like keyboards, mice, and scanners) help put data into the computer.',
+            'Output devices (like monitors, printers, and speakers) show us the processed results.',
+            'Without input and output devices, we would not be able to interact with computers.'
+        ],
+        summaryEnd: 'Awesome! You have completed the Input & Output Devices lesson.',
+        nextLesson: { id: 'memory-and-storage', title: 'Memory & Storage' }
+    },
+    'memory-and-storage': {
+        title: 'Memory & Storage',
+        subtitle: 'Discover how a computer remembers information and where it keeps data safe for future use.',
+        videoSubtitle: 'Watch these videos to learn about computer memory and storage! Click a video to watch it in full screen.',
+        videos: [
+            { src: 'https://www.youtube.com/embed/p3q5zWCw8J4?si=gL-NxGr-CNlsfool', title: 'Computer Memory Explained', thumb: 'https://img.youtube.com/vi/p3q5zWCw8J4/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/1vO9l1idWac?si=V8AuMmBYwTnUgyki', title: 'Primary vs Secondary Memory', thumb: 'https://img.youtube.com/vi/1vO9l1idWac/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Memory is used to', visual: '🧠', options: ['delete data', 'store data', 'print data', 'draw pictures'], correct: 1 },
+            { question: 'RAM is', visual: '⚡', options: ['permanent', 'temporary', 'external', 'slow'], correct: 1 },
+            { question: 'ROM is', visual: '🔒', options: ['temporary', 'permanent', 'removable', 'flexible'], correct: 1 },
+            { question: 'Which memory loses data when power is off?', visual: '🔌', options: ['ROM', 'RAM', 'Hard disk', 'CD'], correct: 1 },
+            { question: 'Which is a storage device?', visual: '💾', options: ['CPU', 'RAM', 'pen drive', 'monitor'], correct: 2 },
+            { question: 'Hard disk is used for', visual: '💽', options: ['input', 'output', 'storage', 'typing'], correct: 2 },
+            { question: 'Pen drive is', visual: '📱', options: ['large', 'portable', 'fixed', 'heavy'], correct: 1 },
+            { question: 'ROM stores', visual: '⚙️', options: ['temporary data', 'important instructions', 'games only', 'pictures only'], correct: 1 },
+            { question: 'Memory helps in', visual: '🏃', options: ['running programs', 'cooking', 'drawing', 'sleeping'], correct: 0 },
+            { question: 'Storage keeps data', visual: '📦', options: ['temporarily', 'permanently', 'randomly', 'quickly'], correct: 1 }
+        ],
+        summary: [
+            'Memory (like RAM) helps the computer think and process data temporarily.',
+            'Storage (like Hard Disks and Pen Drives) saves your data permanently.',
+            'RAM forgets everything when powered off, but ROM and storage keep it safe forever.'
+        ],
+        summaryEnd: 'Excellent work! You have completed the Memory & Storage lesson.',
+        nextLesson: { id: 'operating-system-basics', title: 'Operating System Basics' }
+    },
+    'poetry': {
+        title: 'Poetry',
+        subtitle: 'Explore rhymes, rhythms, and the beauty of poetic expression.',
+        videoSubtitle: 'Watch these videos to dive into the musical world of poetry! Click a video to watch it in full screen.',
+        videos: [
+            { src: 'https://www.youtube.com/embed/4rOnRJlevmI?si=b3TPkFGhPbxVU-BL', title: 'What is Poetry?', thumb: 'https://img.youtube.com/vi/4rOnRJlevmI/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/5Mrb6wzbWmM?si=yEnUMw8U8kzAohf6', title: 'Rhyme and Rhythm', thumb: 'https://img.youtube.com/vi/5Mrb6wzbWmM/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Poetry uses', visual: '🎶', options: ['numbers', 'rhymes and rhythm', 'only facts', 'only questions'], correct: 1 },
+            { question: 'Words with similar sounds are called', visual: '🗣️', options: ['rhythm', 'rhyme', 'stanza', 'line'], correct: 1 },
+            { question: 'A stanza is', visual: '📜', options: ['a word', 'a line', 'a group of lines', 'a letter'], correct: 2 },
+            { question: 'Rhythm means', visual: '🥁', options: ['sound', 'beat or flow', 'word', 'sentence'], correct: 1 },
+            { question: 'Which is a rhyming pair?', visual: '🎭', options: ['cat – dog', 'sun – moon', 'star – car', 'boy – girl'], correct: 2 },
+            { question: 'Free verse poems', visual: '🕊️', options: ['always rhyme', 'do not rhyme', 'are long', 'are short'], correct: 1 },
+            { question: 'Poetry helps improve', visual: '✨', options: ['drawing', 'creativity', 'running', 'cooking'], correct: 1 },
+            { question: 'A line in a poem is', visual: '➖', options: ['a paragraph', 'a row of words', 'a sentence only', 'a page'], correct: 1 },
+            { question: 'Poems often express', visual: '❤️', options: ['numbers', 'feelings', 'maps', 'rules'], correct: 1 },
+            { question: 'Reading poems aloud helps', visual: '📢', options: ['forget rhythm', 'understand rhythm', 'remove meaning', 'confuse reader'], correct: 1 }
+        ],
+        summary: [
+            'Poetry is a form of writing that expresses thoughts creatively with rhythm and rhyme.',
+            'Key elements of poetry include rhymes, rhythm, stanzas, and lines.',
+            'Poems can be rhyming, free verse, or even short and funny like a limerick.'
+        ],
+        summaryEnd: 'Fantastic! You have completed the Poetry lesson.',
+        nextLesson: null
+    },
+    'prose-lessons': {
+        title: 'Prose Lessons',
+        subtitle: 'Explore prose, its types, and how to understand and analyze prose texts.',
+        videoSubtitle: 'Watch these videos to learn about prose reading and comprehension! Click a video to watch it in full screen.',
+        videos: [
+            { src: 'https://www.youtube.com/embed/k2mDj3jrnKw?si=9PEicY-xtWf1_Bho', title: 'What is Prose?', thumb: 'https://img.youtube.com/vi/k2mDj3jrnKw/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/5PCwca1a3uw?si=ggi0ru0DDkUtkW0a', title: 'Elements of Prose', thumb: 'https://img.youtube.com/vi/5PCwca1a3uw/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/m4eR8n2IJAA?si=rru3gw5PzE0tv9-P', title: 'Prose Comprehension', thumb: 'https://img.youtube.com/vi/m4eR8n2IJAA/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Prose is', visual: '📖', options: ['poetry', 'normal writing', 'drawing', 'music'], correct: 1 },
+            { question: 'Prose does not have', visual: '🚫', options: ['sentences', 'meaning', 'rhyme', 'words'], correct: 2 },
+            { question: 'A story is an example of', visual: '📚', options: ['poetry', 'prose', 'drawing', 'music'], correct: 1 },
+            { question: 'Narrative prose', visual: '🗣️', options: ['describes', 'informs', 'tells a story', 'explains rules'], correct: 2 },
+            { question: 'Descriptive prose', visual: '📝', options: ['tells a story', 'describes something', 'asks questions', 'gives commands'], correct: 1 },
+            { question: 'Informative prose', visual: 'ℹ️', options: ['gives information', 'tells jokes', 'sings songs', 'draws pictures'], correct: 0 },
+            { question: 'Characters are', visual: '👥', options: ['places', 'people in story', 'time', 'ideas'], correct: 1 },
+            { question: 'Setting means', visual: '🗺️', options: ['people', 'place and time', 'events', 'words'], correct: 1 },
+            { question: 'Theme means', visual: '💡', options: ['main idea', 'place', 'character', 'action'], correct: 0 },
+            { question: 'Reading prose helps improve', visual: '📈', options: ['drawing', 'language skills', 'dancing', 'singing'], correct: 1 }
+        ],
+        summary: [
+            'Prose is everyday natural language used in stories, essays, and articles.',
+            'There are different types of prose: narrative, descriptive, and informative.',
+            'Key elements of prose include characters, setting, plot, and theme.'
+        ],
+        summaryEnd: 'Great job! You have completed the Prose Lessons.',
+        nextLesson: { id: 'poetry', title: 'Poetry' }
+    },
+    'prepositions-conjunctions': {
+        title: 'Prepositions & Conjunctions',
+        subtitle: 'Learn how to connect words and sentences smoothly with linking words.',
+        videoSubtitle: 'Watch these videos to clear your concepts on prepositions and conjunctions! Click a video to watch it in full screen.',
+        videos: [
+            { src: 'https://www.youtube.com/embed/BFW6hQ2Y0dU?si=Ad47uxDmJDh2XXCG', title: 'Prepositions', thumb: 'https://img.youtube.com/vi/BFW6hQ2Y0dU/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/3qbfcHiUrcI?si=eXIsPxQ_aO1CEYLX', title: 'Conjunctions', thumb: 'https://img.youtube.com/vi/3qbfcHiUrcI/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A preposition shows', visual: '🔗', options: ['action', 'relationship', 'number', 'color'], correct: 1 },
+            { question: 'Which is a preposition?', visual: '📦', options: ['and', 'but', 'under', 'because'], correct: 2 },
+            { question: 'A conjunction is used to', visual: '🤝', options: ['describe', 'join', 'count', 'measure'], correct: 1 },
+            { question: 'Which is a conjunction?', visual: '➕', options: ['in', 'on', 'and', 'under'], correct: 2 },
+            { question: '"The cat is under the table" – under is', visual: '🐈', options: ['noun', 'verb', 'preposition', 'adjective'], correct: 2 },
+            { question: '"I was tired but I worked" – but is', visual: '🥱', options: ['noun', 'verb', 'preposition', 'conjunction'], correct: 3 },
+            { question: 'Prepositions of time include', visual: '⏱️', options: ['under', 'between', 'at', 'behind'], correct: 2 },
+            { question: 'Which conjunction shows reason?', visual: '❓', options: ['and', 'but', 'because', 'or'], correct: 2 },
+            { question: 'Prepositions help to', visual: '📍', options: ['connect ideas', 'show relationship', 'describe nouns', 'ask questions'], correct: 1 },
+            { question: 'Conjunctions help to', visual: '🧩', options: ['join sentences', 'describe objects', 'show place', 'count numbers'], correct: 0 }
+        ],
+        summary: [
+            'Prepositions (in, on, under) show the relationship between a noun and another word',
+            'Conjunctions (and, but, because) join words, phrases, or sentences',
+            'Linking words help connect ideas clearly and improve writing flow'
+        ],
+        summaryEnd: 'Great job! You have completed the Prepositions & Conjunctions lesson.',
+        nextLesson: { id: 'prose-lessons', title: 'Prose Lessons' }
+    },
+    'adjectives-adverbs': {
+        title: 'Adjectives & Adverbs',
+        subtitle: 'Make your sentences more interesting with describing words.',
+        videoSubtitle: 'Watch these videos to learn how to use adjectives and adverbs! Click a video to watch it in full screen.',
+        videos: [
+            { src: 'https://www.youtube.com/embed/McdmXQz2_AE?si=DITxMDguU53c4d1i', title: 'Adjectives', thumb: 'https://img.youtube.com/vi/McdmXQz2_AE/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/w6KzAj7CZXQ?si=wPqY0g7j_c0Rtinm', title: 'Adverbs', thumb: 'https://img.youtube.com/vi/w6KzAj7CZXQ/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/yFPS8yTS_Gw?si=XCIZlbzAr49pQJ1D', title: 'Adjectives vs Adverbs', thumb: 'https://img.youtube.com/vi/yFPS8yTS_Gw/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'An adjective describes a', visual: '🏷️', options: ['verb', 'noun', 'adverb', 'sentence'], correct: 1 },
+            { question: 'Which is an adjective?', visual: '🎨', options: ['quickly', 'slowly', 'beautiful', 'loudly'], correct: 2 },
+            { question: 'An adverb describes a', visual: '🏃', options: ['noun', 'verb', 'letter', 'number'], correct: 1 },
+            { question: 'Which is an adverb?', visual: '⚡', options: ['happy', 'tall', 'quickly', 'red'], correct: 2 },
+            { question: 'Which adjective shows number?', visual: '🔢', options: ['big', 'two', 'happy', 'red'], correct: 1 },
+            { question: 'Which adverb shows time?', visual: '⏱️', options: ['quickly', 'yesterday', 'here', 'always'], correct: 1 },
+            { question: '"She sings beautifully" – beautifully is', visual: '🎤', options: ['noun', 'adjective', 'adverb', 'verb'], correct: 2 },
+            { question: 'Adjectives usually come', visual: '📏', options: ['after noun', 'before noun', 'in middle', 'nowhere'], correct: 1 },
+            { question: 'Adverbs often end with', visual: '🔠', options: ['-ed', '-ing', '-ly', '-s'], correct: 2 },
+            { question: 'Adjectives and adverbs make sentences', visual: '✨', options: ['boring', 'confusing', 'interesting', 'short'], correct: 2 }
+        ],
+        summary: [
+            'Adjectives describe nouns or pronouns (e.g. a tall boy)',
+            'Adverbs describe verbs, adjectives, or other adverbs (e.g. runs quickly)',
+            'Adjectives usually come before nouns, and many adverbs end in "-ly"'
+        ],
+        summaryEnd: 'Great job! You have completed the Adjectives & Adverbs lesson.',
+        nextLesson: { id: 'prepositions-conjunctions', title: 'Prepositions & Conjunctions' }
+    },
+    'verbs-tenses': {
+        title: 'Verbs & Tenses',
+        subtitle: 'Learn about action words and how to express the time of an action.',
+        videoSubtitle: 'Watch these videos to clear your concepts on verbs and tenses! Click a video to watch it in full screen.',
+        videos: [
+            { src: 'https://www.youtube.com/embed/i8XwW41P4Xg?si=RXvvG_uWO6hf505h', title: 'What are Verbs?', thumb: 'https://img.youtube.com/vi/i8XwW41P4Xg/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/JkttgRvCL3g?si=nh0GMP8WB5ZZFs7y', title: 'Understanding Tenses', thumb: 'https://img.youtube.com/vi/JkttgRvCL3g/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A verb shows', visual: '🏃', options: ['place', 'action', 'color', 'number'], correct: 1 },
+            { question: 'Which is a verb?', visual: '📖', options: ['book', 'run', 'table', 'chair'], correct: 1 },
+            { question: 'Tense tells us', visual: '⏲️', options: ['place', 'time', 'person', 'object'], correct: 1 },
+            { question: 'Which is present tense?', visual: '📍', options: ['She played', 'She plays', 'She will play', 'She had played'], correct: 1 },
+            { question: 'Which is past tense?', visual: '⏪', options: ['go', 'goes', 'went', 'going'], correct: 2 },
+            { question: 'Which is future tense?', visual: '⏭️', options: ['run', 'ran', 'running', 'will run'], correct: 3 },
+            { question: 'Helping verbs include', visual: '🤝', options: ['run', 'jump', 'is', 'play'], correct: 2 },
+            { question: 'Correct sentence is', visual: '✅', options: ['He go school', 'He goes to school', 'He going school', 'He gone school'], correct: 1 },
+            { question: 'Past tense of "play" is', visual: '🎮', options: ['plays', 'playing', 'played', 'play'], correct: 2 },
+            { question: 'Verbs are important because they', visual: '⭐', options: ['show action', 'show time', 'make sentences meaningful', 'all of these'], correct: 3 }
+        ],
+        summary: [
+            'Verbs are action words that show what someone or something is doing',
+            'Tense tells us the time of an action: Present, Past, or Future',
+            'Always match verbs with subjects and use correct forms for tenses'
+        ],
+        summaryEnd: 'Great job! You have completed the Verbs & Tenses lesson.',
+        nextLesson: { id: 'adjectives-adverbs', title: 'Adjectives & Adverbs' }
+    },
+    'nouns-pronouns': {
+        title: 'Nouns & Pronouns',
+        subtitle: 'Learn about the basic building blocks of sentences and how to use them.',
+        videoSubtitle: 'Watch these videos to improve your grammar! Click a video to watch it in full screen.',
+        videos: [
+            { src: 'https://www.youtube.com/embed/c4300UidkFg?si=w6GhgGCKmp1tFj-H', title: 'Nouns Explained', thumb: 'https://img.youtube.com/vi/c4300UidkFg/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/gQsZr8yrsno?si=19NgKeGNQTrvOL3G', title: 'Pronouns Explained', thumb: 'https://img.youtube.com/vi/gQsZr8yrsno/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A noun is a name of', visual: '🏷️', options: ['action', 'person, place, or thing', 'feeling only', 'sentence'], correct: 1 },
+            { question: 'Which is a proper noun?', visual: '📍', options: ['city', 'boy', 'India', 'school'], correct: 2 },
+            { question: 'Which is a common noun?', visual: '👩‍🏫', options: ['Chennai', 'Akalya', 'teacher', 'India'], correct: 2 },
+            { question: 'A pronoun replaces', visual: '🔄', options: ['verb', 'noun', 'adjective', 'adverb'], correct: 1 },
+            { question: 'Which is a pronoun?', visual: '👤', options: ['book', 'she', 'table', 'school'], correct: 1 },
+            { question: 'Which pronoun shows possession?', visual: '🎒', options: ['he', 'she', 'mine', 'they'], correct: 2 },
+            { question: 'Which pronoun is used to ask questions?', visual: '❓', options: ['this', 'who', 'he', 'mine'], correct: 1 },
+            { question: 'A group of animals is called', visual: '🐘', options: ['herd', 'dog', 'animal', 'group'], correct: 0 },
+            { question: 'Which is an abstract noun?', visual: '😊', options: ['chair', 'happiness', 'boy', 'pen'], correct: 1 },
+            { question: 'Pronouns help to', visual: '✍️', options: ['increase repetition', 'avoid repetition', 'confuse sentences', 'remove meaning'], correct: 1 }
+        ],
+        summary: [
+            'A noun is the name of a person, place, animal, or thing',
+            'A pronoun is a word used instead of a noun to avoid repetition',
+            'Both are essential for forming clear and meaningful sentences'
+        ],
+        summaryEnd: 'Great job! You have completed the Nouns & Pronouns lesson.',
+        nextLesson: { id: 'verbs-tenses', title: 'Verbs & Tenses' }
+    },
+    'story-writing': {
+        title: 'Story Writing',
+        subtitle: 'Learn how to express your ideas and write engaging short stories.',
+        videoSubtitle: 'Watch these videos to improve your story writing skills! Click a video to watch it in full screen.',
+        videos: [
+            { src: 'https://www.youtube.com/embed/B8SX7AABWmI?si=1Ys3j9x-FwxHfSFz', title: 'Story Writing Intro', thumb: 'https://img.youtube.com/vi/B8SX7AABWmI/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/QN3YV0oK714?si=yLbLmIRm4fQzr1J1', title: 'Elements of a Story', thumb: 'https://img.youtube.com/vi/QN3YV0oK714/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A story is a series of', visual: '📚', options: ['numbers', 'events', 'letters', 'pictures'], correct: 1 },
+            { question: 'Characters are', visual: '🦸', options: ['places', 'events', 'people or animals', 'ideas'], correct: 2 },
+            { question: 'Setting refers to', visual: '🗺️', options: ['characters', 'place and time', 'plot', 'moral'], correct: 1 },
+            { question: 'The middle of a story contains', visual: '⚡', options: ['introduction', 'problem or action', 'ending', 'title'], correct: 1 },
+            { question: 'A moral story teaches', visual: '💡', options: ['games', 'lesson', 'drawing', 'singing'], correct: 1 },
+            { question: 'Which is a fantasy story?', visual: '🦄', options: ['school life', 'talking animals', 'real events', 'news'], correct: 1 },
+            { question: 'A good story should have', visual: '✅', options: ['no ending', 'clear structure', 'random sentences', 'no characters'], correct: 1 },
+            { question: 'Creativity helps in', visual: '🎨', options: ['making stories interesting', 'confusing readers', 'shortening stories', 'avoiding ideas'], correct: 0 },
+            { question: 'The end of a story gives', visual: '🏁', options: ['problem', 'solution', 'beginning', 'setting'], correct: 1 },
+            { question: 'Story writing improves', visual: '🧠', options: ['drawing', 'imagination', 'singing', 'dancing'], correct: 1 }
+        ],
+        summary: [
+            'A story is a series of connected events',
+            'Every story involves characters, a setting, and a plot',
+            'Good stories follow a clear structure: beginning, middle, and end'
+        ],
+        summaryEnd: 'Great job! You have completed the Story Writing lesson.',
+        nextLesson: { id: 'nouns-pronouns', title: 'Nouns & Pronouns' }
+    },
+    'letter-writing': {
+        title: 'Letter Writing',
+        subtitle: 'Learn about formats, types, and expressions used in letter writing.',
+        videoSubtitle: 'Watch these videos to improve your letter writing skills! Click a video to watch it in full screen.',
+        videos: [
+            { src: 'https://www.youtube.com/embed/UBO-ib-V8LM?si=vxj3lklQ3bZL64L_', title: 'Letter Writing Intro', thumb: 'https://img.youtube.com/vi/UBO-ib-V8LM/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/3ClV82aT2oA?si=sbVy6xjz2CyTO82v', title: 'Formal vs Informal', thumb: 'https://img.youtube.com/vi/3ClV82aT2oA/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A letter is a', visual: '✉️', options: ['drawing', 'written message', 'picture', 'story'], correct: 1 },
+            { question: 'Informal letters are written to', visual: '👨‍👩‍👦', options: ['principal', 'teacher', 'friends and family', 'office'], correct: 2 },
+            { question: 'Formal letters are written for', visual: '🏢', options: ['fun', 'official purposes', 'games', 'stories'], correct: 1 },
+            { question: 'Which is used in formal letters?', visual: '🤵', options: ['Dear friend', 'Dear Sir/Madam', 'Hello', 'Hi'], correct: 1 },
+            { question: 'Which tone is used in informal letters?', visual: '😊', options: ['strict', 'friendly', 'rude', 'official'], correct: 1 },
+            { question: 'The subject is included in', visual: '📌', options: ['informal letters', 'formal letters', 'stories', 'poems'], correct: 1 },
+            { question: 'Which closing is used in informal letters?', visual: '❤️', options: ['Yours sincerely', 'Yours lovingly', 'Thank you', 'Respectfully'], correct: 1 },
+            { question: 'Which closing is used in formal letters?', visual: '🤝', options: ['Yours lovingly', 'Yours sincerely', 'Dear friend', 'Hello'], correct: 1 },
+            { question: 'Letters help in', visual: '🗣️', options: ['communication', 'drawing', 'dancing', 'painting'], correct: 0 },
+            { question: 'Proper format makes a letter', visual: '✅', options: ['confusing', 'clear', 'long', 'short'], correct: 1 }
+        ],
+        summary: [
+            'A letter is a written message sent from one person to another',
+            'Informal letters are personal; formal letters are official',
+            'Using the correct format and polite expressions is important for clear communication'
+        ],
+        summaryEnd: 'Great job! You have completed the Letter Writing lesson.',
+        nextLesson: { id: 'story-writing', title: 'Story Writing' }
+    },
+    'paragraph-writing': {
+        title: 'Paragraph Writing',
+        subtitle: 'Learn how to write coherent and well-structured paragraphs.',
+        videoSubtitle: 'Watch these videos to improve your paragraph writing skills! Click a video to watch it in full screen.',
+        videos: [
+            { src: 'https://www.youtube.com/embed/vbMtBjoBalQ?si=MOShJTVUXbmh4_6M', title: 'Paragraph Writing Intro', thumb: 'https://img.youtube.com/vi/vbMtBjoBalQ/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/lMRTtUrSFOc?si=7a3bULhOjKf4HOLm', title: 'Writing Great Paragraphs', thumb: 'https://img.youtube.com/vi/lMRTtUrSFOc/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A paragraph is a group of', visual: '📝', options: ['words', 'sentences', 'letters', 'numbers'], correct: 1 },
+            { question: 'A paragraph should have', visual: '🎯', options: ['many topics', 'one main idea', 'no structure', 'only questions'], correct: 1 },
+            { question: 'The first sentence of a paragraph is called', visual: '🥇', options: ['concluding sentence', 'supporting sentence', 'topic sentence', 'final sentence'], correct: 2 },
+            { question: 'Supporting sentences', visual: '🏗️', options: ['introduce topic', 'give details', 'end paragraph', 'ask questions'], correct: 1 },
+            { question: 'The last sentence is called', visual: '🔚', options: ['topic sentence', 'supporting sentence', 'concluding sentence', 'main idea'], correct: 2 },
+            { question: 'A descriptive paragraph', visual: '🎨', options: ['tells a story', 'describes something', 'gives commands', 'asks questions'], correct: 1 },
+            { question: 'A narrative paragraph', visual: '📖', options: ['gives facts', 'tells a story', 'describes objects', 'gives rules'], correct: 1 },
+            { question: 'Linking words help to', visual: '🔗', options: ['confuse sentences', 'connect ideas', 'remove meaning', 'shorten words'], correct: 1 },
+            { question: 'A good paragraph should be', visual: '📋', options: ['unclear', 'confusing', 'organized', 'random'], correct: 2 },
+            { question: 'Paragraph writing helps improve', visual: '📈', options: ['drawing', 'speaking', 'writing skills', 'singing'], correct: 2 }
+        ],
+        summary: [
+            'A paragraph is a group of sentences that talk about one main idea',
+            'It includes a topic sentence, supporting sentences, and a concluding sentence',
+            'Good paragraphs are clear, organized, and use linking words'
+        ],
+        summaryEnd: 'Great job! You have completed the Paragraph Writing lesson.',
+        nextLesson: { id: 'letter-writing', title: 'Letter Writing' }
+    },
+    'sentence-formation': {
+        title: 'Sentence Formation',
+        subtitle: 'Learn about types of sentences, parts of a sentence, and how to form grammatically correct sentences.',
+        videoSubtitle: 'Watch these videos to improve your sentence formation skills! Click a video to watch it in full screen.',
+        videos: [
+            { src: 'https://www.youtube.com/embed/WYnpf44ojFU?si=vm7Y-xUzaTB7p7Fl', title: 'Sentence Formation Video 1', thumb: 'https://img.youtube.com/vi/WYnpf44ojFU/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/FfaO5yimCrQ?si=6SUErMLvSyp2PCvw', title: 'Sentence Formation Video 2', thumb: 'https://img.youtube.com/vi/FfaO5yimCrQ/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/745WT5bcFwA?si=tYo5c70I-QjSYLda', title: 'Sentence Formation Video 3', thumb: 'https://img.youtube.com/vi/745WT5bcFwA/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'A sentence must have', visual: '📝', options: ['only words', 'complete meaning', 'only verbs', 'only nouns'], correct: 1 },
+            { question: 'The subject tells us', visual: '👤', options: ['action', 'place', 'who or what the sentence is about', 'time'], correct: 2 },
+            { question: 'The predicate tells us', visual: '🗣️', options: ['who', 'what is happening', 'where', 'when'], correct: 1 },
+            { question: 'Which is a correct sentence?', visual: '✅', options: ['playing he is', 'He is playing', 'is he playing', 'playing is he'], correct: 1 },
+            { question: 'Which sentence is a question?', visual: '❓', options: ['She is happy', 'Where are you going?', 'Close the door', 'What a day!'], correct: 1 },
+            { question: 'Which sentence gives a command?', visual: '🛑', options: ['She is reading', 'Close the door', 'What a nice day!', 'Where are you?'], correct: 1 },
+            { question: 'Which punctuation ends a statement?', visual: '🔡', options: ['?', '!', '.', ','], correct: 2 },
+            { question: 'A sentence should start with', visual: '🔠', options: ['small letter', 'capital letter', 'number', 'symbol'], correct: 1 },
+            { question: 'Which sentence shows strong feeling?', visual: '😲', options: ['She is happy', 'What a beautiful day!', 'Where are you?', 'He is playing'], correct: 1 },
+            { question: 'Correct word order is', visual: '🧩', options: ['Verb + Subject', 'Subject + Verb + Object', 'Object + Subject', 'Random'], correct: 1 }
+        ],
+        summary: [
+            'A sentence is a group of words with complete meaning',
+            'Every sentence has a subject and a predicate',
+            'Sentences start with a capital letter and end with punctuation marks'
+        ],
+        summaryEnd: 'Great job! You have completed the Sentence Formation lesson.',
+        nextLesson: { id: 'paragraph-writing', title: 'Paragraph Writing' }
+    },
+    'reading-comprehension': {
+        title: 'Reading Comprehension',
+        subtitle: 'Learn how to read, understand, and interpret a passage.',
+        videoSubtitle: 'Watch these videos to improve your reading comprehension skills! Click a video to watch it in full screen.',
+        videos: [
+            { src: 'https://www.youtube.com/embed/-gAQMaFzlDQ?si=YW5zd-sv1ZhOzDC9', title: 'Reading Comprehension Intro', thumb: 'https://img.youtube.com/vi/-gAQMaFzlDQ/hqdefault.jpg' },
+            { src: 'https://www.youtube.com/embed/q8tIgb_BtiI?si=ZGLrS-ko8p-OWx2A', title: 'Reading Skills Practice', thumb: 'https://img.youtube.com/vi/q8tIgb_BtiI/hqdefault.jpg' }
+        ],
+        quiz: [
+            { question: 'Reading comprehension means', visual: '📖', options: ['writing stories', 'understanding what we read', 'drawing pictures'], correct: 1 },
+            { question: 'A factual passage gives', visual: '📄', options: ['stories', 'real information', 'jokes'], correct: 1 },
+            { question: 'Skimming means', visual: '👁️', options: ['reading slowly', 'reading quickly for main idea', 'writing notes'], correct: 1 },
+            { question: 'Scanning means', visual: '🔍', options: ['reading everything', 'looking for specific information', 'writing answers'], correct: 1 },
+            { question: 'Vocabulary means', visual: '📚', options: ['grammar rules', 'word meanings', 'sentence structure'], correct: 1 },
+            { question: 'A story passage contains', visual: '✍️', options: ['facts only', 'characters and events', 'numbers'], correct: 1 },
+            { question: 'Reading comprehension helps improve', visual: '📈', options: ['drawing', 'vocabulary', 'dancing'], correct: 1 },
+            { question: 'Which is important for understanding a passage?', visual: '💡', options: ['ignoring words', 'careful reading', 'skipping lines'], correct: 1 },
+            { question: 'The main idea means', visual: '🎯', options: ['small detail', 'central idea', 'example'], correct: 1 },
+            { question: 'Reading regularly helps', visual: '🧠', options: ['reduce knowledge', 'improve skills', 'waste time'], correct: 1 }
+        ],
+        summary: [
+            'Reading comprehension helps us understand texts',
+            'Skimming gets the main idea, while scanning finds details',
+            'A good vocabulary improves reading skills'
+        ],
+        summaryEnd: 'Great job! You have completed the Reading Comprehension lesson.',
+        nextLesson: { id: 'sentence-formation', title: 'Sentence Formation' }
+    },
     'counting-numbers': {
         title: 'Counting Numbers (1–10)',
         subtitle: 'Learn how to count numbers from 1 to 10 using simple examples and fun activities.',
@@ -38501,6 +38925,2904 @@ const LessonPage = () => {
                                 <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is monarchy?</p>
                                 <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name the three levels of government.</p>
                                 <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Why is government important?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – ENGLISH – NOUNS & PRONOUNS */}
+                {classId === '6' && chapterId === 'nouns-pronouns' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🏷️">Nouns & Pronouns</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Welcome to the building blocks of sentences! <strong>Nouns</strong> are naming words, while <strong>Pronouns</strong> are words we use in place of nouns to make our sentences sound better. Let's learn about them!
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤔">What is a Noun?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                A <strong>Noun</strong> is the name of a person, place, animal, or thing.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Person:</strong> Boy, Teacher, Akalya</li>
+                                    <li><strong>Place:</strong> School, Park, India</li>
+                                    <li><strong>Animal:</strong> Dog, Elephant, Bird</li>
+                                    <li><strong>Thing:</strong> Book, Table, Pencil</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📑">Types of Nouns</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1D4ED8' }}>Common Noun</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#1E40AF' }}>A general name for any person, place, or thing.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', fontStyle: 'italic', color: '#1E3A8A' }}>Example: boy, city, dog</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#C026D3' }}>Proper Noun</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#86198F' }}>A specific name for a particular person, place, or thing. (Always starts with a Capital letter)</p>
+                                    <p style={{ margin: 0, fontSize: '14px', fontStyle: 'italic', color: '#701A75' }}>Example: Rahul, Chennai, Snoopy</p>
+                                </div>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#B45309' }}>Abstract Noun</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#92400E' }}>Names of feelings or ideas that we cannot touch or see.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', fontStyle: 'italic', color: '#78350F' }}>Example: happiness, bravery, honesty</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔄">What is a Pronoun?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                A <strong>Pronoun</strong> is a word used <em>instead</em> of a noun. We use pronouns to avoid repeating the same noun over and over.
+                            </p>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', padding: 16, borderRadius: 12 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#166534' }}><strong>Without Pronoun:</strong> Rahul is a good boy. Rahul loves playing chess.</p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#166534' }}><strong>With Pronoun:</strong> Rahul is a good boy. <strong>He</strong> loves playing chess.</p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📋">Types of Pronouns</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li><strong>Personal Pronouns:</strong> I, you, he, she, it, we, they</li>
+                                <li><strong>Possessive Pronouns:</strong> mine, yours, his, hers, ours, theirs</li>
+                                <li><strong>Interrogative Pronouns:</strong> who, what, which, whose (used for questions)</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 600 }}>1. Identify the proper noun: "My friend lives in London."</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669' }}>Answer: London</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 600 }}>2. Substitute with pronoun: "The cat is sleeping."</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669' }}>Answer: It is sleeping.</p>
+                                </div>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – ENGLISH – VERBS & TENSES */}
+                {classId === '6' && chapterId === 'verbs-tenses' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🏃">Verbs & Tenses</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                <strong>Verbs</strong> are the engine of a sentence! They show action or state of being. <strong>Tenses</strong> change the verb to tell us <em>when</em> the action happens.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⚡">What are Verbs?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                Verbs are doing words or action words. 
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#FFF1F2', border: '1px solid #FECDD3', padding: 16, borderRadius: 12 }}>
+                                    <h3 style={{ margin: '0 0 8px', fontSize: '16px', color: '#BE123C' }}>Action Verbs</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#9F1239' }}>run, jump, eat, sleep, read, write</p>
+                                </div>
+                                <div style={{ background: '#F0F9FF', border: '1px solid #BAE6FD', padding: 16, borderRadius: 12 }}>
+                                    <h3 style={{ margin: '0 0 8px', fontSize: '16px', color: '#0369A1' }}>Helping Verbs</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#075985' }}>is, am, are, was, were, has, have</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⏲️">What are Tenses?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                Tense indicates the time of the action in a sentence. There are three main tenses:
+                            </p>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 12 }}>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', padding: 16, borderRadius: 12 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '16px', fontWeight: 600, color: '#047857' }}>1. Present Tense (Now)</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#064E3B' }}>Happening right now or regularly. <br/><em>Example: She <strong>plays</strong> football.</em></p>
+                                </div>
+                                <div style={{ background: '#FEF3C7', border: '1px solid #FDE68A', padding: 16, borderRadius: 12 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '16px', fontWeight: 600, color: '#B45309' }}>2. Past Tense (Before)</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#92400E' }}>Already happened. Usually ends in -ed. <br/><em>Example: She <strong>played</strong> football yesterday.</em></p>
+                                </div>
+                                <div style={{ background: '#E0E7FF', border: '1px solid #C7D2FE', padding: 16, borderRadius: 12 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '16px', fontWeight: 600, color: '#4338CA' }}>3. Future Tense (Later)</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#3730A3' }}>Will happen later. Uses will or shall. <br/><em>Example: She <strong>will play</strong> football tomorrow.</em></p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">Subject-Verb Match</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                The verb must match the subject. <br/>
+                                <strong>Singular Subject:</strong> He <em>goes</em> to school.<br/>
+                                <strong>Plural Subject:</strong> They <em>go</em> to school.
+                            </p>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – ENGLISH – ADJECTIVES & ADVERBS */}
+                {classId === '6' && chapterId === 'adjectives-adverbs' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="✨">Adjectives & Adverbs</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Want to make your writing colorful and interesting? Use describing words! <strong>Adjectives</strong> describe nouns, and <strong>Adverbs</strong> describe verbs or adjectives.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🎨">What is an Adjective?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                An <strong>Adjective</strong> is a word that describes or modifies a noun or pronoun. It tells us more about it (like size, shape, color, or number).
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', padding: 16, borderRadius: 12 }}>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>
+                                    <em>Examples:</em> <strong>beautiful</strong> flower, <strong>tall</strong> boy, <strong>red</strong> car, <strong>five</strong> dogs.
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏃">What is an Adverb?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                An <strong>Adverb</strong> is a word that describes a verb, an adjective, or another adverb. It tells us <em>how, when, where,</em> or <em>how much</em> an action happens.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', padding: 16, borderRadius: 12 }}>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>
+                                    <em>Examples:</em> runs <strong>quickly</strong>, speaks <strong>softly</strong>, comes <strong>here</strong>, arrives <strong>late</strong>.
+                                    <br/><span style={{ fontSize: '14px', color: '#64748B' }}>(Hint: Many adverbs end in -ly!)</span>
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⚖️">Adjective vs Adverb</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li><strong>Adjective:</strong> She has a <strong>loud</strong> voice. (Describes the noun 'voice')</li>
+                                <li><strong>Adverb:</strong> She speaks <strong>loudly</strong>. (Describes the verb 'speaks')</li>
+                            </ul>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – ENGLISH – PREPOSITIONS & CONJUNCTIONS */}
+                {classId === '6' && chapterId === 'prepositions-conjunctions' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🔗">Prepositions & Conjunctions</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Linking words are essential to stick your sentences together. <strong>Prepositions</strong> show relationships between objects, and <strong>Conjunctions</strong> join sentences or words together clearly!
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📍">What is a Preposition?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>Preposition</strong> is a word placed before a noun or pronoun to show its relationship to some other word in the sentence. It mainly shows direction, time, place, or location.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 14 }}>
+                                <div style={{ background: '#ECFEFF', border: '1px solid #A5F3FC', padding: 16, borderRadius: 12 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', fontWeight: 600, color: '#0891B2' }}>Prepositions of Place</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#164E63' }}>in, on, under, above, behind, between</p>
+                                </div>
+                                <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', padding: 16, borderRadius: 12 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', fontWeight: 600, color: '#166534' }}>Prepositions of Time</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#14532D' }}>at, on, in, before, after, until</p>
+                                </div>
+                            </div>
+                            <p style={{ marginTop: 14, fontSize: '15px', color: '#334155', fontStyle: 'italic' }}>
+                                Example: The cat is <strong>under</strong> the table.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤝">What is a Conjunction?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                A <strong>Conjunction</strong> is a joining word. It is used to connect words, phrases, or sentences.
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li><strong>and:</strong> joins similar ideas. (I like apples <strong>and</strong> bananas.)</li>
+                                <li><strong>but:</strong> joins opposite ideas. (I am tired <strong>but</strong> I will study.)</li>
+                                <li><strong>or:</strong> shows a choice. (Do you want tea <strong>or</strong> coffee?)</li>
+                                <li><strong>because:</strong> shows a reason. (I am happy <strong>because</strong> I won.)</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 10, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px' }}>1. Identify the preposition: "The book is on the desk."</p>
+                                <p style={{ margin: 0, fontSize: '15px' }}>2. Fill the conjunction: "I went to bed early _____ I was tired."</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – COMPUTERS – INTRO TO COMPUTERS */}
+                {classId === '6' && subjectId === 'computers' && chapterId === 'intro-to-computers' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🖥️">Introduction to Computers</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                A computer is an electronic device that helps us perform many tasks quickly and accurately. It is used in schools, homes, offices, hospitals, and many other places. Computers make our work easier and save time. In this lesson, students will learn <strong>what a computer is, its features, and how it helps us in daily life</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤔">What is a Computer?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>computer</strong> is an electronic machine that takes input, processes it, and gives output.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Example:</p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Input</strong> &rarr; Typing on keyboard</li>
+                                    <li><strong>Process</strong> &rarr; Computer processes data</li>
+                                    <li><strong>Output</strong> &rarr; Information shown on monitor</li>
+                                </ul>
+                                <p style={{ marginTop: 10, marginBottom: 0, fontSize: '15px', color: '#1E40AF', fontStyle: 'italic', fontWeight: 600 }}>
+                                    This process is called the IPO Cycle (Input–Process–Output).
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⭐">Features of a Computer</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1D4ED8' }}>Speed</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#1E40AF', lineHeight: 1.6 }}>Computers can perform tasks very fast.</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#C026D3' }}>Accuracy</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#86198F', lineHeight: 1.6 }}>Computers give correct results if the input is correct.</p>
+                                </div>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#B45309' }}>Storage</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#92400E', lineHeight: 1.6 }}>Computers can store large amounts of data.</p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#047857' }}>Diligence & Versatility</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>Computers do not get tired and can perform many types of tasks.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏫">Uses of Computers</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li><strong>In Education:</strong> Used for learning, online classes, and research.</li>
+                                <li><strong>In Hospitals:</strong> Used to store patient records and help doctors.</li>
+                                <li><strong>In Banks:</strong> Used for managing accounts and transactions.</li>
+                                <li><strong>In Offices:</strong> Used for typing, data storage, and communication.</li>
+                                <li><strong>At Home:</strong> Used for games, watching videos, and browsing the internet.</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="💻">Types of Computers</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Desktop</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>A computer used at a fixed place like home or office.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Laptop</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>A portable computer that can be carried easily.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Tablet</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>A touch-screen device used for reading and browsing.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Supercomputer</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>A very powerful computer used for scientific research.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⚙️">Basic Functions of a Computer</SectionTitle>
+                            <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', border: '1px solid #BFDBFE' }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#1E40AF', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Input:</strong> Receiving data (keyboard, mouse)</li>
+                                    <li><strong>Processing:</strong> Working on the data (CPU)</li>
+                                    <li><strong>Output:</strong> Showing results (monitor, printer)</li>
+                                    <li><strong>Storage:</strong> Saving data (hard disk, pen drive)</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📈">Importance of Computers</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li>Save time and effort</li>
+                                <li>Increase productivity</li>
+                                <li>Help in communication</li>
+                                <li>Support learning and research</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is a computer?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: A computer is an electronic device that processes data and gives output.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is the IPO cycle?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: It stands for Input, Process, and Output.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why are computers important?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: They help us do work quickly and efficiently.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>The first computers were very large in size.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Modern computers are much faster and smaller.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Computers are used in almost every field today.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define a computer.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name two features of a computer.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What are the uses of computers in school?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is input and output?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. Name two types of computers.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. What is storage?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – COMPUTERS – PARTS OF A COMPUTER */}
+                {classId === '6' && subjectId === 'computers' && chapterId === 'parts-of-a-computer' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🧩">Parts of a Computer</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                A computer is made up of different parts that work together to perform tasks. Each part has a specific function, such as taking input, processing data, or displaying output. In this lesson, students will learn about the <strong>main components of a computer like CPU, monitor, keyboard, and mouse</strong> and their functions.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏗️">Main Parts of a Computer</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A computer system mainly consists of three key sections:
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Input Devices:</strong> Tools to enter data into the computer.</li>
+                                    <li><strong>Processing Unit (CPU):</strong> The brain that processes data.</li>
+                                    <li><strong>Output Devices:</strong> Screens and printers that show the results.</li>
+                                </ul>
+                                <p style={{ marginTop: 10, marginBottom: 0, fontSize: '15px', color: '#1E40AF', fontStyle: 'italic', fontWeight: 600 }}>
+                                    These parts work seamlessly together to complete any task.
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⌨️">Input Devices</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                <strong>Input devices</strong> are used to enter data, text, or commands into the computer.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1D4ED8' }}>Keyboard</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#1E40AF', lineHeight: 1.6 }}>Used to type letters, numbers, and symbols into the computer. Essential for typing text and entering commands.</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#C026D3' }}>Mouse</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#86198F', lineHeight: 1.6 }}>A pointing device used to point, click, format, and select items on the screen. Used for clicking, dragging, and scrolling.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧠">Processing Unit (CPU)</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                The <strong>CPU (Central Processing Unit)</strong> is called the <strong>brain of the computer</strong>.
+                            </p>
+                            <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', padding: '16px', borderRadius: '12px' }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#92400E', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Processes all data and commands.</li>
+                                    <li>Controls all activities of the computer.</li>
+                                    <li>Performs complex calculations and makes decisions.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🖥️">Output Devices</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                <strong>Output devices</strong> show the result of the computer's work after processing.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#047857' }}>Monitor</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>Displays information such as text, images, and videos on a screen.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Printer</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Produces output on paper (often called a 'hard copy').</p>
+                                </div>
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#991B1B' }}>Speakers</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#7F1D1D', lineHeight: 1.6 }}>Produce sound output so you can hear music and audio.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="💾">Storage Devices</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                Storage devices are used to save and store data permanently for future use. 
+                            </p>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li><strong>Hard disk:</strong> Fixed inside the computer with huge storage.</li>
+                                <li><strong>Pen drive:</strong> A small portable disk that plugs into a USB port.</li>
+                                <li><strong>CD/DVD:</strong> Round discs used to carry music, movies, or files.</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⚙️">Working of Computer Parts</SectionTitle>
+                            <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', border: '1px solid #BFDBFE' }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#1E40AF', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Input:</strong> Data is entered using a keyboard or mouse.</li>
+                                    <li><strong>Process:</strong> The CPU processes the data.</li>
+                                    <li><strong>Output:</strong> The result is shown on a monitor or printed by a printer.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📈">Importance of Computer Parts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li>Each part has a specific role.</li>
+                                <li>All parts work together smoothly.</li>
+                                <li>Helps the computer function properly without crashing.</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What are input devices?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Devices used to enter data into a computer.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is CPU?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: CPU is the brain of the computer that processes data.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. What are output devices?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Devices that show the result of computer processing.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>CPU is the most important part of the computer.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Without input devices, we cannot give instructions to the computer.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Monitors display output in visual form.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Name two input devices.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. What is the function of the CPU?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Name two output devices.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is a monitor?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What is a storage device?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. Give one example of storage.</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – COMPUTERS – INPUT OUTPUT DEVICES */}
+                {classId === '6' && subjectId === 'computers' && chapterId === 'input-output-devices' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="⌨️">Input & Output Devices</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Computers work by receiving data, processing it, and giving results. To interact with a computer, we use special devices called <strong>input and output devices</strong>. Input devices help us give instructions to the computer, while output devices show us the results. In this lesson, students will learn about <strong>different input and output devices and how they are used</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📥">What are Input Devices?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Input devices</strong> are used to enter data and instructions into a computer.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1D4ED8' }}>Keyboard</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#1E40AF', lineHeight: 1.6 }}>Used to type letters, numbers, and commands.</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#C026D3' }}>Mouse</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#86198F', lineHeight: 1.6 }}>Used to point, click, drag, and select items on the screen.</p>
+                                </div>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#B45309' }}>Scanner</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#92400E', lineHeight: 1.6 }}>Converts physical documents into digital form on the screen.</p>
+                                </div>
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#991B1B' }}>Microphone</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#7F1D1D', lineHeight: 1.6 }}>Used to input sound and voice recordings into the computer.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🎮">Other Input Devices</SectionTitle>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Touchscreen:</strong> Allows input directly via touching the screen.</li>
+                                    <li><strong>Light Pen:</strong> Used to draw directly on a monitor.</li>
+                                    <li><strong>Joystick:</strong> Used to play games and move characters around.</li>
+                                </ul>
+                                <p style={{ marginTop: 10, marginBottom: 0, fontSize: '15px', color: '#334155', fontStyle: 'italic', fontWeight: 600 }}>
+                                    These devices make interaction with computers easier.
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📤">What are Output Devices?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Output devices</strong> display or present the result of the computer’s processing.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#047857' }}>Monitor</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>Shows text, images, and videos on the screen.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Printer</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Produces physical output on paper (hard copy).</p>
+                                </div>
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#991B1B' }}>Speakers</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#7F1D1D', lineHeight: 1.6 }}>Produce loud sound and audio output.</p>
+                                </div>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1D4ED8' }}>Headphones</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#1E40AF', lineHeight: 1.6 }}>Allow users to listen to audio privately.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📄">Soft Copy vs. Hard Copy</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Soft Copy</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Output shown on a screen (like a monitor). It goes away if computer turns off.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Hard Copy</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Output printed on paper (like from a printer). It is permanent and physical.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⚙️">Working of Input & Output Devices</SectionTitle>
+                            <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', border: '1px solid #BFDBFE' }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#1E40AF', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Input:</strong> Data is entered using input devices.</li>
+                                    <li><strong>Process:</strong> The CPU processes the data.</li>
+                                    <li><strong>Output:</strong> Results are shown using output devices.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⭐">Importance of Input & Output Devices</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li>Help users communicate with the computer.</li>
+                                <li>Make computer operations easy.</li>
+                                <li>Display results clearly.</li>
+                                <li>Support different types of data (text, sound, images).</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What are input devices?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Devices used to enter data into a computer.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What are output devices?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Devices that display results from a computer.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. What is the difference between soft copy and hard copy?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Soft copy is displayed on screen, while hard copy is printed on paper.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Touchscreens can act as both input and output devices.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Microphones allow voice input into computers.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Printers produce permanent copies of documents.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Name two input devices.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. Name two output devices.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What is the use of a keyboard?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is a monitor?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What is a scanner used for?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. What is a hard copy?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – COMPUTERS – MEMORY AND STORAGE */}
+                {classId === '6' && subjectId === 'computers' && chapterId === 'memory-and-storage' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🧠">Memory & Storage</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Computers need memory to store data and instructions so they can work properly. Memory helps the computer remember information, while storage devices keep data safe for future use. In this lesson, students will learn about <strong>different types of memory like RAM and ROM, and storage devices like hard drives and pen drives</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤔">What is Memory?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Memory</strong> is the part of the computer that stores data and instructions temporarily or permanently.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Store information</li>
+                                    <li>Process data</li>
+                                    <li>Run programs</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⚡">Types of Memory: Primary Memory</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                Primary memory is the main memory of the computer. It is fast and directly used by the CPU.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1D4ED8' }}>RAM (Random Access Memory)</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#1E40AF', lineHeight: 1.6 }}>
+                                        RAM is a <strong>temporary memory</strong>. <br/><br/>
+                                        <strong>Features:</strong> <br/>
+                                        • Stores data while the computer is on. <br/>
+                                        • Data is lost when the computer is turned off. <br/><br/>
+                                        <strong>Example:</strong> Running applications, games.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#C026D3' }}>ROM (Read Only Memory)</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#86198F', lineHeight: 1.6 }}>
+                                        ROM is a <strong>permanent memory</strong>. <br/><br/>
+                                        <strong>Features:</strong> <br/>
+                                        • Stores important instructions. <br/>
+                                        • Data is NOT lost when the computer is turned off. <br/><br/>
+                                        <strong>Example:</strong> Booting instructions of the computer.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📦">What is Storage?</SectionTitle>
+                            <p style={{ fontSize: '15px', color: '#334155', lineHeight: 1.8 }}>
+                                <strong>Storage</strong> is used to save data permanently for future use. Unlike RAM, storage keeps data even when the computer is off.
+                            </p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#047857' }}>Hard Disk</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#064E3B', lineHeight: 1.6 }}>The main storage device inside a computer, typically holding lots of space.</p>
+                                </div>
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#991B1B' }}>Pen Drive (USB)</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#7F1D1D', lineHeight: 1.6 }}>A small portable device used to store and transfer data efficiently.</p>
+                                </div>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#B45309' }}>CD/DVD & Memory Cards</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#92400E', lineHeight: 1.6 }}>CDs store music and videos, while memory cards are used in phones and cameras.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⚖️">Difference Between Memory and Storage</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155', lineHeight: 1.6 }}>
+                                        <strong>Memory:</strong> Temporary, fast, used for processing (e.g., RAM for temporary working space).
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155', lineHeight: 1.6 }}>
+                                        <strong>Storage:</strong> Permanent, slower, used for saving data (e.g., Hard Disk for long-term storage).
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⭐">Importance of Memory & Storage</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li>Helps the computer run programs smoothly.</li>
+                                <li>Stores important data safely.</li>
+                                <li>Allows saving and retrieving information securely.</li>
+                                <li>Supports daily computer tasks and processes.</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is memory?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Memory stores data and instructions in a computer.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is RAM?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: RAM is temporary memory used while the computer is running.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. What is storage?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>Answer: Storage is used to save data permanently.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>RAM loses data when the computer is switched off.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Hard disks can store massive amounts of data compared to early computers.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Pen drives are easy to carry, fit in your pocket, and are incredibly useful.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. Define memory.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. What is the difference between RAM and ROM?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. Name two storage devices.</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>4. What is a hard disk?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>5. What is a pen drive used for?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>6. What is primary memory?</p>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – ENGLISH – POETRY */}
+                {classId === '6' && chapterId === 'poetry' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🎶">Poetry</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Poetry is a special form of writing that uses <strong>rhymes, rhythm, and expressive language</strong> to share ideas, feelings, and stories. Poems are often musical and creative, making them enjoyable to read and listen to. In this lesson, students will explore <strong>rhymes, rhythms, and the beauty of poetic expression</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✍️">What is Poetry?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Poetry</strong> is a form of writing that expresses thoughts and emotions in a creative and rhythmic way.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Features of poetry:</p>
+                                <ul style={{ margin: '0 0 10px', paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Rhyming words</li>
+                                    <li>Rhythm (beat or flow)</li>
+                                    <li>Short lines and stanzas</li>
+                                    <li>Expressive language</li>
+                                </ul>
+                                <div style={{ background: '#EFF6FF', padding: '12px', borderRadius: '8px', border: '1px solid #BFDBFE' }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#1E40AF', fontWeight: 700 }}>Example:</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#1E3A8A', fontStyle: 'italic', lineHeight: 1.6 }}>
+                                        Twinkle, twinkle, little star,<br />
+                                        How I wonder what you are!
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">Elements of Poetry</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Rhyme</h3>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Words that have similar ending sounds.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#10B981', fontStyle: 'italic' }}>Example: star – are</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Rhythm</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>The pattern of beats in a poem.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Stanza</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>A group of lines in a poem (like a paragraph).</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Line</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Each row of words in a poem.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📜">Types of Poems</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#ECFEFF', border: '1px solid #A5F3FC', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#0891B2' }}>Rhyming Poems</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#0E7490', lineHeight: 1.6 }}>Poems with similar ending sounds.</p>
+                                    <div style={{ background: '#CFFAFE', padding: '10px', borderRadius: '8px' }}>
+                                        <p style={{ margin: 0, fontSize: '14px', color: '#155E75', fontStyle: 'italic' }}>
+                                            The cat is small,<br/>
+                                            It plays with a ball.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#C026D3' }}>Free Verse</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#A21CAF', lineHeight: 1.6 }}>Poems without rhyme or fixed rhythm.</p>
+                                    <div style={{ background: '#FCE7F3', padding: '10px', borderRadius: '8px' }}>
+                                        <p style={{ margin: 0, fontSize: '14px', color: '#831843', fontStyle: 'italic' }}>
+                                            The sun rises<br/>
+                                            And lights the sky
+                                        </p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#FFF7ED', border: '1px solid #FFEDD5', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#EA580C' }}>Limerick</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#C2410C', lineHeight: 1.6 }}>A short poem with a funny tone and simple rhyme pattern.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📖">How to Read a Poem</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li>Read aloud to feel the rhythm</li>
+                                <li>Notice rhyming words</li>
+                                <li>Understand the meaning of lines</li>
+                                <li>Imagine the picture created by the poem</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✍️">How to Write a Poem</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li>Choose a topic</li>
+                                <li>Think of rhyming words</li>
+                                <li>Write short lines</li>
+                                <li>Use simple and expressive language</li>
+                                <li>Add rhythm</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏫">Sample Poem</SectionTitle>
+                            <div style={{ background: '#FEF2F2', padding: '20px', borderRadius: '16px', border: '1px solid #FECACA', textAlign: 'center' }}>
+                                <h3 style={{ margin: '0 0 12px', fontSize: '18px', color: '#991B1B', fontWeight: 800 }}>Title: My School</h3>
+                                <p style={{ fontSize: '16px', color: '#7F1D1D', margin: 0, lineHeight: 1.8, fontStyle: 'italic', fontFamily: 'serif' }}>
+                                    My school is big and bright,<br/>
+                                    It fills my day with joy and light.<br/>
+                                    Teachers help me learn and grow,<br/>
+                                    In my school, I love to go.
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⭐">Importance of Poetry</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li>Improves creativity</li>
+                                <li>Enhances language skills</li>
+                                <li>Helps express feelings</li>
+                                <li>Makes learning fun</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is poetry?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Poetry is a creative form of writing with rhythm and rhyme.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is a rhyme?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Words that have similar ending sounds.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. What is a stanza?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A group of lines in a poem.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Poems can be short or long.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Many poems have rhyming patterns.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Poetry helps express emotions creatively.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, color: '#334155' }}>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>1. Write two rhyming words.</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>2. Identify the rhyme in the line:</p>
+                                    <p style={{ margin: 0, fontSize: '14px', fontStyle: 'italic', background: '#FEF3C7', padding: '6px 10px', borderRadius: 8, display: 'inline-block' }}>"The cat sat on the mat."</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>3. Write a short poem about "Rain".</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>4. Identify the number of lines in a stanza.</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>5. Write two lines of a rhyming poem.</p>
+                                </div>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – ENGLISH – PROSE LESSONS */}
+                {classId === '6' && chapterId === 'prose-lessons' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="📖">Prose Lessons</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Prose refers to <strong>written or spoken language in its natural form</strong>, without rhyme or rhythm like poetry. Prose lessons include <strong>stories, essays, and descriptive passages</strong> that help students improve their reading, understanding, and language skills. In this lesson, students will explore <strong>prose, its types, and how to understand and analyze prose texts</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤔">What is Prose?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Prose</strong> is a form of writing that follows normal sentence structure and is used in everyday communication.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Examples of prose:</p>
+                                <ul style={{ margin: '0 0 10px', paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>Stories</li>
+                                    <li>Essays</li>
+                                    <li>Articles</li>
+                                    <li>Biographies</li>
+                                </ul>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#64748B', fontStyle: 'italic' }}>
+                                    Prose is simple, clear, and easy to understand.
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📑">Types of Prose</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#1D4ED8' }}>Narrative Prose</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#1E40AF', lineHeight: 1.6 }}>Tells a story with characters and events.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#1E3A8A', fontStyle: 'italic' }}>Example: Short stories, adventure stories</p>
+                                </div>
+                                <div style={{ background: '#FDF4FF', border: '1px solid #FBCFE8', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#A21CAF' }}>Descriptive Prose</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#86198F', lineHeight: 1.6 }}>Describes a person, place, or thing in detail.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#701A75', fontStyle: 'italic' }}>Example: Description of a village or festival</p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#059669' }}>Informative Prose</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#047857', lineHeight: 1.6 }}>Gives information or explains a topic.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#064E3B', fontStyle: 'italic' }}>Example: Essays, articles</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">Elements of Prose</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Characters</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>People or animals in the story</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Setting</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>The place and time of the story</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Plot</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>The sequence of events</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Theme</h3>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>The main idea or message</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="💡">How to Read Prose Effectively</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li>Read the passage carefully</li>
+                                <li>Understand the meaning of difficult words</li>
+                                <li>Identify the main idea</li>
+                                <li>Answer questions based on the text</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📝">Sample Prose Passage</SectionTitle>
+                            <div style={{ background: '#FFFBEB', padding: '16px', borderRadius: '12px', border: '1px solid #FDE68A', marginBottom: '16px' }}>
+                                <p style={{ fontSize: '15px', color: '#92400E', margin: 0, lineHeight: 1.8, fontStyle: 'italic' }}>
+                                    Ravi was a kind boy who loved helping others. One day, he saw an old man struggling to cross the road. Ravi quickly went and helped him. The old man thanked him and blessed him. Ravi felt happy for doing a good deed.
+                                </p>
+                            </div>
+                            
+                            <h3 style={{ margin: '0 0 12px', fontSize: '16px', color: '#334155', fontWeight: 700 }}>Questions:</h3>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: '16px' }}>
+                                <div style={{ background: '#F8FAFC', padding: '12px', borderRadius: '8px', border: '1px solid #E2E8F0' }}>
+                                    <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 4px', fontWeight: 600 }}>1. Who was Ravi?</p>
+                                    <p style={{ fontSize: '15px', color: '#059669', margin: 0 }}><strong>Answer:</strong> Ravi was a kind boy.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '12px', borderRadius: '8px', border: '1px solid #E2E8F0' }}>
+                                    <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 4px', fontWeight: 600 }}>2. What did Ravi do?</p>
+                                    <p style={{ fontSize: '15px', color: '#059669', margin: 0 }}><strong>Answer:</strong> He helped an old man cross the road.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', padding: '12px', borderRadius: '8px', border: '1px solid #E2E8F0' }}>
+                                    <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 4px', fontWeight: 600 }}>3. How did Ravi feel?</p>
+                                    <p style={{ fontSize: '15px', color: '#059669', margin: 0 }}><strong>Answer:</strong> He felt happy.</p>
+                                </div>
+                            </div>
+                            
+                            <h3 style={{ margin: '0 0 12px', fontSize: '16px', color: '#334155', fontWeight: 700 }}>Vocabulary:</h3>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li><strong>Struggling</strong> – finding it difficult</li>
+                                <li><strong>Blessed</strong> – gave good wishes</li>
+                                <li><strong>Kind</strong> – caring and helpful</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⭐">Importance of Prose</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li>Improves reading skills</li>
+                                <li>Enhances vocabulary</li>
+                                <li>Develops understanding and thinking</li>
+                                <li>Helps in learning new ideas</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is prose?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Prose is a form of writing in normal language without rhyme.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Name two types of prose.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Narrative and descriptive prose.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why is reading prose important?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: It improves understanding and vocabulary.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Most books and stories are written in prose.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Prose is used in everyday communication.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Reading prose helps improve language skills.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 20, color: '#334155', lineHeight: 1.8, fontSize: '15px', display: 'flex', flexDirection: 'column', gap: 8 }}>
+                                <li>1. Read a short story and identify the characters and setting.</li>
+                                <li>2. Write the main idea of a given passage.</li>
+                                <li>3. Find the meaning of new words from a passage.</li>
+                                <li>4. Write a short descriptive paragraph about your school.</li>
+                                <li>5. Answer questions based on a passage.</li>
+                            </ul>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – ENGLISH – PREPOSITIONS & CONJUNCTIONS */}
+                {classId === '6' && chapterId === 'prepositions-conjunctions' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🔗">Prepositions & Conjunctions</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Prepositions and conjunctions are important <strong>linking words</strong> in English. They help connect ideas, show relationships, and make sentences clear and meaningful. In this lesson, students will learn how to use <strong>prepositions and conjunctions to connect words and sentences smoothly</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📍">What is a Preposition?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>preposition</strong> is a word that shows the relationship between a noun or pronoun and another word in the sentence.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Examples:</p>
+                                <ul style={{ margin: '0 0 10px', paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>The book is <strong>on</strong> the table.</li>
+                                    <li>She is sitting <strong>under</strong> the tree.</li>
+                                </ul>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Common prepositions:</p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#64748B', fontStyle: 'italic' }}>
+                                    in, on, at, under, between, behind, near, above
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🗺️">Types of Prepositions</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#1D4ED8' }}>Prepositions of Place</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#1E40AF', lineHeight: 1.6 }}>Show where something is.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#1E3A8A', fontStyle: 'italic' }}>Examples: in, on, under, between</p>
+                                </div>
+                                <div style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#6D28D9' }}>Prepositions of Time</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#5B21B6', lineHeight: 1.6 }}>Show when something happens.</p>
+                                    <p style={{ margin: '0 0 10px', fontSize: '14px', color: '#4C1D95', fontStyle: 'italic' }}>Examples: at, on, in</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, color: '#4C1D95', fontSize: '14px' }}>
+                                        <li><strong>at</strong> 5 o’clock</li>
+                                        <li><strong>on</strong> Monday</li>
+                                        <li><strong>in</strong> the morning</li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#059669' }}>Prepositions of Movement</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#047857', lineHeight: 1.6 }}>Show direction or movement.</p>
+                                    <p style={{ margin: '0 0 10px', fontSize: '14px', color: '#064E3B', fontStyle: 'italic' }}>Examples: to, into, onto</p>
+                                    <div style={{ background: '#D1FAE5', padding: '10px', borderRadius: '8px' }}>
+                                        <p style={{ margin: 0, fontSize: '14px', color: '#064E3B' }}>Example: She is going <strong>to</strong> school.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤝">What is a Conjunction?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>conjunction</strong> is a word that joins words, phrases, or sentences.
+                            </p>
+                            <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#92400E', fontWeight: 700 }}>Examples:</p>
+                                <ul style={{ margin: '0 0 10px', paddingLeft: 18, color: '#92400E', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>I like tea <strong>and</strong> coffee.</li>
+                                    <li>She was tired <strong>but</strong> she finished her work.</li>
+                                </ul>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#92400E', fontWeight: 700 }}>Common conjunctions:</p>
+                                <p style={{ margin: 0, fontSize: '15px', color: '#92400E', fontStyle: 'italic' }}>
+                                    and, but, or, because, so
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔗">Types of Conjunctions</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#166534' }}>Coordinating Conjunctions</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#15803D', lineHeight: 1.6 }}>Join similar parts of a sentence.</p>
+                                    <p style={{ margin: '0 0 10px', fontSize: '14px', color: '#14532D', fontStyle: 'italic' }}>Examples: and, but, or</p>
+                                    <div style={{ background: '#DCFCE7', padding: '10px', borderRadius: '8px' }}>
+                                        <p style={{ margin: 0, fontSize: '14px', color: '#14532D' }}>Example: He is playing <strong>and</strong> she is watching.</p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#991B1B' }}>Subordinating Conjunctions</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#B91C1C', lineHeight: 1.6 }}>Join a dependent clause to a main clause.</p>
+                                    <p style={{ margin: '0 0 10px', fontSize: '14px', color: '#7F1D1D', fontStyle: 'italic' }}>Examples: because, although, if</p>
+                                    <div style={{ background: '#FEE2E2', padding: '10px', borderRadius: '8px' }}>
+                                        <p style={{ margin: 0, fontSize: '14px', color: '#7F1D1D' }}>Example: She stayed home <strong>because</strong> she was sick.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✍️">Examples of Usage</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                                <div style={{ background: '#EFF6FF', padding: '16px', borderRadius: '12px', border: '1px solid #BFDBFE' }}>
+                                    <p style={{ fontSize: '15px', color: '#1E40AF', margin: '0 0 6px' }}><strong>Preposition:</strong></p>
+                                    <p style={{ fontSize: '15px', color: '#1E40AF', margin: 0 }}>The cat is <strong>under</strong> the chair.</p>
+                                </div>
+                                <div style={{ background: '#FFFBEB', padding: '16px', borderRadius: '12px', border: '1px solid #FDE68A' }}>
+                                    <p style={{ fontSize: '15px', color: '#92400E', margin: '0 0 6px' }}><strong>Conjunction:</strong></p>
+                                    <p style={{ fontSize: '15px', color: '#92400E', margin: 0 }}>I wanted to play, <strong>but</strong> it was raining.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⚖️">Difference Between Prepositions and Conjunctions</SectionTitle>
+                            <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Preposition</strong> → shows relationship (place, time, direction)</li>
+                                    <li><strong>Conjunction</strong> → joins words or sentences</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⭐">Importance of Prepositions and Conjunctions</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li>Help connect ideas clearly</li>
+                                <li>Make sentences meaningful</li>
+                                <li>Improve writing and speaking</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is a preposition?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A preposition shows the relationship between a noun or pronoun and another word.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is a conjunction?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A conjunction joins words or sentences.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why are linking words important?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: They help connect ideas smoothly.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Prepositions are often used before nouns.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Conjunctions help form longer sentences.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Linking words improve sentence flow.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, color: '#334155' }}>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>1. Identify the prepositions:</p>
+                                    <p style={{ margin: 0, fontSize: '14px', fontStyle: 'italic', background: '#FEF3C7', padding: '6px 10px', borderRadius: 8, display: 'inline-block' }}>"The book is on the table."</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>2. Identify the conjunctions:</p>
+                                    <p style={{ margin: 0, fontSize: '14px', fontStyle: 'italic', background: '#FEF3C7', padding: '6px 10px', borderRadius: 8, display: 'inline-block' }}>"She was tired but she worked."</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>3. Fill in the blanks with suitable prepositions:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 20, fontSize: '14px' }}>
+                                        <li>a) The cat is ___ the table.</li>
+                                        <li>b) He is going ___ school.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>4. Fill in the blanks with suitable conjunctions:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 20, fontSize: '14px' }}>
+                                        <li>a) I like apples ___ bananas.</li>
+                                        <li>b) She was late ___ she missed the bus.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>5. Write one sentence using a preposition.</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>6. Write one sentence using a conjunction.</p>
+                                </div>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – ENGLISH – ADJECTIVES & ADVERBS */}
+                {classId === '6' && chapterId === 'adjectives-adverbs' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="✨">Adjectives & Adverbs</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Adjectives and adverbs are <strong>describing words</strong> that make our sentences more interesting and meaningful. Adjectives describe nouns, while adverbs describe verbs, adjectives, or other adverbs. In this lesson, students will learn how to use <strong>adjectives and adverbs to make writing more colorful and expressive</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🎨">What is an Adjective?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                An <strong>adjective</strong> is a word that describes a noun or pronoun.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Examples:</p>
+                                <ul style={{ margin: '0 0 10px', paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>A <strong>tall</strong> boy</li>
+                                    <li>A <strong>red</strong> flower</li>
+                                    <li>A <strong>happy</strong> child</li>
+                                </ul>
+                                <p style={{ margin: 0, fontSize: '14px', color: '#64748B', fontStyle: 'italic' }}>
+                                    In these examples, the words <strong>tall</strong>, <strong>red</strong>, and <strong>happy</strong> describe the nouns.
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📝">Types of Adjectives</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#1D4ED8' }}>Descriptive Adjectives</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#1E40AF', lineHeight: 1.6 }}>Describe quality or kind.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#1E3A8A', fontStyle: 'italic' }}>Examples: big, small, beautiful</p>
+                                </div>
+                                <div style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#6D28D9' }}>Quantity Adjectives</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#5B21B6', lineHeight: 1.6 }}>Show amount.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#4C1D95', fontStyle: 'italic' }}>Examples: some, much, little</p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#059669' }}>Number Adjectives</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#047857', lineHeight: 1.6 }}>Show number or order.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#064E3B', fontStyle: 'italic' }}>Examples: one, two, first</p>
+                                </div>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#D97706' }}>Possessive Adjectives</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#B45309', lineHeight: 1.6 }}>Show ownership.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#92400E', fontStyle: 'italic' }}>Examples: my, your, his, her</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⚡">What is an Adverb?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                An <strong>adverb</strong> is a word that describes a verb, adjective, or another adverb.
+                            </p>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#166534', fontWeight: 700 }}>Examples:</p>
+                                <ul style={{ margin: '0 0 10px', paddingLeft: 18, color: '#15803D', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>She runs <strong>quickly</strong>.</li>
+                                    <li>He speaks <strong>softly</strong>.</li>
+                                </ul>
+                                <p style={{ margin: 0, fontSize: '14px', color: '#14532D', fontStyle: 'italic' }}>
+                                    Here, <strong>quickly</strong> and <strong>softly</strong> describe how the action is done.
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📌">Types of Adverbs</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Adverbs of Manner</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Tell how something happens.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B', fontStyle: 'italic' }}>Examples: quickly, slowly, happily</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Adverbs of Time</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Tell when something happens.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B', fontStyle: 'italic' }}>Examples: now, yesterday, soon</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Adverbs of Place</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Tell where something happens.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B', fontStyle: 'italic' }}>Examples: here, there, everywhere</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Adverbs of Frequency</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Tell how often something happens.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B', fontStyle: 'italic' }}>Examples: always, often, never</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✍️">Examples of Usage</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                                <div style={{ background: '#FFFBEB', padding: '16px', borderRadius: '12px', border: '1px solid #FDE68A' }}>
+                                    <p style={{ fontSize: '15px', color: '#92400E', margin: '0 0 6px' }}><strong>Adjective:</strong> The <strong>small</strong> cat is sleeping.</p>
+                                    <p style={{ fontSize: '15px', color: '#92400E', margin: 0 }}><strong>Adverb:</strong> The cat is sleeping <strong>quietly</strong>.</p>
+                                </div>
+                                <div style={{ background: '#F0FDF4', padding: '16px', borderRadius: '12px', border: '1px solid #BBF7D0' }}>
+                                    <p style={{ fontSize: '15px', color: '#166534', margin: '0 0 6px' }}><strong>Adjective:</strong> She is a <strong>beautiful</strong> girl.</p>
+                                    <p style={{ fontSize: '15px', color: '#166534', margin: 0 }}><strong>Adverb:</strong> She sings <strong>beautifully</strong>.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⚖️">Difference Between Adjectives and Adverbs</SectionTitle>
+                            <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', marginBottom: 12 }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Adjective</strong> → describes a noun</li>
+                                    <li><strong>Adverb</strong> → describes a verb</li>
+                                </ul>
+                            </div>
+                            <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Example:</p>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li>He is a fast runner. <em>(adjective)</em></li>
+                                <li>He runs fast. <em>(adverb)</em></li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⭐">Importance of Adjectives and Adverbs</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li>Make sentences more interesting</li>
+                                <li>Provide more information</li>
+                                <li>Improve writing and speaking skills</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is an adjective?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: An adjective is a word that describes a noun.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is an adverb?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: An adverb is a word that describes a verb, adjective, or another adverb.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why are adjectives and adverbs important?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: They make sentences more descriptive and meaningful.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Adjectives usually come before nouns.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Many adverbs end in “-ly”.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Using describing words makes writing more engaging.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, color: '#334155' }}>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>1. Identify the adjectives:</p>
+                                    <p style={{ margin: 0, fontSize: '14px', fontStyle: 'italic', background: '#FEF3C7', padding: '6px 10px', borderRadius: 8, display: 'inline-block' }}>"The tall boy is playing."</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>2. Identify the adverbs:</p>
+                                    <p style={{ margin: 0, fontSize: '14px', fontStyle: 'italic', background: '#FEF3C7', padding: '6px 10px', borderRadius: 8, display: 'inline-block' }}>"She runs quickly."</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>3. Fill in the blanks with suitable adjectives:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 20, fontSize: '14px' }}>
+                                        <li>a) The ___ flower is beautiful.</li>
+                                        <li>b) He has a ___ car.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>4. Fill in the blanks with suitable adverbs:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 20, fontSize: '14px' }}>
+                                        <li>a) She sings ___.</li>
+                                        <li>b) He walks ___.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>5. Write one sentence using an adjective.</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>6. Write one sentence using an adverb.</p>
+                                </div>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – ENGLISH – VERBS & TENSES */}
+                {classId === '6' && chapterId === 'verbs-tenses' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🏃">Verbs & Tenses</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Verbs are <strong>action words</strong> that tell us what someone or something is doing. Tenses help us understand <strong>when the action happens</strong>—in the present, past, or future. In this lesson, students will learn about <strong>verbs and how to use them correctly in different tenses</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⚡">What is a Verb?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>verb</strong> is a word that shows action or a state of being.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Examples:</p>
+                                <ul style={{ margin: '0 0 12px', paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Action verbs</strong> → run, eat, play, write</li>
+                                    <li><strong>State verbs</strong> → is, am, are, was</li>
+                                </ul>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Examples in sentences:</p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li>She <strong>runs</strong> fast.</li>
+                                    <li>They <strong>are</strong> happy.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📝">Types of Verbs</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#1D4ED8' }}>Action Verbs</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#1E40AF', lineHeight: 1.6 }}>Show physical or mental action.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#1E3A8A', fontStyle: 'italic' }}>Examples: jump, read, think</p>
+                                </div>
+                                <div style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#6D28D9' }}>Helping Verbs</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#5B21B6', lineHeight: 1.6 }}>Help the main verb in a sentence.</p>
+                                    <p style={{ margin: '0 0 10px', fontSize: '14px', color: '#4C1D95', fontStyle: 'italic' }}>Examples: is, am, are, was, were, has, have</p>
+                                    <div style={{ background: '#EAEBFF', padding: '10px', borderRadius: '8px' }}>
+                                        <p style={{ margin: 0, fontSize: '14px', color: '#4C1D95', fontWeight: 600 }}>Example: She is playing.</p>
+                                        <p style={{ margin: 0, fontSize: '13px', color: '#4C1D95' }}>(“is” is a helping verb, “playing” is the main verb)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⏲️">What is Tense?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Tense</strong> tells us the time of an action.
+                            </p>
+                            <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>There are three main tenses:</p>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#059669' }}>Present Tense</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#047857', lineHeight: 1.6 }}>Used to describe actions happening now or regularly.</p>
+                                    <p style={{ margin: '0 0 4px', fontSize: '14px', color: '#064E3B', fontWeight: 600 }}>Examples:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 16, fontSize: '14px', color: '#064E3B' }}>
+                                        <li>She plays every day.</li>
+                                        <li>They are studying.</li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#D97706' }}>Past Tense</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#B45309', lineHeight: 1.6 }}>Used to describe actions that already happened.</p>
+                                    <p style={{ margin: '0 0 4px', fontSize: '14px', color: '#92400E', fontWeight: 600 }}>Examples:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 16, fontSize: '14px', color: '#92400E' }}>
+                                        <li>She played yesterday.</li>
+                                        <li>They studied last night.</li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#475569' }}>Future Tense</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#334155', lineHeight: 1.6 }}>Used to describe actions that will happen later.</p>
+                                    <p style={{ margin: '0 0 4px', fontSize: '14px', color: '#1E293B', fontWeight: 600 }}>Examples:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 16, fontSize: '14px', color: '#1E293B' }}>
+                                        <li>She will play tomorrow.</li>
+                                        <li>They will study in the evening.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🗓️">Examples of Tense Usage</SectionTitle>
+                            <div style={{ background: '#F0FDF4', padding: '16px', borderRadius: '12px', border: '1px solid #BBF7D0' }}>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#166534', lineHeight: 1.8, fontSize: '16px' }}>
+                                    <li><strong>Present</strong> → He eats food.</li>
+                                    <li><strong>Past</strong> → He ate food.</li>
+                                    <li><strong>Future</strong> → He will eat food.</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📏">Rules for Using Tenses</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li>Use correct verb forms</li>
+                                <li>Use “-ed” for many past tense verbs</li>
+                                <li>Use “will” for future tense</li>
+                                <li>Match verb with subject (He runs, They run)</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✅">Correct vs Incorrect</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                                <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+                                    <div style={{ flex: 1, background: '#FEF2F2', padding: '12px', borderRadius: '12px', border: '1px solid #FECACA' }}>
+                                        <p style={{ margin: 0, color: '#991B1B', fontSize: '15px' }}><strong>Incorrect:</strong> He go to school</p>
+                                    </div>
+                                    <div style={{ flex: 1, background: '#ECFDF5', padding: '12px', borderRadius: '12px', border: '1px solid #A7F3D0' }}>
+                                        <p style={{ margin: 0, color: '#065F46', fontSize: '15px' }}><strong>Correct:</strong> He goes to school</p>
+                                    </div>
+                                </div>
+                                <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+                                    <div style={{ flex: 1, background: '#FEF2F2', padding: '12px', borderRadius: '12px', border: '1px solid #FECACA' }}>
+                                        <p style={{ margin: 0, color: '#991B1B', fontSize: '15px' }}><strong>Incorrect:</strong> She eat yesterday</p>
+                                    </div>
+                                    <div style={{ flex: 1, background: '#ECFDF5', padding: '12px', borderRadius: '12px', border: '1px solid #A7F3D0' }}>
+                                        <p style={{ margin: 0, color: '#065F46', fontSize: '15px' }}><strong>Correct:</strong> She ate yesterday</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⭐">Importance of Verbs and Tenses</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li>Help express actions clearly</li>
+                                <li>Show the time of actions</li>
+                                <li>Make sentences meaningful</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is a verb?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A verb is a word that shows action or state.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is tense?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Tense shows the time of an action.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Name the three main tenses.</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Present, past, and future.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Every sentence must have a verb.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Tenses help us understand time in language.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Verbs change form depending on tense.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, color: '#334155' }}>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>1. Identify the verbs in the sentence:</p>
+                                    <p style={{ margin: 0, fontSize: '14px', fontStyle: 'italic', background: '#FEF3C7', padding: '6px 10px', borderRadius: 8, display: 'inline-block' }}>"She is playing in the park."</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>2. Change the sentence into past tense:</p>
+                                    <p style={{ margin: 0, fontSize: '14px', fontStyle: 'italic', background: '#FEF3C7', padding: '6px 10px', borderRadius: 8, display: 'inline-block' }}>"He plays football."</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>3. Change the sentence into future tense:</p>
+                                    <p style={{ margin: 0, fontSize: '14px', fontStyle: 'italic', background: '#FEF3C7', padding: '6px 10px', borderRadius: 8, display: 'inline-block' }}>"They study English."</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>4. Write one sentence in present tense.</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>5. Write one sentence in past tense.</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>6. Write one sentence in future tense.</p>
+                                </div>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – ENGLISH – NOUNS & PRONOUNS */}
+                {classId === '6' && chapterId === 'nouns-pronouns' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="🧱">Nouns & Pronouns</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Nouns and pronouns are the <strong>basic building blocks of sentences</strong>. A noun names a person, place, animal, or thing, while a pronoun is used in place of a noun to avoid repetition. In this lesson, students will learn about <strong>types of nouns and pronouns and how to use them correctly in sentences</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏷️">What is a Noun?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>noun</strong> is the name of a person, place, animal, or thing.
+                            </p>
+                            <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#334155', fontWeight: 700 }}>Examples:</p>
+                                <ul style={{ margin: 0, paddingLeft: 18, color: '#475569', lineHeight: 1.8, fontSize: '15px' }}>
+                                    <li><strong>Person</strong> → Ravi, teacher</li>
+                                    <li><strong>Place</strong> → school, park</li>
+                                    <li><strong>Animal</strong> → dog, elephant</li>
+                                    <li><strong>Thing</strong> → book, table</li>
+                                </ul>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📝">Types of Nouns</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#1D4ED8' }}>Proper Noun</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#1E40AF', lineHeight: 1.6 }}>Names a specific person, place, or thing. It always begins with a capital letter.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#1E3A8A', fontStyle: 'italic' }}>Examples: India, Akalya, Chennai</p>
+                                </div>
+                                <div style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#6D28D9' }}>Common Noun</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#5B21B6', lineHeight: 1.6 }}>Names a general person, place, or thing.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#4C1D95', fontStyle: 'italic' }}>Examples: city, girl, teacher</p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#059669' }}>Collective Noun</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#047857', lineHeight: 1.6 }}>Names a group of people or things.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#064E3B', fontStyle: 'italic' }}>Examples: team, herd, bunch</p>
+                                </div>
+                                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#D97706' }}>Abstract Noun</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#B45309', lineHeight: 1.6 }}>Names ideas, feelings, or qualities.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#92400E', fontStyle: 'italic' }}>Examples: happiness, honesty, courage</p>
+                                </div>
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#DC2626' }}>Material Noun</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#B91C1C', lineHeight: 1.6 }}>Names substances or materials.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#991B1B', fontStyle: 'italic' }}>Examples: gold, water, wood</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="👤">What is a Pronoun?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>pronoun</strong> is a word used instead of a noun.
+                            </p>
+                            <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#166534', fontWeight: 700 }}>Examples:</p>
+                                <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#15803D' }}>Ravi is playing. <strong>He</strong> is happy.</p>
+                                <p style={{ margin: 0, fontSize: '14px', color: '#14532D', fontStyle: 'italic' }}>(The word "He" is a pronoun replacing Ravi)</p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🔄">Types of Pronouns</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Personal Pronouns</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Used to refer to specific persons or things.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B', fontStyle: 'italic' }}>Examples: I, you, he, she, it, we, they</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Possessive Pronouns</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Show ownership.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B', fontStyle: 'italic' }}>Examples: mine, yours, his, hers</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Demonstrative Pronouns</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Point to specific things.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B', fontStyle: 'italic' }}>Examples: this, that, these, those</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Interrogative Pronouns</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Used to ask questions.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B', fontStyle: 'italic' }}>Examples: who, what, which</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Reflexive Pronouns</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#475569', lineHeight: 1.6 }}>Refer back to the subject.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#64748B', fontStyle: 'italic' }}>Examples: myself, yourself, himself</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✍️">Examples of Usage</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                                <div style={{ background: '#FFFBEB', padding: '16px', borderRadius: '12px', border: '1px solid #FDE68A' }}>
+                                    <p style={{ fontSize: '15px', color: '#92400E', margin: '0 0 4px', fontWeight: 600 }}>Riya has a book. <strong>She</strong> is reading <strong>it</strong>.</p>
+                                    <p style={{ fontSize: '14px', color: '#B45309', margin: 0, fontStyle: 'italic' }}>(The pronouns "She" and "it" replace nouns)</p>
+                                </div>
+                                <div style={{ background: '#F0FDF4', padding: '16px', borderRadius: '12px', border: '1px solid #BBF7D0' }}>
+                                    <p style={{ fontSize: '15px', color: '#166534', margin: 0, fontWeight: 600 }}><strong>This</strong> is my bag. <strong>That</strong> is your bag.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⭐">Importance of Nouns and Pronouns</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8, fontSize: '15px' }}>
+                                <li>Help form meaningful sentences</li>
+                                <li>Avoid repetition of words</li>
+                                <li>Make communication clear and effective</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is a noun?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A noun is the name of a person, place, animal, or thing.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is a pronoun?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A pronoun is a word used instead of a noun.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why are pronouns used?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Pronouns are used to avoid repetition.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Every sentence usually contains a noun or pronoun.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Pronouns make sentences shorter and clearer.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Nouns are one of the most important parts of speech.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, color: '#334155' }}>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>1. Identify the nouns in the sentence:</p>
+                                    <p style={{ margin: 0, fontSize: '14px', fontStyle: 'italic', background: '#FEF3C7', padding: '6px 10px', borderRadius: 8, display: 'inline-block' }}>"The boy is playing in the park."</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>2. Identify the pronouns:</p>
+                                    <p style={{ margin: 0, fontSize: '14px', fontStyle: 'italic', background: '#FEF3C7', padding: '6px 10px', borderRadius: 8, display: 'inline-block' }}>"She is my friend."</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>3. Write two examples of proper nouns.</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>4. Replace the nouns with pronouns:</p>
+                                    <p style={{ margin: 0, fontSize: '14px', fontStyle: 'italic', background: '#FEF3C7', padding: '6px 10px', borderRadius: 8, display: 'inline-block' }}>"Ravi has a car. Ravi drives Ravi's car."</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>5. Write one example each of:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 20, fontSize: '14px' }}>
+                                        <li>a) common noun</li>
+                                        <li>b) abstract noun</li>
+                                        <li>c) collective noun</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – ENGLISH – STORY WRITING */}
+                {classId === '6' && chapterId === 'story-writing' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="📖">Story Writing</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Story writing is a creative activity where we use our imagination to create interesting stories. It helps students express their ideas, improve writing skills, and develop creativity. A good story has a clear beginning, middle, and end. In this lesson, students will learn how to <strong>write engaging short stories</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✨">What is a Story?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>story</strong> is a series of events that are connected and told in a meaningful way.
+                            </p>
+                            <p style={{ margin: 0, fontSize: '15px', color: '#334155', fontWeight: 700 }}>A story usually includes:</p>
+                            <ul style={{ margin: '8px 0 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Characters (people or animals)</li>
+                                <li>Setting (place and time)</li>
+                                <li>Plot (events of the story)</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">Elements of a Story</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '16px', fontWeight: 800, color: '#1D4ED8' }}>Characters</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#1E40AF' }}>The people or animals in the story.</p>
+                                    <p style={{ margin: '8px 0 0', fontSize: '14px', color: '#1E3A8A', fontStyle: 'italic' }}>Example: A boy, a dog, a king</p>
+                                </div>
+                                <div style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '16px', fontWeight: 800, color: '#6D28D9' }}>Setting</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#5B21B6' }}>The place and time where the story happens.</p>
+                                    <p style={{ margin: '8px 0 0', fontSize: '14px', color: '#4C1D95', fontStyle: 'italic' }}>Example: A village, a forest, a school</p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '16px', fontWeight: 800, color: '#059669' }}>Plot</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#047857' }}>The sequence of events in the story.</p>
+                                    <ul style={{ margin: '8px 0 0', paddingLeft: 18, fontSize: '14px', color: '#065F46', lineHeight: 1.6 }}>
+                                        <li><strong>Beginning:</strong> Introduction of characters</li>
+                                        <li><strong>Middle:</strong> Problem or action</li>
+                                        <li><strong>End:</strong> Solution or conclusion</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✍️">Steps to Write a Story</SectionTitle>
+                            <ol style={{ margin: 0, paddingLeft: 20, color: '#334155', lineHeight: 1.8, fontSize: '16px' }}>
+                                <li>Think of an idea or topic</li>
+                                <li>Create characters</li>
+                                <li>Decide the setting</li>
+                                <li>Write the beginning, middle, and end</li>
+                                <li>Use simple and clear sentences</li>
+                                <li>Add a moral if possible</li>
+                            </ol>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📚">Types of Stories</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Moral Stories</p>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#334155' }}>Stories that teach a lesson.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#475569', fontStyle: 'italic' }}>Example: The Fox and the Grapes</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Adventure Stories</p>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#334155' }}>Stories with exciting events.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#475569', fontStyle: 'italic' }}>Example: A journey in a forest</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '16px', fontWeight: 800, color: '#334155' }}>Fantasy Stories</p>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', color: '#334155' }}>Stories with magical elements.</p>
+                                    <p style={{ margin: 0, fontSize: '14px', color: '#475569', fontStyle: 'italic' }}>Example: Talking animals or magical worlds</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="💡">Tips for Good Story Writing</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Use simple and clear language</li>
+                                <li>Keep the story interesting</li>
+                                <li>Use proper grammar and punctuation</li>
+                                <li>Add dialogues if needed</li>
+                                <li>End with a meaningful conclusion</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📖">Sample Story</SectionTitle>
+                            <div style={{ background: '#FEF3C7', padding: '16px', borderRadius: '12px', border: '1px solid #FCD34D' }}>
+                                <h4 style={{ fontSize: '18px', color: '#92400E', margin: '0 0 10px 0', textAlign: 'center' }}>The Honest Boy</h4>
+                                <p style={{ fontSize: '15px', color: '#92400E', fontStyle: 'italic', margin: '0 0 12px 0', lineHeight: 1.8 }}>
+                                    Once there was a boy named Ravi. One day, he found a wallet on the road. It had money and an ID card. Ravi picked it up and returned it to the owner. The owner was very happy and thanked him. Ravi felt proud of his honesty.
+                                </p>
+                                <p style={{ fontSize: '15px', color: '#92400E', fontWeight: 700, margin: 0, textAlign: 'center' }}>
+                                    Moral: Honesty is the best policy.
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is a story?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A story is a series of connected events.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What are the main parts of a story?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Beginning, middle, and end.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why is creativity important in story writing?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: It helps make stories interesting and engaging.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Stories have been told for thousands of years.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Many stories teach moral lessons.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Creative writing improves imagination.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, color: '#334155' }}>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>1. Write a story on "A Day in the Forest".</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>2. Write a story using the idea: "A lost puppy finds its way home."</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>3. Identify the characters and setting in the sample story.</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>4. Write a beginning for a story about a magical world.</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>5. Write a moral for the story: "The Clever Rabbit".</p>
+                                </div>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – ENGLISH – LETTER WRITING */}
+                {classId === '6' && chapterId === 'letter-writing' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="✉️">Letter Writing</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Letter writing is an important form of communication used to share information, express feelings, or make requests. Letters can be <strong>formal</strong> or <strong>informal</strong> depending on whom we are writing to. In this lesson, students will learn about the <strong>formats, types, and expressions used in letter writing</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🤔">What is a Letter?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>letter</strong> is a written message sent from one person to another.
+                            </p>
+                            <p style={{ margin: 0, fontSize: '15px', color: '#334155', fontWeight: 700 }}>Letters are used to:</p>
+                            <ul style={{ margin: '8px 0 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Share information</li>
+                                <li>Express feelings</li>
+                                <li>Make requests</li>
+                                <li>Communicate officially</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📂">Types of Letters</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#3B82F6' }}>Informal Letters</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#334155' }}>Written to friends, family members, or relatives.</p>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', fontWeight: 700, color: '#1E293B' }}>Features:</p>
+                                    <ul style={{ margin: '0 0 10px', paddingLeft: 18, fontSize: '14px', color: '#334155' }}>
+                                        <li>Friendly and personal tone</li>
+                                        <li>Simple and easy language</li>
+                                    </ul>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', fontWeight: 700, color: '#1E293B' }}>Examples:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, fontSize: '14px', color: '#334155' }}>
+                                        <li>Letter to a friend</li>
+                                        <li>Letter to parents / relatives</li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <h3 style={{ margin: '0 0 10px', fontSize: '18px', fontWeight: 800, color: '#8B5CF6' }}>Formal Letters</h3>
+                                    <p style={{ margin: '0 0 10px', fontSize: '15px', color: '#334155' }}>Written for official purposes.</p>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', fontWeight: 700, color: '#1E293B' }}>Features:</p>
+                                    <ul style={{ margin: '0 0 10px', paddingLeft: 18, fontSize: '14px', color: '#334155' }}>
+                                        <li>Polite and respectful tone</li>
+                                        <li>Proper format and structure</li>
+                                    </ul>
+                                    <p style={{ margin: '0 0 6px', fontSize: '14px', fontWeight: 700, color: '#1E293B' }}>Examples:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, fontSize: '14px', color: '#334155' }}>
+                                        <li>Letter to principal / teacher</li>
+                                        <li>Letter to an office or authority</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📝">Format of Letters</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 16, padding: 18 }}>
+                                    <h4 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#1D4ED8' }}>Informal Letter</h4>
+                                    <ol style={{ margin: 0, paddingLeft: 18, color: '#1E40AF', lineHeight: 1.8, fontSize: '15px' }}>
+                                        <li>Sender's Address</li>
+                                        <li>Date</li>
+                                        <li>Greeting <em>(Dear friend/Mother/Father)</em></li>
+                                        <li>Body of the letter</li>
+                                        <li>Closing <em>(Yours lovingly)</em></li>
+                                        <li>Signature <em>(Your name)</em></li>
+                                    </ol>
+                                </div>
+                                <div style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 16, padding: 18 }}>
+                                    <h4 style={{ margin: '0 0 10px', fontSize: '16px', fontWeight: 800, color: '#6D28D9' }}>Formal Letter</h4>
+                                    <ol style={{ margin: 0, paddingLeft: 18, color: '#5B21B6', lineHeight: 1.8, fontSize: '15px' }}>
+                                        <li>Sender's Address</li>
+                                        <li>Date</li>
+                                        <li>Receiver's Address</li>
+                                        <li>Subject</li>
+                                        <li>Salutation <em>(Dear Sir/Madam)</em></li>
+                                        <li>Body of the letter</li>
+                                        <li>Closing <em>(Yours sincerely)</em></li>
+                                        <li>Signature</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📖">Examples</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                                <div style={{ background: '#FFFBEB', padding: '16px', borderRadius: '12px', border: '1px solid #FDE68A' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#92400E', margin: '0 0 10px 0' }}>Informal Letter Example:</h4>
+                                    <p style={{ fontSize: '14px', fontFamily: 'monospace', color: '#92400E', margin: 0, whiteSpace: 'pre-wrap' }}>
+                                        12, Green Street<br/>
+                                        Chennai<br/>
+                                        10 March 2026<br/>
+                                        <br/>
+                                        Dear Riya,<br/>
+                                        <br/>
+                                        How are you? I hope you are doing well. I am writing this letter to tell you about my new school. It is very big and has a beautiful playground. I have made many new friends.<br/>
+                                        <br/>
+                                        Yours lovingly,<br/>
+                                        Akalya
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F0FDF4', padding: '16px', borderRadius: '12px', border: '1px solid #BBF7D0' }}>
+                                    <h4 style={{ fontSize: '16px', color: '#166534', margin: '0 0 10px 0' }}>Formal Letter Example:</h4>
+                                    <p style={{ fontSize: '14px', fontFamily: 'monospace', color: '#166534', margin: 0, whiteSpace: 'pre-wrap' }}>
+                                        12, Green Street<br/>
+                                        Chennai<br/>
+                                        10 March 2026<br/>
+                                        <br/>
+                                        To<br/>
+                                        The Principal<br/>
+                                        ABC School<br/>
+                                        Chennai<br/>
+                                        <br/>
+                                        Subject: Request for leave<br/>
+                                        <br/>
+                                        Respected Sir/Madam,<br/>
+                                        <br/>
+                                        I am a student of Class 6. I request you to grant me leave for two days due to illness.<br/>
+                                        <br/>
+                                        Thank you.<br/>
+                                        <br/>
+                                        Yours sincerely,<br/>
+                                        Akalya
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="💡">Tips for Writing Letters & Expressions</SectionTitle>
+                            <ul style={{ margin: '0 0 16px 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Use correct format</li>
+                                <li>Write clearly and politely</li>
+                                <li>Use proper grammar and punctuation</li>
+                                <li>Keep sentences simple</li>
+                                <li>Maintain neatness</li>
+                            </ul>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#334155' }}>Common Informal Expressions:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, fontSize: '14px', color: '#334155', lineHeight: 1.8 }}>
+                                        <li>How are you?</li>
+                                        <li>I hope you are doing well.</li>
+                                        <li>I am happy to inform you...</li>
+                                    </ul>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#334155' }}>Common Formal Expressions:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 18, fontSize: '14px', color: '#334155', lineHeight: 1.8 }}>
+                                        <li>I request you to...</li>
+                                        <li>I would like to inform you...</li>
+                                        <li>Thank you for your consideration.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⭐">Importance of Letter Writing</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Helps express thoughts and feelings</li>
+                                <li>Used for formal communication</li>
+                                <li>Improves writing skills</li>
+                                <li>Builds communication skills</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is a letter?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A letter is a written message sent from one person to another.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is the difference between formal and informal letters?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Formal letters are official, while informal letters are personal.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why is format important in letter writing?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Format helps organize the letter properly.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Letters were one of the earliest forms of communication.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Today, emails are also used instead of letters.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Formal letters follow a strict structure.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, color: '#334155' }}>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>1. Write an informal letter to your friend about your holiday.</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>2. Write a formal letter to your principal requesting leave.</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>3. Identify the parts of a letter.</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>4. Write two opening lines for an informal letter.</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>5. Write two sentences for a formal letter request.</p>
+                                </div>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – ENGLISH – PARAGRAPH WRITING */}
+                {classId === '6' && chapterId === 'paragraph-writing' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="✍️">Paragraph Writing</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Paragraph writing is the skill of organizing ideas into a <strong>clear and meaningful group of sentences</strong>. A good paragraph helps express thoughts in an organized way and makes writing easy to understand. In this lesson, students will learn how to <strong>write coherent and well-structured paragraphs</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📝">What is a Paragraph?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>paragraph</strong> is a group of sentences that talk about one main idea.
+                            </p>
+                            <p style={{ margin: 0, fontSize: '15px', color: '#334155', fontWeight: 700 }}>A paragraph should:</p>
+                            <ul style={{ margin: '8px 0 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Have a clear main idea</li>
+                                <li>Include supporting details</li>
+                                <li>Be properly structured</li>
+                            </ul>
+                            <div style={{ background: '#F0FDF4', padding: '16px', borderRadius: '12px', border: '1px solid #BBF7D0', marginTop: '20px' }}>
+                                <h4 style={{ fontSize: '16px', color: '#166534', margin: '0 0 8px 0' }}>Example:</h4>
+                                <p style={{ fontSize: '15px', color: '#166534', fontStyle: 'italic', margin: 0 }}>
+                                    "My School is a wonderful place to learn. It has big classrooms, a library, and a playground. The teachers are kind and helpful. I enjoy going to school every day."
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">Parts of a Paragraph</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '16px', fontWeight: 800, color: '#0369A1' }}>Topic Sentence</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#0369A1' }}>The first sentence that tells the main idea of the paragraph.</p>
+                                    <div style={{ marginTop: '12px', background: '#F0F9FF', padding: '10px', borderRadius: '8px' }}>
+                                        <p style={{ margin: 0, fontSize: '14px', color: '#0369A1', fontStyle: 'italic' }}>Example: My school is a wonderful place to learn.</p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '16px', fontWeight: 800, color: '#9A3412' }}>Supporting Sentences</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#9A3412' }}>Sentences that give more information about the topic.</p>
+                                    <div style={{ marginTop: '12px', background: '#FFEDD5', padding: '10px', borderRadius: '8px' }}>
+                                        <p style={{ margin: 0, fontSize: '14px', color: '#9A3412', fontStyle: 'italic' }}>Example: It has big classrooms and a playground.</p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '16px', fontWeight: 800, color: '#166534' }}>Concluding Sentence</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#166534' }}>The last sentence that sums up the paragraph.</p>
+                                    <div style={{ marginTop: '12px', background: '#F0FDF4', padding: '10px', borderRadius: '8px' }}>
+                                        <p style={{ margin: 0, fontSize: '14px', color: '#166534', fontStyle: 'italic' }}>Example: I enjoy going to school every day.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🏗️">Steps to Write a Paragraph</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li><strong>1. Choose a topic:</strong> Decide what you want to write about.</li>
+                                <li><strong>2. Write the main idea:</strong> Start with a strong topic sentence.</li>
+                                <li><strong>3. Add supporting details:</strong> Write sentences that explain or describe your topic.</li>
+                                <li><strong>4. Use grammar and punctuation:</strong> Check your spelling and sentence structure.</li>
+                                <li><strong>5. End with a conclusion:</strong> Summarize the paragraph gracefully.</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📚">Types of Paragraphs</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#334155' }}>Descriptive Paragraph</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>Describes a person, place, or thing.</p>
+                                    <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#334155', fontStyle: 'italic' }}>Example: My best friend is kind and helpful.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#334155' }}>Narrative Paragraph</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>Tells a story or event.</p>
+                                    <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#334155', fontStyle: 'italic' }}>Example: Last Sunday, I visited the zoo.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#334155' }}>Informative Paragraph</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>Gives information about a topic.</p>
+                                    <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#334155', fontStyle: 'italic' }}>Example: Trees are important for the environment.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="💡">Tips for Good Paragraph Writing</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Keep sentences simple and clear</li>
+                                <li>Stick to one main idea</li>
+                                <li>Use proper grammar and punctuation</li>
+                                <li>Use linking words (and, because, so, therefore)</li>
+                                <li>Check spelling and neatness</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📖">Sample Paragraph</SectionTitle>
+                            <div style={{ background: '#FEF3C7', padding: '16px', borderRadius: '12px', border: '1px solid #FCD34D' }}>
+                                <h4 style={{ fontSize: '16px', color: '#92400E', margin: '0 0 8px 0' }}>Topic: My Favorite Hobby</h4>
+                                <p style={{ fontSize: '15px', color: '#92400E', fontStyle: 'italic', margin: 0, lineHeight: 1.8 }}>
+                                    "Reading is my favorite hobby. I enjoy reading storybooks and magazines. Reading helps me learn new words and improve my knowledge. I read every day in my free time. It makes me happy and relaxed."
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is a paragraph?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A paragraph is a group of sentences about one main idea.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What is a topic sentence?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: It is the first sentence that introduces the main idea.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why are supporting sentences important?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: They provide details about the main idea.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>A paragraph usually contains 4–6 sentences.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Good paragraphs have a clear beginning, middle, and end.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Practice improves writing skills.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, color: '#334155' }}>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>1. Write a paragraph on "My Best Friend".</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>2. Write a paragraph on "My Favorite Food".</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>3. Identify the topic sentence in the following paragraph:</p>
+                                    <p style={{ margin: '0 0 8px 20px', fontSize: '14px', fontStyle: 'italic', background: '#FFFFFF', padding: '8px', borderRadius: '4px', border: '1px solid #E2E8F0' }}>
+                                        "My garden is very beautiful. It has many colorful flowers. Butterflies fly around. I love spending time there."
+                                    </p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>4. Write two supporting sentences for the topic: "My school is clean."</p>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>5. Write a concluding sentence for: "I love playing games."</p>
+                                </div>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – ENGLISH – SENTENCE FORMATION */}
+                {classId === '6' && chapterId === 'sentence-formation' && (
+                    <>
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="📝">Sentence Formation</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                A sentence is a group of words that makes <strong>complete sense</strong>. Learning how to form correct sentences helps students communicate clearly in both speaking and writing. In this lesson, students will learn about <strong>types of sentences, parts of a sentence, and how to form grammatically correct sentences</strong>.
+                            </p>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧠">What is a Sentence?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                A <strong>sentence</strong> is a group of words that expresses a complete thought.
+                            </p>
+                            <h4 style={{ fontSize: '18px', color: '#1E293B', fontWeight: 700, marginTop: '20px' }}>Examples:</h4>
+                            <ul style={{ margin: '8px 0 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>She is playing.</li>
+                                <li>The sun rises in the east.</li>
+                            </ul>
+                            <div style={{ background: '#FEF3C7', padding: '16px', borderRadius: '12px', border: '1px solid #FCD34D', marginTop: '20px' }}>
+                                <p style={{ fontSize: '15px', color: '#92400E', margin: 0 }}>
+                                    A sentence always begins with a <strong>capital letter</strong> and ends with a <strong>full stop (.), question mark (?), or exclamation mark (!)</strong>.
+                                </p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🧩">Parts of a Sentence</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '16px', fontWeight: 800, color: '#0369A1' }}>Subject</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#0369A1' }}>The person, place, or thing that the sentence is about.</p>
+                                    <div style={{ marginTop: '12px', background: '#F0F9FF', padding: '10px', borderRadius: '8px' }}>
+                                        <p style={{ margin: 0, fontSize: '14px', color: '#0369A1', fontStyle: 'italic' }}>Example: Ravi is reading.</p>
+                                        <p style={{ margin: '4px 0 0', fontSize: '14px', color: '#0369A1', fontWeight: 600 }}>(Subject → Ravi)</p>
+                                    </div>
+                                </div>
+                                <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '16px', fontWeight: 800, color: '#9A3412' }}>Predicate</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#9A3412' }}>Tells us what the subject is doing or what is happening.</p>
+                                    <div style={{ marginTop: '12px', background: '#FFEDD5', padding: '10px', borderRadius: '8px' }}>
+                                        <p style={{ margin: 0, fontSize: '14px', color: '#9A3412', fontStyle: 'italic' }}>Example: Ravi is reading a book.</p>
+                                        <p style={{ margin: '4px 0 0', fontSize: '14px', color: '#9A3412', fontWeight: 600 }}>(Predicate → is reading a book)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📚">Types of Sentences</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#334155' }}>Assertive Sentence</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>A sentence that states a fact or opinion.</p>
+                                    <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#334155', fontStyle: 'italic' }}>Example: She is happy.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#334155' }}>Interrogative Sentence</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>A sentence that asks a question.</p>
+                                    <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#334155', fontStyle: 'italic' }}>Example: Where are you going?</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#334155' }}>Imperative Sentence</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>A sentence that gives a command, request, or advice.</p>
+                                    <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#334155', fontStyle: 'italic' }}>Example: Close the door. / Please help me.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#334155' }}>Exclamatory Sentence</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>A sentence that shows strong feeling.</p>
+                                    <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#334155', fontStyle: 'italic' }}>Example: What a beautiful day!</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📏">Rules of Sentence Formation</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Use correct word order <strong>(Subject + Verb + Object)</strong></li>
+                                <li>Start with a capital letter</li>
+                                <li>Use proper punctuation</li>
+                                <li>Ensure the sentence has complete meaning</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="✅">Correct vs Incorrect Sentences</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#991B1B', fontWeight: 700 }}>Incorrect:</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#991B1B' }}>playing is she</p>
+                                </div>
+                                <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#166534', fontWeight: 700 }}>Correct:</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#166534' }}>She is playing.</p>
+                                </div>
+                                <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#991B1B', fontWeight: 700 }}>Incorrect:</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#991B1B' }}>he go to school</p>
+                                </div>
+                                <div style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 12, padding: 16 }}>
+                                    <p style={{ margin: '0 0 4px', fontSize: '15px', color: '#166534', fontWeight: 700 }}>Correct:</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#166534' }}>He goes to school.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="📝">Examples of Sentence Formation</SectionTitle>
+                            <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0', marginBottom: '16px' }}>
+                                <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 8px 0' }}><strong>Words:</strong> playing / is / football / he</p>
+                                <p style={{ fontSize: '16px', color: '#1E293B', fontWeight: 700, margin: 0 }}>Sentence: He is playing football.</p>
+                            </div>
+                            <div style={{ background: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
+                                <p style={{ fontSize: '15px', color: '#334155', margin: '0 0 8px 0' }}><strong>Words:</strong> reads / she / books</p>
+                                <p style={{ fontSize: '16px', color: '#1E293B', fontWeight: 700, margin: 0 }}>Sentence: She reads books.</p>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="⭐">Importance of Sentence Formation</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Helps in clear communication</li>
+                                <li>Improves writing and speaking skills</li>
+                                <li>Builds strong grammar foundation</li>
+                            </ul>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is a sentence?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: A sentence is a group of words that makes complete sense.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. What are the two main parts of a sentence?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Subject and predicate.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. Why is correct sentence formation important?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: It helps communicate ideas clearly.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Every sentence must have a subject and a verb.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Punctuation marks help make sentences clear.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Correct word order is important for meaning.</li>
+                            </ul>
+                        </Section>
+
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, color: '#334155' }}>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>1. Rearrange the words to form sentences:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 20, fontSize: '15px', lineHeight: 1.8 }}>
+                                        <li>a) playing / is / she</li>
+                                        <li>b) school / goes / he</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>2. Identify subject and predicate:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 20, fontSize: '15px', lineHeight: 1.8 }}>
+                                        <li>a) The boy is running.</li>
+                                        <li>b) She sings beautifully.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p style={{ margin: '0 0 8px', fontSize: '15px', fontWeight: 700 }}>3. Write one example each of:</p>
+                                    <ul style={{ margin: 0, paddingLeft: 20, fontSize: '15px', lineHeight: 1.8 }}>
+                                        <li>a) Assertive sentence</li>
+                                        <li>b) Interrogative sentence</li>
+                                        <li>c) Imperative sentence</li>
+                                        <li>d) Exclamatory sentence</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Section>
+                    </>
+                )}
+
+                {/* CLASS 6 – ENGLISH – READING COMPREHENSION */}
+                {classId === '6' && chapterId === 'reading-comprehension' && (
+                    <>
+                        {/* Section 1: Introduction */}
+                        <Section id="lesson-content">
+                            <SectionTitle emoji="📖">Reading Comprehension</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8 }}>
+                                Reading comprehension is the ability to <strong>read, understand, and interpret a passage</strong>. It helps students improve their <strong>vocabulary, thinking skills, and understanding of texts</strong>. By practicing reading comprehension, students learn how to identify key ideas, answer questions, and analyze information from passages.
+                            </p>
+                        </Section>
+
+                        {/* Section 2: What is it? */}
+                        <Section>
+                            <SectionTitle emoji="🧠">What is Reading Comprehension?</SectionTitle>
+                            <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.8, margin: '0 0 10px' }}>
+                                <strong>Reading comprehension</strong> means understanding what we read.
+                            </p>
+                            <p style={{ margin: 0, fontSize: '15px', color: '#334155', fontWeight: 700 }}>It includes:</p>
+                            <ul style={{ margin: '8px 0 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Identifying the main idea</li>
+                                <li>Understanding details</li>
+                                <li>Learning new words</li>
+                                <li>Answering questions based on the text</li>
+                            </ul>
+                            <p style={{ margin: '12px 0 0', fontSize: '15px', color: '#334155' }}>
+                                Good reading comprehension helps students perform better in all subjects.
+                            </p>
+                        </Section>
+
+                        {/* Section 3: Types of Passages */}
+                        <Section>
+                            <SectionTitle emoji="📚">Types of Passages</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#E0F2FE', border: '1px solid #7DD3FC', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#0369A1' }}>Factual Passage</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#0369A1' }}>Gives real information about a topic.</p>
+                                    <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#0369A1' }}>Example: Science facts, historical events</p>
+                                </div>
+                                <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#9A3412' }}>Story Passage</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#9A3412' }}>Tells a story with characters and events.</p>
+                                    <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#9A3412' }}>Example: Short stories, moral stories</p>
+                                </div>
+                                <div style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#166534' }}>Descriptive Passage</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#166534' }}>Describes a person, place, or thing.</p>
+                                    <p style={{ margin: '6px 0 0', fontSize: '14px', color: '#166534' }}>Example: Description of a city or a festival</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 4: How to Improve */}
+                        <Section>
+                            <SectionTitle emoji="📈">How to Improve Reading Comprehension</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Read the passage carefully</li>
+                                <li>Understand the meaning of difficult words</li>
+                                <li>Read the questions before answering</li>
+                                <li>Look for answers in the passage</li>
+                                <li>Practice regularly</li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 5: Key Skills */}
+                        <Section>
+                            <SectionTitle emoji="🔑">Key Skills in Reading Comprehension</SectionTitle>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#334155' }}>Skimming</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>Reading quickly to get the main idea.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#334155' }}>Scanning</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>Looking for specific information.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#334155' }}>Understanding Vocabulary</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>Learning meanings of new words from context.</p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 800, color: '#334155' }}>Identifying Main Idea</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#334155' }}>Finding the central idea of the passage.</p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 6: Sample Passage */}
+                        <Section>
+                            <SectionTitle emoji="📝">Sample Passage</SectionTitle>
+                            <div style={{ background: '#FEF3C7', borderRadius: '12px', padding: '16px', border: '1px solid #FCD34D' }}>
+                                <p style={{ fontSize: '16px', color: '#92400E', lineHeight: 1.8, fontStyle: 'italic', margin: 0 }}>
+                                    "Ravi loved reading books. Every evening, he visited the library near his house. One day, he found a book about space. He learned about planets, stars, and astronauts. Ravi was very excited and decided to become a scientist in the future."
+                                </p>
+                            </div>
+                            <h4 style={{ fontSize: '18px', color: '#1E293B', fontWeight: 700, marginTop: '24px' }}>Questions & Answers:</h4>
+                            <ul style={{ margin: '10px 0 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li><strong>1. Where did Ravi go every evening?</strong> <br/>Answer: He went to the library.</li>
+                                <li><strong>2. What did Ravi learn about?</strong> <br/>Answer: He learned about space, planets, and stars.</li>
+                                <li><strong>3. What did Ravi want to become?</strong> <br/>Answer: He wanted to become a scientist.</li>
+                            </ul>
+                            
+                            <h4 style={{ fontSize: '18px', color: '#1E293B', fontWeight: 700, marginTop: '24px' }}>Vocabulary:</h4>
+                            <ul style={{ margin: '10px 0 0', paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li><strong>Library</strong> – a place where books are kept</li>
+                                <li><strong>Astronaut</strong> – a person who travels in space</li>
+                                <li><strong>Scientist</strong> – a person who studies science</li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 7: Importance */}
+                        <Section>
+                            <SectionTitle emoji="⭐">Importance of Reading Comprehension</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, color: '#334155', lineHeight: 1.8 }}>
+                                <li>Improves reading skills</li>
+                                <li>Enhances vocabulary</li>
+                                <li>Develops thinking ability</li>
+                                <li>Helps understand different subjects</li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 8: Word Problems / Thinking Questions */}
+                        <Section>
+                            <SectionTitle emoji="❓">Word Problems / Thinking Questions</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>1. What is reading comprehension?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: It is the ability to understand and interpret what we read.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>2. Why is reading comprehension important?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: It improves vocabulary and understanding skills.
+                                    </p>
+                                </div>
+                                <div style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 16, padding: 18 }}>
+                                    <p style={{ margin: '0 0 6px', fontSize: '15px', fontWeight: 700, color: '#334155' }}>3. What is skimming?</p>
+                                    <p style={{ margin: 0, fontSize: '15px', color: '#059669', fontWeight: 600 }}>
+                                        Answer: Skimming is reading quickly to get the main idea.
+                                    </p>
+                                </div>
+                            </div>
+                        </Section>
+
+                        {/* Section 9: Interesting Facts */}
+                        <Section>
+                            <SectionTitle emoji="🌟">Interesting Facts</SectionTitle>
+                            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8, color: '#334155' }}>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Reading daily improves memory and concentration.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Understanding context helps learn new words easily.</li>
+                                <li style={{ fontSize: '15px', lineHeight: 1.8 }}>Strong reading skills help in all subjects.</li>
+                            </ul>
+                        </Section>
+
+                        {/* Section 10: Practice Exercises */}
+                        <Section style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 16 }}>
+                            <SectionTitle emoji="✏️">Practice Exercises</SectionTitle>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, color: '#334155' }}>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>Read the passage and answer the questions:</p>
+                                <div style={{ background: '#FFFFFF', padding: '12px', borderRadius: '8px', border: '1px dashed #F59E0B' }}>
+                                    <p style={{ margin: 0, fontSize: '14px', fontStyle: 'italic', color: '#92400E' }}>
+                                        "A farmer had a small garden. He grew vegetables like carrots, tomatoes, and potatoes. Every morning, he watered the plants and took care of them. Soon, the garden became full of fresh vegetables."
+                                    </p>
+                                </div>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8, fontWeight: 600 }}>Questions:</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>1. What did the farmer grow?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>2. What did he do every morning?</p>
+                                <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.8 }}>3. What happened to the garden?</p>
                             </div>
                         </Section>
                     </>
